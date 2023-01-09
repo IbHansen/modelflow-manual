@@ -14,10 +14,23 @@
 # [Pandas community tutorials](https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html)
 # 
 
+# In[1]:
+
+
+#This is code to manage dependencies if the notebook is executed in the google colab cloud service
+if 'google.colab' in str(get_ipython()):
+  import os
+  os.system('apt -qqq install graphviz')
+  os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
+  incolab = True  
+else:
+  incolab = False 
+
+
 # ## Import the pandas library
 # The convention is, that pandas is imported as pd 
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd 
@@ -29,7 +42,7 @@ import pandas as pd
 # 
 # Creating a dataframe can be done in many ways. Here we are creating a Dataframe from a dictionary and  assigning a list of years as the index.
 
-# In[2]:
+# In[3]:
 
 
 df = pd.DataFrame({'B': [1,1,1,1],'C':[1,2,3,6],'E':[4,4,4,4]},index=[2018,2019,2020,2021])
@@ -55,7 +68,7 @@ df
 # ### .columns, column names
 # .columns gives you the names of the columns in the dataframe.
 
-# In[3]:
+# In[4]:
 
 
 df.columns
@@ -84,7 +97,7 @@ df.columns
 # 
 # When modelflow uses a lagged variable like ```A(-1)``` It will take the value from the row above the current row. No matter if the index is an integer, a year, quarter or a millisecond. The same goes for leads ```A(+1)```  That will be the value in the next row. 
 
-# In[4]:
+# In[5]:
 
 
 df.index
@@ -97,7 +110,7 @@ df.index
 # ### .eval() evalueation expressions 
 # With this method expressions can be evaluated and new columns created.  
 
-# In[5]:
+# In[6]:
 
 
 df.eval('''X = B*C
@@ -110,7 +123,7 @@ df.eval('''X = B*C
 
 # #### .loc[row,column] A single element
 
-# In[6]:
+# In[7]:
 
 
 df.loc[2019,'C']
@@ -118,7 +131,7 @@ df.loc[2019,'C']
 
 # #### .loc[:,column] A single column
 
-# In[7]:
+# In[8]:
 
 
 df.loc[:,'C']
@@ -126,7 +139,7 @@ df.loc[:,'C']
 
 # #### .loc[row,:] A single row 
 
-# In[8]:
+# In[9]:
 
 
 df.loc[2019,:]
@@ -134,7 +147,7 @@ df.loc[2019,:]
 
 # ####  .loc[:,[names...]] Several columns
 
-# In[9]:
+# In[10]:
 
 
 df.loc[:,['B','C']]
@@ -144,7 +157,7 @@ df.loc[:,['B','C']]
 # This can be very handy when updating scenarios.<br>
 # 
 
-# In[10]:
+# In[11]:
 
 
 df.loc[2019,'C'] = 42
@@ -155,15 +168,3 @@ df
 # The dimensions on the right hand side of = and the left hand side should match. That is: either the dimensions should be the same, or the right hand side should be broadcasted into the left hand slice.
 # A link [here](https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html)
 # ```
-
-# <span style='color:Blue'> Freya comment: I would delete this. </span> 
-# 
-# <span style='color:Blue'> ib comment: Det er en warning label i jupyter book .  </span> 
-# 
-# this is hidden 
-
-# In[ ]:
-
-
-
-

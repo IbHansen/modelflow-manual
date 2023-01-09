@@ -10,6 +10,7 @@
 # In[1]:
 
 
+#This is code to manage dependencies if the notebook is executed in the google colab cloud service
 if 'google.colab' in str(get_ipython()):
   import os
   os.system('apt -qqq install graphviz')
@@ -145,7 +146,7 @@ scenario   = msolow(dfscenario,keep='Higher labor growth ') # simulate the model
 # In[9]:
 
 
-msolow['#ENDO']
+#msolow['#ENDO']
 
 
 # #### Look at all endogenous variables
