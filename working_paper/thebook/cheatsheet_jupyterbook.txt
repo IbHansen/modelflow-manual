@@ -1,0 +1,124 @@
+# jupyter book 
+build.py builds the html site 
+            and copies all /_build/ png,svg and pdf files to the root
+			to enable figures in the latex build 
+           
+
+python build.py # creates thebook as html 
+python build.py latex # creates thebook as html and latex
+python build.py test # creates thetestbook as html 
+python build.py test latex # creates thetestbook   as html and latex
+
+Build without python looks like 
+jb build testbook/ --builder html
+
+For latex: 
+miktex (version 22.1) and TeXworks (version 0.6.6)
+For typesetting: XeLaTex0MakeIndex+BibTeX  
+
+metadata in juyter notebooks to hide and remove cells, input or output:
+"tags": [
+        "hide-input",
+    ]
+"tags": [
+        "hide-output"
+    ]	
+"tags": [
+        "hide-cell"
+    ]	
+"tags": [
+        "remove-input",
+    ]
+"tags": [
+        "remove-output"
+    ]	
+"tags": [
+        "remove-cell"
+    ]		
+"tags": [
+        "scroll-output",
+    ]	
+
+#Some jupyter book stuff
+
+```{admonition} Tip
+:class: tip
+Ask Ib 
+```
+```{warning}
+Here is a warning!
+```
+
+```{danger}
+Here is a danger!
+```
+```{note}
+Here is a note!
+```
+
+```{sidebar} **My sidebar title**
+Here is my sidebar content, it is pretty cool!
+```
+
+```{margin} **My margin title**
+Here is my margin content, it is pretty cool!
+```
+This is a test of Epigraph
+
+```{epigraph}
+Here's my quote, it's pretty neat.
+I wonder how many I'll stop here.
+```	
+An external link 
+[text](link)
+
+a link in the book. remember to take care of spaces 
+[onboarding a Eviews model](../../howto/onboard/eviews/onboard%20one%20model%20from%20%20wf1.ipynb)
+
+make a name:
+(solution-methods)=
+next line
+
+a link to name: 
+[python solution code](solution-methods)
+
+Cite
+{cite:author}`Burns2021`  # Assumes the reference is in reference.bib
+
+```.loc``` is used to access or set values in a dataframe based on row and column names.
+ - [Description](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html)
+ - [Search](https://www.google.com/search?q=pandas+dataframe+loc&newwindow=1)
+
+```{note}
+**Python constructs**<br>
+The dataframe.loc 
+| Python construct |explanation|Google |
+| :- | :---| :---|
+|'a b'.split()|splits a string by ```blanks```into a list| [Search](https://www.google.com/search?q=python+split&newwindow=1)
+```
+
+:::{figure-md} markdown-fig
+<img src="onboarding.png" alt="fishy" class="bg-primary mb-1" width="700px">
+
+Flow from model specification to python solver
+:::
+
+# Tabbed widget 
+from myst_nb import glue
+with mpak.set_smpl(2018,2030):
+    glue("Baseline", mpak.ibsstyle(mpak['PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEIMPGNFSKN'].base.df,dec=0),display=False)
+    glue("Alternative", mpak.ibsstyle(mpak['PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEIMPGNFSKN'].df,dec=0),display=False)
+ 
+:::{tabbed} Baseline
+```{glue:figure} Baseline
+**Baseline**
+```
+:::
+
+:::{tabbed} Alternative 
+:::{glue:figure} Alternative
+**Alternative**
+:::
+
+
+:::

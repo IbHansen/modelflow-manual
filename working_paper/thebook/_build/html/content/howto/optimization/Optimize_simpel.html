@@ -1,0 +1,1138 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>26. Mean variance optimization &#8212; MFMod models in Python with ModelFlow</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="27. Litterature" href="../../litterature.html" />
+    <link rel="prev" title="25. Specification of models (introduction)" href="../../notebooks/intro/model%20specification.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">MFMod models in Python with ModelFlow</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model, solutions and Modelflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notebooks/intro/model%20and%20solution.html">
+   1. What is a Model in ModelFlow ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notebooks/intro/Example%20Solow.html">
+   3. Example Solow model
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python and pandas stuff
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Python/Intro_Jupyter_notebook.html">
+   4. Introduction to the Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notebooks/pandas/dataframes.html">
+   5. Introduction to Pandas dataframes
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Updating variables
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../update/model%20update.html">
+   6. Update, modifying series in a dataframe using modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../update/extending_dataframes.html">
+   7. Extend Pandas dataframes with ModelFLow capabilities.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  A small demo model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../smallmodel/modelstart.html">
+   8. Create a small model from scratch and save it
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../smallmodel/modelstart%20export%20up.html">
+   9. Experiment: Export up
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Make experiments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../experiments/create_experiment.html">
+   10. Create an experiment, simulate it and access results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../experiments/create_save_scenarios.html">
+   12. Create many scenarios, simulate them  and access results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../experiments/Standard%20experiment%20simple.html">
+   13. A experiment using Taxes on Goods and Services
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Keept experiments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../keep/Create%20and%20modify%20charts%20with%20keep_plot.html">
+   14. Load a model and data inclusive the keept scenarios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Onboarding MFMod models from .wf1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../onboard/eviews/onboard%20one%20model%20from%20%20wf1.html">
+   15. Onboard a model defined in a .wf1 file
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../onboard/eviews/onboard%20many%20models%20from%20wf1.html">
+   16. Onboard all models  defined in .wf1 files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../onboard/eviews/Normalizing%20when%20onboarding%20eviews.html">
+   17. Normalizing when onboarding  eviews models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  modifying models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fixing/Fixing%20variables.html">
+   18. Fixing the value of variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modifymodel/create_real_model.html">
+   19. Modified equation to to keep real tax rates
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Python/modelflow_features.html">
+   21. Useful model instance properties and methods
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../structure/Logical_structure.html">
+   22. Logical structure and dependencies.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Attribution
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../attribution/Attribution%20background.html">
+   23. Attribution
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Target and instruments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../targetinstruments/One%20target%20one%20instrument%20with%203%20instrument%20variables.html">
+   24. One target one instrument with 3 instrument variables
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Specification
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notebooks/intro/model%20specification.html">
+   25. Specification of models (introduction)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   26. Mean variance optimization
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../litterature.html">
+   27. Litterature
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/content/howto/optimization/Optimize_simpel.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/docs/content/howto/optimization/Optimize_simpel.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/howto/optimization/Optimize_simpel.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-variance-problem">
+   26.1. Mean variance problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quadratic-program">
+   26.2. Quadratic program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#translation-from-mean-variance-to-quadratic-program">
+   26.3. Translation from Mean Variance to quadratic program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping-af-variables">
+   26.4. Grouping af variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mv-opt-mean-variance-to-quadratic-programming">
+   26.5. mv_opt() Mean variance to Quadratic Programming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-currency-mix-with-three-currencies">
+   26.6. Example: currency mix with three currencies.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-the-model-in-the-business-language">
+     26.6.1. Specify the model in the business language
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-model-instance">
+     26.6.2. Create a model instance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equation-the-expanded-model-equations">
+     26.6.3. .equation The expanded model equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drawmodel-visualizing-the-structure-of-the-model">
+     26.6.4. .drawmodel() Visualizing the structure of the model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-dataframe">
+     26.6.5. Create a Dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assigning-values-to-the-exogenous-variables">
+     26.6.6. Assigning values to the exogenous variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-the-model-for-all-the-experiments">
+   26.7. Solve the model for all the experiments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-of-results">
+     26.7.1. Visualization of results
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mean variance optimization</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-variance-problem">
+   26.1. Mean variance problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quadratic-program">
+   26.2. Quadratic program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#translation-from-mean-variance-to-quadratic-program">
+   26.3. Translation from Mean Variance to quadratic program
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping-af-variables">
+   26.4. Grouping af variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mv-opt-mean-variance-to-quadratic-programming">
+   26.5. mv_opt() Mean variance to Quadratic Programming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-currency-mix-with-three-currencies">
+   26.6. Example: currency mix with three currencies.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specify-the-model-in-the-business-language">
+     26.6.1. Specify the model in the business language
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-model-instance">
+     26.6.2. Create a model instance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equation-the-expanded-model-equations">
+     26.6.3. .equation The expanded model equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#drawmodel-visualizing-the-structure-of-the-model">
+     26.6.4. .drawmodel() Visualizing the structure of the model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-dataframe">
+     26.6.5. Create a Dataframe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assigning-values-to-the-exogenous-variables">
+     26.6.6. Assigning values to the exogenous variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-the-model-for-all-the-experiments">
+   26.7. Solve the model for all the experiments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-of-results">
+     26.7.1. Visualization of results
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mean-variance-optimization">
+<h1><span class="section-number">26. </span>Mean variance optimization<a class="headerlink" href="#mean-variance-optimization" title="Permalink to this headline">#</a></h1>
+<p><strong>This is an advanced notebook which requires prior knowledge on optimization and linear algebra</strong></p>
+<p>The <a class="reference external" href="https://cvxopt.org">CVXOPT </a> library can solve convex optimization problems. In Modelflow this is harnesses to solve <strong>mean variance</strong> problems as they frequently arise in finance.</p>
+<p>This notebook first takes the reader through how a mean variance problem can be restated as a quadratic problem, which is a standard problem for CVXOPT. It covers a little more general mean variance problem which also a stylized bank balance sheet optimization problem.</p>
+<p><strong>The notebook is fairly advanced and requires some previous knowledge.</strong></p>
+<p>A small currency mix optimization model with 3 currencies is used to illustrate the optimization.</p>
+<p>Notice also that the rows in this example has nothing to do with time, but indicates the risk level. This does not matter, as no lags or leads are involved.</p>
+<p>Enjoy</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="c1"># Modules from Modelflow</span>
+<span class="kn">from</span> <span class="nn">modelclass</span> <span class="kn">import</span> <span class="n">model</span> 
+
+<span class="c1">#Optional functionalities </span>
+<span class="n">model</span><span class="o">.</span><span class="n">widescreen</span><span class="p">();</span>
+<span class="n">model</span><span class="o">.</span><span class="n">scroll_off</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<style>
+    div#notebook-container    { width: 95%; }
+    div#menubar-container     { width: 65%; }
+    div#maintoolbar-container { width: 99%; }
+</style>
+</div></div>
+</div>
+<section id="mean-variance-problem">
+<h2><span class="section-number">26.1. </span>Mean variance problem<a class="headerlink" href="#mean-variance-problem" title="Permalink to this headline">#</a></h2>
+<p>A mean variance problem for allocating positions to banks.
+let:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ll}
+\mathbf x &amp; \mbox{Position in each asset(+)/liability(-) type}\\
+\Sigma &amp; \mbox{Covariance matrix} \\
+\mathbf r &amp; \mbox{Return vector}\\
+\lambda &amp; \mbox{Risk aversion}\\
+\mathbf{riskweights}&amp;\text{Vector of risk weights, liabilities has riskweight = 0}\\
+Capital&amp;\text{Max of sum of risk weighted assets}\\
+\mathbf{lcrweights}&amp;\text{Vector of LCR weights, liabilities has lcrweight = 0}\\
+LCR&amp;\text{Min of sum of lcr weighted assets}\\
+\mathbf{leverageweight}&amp;\text{Vector of leverage weights, liabilities has leverageweight = 0}\\
+Equity&amp;\text{Max sum of leverage weighted positions}\\
+Budget&amp;\text{initial sum of the positions, as no new money is injected the sum has to be maintained }\\
+\mbox{Risk} &amp; \mathbf x^T  \Sigma \mathbf x\\
+\mbox{Return} &amp; \mathbf r^T \mathbf x\\
+\end{array}
+\end{split}\]</div>
+<p>The optimization problem can be stated as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{lll}
+\mbox{minimize:}  &amp; \lambda \mathbf x^T \Sigma \mathbf x - (1-\lambda) \mathbf r^T \mathbf x &amp; \mbox{If }\lambda \mbox{ = 1 minimize risk, if } \lambda\mbox{ = 0 maximize return }\\
+\mbox{subject to:} &amp; \mathbf x \succeq \mathbf{x^{min}} &amp;\mbox{Each position greater or equal a minimum}\\ 
+                   &amp; \mathbf x \preceq \mathbf{x^{max}} &amp;\mbox{Each position less or equal a maximum}\\ 
+                   &amp; \mathbf{riskweights}^T\mathbf x \leq Capital &amp;\mbox{Risk weighted assets less than or equal to capital}\\ 
+                   &amp; \mathbf{lcrweights}^T\mathbf x \geq LCR &amp;\mbox{lcr weighted assets greater than or equal to LCR target}\\ 
+                   &amp; \mathbf{leverageweight}^T\mathbf x \leq equity &amp;\mbox{leverage weighted assets less than or equal to equity}\\ 
+                   &amp; \mathbf 1^T\mathbf x = Budget &amp; \mbox{Sum of positions = E, we are not getting more money}
+\end{array}
+\end{split}\]</div>
+</section>
+<section id="quadratic-program">
+<h2><span class="section-number">26.2. </span>Quadratic program<a class="headerlink" href="#quadratic-program" title="Permalink to this headline">#</a></h2>
+<p>The general quadratic optimization problem is usually formulated in this way:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{lr}
+\mbox{minimize:}   &amp;\frac{1}{2} x^TPx + q^T x \\
+\mbox{subject to:} &amp; G x \preceq h \\
+                  &amp; Ax = b
+\end{array}
+\end{split}\]</div>
+<p>P,q,G,h,A,b are the parameters quadratic program algorithms usually have as inputs.
+This also goes for the <strong>cvxopt</strong> package which is used in this example.</p>
+</section>
+<section id="translation-from-mean-variance-to-quadratic-program">
+<h2><span class="section-number">26.3. </span>Translation from Mean Variance to quadratic program<a class="headerlink" href="#translation-from-mean-variance-to-quadratic-program" title="Permalink to this headline">#</a></h2>
+<p>To solve the Mean variance problem the problem has to be translated to the standard quadratic programming formulation. This can be done according to this recipe:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ll}
+P &amp; = 2\times (1-\lambda)\times  \Sigma \\
+q &amp; = -\lambda\times r \\ 
+G &amp;= \begin{bmatrix} -x^{min} \\ 
+\phantom{-}x^{max} \\ 
+ Capital \\ 
+ -LCR\\ 
+ \end{bmatrix}\\
+A &amp;= \mathbf 1^T \\
+b &amp;= Budget\\
+\end{array}
+\end{split}\]</div>
+<p>So in a example with 3 positions <span class="math notranslate nohighlight">\( G \times x \preceq h  \)</span> can be constructed this way:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{llll}
+ \begin{bmatrix} 
+		-1 &amp; \phantom{-}0 &amp; \phantom{-}0 \\
+		\phantom{-}0 &amp; -1 &amp; \phantom{-}0 \\
+		\phantom{-}0 &amp; \phantom{-}0 &amp; -1 \\
+		\phantom{-}1 &amp; \phantom{-}0 &amp; \phantom{-}0 \\
+		\phantom{-}0 &amp; \phantom{-}1 &amp; \phantom{-}0 \\
+		\phantom{-}0 &amp; \phantom{-}0 &amp; \phantom{-}1 \\
+   		\text{Risk weight}_{position_1} &amp; \text{Risk weight}_{position_2} &amp; \text{Risk weight}_{position_3} \\
+   		\text{-LCR weight}_{position_1} &amp; \text{-LCR weight}_{position_2} &amp; \text{-LCR weight}_{position_3} \\
+   		\text{Leverage weight}_{position_1} &amp; \text{Leverage weight}_{position_2} &amp; \text{Leverage weight}_{position_3} \\
+\end{bmatrix} \times  \begin{bmatrix} 
+		x_1 \\
+		x_2  \\
+		x_3 \\
+\end{bmatrix} \preceq \begin{bmatrix} 
+		-x_1^{min} \\
+		-x_2^{min} \\
+		-x_3^{min} \\
+		\phantom{-}x_1^{max} \\
+		\phantom{-}x_2^{max} \\
+		\phantom{-}x_3^{max} \\
+        Capital  \\
+        -LCR \\
+        Equity \\
+\end{bmatrix}
+\end{array}
+\end{split}\]</div>
+</section>
+<section id="grouping-af-variables">
+<h2><span class="section-number">26.4. </span>Grouping af variables<a class="headerlink" href="#grouping-af-variables" title="Permalink to this headline">#</a></h2>
+<p>If we want to group position so that positions have are proportional, it can be done by adding rows to A and b
+if <span class="math notranslate nohighlight">\(position_{1}\)</span> should be equal to <span class="math notranslate nohighlight">\(position_2\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+A = \begin{bmatrix} 
+		1 &amp; \phantom{-}1 &amp; 1 \\
+		1 &amp; -1 &amp; 0 \\
+		\end{bmatrix} \\        
+         b = \begin{bmatrix} 
+		1  \\
+	    0 \\
+		\end{bmatrix}
+\end{gather*}\]</div>
+<p>if <span class="math notranslate nohighlight">\(position_{1}\)</span> should be equal to the double of <span class="math notranslate nohighlight">\(position_2\)</span> A should be changed to:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{gather*}
+A = \begin{bmatrix} 
+		1 &amp; \phantom{-}1 &amp; 1 \\
+		2 &amp;  -1 &amp; 0 \\
+		\end{bmatrix}
+\end{gather*}\]</div>
+</section>
+<section id="mv-opt-mean-variance-to-quadratic-programming">
+<h2><span class="section-number">26.5. </span>mv_opt() Mean variance to Quadratic Programming<a class="headerlink" href="#mv-opt-mean-variance-to-quadratic-programming" title="Permalink to this headline">#</a></h2>
+<p>The function mv_opt() translates the Mean variance problem to a Quadratic programming problem.</p>
+<p>Calls to this function can be incorporated in the business logic.  <span style='color:Blue'> Include more explanation. </span></p>
+<p><span style='color:Blue'> Why is the function defined here? And not “just” called upon and explained like the others? </span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def mv_opt(PP,qq,riskaversion,bsum,weights,weigthtedsum,boundsmin,boundsmax,lprint=False):
+    from cvxopt import qp , matrix
+    q_size   =  len(qq)
+    P        =  matrix(2.0*(1.0-riskaversion)*PP)                
+    q        =  matrix(-1.0*riskaversion*qq)
+    Gmin     = -matrix(np.eye(q_size))
+    hmin     = -matrix(boundsmin)
+    Gmax     =  matrix(np.eye(q_size))
+    hmax     =  matrix(boundsmax)
+    Gweights =  matrix(weights)
+    hweights =  matrix(weigthtedsum)
+    G        =  matrix([Gmin,Gmax,Gweights.T])# creates the combined inequalities 
+    h        =  matrix([hmin,hmax,hweights])
+    A        =  matrix(1.,(1,q_size))        # sum of shares equal to one
+    b        =  matrix([bsum])   
+    sol      = qp(P,q,G,h,A,b)               # minimize risk and maximize return 
+    x        = sol[&#39;x&#39;] 
+    res      = x
+    return res
+    ```
+</pre></div>
+</div>
+</section>
+<section id="example-currency-mix-with-three-currencies">
+<h2><span class="section-number">26.6. </span>Example: currency mix with three currencies.<a class="headerlink" href="#example-currency-mix-with-three-currencies" title="Permalink to this headline">#</a></h2>
+<section id="specify-the-model-in-the-business-language">
+<h3><span class="section-number">26.6.1. </span>Specify the model in the business language<a class="headerlink" href="#specify-the-model-in-the-business-language" title="Permalink to this headline">#</a></h3>
+<p>First the model is specified in business language.</p>
+<p>tvaluate sets up the parameters, packs and unpacks the variables to appropriate matrices as well as uses the mv_opt optimizer function to define ‘positions’:</p>
+<p><span class="math notranslate nohighlight">\(positions          =  mv\_opt(msigma,vreturn,riskaversion, total, 
+                                       [[risk\_weights] , [-lcr\_weights] , [leverage\_weights]],
+                                           [capital, -lcr , equity] ,min_w,max_w) \)</span></p>
+<p>Notice:</p>
+<ul class="simple">
+<li><p>matrix in frmlname indicates that the left hand side is a matrix</p></li>
+<li><p>the matrix function creates a matrix from nested lists</p></li>
+<li><p>the to_matrix function creates a matrix</p></li>
+<li><p>argexpand(list,argument) will expand the argument to all elements in list and substitute</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tvaluta</span><span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">list valuta1 = ISO  : USD JPY EUR $</span>
+
+
+<span class="s1">frml &lt;matrix&gt; msigma  = matrix( [[0.01573635,0.01436816,	0.01045556],</span>
+<span class="s1">                                 [0.01436816,0.02289016,	0.01172995],</span>
+<span class="s1">                                 [0.01045556,0.01172995,	0.01748076]]  ) $</span>
+
+<span class="s1">frml &lt;matrix&gt; vreturn         = matrix([0.048,0.040,0.035]) $</span>
+
+<span class="s1">frml &lt;matrix&gt; max_w             = to_matrix(valuta1,max_</span><span class="si">{iso}</span><span class="s1">)      $</span>
+<span class="s1">frml &lt;matrix&gt; min_w             = to_matrix(valuta1,min_</span><span class="si">{iso}</span><span class="s1">)       $</span>
+
+
+<span class="s1">frml &lt;matrix&gt; risk_weights      = to_matrix(valuta1,risk_weight_</span><span class="si">{iso}</span><span class="s1">) $</span>
+<span class="s1">frml &lt;matrix&gt; leverage_weights  = to_matrix(valuta1,leverage_weight_</span><span class="si">{iso}</span><span class="s1">) $</span>
+<span class="s1">frml &lt;matrix&gt; lcr_weights       = to_matrix(valuta1,lcr_weight_</span><span class="si">{iso}</span><span class="s1">) $</span>
+<span class="s1">FRML &lt;matrix&gt; positions          =  mv_opt(msigma,vreturn,riskaversion, total,</span>
+<span class="s1">                      [[risk_weights] , [-lcr_weights] , [leverage_weights]],</span>
+<span class="s1">                                       [capital, -lcr , equity] ,min_w,max_w) $</span>
+<span class="s1">frml  xx      risk               =  (positions.trans() * msigma * positions)[0,0]$</span>
+<span class="s1">frml  xx      return             =  (positions.trans() * vreturn        )[0,0] $</span>
+<span class="s1">frml  xx      risk_weighted_sum     = (risk_weights.trans() * positions)[0,0] $</span>
+<span class="s1">frml  xx      lcr_weighted_sum      = (lcr_weights.trans() * positions)[0,0] $</span>
+<span class="s1">frml  xx      leverage_weighted_sum = (leverage_weights.trans() * positions)[0,0] $</span>
+<span class="s1">frml  xx      argexpand(valuta1,position_</span><span class="si">{iso}</span><span class="s1">) = positions $</span>
+<span class="s1">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-model-instance">
+<h3><span class="section-number">26.6.2. </span>Create a model instance<a class="headerlink" href="#create-a-model-instance" title="Permalink to this headline">#</a></h3>
+<p>After we have defined our problem in the business language, we can create a model instance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mvaluta</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">from_eq</span><span class="p">(</span><span class="n">tvaluta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="equation-the-expanded-model-equations">
+<h3><span class="section-number">26.6.3. </span>.equation The expanded model equations<a class="headerlink" href="#equation-the-expanded-model-equations" title="Permalink to this headline">#</a></h3>
+<p>Here you can see how the matrices are constructed and how tuple unpacking is used to extract values from vectors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mvaluta</span><span class="o">.</span><span class="n">equations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LIST VALUTA1 = ISO  : USD JPY EUR $
+FRML &lt;MATRIX&gt; MSIGMA  = MATRIX( [[0.01573635,0.01436816,	0.01045556],
+                                 [0.01436816,0.02289016,	0.01172995],
+                                 [0.01045556,0.01172995,	0.01748076]]  ) $
+FRML &lt;MATRIX&gt; VRETURN         = MATRIX([0.048,0.040,0.035]) $
+FRML &lt;MATRIX&gt; MAX_W             = MATRIX(
+[MAX_USD,MAX_JPY,MAX_EUR])      $
+FRML &lt;MATRIX&gt; MIN_W             = MATRIX(
+[MIN_USD,MIN_JPY,MIN_EUR])       $
+FRML &lt;MATRIX&gt; RISK_WEIGHTS      = MATRIX(
+[RISK_WEIGHT_USD,RISK_WEIGHT_JPY,RISK_WEIGHT_EUR]) $
+FRML &lt;MATRIX&gt; LEVERAGE_WEIGHTS  = MATRIX(
+[LEVERAGE_WEIGHT_USD,LEVERAGE_WEIGHT_JPY,LEVERAGE_WEIGHT_EUR]) $
+FRML &lt;MATRIX&gt; LCR_WEIGHTS       = MATRIX(
+[LCR_WEIGHT_USD,LCR_WEIGHT_JPY,LCR_WEIGHT_EUR]) $
+FRML &lt;MATRIX&gt; POSITIONS          =  MV_OPT(MSIGMA,VRETURN,RISKAVERSION, TOTAL,
+                      [[RISK_WEIGHTS] , [-LCR_WEIGHTS] , [LEVERAGE_WEIGHTS]],
+                                       [CAPITAL, -LCR , EQUITY] ,MIN_W,MAX_W) $
+FRML XX      RISK               =  (POSITIONS.TRANS() * MSIGMA * POSITIONS)[0,0]$
+FRML XX      RETURN             =  (POSITIONS.TRANS() * VRETURN        )[0,0] $
+FRML XX      RISK_WEIGHTED_SUM     = (RISK_WEIGHTS.TRANS() * POSITIONS)[0,0] $
+FRML XX      LCR_WEIGHTED_SUM      = (LCR_WEIGHTS.TRANS() * POSITIONS)[0,0] $
+FRML XX      LEVERAGE_WEIGHTED_SUM = (LEVERAGE_WEIGHTS.TRANS() * POSITIONS)[0,0] $
+FRML XX      POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="drawmodel-visualizing-the-structure-of-the-model">
+<h3><span class="section-number">26.6.4. </span>.drawmodel() Visualizing the structure of the model<a class="headerlink" href="#drawmodel-visualizing-the-structure-of-the-model" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mvaluta</span><span class="o">.</span><span class="n">drawmodel</span><span class="p">(</span><span class="n">png</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/Optimize_simpel_18_0.png" src="../../../_images/Optimize_simpel_18_0.png" />
+</div>
+</div>
+</section>
+<section id="create-a-dataframe">
+<h3><span class="section-number">26.6.5. </span>Create a Dataframe<a class="headerlink" href="#create-a-dataframe" title="Permalink to this headline">#</a></h3>
+<p>We have defined a model. Let’s create some data.</p>
+<p>We are creating a  dataframe, df, with 500 experiments with increasing risk-apatite.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiments</span>  <span class="o">=</span> <span class="p">[</span><span class="n">i</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">)]</span>                     <span class="c1"># make some experiments </span>
+<span class="n">riskaversion</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">experiments</span><span class="p">]</span>    <span class="c1"># set the risk aversion in each experiment </span>
+<span class="n">temp</span>         <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">riskaversion</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="n">experiments</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RISKAVERSION&#39;</span><span class="p">])</span>  <span class="c1"># stuff it into a dataframe</span>
+<span class="n">df</span>    <span class="o">=</span> <span class="n">mvaluta</span><span class="o">.</span><span class="n">insertModelVar</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df_</span><span class="p">:</span> <span class="n">df_</span><span class="p">[</span><span class="nb">sorted</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df_</span><span class="o">.</span><span class="n">columns</span><span class="p">])])</span> <span class="c1"># fill the dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assigning-values-to-the-exogenous-variables">
+<h3><span class="section-number">26.6.6. </span>Assigning values to the exogenous variables<a class="headerlink" href="#assigning-values-to-the-exogenous-variables" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">TOTAL</span>     <span class="o">=</span> <span class="mf">10.0</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">MAX_USD</span>   <span class="o">=</span> <span class="mi">90</span>
+<span class="n">df</span><span class="o">.</span><span class="n">MAX_JPY</span>   <span class="o">=</span> <span class="mi">90</span>
+<span class="n">df</span><span class="o">.</span><span class="n">MAX_EUR</span>   <span class="o">=</span> <span class="mf">0.</span>   <span class="c1"># eur forced to be a liability </span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">MIN_USD</span>   <span class="o">=</span> <span class="mi">0</span>
+<span class="n">df</span><span class="o">.</span><span class="n">MIN_JPY</span>   <span class="o">=</span> <span class="mi">0</span>
+<span class="n">df</span><span class="o">.</span><span class="n">MIN_EUR</span>   <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">df</span><span class="o">.</span><span class="n">CAPITAL</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">df</span><span class="o">.</span><span class="n">RISK_WEIGHT_USD</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">df</span><span class="o">.</span><span class="n">RISK_WEIGHT_JPY</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">df</span><span class="o">.</span><span class="n">RISK_WEIGHT_EUR</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">EQUITY</span>  <span class="o">=</span> <span class="mf">8.</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LEVERAGE_WEIGHT_USD</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LEVERAGE_WEIGHT_JPY</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LEVERAGE_WEIGHT_EUR</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">LCR</span>     <span class="o">=</span> <span class="mi">2</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LCR_WEIGHT_USD</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LCR_WEIGHT_JPY</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">df</span><span class="o">.</span><span class="n">LCR_WEIGHT_EUR</span> <span class="o">=</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="solve-the-model-for-all-the-experiments">
+<h2><span class="section-number">26.7. </span>Solve the model for all the experiments<a class="headerlink" href="#solve-the-model-for-all-the-experiments" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">mvaluta</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">slut</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">experiments</span><span class="p">),</span> <span class="n">silent</span> <span class="o">=</span> <span class="kc">True</span> <span class="p">)</span>  <span class="c1"># Run the model </span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="visualization-of-results">
+<h3><span class="section-number">26.7.1. </span>Visualization of results<a class="headerlink" href="#visualization-of-results" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">RISK</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">RISK</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">pplot</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span><span class="n">ax</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">vars</span><span class="p">:</span>
+        
+        <span class="n">_</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;RISK&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">v</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">ax</span><span class="p">])</span>
+        
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="n">pplot</span><span class="p">([</span><span class="s1">&#39;RETURN&#39;</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pplot</span><span class="p">([</span><span class="s1">&#39;POSITION_JPY&#39;</span><span class="p">,</span><span class="s1">&#39;POSITION_USD&#39;</span><span class="p">,</span><span class="s1">&#39;POSITION_EUR&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pplot</span><span class="p">([</span><span class="s1">&#39;RISK_WEIGHTED_SUM&#39;</span><span class="p">,</span><span class="s1">&#39;CAPITAL&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pplot</span><span class="p">([</span><span class="s1">&#39;LEVERAGE_WEIGHTED_SUM&#39;</span><span class="p">,</span><span class="s1">&#39;EQUITY&#39;</span><span class="p">],</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/Optimize_simpel_26_0.png" src="../../../_images/Optimize_simpel_26_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content\howto\optimization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../../notebooks/intro/model%20specification.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">25. </span>Specification of models (introduction)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../litterature.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">27. </span>Litterature</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ib Hansen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

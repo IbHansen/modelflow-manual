@@ -1,0 +1,11 @@
+digraph TD { rankdir ="LR" 
+{node  [margin=0.025 fontcolor=blue style=filled ] 
+ "A" [ shape=box fillcolor= yellow tooltip="A&#10;Exogen"  margin=0.025 fontcolor=blue style = filled  label=<<TABLE BORDER='0' CELLBORDER = '0' style = "filled"  > <TR><TD tooltip="A&#10;Exogen">A:</TD></TR> </TABLE>> ]
+"X" [ shape=box fillcolor= steelblue1 tooltip="X&#10;FRML &lt;&gt; X = X(-1) + A &#36;"  margin=0.025 fontcolor=blue style = filled  label=<<TABLE BORDER='0' CELLBORDER = '0' style = "filled"  > <TR><TD tooltip="X&#10;FRML &lt;&gt; X = X(-1) + A &#36;">X:</TD></TR> </TABLE>> ]
+"X(-1)" [ shape=box fillcolor= springgreen tooltip="X&#10;FRML &lt;&gt; X = X(-1) + A &#36;"  margin=0.025 fontcolor=blue style = filled  label=<<TABLE BORDER='0' CELLBORDER = '0' style = "filled"  > <TR><TD tooltip="X&#10;FRML &lt;&gt; X = X(-1) + A &#36;">X(-1):X</TD></TR> </TABLE>> ] 
+} 
+"A" -> "X" [ style = filled tooltip=" A -> X Min. att. 0%  max: 0%" href="bogus" penwidth = 1.0 ]
+"X" -> "X(-1)" [ style = filled tooltip=" X -> X(-1) Min. att. 0%  max: 0%" href="bogus" penwidth = 1.0 ]
+"X(-1)" -> "X" [ style = filled tooltip=NA href="bogus" penwidth = 0.5 ]
+ label = "A_model_graph";
+}
