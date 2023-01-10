@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="15. Onboard a model defined in a .wf1 file" href="../onboard/eviews/onboard%20one%20model%20from%20%20wf1.html" />
@@ -787,6 +789,11 @@ manipulating the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">exostart</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak scenarios.pcim&#39;</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  ../models/pak scenarios.pcim
 </pre></div>
 </div>
 </div>

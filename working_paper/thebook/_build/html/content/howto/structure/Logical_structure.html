@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="23. Attribution" href="../attribution/Attribution%20background.html" />
@@ -693,6 +695,11 @@ The next cell:</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">alternative</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2020 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 29&quot;</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">)</span> <span class="c1"># simulates the model </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  ../../models/pak.pcim
 </pre></div>
 </div>
 </div>
