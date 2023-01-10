@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432pt" height="149pt" viewBox="0.00 0.00 432.00 148.63">
+<g id="graph0" class="graph" transform="scale(0.386059 0.386059) rotate(0) translate(4 381)">
+<title>TD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-381 1115,-381 1115,4 -4,4"/>
+<text text-anchor="middle" x="555.5" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">PAKNYGDPMKTPKN</text>
+<!-- PAKNECONPRVTKN -->
+<g id="node1" class="node">
+<title>PAKNECONPRVTKN</title>
+<g id="a_node1"><a xlink:title="Household Consumption
+FRML &lt;Z,EXO&gt; PAKNECONPRVTKN = (PAKNECONPRVTKN(-1)*EXP(-PAKNECONPRVTKN_A+ (-0.2*(LOG(PAKNECONPRVTKN(-1))-LOG((PAKNYYWBTOTLCN(-1)*(1-PAKGGREVDRCTXN(-1)/100))/PAKNECONPRVTXN(-1)))+1*((LOG((PAKNYYWBTOTLCN*(1-PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))-(LOG((PAKNYYWBTOTLCN(-1)*(1-PAKGGREVDRCTXN(-1)/100))/PAKNECONPRVTXN(-1))))+0.0303228629698929+0.0163839011059956*DURING_2010-0.3*(PAKFMLBLPOLYXN/100-((LOG(PAKNECONPRVTXN))-(LOG(PAKNECONPRVTXN(-1)))))) )) * (1-PAKNECONPRVTKN_D)+ PAKNECONPRVTKN_X*PAKNECONPRVTKN_D  $">
+<polygon fill="#63b8ff" stroke="black" points="399,-377 121,-377 121,-341 399,-341 399,-377"/>
+<text text-anchor="start" x="127" y="-354.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNECONPRVTKN:Household Consumption</text>
+</a>
+</g>
+</g>
+<!-- PAKNYGDPMKTPKN -->
+<g id="node3" class="node">
+<title>PAKNYGDPMKTPKN</title>
+<polygon fill="none" stroke="black" points="1111,-335 556,-335 556,-143 1111,-143 1111,-335"/>
+<g id="a_node3_0"><a xlink:href="bogus" xlink:title="GDP Expenditure side at market prices
+FRML  &lt;&gt; PAKNYGDPMKTPKN = PAKNECONPRVTKN+PAKNECONGOVTKN+PAKNEGDIFTOTKN+PAKNEGDISTKBKN+PAKNEEXPGNFSKN-PAKNEIMPGNFSKN+PAKNYGDPDISCKN+PAKADAP*PAKDISPREPKN $">
+<polygon fill="red" stroke="none" points="561.5,-309 561.5,-330 1106.5,-330 1106.5,-309 561.5,-309"/>
+<polygon fill="none" stroke="black" points="561.5,-309 561.5,-330 1106.5,-330 1106.5,-309 561.5,-309"/>
+<text text-anchor="start" x="659.5" y="-315.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPMKTPKN:GDP Expenditure side at market prices</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="561.5,-286 561.5,-307 636.5,-307 636.5,-286 561.5,-286"/>
+<text text-anchor="start" x="564.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="638.5,-286 638.5,-307 730.5,-307 730.5,-286 638.5,-286"/>
+<text text-anchor="start" x="670.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="732.5,-286 732.5,-307 824.5,-307 824.5,-286 732.5,-286"/>
+<text text-anchor="start" x="764.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="826.5,-286 826.5,-307 918.5,-307 918.5,-286 826.5,-286"/>
+<text text-anchor="start" x="858.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="920.5,-286 920.5,-307 1012.5,-307 1012.5,-286 920.5,-286"/>
+<text text-anchor="start" x="952.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="1014.5,-286 1014.5,-307 1106.5,-307 1106.5,-286 1014.5,-286"/>
+<text text-anchor="start" x="1046.5" y="-292.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<g id="a_node3_1"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="561.5,-263 561.5,-284 636.5,-284 636.5,-263 561.5,-263"/>
+<text text-anchor="start" x="564.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node3_2"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="638.5,-263 638.5,-284 730.5,-284 730.5,-263 638.5,-263"/>
+<text text-anchor="start" x="641.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">26,701,602.431</text>
+</a>
+</g>
+<g id="a_node3_3"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="732.5,-263 732.5,-284 824.5,-284 824.5,-263 732.5,-263"/>
+<text text-anchor="start" x="735.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">27,202,580.709</text>
+</a>
+</g>
+<g id="a_node3_4"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="826.5,-263 826.5,-284 918.5,-284 918.5,-263 826.5,-263"/>
+<text text-anchor="start" x="829.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">27,801,259.405</text>
+</a>
+</g>
+<g id="a_node3_5"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="920.5,-263 920.5,-284 1012.5,-284 1012.5,-263 920.5,-263"/>
+<text text-anchor="start" x="923.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">28,499,818.713</text>
+</a>
+</g>
+<g id="a_node3_6"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1014.5,-263 1014.5,-284 1106.5,-284 1106.5,-263 1014.5,-263"/>
+<text text-anchor="start" x="1017.5" y="-269.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">29,256,735.696</text>
+</a>
+</g>
+<g id="a_node3_7"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="561.5,-240 561.5,-261 636.5,-261 636.5,-240 561.5,-240"/>
+<text text-anchor="start" x="564.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="638.5,-240 638.5,-261 730.5,-261 730.5,-240 638.5,-240"/>
+<text text-anchor="start" x="641.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">26,483,175.564</text>
+<polygon fill="none" stroke="black" points="732.5,-240 732.5,-261 824.5,-261 824.5,-240 732.5,-240"/>
+<text text-anchor="start" x="735.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">27,235,594.386</text>
+<polygon fill="none" stroke="black" points="826.5,-240 826.5,-261 918.5,-261 918.5,-240 826.5,-240"/>
+<text text-anchor="start" x="829.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">27,963,320.841</text>
+<polygon fill="none" stroke="black" points="920.5,-240 920.5,-261 1012.5,-261 1012.5,-240 920.5,-240"/>
+<text text-anchor="start" x="923.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">28,690,715.598</text>
+<polygon fill="none" stroke="black" points="1014.5,-240 1014.5,-261 1106.5,-261 1106.5,-240 1014.5,-240"/>
+<text text-anchor="start" x="1017.5" y="-246.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">29,445,700.449</text>
+<g id="a_node3_8"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="561.5,-217 561.5,-238 636.5,-238 636.5,-217 561.5,-217"/>
+<text text-anchor="start" x="564.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="638.5,-217 638.5,-238 730.5,-238 730.5,-217 638.5,-217"/>
+<text text-anchor="start" x="654.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-218,426.867</text>
+<polygon fill="none" stroke="black" points="732.5,-217 732.5,-238 824.5,-238 824.5,-217 732.5,-217"/>
+<text text-anchor="start" x="759.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">33,013.677</text>
+<polygon fill="none" stroke="black" points="826.5,-217 826.5,-238 918.5,-238 918.5,-217 826.5,-217"/>
+<text text-anchor="start" x="846.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">162,061.436</text>
+<polygon fill="none" stroke="black" points="920.5,-217 920.5,-238 1012.5,-238 1012.5,-217 920.5,-217"/>
+<text text-anchor="start" x="940.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">190,896.885</text>
+<polygon fill="none" stroke="black" points="1014.5,-217 1014.5,-238 1106.5,-238 1106.5,-217 1014.5,-217"/>
+<text text-anchor="start" x="1034.5" y="-223.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">188,964.753</text>
+<polygon fill="none" stroke="black" points="561.5,-194 561.5,-215 1106.5,-215 1106.5,-194 561.5,-194"/>
+<text text-anchor="start" x="799" y="-200.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> Growth rate</text>
+<g id="a_node3_9"><a xlink:href="bogus" xlink:title="Base growth
+Exogen">
+<polygon fill="none" stroke="black" points="561.5,-171 561.5,-192 636.5,-192 636.5,-171 561.5,-171"/>
+<text text-anchor="start" x="564.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base growth</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="638.5,-171 638.5,-192 730.5,-192 730.5,-171 638.5,-171"/>
+<text text-anchor="start" x="696.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.087</text>
+<polygon fill="none" stroke="black" points="732.5,-171 732.5,-192 824.5,-192 824.5,-171 732.5,-171"/>
+<text text-anchor="start" x="790.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.876</text>
+<polygon fill="none" stroke="black" points="826.5,-171 826.5,-192 918.5,-192 918.5,-171 826.5,-171"/>
+<text text-anchor="start" x="884.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.201</text>
+<polygon fill="none" stroke="black" points="920.5,-171 920.5,-192 1012.5,-192 1012.5,-171 920.5,-171"/>
+<text text-anchor="start" x="978.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.513</text>
+<polygon fill="none" stroke="black" points="1014.5,-171 1014.5,-192 1106.5,-192 1106.5,-171 1014.5,-171"/>
+<text text-anchor="start" x="1072.5" y="-177.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.656</text>
+<g id="a_node3_10"><a xlink:href="bogus" xlink:title="Last growth
+Exogen">
+<polygon fill="none" stroke="black" points="561.5,-148 561.5,-169 636.5,-169 636.5,-148 561.5,-148"/>
+<text text-anchor="start" x="564.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last growth</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="638.5,-148 638.5,-169 730.5,-169 730.5,-148 638.5,-148"/>
+<text text-anchor="start" x="696.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.252</text>
+<polygon fill="none" stroke="black" points="732.5,-148 732.5,-169 824.5,-169 824.5,-148 732.5,-148"/>
+<text text-anchor="start" x="790.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.841</text>
+<polygon fill="none" stroke="black" points="826.5,-148 826.5,-169 918.5,-169 918.5,-148 826.5,-148"/>
+<text text-anchor="start" x="884.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.672</text>
+<polygon fill="none" stroke="black" points="920.5,-148 920.5,-169 1012.5,-169 1012.5,-148 920.5,-148"/>
+<text text-anchor="start" x="978.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.601</text>
+<polygon fill="none" stroke="black" points="1014.5,-148 1014.5,-169 1106.5,-169 1106.5,-148 1014.5,-148"/>
+<text text-anchor="start" x="1072.5" y="-154.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.631</text>
+<polygon fill="none" stroke="black" points="558,-145 558,-333 1109,-333 1109,-145 558,-145"/>
+</g>
+<!-- PAKNECONPRVTKN&#45;&gt;PAKNYGDPMKTPKN -->
+<g id="edge3" class="edge">
+<title>PAKNECONPRVTKN-&gt;PAKNYGDPMKTPKN</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title=" PAKNECONPRVTKN -&gt; PAKNYGDPMKTPKN Min. att. -1557%  max: 290%">
+<path fill="none" stroke="black" stroke-width="8" d="M399.15,-349.38C438.43,-345.36 481.09,-339.75 520,-332 528.57,-330.29 537.25,-328.45 545.98,-326.5"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="547.66,-333.3 555.86,-324.26 544.56,-319.65 547.66,-333.3"/>
+</a>
+</g>
+</g>
+<!-- PAKNEIMPGNFSKN -->
+<g id="node2" class="node">
+<title>PAKNEIMPGNFSKN</title>
+<g id="a_node2"><a xlink:title="Imports (G&amp;S)
+FRML &lt;Z,EXO&gt; PAKNEIMPGNFSKN = (PAKNEIMPGNFSKN(-1)*EXP(-PAKNEIMPGNFSKN_A+ (-0.324143718656754*(LOG(PAKNEIMPGNFSKN(-1))-LOG(PAKNEGDETTOTKN(-1))+0.8*LOG(PAKNEIMPGNFSXN(-1)/PAKNYGDPFCSTXN(-1)))-0.583459272245018+1*((LOG(PAKNEGDETTOTKN))-(LOG(PAKNEGDETTOTKN(-1))))-0.0921874580409631*((LOG(PAKNEIMPGNFSXN/PAKNYGDPFCSTXN))-(LOG(PAKNEIMPGNFSXN(-1)/PAKNYGDPFCSTXN(-1))))-0.0361746331863615*DURING_2012) )) * (1-PAKNEIMPGNFSKN_D)+ PAKNEIMPGNFSKN_X*PAKNEIMPGNFSKN_D  $">
+<polygon fill="#63b8ff" stroke="black" points="371.5,-323 148.5,-323 148.5,-287 371.5,-287 371.5,-323"/>
+<text text-anchor="start" x="155" y="-300.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNEIMPGNFSKN:Imports (G&amp;S)</text>
+</a>
+</g>
+</g>
+<!-- PAKNEIMPGNFSKN&#45;&gt;PAKNYGDPMKTPKN -->
+<g id="edge1" class="edge">
+<title>PAKNEIMPGNFSKN-&gt;PAKNYGDPMKTPKN</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title=" PAKNEIMPGNFSKN -&gt; PAKNYGDPMKTPKN Min. att. -46%  max: 456%">
+<path fill="none" stroke="black" stroke-width="8" d="M371.65,-293.96C417.57,-289.25 471.38,-283.57 520,-278 528.39,-277.04 536.91,-276.05 545.51,-275.04"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="546.53,-281.97 555.64,-273.85 544.89,-268.07 546.53,-281.97"/>
+</a>
+</g>
+</g>
+<!-- PAKNEGDIFTOTKN -->
+<g id="node4" class="node">
+<title>PAKNEGDIFTOTKN</title>
+<polygon fill="none" stroke="black" points="520,-269 0,-269 0,-77 520,-77 520,-269"/>
+<g id="a_node4_11"><a xlink:href="bogus" xlink:title="Total Gross Capital Formation
+FRML  &lt;&gt; PAKNEGDIFTOTKN = PAKNEGDIFGOVKN+PAKNEGDIFPRVKN $">
+<polygon fill="#ff7f24" stroke="none" points="5,-243 5,-264 515,-264 515,-243 5,-243"/>
+<polygon fill="none" stroke="black" points="5,-243 5,-264 515,-264 515,-243 5,-243"/>
+<text text-anchor="start" x="114" y="-249.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNEGDIFTOTKN:Total Gross Capital Formation</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="5,-220 5,-241 80,-241 80,-220 5,-220"/>
+<text text-anchor="start" x="8" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="82,-220 82,-241 167,-241 167,-220 82,-220"/>
+<text text-anchor="start" x="110.5" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="169,-220 169,-241 254,-241 254,-220 169,-220"/>
+<text text-anchor="start" x="197.5" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="256,-220 256,-241 341,-241 341,-220 256,-220"/>
+<text text-anchor="start" x="284.5" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="343,-220 343,-241 428,-241 428,-220 343,-220"/>
+<text text-anchor="start" x="371.5" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="430,-220 430,-241 515,-241 515,-220 430,-220"/>
+<text text-anchor="start" x="458.5" y="-226.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<g id="a_node4_12"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="5,-197 5,-218 80,-218 80,-197 5,-197"/>
+<text text-anchor="start" x="8" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node4_13"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="82,-197 82,-218 167,-218 167,-197 82,-197"/>
+<text text-anchor="start" x="85" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3,897,262.074</text>
+</a>
+</g>
+<g id="a_node4_14"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="169,-197 169,-218 254,-218 254,-197 169,-197"/>
+<text text-anchor="start" x="172" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,049,448.991</text>
+</a>
+</g>
+<g id="a_node4_15"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="256,-197 256,-218 341,-218 341,-197 256,-197"/>
+<text text-anchor="start" x="259" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,210,847.327</text>
+</a>
+</g>
+<g id="a_node4_16"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="343,-197 343,-218 428,-218 428,-197 343,-197"/>
+<text text-anchor="start" x="346" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,380,029.522</text>
+</a>
+</g>
+<g id="a_node4_17"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="430,-197 430,-218 515,-218 515,-197 430,-197"/>
+<text text-anchor="start" x="433" y="-203.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,553,907.602</text>
+</a>
+</g>
+<g id="a_node4_18"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="5,-174 5,-195 80,-195 80,-174 5,-174"/>
+<text text-anchor="start" x="8" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="82,-174 82,-195 167,-195 167,-174 82,-174"/>
+<text text-anchor="start" x="85" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3,975,227.861</text>
+<polygon fill="none" stroke="black" points="169,-174 169,-195 254,-195 254,-174 169,-174"/>
+<text text-anchor="start" x="172" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,170,245.171</text>
+<polygon fill="none" stroke="black" points="256,-174 256,-195 341,-195 341,-174 256,-174"/>
+<text text-anchor="start" x="259" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,354,170.443</text>
+<polygon fill="none" stroke="black" points="343,-174 343,-195 428,-195 428,-174 343,-174"/>
+<text text-anchor="start" x="346" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,535,628.810</text>
+<polygon fill="none" stroke="black" points="430,-174 430,-195 515,-195 515,-174 430,-174"/>
+<text text-anchor="start" x="433" y="-180.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4,717,894.765</text>
+<g id="a_node4_19"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="5,-151 5,-172 80,-172 80,-151 5,-151"/>
+<text text-anchor="start" x="8" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="82,-151 82,-172 167,-172 167,-151 82,-151"/>
+<text text-anchor="start" x="102" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">77,965.787</text>
+<polygon fill="none" stroke="black" points="169,-151 169,-172 254,-172 254,-151 169,-151"/>
+<text text-anchor="start" x="182" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">120,796.180</text>
+<polygon fill="none" stroke="black" points="256,-151 256,-172 341,-172 341,-151 256,-151"/>
+<text text-anchor="start" x="269" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">143,323.116</text>
+<polygon fill="none" stroke="black" points="343,-151 343,-172 428,-172 428,-151 343,-151"/>
+<text text-anchor="start" x="356" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">155,599.288</text>
+<polygon fill="none" stroke="black" points="430,-151 430,-172 515,-172 515,-151 430,-151"/>
+<text text-anchor="start" x="443" y="-157.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">163,987.163</text>
+<polygon fill="none" stroke="black" points="5,-128 5,-149 515,-149 515,-128 5,-128"/>
+<text text-anchor="start" x="225" y="-134.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> Growth rate</text>
+<g id="a_node4_20"><a xlink:href="bogus" xlink:title="Base growth
+Exogen">
+<polygon fill="none" stroke="black" points="5,-105 5,-126 80,-126 80,-105 5,-105"/>
+<text text-anchor="start" x="8" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base growth</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="82,-105 82,-126 167,-126 167,-105 82,-105"/>
+<text text-anchor="start" x="133" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.925</text>
+<polygon fill="none" stroke="black" points="169,-105 169,-126 254,-126 254,-105 169,-105"/>
+<text text-anchor="start" x="220" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.905</text>
+<polygon fill="none" stroke="black" points="256,-105 256,-126 341,-126 341,-105 256,-105"/>
+<text text-anchor="start" x="307" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.986</text>
+<polygon fill="none" stroke="black" points="343,-105 343,-126 428,-126 428,-105 343,-105"/>
+<text text-anchor="start" x="394" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.018</text>
+<polygon fill="none" stroke="black" points="430,-105 430,-126 515,-126 515,-105 430,-105"/>
+<text text-anchor="start" x="481" y="-111.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.970</text>
+<g id="a_node4_21"><a xlink:href="bogus" xlink:title="Last growth
+Exogen">
+<polygon fill="none" stroke="black" points="5,-82 5,-103 80,-103 80,-82 5,-82"/>
+<text text-anchor="start" x="8" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last growth</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="82,-82 82,-103 167,-103 167,-82 82,-82"/>
+<text text-anchor="start" x="133" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">6.005</text>
+<polygon fill="none" stroke="black" points="169,-82 169,-103 254,-103 254,-82 169,-82"/>
+<text text-anchor="start" x="220" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.906</text>
+<polygon fill="none" stroke="black" points="256,-82 256,-103 341,-103 341,-82 256,-82"/>
+<text text-anchor="start" x="307" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.410</text>
+<polygon fill="none" stroke="black" points="343,-82 343,-103 428,-103 428,-82 343,-82"/>
+<text text-anchor="start" x="394" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.167</text>
+<polygon fill="none" stroke="black" points="430,-82 430,-103 515,-103 515,-82 430,-82"/>
+<text text-anchor="start" x="481" y="-88.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.019</text>
+<polygon fill="none" stroke="black" points="2,-79 2,-267 518,-267 518,-79 2,-79"/>
+</g>
+<!-- PAKNEGDIFTOTKN&#45;&gt;PAKNYGDPMKTPKN -->
+<g id="edge2" class="edge">
+<title>PAKNEGDIFTOTKN-&gt;PAKNYGDPMKTPKN</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title=" PAKNEGDIFTOTKN -&gt; PAKNYGDPMKTPKN Min. att. -36%  max: 366%">
+<path fill="none" stroke="black" stroke-width="8" d="M520.41,-202.96C528.9,-203.94 537.41,-204.92 545.93,-205.91"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="545.19,-212.87 555.92,-207.06 546.79,-198.96 545.19,-212.87"/>
+</a>
+</g>
+</g>
+<!-- PAKNECONGOVTKN -->
+<g id="node5" class="node">
+<title>PAKNECONGOVTKN</title>
+<g id="a_node5"><a xlink:title="Government Consumption
+FRML  &lt;&gt; PAKNECONGOVTKN = PAKNECONGOVTCN/PAKNECONGOVTXN $">
+<polygon fill="#63b8ff" stroke="black" points="406,-59 114,-59 114,-23 406,-23 406,-59"/>
+<text text-anchor="start" x="120" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNECONGOVTKN:Government Consumption</text>
+</a>
+</g>
+</g>
+<!-- PAKNECONGOVTKN&#45;&gt;PAKNYGDPMKTPKN -->
+<g id="edge4" class="edge">
+<title>PAKNECONGOVTKN-&gt;PAKNYGDPMKTPKN</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title=" PAKNECONGOVTKN -&gt; PAKNYGDPMKTPKN Min. att. -108%  max: 835%">
+<path fill="none" stroke="black" stroke-width="8" d="M406.22,-45.95C443.88,-49.98 483.96,-56.76 520,-68 573.36,-84.64 627.99,-110.84 676.34,-137.78"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="673.15,-144.02 685.3,-142.82 680.01,-131.81 673.15,-144.02"/>
+</a>
+</g>
+</g>
+</g>
+</svg>

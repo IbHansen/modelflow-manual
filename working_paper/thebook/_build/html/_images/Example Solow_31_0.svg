@@ -1,15 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1034pt" height="251pt" viewBox="0.00 0.00 1034.00 251.00">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 247)">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="607pt" height="381pt" viewBox="0.00 0.00 607.00 380.84">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 376.84)">
 <title>TD</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-247 1030,-247 1030,4 -4,4"/>
-<text text-anchor="middle" x="513" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">Model Structure</text>
-<!-- CAPITAL_INTENSITY -->
+<polygon fill="white" stroke="none" points="-4,4 -4,-376.84 603,-376.84 603,4 -4,4"/>
+<text text-anchor="middle" x="299.5" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">Model Structure</text>
+<!-- INVESTMENT -->
 <g id="node1" class="node">
-<title>CAPITAL_INTENSITY</title>
-<g id="a_node1"><a xlink:title="CAPITAL_INTENSITY
-FRML &lt;&gt; CAPITAL_INTENSITY = CAPITAL/LABOR  $">
-<polygon fill="#63b8ff" stroke="black" points="1026,-120 877,-120 877,-84 1026,-84 1026,-120"/>
-<text text-anchor="start" x="883.5" y="-97.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL_INTENSITY:</text>
+<title>INVESTMENT</title>
+<g id="a_node1"><a xlink:title="INVESTMENT
+FRML &lt;&gt; INVESTMENT      = INCOME - CONSUMPTION    $">
+<polygon fill="#63b8ff" stroke="black" points="128.5,-179.84 25.5,-179.84 25.5,-143.84 128.5,-143.84 128.5,-179.84"/>
+<text text-anchor="start" x="32" y="-157.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">INVESTMENT:</text>
+</a>
+</g>
+</g>
+<!-- CAPITAL -->
+<g id="node6" class="node">
+<title>CAPITAL</title>
+<g id="a_node6"><a xlink:title="CAPITAL
+FRML &lt;&gt; CAPITAL=CAPITAL(-1)+(INVESTMENT-DEPRECIATION_RATE * CAPITAL(-1))$">
+<polygon fill="#63b8ff" stroke="black" points="263,-229.84 190,-229.84 190,-193.84 263,-193.84 263,-229.84"/>
+<text text-anchor="start" x="196.5" y="-207.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL:</text>
+</a>
+</g>
+</g>
+<!-- INVESTMENT&#45;&gt;CAPITAL -->
+<g id="edge14" class="edge">
+<title>INVESTMENT-&gt;CAPITAL</title>
+<g id="a_edge14"><a xlink:href="bogus" xlink:title=" INVESTMENT -&gt; CAPITAL Min. att. 6%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M128.76,-179.05C145.46,-184.71 163.91,-190.96 180.18,-196.48"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="178.27,-203.22 189.99,-199.8 182.77,-189.96 178.27,-203.22"/>
 </a>
 </g>
 </g>
@@ -18,271 +37,252 @@ FRML &lt;&gt; CAPITAL_INTENSITY = CAPITAL/LABOR  $">
 <title>LABOR_GROWTH</title>
 <g id="a_node2"><a xlink:title="LABOR_GROWTH
 Exogen">
-<polygon fill="yellow" stroke="black" points="129,-67 0,-67 0,-31 129,-31 129,-67"/>
-<text text-anchor="start" x="6.5" y="-44.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR_GROWTH:</text>
+<polygon fill="yellow" stroke="black" points="141.5,-345.84 12.5,-345.84 12.5,-309.84 141.5,-309.84 141.5,-345.84"/>
+<text text-anchor="start" x="19" y="-323.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR_GROWTH:</text>
 </a>
 </g>
 </g>
 <!-- LABOR -->
-<g id="node5" class="node">
+<g id="node3" class="node">
 <title>LABOR</title>
-<g id="a_node5"><a xlink:title="LABOR
+<g id="a_node3"><a xlink:title="LABOR
 FRML &lt;&gt; LABOR=LABOR(-1)+(LABOR_GROWTH * LABOR(-1))$">
-<polygon fill="#63b8ff" stroke="black" points="227,-67 165,-67 165,-31 227,-31 227,-67"/>
-<text text-anchor="start" x="171" y="-44.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR:</text>
+<polygon fill="#63b8ff" stroke="black" points="257.5,-345.84 195.5,-345.84 195.5,-309.84 257.5,-309.84 257.5,-345.84"/>
+<text text-anchor="start" x="201.5" y="-323.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR:</text>
 </a>
 </g>
 </g>
 <!-- LABOR_GROWTH&#45;&gt;LABOR -->
-<g id="edge4" class="edge">
+<g id="edge7" class="edge">
 <title>LABOR_GROWTH-&gt;LABOR</title>
-<g id="a_edge4"><a xlink:href="bogus" xlink:title=" LABOR_GROWTH -&gt; LABOR Min. att. 0%  max: 100%">
-<path fill="none" stroke="black" stroke-width="8" d="M129.11,-49C137.74,-49 146.4,-49 154.46,-49"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="154.68,-56 164.68,-49 154.68,-42 154.68,-56"/>
+<g id="a_edge7"><a xlink:href="bogus" xlink:title=" LABOR_GROWTH -&gt; LABOR Min. att. 0%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M141.84,-327.84C156.46,-327.84 171.61,-327.84 184.94,-327.84"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="185.19,-334.84 195.19,-327.84 185.19,-320.84 185.19,-334.84"/>
 </a>
 </g>
 </g>
-<!-- DEPRECIATION_RATE -->
-<g id="node3" class="node">
-<title>DEPRECIATION_RATE</title>
-<g id="a_node3"><a xlink:title="DEPRECIATION_RATE
-Exogen">
-<polygon fill="yellow" stroke="black" points="732,-243 578,-243 578,-207 732,-207 732,-243"/>
-<text text-anchor="start" x="584" y="-220.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">DEPRECIATION_RATE:</text>
-</a>
-</g>
-</g>
-<!-- CAPITAL -->
-<g id="node7" class="node">
-<title>CAPITAL</title>
-<g id="a_node7"><a xlink:title="CAPITAL
-FRML &lt;&gt; CAPITAL=CAPITAL(-1)+(INVESTMENT-DEPRECIATION_RATE * CAPITAL(-1))$">
-<polygon fill="#63b8ff" stroke="black" points="841,-181 768,-181 768,-145 841,-145 841,-181"/>
-<text text-anchor="start" x="774.5" y="-158.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL:</text>
-</a>
-</g>
-</g>
-<!-- DEPRECIATION_RATE&#45;&gt;CAPITAL -->
-<g id="edge6" class="edge">
-<title>DEPRECIATION_RATE-&gt;CAPITAL</title>
-<g id="a_edge6"><a xlink:href="bogus" xlink:title=" DEPRECIATION_RATE -&gt; CAPITAL Min. att. 0%  max: 0%">
-<path fill="none" stroke="black" d="M709.45,-206.88C717.07,-204.04 724.77,-201.04 732,-198 740.98,-194.22 750.44,-189.87 759.43,-185.54"/>
-<polygon fill="black" stroke="black" points="761.14,-188.61 768.59,-181.08 758.07,-182.31 761.14,-188.61"/>
-</a>
-</g>
-</g>
-<!-- A -->
+<!-- CAPITAL_INTENSITY -->
 <g id="node4" class="node">
-<title>A</title>
-<g id="a_node4"><a xlink:title="A
-Exogen">
-<polygon fill="yellow" stroke="black" points="223,-182 169,-182 169,-146 223,-146 223,-182"/>
-<text text-anchor="start" x="189" y="-159.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">A:</text>
-</a>
-</g>
-</g>
-<!-- INCOME -->
-<g id="node12" class="node">
-<title>INCOME</title>
-<g id="a_node12"><a xlink:title="INCOME
-FRML &lt;&gt; INCOME          = A  * CAPITAL**ALFA * LABOR **(1-ALFA)  $">
-<polygon fill="#63b8ff" stroke="black" points="362,-162 292,-162 292,-126 362,-126 362,-162"/>
-<text text-anchor="start" x="298" y="-139.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">INCOME:</text>
-</a>
-</g>
-</g>
-<!-- A&#45;&gt;INCOME -->
-<g id="edge14" class="edge">
-<title>A-&gt;INCOME</title>
-<g id="a_edge14"><a xlink:href="bogus" xlink:title=" A -&gt; INCOME Min. att. -0%  max: -0%">
-<path fill="none" stroke="black" d="M223.11,-159.95C239.91,-157.35 262.17,-153.9 281.7,-150.87"/>
-<polygon fill="black" stroke="black" points="282.26,-154.32 291.61,-149.33 281.19,-147.41 282.26,-154.32"/>
+<title>CAPITAL_INTENSITY</title>
+<g id="a_node4"><a xlink:title="CAPITAL_INTENSITY
+FRML &lt;&gt; CAPITAL_INTENSITY = CAPITAL/LABOR  $">
+<polygon fill="#63b8ff" stroke="black" points="448,-318.84 299,-318.84 299,-282.84 448,-282.84 448,-318.84"/>
+<text text-anchor="start" x="305.5" y="-296.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL_INTENSITY:</text>
 </a>
 </g>
 </g>
 <!-- LABOR&#45;&gt;CAPITAL_INTENSITY -->
-<g id="edge1" class="edge">
+<g id="edge13" class="edge">
 <title>LABOR-&gt;CAPITAL_INTENSITY</title>
-<g id="a_edge1"><a xlink:href="bogus" xlink:title=" LABOR -&gt; CAPITAL_INTENSITY Min. att. 103%  max: 1269%">
-<path fill="none" stroke="black" stroke-width="8" d="M227.26,-59.05C238.39,-62.39 251.16,-65.81 263,-68 359.72,-85.91 385.14,-87 483.5,-87 483.5,-87 483.5,-87 656,-87 727.14,-87 807.82,-91.42 866.73,-95.46"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="866.26,-102.45 876.72,-96.16 867.24,-88.48 866.26,-102.45"/>
-</a>
-</g>
-</g>
-<!-- LABOR&#45;&gt;INCOME -->
-<g id="edge10" class="edge">
-<title>LABOR-&gt;INCOME</title>
-<g id="a_edge10"><a xlink:href="bogus" xlink:title=" LABOR -&gt; INCOME Min. att. 59%  max: 97%">
-<path fill="none" stroke="black" stroke-width="8" d="M219.31,-67.2C231.96,-77.36 248.18,-90.13 263,-101 271.74,-107.41 281.33,-114.12 290.33,-120.28"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="286.53,-126.16 298.74,-125.99 294.4,-114.58 286.53,-126.16"/>
+<g id="a_edge13"><a xlink:href="bogus" xlink:title=" LABOR -&gt; CAPITAL_INTENSITY Min. att. 103%  max: 1269%">
+<path fill="none" stroke="black" stroke-width="8" d="M257.54,-322.25C266.91,-320.5 277.74,-318.48 288.93,-316.4"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="290.27,-323.27 298.82,-314.56 287.71,-309.51 290.27,-323.27"/>
 </a>
 </g>
 </g>
 <!-- LABOR(&#45;1) -->
-<g id="node13" class="node">
+<g id="node11" class="node">
 <title>LABOR(-1)</title>
-<g id="a_node13"><a xlink:title="LABOR
+<g id="a_node11"><a xlink:title="LABOR
 FRML &lt;&gt; LABOR=LABOR(-1)+(LABOR_GROWTH * LABOR(-1))$">
-<polygon fill="springgreen" stroke="black" points="391,-59 263,-59 263,-23 391,-23 391,-59"/>
-<text text-anchor="start" x="269" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR(-1):LABOR</text>
+<polygon fill="springgreen" stroke="black" points="437.5,-372.84 309.5,-372.84 309.5,-336.84 437.5,-336.84 437.5,-372.84"/>
+<text text-anchor="start" x="315.5" y="-350.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LABOR(-1):LABOR</text>
 </a>
 </g>
 </g>
 <!-- LABOR&#45;&gt;LABOR(&#45;1) -->
-<g id="edge5" class="edge">
+<g id="edge12" class="edge">
 <title>LABOR-&gt;LABOR(-1)</title>
-<g id="a_edge5"><a xlink:href="bogus" xlink:title=" LABOR -&gt; LABOR(-1) Min. att. 0%  max: 100%">
-<path fill="none" stroke="black" stroke-width="8" d="M227.24,-41.3C235.04,-40.35 243.77,-39.52 252.73,-38.85"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="253.4,-45.82 262.91,-38.16 252.46,-31.85 253.4,-45.82"/>
+<g id="a_edge12"><a xlink:href="bogus" xlink:title=" LABOR -&gt; LABOR(-1) Min. att. 0%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M257.54,-327.84C270.34,-329.43 285.85,-331.93 301.29,-334.83"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="300.25,-341.76 311.39,-336.79 302.91,-328.01 300.25,-341.76"/>
 </a>
 </g>
 </g>
-<!-- CONSUMPTION -->
-<g id="node6" class="node">
-<title>CONSUMPTION</title>
-<g id="a_node6"><a xlink:title="CONSUMPTION
-FRML &lt;&gt; CONSUMPTION     = (1-SAVING_RATE)  * INCOME  $">
-<polygon fill="#63b8ff" stroke="black" points="542,-227 427,-227 427,-191 542,-191 542,-227"/>
-<text text-anchor="start" x="433.5" y="-204.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CONSUMPTION:</text>
+<!-- INCOME -->
+<g id="node13" class="node">
+<title>INCOME</title>
+<g id="a_node13"><a xlink:title="INCOME
+FRML &lt;&gt; INCOME          = A  * CAPITAL**ALFA * LABOR **(1-ALFA)  $">
+<polygon fill="#63b8ff" stroke="black" points="408.5,-156.84 338.5,-156.84 338.5,-120.84 408.5,-120.84 408.5,-156.84"/>
+<text text-anchor="start" x="344.5" y="-134.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">INCOME:</text>
 </a>
 </g>
 </g>
-<!-- INVESTMENT -->
-<g id="node9" class="node">
-<title>INVESTMENT</title>
-<g id="a_node9"><a xlink:title="INVESTMENT
-FRML &lt;&gt; INVESTMENT      = INCOME - CONSUMPTION    $">
-<polygon fill="#63b8ff" stroke="black" points="706.5,-189 603.5,-189 603.5,-153 706.5,-153 706.5,-189"/>
-<text text-anchor="start" x="610" y="-166.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">INVESTMENT:</text>
-</a>
-</g>
-</g>
-<!-- CONSUMPTION&#45;&gt;INVESTMENT -->
-<g id="edge11" class="edge">
-<title>CONSUMPTION-&gt;INVESTMENT</title>
-<g id="a_edge11"><a xlink:href="bogus" xlink:title=" CONSUMPTION -&gt; INVESTMENT Min. att. -1900%  max: -1900%">
-<path fill="none" stroke="black" stroke-width="8" d="M542.08,-196.24C558.47,-192.54 576.43,-188.49 593.07,-184.74"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="595.02,-191.48 603.24,-182.45 591.94,-177.82 595.02,-191.48"/>
-</a>
-</g>
-</g>
-<!-- CAPITAL&#45;&gt;CAPITAL_INTENSITY -->
-<g id="edge16" class="edge">
-<title>CAPITAL-&gt;CAPITAL_INTENSITY</title>
-<g id="a_edge16"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; CAPITAL_INTENSITY Min. att. -647%  max: -3%">
-<path fill="none" stroke="black" stroke-width="8" d="M841.34,-147.92C858.49,-140.71 879.35,-131.93 898.22,-123.99"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="901.09,-130.38 907.59,-120.05 895.66,-117.48 901.09,-130.38"/>
-</a>
-</g>
-</g>
-<!-- CAPITAL(&#45;1) -->
-<g id="node8" class="node">
-<title>CAPITAL(-1)</title>
-<g id="a_node8"><a xlink:title="CAPITAL
-FRML &lt;&gt; CAPITAL=CAPITAL(-1)+(INVESTMENT-DEPRECIATION_RATE * CAPITAL(-1))$">
-<polygon fill="springgreen" stroke="black" points="1026,-181 877,-181 877,-145 1026,-145 1026,-181"/>
-<text text-anchor="start" x="883.5" y="-158.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL(-1):CAPITAL</text>
-</a>
-</g>
-</g>
-<!-- CAPITAL&#45;&gt;CAPITAL(&#45;1) -->
-<g id="edge17" class="edge">
-<title>CAPITAL-&gt;CAPITAL(-1)</title>
-<g id="a_edge17"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; CAPITAL(-1) Min. att. 0%  max: 94%">
-<path fill="none" stroke="black" stroke-width="8" d="M841.34,-157.08C849.2,-156.69 857.84,-156.44 866.72,-156.32"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="866.85,-163.32 876.8,-156.25 866.75,-149.32 866.85,-163.32"/>
-</a>
-</g>
-</g>
-<!-- CAPITAL&#45;&gt;INCOME -->
+<!-- LABOR&#45;&gt;INCOME -->
 <g id="edge8" class="edge">
-<title>CAPITAL-&gt;INCOME</title>
-<g id="a_edge8"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; INCOME Min. att. 3%  max: 54%">
-<path fill="none" stroke="black" stroke-width="5.42" d="M767.86,-151.58C756.52,-148.48 743.84,-145.55 732,-144 602.14,-127.04 446.79,-134.82 372.22,-140.27"/>
-<polygon fill="black" stroke="black" stroke-width="5.42" points="371.86,-135.54 362.24,-141.02 372.57,-145.01 371.86,-135.54"/>
-</a>
-</g>
-</g>
-<!-- CAPITAL(&#45;1)&#45;&gt;CAPITAL -->
-<g id="edge15" class="edge">
-<title>CAPITAL(-1)-&gt;CAPITAL</title>
-<g id="a_edge15"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M876.8,-169.75C868.22,-169.74 859.66,-169.6 851.6,-169.34"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="851.48,-165.83 841.34,-168.92 851.19,-172.82 851.48,-165.83"/>
-</a>
-</g>
-</g>
-<!-- INVESTMENT&#45;&gt;CAPITAL -->
-<g id="edge9" class="edge">
-<title>INVESTMENT-&gt;CAPITAL</title>
-<g id="a_edge9"><a xlink:href="bogus" xlink:title=" INVESTMENT -&gt; CAPITAL Min. att. 6%  max: 100%">
-<path fill="none" stroke="black" stroke-width="8" d="M706.76,-168.25C723.3,-167.35 741.56,-166.36 757.72,-165.48"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="758.39,-172.46 767.99,-164.93 757.63,-158.48 758.39,-172.46"/>
-</a>
-</g>
-</g>
-<!-- SAVING_RATE -->
-<g id="node10" class="node">
-<title>SAVING_RATE</title>
-<g id="a_node10"><a xlink:title="SAVING_RATE
-Exogen">
-<polygon fill="yellow" stroke="black" points="380,-227 274,-227 274,-191 380,-191 380,-227"/>
-<text text-anchor="start" x="280" y="-204.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SAVING_RATE:</text>
-</a>
-</g>
-</g>
-<!-- SAVING_RATE&#45;&gt;CONSUMPTION -->
-<g id="edge7" class="edge">
-<title>SAVING_RATE-&gt;CONSUMPTION</title>
-<g id="a_edge7"><a xlink:href="bogus" xlink:title=" SAVING_RATE -&gt; CONSUMPTION Min. att. 0%  max: 0%">
-<path fill="none" stroke="black" d="M380.21,-209C391.93,-209 404.52,-209 416.74,-209"/>
-<polygon fill="black" stroke="black" points="416.89,-212.5 426.89,-209 416.89,-205.5 416.89,-212.5"/>
+<title>LABOR-&gt;INCOME</title>
+<g id="a_edge8"><a xlink:href="bogus" xlink:title=" LABOR -&gt; INCOME Min. att. 59%  max: 97%">
+<path fill="none" stroke="black" stroke-width="8" d="M234.54,-309.79C250.27,-269.78 287.76,-176.38 299,-165.84 307.27,-158.08 317.96,-152.51 328.61,-148.52"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="331.04,-155.09 338.32,-145.29 326.62,-141.81 331.04,-155.09"/>
 </a>
 </g>
 </g>
 <!-- ALFA -->
-<g id="node11" class="node">
+<g id="node5" class="node">
 <title>ALFA</title>
-<g id="a_node11"><a xlink:title="ALFA
+<g id="a_node5"><a xlink:title="ALFA
 Exogen">
-<polygon fill="yellow" stroke="black" points="223,-128 169,-128 169,-92 223,-92 223,-128"/>
-<text text-anchor="start" x="177" y="-105.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">ALFA:</text>
+<polygon fill="yellow" stroke="black" points="253.5,-137.84 199.5,-137.84 199.5,-101.84 253.5,-101.84 253.5,-137.84"/>
+<text text-anchor="start" x="207.5" y="-115.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">ALFA:</text>
 </a>
 </g>
 </g>
 <!-- ALFA&#45;&gt;INCOME -->
-<g id="edge12" class="edge">
+<g id="edge17" class="edge">
 <title>ALFA-&gt;INCOME</title>
-<g id="a_edge12"><a xlink:href="bogus" xlink:title=" ALFA -&gt; INCOME Min. att. -0%  max: -0%">
-<path fill="none" stroke="black" d="M223.11,-116.88C239.91,-121.31 262.17,-127.18 281.7,-132.32"/>
-<polygon fill="black" stroke="black" points="281.05,-135.77 291.61,-134.94 282.83,-129 281.05,-135.77"/>
+<g id="a_edge17"><a xlink:href="bogus" xlink:title=" ALFA -&gt; INCOME Min. att. -0%  max: -0%">
+<path fill="none" stroke="black" d="M253.76,-123.28C274.47,-125.99 303.82,-129.84 328.15,-133.03"/>
+<polygon fill="black" stroke="black" points="327.87,-136.52 338.24,-134.35 328.78,-129.58 327.87,-136.52"/>
 </a>
 </g>
 </g>
-<!-- INCOME&#45;&gt;CONSUMPTION -->
-<g id="edge2" class="edge">
-<title>INCOME-&gt;CONSUMPTION</title>
-<g id="a_edge2"><a xlink:href="bogus" xlink:title=" INCOME -&gt; CONSUMPTION Min. att. 100%  max: 100%">
-<path fill="none" stroke="black" stroke-width="8" d="M362.13,-158.26C382.23,-166.67 408.09,-177.48 430.77,-186.96"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="428.34,-193.53 440.27,-190.93 433.74,-180.61 428.34,-193.53"/>
+<!-- CAPITAL&#45;&gt;CAPITAL_INTENSITY -->
+<g id="edge15" class="edge">
+<title>CAPITAL-&gt;CAPITAL_INTENSITY</title>
+<g id="a_edge15"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; CAPITAL_INTENSITY Min. att. -647%  max: -3%">
+<path fill="none" stroke="black" stroke-width="8" d="M244.6,-229.87C258.27,-243.45 278.48,-261.73 299,-273.84 301.67,-275.41 304.44,-276.92 307.28,-278.36"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="304.49,-284.79 316.52,-282.73 310.47,-272.13 304.49,-284.79"/>
 </a>
 </g>
 </g>
-<!-- INCOME&#45;&gt;INVESTMENT -->
-<g id="edge13" class="edge">
-<title>INCOME-&gt;INVESTMENT</title>
-<g id="a_edge13"><a xlink:href="bogus" xlink:title=" INCOME -&gt; INVESTMENT Min. att. 2000%  max: 2000%">
-<path fill="none" stroke="black" stroke-width="8" d="M362.27,-146.84C417.08,-151.38 525.21,-160.33 593.32,-165.97"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="592.94,-172.97 603.48,-166.82 594.09,-159.01 592.94,-172.97"/>
+<!-- CAPITAL(&#45;1) -->
+<g id="node9" class="node">
+<title>CAPITAL(-1)</title>
+<g id="a_node9"><a xlink:title="CAPITAL
+FRML &lt;&gt; CAPITAL=CAPITAL(-1)+(INVESTMENT-DEPRECIATION_RATE * CAPITAL(-1))$">
+<polygon fill="springgreen" stroke="black" points="448,-210.84 299,-210.84 299,-174.84 448,-174.84 448,-210.84"/>
+<text text-anchor="start" x="305.5" y="-188.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL(-1):CAPITAL</text>
+</a>
+</g>
+</g>
+<!-- CAPITAL&#45;&gt;CAPITAL(&#45;1) -->
+<g id="edge3" class="edge">
+<title>CAPITAL-&gt;CAPITAL(-1)</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; CAPITAL(-1) Min. att. 0%  max: 94%">
+<path fill="none" stroke="black" stroke-width="8" d="M263.34,-201.23C271.2,-199.81 279.84,-198.42 288.72,-197.14"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="289.85,-204.05 298.8,-195.75 287.94,-190.18 289.85,-204.05"/>
+</a>
+</g>
+</g>
+<!-- CAPITAL&#45;&gt;INCOME -->
+<g id="edge9" class="edge">
+<title>CAPITAL-&gt;INCOME</title>
+<g id="a_edge9"><a xlink:href="bogus" xlink:title=" CAPITAL -&gt; INCOME Min. att. 3%  max: 54%">
+<path fill="none" stroke="black" stroke-width="5.42" d="M252.51,-193.82C265.89,-184.69 282.88,-173.86 299,-165.84 308.31,-161.21 318.62,-156.93 328.5,-153.21"/>
+<polygon fill="black" stroke="black" stroke-width="5.42" points="330.41,-157.57 338.18,-149.69 327.16,-148.65 330.41,-157.57"/>
+</a>
+</g>
+</g>
+<!-- DEPRECIATION_RATE -->
+<g id="node7" class="node">
+<title>DEPRECIATION_RATE</title>
+<g id="a_node7"><a xlink:title="DEPRECIATION_RATE
+Exogen">
+<polygon fill="yellow" stroke="black" points="154,-233.84 0,-233.84 0,-197.84 154,-197.84 154,-233.84"/>
+<text text-anchor="start" x="6" y="-211.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">DEPRECIATION_RATE:</text>
+</a>
+</g>
+</g>
+<!-- DEPRECIATION_RATE&#45;&gt;CAPITAL -->
+<g id="edge5" class="edge">
+<title>DEPRECIATION_RATE-&gt;CAPITAL</title>
+<g id="a_edge5"><a xlink:href="bogus" xlink:title=" DEPRECIATION_RATE -&gt; CAPITAL Min. att. 0%  max: 0%">
+<path fill="none" stroke="black" d="M154.34,-213.77C162.94,-213.54 171.5,-213.3 179.54,-213.09"/>
+<polygon fill="black" stroke="black" points="179.87,-216.58 189.77,-212.81 179.68,-209.58 179.87,-216.58"/>
+</a>
+</g>
+</g>
+<!-- SAVING_RATE -->
+<g id="node8" class="node">
+<title>SAVING_RATE</title>
+<g id="a_node8"><a xlink:title="SAVING_RATE
+Exogen">
+<polygon fill="yellow" stroke="black" points="426.5,-264.84 320.5,-264.84 320.5,-228.84 426.5,-228.84 426.5,-264.84"/>
+<text text-anchor="start" x="326.5" y="-242.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SAVING_RATE:</text>
+</a>
+</g>
+</g>
+<!-- CONSUMPTION -->
+<g id="node10" class="node">
+<title>CONSUMPTION</title>
+<g id="a_node10"><a xlink:title="CONSUMPTION
+FRML &lt;&gt; CONSUMPTION     = (1-SAVING_RATE)  * INCOME  $">
+<polygon fill="#63b8ff" stroke="black" points="599,-156.84 484,-156.84 484,-120.84 599,-120.84 599,-156.84"/>
+<text text-anchor="start" x="490.5" y="-134.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CONSUMPTION:</text>
+</a>
+</g>
+</g>
+<!-- SAVING_RATE&#45;&gt;CONSUMPTION -->
+<g id="edge4" class="edge">
+<title>SAVING_RATE-&gt;CONSUMPTION</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title=" SAVING_RATE -&gt; CONSUMPTION Min. att. 0%  max: 0%">
+<path fill="none" stroke="black" d="M426.61,-230.43C434,-227.33 441.34,-223.79 448,-219.84 473.7,-204.59 498.95,-181.79 516.56,-164.27"/>
+<polygon fill="black" stroke="black" points="519.09,-166.69 523.62,-157.11 514.11,-161.77 519.09,-166.69"/>
+</a>
+</g>
+</g>
+<!-- CAPITAL(&#45;1)&#45;&gt;CAPITAL -->
+<g id="edge10" class="edge">
+<title>CAPITAL(-1)-&gt;CAPITAL</title>
+<g id="a_edge10"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M298.8,-209.25C290.12,-210.37 281.47,-211.36 273.33,-212.16"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="272.99,-208.68 263.34,-213.06 273.62,-215.65 272.99,-208.68"/>
+</a>
+</g>
+</g>
+<!-- CONSUMPTION&#45;&gt;INVESTMENT -->
+<g id="edge1" class="edge">
+<title>CONSUMPTION-&gt;INVESTMENT</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title=" CONSUMPTION -&gt; INVESTMENT Min. att. -1900%  max: -1900%">
+<path fill="none" stroke="black" stroke-width="8" d="M516.33,-120.78C458.3,-79.76 307.21,12.95 190,-38.84 145.71,-58.41 111.4,-105.1 92.99,-135"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="86.91,-131.51 87.79,-143.69 98.93,-138.7 86.91,-131.51"/>
 </a>
 </g>
 </g>
 <!-- LABOR(&#45;1)&#45;&gt;LABOR -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>LABOR(-1)-&gt;LABOR</title>
-<g id="a_edge3"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M262.91,-51.66C254.26,-52.22 245.58,-52.61 237.49,-52.8"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="237.2,-49.31 227.24,-52.94 237.29,-56.31 237.2,-49.31"/>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M309.31,-349.77C295.12,-347.28 280.44,-344.35 267.5,-341.4"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="268.08,-337.94 257.54,-339.03 266.46,-344.75 268.08,-337.94"/>
+</a>
+</g>
+</g>
+<!-- A -->
+<g id="node12" class="node">
+<title>A</title>
+<g id="a_node12"><a xlink:title="A
+Exogen">
+<polygon fill="yellow" stroke="black" points="253.5,-83.84 199.5,-83.84 199.5,-47.84 253.5,-47.84 253.5,-83.84"/>
+<text text-anchor="start" x="219.5" y="-61.64" font-family="Times New Roman,serif" font-size="14.00" fill="blue">A:</text>
+</a>
+</g>
+</g>
+<!-- A&#45;&gt;INCOME -->
+<g id="edge16" class="edge">
+<title>A-&gt;INCOME</title>
+<g id="a_edge16"><a xlink:href="bogus" xlink:title=" A -&gt; INCOME Min. att. -0%  max: -0%">
+<path fill="none" stroke="black" d="M253.76,-79.06C274.74,-89.62 304.6,-104.66 329.13,-117"/>
+<polygon fill="black" stroke="black" points="327.73,-120.22 338.24,-121.59 330.88,-113.97 327.73,-120.22"/>
+</a>
+</g>
+</g>
+<!-- INCOME&#45;&gt;INVESTMENT -->
+<g id="edge6" class="edge">
+<title>INCOME-&gt;INVESTMENT</title>
+<g id="a_edge6"><a xlink:href="bogus" xlink:title=" INCOME -&gt; INVESTMENT Min. att. 2000%  max: 2000%">
+<path fill="none" stroke="black" stroke-width="8" d="M338.15,-141.52C289.32,-145.34 199.07,-152.38 138.78,-157.09"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="138.05,-150.13 128.63,-157.89 139.14,-164.09 138.05,-150.13"/>
+</a>
+</g>
+</g>
+<!-- INCOME&#45;&gt;CONSUMPTION -->
+<g id="edge11" class="edge">
+<title>INCOME-&gt;CONSUMPTION</title>
+<g id="a_edge11"><a xlink:href="bogus" xlink:title=" INCOME -&gt; CONSUMPTION Min. att. 100%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M408.9,-138.84C427.67,-138.84 451.57,-138.84 473.84,-138.84"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="473.93,-145.84 483.93,-138.84 473.93,-131.84 473.93,-145.84"/>
 </a>
 </g>
 </g>
