@@ -153,4 +153,5 @@ cython_debug/
 
 **/_build/.doctrees
 **/_build/jupyter_execute
-
+**/wfs
+**/modelflowdumps
