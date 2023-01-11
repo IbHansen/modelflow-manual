@@ -690,20 +690,6 @@ title="Print to PDF"
 <p>This class incorporates most of the methods used to manage a model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To be usen when notebook is executed in google colab </span>
-<span class="k">if</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">()):</span>
-  <span class="kn">import</span> <span class="nn">os</span>
-  <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;apt -qqq install graphviz&#39;</span><span class="p">)</span>
-  <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;pip -qqq install ModelFlowIb ipysheet  --no-dependencies &#39;</span><span class="p">)</span>
-  <span class="n">incolab</span> <span class="o">=</span> <span class="kc">True</span>  
-<span class="k">else</span><span class="p">:</span>
-  <span class="n">incolab</span> <span class="o">=</span> <span class="kc">False</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
