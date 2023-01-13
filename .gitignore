@@ -156,3 +156,5 @@ cython_debug/
 **/_build/jupyter_execute
 **/wfs
 **/modelflowdumps
+**/graph
+test.pcim 

@@ -10,165 +10,507 @@
 <title>TD</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-819 738,-819 738,4 -4,4"/>
 <text text-anchor="middle" x="367" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">A_model_graph</text>
-<!-- RISK -->
+<!-- MAX_USD -->
 <g id="node1" class="node">
-<title>RISK</title>
-<g id="a_node1"><a xlink:title="RISK&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RISK &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;(POSITIONS.TRANS() * MSIGMA * POSITIONS)[0,0]$">
-<polygon fill="#63b8ff" stroke="black" points="659.5,-707 605.5,-707 605.5,-671 659.5,-671 659.5,-707"/>
-<text text-anchor="start" x="615.5" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK:</text>
-</a>
-</g>
-</g>
-<!-- VRETURN -->
-<g id="node2" class="node">
-<title>VRETURN</title>
-<g id="a_node2"><a xlink:title="VRETURN&#10;FRML &lt;MATRIX&gt; VRETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX([0.048,0.040,0.035]) $">
-<polygon fill="#63b8ff" stroke="black" points="336,-653 256,-653 256,-617 336,-617 336,-653"/>
-<text text-anchor="start" x="262" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">VRETURN:</text>
-</a>
-</g>
-</g>
-<!-- POSITIONS -->
-<g id="node14" class="node">
-<title>POSITIONS</title>
-<g id="a_node14"><a xlink:title="POSITIONS&#10;FRML &lt;MATRIX&gt; POSITIONS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;MV_OPT(MSIGMA,VRETURN,RISKAVERSION, TOTAL,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[[RISK_WEIGHTS] , [&#45;LCR_WEIGHTS] , [LEVERAGE_WEIGHTS]],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[CAPITAL, &#45;LCR , EQUITY] ,MIN_W,MAX_W) $">
-<polygon fill="#63b8ff" stroke="black" points="495,-464 410,-464 410,-428 495,-428 495,-464"/>
-<text text-anchor="start" x="416.5" y="-441.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITIONS:</text>
-</a>
-</g>
-</g>
-<!-- VRETURN&#45;&gt;POSITIONS -->
-<g id="edge1" class="edge">
-<title>VRETURN&#45;&gt;POSITIONS</title>
-<g id="a_edge1"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M336.18,-627.68C349.4,-623.65 363.45,-617.46 374,-608 414.46,-571.72 435.75,-509.75 445.22,-473.89"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="448.64,-474.63 447.69,-464.08 441.85,-472.92 448.64,-474.63"/>
-</a>
-</g>
-</g>
-<!-- RETURN -->
-<g id="node15" class="node">
-<title>RETURN</title>
-<g id="a_node15"><a xlink:title="RETURN&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;(POSITIONS.TRANS() * VRETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;)[0,0] $">
-<polygon fill="#63b8ff" stroke="black" points="667.5,-653 597.5,-653 597.5,-617 667.5,-617 667.5,-653"/>
-<text text-anchor="start" x="603.5" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RETURN:</text>
-</a>
-</g>
-</g>
-<!-- VRETURN&#45;&gt;RETURN -->
-<g id="edge19" class="edge">
-<title>VRETURN&#45;&gt;RETURN</title>
-<g id="a_edge19"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M336.03,-635C398.68,-635 521.33,-635 587.19,-635"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="587.25,-638.5 597.25,-635 587.25,-631.5 587.25,-638.5"/>
-</a>
-</g>
-</g>
-<!-- MSIGMA -->
-<g id="node3" class="node">
-<title>MSIGMA</title>
-<g id="a_node3"><a xlink:title="MSIGMA&#10;FRML &lt;MATRIX&gt; MSIGMA &#160;= MATRIX( [[0.01573635,0.01436816,	0.01045556],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[0.01436816,0.02289016,	0.01172995],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[0.01045556,0.01172995,	0.01748076]] &#160;) $">
-<polygon fill="#63b8ff" stroke="black" points="332.5,-707 259.5,-707 259.5,-671 332.5,-671 332.5,-707"/>
-<text text-anchor="start" x="266" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MSIGMA:</text>
-</a>
-</g>
-</g>
-<!-- MSIGMA&#45;&gt;RISK -->
-<g id="edge14" class="edge">
-<title>MSIGMA&#45;&gt;RISK</title>
-<g id="a_edge14"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M332.8,-689C396.98,-689 530.92,-689 595.35,-689"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="595.44,-692.5 605.44,-689 595.44,-685.5 595.44,-692.5"/>
-</a>
-</g>
-</g>
-<!-- MSIGMA&#45;&gt;POSITIONS -->
-<g id="edge15" class="edge">
-<title>MSIGMA&#45;&gt;POSITIONS</title>
-<g id="a_edge15"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M332.78,-683.38C347.17,-679.51 362.94,-672.98 374,-662 426.48,-609.9 443.6,-519.79 449.05,-474.19"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="452.54,-474.44 450.14,-464.12 445.58,-473.68 452.54,-474.44"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_EUR -->
-<g id="node4" class="node">
-<title>LCR_WEIGHT_EUR</title>
-<g id="a_node4"><a xlink:title="LCR_WEIGHT_EUR&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="159.5,-167 22.5,-167 22.5,-131 159.5,-131 159.5,-167"/>
-<text text-anchor="start" x="29" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_EUR:</text>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHTS -->
-<g id="node28" class="node">
-<title>LCR_WEIGHTS</title>
-<g id="a_node28"><a xlink:title="LCR_WEIGHTS&#10;FRML &lt;MATRIX&gt; LCR_WEIGHTS &#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[LCR_WEIGHT_USD,LCR_WEIGHT_JPY,LCR_WEIGHT_EUR]) $">
-<polygon fill="#63b8ff" stroke="black" points="351.5,-113 240.5,-113 240.5,-77 351.5,-77 351.5,-113"/>
-<text text-anchor="start" x="247" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHTS:</text>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_EUR&#45;&gt;LCR_WEIGHTS -->
-<g id="edge30" class="edge">
-<title>LCR_WEIGHT_EUR&#45;&gt;LCR_WEIGHTS</title>
-<g id="a_edge30"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M159.6,-131.02C182.4,-124.95 207.79,-118.2 230.36,-112.19"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="231.42,-115.54 240.18,-109.58 229.62,-108.77 231.42,-115.54"/>
-</a>
-</g>
-</g>
-<!-- POSITION_USD -->
-<g id="node5" class="node">
-<title>POSITION_USD</title>
-<g id="a_node5"><a xlink:title="POSITION_USD&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
-<polygon fill="#63b8ff" stroke="black" points="688.5,-491 576.5,-491 576.5,-455 688.5,-455 688.5,-491"/>
-<text text-anchor="start" x="582.5" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_USD:</text>
-</a>
-</g>
-</g>
-<!-- TOTAL -->
-<g id="node6" class="node">
-<title>TOTAL</title>
-<g id="a_node6"><a xlink:title="TOTAL&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="326,-167 266,-167 266,-131 326,-131 326,-167"/>
-<text text-anchor="start" x="272" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TOTAL:</text>
-</a>
-</g>
-</g>
-<!-- TOTAL&#45;&gt;POSITIONS -->
-<g id="edge8" class="edge">
-<title>TOTAL&#45;&gt;POSITIONS</title>
-<g id="a_edge8"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M326.17,-152.61C342.3,-156.06 361.55,-162.81 374,-176 438.67,-244.51 449.87,-363.38 451.47,-417.59"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="447.98,-417.91 451.68,-427.83 454.98,-417.76 447.98,-417.91"/>
-</a>
-</g>
-</g>
-<!-- POSITION_JPY -->
-<g id="node7" class="node">
-<title>POSITION_JPY</title>
-<g id="a_node7"><a xlink:title="POSITION_JPY&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
-<polygon fill="#63b8ff" stroke="black" points="685.5,-437 579.5,-437 579.5,-401 685.5,-401 685.5,-437"/>
-<text text-anchor="start" x="585.5" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_JPY:</text>
-</a>
-</g>
-</g>
-<!-- MAX_EUR -->
-<g id="node8" class="node">
-<title>MAX_EUR</title>
-<g id="a_node8"><a xlink:title="MAX_EUR&#10;Exogen">
+<title>MAX_USD</title>
+<g id="a_node1"><a xlink:title="MAX_USD&#10;Exogen">
 <polygon fill="yellow" stroke="black" points="132,-329 50,-329 50,-293 132,-293 132,-329"/>
-<text text-anchor="start" x="56" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_EUR:</text>
+<text text-anchor="start" x="56" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_USD:</text>
 </a>
 </g>
 </g>
 <!-- MAX_W -->
-<g id="node24" class="node">
+<g id="node32" class="node">
 <title>MAX_W</title>
-<g id="a_node24"><a xlink:title="MAX_W&#10;FRML &lt;MATRIX&gt; MAX_W &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[MAX_USD,MAX_JPY,MAX_EUR]) &#160;&#160;&#160;&#160;&#160;$">
-<polygon fill="#63b8ff" stroke="black" points="330,-329 262,-329 262,-293 330,-293 330,-329"/>
-<text text-anchor="start" x="268" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_W:</text>
+<g id="a_node32"><a xlink:title="MAX_W&#10;FRML &lt;MATRIX&gt; MAX_W &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[MAX_USD,MAX_JPY,MAX_EUR]) &#160;&#160;&#160;&#160;&#160;$">
+<polygon fill="#63b8ff" stroke="black" points="330,-221 262,-221 262,-185 330,-185 330,-221"/>
+<text text-anchor="start" x="268" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_W:</text>
+</a>
+</g>
+</g>
+<!-- MAX_USD&#45;&gt;MAX_W -->
+<g id="edge29" class="edge">
+<title>MAX_USD&#45;&gt;MAX_W</title>
+<g id="a_edge29"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M132.36,-305.09C148.93,-301.16 167.58,-294.67 182,-284 205.19,-266.84 195.21,-247.69 218,-230 227.97,-222.26 240.32,-216.64 252.19,-212.6"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="253.47,-215.87 261.98,-209.57 251.4,-209.18 253.47,-215.87"/>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHT_USD -->
+<g id="node2" class="node">
+<title>LEVERAGE_WEIGHT_USD</title>
+<g id="a_node2"><a xlink:title="LEVERAGE_WEIGHT_USD&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="182,-815 0,-815 0,-779 182,-779 182,-815"/>
+<text text-anchor="start" x="6" y="-792.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_USD:</text>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHTS -->
+<g id="node16" class="node">
+<title>LEVERAGE_WEIGHTS</title>
+<g id="a_node16"><a xlink:title="LEVERAGE_WEIGHTS&#10;FRML &lt;MATRIX&gt; LEVERAGE_WEIGHTS &#160;= MATRIX(&#10;[LEVERAGE_WEIGHT_USD,LEVERAGE_WEIGHT_JPY,LEVERAGE_WEIGHT_EUR]) $">
+<polygon fill="#63b8ff" stroke="black" points="374,-707 218,-707 218,-671 374,-671 374,-707"/>
+<text text-anchor="start" x="224" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHTS:</text>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHT_USD&#45;&gt;LEVERAGE_WEIGHTS -->
+<g id="edge40" class="edge">
+<title>LEVERAGE_WEIGHT_USD&#45;&gt;LEVERAGE_WEIGHTS</title>
+<g id="a_edge40"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M160.73,-778.98C168.04,-776.3 175.27,-773.31 182,-770 212.93,-754.8 244.5,-731.37 266.38,-713.61"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="268.78,-716.16 274.28,-707.11 264.33,-710.76 268.78,-716.16"/>
+</a>
+</g>
+</g>
+<!-- MIN_JPY -->
+<g id="node3" class="node">
+<title>MIN_JPY</title>
+<g id="a_node3"><a xlink:title="MIN_JPY&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="127,-491 55,-491 55,-455 127,-455 127,-491"/>
+<text text-anchor="start" x="61" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_JPY:</text>
+</a>
+</g>
+</g>
+<!-- MIN_W -->
+<g id="node9" class="node">
+<title>MIN_W</title>
+<g id="a_node9"><a xlink:title="MIN_W&#10;FRML &lt;MATRIX&gt; MIN_W &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[MIN_USD,MIN_JPY,MIN_EUR]) &#160;&#160;&#160;&#160;&#160;&#160;$">
+<polygon fill="#63b8ff" stroke="black" points="327.5,-437 264.5,-437 264.5,-401 327.5,-401 327.5,-437"/>
+<text text-anchor="start" x="271" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_W:</text>
+</a>
+</g>
+</g>
+<!-- MIN_JPY&#45;&gt;MIN_W -->
+<g id="edge3" class="edge">
+<title>MIN_JPY&#45;&gt;MIN_W</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M127.36,-463.59C162.77,-454.18 217.19,-439.7 254.36,-429.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="255.59,-433.11 264.35,-427.15 253.79,-426.34 255.59,-433.11"/>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHTED_SUM -->
+<g id="node4" class="node">
+<title>LEVERAGE_WEIGHTED_SUM</title>
+<g id="a_node4"><a xlink:title="LEVERAGE_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;LEVERAGE_WEIGHTED_SUM = (LEVERAGE_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
+<polygon fill="#63b8ff" stroke="black" points="734,-600 531,-600 531,-564 734,-564 734,-600"/>
+<text text-anchor="start" x="537.5" y="-577.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHTED_SUM:</text>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHT_EUR -->
+<g id="node5" class="node">
+<title>LEVERAGE_WEIGHT_EUR</title>
+<g id="a_node5"><a xlink:title="LEVERAGE_WEIGHT_EUR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="182,-761 0,-761 0,-725 182,-725 182,-761"/>
+<text text-anchor="start" x="6" y="-738.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_EUR:</text>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHT_EUR&#45;&gt;LEVERAGE_WEIGHTS -->
+<g id="edge5" class="edge">
+<title>LEVERAGE_WEIGHT_EUR&#45;&gt;LEVERAGE_WEIGHTS</title>
+<g id="a_edge5"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M159.88,-724.94C178.33,-720.04 198.45,-714.68 217.4,-709.64"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="218.42,-712.99 227.19,-707.04 216.62,-706.23 218.42,-712.99"/>
+</a>
+</g>
+</g>
+<!-- CAPITAL -->
+<g id="node6" class="node">
+<title>CAPITAL</title>
+<g id="a_node6"><a xlink:title="CAPITAL&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="332.5,-545 259.5,-545 259.5,-509 332.5,-509 332.5,-545"/>
+<text text-anchor="start" x="266" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL:</text>
+</a>
+</g>
+</g>
+<!-- POSITIONS -->
+<g id="node21" class="node">
+<title>POSITIONS</title>
+<g id="a_node21"><a xlink:title="POSITIONS&#10;FRML &lt;MATRIX&gt; POSITIONS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;MV_OPT(MSIGMA,VRETURN,RISKAVERSION, TOTAL,&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[[RISK_WEIGHTS] , [&#45;LCR_WEIGHTS] , [LEVERAGE_WEIGHTS]],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[CAPITAL, &#45;LCR , EQUITY] ,MIN_W,MAX_W) $">
+<polygon fill="#63b8ff" stroke="black" points="495,-329 410,-329 410,-293 495,-293 495,-329"/>
+<text text-anchor="start" x="416.5" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITIONS:</text>
+</a>
+</g>
+</g>
+<!-- CAPITAL&#45;&gt;POSITIONS -->
+<g id="edge18" class="edge">
+<title>CAPITAL&#45;&gt;POSITIONS</title>
+<g id="a_edge18"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M332.54,-521.14C346.89,-517.22 362.7,-510.73 374,-500 420.39,-455.95 439.88,-380.14 447.35,-339.2"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="450.84,-339.55 449.08,-329.11 443.94,-338.38 450.84,-339.55"/>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHTED_SUM -->
+<g id="node7" class="node">
+<title>LCR_WEIGHTED_SUM</title>
+<g id="a_node7"><a xlink:title="LCR_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;LCR_WEIGHTED_SUM &#160;&#160;&#160;&#160;&#160;= (LCR_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
+<polygon fill="#63b8ff" stroke="black" points="711.5,-510 553.5,-510 553.5,-474 711.5,-474 711.5,-510"/>
+<text text-anchor="start" x="559.5" y="-487.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHTED_SUM:</text>
+</a>
+</g>
+</g>
+<!-- RISKAVERSION -->
+<g id="node8" class="node">
+<title>RISKAVERSION</title>
+<g id="a_node8"><a xlink:title="RISKAVERSION&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="353,-491 239,-491 239,-455 353,-455 353,-491"/>
+<text text-anchor="start" x="245" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISKAVERSION:</text>
+</a>
+</g>
+</g>
+<!-- RISKAVERSION&#45;&gt;POSITIONS -->
+<g id="edge30" class="edge">
+<title>RISKAVERSION&#45;&gt;POSITIONS</title>
+<g id="a_edge30"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M353.39,-458.6C360.78,-455.22 367.9,-451.07 374,-446 408.54,-417.29 430.9,-368.95 442.33,-338.58"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="445.68,-339.61 445.8,-329.02 439.1,-337.23 445.68,-339.61"/>
+</a>
+</g>
+</g>
+<!-- MIN_W&#45;&gt;POSITIONS -->
+<g id="edge1" class="edge">
+<title>MIN_W&#45;&gt;POSITIONS</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M327.75,-411.81C342.49,-407.5 359.95,-401.05 374,-392 396.64,-377.42 417.44,-354.94 431.78,-337.35"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="434.8,-339.18 438.29,-329.17 429.32,-334.83 434.8,-339.18"/>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHT_JPY -->
+<g id="node10" class="node">
+<title>LCR_WEIGHT_JPY</title>
+<g id="a_node10"><a xlink:title="LCR_WEIGHT_JPY&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="157,-653 25,-653 25,-617 157,-617 157,-653"/>
+<text text-anchor="start" x="31" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_JPY:</text>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHTS -->
+<g id="node25" class="node">
+<title>LCR_WEIGHTS</title>
+<g id="a_node25"><a xlink:title="LCR_WEIGHTS&#10;FRML &lt;MATRIX&gt; LCR_WEIGHTS &#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[LCR_WEIGHT_USD,LCR_WEIGHT_JPY,LCR_WEIGHT_EUR]) $">
+<polygon fill="#63b8ff" stroke="black" points="351.5,-599 240.5,-599 240.5,-563 351.5,-563 351.5,-599"/>
+<text text-anchor="start" x="247" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHTS:</text>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHT_JPY&#45;&gt;LCR_WEIGHTS -->
+<g id="edge13" class="edge">
+<title>LCR_WEIGHT_JPY&#45;&gt;LCR_WEIGHTS</title>
+<g id="a_edge13"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M157.07,-617.69C180.51,-611.46 206.94,-604.43 230.34,-598.2"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="231.41,-601.54 240.17,-595.58 229.61,-594.77 231.41,-601.54"/>
+</a>
+</g>
+</g>
+<!-- RISK_WEIGHTED_SUM -->
+<g id="node11" class="node">
+<title>RISK_WEIGHTED_SUM</title>
+<g id="a_node11"><a xlink:title="RISK_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RISK_WEIGHTED_SUM &#160;&#160;&#160;&#160;= (RISK_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
+<polygon fill="#63b8ff" stroke="black" points="714,-194 551,-194 551,-158 714,-158 714,-194"/>
+<text text-anchor="start" x="557.5" y="-171.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHTED_SUM:</text>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHT_USD -->
+<g id="node12" class="node">
+<title>LCR_WEIGHT_USD</title>
+<g id="a_node12"><a xlink:title="LCR_WEIGHT_USD&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="159.5,-599 22.5,-599 22.5,-563 159.5,-563 159.5,-599"/>
+<text text-anchor="start" x="29" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_USD:</text>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHT_USD&#45;&gt;LCR_WEIGHTS -->
+<g id="edge31" class="edge">
+<title>LCR_WEIGHT_USD&#45;&gt;LCR_WEIGHTS</title>
+<g id="a_edge31"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M159.6,-581C182.3,-581 207.56,-581 230.06,-581"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="230.18,-584.5 240.18,-581 230.18,-577.5 230.18,-584.5"/>
+</a>
+</g>
+</g>
+<!-- POSITION_EUR -->
+<g id="node13" class="node">
+<title>POSITION_EUR</title>
+<g id="a_node13"><a xlink:title="POSITION_EUR&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
+<polygon fill="#63b8ff" stroke="black" points="688.5,-383 576.5,-383 576.5,-347 688.5,-347 688.5,-383"/>
+<text text-anchor="start" x="582.5" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_EUR:</text>
+</a>
+</g>
+</g>
+<!-- POSITION_JPY -->
+<g id="node14" class="node">
+<title>POSITION_JPY</title>
+<g id="a_node14"><a xlink:title="POSITION_JPY&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
+<polygon fill="#63b8ff" stroke="black" points="685.5,-329 579.5,-329 579.5,-293 685.5,-293 685.5,-329"/>
+<text text-anchor="start" x="585.5" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_JPY:</text>
+</a>
+</g>
+</g>
+<!-- MIN_USD -->
+<g id="node15" class="node">
+<title>MIN_USD</title>
+<g id="a_node15"><a xlink:title="MIN_USD&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="129.5,-437 52.5,-437 52.5,-401 129.5,-401 129.5,-437"/>
+<text text-anchor="start" x="59" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_USD:</text>
+</a>
+</g>
+</g>
+<!-- MIN_USD&#45;&gt;MIN_W -->
+<g id="edge32" class="edge">
+<title>MIN_USD&#45;&gt;MIN_W</title>
+<g id="a_edge32"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M129.71,-419C165.08,-419 217.85,-419 254.2,-419"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="254.45,-422.5 264.45,-419 254.45,-415.5 254.45,-422.5"/>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHTS&#45;&gt;LEVERAGE_WEIGHTED_SUM -->
+<g id="edge4" class="edge">
+<title>LEVERAGE_WEIGHTS&#45;&gt;LEVERAGE_WEIGHTED_SUM</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M353.37,-670.97C411.95,-652.23 503.58,-622.92 565.51,-603.11"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="566.73,-606.4 575.18,-600.01 564.59,-599.73 566.73,-606.4"/>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHTS&#45;&gt;POSITIONS -->
+<g id="edge37" class="edge">
+<title>LEVERAGE_WEIGHTS&#45;&gt;POSITIONS</title>
+<g id="a_edge37"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M319.8,-670.7C337.12,-655.62 360.23,-632.76 374,-608 424.15,-517.85 442.77,-394.2 448.87,-339.27"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="452.36,-339.54 449.93,-329.23 445.4,-338.81 452.36,-339.54"/>
+</a>
+</g>
+</g>
+<!-- RISK_WEIGHT_EUR -->
+<g id="node17" class="node">
+<title>RISK_WEIGHT_EUR</title>
+<g id="a_node17"><a xlink:title="RISK_WEIGHT_EUR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="162,-167 20,-167 20,-131 162,-131 162,-167"/>
+<text text-anchor="start" x="26" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_EUR:</text>
+</a>
+</g>
+</g>
+<!-- RISK_WEIGHTS -->
+<g id="node29" class="node">
+<title>RISK_WEIGHTS</title>
+<g id="a_node29"><a xlink:title="RISK_WEIGHTS&#10;FRML &lt;MATRIX&gt; RISK_WEIGHTS &#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[RISK_WEIGHT_USD,RISK_WEIGHT_JPY,RISK_WEIGHT_EUR]) $">
+<polygon fill="#63b8ff" stroke="black" points="353.5,-167 238.5,-167 238.5,-131 353.5,-131 353.5,-167"/>
+<text text-anchor="start" x="245" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHTS:</text>
+</a>
+</g>
+</g>
+<!-- RISK_WEIGHT_EUR&#45;&gt;RISK_WEIGHTS -->
+<g id="edge20" class="edge">
+<title>RISK_WEIGHT_EUR&#45;&gt;RISK_WEIGHTS</title>
+<g id="a_edge20"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M162.15,-149C183.52,-149 206.94,-149 228.1,-149"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="228.28,-152.5 238.28,-149 228.28,-145.5 228.28,-152.5"/>
+</a>
+</g>
+</g>
+<!-- RISK -->
+<g id="node18" class="node">
+<title>RISK</title>
+<g id="a_node18"><a xlink:title="RISK&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RISK &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;(POSITIONS.TRANS() * MSIGMA * POSITIONS)[0,0]$">
+<polygon fill="#63b8ff" stroke="black" points="659.5,-129 605.5,-129 605.5,-93 659.5,-93 659.5,-129"/>
+<text text-anchor="start" x="615.5" y="-106.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK:</text>
+</a>
+</g>
+</g>
+<!-- LCR -->
+<g id="node19" class="node">
+<title>LCR</title>
+<g id="a_node19"><a xlink:title="LCR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="323,-329 269,-329 269,-293 323,-293 323,-329"/>
+<text text-anchor="start" x="281" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR:</text>
+</a>
+</g>
+</g>
+<!-- LCR&#45;&gt;POSITIONS -->
+<g id="edge10" class="edge">
+<title>LCR&#45;&gt;POSITIONS</title>
+<g id="a_edge10"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M323.21,-311C344.02,-311 373.77,-311 399.38,-311"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="399.7,-314.5 409.7,-311 399.7,-307.5 399.7,-314.5"/>
+</a>
+</g>
+</g>
+<!-- VRETURN -->
+<g id="node20" class="node">
+<title>VRETURN</title>
+<g id="a_node20"><a xlink:title="VRETURN&#10;FRML &lt;MATRIX&gt; VRETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX([0.048,0.040,0.035]) $">
+<polygon fill="#63b8ff" stroke="black" points="336,-59 256,-59 256,-23 336,-23 336,-59"/>
+<text text-anchor="start" x="262" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">VRETURN:</text>
+</a>
+</g>
+</g>
+<!-- VRETURN&#45;&gt;POSITIONS -->
+<g id="edge11" class="edge">
+<title>VRETURN&#45;&gt;POSITIONS</title>
+<g id="a_edge11"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M336.14,-47.31C349.66,-51.25 363.93,-57.64 374,-68 432.51,-128.2 446.86,-232.51 450.37,-282.58"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="446.89,-282.91 450.98,-292.69 453.87,-282.49 446.89,-282.91"/>
+</a>
+</g>
+</g>
+<!-- RETURN -->
+<g id="node30" class="node">
+<title>RETURN</title>
+<g id="a_node30"><a xlink:title="RETURN&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &#160;(POSITIONS.TRANS() * VRETURN &#160;&#160;&#160;&#160;&#160;&#160;&#160;)[0,0] $">
+<polygon fill="#63b8ff" stroke="black" points="667.5,-75 597.5,-75 597.5,-39 667.5,-39 667.5,-75"/>
+<text text-anchor="start" x="603.5" y="-52.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RETURN:</text>
+</a>
+</g>
+</g>
+<!-- VRETURN&#45;&gt;RETURN -->
+<g id="edge17" class="edge">
+<title>VRETURN&#45;&gt;RETURN</title>
+<g id="a_edge17"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M336.03,-42.87C398.68,-45.86 521.33,-51.73 587.19,-54.88"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="587.1,-58.38 597.25,-55.36 587.43,-51.39 587.1,-58.38"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;LEVERAGE_WEIGHTED_SUM -->
+<g id="edge27" class="edge">
+<title>POSITIONS&#45;&gt;LEVERAGE_WEIGHTED_SUM</title>
+<g id="a_edge27"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M456.21,-329.08C462.8,-367.77 482.8,-459.85 531,-519 544.35,-535.38 563.14,-548.75 580.87,-558.89"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="579.56,-562.17 590.01,-563.9 582.93,-556.03 579.56,-562.17"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;LCR_WEIGHTED_SUM -->
+<g id="edge16" class="edge">
+<title>POSITIONS&#45;&gt;LCR_WEIGHTED_SUM</title>
+<g id="a_edge16"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M470.61,-329.14C486.23,-345.63 510.02,-370.6 531,-392 556.06,-417.56 585.08,-446.35 605.47,-466.45"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="603.26,-469.18 612.84,-473.7 608.17,-464.19 603.26,-469.18"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;RISK_WEIGHTED_SUM -->
+<g id="edge33" class="edge">
+<title>POSITIONS&#45;&gt;RISK_WEIGHTED_SUM</title>
+<g id="a_edge33"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M467.84,-292.99C482.44,-275.44 506.37,-248.73 531,-230 546.56,-218.16 565.07,-207.42 581.93,-198.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="583.76,-201.7 591.1,-194.06 580.6,-195.45 583.76,-201.7"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;POSITION_EUR -->
+<g id="edge12" class="edge">
+<title>POSITIONS&#45;&gt;POSITION_EUR</title>
+<g id="a_edge12"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M495.15,-326.13C506.7,-330.16 519.29,-334.39 531,-338 542.4,-341.51 554.6,-345.01 566.44,-348.26"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="565.7,-351.69 576.26,-350.93 567.53,-344.93 565.7,-351.69"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;POSITION_JPY -->
+<g id="edge15" class="edge">
+<title>POSITIONS&#45;&gt;POSITION_JPY</title>
+<g id="a_edge15"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M495.23,-311C517.17,-311 544.51,-311 568.93,-311"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="569.19,-314.5 579.19,-311 569.19,-307.5 569.19,-314.5"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;RISK -->
+<g id="edge6" class="edge">
+<title>POSITIONS&#45;&gt;RISK</title>
+<g id="a_edge6"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M457.47,-292.76C465.59,-259.64 487.15,-189.29 531,-149 548.83,-132.62 574.4,-123.09 595.29,-117.66"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="596.2,-121.04 605.12,-115.32 594.58,-114.23 596.2,-121.04"/>
+</a>
+</g>
+</g>
+<!-- POSITION_USD -->
+<g id="node27" class="node">
+<title>POSITION_USD</title>
+<g id="a_node27"><a xlink:title="POSITION_USD&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
+<polygon fill="#63b8ff" stroke="black" points="688.5,-275 576.5,-275 576.5,-239 688.5,-239 688.5,-275"/>
+<text text-anchor="start" x="582.5" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_USD:</text>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;POSITION_USD -->
+<g id="edge38" class="edge">
+<title>POSITIONS&#45;&gt;POSITION_USD</title>
+<g id="a_edge38"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M495.15,-295.87C506.7,-291.84 519.29,-287.61 531,-284 542.4,-280.49 554.6,-276.99 566.44,-273.74"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="567.53,-277.07 576.26,-271.07 565.7,-270.31 567.53,-277.07"/>
+</a>
+</g>
+</g>
+<!-- POSITIONS&#45;&gt;RETURN -->
+<g id="edge25" class="edge">
+<title>POSITIONS&#45;&gt;RETURN</title>
+<g id="a_edge25"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M454.17,-292.95C456.77,-250.12 469.42,-141.61 531,-84 546.1,-69.88 567.78,-62.98 587.14,-59.68"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="587.9,-63.11 597.3,-58.23 586.91,-56.18 587.9,-63.11"/>
+</a>
+</g>
+</g>
+<!-- MSIGMA -->
+<g id="node22" class="node">
+<title>MSIGMA</title>
+<g id="a_node22"><a xlink:title="MSIGMA&#10;FRML &lt;MATRIX&gt; MSIGMA &#160;= MATRIX( [[0.01573635,0.01436816,	0.01045556],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[0.01436816,0.02289016,	0.01172995],&#10; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[0.01045556,0.01172995,	0.01748076]] &#160;) $">
+<polygon fill="#63b8ff" stroke="black" points="332.5,-113 259.5,-113 259.5,-77 332.5,-77 332.5,-113"/>
+<text text-anchor="start" x="266" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MSIGMA:</text>
+</a>
+</g>
+</g>
+<!-- MSIGMA&#45;&gt;RISK -->
+<g id="edge24" class="edge">
+<title>MSIGMA&#45;&gt;RISK</title>
+<g id="a_edge24"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M332.8,-96.71C396.98,-99.78 530.92,-106.19 595.35,-109.27"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="595.29,-112.77 605.44,-109.75 595.62,-105.78 595.29,-112.77"/>
+</a>
+</g>
+</g>
+<!-- MSIGMA&#45;&gt;POSITIONS -->
+<g id="edge34" class="edge">
+<title>MSIGMA&#45;&gt;POSITIONS</title>
+<g id="a_edge34"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M332.54,-100.86C346.89,-104.78 362.7,-111.27 374,-122 420.39,-166.05 439.88,-241.86 447.35,-282.8"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="443.94,-283.62 449.08,-292.89 450.84,-282.45 443.94,-283.62"/>
+</a>
+</g>
+</g>
+<!-- EQUITY -->
+<g id="node23" class="node">
+<title>EQUITY</title>
+<g id="a_node23"><a xlink:title="EQUITY&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="329,-275 263,-275 263,-239 329,-239 329,-275"/>
+<text text-anchor="start" x="269" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">EQUITY:</text>
+</a>
+</g>
+</g>
+<!-- EQUITY&#45;&gt;POSITIONS -->
+<g id="edge22" class="edge">
+<title>EQUITY&#45;&gt;POSITIONS</title>
+<g id="a_edge22"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M329.01,-268.19C349.6,-275.38 376.8,-284.89 400.34,-293.12"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="399.24,-296.44 409.84,-296.44 401.55,-289.84 399.24,-296.44"/>
+</a>
+</g>
+</g>
+<!-- MAX_EUR -->
+<g id="node24" class="node">
+<title>MAX_EUR</title>
+<g id="a_node24"><a xlink:title="MAX_EUR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="132,-275 50,-275 50,-239 132,-239 132,-275"/>
+<text text-anchor="start" x="56" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_EUR:</text>
 </a>
 </g>
 </g>
@@ -176,341 +518,26 @@
 <g id="edge26" class="edge">
 <title>MAX_EUR&#45;&gt;MAX_W</title>
 <g id="a_edge26"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M132.11,-311C166.6,-311 216.25,-311 251.65,-311"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="251.69,-314.5 261.69,-311 251.69,-307.5 251.69,-314.5"/>
+<path fill="none" stroke="black" stroke-width="0.5" d="M132.11,-246.33C166.6,-237.16 216.25,-223.95 251.65,-214.53"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="252.93,-217.81 261.69,-211.86 251.13,-211.05 252.93,-217.81"/>
 </a>
 </g>
 </g>
-<!-- MAX_USD -->
-<g id="node9" class="node">
-<title>MAX_USD</title>
-<g id="a_node9"><a xlink:title="MAX_USD&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="132,-275 50,-275 50,-239 132,-239 132,-275"/>
-<text text-anchor="start" x="56" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MAX_USD:</text>
-</a>
-</g>
-</g>
-<!-- MAX_USD&#45;&gt;MAX_W -->
-<g id="edge2" class="edge">
-<title>MAX_USD&#45;&gt;MAX_W</title>
-<g id="a_edge2"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M132.11,-267.67C166.6,-276.84 216.25,-290.05 251.65,-299.47"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="251.13,-302.95 261.69,-302.14 252.93,-296.19 251.13,-302.95"/>
-</a>
-</g>
-</g>
-<!-- MIN_EUR -->
-<g id="node10" class="node">
-<title>MIN_EUR</title>
-<g id="a_node10"><a xlink:title="MIN_EUR&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="129.5,-491 52.5,-491 52.5,-455 129.5,-455 129.5,-491"/>
-<text text-anchor="start" x="59" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_EUR:</text>
-</a>
-</g>
-</g>
-<!-- MIN_W -->
-<g id="node12" class="node">
-<title>MIN_W</title>
-<g id="a_node12"><a xlink:title="MIN_W&#10;FRML &lt;MATRIX&gt; MIN_W &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[MIN_USD,MIN_JPY,MIN_EUR]) &#160;&#160;&#160;&#160;&#160;&#160;$">
-<polygon fill="#63b8ff" stroke="black" points="327.5,-491 264.5,-491 264.5,-455 327.5,-455 327.5,-491"/>
-<text text-anchor="start" x="271" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_W:</text>
-</a>
-</g>
-</g>
-<!-- MIN_EUR&#45;&gt;MIN_W -->
-<g id="edge16" class="edge">
-<title>MIN_EUR&#45;&gt;MIN_W</title>
-<g id="a_edge16"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M129.71,-473C165.08,-473 217.85,-473 254.2,-473"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="254.45,-476.5 264.45,-473 254.45,-469.5 254.45,-476.5"/>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHT_JPY -->
-<g id="node11" class="node">
-<title>RISK_WEIGHT_JPY</title>
-<g id="a_node11"><a xlink:title="RISK_WEIGHT_JPY&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="159,-653 23,-653 23,-617 159,-617 159,-653"/>
-<text text-anchor="start" x="29" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_JPY:</text>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHTS -->
-<g id="node22" class="node">
-<title>RISK_WEIGHTS</title>
-<g id="a_node22"><a xlink:title="RISK_WEIGHTS&#10;FRML &lt;MATRIX&gt; RISK_WEIGHTS &#160;&#160;&#160;&#160;&#160;= MATRIX(&#10;[RISK_WEIGHT_USD,RISK_WEIGHT_JPY,RISK_WEIGHT_EUR]) $">
-<polygon fill="#63b8ff" stroke="black" points="353.5,-545 238.5,-545 238.5,-509 353.5,-509 353.5,-545"/>
-<text text-anchor="start" x="245" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHTS:</text>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHT_JPY&#45;&gt;RISK_WEIGHTS -->
-<g id="edge28" class="edge">
-<title>RISK_WEIGHT_JPY&#45;&gt;RISK_WEIGHTS</title>
-<g id="a_edge28"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M159.38,-620.5C167.42,-617.16 175.18,-613.05 182,-608 205.19,-590.84 195.21,-571.69 218,-554 221.4,-551.36 225.08,-548.97 228.92,-546.8"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="230.78,-549.78 238.12,-542.14 227.62,-543.54 230.78,-549.78"/>
-</a>
-</g>
-</g>
-<!-- MIN_W&#45;&gt;POSITIONS -->
-<g id="edge25" class="edge">
-<title>MIN_W&#45;&gt;POSITIONS</title>
-<g id="a_edge25"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M327.52,-467.67C348.15,-464.06 375.88,-459.21 399.9,-455.02"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="400.68,-458.43 409.93,-453.27 399.47,-451.54 400.68,-458.43"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHTED_SUM -->
-<g id="node13" class="node">
-<title>LCR_WEIGHTED_SUM</title>
-<g id="a_node13"><a xlink:title="LCR_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;LCR_WEIGHTED_SUM &#160;&#160;&#160;&#160;&#160;= (LCR_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
-<polygon fill="#63b8ff" stroke="black" points="711.5,-221 553.5,-221 553.5,-185 711.5,-185 711.5,-221"/>
-<text text-anchor="start" x="559.5" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHTED_SUM:</text>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;RISK -->
-<g id="edge10" class="edge">
-<title>POSITIONS&#45;&gt;RISK</title>
-<g id="a_edge10"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M454.54,-464.11C457.92,-505.53 472.1,-607.74 531,-662 548.28,-677.92 573.93,-684.63 595,-687.38"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="594.9,-690.89 605.22,-688.46 595.64,-683.93 594.9,-690.89"/>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;POSITION_USD -->
-<g id="edge24" class="edge">
-<title>POSITIONS&#45;&gt;POSITION_USD</title>
-<g id="a_edge24"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M495.23,-452.33C516.36,-455.54 542.5,-459.5 566.21,-463.1"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="565.79,-466.57 576.21,-464.61 566.84,-459.65 565.79,-466.57"/>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;POSITION_JPY -->
-<g id="edge34" class="edge">
-<title>POSITIONS&#45;&gt;POSITION_JPY</title>
-<g id="a_edge34"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M495.23,-439.67C517.27,-436.33 544.75,-432.16 569.25,-428.44"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="569.83,-431.9 579.19,-426.93 568.78,-424.97 569.83,-431.9"/>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;LCR_WEIGHTED_SUM -->
-<g id="edge5" class="edge">
-<title>POSITIONS&#45;&gt;LCR_WEIGHTED_SUM</title>
-<g id="a_edge5"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M466.29,-427.97C481.58,-406.47 507.98,-369.49 531,-338 558.69,-300.11 591.2,-256.62 611.58,-229.48"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="614.54,-231.36 617.74,-221.27 608.94,-227.16 614.54,-231.36"/>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;RETURN -->
-<g id="edge31" class="edge">
-<title>POSITIONS&#45;&gt;RETURN</title>
-<g id="a_edge31"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M456.98,-464.14C464.39,-497.74 484.97,-569.73 531,-608 546.78,-621.12 568.34,-627.91 587.45,-631.41"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="587.04,-634.89 597.46,-632.99 588.13,-627.97 587.04,-634.89"/>
-</a>
-</g>
-</g>
-<!-- LEVERAGE_WEIGHTED_SUM -->
-<g id="node19" class="node">
-<title>LEVERAGE_WEIGHTED_SUM</title>
-<g id="a_node19"><a xlink:title="LEVERAGE_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;LEVERAGE_WEIGHTED_SUM = (LEVERAGE_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
-<polygon fill="#63b8ff" stroke="black" points="734,-599 531,-599 531,-563 734,-563 734,-599"/>
-<text text-anchor="start" x="537.5" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHTED_SUM:</text>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;LEVERAGE_WEIGHTED_SUM -->
-<g id="edge6" class="edge">
-<title>POSITIONS&#45;&gt;LEVERAGE_WEIGHTED_SUM</title>
-<g id="a_edge6"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M461.69,-464.28C473.5,-488.51 497.6,-530.88 531,-554 533.14,-555.48 535.37,-556.89 537.65,-558.21"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="536.25,-561.43 546.74,-562.95 539.49,-555.23 536.25,-561.43"/>
-</a>
-</g>
-</g>
-<!-- POSITION_EUR -->
-<g id="node21" class="node">
-<title>POSITION_EUR</title>
-<g id="a_node21"><a xlink:title="POSITION_EUR&#10;FRML XX &#160;&#160;&#160;&#160;&#160;POSITION_USD,POSITION_JPY,POSITION_EUR = POSITIONS $">
-<polygon fill="#63b8ff" stroke="black" points="688.5,-383 576.5,-383 576.5,-347 688.5,-347 688.5,-383"/>
-<text text-anchor="start" x="582.5" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">POSITION_EUR:</text>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;POSITION_EUR -->
-<g id="edge4" class="edge">
-<title>POSITIONS&#45;&gt;POSITION_EUR</title>
-<g id="a_edge4"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M474.97,-427.99C489.87,-416.28 510.63,-401.48 531,-392 542.18,-386.8 554.54,-382.45 566.66,-378.87"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="567.62,-382.24 576.3,-376.16 565.73,-375.5 567.62,-382.24"/>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHTED_SUM -->
-<g id="node31" class="node">
-<title>RISK_WEIGHTED_SUM</title>
-<g id="a_node31"><a xlink:title="RISK_WEIGHTED_SUM&#10;FRML XX &#160;&#160;&#160;&#160;&#160;RISK_WEIGHTED_SUM &#160;&#160;&#160;&#160;= (RISK_WEIGHTS.TRANS() * POSITIONS)[0,0] $">
-<polygon fill="#63b8ff" stroke="black" points="714,-545 551,-545 551,-509 714,-509 714,-545"/>
-<text text-anchor="start" x="557.5" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHTED_SUM:</text>
-</a>
-</g>
-</g>
-<!-- POSITIONS&#45;&gt;RISK_WEIGHTED_SUM -->
-<g id="edge7" class="edge">
-<title>POSITIONS&#45;&gt;RISK_WEIGHTED_SUM</title>
-<g id="a_edge7"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M474.97,-464.01C489.87,-475.72 510.63,-490.52 531,-500 535.12,-501.92 539.4,-503.72 543.77,-505.41"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="542.85,-508.8 553.45,-508.93 545.25,-502.22 542.85,-508.8"/>
-</a>
-</g>
-</g>
-<!-- MIN_JPY -->
-<g id="node16" class="node">
-<title>MIN_JPY</title>
-<g id="a_node16"><a xlink:title="MIN_JPY&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="127,-437 55,-437 55,-401 127,-401 127,-437"/>
-<text text-anchor="start" x="61" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_JPY:</text>
-</a>
-</g>
-</g>
-<!-- MIN_JPY&#45;&gt;MIN_W -->
-<g id="edge22" class="edge">
-<title>MIN_JPY&#45;&gt;MIN_W</title>
-<g id="a_edge22"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M127.36,-428.41C162.77,-437.82 217.19,-452.3 254.36,-462.19"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="253.79,-465.66 264.35,-464.85 255.59,-458.89 253.79,-465.66"/>
-</a>
-</g>
-</g>
-<!-- MIN_USD -->
-<g id="node17" class="node">
-<title>MIN_USD</title>
-<g id="a_node17"><a xlink:title="MIN_USD&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="129.5,-383 52.5,-383 52.5,-347 129.5,-347 129.5,-383"/>
-<text text-anchor="start" x="59" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_USD:</text>
-</a>
-</g>
-</g>
-<!-- MIN_USD&#45;&gt;MIN_W -->
-<g id="edge40" class="edge">
-<title>MIN_USD&#45;&gt;MIN_W</title>
-<g id="a_edge40"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M129.66,-370.29C146.88,-374.14 166.79,-380.74 182,-392 205.19,-409.16 195.21,-428.31 218,-446 228.6,-454.22 241.89,-460.06 254.43,-464.15"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="253.68,-467.57 264.27,-467.06 255.67,-460.86 253.68,-467.57"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_USD -->
-<g id="node18" class="node">
-<title>LCR_WEIGHT_USD</title>
-<g id="a_node18"><a xlink:title="LCR_WEIGHT_USD&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="159.5,-113 22.5,-113 22.5,-77 159.5,-77 159.5,-113"/>
-<text text-anchor="start" x="29" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_USD:</text>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_USD&#45;&gt;LCR_WEIGHTS -->
-<g id="edge11" class="edge">
-<title>LCR_WEIGHT_USD&#45;&gt;LCR_WEIGHTS</title>
-<g id="a_edge11"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M159.6,-95C182.3,-95 207.56,-95 230.06,-95"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="230.18,-98.5 240.18,-95 230.18,-91.5 230.18,-98.5"/>
-</a>
-</g>
-</g>
-<!-- LEVERAGE_WEIGHTS -->
-<g id="node20" class="node">
-<title>LEVERAGE_WEIGHTS</title>
-<g id="a_node20"><a xlink:title="LEVERAGE_WEIGHTS&#10;FRML &lt;MATRIX&gt; LEVERAGE_WEIGHTS &#160;= MATRIX(&#10;[LEVERAGE_WEIGHT_USD,LEVERAGE_WEIGHT_JPY,LEVERAGE_WEIGHT_EUR]) $">
-<polygon fill="#63b8ff" stroke="black" points="374,-599 218,-599 218,-563 374,-563 374,-599"/>
-<text text-anchor="start" x="224" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHTS:</text>
-</a>
-</g>
-</g>
-<!-- LEVERAGE_WEIGHTS&#45;&gt;POSITIONS -->
+<!-- LCR_WEIGHTS&#45;&gt;LCR_WEIGHTED_SUM -->
 <g id="edge23" class="edge">
-<title>LEVERAGE_WEIGHTS&#45;&gt;POSITIONS</title>
+<title>LCR_WEIGHTS&#45;&gt;LCR_WEIGHTED_SUM</title>
 <g id="a_edge23"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M359.65,-562.83C364.72,-560.24 369.58,-557.31 374,-554 402.54,-532.63 424.86,-497.72 438.07,-473.39"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="441.28,-474.8 442.84,-464.32 435.09,-471.54 441.28,-474.8"/>
+<path fill="none" stroke="black" stroke-width="0.5" d="M351.86,-566.4C406.84,-551.77 491.98,-529.12 553.87,-512.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="554.83,-516.02 563.6,-510.07 553.03,-509.26 554.83,-516.02"/>
 </a>
 </g>
 </g>
-<!-- LEVERAGE_WEIGHTS&#45;&gt;LEVERAGE_WEIGHTED_SUM -->
-<g id="edge17" class="edge">
-<title>LEVERAGE_WEIGHTS&#45;&gt;LEVERAGE_WEIGHTED_SUM</title>
-<g id="a_edge17"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M374.16,-581C417.66,-581 472.75,-581 520.79,-581"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="520.93,-584.5 530.93,-581 520.93,-577.5 520.93,-584.5"/>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHTS&#45;&gt;POSITIONS -->
-<g id="edge37" class="edge">
-<title>RISK_WEIGHTS&#45;&gt;POSITIONS</title>
-<g id="a_edge37"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M353.68,-509.12C360.64,-506.34 367.57,-503.29 374,-500 390.32,-491.65 407.17,-480.29 420.97,-470.15"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="423.23,-472.83 429.13,-464.03 419.03,-467.23 423.23,-472.83"/>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHTS&#45;&gt;RISK_WEIGHTED_SUM -->
-<g id="edge35" class="edge">
-<title>RISK_WEIGHTS&#45;&gt;RISK_WEIGHTED_SUM</title>
-<g id="a_edge35"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M353.74,-527C404.93,-527 481.11,-527 540.75,-527"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="540.93,-530.5 550.93,-527 540.93,-523.5 540.93,-530.5"/>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHT_EUR -->
-<g id="node23" class="node">
-<title>RISK_WEIGHT_EUR</title>
-<g id="a_node23"><a xlink:title="RISK_WEIGHT_EUR&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="162,-599 20,-599 20,-563 162,-563 162,-599"/>
-<text text-anchor="start" x="26" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_EUR:</text>
-</a>
-</g>
-</g>
-<!-- RISK_WEIGHT_EUR&#45;&gt;RISK_WEIGHTS -->
-<g id="edge36" class="edge">
-<title>RISK_WEIGHT_EUR&#45;&gt;RISK_WEIGHTS</title>
-<g id="a_edge36"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M159.88,-562.94C181.97,-557.07 206.45,-550.55 228.44,-544.7"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="229.59,-548.02 238.36,-542.07 227.79,-541.26 229.59,-548.02"/>
-</a>
-</g>
-</g>
-<!-- MAX_W&#45;&gt;POSITIONS -->
-<g id="edge38" class="edge">
-<title>MAX_W&#45;&gt;POSITIONS</title>
-<g id="a_edge38"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M330.24,-317.88C344.68,-322.02 361.19,-328.4 374,-338 402.54,-359.37 424.86,-394.28 438.07,-418.61"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="435.09,-420.46 442.84,-427.68 441.28,-417.2 435.09,-420.46"/>
-</a>
-</g>
-</g>
-<!-- LCR -->
-<g id="node25" class="node">
-<title>LCR</title>
-<g id="a_node25"><a xlink:title="LCR&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="323,-275 269,-275 269,-239 323,-239 323,-275"/>
-<text text-anchor="start" x="281" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR:</text>
-</a>
-</g>
-</g>
-<!-- LCR&#45;&gt;POSITIONS -->
-<g id="edge3" class="edge">
-<title>LCR&#45;&gt;POSITIONS</title>
-<g id="a_edge3"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M323.17,-260.92C339.43,-264.52 359.87,-271.33 374,-284 414.46,-320.28 435.75,-382.25 445.22,-418.11"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="441.85,-419.08 447.69,-427.92 448.64,-417.37 441.85,-419.08"/>
+<!-- LCR_WEIGHTS&#45;&gt;POSITIONS -->
+<g id="edge21" class="edge">
+<title>LCR_WEIGHTS&#45;&gt;POSITIONS</title>
+<g id="a_edge21"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M351.7,-569.01C359.96,-565.29 367.78,-560.4 374,-554 432.51,-493.8 446.86,-389.49 450.37,-339.42"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="453.87,-339.51 450.98,-329.31 446.89,-339.09 453.87,-339.51"/>
 </a>
 </g>
 </g>
@@ -524,173 +551,146 @@
 </g>
 </g>
 <!-- MAX_JPY&#45;&gt;MAX_W -->
-<g id="edge29" class="edge">
+<g id="edge9" class="edge">
 <title>MAX_JPY&#45;&gt;MAX_W</title>
-<g id="a_edge29"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M129.66,-208.29C146.88,-212.14 166.79,-218.74 182,-230 205.19,-247.16 195.21,-266.31 218,-284 227.97,-291.74 240.32,-297.36 252.19,-301.4"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="251.4,-304.82 261.98,-304.43 253.47,-298.13 251.4,-304.82"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_JPY -->
-<g id="node27" class="node">
-<title>LCR_WEIGHT_JPY</title>
-<g id="a_node27"><a xlink:title="LCR_WEIGHT_JPY&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="157,-59 25,-59 25,-23 157,-23 157,-59"/>
-<text text-anchor="start" x="31" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_JPY:</text>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHT_JPY&#45;&gt;LCR_WEIGHTS -->
-<g id="edge12" class="edge">
-<title>LCR_WEIGHT_JPY&#45;&gt;LCR_WEIGHTS</title>
-<g id="a_edge12"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M157.07,-58.31C180.51,-64.54 206.94,-71.57 230.34,-77.8"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="229.61,-81.23 240.17,-80.42 231.41,-74.46 229.61,-81.23"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHTS&#45;&gt;LCR_WEIGHTED_SUM -->
-<g id="edge27" class="edge">
-<title>LCR_WEIGHTS&#45;&gt;LCR_WEIGHTED_SUM</title>
-<g id="a_edge27"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M351.86,-112.71C410.45,-131.63 503.28,-161.6 565.74,-181.77"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="564.9,-185.17 575.49,-184.92 567.05,-178.51 564.9,-185.17"/>
-</a>
-</g>
-</g>
-<!-- LCR_WEIGHTS&#45;&gt;POSITIONS -->
-<g id="edge33" class="edge">
-<title>LCR_WEIGHTS&#45;&gt;POSITIONS</title>
-<g id="a_edge33"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M351.72,-106.42C360.08,-110.22 367.93,-115.27 374,-122 413.71,-166.01 439.52,-347.26 448.22,-417.76"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="444.75,-418.21 449.43,-427.71 451.7,-417.36 444.75,-418.21"/>
-</a>
-</g>
-</g>
-<!-- LEVERAGE_WEIGHT_JPY -->
-<g id="node29" class="node">
-<title>LEVERAGE_WEIGHT_JPY</title>
-<g id="a_node29"><a xlink:title="LEVERAGE_WEIGHT_JPY&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="179.5,-815 2.5,-815 2.5,-779 179.5,-779 179.5,-815"/>
-<text text-anchor="start" x="9" y="-792.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_JPY:</text>
-</a>
-</g>
-</g>
-<!-- LEVERAGE_WEIGHT_JPY&#45;&gt;LEVERAGE_WEIGHTS -->
-<g id="edge18" class="edge">
-<title>LEVERAGE_WEIGHT_JPY&#45;&gt;LEVERAGE_WEIGHTS</title>
-<g id="a_edge18"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M171.6,-778.86C175.38,-776.28 178.89,-773.35 182,-770 232.22,-715.98 169.03,-663.15 218,-608 218.75,-607.15 219.53,-606.33 220.34,-605.54"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="222.72,-608.11 228.22,-599.05 218.28,-602.7 222.72,-608.11"/>
+<g id="a_edge9"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M129.71,-203C164.25,-203 215.37,-203 251.6,-203"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="251.86,-206.5 261.86,-203 251.86,-199.5 251.86,-206.5"/>
 </a>
 </g>
 </g>
 <!-- RISK_WEIGHT_USD -->
-<g id="node30" class="node">
+<g id="node28" class="node">
 <title>RISK_WEIGHT_USD</title>
-<g id="a_node30"><a xlink:title="RISK_WEIGHT_USD&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="162,-545 20,-545 20,-509 162,-509 162,-545"/>
-<text text-anchor="start" x="26" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_USD:</text>
+<g id="a_node28"><a xlink:title="RISK_WEIGHT_USD&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="162,-113 20,-113 20,-77 162,-77 162,-113"/>
+<text text-anchor="start" x="26" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_USD:</text>
 </a>
 </g>
 </g>
 <!-- RISK_WEIGHT_USD&#45;&gt;RISK_WEIGHTS -->
-<g id="edge39" class="edge">
+<g id="edge8" class="edge">
 <title>RISK_WEIGHT_USD&#45;&gt;RISK_WEIGHTS</title>
-<g id="a_edge39"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M162.15,-527C183.52,-527 206.94,-527 228.1,-527"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="228.28,-530.5 238.28,-527 228.28,-523.5 228.28,-530.5"/>
+<g id="a_edge8"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M159.88,-113.06C181.97,-118.93 206.45,-125.45 228.44,-131.3"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="227.79,-134.74 238.36,-133.93 229.59,-127.98 227.79,-134.74"/>
 </a>
 </g>
 </g>
-<!-- RISKAVERSION -->
-<g id="node32" class="node">
-<title>RISKAVERSION</title>
-<g id="a_node32"><a xlink:title="RISKAVERSION&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="353,-221 239,-221 239,-185 353,-185 353,-221"/>
-<text text-anchor="start" x="245" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISKAVERSION:</text>
+<!-- RISK_WEIGHTS&#45;&gt;RISK_WEIGHTED_SUM -->
+<g id="edge2" class="edge">
+<title>RISK_WEIGHTS&#45;&gt;RISK_WEIGHTED_SUM</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M353.74,-153.58C404.93,-157.71 481.11,-163.86 540.75,-168.68"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="540.68,-172.18 550.93,-169.5 541.24,-165.2 540.68,-172.18"/>
 </a>
 </g>
 </g>
-<!-- RISKAVERSION&#45;&gt;POSITIONS -->
-<g id="edge13" class="edge">
-<title>RISKAVERSION&#45;&gt;POSITIONS</title>
-<g id="a_edge13"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M353.08,-215.9C360.78,-219.5 368.07,-224.11 374,-230 426.48,-282.1 443.6,-372.21 449.05,-417.81"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="445.58,-418.32 450.14,-427.88 452.54,-417.56 445.58,-418.32"/>
+<!-- RISK_WEIGHTS&#45;&gt;POSITIONS -->
+<g id="edge28" class="edge">
+<title>RISK_WEIGHTS&#45;&gt;POSITIONS</title>
+<g id="a_edge28"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M353.78,-163.59C361.04,-166.93 368.01,-171.02 374,-176 408.54,-204.71 430.9,-253.05 442.33,-283.42"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="439.1,-284.77 445.8,-292.98 445.68,-282.39 439.1,-284.77"/>
 </a>
 </g>
 </g>
-<!-- EQUITY -->
+<!-- LCR_WEIGHT_EUR -->
+<g id="node31" class="node">
+<title>LCR_WEIGHT_EUR</title>
+<g id="a_node31"><a xlink:title="LCR_WEIGHT_EUR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="159.5,-545 22.5,-545 22.5,-509 159.5,-509 159.5,-545"/>
+<text text-anchor="start" x="29" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LCR_WEIGHT_EUR:</text>
+</a>
+</g>
+</g>
+<!-- LCR_WEIGHT_EUR&#45;&gt;LCR_WEIGHTS -->
+<g id="edge14" class="edge">
+<title>LCR_WEIGHT_EUR&#45;&gt;LCR_WEIGHTS</title>
+<g id="a_edge14"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M159.6,-544.98C182.4,-551.05 207.79,-557.8 230.36,-563.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="229.62,-567.23 240.18,-566.42 231.42,-560.46 229.62,-567.23"/>
+</a>
+</g>
+</g>
+<!-- MAX_W&#45;&gt;POSITIONS -->
+<g id="edge35" class="edge">
+<title>MAX_W&#45;&gt;POSITIONS</title>
+<g id="a_edge35"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M330.02,-210.86C344.26,-215.16 360.66,-221.41 374,-230 396.64,-244.58 417.44,-267.06 431.78,-284.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="429.32,-287.17 438.29,-292.83 434.8,-282.82 429.32,-287.17"/>
+</a>
+</g>
+</g>
+<!-- LEVERAGE_WEIGHT_JPY -->
 <g id="node33" class="node">
-<title>EQUITY</title>
-<g id="a_node33"><a xlink:title="EQUITY&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="329,-437 263,-437 263,-401 329,-401 329,-437"/>
-<text text-anchor="start" x="269" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">EQUITY:</text>
+<title>LEVERAGE_WEIGHT_JPY</title>
+<g id="a_node33"><a xlink:title="LEVERAGE_WEIGHT_JPY&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="179.5,-707 2.5,-707 2.5,-671 179.5,-671 179.5,-707"/>
+<text text-anchor="start" x="9" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_JPY:</text>
 </a>
 </g>
 </g>
-<!-- EQUITY&#45;&gt;POSITIONS -->
-<g id="edge20" class="edge">
-<title>EQUITY&#45;&gt;POSITIONS</title>
-<g id="a_edge20"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M329.01,-424.59C349.42,-428.16 376.32,-432.86 399.71,-436.95"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="399.38,-440.45 409.84,-438.72 400.59,-433.55 399.38,-440.45"/>
+<!-- LEVERAGE_WEIGHT_JPY&#45;&gt;LEVERAGE_WEIGHTS -->
+<g id="edge19" class="edge">
+<title>LEVERAGE_WEIGHT_JPY&#45;&gt;LEVERAGE_WEIGHTS</title>
+<g id="a_edge19"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M179.56,-689C188.94,-689 198.48,-689 207.85,-689"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="207.94,-692.5 217.94,-689 207.94,-685.5 207.94,-692.5"/>
 </a>
 </g>
 </g>
-<!-- LEVERAGE_WEIGHT_EUR -->
+<!-- RISK_WEIGHT_JPY -->
 <g id="node34" class="node">
-<title>LEVERAGE_WEIGHT_EUR</title>
-<g id="a_node34"><a xlink:title="LEVERAGE_WEIGHT_EUR&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="182,-761 0,-761 0,-725 182,-725 182,-761"/>
-<text text-anchor="start" x="6" y="-738.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_EUR:</text>
+<title>RISK_WEIGHT_JPY</title>
+<g id="a_node34"><a xlink:title="RISK_WEIGHT_JPY&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="159,-59 23,-59 23,-23 159,-23 159,-59"/>
+<text text-anchor="start" x="29" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">RISK_WEIGHT_JPY:</text>
 </a>
 </g>
 </g>
-<!-- LEVERAGE_WEIGHT_EUR&#45;&gt;LEVERAGE_WEIGHTS -->
-<g id="edge32" class="edge">
-<title>LEVERAGE_WEIGHT_EUR&#45;&gt;LEVERAGE_WEIGHTS</title>
-<g id="a_edge32"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M170.37,-724.99C174.56,-722.39 178.49,-719.41 182,-716 218.31,-680.77 182.5,-644.05 218,-608 218.92,-607.06 219.88,-606.16 220.87,-605.29"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="223.09,-607.99 228.97,-599.19 218.88,-602.4 223.09,-607.99"/>
+<!-- RISK_WEIGHT_JPY&#45;&gt;RISK_WEIGHTS -->
+<g id="edge36" class="edge">
+<title>RISK_WEIGHT_JPY&#45;&gt;RISK_WEIGHTS</title>
+<g id="a_edge36"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M159.38,-55.5C167.42,-58.84 175.18,-62.95 182,-68 205.19,-85.16 195.21,-104.31 218,-122 221.4,-124.64 225.08,-127.03 228.92,-129.2"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="227.62,-132.46 238.12,-133.86 230.78,-126.22 227.62,-132.46"/>
 </a>
 </g>
 </g>
-<!-- CAPITAL -->
+<!-- MIN_EUR -->
 <g id="node35" class="node">
-<title>CAPITAL</title>
-<g id="a_node35"><a xlink:title="CAPITAL&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="332.5,-383 259.5,-383 259.5,-347 332.5,-347 332.5,-383"/>
-<text text-anchor="start" x="266" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">CAPITAL:</text>
+<title>MIN_EUR</title>
+<g id="a_node35"><a xlink:title="MIN_EUR&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="129.5,-383 52.5,-383 52.5,-347 129.5,-347 129.5,-383"/>
+<text text-anchor="start" x="59" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">MIN_EUR:</text>
 </a>
 </g>
 </g>
-<!-- CAPITAL&#45;&gt;POSITIONS -->
-<g id="edge21" class="edge">
-<title>CAPITAL&#45;&gt;POSITIONS</title>
-<g id="a_edge21"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M332.72,-375.28C346.01,-379.69 361.01,-385.35 374,-392 390.32,-400.35 407.17,-411.71 420.97,-421.85"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="419.03,-424.77 429.13,-427.97 423.23,-419.17 419.03,-424.77"/>
+<!-- MIN_EUR&#45;&gt;MIN_W -->
+<g id="edge39" class="edge">
+<title>MIN_EUR&#45;&gt;MIN_W</title>
+<g id="a_edge39"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M129.71,-375.03C165.24,-384.48 218.3,-398.6 254.67,-408.27"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="253.89,-411.69 264.45,-410.87 255.69,-404.92 253.89,-411.69"/>
 </a>
 </g>
 </g>
-<!-- LEVERAGE_WEIGHT_USD -->
+<!-- TOTAL -->
 <g id="node36" class="node">
-<title>LEVERAGE_WEIGHT_USD</title>
-<g id="a_node36"><a xlink:title="LEVERAGE_WEIGHT_USD&#10;Exogen">
-<polygon fill="yellow" stroke="black" points="182,-707 0,-707 0,-671 182,-671 182,-707"/>
-<text text-anchor="start" x="6" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">LEVERAGE_WEIGHT_USD:</text>
+<title>TOTAL</title>
+<g id="a_node36"><a xlink:title="TOTAL&#10;Exogen">
+<polygon fill="yellow" stroke="black" points="326,-383 266,-383 266,-347 326,-347 326,-383"/>
+<text text-anchor="start" x="272" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TOTAL:</text>
 </a>
 </g>
 </g>
-<!-- LEVERAGE_WEIGHT_USD&#45;&gt;LEVERAGE_WEIGHTS -->
-<g id="edge9" class="edge">
-<title>LEVERAGE_WEIGHT_USD&#45;&gt;LEVERAGE_WEIGHTS</title>
-<g id="a_edge9"><a xlink:href="bogus" xlink:title="NA">
-<path fill="none" stroke="black" stroke-width="0.5" d="M167.15,-670.97C172.39,-668.37 177.41,-665.4 182,-662 205.19,-644.84 195.21,-625.69 218,-608 219.77,-606.62 221.62,-605.31 223.53,-604.07"/>
-<polygon fill="black" stroke="black" stroke-width="0.5" points="225.34,-607.06 232.22,-599.01 221.82,-601.01 225.34,-607.06"/>
+<!-- TOTAL&#45;&gt;POSITIONS -->
+<g id="edge7" class="edge">
+<title>TOTAL&#45;&gt;POSITIONS</title>
+<g id="a_edge7"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M326.06,-354.84C346.9,-347.56 375.52,-337.56 400.16,-328.94"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="401.45,-332.2 409.74,-325.6 399.14,-325.59 401.45,-332.2"/>
 </a>
 </g>
 </g>
