@@ -23,7 +23,7 @@ doall = '--all' if 'all' in options else ''
 
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
-(destination := Path(r'C:/modelbook/IbHansen.github.io/mfmod_colab')).mkdir(parents=True, exist_ok=True)
+(destination := Path(r'C:/modelbook/IbHansen.github.io/mf')).mkdir(parents=True, exist_ok=True)
 fileloc = str((buildhtml / 'index.html').absolute())
 
 # print(fileloc)
