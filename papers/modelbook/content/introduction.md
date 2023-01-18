@@ -7,8 +7,12 @@ This Jupyter book is work in progress and very much a draft.
 Please send any suggestions and comments to Ib 
 ```
 
-The purpose of this Jupyter Book is to introduce 
-the handeling of [World Bank's macroeconomic and fiscal model\(MFMod\)](https://openknowledge.worldbank.org/handle/10986/32217) in python. This is acomplished through a python library: ```modelflow```. 
+The purpose of this [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is to show some examples of different models in the **Modelflow** (aka **PCIM 2.0**) framework.
+
+This Jupyterbook is **displaying** a number of individual notebooks which each shows different aspects of the model and the framework. Most of the notebooks can be executed in the cloud. Either through [Google Colab](https://colab.research.google.com/) or [Mybinder](https://mybinder.org/)
+
+For more information on the capabilities of the framework look in [this manual](https://ibhansen.github.io/mfbook). It is based on the 
+the handeling of the [World Bank's macroeconomic and fiscal model\(MFMod\)](https://openknowledge.worldbank.org/handle/10986/32217) 
 
 ModelFlow is a Python library developed to leverage on the Pandas data management library and the broader Python ecosystem. Using Modelflow you can:
  - Solve models
