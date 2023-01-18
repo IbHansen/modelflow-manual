@@ -25,8 +25,8 @@ launch_buttons:
 
 repository:
   url                       : https://github.com/IbHansen/modelflow-manual   # Online location of the book
-  path_to_book              : working_paper/thebook  # Optional path to your book, relative to the repository root
-  branch                    : main  # Which branch of the repository should be used when creating links (optional)
+  path_to_book              : papers/modelbook  # Optional path to your book, relative to the repository root
+  branch                    : reorganisation  # Which branch of the repository should be used when creating links (optional)
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
