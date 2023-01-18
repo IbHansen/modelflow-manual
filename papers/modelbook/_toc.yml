@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+
+format: jb-book
+root: content/introduction
+options:
+  numbered: true
+parts:
+  - caption: Model, solutions and Modelflow
+    numbered: true  
+    chapters:
+    - file: content/notebooks/intro/model and solution
+    
+  - caption: Federal Reserve Board - US model
+    numbered: true  
+    chapters:   
+    - glob: content/Federal Reserve Board - US model/*
+    
