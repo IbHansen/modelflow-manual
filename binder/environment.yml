@@ -2,8 +2,8 @@ name: base
 channels:
   - ibh  
 dependencies:
-  - python=3.8
-  - modelflow
+#  - python=3.8
+  - modelflow_pinned_developement_test
   - pip
   - pip:
     - dash_interactive_graphviz
