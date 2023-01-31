@@ -16,4 +16,8 @@ parts:
     numbered: true  
     chapters:   
     - glob: content/Federal Reserve Board - US model/*
-    
+
+  - caption: FTT models 
+    numbered: true  
+    chapters:   
+    - glob: content/FTT/*    
