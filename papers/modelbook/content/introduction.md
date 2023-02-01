@@ -9,7 +9,7 @@ Please send any suggestions and comments to Ib
 
 The purpose of this [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is to show some examples of different models in the **Modelflow** (aka **PCIM 2.0**) framework.
 
-This Jupyterbook is **displaying** a number of individual notebooks which each shows different aspects of the model and the framework. Most of the notebooks can be executed in the cloud. Either through [Google Colab](https://colab.research.google.com/) or [Mybinder](https://mybinder.org/)
+This Jupyterbook is **displaying** a number of individual notebooks which each shows different aspects of the model and the framework. Most of the notebooks can be executed in the cloud. Either through [Google Colab](https://colab.research.google.com/) or [Mybinder](https://mybinder.org/) To do this move to the small rocket in the menu line. There you can choose to launch the notebook in either Mybinder or Colab. Usual it makes sense to launch in a new tab (by right click) as launch can take some time. 
 
 For more information on the capabilities of the framework look in [this manual](https://ibhansen.github.io/mfbook). It is based on the 
 the handeling of the [World Bank's macroeconomic and fiscal model\(MFMod\)](https://openknowledge.worldbank.org/handle/10986/32217) 

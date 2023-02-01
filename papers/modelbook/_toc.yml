@@ -7,17 +7,21 @@ root: content/introduction
 options:
   numbered: true
 parts:
-  - caption: Model, solutions and Modelflow
-    numbered: true  
-    chapters:
-    - file: content/notebooks/intro/model and solution
+# - caption: Model, solutions and Modelflow
+#   numbered: true  
+#   chapters:
+#   - file: content/model and solution
     
   - caption: Federal Reserve Board - US model
     numbered: true  
-    chapters:   
-    - glob: content/Federal Reserve Board - US model/*
+    chapters: 
+    - file: content/Federal Reserve Board - US model/FRBUS simple experiment
+    - file: content/Federal Reserve Board - US model/FRBUS, Policy assumption scenarios
+    - file: content/Federal Reserve Board - US model/FRBUS structure
+    - file: content/Federal Reserve Board - US model/FRBUS interactive update 
+    - file: content/Federal Reserve Board - US model/FRBUS model consistent expectations-cef2021
 
-  - caption: FTT models 
+  - caption: Future Technology Transformations (FTT) models 
     numbered: true  
     chapters:   
     - glob: content/FTT/*    
