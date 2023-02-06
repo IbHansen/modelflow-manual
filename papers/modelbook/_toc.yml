@@ -24,4 +24,4 @@ parts:
   - caption: Future Technology Transformations (FTT) models 
     numbered: true  
     chapters:   
-    - glob: content/FTT/*    
+    - glob: content/FTT/FTT*      
