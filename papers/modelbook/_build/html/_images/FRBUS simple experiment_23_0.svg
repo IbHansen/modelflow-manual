@@ -1,0 +1,387 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1124pt" height="769pt" viewBox="0.00 0.00 1124.00 769.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 765)">
+<title>TD</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-765 1120,-765 1120,4 -4,4"/>
+<text text-anchor="middle" x="558" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">XGDP</text>
+<!-- FNIN -->
+<g id="node1" class="node">
+<title>FNIN</title>
+<g id="a_node1"><a xlink:title="Net stock of claims of US residents on the rest of the world, current $
+FRML  &lt;&gt; FNIN = FNIN_A+FNIN_AERR+ (.25*FCBN+.54*(((LOG(FPC))-(LOG(FPC(-1))))*FNICN(-1))-.32*(((LOG(PGDP))-(LOG(PGDP(-1))))*FNILN(-1))-.67*(((LOG(FPX))-(LOG(FPX(-1))))*FNICN(-1))+.06*(((LOG(FPX))-(LOG(FPX(-1))))*FNILN(-1))+FNIRN) +FNIN(-1) $">
+<polygon fill="#63b8ff" stroke="black" points="1090.5,-545 660.5,-545 660.5,-509 1090.5,-509 1090.5,-545"/>
+<text text-anchor="start" x="666.5" y="-522.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">FNIN:Net stock of claims of US residents on the rest of the world, current $</text>
+</a>
+</g>
+</g>
+<!-- XGDO -->
+<g id="node2" class="node">
+<title>XGDO</title>
+<g id="a_node2"><a xlink:title="Gross domestic product, adjusted for measurement error, cw 2012$
+FRML  &lt;&gt; XGDO = XGDO_A+XGDO_AERR+ (XGDP/MEP)  $">
+<polygon fill="#63b8ff" stroke="black" points="599,-673 175,-673 175,-637 599,-637 599,-673"/>
+<text text-anchor="start" x="181" y="-650.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDO:Gross domestic product, adjusted for measurement error, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- XGDI -->
+<g id="node3" class="node">
+<title>XGDI</title>
+<g id="a_node3"><a xlink:title="Gross domestic income, cw 2012$
+FRML  &lt;&gt; XGDI = XGDI_A+XGDI_AERR+ (XGDO*MEI)  $">
+<polygon fill="#63b8ff" stroke="black" points="995.5,-761 755.5,-761 755.5,-725 995.5,-725 995.5,-761"/>
+<text text-anchor="start" x="761.5" y="-738.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDI:Gross domestic income, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- XGDO&#45;&gt;XGDI -->
+<g id="edge18" class="edge">
+<title>XGDO-&gt;XGDI</title>
+<g id="a_edge18"><a xlink:href="bogus" xlink:title=" XGDO -&gt; XGDI Min. att. -1633%  max: 465%">
+<path fill="none" stroke="black" stroke-width="8" d="M451.23,-673.02C500.84,-686.58 571.85,-704.69 635,-716 670.58,-722.37 709.41,-727.52 745.26,-731.54"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="744.58,-738.51 755.28,-732.64 746.11,-724.59 744.58,-738.51"/>
+</a>
+</g>
+</g>
+<!-- XBN -->
+<g id="node8" class="node">
+<title>XBN</title>
+<g id="a_node8"><a xlink:title="Business output (BEA definition), current $
+FRML  &lt;&gt; XBN = XBN_A+XBN_AERR+ (PXB/100*XBO+XGDPN-XGDO*PGDP/100)  $">
+<polygon fill="#63b8ff" stroke="black" points="1017,-653 734,-653 734,-617 1017,-617 1017,-653"/>
+<text text-anchor="start" x="740.5" y="-630.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XBN:Business output (BEA definition), current $</text>
+</a>
+</g>
+</g>
+<!-- XGDO&#45;&gt;XBN -->
+<g id="edge15" class="edge">
+<title>XGDO-&gt;XBN</title>
+<g id="a_edge15"><a xlink:href="bogus" xlink:title=" XGDO -&gt; XBN Min. att. -412%  max: 993%">
+<path fill="none" stroke="black" stroke-width="8" d="M599.26,-646.31C641.14,-644.59 684.29,-642.82 723.66,-641.2"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="724.15,-648.19 733.85,-640.78 723.57,-634.2 724.15,-648.19"/>
+</a>
+</g>
+</g>
+<!-- XGAP2 -->
+<g id="node11" class="node">
+<title>XGAP2</title>
+<g id="a_node11"><a xlink:title="Output gap for GDP (100*(actual/potential -1)
+FRML  &lt;&gt; XGAP2 = XGAP2_A+XGAP2_AERR+ (100*(XGDO/XGDPT-1))  $">
+<polygon fill="#63b8ff" stroke="black" points="1032,-707 719,-707 719,-671 1032,-671 1032,-707"/>
+<text text-anchor="start" x="725.5" y="-684.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGAP2:Output gap for GDP (100*(actual/potential -1)</text>
+</a>
+</g>
+</g>
+<!-- XGDO&#45;&gt;XGAP2 -->
+<g id="edge9" class="edge">
+<title>XGDO-&gt;XGAP2</title>
+<g id="a_edge9"><a xlink:href="bogus" xlink:title=" XGDO -&gt; XGAP2 Min. att. -732%  max: 596%">
+<path fill="none" stroke="black" stroke-width="8" d="M599.26,-669.76C635.79,-672.32 673.29,-674.94 708.41,-677.39"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="708.27,-684.4 718.73,-678.11 709.24,-670.43 708.27,-684.4"/>
+</a>
+</g>
+</g>
+<!-- YHSHR -->
+<g id="node4" class="node">
+<title>YHSHR</title>
+<g id="a_node4"><a xlink:title="Income, household, total, ratio to XGDP (real after-tax)
+FRML  &lt;&gt; YHSHR = YHSHR_A+YHSHR_AERR+ (YH/XGDP)  $">
+<polygon fill="#63b8ff" stroke="black" points="570.5,-579 203.5,-579 203.5,-543 570.5,-543 570.5,-579"/>
+<text text-anchor="start" x="210" y="-556.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">YHSHR:Income, household, total, ratio to XGDP (real after-tax)</text>
+</a>
+</g>
+</g>
+<!-- YHGAP -->
+<g id="node18" class="node">
+<title>YHGAP</title>
+<g id="a_node18"><a xlink:title="Income, household, total, ratio to XGDP, cyclical component (real after-tax)
+FRML  &lt;&gt; YHGAP = YHGAP_A+YHGAP_AERR+ (100*LOG(YHSHR/ZYHST))  $">
+<polygon fill="#63b8ff" stroke="black" points="1116,-599 635,-599 635,-563 1116,-563 1116,-599"/>
+<text text-anchor="start" x="641.5" y="-576.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">YHGAP:Income, household, total, ratio to XGDP, cyclical component (real after-tax)</text>
+</a>
+</g>
+</g>
+<!-- YHSHR&#45;&gt;YHGAP -->
+<g id="edge2" class="edge">
+<title>YHSHR-&gt;YHGAP</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title=" YHSHR -&gt; YHGAP Min. att. -2287%  max: 2200%">
+<path fill="none" stroke="black" stroke-width="8" d="M570.54,-568.5C588.28,-569.23 606.49,-569.98 624.74,-570.73"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="624.61,-577.73 634.89,-571.15 625.18,-563.74 624.61,-577.73"/>
+</a>
+</g>
+</g>
+<!-- XGDP -->
+<g id="node5" class="node">
+<title>XGDP</title>
+<g id="a_node5"><a xlink:title="GDP, cw 2012$
+FRML &lt;Z&gt; XGDP = EXP(XGDP_A+XGDP_AERR+ (LOG(XGDP(-1))+0.9985*LOG(XFS/XFS(-1))+0.6264*(LOG(KI)-LOG(KI(-1)))+-0.6249*(LOG(KI(-1))-LOG(KI(-2)))) ) $">
+<polygon fill="red" stroke="black" points="139,-464 0,-464 0,-428 139,-428 139,-464"/>
+<text text-anchor="start" x="6.5" y="-441.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP:GDP, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- XGDP&#45;&gt;XGDO -->
+<g id="edge20" class="edge">
+<title>XGDP-&gt;XGDO</title>
+<g id="a_edge20"><a xlink:href="bogus" xlink:title=" XGDP -&gt; XGDO Min. att. -9175%  max: 1573%">
+<path fill="none" stroke="black" stroke-width="8" d="M79.04,-464.12C94.16,-494.25 128.48,-554.65 175,-588 204.84,-609.39 241.79,-624.14 276.38,-634.24"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="274.55,-640.99 286.07,-636.96 278.34,-627.52 274.55,-640.99"/>
+</a>
+</g>
+</g>
+<!-- XGDP&#45;&gt;YHSHR -->
+<g id="edge17" class="edge">
+<title>XGDP-&gt;YHSHR</title>
+<g id="a_edge17"><a xlink:href="bogus" xlink:title=" XGDP -&gt; YHSHR Min. att. -825%  max: 268%">
+<path fill="none" stroke="black" stroke-width="8" d="M120.14,-464.1C176.12,-484.5 267.07,-517.65 326.73,-539.39"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="324.59,-546.07 336.39,-542.92 329.39,-532.91 324.59,-546.07"/>
+</a>
+</g>
+</g>
+<!-- HGGDP -->
+<g id="node6" class="node">
+<title>HGGDP</title>
+<g id="a_node6"><a xlink:title="Growth rate of GDP, cw 2012$ (annual rate)
+FRML  &lt;&gt; HGGDP = HGGDP_A+HGGDP_AERR+ (400*((LOG(XGDP))-(LOG(XGDP(-1)))))  $">
+<polygon fill="#63b8ff" stroke="black" points="540,-410 234,-410 234,-374 540,-374 540,-410"/>
+<text text-anchor="start" x="240" y="-387.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">HGGDP:Growth rate of GDP, cw 2012$ (annual rate)</text>
+</a>
+</g>
+</g>
+<!-- XGDP&#45;&gt;HGGDP -->
+<g id="edge3" class="edge">
+<title>XGDP-&gt;HGGDP</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title=" XGDP -&gt; HGGDP Min. att. 100%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M135.16,-427.95C148.27,-424.66 162.03,-421.5 175,-419 190.69,-415.98 207.11,-413.21 223.55,-410.69"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="224.94,-417.56 233.79,-409.16 222.86,-403.72 224.94,-417.56"/>
+</a>
+</g>
+</g>
+<!-- EMP -->
+<g id="node7" class="node">
+<title>EMP</title>
+<g id="a_node7"><a xlink:title="Petroleum imports, cw 2012$
+FRML &lt;Z&gt; EMP = XGDP*EXP(EMP_A+EMP_AERR+ (LOG(EMPTRT)+0.048026*((LOG(PMP/PXB))-(LOG(PMP(-1)/PXB(-1))))+0.022115*XGAP2(-1)) ) $">
+<polygon fill="#63b8ff" stroke="black" points="491,-167 283,-167 283,-131 491,-131 491,-167"/>
+<text text-anchor="start" x="289" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">EMP:Petroleum imports, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- XGDP&#45;&gt;EMP -->
+<g id="edge6" class="edge">
+<title>XGDP-&gt;EMP</title>
+<g id="a_edge6"><a xlink:href="bogus" xlink:title=" XGDP -&gt; EMP Min. att. -47%  max: 216%">
+<path fill="none" stroke="black" stroke-width="8" d="M89.76,-427.87C143.78,-377.02 296.8,-232.96 359.11,-174.31"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="364.11,-179.22 366.59,-167.27 354.51,-169.03 364.11,-179.22"/>
+</a>
+</g>
+</g>
+<!-- PGDP -->
+<g id="node16" class="node">
+<title>PGDP</title>
+<g id="a_node16"><a xlink:title="Price index for GDP, cw
+FRML  &lt;&gt; PGDP = PGDP_A+PGDP_AERR+ (100*XGDPN/XGDP)  $">
+<polygon fill="#63b8ff" stroke="black" points="479,-464 295,-464 295,-428 479,-428 479,-464"/>
+<text text-anchor="start" x="301" y="-441.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PGDP:Price index for GDP, cw</text>
+</a>
+</g>
+</g>
+<!-- XGDP&#45;&gt;PGDP -->
+<g id="edge11" class="edge">
+<title>XGDP-&gt;PGDP</title>
+<g id="a_edge11"><a xlink:href="bogus" xlink:title=" XGDP -&gt; PGDP Min. att. -2763%  max: 15152%">
+<path fill="none" stroke="black" stroke-width="8" d="M139.35,-446C181.92,-446 237.32,-446 284.83,-446"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="284.84,-453 294.84,-446 284.84,-439 284.84,-453"/>
+</a>
+</g>
+</g>
+<!-- HGEMP -->
+<g id="node9" class="node">
+<title>HGEMP</title>
+<g id="a_node9"><a xlink:title="Petroleum imports, cw 2012$, trend growth rate
+FRML &lt;Z&gt; HGEMP = HGEMP_A+HGEMP_AERR+ (.9*HGEMP(-1)+.1*400*LOG(EMP/EMP(-1)))  $">
+<polygon fill="#63b8ff" stroke="black" points="1039.5,-113 711.5,-113 711.5,-77 1039.5,-77 1039.5,-113"/>
+<text text-anchor="start" x="717.5" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">HGEMP:Petroleum imports, cw 2012$, trend growth rate</text>
+</a>
+</g>
+</g>
+<!-- EMP&#45;&gt;HGEMP -->
+<g id="edge4" class="edge">
+<title>EMP-&gt;HGEMP</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title=" EMP -&gt; HGEMP Min. att. -665%  max: 313%">
+<path fill="none" stroke="black" stroke-width="8" d="M491.17,-137.55C552.32,-130.76 631.38,-121.99 701.8,-114.17"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="702.96,-121.08 712.12,-113.02 701.41,-107.17 702.96,-121.08"/>
+</a>
+</g>
+</g>
+<!-- EMPN -->
+<g id="node15" class="node">
+<title>EMPN</title>
+<g id="a_node15"><a xlink:title="Petroleum imports, current $
+FRML  &lt;&gt; EMPN = EMPN_A+EMPN_AERR+ (.01*PMP*EMP)  $">
+<polygon fill="#63b8ff" stroke="black" points="982,-59 769,-59 769,-23 982,-23 982,-59"/>
+<text text-anchor="start" x="775.5" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">EMPN:Petroleum imports, current $</text>
+</a>
+</g>
+</g>
+<!-- EMP&#45;&gt;EMPN -->
+<g id="edge14" class="edge">
+<title>EMP-&gt;EMPN</title>
+<g id="a_edge14"><a xlink:href="bogus" xlink:title=" EMP -&gt; EMPN Min. att. -3490%  max: 237%">
+<path fill="none" stroke="black" stroke-width="8" d="M433.65,-130.9C482.64,-112.22 563.13,-83.66 635,-68 674.95,-59.29 719.3,-53.3 758.87,-49.22"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="759.56,-56.18 768.82,-48.22 758.17,-42.25 759.56,-56.18"/>
+</a>
+</g>
+</g>
+<!-- XFS -->
+<g id="node17" class="node">
+<title>XFS</title>
+<g id="a_node17"><a xlink:title="Final sales of gross domestic product, cw 2012$
+FRML &lt;Z&gt; XFS = EXP(XFS_A+XFS_AERR+ (LOG(XFS(-1))+0.6849*LOG(ECNIA/ECNIA(-1))+0.0386*LOG(EH/EH(-1))+0.1324*LOG(EBFI/EBFI(-1))+0.0429*LOG(EGFE/EGFE(-1))+0.0223*LOG(EGFL/EGFL(-1))+0.0395*LOG(EGSE/EGSE(-1))+0.0691*LOG(EGSL/EGSL(-1))+0.1203*LOG(EX/EX(-1))+-0.1399*LOG(EMO/EMO(-1))+-0.0101*LOG(EMP/EMP(-1))) ) $">
+<polygon fill="#63b8ff" stroke="black" points="1028,-221 723,-221 723,-185 1028,-185 1028,-221"/>
+<text text-anchor="start" x="729.5" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XFS:Final sales of gross domestic product, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- EMP&#45;&gt;XFS -->
+<g id="edge10" class="edge">
+<title>EMP-&gt;XFS</title>
+<g id="a_edge10"><a xlink:href="bogus" xlink:title=" EMP -&gt; XFS Min. att. -108%  max: 5%">
+<path fill="none" stroke="black" stroke-width="8" d="M491.17,-160.45C555.51,-167.59 639.67,-176.93 712.74,-185.05"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="712.26,-192.04 722.98,-186.18 713.81,-178.12 712.26,-192.04"/>
+</a>
+</g>
+</g>
+<!-- EM -->
+<g id="node19" class="node">
+<title>EM</title>
+<g id="a_node19"><a xlink:title="Imports of goods and services, cw 2012$
+FRML  &lt;&gt; EM = EXP(EM_A+EM_AERR+ (LOG(EM(-1))+.5*(EMON/EMN+EMON(-1)/EMN(-1))*((LOG(EMO))-(LOG(EMO(-1))))+.5*(EMPN/EMN+EMPN(-1)/EMN(-1))*((LOG(EMP))-(LOG(EMP(-1))))) ) $">
+<polygon fill="#63b8ff" stroke="black" points="1006.5,-167 744.5,-167 744.5,-131 1006.5,-131 1006.5,-167"/>
+<text text-anchor="start" x="750.5" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">EM:Imports of goods and services, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- EMP&#45;&gt;EM -->
+<g id="edge8" class="edge">
+<title>EMP-&gt;EM</title>
+<g id="a_edge8"><a xlink:href="bogus" xlink:title=" EMP -&gt; EM Min. att. -78%  max: 24%">
+<path fill="none" stroke="black" stroke-width="7.78" d="M491.17,-149C561.78,-149 656.27,-149 733.76,-149"/>
+<polygon fill="black" stroke="black" stroke-width="7.78" points="734.1,-155.81 744.1,-149 734.1,-142.19 734.1,-155.81"/>
+</a>
+</g>
+</g>
+<!-- PIGDP -->
+<g id="node10" class="node">
+<title>PIGDP</title>
+<g id="a_node10"><a xlink:title="Inflation rate, GDP, cw
+FRML  &lt;&gt; PIGDP = PIGDP_A+PIGDP_AERR+ (400*((LOG(PGDP))-(LOG(PGDP(-1)))))  $">
+<polygon fill="#63b8ff" stroke="black" points="966.5,-491 784.5,-491 784.5,-455 966.5,-455 966.5,-491"/>
+<text text-anchor="start" x="790.5" y="-468.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PIGDP:Inflation rate, GDP, cw</text>
+</a>
+</g>
+</g>
+<!-- XGDIN -->
+<g id="node12" class="node">
+<title>XGDIN</title>
+<g id="a_node12"><a xlink:title="Gross domestic income, current $
+FRML  &lt;&gt; XGDIN = XGDIN_A+XGDIN_AERR+ (XGDI*(PGDP/100))  $">
+<polygon fill="#63b8ff" stroke="black" points="998,-437 753,-437 753,-401 998,-401 998,-437"/>
+<text text-anchor="start" x="759.5" y="-414.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDIN:Gross domestic income, current $</text>
+</a>
+</g>
+</g>
+<!-- XGDPTN -->
+<g id="node13" class="node">
+<title>XGDPTN</title>
+<g id="a_node13"><a xlink:title="Potential GDP, current $
+FRML  &lt;&gt; XGDPTN = XGDPTN_A+XGDPTN_AERR+ (.01*PGDP*XGDPT)  $">
+<polygon fill="#63b8ff" stroke="black" points="978,-383 773,-383 773,-347 978,-347 978,-383"/>
+<text text-anchor="start" x="779.5" y="-360.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDPTN:Potential GDP, current $</text>
+</a>
+</g>
+</g>
+<!-- PXB -->
+<g id="node14" class="node">
+<title>PXB</title>
+<g id="a_node14"><a xlink:title="Price index for business output
+FRML  &lt;&gt; PXB = PXB_A+PXB_AERR+ (UPXB*PGDP)  $">
+<polygon fill="#63b8ff" stroke="black" points="981,-329 770,-329 770,-293 981,-293 981,-329"/>
+<text text-anchor="start" x="776.5" y="-306.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PXB:Price index for business output</text>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;FNIN -->
+<g id="edge19" class="edge">
+<title>PGDP-&gt;FNIN</title>
+<g id="a_edge19"><a xlink:href="bogus" xlink:title=" PGDP -&gt; FNIN Min. att. -16%  max: 13%">
+<path fill="none" stroke="black" stroke-width="1.58" d="M461.11,-464.06C510.07,-475.64 576.1,-490.27 635,-500 651.57,-502.74 668.82,-505.28 686.14,-507.62"/>
+<polygon fill="black" stroke="black" stroke-width="1.58" points="685.97,-511.13 696.35,-508.98 686.9,-504.19 685.97,-511.13"/>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;XBN -->
+<g id="edge1" class="edge">
+<title>PGDP-&gt;XBN</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title=" PGDP -&gt; XBN Min. att. -681%  max: 183%">
+<path fill="none" stroke="black" stroke-width="8" d="M466.3,-464C509.72,-477.3 562.2,-499.26 599,-534 625.6,-559.11 605.13,-586.89 635,-608 660.83,-626.25 692.27,-636.08 723.78,-640.86"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="723.15,-647.84 734,-642.24 725.03,-633.97 723.15,-647.84"/>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;PIGDP -->
+<g id="edge12" class="edge">
+<title>PGDP-&gt;PIGDP</title>
+<g id="a_edge12"><a xlink:href="bogus" xlink:title=" PGDP -&gt; PIGDP Min. att. 100%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M479.22,-451.06C563.12,-455.72 687.29,-462.61 774,-467.42"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="773.75,-474.42 784.12,-467.98 774.52,-460.44 773.75,-474.42"/>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;XGDIN -->
+<g id="edge5" class="edge">
+<title>PGDP-&gt;XGDIN</title>
+<g id="a_edge5"><a xlink:href="bogus" xlink:title=" PGDP -&gt; XGDIN Min. att. -198%  max: 196%">
+<path fill="none" stroke="black" stroke-width="8" d="M479.22,-440.94C553.51,-436.81 659.39,-430.94 742.87,-426.31"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="743.34,-433.29 752.93,-425.75 742.56,-419.31 743.34,-433.29"/>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;XGDPTN -->
+<g id="edge7" class="edge">
+<title>PGDP-&gt;XGDPTN</title>
+<g id="a_edge7"><a xlink:href="bogus" xlink:title=" PGDP -&gt; XGDPTN Min. att. -10595%  max: 1487%">
+<path fill="none" stroke="black" stroke-width="8" d="M479.14,-444.55C517.31,-441.37 561.44,-434.24 599,-419 617.53,-411.48 616.41,-399.38 635,-392 674.97,-376.13 721.45,-368.65 762.77,-365.39"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="763.4,-372.36 772.88,-364.66 762.4,-358.4 763.4,-372.36"/>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;PXB -->
+<g id="edge16" class="edge">
+<title>PGDP-&gt;PXB</title>
+<g id="a_edge16"><a xlink:href="bogus" xlink:title=" PGDP -&gt; PXB Min. att. 100%  max: 100%">
+<path fill="none" stroke="black" stroke-width="8" d="M479.04,-453.52C519.29,-452.31 565.08,-444.25 599,-419 630.6,-395.48 603.22,-361.29 635,-338 670.39,-312.07 716.96,-302.85 759.62,-301"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="760.01,-307.99 769.8,-300.69 759.59,-294 760.01,-307.99"/>
+</a>
+</g>
+</g>
+<!-- GTN -->
+<g id="node20" class="node">
+<title>GTN</title>
+<g id="a_node20"><a xlink:title="Federal government net transfer payments, current $
+FRML &lt;Z&gt; GTN = GTN_A+GTN_AERR+ (.01*PGDP*GTR)  $">
+<polygon fill="#63b8ff" stroke="black" points="1041,-275 710,-275 710,-239 1041,-239 1041,-275"/>
+<text text-anchor="start" x="716.5" y="-252.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">GTN:Federal government net transfer payments, current $</text>
+</a>
+</g>
+</g>
+<!-- PGDP&#45;&gt;GTN -->
+<g id="edge13" class="edge">
+<title>PGDP-&gt;GTN</title>
+<g id="a_edge13"><a xlink:href="bogus" xlink:title=" PGDP -&gt; GTN Min. att. -7725%  max: 2555%">
+<path fill="none" stroke="black" stroke-width="8" d="M479.1,-455.92C520.21,-455.43 566.69,-447.27 599,-419 645.74,-378.11 587.96,-324.53 635,-284 653.53,-268.04 676.08,-257.95 699.85,-251.9"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="701.57,-258.69 709.74,-249.62 698.42,-245.05 701.57,-258.69"/>
+</a>
+</g>
+</g>
+</g>
+</svg>

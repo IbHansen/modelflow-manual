@@ -1,0 +1,1336 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>16. Onboard all models defined in .wf1 files &#8212; Some models in Python with ModelFlow</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="17. Normalizing when onboarding eviews models" href="Normalizing%20when%20onboarding%20eviews.html" />
+    <link rel="prev" title="15. Onboard a model defined in a .wf1 file" href="onboard%20one%20model%20from%20%20wf1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Some models in Python with ModelFlow</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model, solutions and Modelflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/intro/model%20and%20solution.html">
+   1. What is a Model in ModelFlow ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/intro/Example%20Solow.html">
+   3. Example Solow model
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python and pandas stuff
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/Intro_Jupyter_notebook.html">
+   4. Introduction to the Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/pandas/dataframes.html">
+   5. Introduction to Pandas dataframes
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Updating variables
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../update/model%20update.html">
+   6. Update, modifying series in a dataframe using modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../update/extending_dataframes.html">
+   7. Extend Pandas dataframes with ModelFLow capabilities.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  A small demo model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../smallmodel/modelstart.html">
+   8. Create a small model from scratch and save it
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../smallmodel/modelstart%20export%20up.html">
+   9. Experiment: Export up
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Make experiments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../experiments/create_experiment.html">
+   10. Create an experiment, simulate it and access results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../experiments/create_save_scenarios.html">
+   12. Create many scenarios, simulate them  and access results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../experiments/Standard%20experiment%20simple.html">
+   13. A experiment using Taxes on Goods and Services
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Keept experiments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../keep/Create%20and%20modify%20charts%20with%20keep_plot.html">
+   14. Load a model and data inclusive the keept scenarios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Onboarding MFMod models from .wf1
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="onboard%20one%20model%20from%20%20wf1.html">
+   15. Onboard a model defined in a .wf1 file
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   16. Onboard all models  defined in .wf1 files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Normalizing%20when%20onboarding%20eviews.html">
+   17. Normalizing when onboarding  eviews models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  modifying models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../fixing/Fixing%20variables.html">
+   18. Fixing the value of variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../modifymodel/create_real_model.html">
+   19. Modified equation to to keep real tax rates
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/modelflow_features.html">
+   21. Useful model instance properties and methods
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../structure/Logical_structure.html">
+   22. Logical structure and dependencies.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Attribution
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../attribution/Attribution%20background.html">
+   23. Attribution
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Target and instruments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../targetinstruments/One%20target%20one%20instrument%20with%203%20instrument%20variables.html">
+   24. One target one instrument with 3 instrument variables
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Specification
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../notebooks/intro/model%20specification.html">
+   25. Specification of models (introduction)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../optimization/Optimize_simpel.html">
+   26. Mean variance optimization
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../litterature.html">
+   27. Litterature
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/howto/onboard/eviews/onboard many models from wf1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/howto/onboard/eviews/onboard many models from wf1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../../_sources/content/howto/onboard/eviews/onboard many models from wf1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-potential-files">
+   16.1. List potential files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-specific-transformations">
+   16.2. Model specific transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transform-all-wf1-files-in-the-folder">
+   16.3. Transform all wf1 files in the folder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-all-the-models">
+   16.4. Check all the models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-models">
+   16.5. Run the models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-some-names-in-the-namespace">
+   16.6. Make some names in the namespace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-here-testing-will-be-deleted">
+   16.7. From here testing - will be deleted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-create-a-list-of-all-variable-names">
+   16.8. Lets create a list of all variable names
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#government-consumption">
+     16.8.1. Government consumption
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#government-investment">
+     16.8.2. Government investment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Onboard all models  defined in .wf1 files</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-potential-files">
+   16.1. List potential files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-specific-transformations">
+   16.2. Model specific transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transform-all-wf1-files-in-the-folder">
+   16.3. Transform all wf1 files in the folder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-all-the-models">
+   16.4. Check all the models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-models">
+   16.5. Run the models
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-some-names-in-the-namespace">
+   16.6. Make some names in the namespace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-here-testing-will-be-deleted">
+   16.7. From here testing - will be deleted
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-create-a-list-of-all-variable-names">
+   16.8. Lets create a list of all variable names
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#government-consumption">
+     16.8.1. Government consumption
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#government-investment">
+     16.8.2. Government investment
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="onboard-all-models-defined-in-wf1-files">
+<h1><span class="section-number">16. </span>Onboard all models  defined in .wf1 files<a class="headerlink" href="#onboard-all-models-defined-in-wf1-files" title="Permalink to this headline">#</a></h1>
+<p>This notebook takes all .wf1 workfile from the folder wfs\ and transform the models  it to a modelflow model.<br></p>
+<p>The overall process is performed in a Dataclass named:<strong>GrapWfModel</strong><br>
+Close study of this class can be rewarding, but is outside the need of most users.<br>
+The overall structure is: Onboard all model defined in a .wf1 file</p>
+<p>The overall structure is:</p>
+<p>Eviews is started and the wf1 file is loaded
+Some transformations are performed on data.
+The model is unlinked
+The workspace is saved as a wf2 file. Same name with _modelflow appended</p>
+<ul class="simple">
+<li><p>Eviews is closed</p></li>
+<li><p>The wf2 file is read as a json file.</p></li>
+<li><p>Relevant objects are extracted.</p></li>
+<li><p>The MFMSA variable is extracted, to be saved in the dumpfile.</p></li>
+<li><p>The equations are transformed and normalized to modelflow format and classified into identities and stochastic</p></li>
+<li><p>Stochastic equations are enriched by add_factor and fixing terms (dummy + fixing value)</p></li>
+<li><p>For Stochastic equations new fitted variables are generated - without add add_factors and dummies.</p></li>
+<li><p>A model to generate fitted variables is created</p></li>
+<li><p>A model to generate add_factors is created.</p></li>
+<li><p>A model encompassing the original equations, the model for fitted variables and for add_factors is created.</p></li>
+<li><p>The data series and scalars are shoveled into a Pandas dataframe</p></li>
+<li><p>Some special series are generated as the expression can not be incorporated into modelflow model specifications</p></li>
+<li><p>The model for fitted values is simulated in the specified timespan</p></li>
+<li><p>The model for add_factors is simulated in the timespan set in MFMSA</p></li>
+<li><p>The data descriptions are extracted into a dictionary.</p></li>
+<li><p>Data descriptions for dummies, fixed values, fitted values and add_factors are derived.</p></li>
+<li><p>Now we have a model and a dataframe with all variables which are needed. b The GrapWfModel instance in general keeps most of the steps so the developer can inspect the the different steps.</p></li>
+</ul>
+<p>The GrapWfModel instance in general keeps most of the steps so the developer can inspect the the different steps.</p>
+<ul class="simple">
+<li><p>Eviews has to be installed</p></li>
+<li><p>pyevies has to be installed</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">modelclass</span> <span class="kn">import</span> <span class="n">model</span> 
+<span class="kn">from</span> <span class="nn">modelgrabwf2</span> <span class="kn">import</span> <span class="n">GrabWfModel</span>
+<span class="n">model</span><span class="o">.</span><span class="n">widescreen</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">scroll_off</span><span class="p">()</span>
+<span class="n">latex</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<style>
+    div#notebook-container    { width: 95%; }
+    div#menubar-container     { width: 65%; }
+    div#maintoolbar-container { width: 99%; }
+</style>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="o">%</span><span class="k">load_ext</span> autoreload
+ <span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+</div>
+<section id="list-potential-files">
+<h2><span class="section-number">16.1. </span>List potential files<a class="headerlink" href="#list-potential-files" title="Permalink to this headline">#</a></h2>
+<p>The workfiles are located in the <code class="docutils literal notranslate"><span class="pre">wfs</span></code> folder. <br>
+The <a class="reference external" href="https://docs.python.org/3/library/pathlib.html">pathlib.Path</a> class is used to find all wf1 files</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filedict</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="o">.</span><span class="n">stem</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;wfs&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.wf1&#39;</span><span class="p">)}</span>
+<span class="k">for</span> <span class="n">modelname</span><span class="p">,</span><span class="n">filename</span> <span class="ow">in</span> <span class="n">filedict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The model and date for </span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1"> is located in this workfile:</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model and date for ago is located in this workfile:wfs\agosoln.wf1
+The model and date for mda is located in this workfile:wfs\MDAsoln.wf1
+The model and date for pak is located in this workfile:wfs\PAKSoln.wf1
+The model and date for per is located in this workfile:wfs\PERMOD_damage_asFactor20220322.wf1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-specific-transformations">
+<h2><span class="section-number">16.2. </span>Model specific transformations<a class="headerlink" href="#model-specific-transformations" title="Permalink to this headline">#</a></h2>
+<p>Not all Eviews equations has a direct counterpart in modelflow.<br>
+To handle that two types of transformations can be provided for a specific model.</p>
+<ul class="simple">
+<li><p><strong>eviews_run_lines</strong> which specifies a list of Eviews command lines to be run. Typical to make some transformation of data.</p></li>
+<li><p><strong>country_trans</strong> which specifies a list of replacements to be done to the Eviews formulas before they are processed.</p></li>
+</ul>
+<p>As a convention the variables like this &lt;modelname&gt;_eviews_run_lines and <modelname>_trans</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pak_trans</span> <span class="o">=</span> <span class="k">lambda</span> <span class="nb">input</span> <span class="p">:</span> <span class="nb">input</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;- 01*D(&#39;</span><span class="p">,</span><span class="s1">&#39;-1*D(&#39;</span><span class="p">)</span>   
+
+<span class="n">ago_trans</span> <span class="o">=</span> <span class="k">lambda</span>  <span class="nb">input</span> <span class="p">:</span> <span class="nb">input</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;@MEAN(AGOBNCABFUNDCD/AGONYGDPMKTPCD,&quot;2000 2020&quot;)&#39;</span><span class="p">,</span><span class="s1">&#39;MEAN_AGOBNCABFUNDCD_DIV_AGONYGDPMKTPCD&#39;</span><span class="p">)</span> 
+<span class="n">ago_eviews_run_lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;smpl @ALL&#39;</span><span class="p">,</span><span class="s1">&#39;series MEAN_AGOBNCABFUNDCD_DIV_AGONYGDPMKTPCD = @MEAN(AGOBNCABFUNDCD/AGONYGDPMKTPCD,&quot;2000 2020&quot;)&#39;</span><span class="p">]</span>
+
+<span class="n">mda_trans</span> <span class="o">=</span> <span class="k">lambda</span> <span class="nb">input</span><span class="p">:</span> <span class="nb">input</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_MDAsbbrev.@coef(2)&#39;</span><span class="p">,</span><span class="s1">&#39;_MDASBBREV_at_COEF_2&#39;</span><span class="p">)</span>         
+<span class="n">mda_eviews_run_lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Scalar _MDASBBREV_at_COEF_2 = _MDASBBREV.@COEF(+2)&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="transform-all-wf1-files-in-the-folder">
+<h2><span class="section-number">16.3. </span>Transform all wf1 files in the folder<a class="headerlink" href="#transform-all-wf1-files-in-the-folder" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allmodels</span> <span class="o">=</span> <span class="p">{</span><span class="n">modelname</span><span class="p">:</span> 
+     <span class="n">GrabWfModel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> 
+                        <span class="n">eviews_run_lines</span><span class="o">=</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">_eviews_run_lines&#39;</span><span class="p">,[]),</span>
+                        <span class="n">country_trans</span>    <span class="o">=</span>   <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">_trans&#39;</span>   <span class="p">,</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">[:]),</span>
+                        <span class="n">make_fitted</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>        <span class="c1"># make equatios for fitted values of stocastic equations </span>
+                        <span class="n">do_add_factor_calc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>   <span class="c1"># Calculate the add factors which makes the stocastic equations match    </span>
+                        <span class="n">fit_start</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>          <span class="c1"># Start of calculation of fittet model in baseline (to have some historic values) </span>
+                        <span class="n">fit_end</span>   <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>           <span class="c1"># end of calc for fittted model, if None taken from mdmfsa options  </span>
+                        <span class="n">disable_progress</span> <span class="o">=</span><span class="kc">True</span>
+                        <span class="p">)</span> 
+                  <span class="k">for</span> <span class="n">modelname</span><span class="p">,</span><span class="n">filename</span> <span class="ow">in</span> <span class="n">filedict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading c:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\agosoln.wf1
+Assummed model name: AGO
+Eviewsline to run :smpl @ALL
+Eviewsline to run :series MEAN_AGOBNCABFUNDCD_DIV_AGONYGDPMKTPCD = @MEAN(AGOBNCABFUNDCD/AGONYGDPMKTPCD,&quot;2000 2020&quot;)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model: AGO is unlinked 
+Writing C:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\agosoln_modelflow.wf2
+Model name: AGO
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing the model:AGO
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testmodel calculated  
+Calculation of add factors for AGO calculated  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading c:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\MDAsoln.wf1
+Assummed model name: MDA
+Eviewsline to run :Scalar _MDASBBREV_at_COEF_2 = _MDASBBREV.@COEF(+2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model: MDA is unlinked 
+Writing C:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\MDAsoln_modelflow.wf2
+Model name: MDA
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing the model:MDA
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated coifficients are substituted
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testmodel calculated  
+Calculation of add factors for MDA calculated  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading c:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\PAKSoln.wf1
+Assummed model name: PAK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model: PAK is unlinked 
+Writing C:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\PAKSoln_modelflow.wf2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model name: PAK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing the model:PAK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testmodel calculated  
+Calculation of add factors for PAK calculated  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading c:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\PERMOD_damage_asFactor20220322.wf1
+Assummed model name: PER
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model: PER is unlinked 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing C:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\PERMOD_damage_asFactor20220322_modelflow.wf2
+Model name: PER
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing the model:PER
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>testmodel calculated  
+Calculation of add factors for PER calculated  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-all-the-models">
+<h2><span class="section-number">16.4. </span>Check all the models<a class="headerlink" href="#check-all-the-models" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">modelname</span><span class="p">,</span><span class="n">cmodel</span> <span class="ow">in</span> <span class="n">allmodels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">cmodel</span><span class="o">.</span><span class="n">test_model</span><span class="p">(</span><span class="n">cmodel</span><span class="o">.</span><span class="n">start</span><span class="p">,</span><span class="n">cmodel</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">maxerr</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">showall</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>   <span class="c1"># tol determins the max acceptable absolute difference </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGO calculated  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chekking residuals for AGO 2016 to 2060
+
+Variable with residuals above threshold
+AGONECONPRVTCN                        , Max difference:  2861.03139496 Max Pct    0.0000106457% It is number    44 in the solveorder and error number 1
+AGONEGDIFGOVCN                        , Max difference:    21.01837921 Max Pct    0.0000013130% It is number    55 in the solveorder and error number 2
+AGONEGDIFTOTCN                        , Max difference:   177.46922302 Max Pct    0.0000007316% It is number    58 in the solveorder and error number 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGONEEXPNOILCN                        , Max difference:    34.74809837 Max Pct    0.0000022911% It is number    63 in the solveorder and error number 4
+AGONEEXPGOILCN                        , Max difference:   544.94689941 Max Pct    0.0000026926% It is number    66 in the solveorder and error number 5
+AGONEEXPGNFSCN                        , Max difference:   504.25928497 Max Pct    0.0000023486% It is number    67 in the solveorder and error number 6
+AGONEIMPGNFSCN                        , Max difference:  1101.58077240 Max Pct    0.0000111348% It is number    71 in the solveorder and error number 7
+AGONYYWBTOTLCN                        , Max difference:   286.10862160 Max Pct    0.0000091250% It is number    80 in the solveorder and error number 8
+AGOGGREVTOTLCN                        , Max difference:   136.30834198 Max Pct    0.0000014056% It is number    81 in the solveorder and error number 9
+AGOGGEXPINTPCN                        , Max difference:    99.77352953 Max Pct    0.0000082146% It is number    86 in the solveorder and error number 10
+AGONVGDPFCSTCN                        , Max difference:   455.67959595 Max Pct    0.0000009309% It is number    93 in the solveorder and error number 11
+AGONYTAXNINDKN                        , Max difference:     1.37211440 Max Pct    0.0014202837% It is number    95 in the solveorder and error number 12
+AGONVAGRTOTLCN                        , Max difference:     5.06173030 Max Pct    0.0000057479% It is number    96 in the solveorder and error number 13
+AGONVINDMINGCN                        , Max difference:    89.14881706 Max Pct    0.0000037522% It is number    97 in the solveorder and error number 14
+AGONVSRVPUBLCN                        , Max difference:   597.87203789 Max Pct    0.0000183998% It is number    98 in the solveorder and error number 15
+AGONVGDPOTHRCN                        , Max difference:   355.96192932 Max Pct    0.0000005341% It is number    99 in the solveorder and error number 16
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGONYGDPMKTPCN                        , Max difference:   296.17025757 Max Pct    0.0000012217% It is number   147 in the solveorder and error number 17
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MDA calculated  
+
+Chekking residuals for MDA 2014 to 2025
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAK calculated  
+
+Chekking residuals for PAK 2015 to 2100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable with residuals above threshold
+PAKNYYWBTOTLCN              , Max difference:    76.62465858 Max Pct    0.0000042560% It is number    69 in the solveorder and error number 1
+PAKNECONPRVTCN              , Max difference:    35.41133165 Max Pct    0.0000017794% It is number    78 in the solveorder and error number 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PER calculated  
+
+Chekking residuals for PER 2016 to 2300
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="run-the-models">
+<h2><span class="section-number">16.5. </span>Run the models<a class="headerlink" href="#run-the-models" title="Permalink to this headline">#</a></h2>
+<p>Some models need a different alfa (dampening factor in Gauss iterations) in order to solve.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alfadict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;ago&#39;</span><span class="p">:</span><span class="mf">0.7</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">modelname</span><span class="p">,</span><span class="n">cmodel</span> <span class="ow">in</span> <span class="n">allmodels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span><span class="p">(</span><span class="n">cmodel</span><span class="o">.</span><span class="n">base_input</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="n">alfadict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">modelname</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+    <span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span><span class="o">.</span><span class="n">modeldump</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;modelflowdumps/</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">.pcim&#39;</span><span class="p">)</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1"> run and saved&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ago run and saved
+mda run and saved
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pak run and saved
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>per run and saved
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!dir modelflowdumps\
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Volume in drive C has no label.
+ Volume Serial Number is C2DB-095E
+
+ Directory of c:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\modelflowdumps
+
+10-01-2023  21:48    &lt;DIR&gt;          .
+07-02-2023  17:26    &lt;DIR&gt;          ..
+08-02-2023  10:31         1.434.224 ago.pcim
+08-02-2023  10:31         1.029.644 mda.pcim
+08-02-2023  10:31         3.386.734 pak.pcim
+08-02-2023  10:31        11.980.064 per.pcim
+               4 File(s)     17.830.666 bytes
+               2 Dir(s)  731.739.594.752 bytes free
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="make-some-names-in-the-namespace">
+<h2><span class="section-number">16.6. </span>Make some names in the namespace<a class="headerlink" href="#make-some-names-in-the-namespace" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">modelname</span><span class="p">,</span><span class="n">cmodel</span> <span class="ow">in</span> <span class="n">allmodels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">thismodel</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;m</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">thisbaseline</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">_baseline&#39;</span>
+    <span class="n">thiscmodel</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">modelname</span><span class="si">}</span><span class="s1">_cmodel&#39;</span>
+    <span class="nb">globals</span><span class="p">()[</span><span class="n">thismodel</span><span class="p">]</span> <span class="o">=</span> <span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span>
+    <span class="nb">globals</span><span class="p">()[</span><span class="n">thisbaseline</span><span class="p">]</span><span class="o">=</span> <span class="n">cmodel</span><span class="o">.</span><span class="n">base_input</span> 
+    <span class="nb">globals</span><span class="p">()[</span><span class="n">thiscmodel</span><span class="p">]</span><span class="o">=</span> <span class="n">cmodel</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">thismodel</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="n">thisbaseline</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="n">thiscmodel</span><span class="si">}</span><span class="s1"> has been created&#39;</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mago, ago_baseline and ago_cmodel has been created
+mmda, mda_baseline and mda_cmodel has been created
+mpak, pak_baseline and pak_cmodel has been created
+mper, per_baseline and per_cmodel has been created
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thissilent</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mago</span><span class="p">(</span><span class="n">ago_baseline</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="n">thissilent</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mmda</span><span class="p">(</span><span class="n">mda_baseline</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="n">thissilent</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">pak_baseline</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="n">thissilent</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">mper</span><span class="p">(</span><span class="n">per_baseline</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="n">thissilent</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="from-here-testing-will-be-deleted">
+<h2><span class="section-number">16.7. </span>From here testing - will be deleted<a class="headerlink" href="#from-here-testing-will-be-deleted" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="lets-create-a-list-of-all-variable-names">
+<h2><span class="section-number">16.8. </span>Lets create a list of all variable names<a class="headerlink" href="#lets-create-a-list-of-all-variable-names" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allvar</span> <span class="o">=</span> <span class="p">[</span><span class="n">varname</span> <span class="k">for</span> <span class="n">cmodel</span>  <span class="ow">in</span> <span class="n">allmodels</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span><span class="o">.</span><span class="n">allvar</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allvar</span> <span class="o">=</span> <span class="p">[</span><span class="n">varname</span> <span class="k">for</span> <span class="n">thismodel</span> <span class="ow">in</span> <span class="p">[</span><span class="n">mago</span><span class="p">,</span><span class="n">mmda</span><span class="p">,</span><span class="n">mpak</span><span class="p">,</span><span class="n">mper</span><span class="p">]</span> <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">thismodel</span><span class="o">.</span><span class="n">allvar</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allvar_dict</span>  <span class="o">=</span> <span class="p">{</span><span class="n">varname</span><span class="p">:</span><span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span><span class="o">.</span><span class="n">var_description</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span> <span class="k">for</span> <span class="n">cmodel</span>  <span class="ow">in</span> <span class="n">allmodels</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">cmodel</span><span class="o">.</span><span class="n">mmodel</span><span class="o">.</span><span class="n">allvar</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">allvar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2871
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fnmatch</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fnmatch</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">allvar</span><span class="p">,</span> <span class="s1">&#39;*NECONGOVTCN&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AGONECONGOVTCN&#39;, &#39;MDANECONGOVTCN&#39;, &#39;PAKNECONGOVTCN&#39;, &#39;PERNECONGOVTCN&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">allvar</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2762
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getnames</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span><span class="n">allvar</span><span class="o">=</span><span class="n">allvar</span><span class="p">,</span><span class="n">allvar_dict</span><span class="o">=</span><span class="n">allvar_dict</span><span class="p">):</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[(</span><span class="n">varname</span><span class="p">,</span><span class="n">allvar_dict</span><span class="p">[</span><span class="n">varname</span><span class="p">])</span> <span class="k">for</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">allvar_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">pat</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">selected</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="government-consumption">
+<h3><span class="section-number">16.8.1. </span>Government consumption<a class="headerlink" href="#government-consumption" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getnames</span><span class="p">(</span><span class="s1">&#39;*NECONGOVTCN&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGONECONGOVTCN&#39;, &#39;Nominal Govt Cons&#39;)
+(&#39;MDANECONGOVTCN&#39;, &#39;GDP: Final Consumption: Public Administration LCU thousands&#39;)
+(&#39;PAKNECONGOVTCN&#39;, &#39;Govt. Cons., LCU mn&#39;)
+(&#39;PERNECONGOVTCN&#39;, &#39;PERNECONGOVTCN&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="government-investment">
+<h3><span class="section-number">16.8.2. </span>Government investment<a class="headerlink" href="#government-investment" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getnames</span><span class="p">(</span><span class="s1">&#39;*NEGDIFGOVCN&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGONEGDIFGOVCN&#39;, &#39;AGONEGDIFGOVCN&#39;)
+(&#39;MDANEGDIFGOVCN&#39;, &#39;MDANEGDIFGOVCN&#39;)
+(&#39;PAKNEGDIFGOVCN&#39;, &#39;Public Fixed Domestic Inv., LCU mn&#39;)
+(&#39;PERNEGDIFGOVCN&#39;, &#39;PERNEGDIFGOVCN&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getnames</span><span class="p">(</span><span class="s1">&#39;*LMEMPTOTLCN*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;PAKLMEMPTOTLCN_X&#39;, &#39;Fix value:Employment&#39;)
+(&#39;PAKLMEMPTOTLCN&#39;, &#39;Employment&#39;)
+(&#39;PAKLMEMPTOTLCN_FITTED&#39;, &#39;Fitted  value:Employment&#39;)
+(&#39;PAKLMEMPTOTLCN_D&#39;, &#39;Fix dummy:Employment&#39;)
+(&#39;PAKLMEMPTOTLCN_A&#39;, &#39;Add factor:Employment&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">getnames</span><span class="p">(</span><span class="s1">&#39;*GGEXPWAGECN*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGOGGEXPWAGECN_A&#39;, &#39;Add factor:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN&#39;, &#39;Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_VALUE_2019&#39;, &#39;AGOGGEXPWAGECN_VALUE_2019&#39;)
+(&#39;AGOGGEXPWAGECN_D&#39;, &#39;Fix dummy:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_X&#39;, &#39;Fix value:Wages and Salaries&#39;)
+(&#39;MDAGGEXPWAGECN_A&#39;, &#39;Add factor:Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;MDAGGEXPWAGECN_D&#39;, &#39;Fix dummy:Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;MDAGGEXPWAGECN_X&#39;, &#39;Fix value:Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;MDAGGEXPWAGECN&#39;, &#39;Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;MDAGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;PERGGEXPWAGECN_X&#39;, &#39;Fix value:PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN&#39;, &#39;PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN_D&#39;, &#39;Fix dummy:PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN_A&#39;, &#39;Add factor:PERGGEXPWAGECN&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">PAKBXFSTREMTCD</span><span class="o">.</span><span class="n">frml</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Endogeneous: PAKBXFSTREMTCD: Exp., Remittances (BOP), US$ mn
+Formular: FRML &lt;Z,EXO&gt; PAKBXFSTREMTCD = (PAKBXFSTREMTCD_A*PAKNYGDPMKTPCD+PAKNYGDPMKTPCD* (0.053028373687723) ) * (1-PAKBXFSTREMTCD_D)+ PAKBXFSTREMTCD_X*PAKBXFSTREMTCD_D  $
+
+PAKBXFSTREMTCD  : Exp., Remittances (BOP), US$ mn
+PAKBXFSTREMTCD_A: Add factor:Exp., Remittances (BOP), US$ mn
+PAKBXFSTREMTCD_D: Fix dummy:Exp., Remittances (BOP), US$ mn
+PAKBXFSTREMTCD_X: Fix value:Exp., Remittances (BOP), US$ mn
+PAKNYGDPMKTPCD  : 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">PAKGGEXPGNFSCN</span><span class="o">.</span><span class="n">frml</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Endogeneous: PAKGGEXPGNFSCN: General government expenditure on goods and services (millions lcu)
+Formular: FRML &lt;Z,EXO&gt; PAKGGEXPGNFSCN = (0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012 + PAKGGEXPGNFSCN_A)* (1-PAKGGEXPGNFSCN_D)+ PAKGGEXPGNFSCN_X*PAKGGEXPGNFSCN_D  $
+
+PAKGGEXPGNFSCN  : General government expenditure on goods and services (millions lcu)
+DURING_2012     : 
+PAKGGEXPGNFSCN_A: Add factor:General government expenditure on goods and services (millions lcu)
+PAKGGEXPGNFSCN_D: Fix dummy:General government expenditure on goods and services (millions lcu)
+PAKGGEXPGNFSCN_X: Fix value:General government expenditure on goods and services (millions lcu)
+PAKGGEXPINTPCN  : General government interest payments on public debt (millions lcu)
+PAKGGREVTOTLCN  : General government revenues, total (millions lcu)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###  mpak.modeldash(&#39;PAKNECONGOVTCN&#39;,jupyter=1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allmodels</span><span class="p">[</span><span class="s1">&#39;pak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">all_frml_dict</span><span class="p">[</span><span class="s1">&#39;PAKGGEXPGNFSCN&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Endo_var        : PAKGGEXPGNFSCN
+Original        : PAKGGEXPGNFSCN=0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012
+Preprocessed    : PAKGGEXPGNFSCN=0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012
+Normalized      : PAKGGEXPGNFSCN = (0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012 + PAKGGEXPGNFSCN_A)* (1-PAKGGEXPGNFSCN_D)+ PAKGGEXPGNFSCN_X*PAKGGEXPGNFSCN_D 
+Calc_add_factor : PAKGGEXPGNFSCN_A = (PAKGGEXPGNFSCN) - (0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012)
+Fitted          : PAKGGEXPGNFSCN_FITTED = 0.3*PAKGGEXPGNFSCN(-1)+(1-0.3)*(0.80*(PAKGGREVTOTLCN-PAKGGEXPINTPCN(-0)))+505277.259999999*DURING_2012
+Eviews          : PAKGGEXPGNFSCN = 0.3*PAKGGEXPGNFSCN( - 1) + (1 - 0.3)*(0.80*(PAKGGREVTOTLCN - PAKGGEXPINTPCN( - 0))) + 505277.259999999*@DURING(&quot;2012&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allmodels</span><span class="p">[</span><span class="s1">&#39;ago&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">all_frml_dict</span><span class="p">[</span><span class="s1">&#39;AGONECONGOVTCN&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Endo_var        : AGONECONGOVTCN
+Original        : DIFF(AGONECONGOVTCN)=DIFF(AGOGGEXPGNFSCN+AGOGGEXPWAGECN)*AGONECONGOVTCOV_/100+14591.8357729705*DUMH
+Preprocessed    : ((AGONECONGOVTCN)-(AGONECONGOVTCN(-1)))=((AGOGGEXPGNFSCN+AGOGGEXPWAGECN)-(AGOGGEXPGNFSCN(-1)+AGOGGEXPWAGECN(-1)))*AGONECONGOVTCOV_/100+14591.8357729705*DUMH
+Normalized      : AGONECONGOVTCN = (AGONECONGOVTCN_A+ (((AGOGGEXPGNFSCN+AGOGGEXPWAGECN)-(AGOGGEXPGNFSCN(-1)+AGOGGEXPWAGECN(-1)))*AGONECONGOVTCOV_/100+14591.8357729705*DUMH) +AGONECONGOVTCN(-1)) * (1-AGONECONGOVTCN_D)+ AGONECONGOVTCN_X*AGONECONGOVTCN_D 
+Calc_add_factor : AGONECONGOVTCN_A = AGONECONGOVTCN- ((((AGOGGEXPGNFSCN+AGOGGEXPWAGECN)-(AGOGGEXPGNFSCN(-1)+AGOGGEXPWAGECN(-1)))*AGONECONGOVTCOV_/100+14591.8357729705*DUMH)) -AGONECONGOVTCN(-1)
+Fitted          : AGONECONGOVTCN_FITTED =  (((AGOGGEXPGNFSCN+AGOGGEXPWAGECN)-(AGOGGEXPGNFSCN(-1)+AGOGGEXPWAGECN(-1)))*AGONECONGOVTCOV_/100+14591.8357729705*DUMH) +AGONECONGOVTCN(-1)
+Eviews          : D(AGONECONGOVTCN) = D(AGOGGEXPGNFSCN + AGOGGEXPWAGECN)*AGONECONGOVTCOV_/100 + 14591.8357729705*DUMH
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">allmodels</span><span class="p">[</span><span class="s1">&#39;pak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mmodel</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;
+Model name                              :                  PAK 
+Model structure                         :         Simultaneous 
+Number of variables                     :                  841 
+Number of exogeneous  variables         :                  463 
+Number of endogeneous variables         :                  378 
+&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content\howto\onboard\eviews"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="onboard%20one%20model%20from%20%20wf1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">15. </span>Onboard a model defined in a .wf1 file</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Normalizing%20when%20onboarding%20eviews.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">17. </span>Normalizing when onboarding  eviews models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ib Hansen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

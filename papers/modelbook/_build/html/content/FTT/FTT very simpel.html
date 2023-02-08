@@ -1,0 +1,1108 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. A stylized FTT model. Specified in Latex &#8212; MFMod models in Python with ModelFlow</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="7. FTT model - goal seeking" href="FTT%20targets%20instruments.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">MFMod models in Python with ModelFlow</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Federal Reserve Board - US model
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Federal%20Reserve%20Board%20-%20US%20model/FRBUS%20simple%20experiment.html">
+   1. FRB/US, a simple experiment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Federal%20Reserve%20Board%20-%20US%20model/FRBUS%2C%20Policy%20assumption%20scenarios.html">
+   2. FRB/US, scenarios with different policy assumptions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Federal%20Reserve%20Board%20-%20US%20model/FRBUS%20structure.html">
+   3. FRB/US, Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Federal%20Reserve%20Board%20-%20US%20model/FRBUS%20model%20consistent%20expectations-cef2021.html">
+   4. FRB/US, modelconsistent expectations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Future Technology Transformations (FTT) models
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FTT%20experiments%201.html">
+   5. FTT model - Some experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FTT%20model%20with%20limits.html">
+   6. FTT model with limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FTT%20targets%20instruments.html">
+   7. FTT model - goal seeking
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. A stylized FTT model. Specified in Latex
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/FTT/FTT very simpel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/IbHansen/modelflow-manual"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/modelbook/content/FTT/FTT very simpel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/modelbook/content/FTT/FTT very simpel.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-future-technology-transformations-ftt-model">
+   8.1. A Future Technology Transformations (FTT) model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelflow">
+   8.2. Modelflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-specify-a-model-in-latex">
+   8.3. Why specify a model in Latex?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-libraries">
+   8.4. Import libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-latex-script">
+   8.5. Write a latex script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-latexflow-cell-will-extract-the-equations-from-the-script">
+   8.6. the %%latexflow cell will extract the equations from the script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-text-will-render-like-this">
+   8.7. This text will render like this
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-latex-script-is-first-transpiled-to-a-template-model">
+   8.8. The latex script is first transpiled to a  template model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#then-the-template-model-is-expanded-to-a-business-language-model">
+   8.9. Then the template model is expanded to a Business language model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#and-we-can-inspect-the-structure">
+   8.10. And we can inspect the structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-some-mock-data">
+   8.11. Create some mock data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-values-for-the-shares">
+     8.11.1. Initial values for the shares.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameter-values">
+     8.11.2. Parameter values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combine-the-dataframe-to-one-which-can-be-solves">
+     8.11.3. Combine the dataframe to one which can be solves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-the-model">
+   8.12. Solve the model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-some-scenarios">
+   8.13. Create some scenarios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-gouping-of-variables-for-the-visualizer">
+   8.14. Create a gouping of variables for the visualizer
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A stylized FTT model. Specified in Latex</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-future-technology-transformations-ftt-model">
+   8.1. A Future Technology Transformations (FTT) model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelflow">
+   8.2. Modelflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-specify-a-model-in-latex">
+   8.3. Why specify a model in Latex?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-libraries">
+   8.4. Import libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-latex-script">
+   8.5. Write a latex script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-latexflow-cell-will-extract-the-equations-from-the-script">
+   8.6. the %%latexflow cell will extract the equations from the script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-text-will-render-like-this">
+   8.7. This text will render like this
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-latex-script-is-first-transpiled-to-a-template-model">
+   8.8. The latex script is first transpiled to a  template model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#then-the-template-model-is-expanded-to-a-business-language-model">
+   8.9. Then the template model is expanded to a Business language model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#and-we-can-inspect-the-structure">
+   8.10. And we can inspect the structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-some-mock-data">
+   8.11. Create some mock data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initial-values-for-the-shares">
+     8.11.1. Initial values for the shares.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parameter-values">
+     8.11.2. Parameter values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combine-the-dataframe-to-one-which-can-be-solves">
+     8.11.3. Combine the dataframe to one which can be solves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-the-model">
+   8.12. Solve the model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-some-scenarios">
+   8.13. Create some scenarios
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-gouping-of-variables-for-the-visualizer">
+   8.14. Create a gouping of variables for the visualizer
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-stylized-ftt-model-specified-in-latex">
+<h1><span class="section-number">8. </span>A stylized FTT model. Specified in Latex<a class="headerlink" href="#a-stylized-ftt-model-specified-in-latex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-future-technology-transformations-ftt-model">
+<h2><span class="section-number">8.1. </span>A Future Technology Transformations (FTT) model<a class="headerlink" href="#a-future-technology-transformations-ftt-model" title="Permalink to this headline">¶</a></h2>
+<p>Future Technology Transformations (FTT) is a framework for technology diffusion model based on simulation rather than optimization approach that is more commonly used. The FTT framework currently exists for power, road transport, steel and heating sectors</p>
+<p>Original paper:  <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0301421514004017">Mercure, J.-F. et al. The dynamics of technology diffusion and the impacts of climate policy instruments in the decarbonisation of the global electricity sector. Energy Policy 73, 686–700.</a></p>
+<p>The model below is a very simple version. The purpose is to show some of the properties and how to set up an model in Latex</p>
+</div>
+<div class="section" id="modelflow">
+<h2><span class="section-number">8.2. </span>Modelflow<a class="headerlink" href="#modelflow" title="Permalink to this headline">¶</a></h2>
+<p>For more information on modelflow please look <a class="reference external" href="https://ibhansen.github.io/mfbook/content/introduction.html">here</a></p>
+</div>
+<div class="section" id="why-specify-a-model-in-latex">
+<h2><span class="section-number">8.3. </span>Why specify a model in Latex?<a class="headerlink" href="#why-specify-a-model-in-latex" title="Permalink to this headline">¶</a></h2>
+<p>Sometime the <strong>implementation</strong> of a model in software don’t match the <strong>specification</strong> of the model in
+the text in which the model is presented. It can be a challenge to make sure that the specification is
+updated in order to reflect changes made in the implementation.</p>
+<p>By extracting the model from a Latex script which describes and specify the model, one can always be sure that simulations reflect the model as described in the paper.</p>
+<p>Also the author is forced to make a complete specification of the model, else it won’t run.</p>
+</div>
+<div class="section" id="import-libraries">
+<h2><span class="section-number">8.4. </span>Import libraries<a class="headerlink" href="#import-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This notebook will not render nice in Colab</p>
+<p>Because of limitations in Jupyterbook - which is used for creating this book - the latex input is input twice. That is not nessecary for use in an notebook.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span><span class="n">Markdown</span><span class="p">,</span><span class="n">Latex</span>
+
+
+<span class="kn">from</span> <span class="nn">modelclass</span> <span class="kn">import</span> <span class="n">model</span>
+<span class="kn">import</span> <span class="nn">modeljupytermagic</span>
+
+<span class="c1"># some useful stuf</span>
+<span class="n">model</span><span class="o">.</span><span class="n">widescreen</span><span class="p">()</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;display.precision&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<style>
+    div#notebook-container    { width: 95%; }
+    div#menubar-container     { width: 65%; }
+    div#maintoolbar-container { width: 99%; }
+</style>
+</div></div>
+</div>
+</div>
+<div class="section" id="write-a-latex-script">
+<h2><span class="section-number">8.5. </span>Write a latex script<a class="headerlink" href="#write-a-latex-script" title="Permalink to this headline">¶</a></h2>
+<p>The model consists of the equations and the lists</p>
+<p>The jupyter magic command <strong>%%latexflow</strong> will extract the model. then it will  transform the equations to <strong>ModelFlow</strong> equations and finaly it will create a modelflow <strong>model</strong> instance.</p>
+<p>In the following cell the modelinstance wil be called <strong>mftt</strong>. It will be able to solve the model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%latex</span>flow mftt  
+
+A very simple FTT model. 
+
+Two lists of technology  are defined: 
+    
+List <span class="s">$</span><span class="nb">i </span><span class="o">=</span><span class="nv">\{</span><span class="nb">t</span><span class="m">1</span><span class="nb">, t</span><span class="m">2</span><span class="nb">, t</span><span class="m">3</span><span class="nb">, t</span><span class="m">4</span><span class="nv">\}</span><span class="s">$</span>
+
+List <span class="s">$</span><span class="nb">j </span><span class="o">=</span><span class="nb"> </span><span class="nv">\{</span><span class="nb">t</span><span class="m">1</span><span class="nb">, t</span><span class="m">2</span><span class="nb">, t</span><span class="m">3</span><span class="nb">, t</span><span class="m">4</span><span class="nv">\}</span><span class="s">$</span>
+
+
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:SHARES2<span class="nb">}</span>
+<span class="k">\Delta</span> Share<span class="nb">^{</span>i<span class="nb">}</span> = <span class="k">\sum</span><span class="nb">_{</span>j<span class="nb">}</span>(Share<span class="nb">^{</span>i<span class="nb">}</span> <span class="k">\times</span> Share<span class="nb">^{</span>j<span class="nb">}</span> <span class="k">\times</span>
+                            (<span class="k">\underbrace</span><span class="nb">{</span>F<span class="nb">^{</span>i,j<span class="nb">}}_{</span>Preferences<span class="nb">}</span>/<span class="k">\underbrace</span><span class="nb">{</span><span class="k">\tau</span><span class="nb">^{</span>j<span class="nb">}}_{</span>Life expectancy<span class="nb">}</span>
+                             - F<span class="nb">^{</span>j,i<span class="nb">}</span>/<span class="k">\tau</span><span class="nb">^{</span>i<span class="nb">}</span>))
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:preferences<span class="nb">}</span>
+<span class="k">\underbrace</span><span class="nb">{</span>F<span class="nb">^{</span>i,j<span class="nb">}}_{</span>Preferences<span class="nb">}</span> = <span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>
+1+exp(
+    <span class="k">\frac</span><span class="nb">{</span>(C<span class="nb">^{</span>i<span class="nb">}</span>-C<span class="nb">^{</span>j<span class="nb">}</span>)<span class="nb">}{</span><span class="k">\sigma</span><span class="nb">^{</span>i,j<span class="nb">}}</span> )<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:sigma<span class="nb">}</span>
+<span class="k">\sigma</span><span class="nb">^{</span>i,j<span class="nb">}</span> = <span class="k">\sqrt</span><span class="nb">{</span><span class="k">\sigma</span><span class="nb">^{</span>i<span class="nb">}</span>**2 <span class="k">\times</span> <span class="k">\sigma</span><span class="nb">^{</span>j<span class="nb">}</span>**2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:UD<span class="nb">}</span>
+UsefulDemand<span class="nb">^{</span>i<span class="nb">}</span> = Share<span class="nb">^{</span>i<span class="nb">}</span> <span class="k">\times</span> UsefulDemand<span class="k">\_</span>total 
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:UD<span class="nb">_</span>total<span class="nb">}</span>
+UsefulDemand<span class="k">\_</span>total  = UsefulDemand<span class="k">\_</span>total<span class="nb">_{</span>t-1<span class="nb">}</span> <span class="k">\times</span> 
+(1+<span class="k">\frac</span><span class="nb">{</span>UsefulDemand<span class="k">\_</span>total<span class="k">\_</span>growth<span class="nb">}{</span>100<span class="nb">}</span>)
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+To check, that the shares add up to one. 
+
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>eq:check<span class="nb">_</span>shares<span class="nb">}</span>
+Share<span class="k">\_</span>total  = <span class="k">\sum</span><span class="nb">_{</span>i<span class="nb">}</span>(Share<span class="k">\_</span><span class="nb">{</span>i<span class="nb">}</span>)
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-latexflow-cell-will-extract-the-equations-from-the-script">
+<h2><span class="section-number">8.6. </span>the %%latexflow cell will extract the equations from the script<a class="headerlink" href="#the-latexflow-cell-will-extract-the-equations-from-the-script" title="Permalink to this headline">¶</a></h2>
+<p>and create a modelinstance which is named: <strong>mftt</strong></p>
+</div>
+<div class="section" id="this-text-will-render-like-this">
+<h2><span class="section-number">8.7. </span>This text will render like this<a class="headerlink" href="#this-text-will-render-like-this" title="Permalink to this headline">¶</a></h2>
+<p>A very simple FTT model.</p>
+<p>Two lists of technology  are defined:</p>
+<p>List <span class="math notranslate nohighlight">\(i =\{t1, t2, t3, t4\}\)</span></p>
+<p>List <span class="math notranslate nohighlight">\(j = \{t1, t2, t3, t4\}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-f9467283-cdf8-4672-9e68-f39de98b1837">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-f9467283-cdf8-4672-9e68-f39de98b1837" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:SHARES2}
+\Delta Share^{i} = \sum_{j}(Share^{i} \times Share^{j} \times
+                            (\underbrace{F^{i,j}}_{Preferences}/\underbrace{\tau^{j}}_{Life expectancy}
+                             - F^{j,i}/\tau^{i}))
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fb235bf2-95ec-4745-a723-9d988af0ba0e">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-fb235bf2-95ec-4745-a723-9d988af0ba0e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:preferences}
+\underbrace{F^{i,j}}_{Preferences} = \frac{1}{
+1+exp(
+    \frac{(C^{i}-C^{j})}{\sigma^{i,j}} )}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6724d58a-f698-4f9e-a1fb-1d54b653a578">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-6724d58a-f698-4f9e-a1fb-1d54b653a578" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:sigma}
+\sigma^{i,j} = \sqrt{\sigma^{i}**2 \times \sigma^{j}**2}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fad0ae05-295d-471d-b40a-5d23dac505d1">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-fad0ae05-295d-471d-b40a-5d23dac505d1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:UD}
+UsefulDemand^{i} = Share^{i} \times UsefulDemand\_total 
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d581f2ed-1214-4216-b4c9-a857720aa2f1">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-d581f2ed-1214-4216-b4c9-a857720aa2f1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:UD_total}
+UsefulDemand\_total  = UsefulDemand\_total_{t-1} \times 
+(1+\frac{UsefulDemand\_total\_growth}{100})
+\end{equation}\]</div>
+<p>To check, that the shares add up to one.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ccc1e39d-797b-46cc-b742-63aae9785a79">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-ccc1e39d-797b-46cc-b742-63aae9785a79" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\label{eq:check_shares}
+Share\_total  = \sum_{i}(Share\_{i})
+\end{equation}\]</div>
+</div>
+<div class="section" id="the-latex-script-is-first-transpiled-to-a-template-model">
+<h2><span class="section-number">8.8. </span>The latex script is first transpiled to a  template model<a class="headerlink" href="#the-latex-script-is-first-transpiled-to-a-template-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mftt</span><span class="o">.</span><span class="n">equations_original</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Do i $ 
+ Frml SHARES2 diff(Share_{i})  = sum(j,Share_{i}*Share_{j}*(F_{i}_{j}/tau_{j}-F_{j}_{i}/tau_{i})) $ 
+enddo $ 
+Do i $ Do j $ 
+ Frml preferences F_{i}_{j}  = ((1)/(1+exp((((C_{i}-C_{j}))/(sigma_{i}_{j}))))) $ 
+enddo $ enddo $ 
+Do i $ Do j $ 
+ Frml sigma sigma_{i}_{j}  = sqrt(sigma_{i}**2*sigma_{j}**2) $ 
+enddo $ enddo $ 
+Do i $ 
+ Frml UD UsefulDemand_{i}  = Share_{i}*UsefulDemand_total $ 
+enddo $ 
+Frml UD_total UsefulDemand_total   = UsefulDemand_total(-1)*(1+((UsefulDemand_total_growth)/(100))) $ 
+Frml check_shares Share_total   = sum(i,Share_{i}) $ 
+LIST I  =  I  : T1  T2  T3  T4$
+LIST J  =  J  :  T1  T2  T3  T4$
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="then-the-template-model-is-expanded-to-a-business-language-model">
+<h2><span class="section-number">8.9. </span>Then the template model is expanded to a Business language model<a class="headerlink" href="#then-the-template-model-is-expanded-to-a-business-language-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mftt</span><span class="o">.</span><span class="n">equations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FRML SHARES2 SHARE_T1=SHARE_T1(-1)+((SHARE_T1*SHARE_T1*(F_T1_T1/TAU_T1-F_T1_T1/TAU_T1)+SHARE_T1*SHARE_T2*(F_T1_T2/TAU_T2-F_T2_T1/TAU_T1)+SHARE_T1*SHARE_T3*(F_T1_T3/TAU_T3-F_T3_T1/TAU_T1)+SHARE_T1*SHARE_T4*(F_T1_T4/TAU_T4-F_T4_T1/TAU_T1)))$
+FRML SHARES2 SHARE_T2=SHARE_T2(-1)+((SHARE_T2*SHARE_T1*(F_T2_T1/TAU_T1-F_T1_T2/TAU_T2)+SHARE_T2*SHARE_T2*(F_T2_T2/TAU_T2-F_T2_T2/TAU_T2)+SHARE_T2*SHARE_T3*(F_T2_T3/TAU_T3-F_T3_T2/TAU_T2)+SHARE_T2*SHARE_T4*(F_T2_T4/TAU_T4-F_T4_T2/TAU_T2)))$
+FRML SHARES2 SHARE_T3=SHARE_T3(-1)+((SHARE_T3*SHARE_T1*(F_T3_T1/TAU_T1-F_T1_T3/TAU_T3)+SHARE_T3*SHARE_T2*(F_T3_T2/TAU_T2-F_T2_T3/TAU_T3)+SHARE_T3*SHARE_T3*(F_T3_T3/TAU_T3-F_T3_T3/TAU_T3)+SHARE_T3*SHARE_T4*(F_T3_T4/TAU_T4-F_T4_T3/TAU_T3)))$
+FRML SHARES2 SHARE_T4=SHARE_T4(-1)+((SHARE_T4*SHARE_T1*(F_T4_T1/TAU_T1-F_T1_T4/TAU_T4)+SHARE_T4*SHARE_T2*(F_T4_T2/TAU_T2-F_T2_T4/TAU_T4)+SHARE_T4*SHARE_T3*(F_T4_T3/TAU_T3-F_T3_T4/TAU_T4)+SHARE_T4*SHARE_T4*(F_T4_T4/TAU_T4-F_T4_T4/TAU_T4)))$
+FRML PREFERENCES F_T1_T1  = ((1)/(1+EXP((((C_T1-C_T1))/(SIGMA_T1_T1))))) $
+FRML PREFERENCES F_T1_T2  = ((1)/(1+EXP((((C_T1-C_T2))/(SIGMA_T1_T2))))) $
+FRML PREFERENCES F_T1_T3  = ((1)/(1+EXP((((C_T1-C_T3))/(SIGMA_T1_T3))))) $
+FRML PREFERENCES F_T1_T4  = ((1)/(1+EXP((((C_T1-C_T4))/(SIGMA_T1_T4))))) $
+FRML PREFERENCES F_T2_T1  = ((1)/(1+EXP((((C_T2-C_T1))/(SIGMA_T2_T1))))) $
+FRML PREFERENCES F_T2_T2  = ((1)/(1+EXP((((C_T2-C_T2))/(SIGMA_T2_T2))))) $
+FRML PREFERENCES F_T2_T3  = ((1)/(1+EXP((((C_T2-C_T3))/(SIGMA_T2_T3))))) $
+FRML PREFERENCES F_T2_T4  = ((1)/(1+EXP((((C_T2-C_T4))/(SIGMA_T2_T4))))) $
+FRML PREFERENCES F_T3_T1  = ((1)/(1+EXP((((C_T3-C_T1))/(SIGMA_T3_T1))))) $
+FRML PREFERENCES F_T3_T2  = ((1)/(1+EXP((((C_T3-C_T2))/(SIGMA_T3_T2))))) $
+FRML PREFERENCES F_T3_T3  = ((1)/(1+EXP((((C_T3-C_T3))/(SIGMA_T3_T3))))) $
+FRML PREFERENCES F_T3_T4  = ((1)/(1+EXP((((C_T3-C_T4))/(SIGMA_T3_T4))))) $
+FRML PREFERENCES F_T4_T1  = ((1)/(1+EXP((((C_T4-C_T1))/(SIGMA_T4_T1))))) $
+FRML PREFERENCES F_T4_T2  = ((1)/(1+EXP((((C_T4-C_T2))/(SIGMA_T4_T2))))) $
+FRML PREFERENCES F_T4_T3  = ((1)/(1+EXP((((C_T4-C_T3))/(SIGMA_T4_T3))))) $
+FRML PREFERENCES F_T4_T4  = ((1)/(1+EXP((((C_T4-C_T4))/(SIGMA_T4_T4))))) $
+FRML SIGMA SIGMA_T1_T1  = SQRT(SIGMA_T1**2*SIGMA_T1**2) $
+FRML SIGMA SIGMA_T1_T2  = SQRT(SIGMA_T1**2*SIGMA_T2**2) $
+FRML SIGMA SIGMA_T1_T3  = SQRT(SIGMA_T1**2*SIGMA_T3**2) $
+FRML SIGMA SIGMA_T1_T4  = SQRT(SIGMA_T1**2*SIGMA_T4**2) $
+FRML SIGMA SIGMA_T2_T1  = SQRT(SIGMA_T2**2*SIGMA_T1**2) $
+FRML SIGMA SIGMA_T2_T2  = SQRT(SIGMA_T2**2*SIGMA_T2**2) $
+FRML SIGMA SIGMA_T2_T3  = SQRT(SIGMA_T2**2*SIGMA_T3**2) $
+FRML SIGMA SIGMA_T2_T4  = SQRT(SIGMA_T2**2*SIGMA_T4**2) $
+FRML SIGMA SIGMA_T3_T1  = SQRT(SIGMA_T3**2*SIGMA_T1**2) $
+FRML SIGMA SIGMA_T3_T2  = SQRT(SIGMA_T3**2*SIGMA_T2**2) $
+FRML SIGMA SIGMA_T3_T3  = SQRT(SIGMA_T3**2*SIGMA_T3**2) $
+FRML SIGMA SIGMA_T3_T4  = SQRT(SIGMA_T3**2*SIGMA_T4**2) $
+FRML SIGMA SIGMA_T4_T1  = SQRT(SIGMA_T4**2*SIGMA_T1**2) $
+FRML SIGMA SIGMA_T4_T2  = SQRT(SIGMA_T4**2*SIGMA_T2**2) $
+FRML SIGMA SIGMA_T4_T3  = SQRT(SIGMA_T4**2*SIGMA_T3**2) $
+FRML SIGMA SIGMA_T4_T4  = SQRT(SIGMA_T4**2*SIGMA_T4**2) $
+FRML UD USEFULDEMAND_T1  = SHARE_T1*USEFULDEMAND_TOTAL $
+FRML UD USEFULDEMAND_T2  = SHARE_T2*USEFULDEMAND_TOTAL $
+FRML UD USEFULDEMAND_T3  = SHARE_T3*USEFULDEMAND_TOTAL $
+FRML UD USEFULDEMAND_T4  = SHARE_T4*USEFULDEMAND_TOTAL $
+FRML UD_TOTAL USEFULDEMAND_TOTAL   = USEFULDEMAND_TOTAL(-1)*(1+((USEFULDEMAND_TOTAL_GROWTH)/(100))) $
+FRML CHECK_SHARES SHARE_TOTAL   = (SHARE_T1+SHARE_T2+SHARE_T3+SHARE_T4) $
+LIST I  =  I  : T1  T2  T3  T4$
+LIST J  =  J  :  T1  T2  T3  T4$
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="and-we-can-inspect-the-structure">
+<h2><span class="section-number">8.10. </span>And we can inspect the structure<a class="headerlink" href="#and-we-can-inspect-the-structure" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mftt</span><span class="o">.</span><span class="n">drawmodel</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/FTT very simpel_19_0.svg" src="../../_images/FTT very simpel_19_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="create-some-mock-data">
+<h2><span class="section-number">8.11. </span>Create some mock data<a class="headerlink" href="#create-some-mock-data" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>%%dataframe</strong> magic command helps dooing this.</p>
+<div class="section" id="initial-values-for-the-shares">
+<h3><span class="section-number">8.11.1. </span>Initial values for the shares.<a class="headerlink" href="#initial-values-for-the-shares" title="Permalink to this headline">¶</a></h3>
+<p>Needed, as the lagged values are needed for the simulation to start</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">dataframe</span>  startvalues  show  periods=1 
+     
+       SHARE_T1      SHARE_T2    SHARE_T3  SHARE_T4 USEFULDEMAND_TOTAL 
+       0.33333        0.33333     0.33333      0       100
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SHARE_T1</th>
+      <th>SHARE_T2</th>
+      <th>SHARE_T3</th>
+      <th>SHARE_T4</th>
+      <th>USEFULDEMAND_TOTAL</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021</th>
+      <td>0.3333</td>
+      <td>0.3333</td>
+      <td>0.3333</td>
+      <td>0.0</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="parameter-values">
+<h3><span class="section-number">8.11.2. </span>Parameter values<a class="headerlink" href="#parameter-values" title="Permalink to this headline">¶</a></h3>
+<p>Initial all the tecknologies are equal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">dataframe</span>  exoinit  nshow  periods=100 
+C_T1 C_T2 C_T3  C_T4 TAU_T1 TAU_T2 TAU_T3 TAU_T4  USEFULDEMAND_TOTAL_GROWTH SIGMA_T1 SIGMA_T2 SIGMA_T3 SIGMA_T4
+4      4  4       4     3     3      3      3         2                    2        2       2       2       2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combine-the-dataframe-to-one-which-can-be-solves">
+<h3><span class="section-number">8.11.3. </span>Combine the dataframe to one which can be solves<a class="headerlink" href="#combine-the-dataframe-to-one-which-can-be-solves" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseline</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">startvalues</span><span class="p">,</span><span class="n">exoinit</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">baseline</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>index</th>
+      <th>2021</th>
+      <th>2022</th>
+      <th>2023</th>
+      <th>2024</th>
+      <th>2025</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SHARE_T1</th>
+      <td>0.3333</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SHARE_T2</th>
+      <td>0.3333</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SHARE_T3</th>
+      <td>0.3333</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SHARE_T4</th>
+      <td>0.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>USEFULDEMAND_TOTAL</th>
+      <td>100.0000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>C_T1</th>
+      <td>4.0000</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>C_T2</th>
+      <td>4.0000</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>C_T3</th>
+      <td>4.0000</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>C_T4</th>
+      <td>3.0000</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>TAU_T1</th>
+      <td>3.0000</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>TAU_T2</th>
+      <td>3.0000</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>TAU_T3</th>
+      <td>3.0000</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>TAU_T4</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>USEFULDEMAND_TOTAL_GROWTH</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>SIGMA_T1</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>SIGMA_T2</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>SIGMA_T3</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>SIGMA_T4</th>
+      <td>2.0000</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="solve-the-model">
+<h2><span class="section-number">8.12. </span>Solve the model<a class="headerlink" href="#solve-the-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">mftt</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">first_test</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">init</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-some-scenarios">
+<h2><span class="section-number">8.13. </span>Create some scenarios<a class="headerlink" href="#create-some-scenarios" title="Permalink to this headline">¶</a></h2>
+<p>In this case the cost of technology 2 (t2) is changed</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">change_c_t2</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+    <span class="n">alternative</span> <span class="o">=</span> <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;c_t2 + </span><span class="si">{</span><span class="n">change_c_t2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="n">mftt</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span><span class="n">keep</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;cost of tecknology 2 changed by </span><span class="si">{</span><span class="n">change_c_t2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-gouping-of-variables-for-the-visualizer">
+<h2><span class="section-number">8.14. </span>Create a gouping of variables for the visualizer<a class="headerlink" href="#create-a-gouping-of-variables-for-the-visualizer" title="Permalink to this headline">¶</a></h2>
+<p>The first group will automatic be displayed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mftt</span><span class="o">.</span><span class="n">group_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;share*&#39;</span> <span class="p">:</span> <span class="s1">&#39;Shares&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;c_t*&#39;</span>   <span class="p">:</span>  <span class="s1">&#39;Cost&#39;</span> <span class="p">,</span>
+    <span class="s1">&#39;useful*&#39;</span><span class="p">:</span>  <span class="s1">&#39;Demand&#39;</span>
+    <span class="s1">&#39;&#39;</span>
+    <span class="s1">&#39;*&#39;</span>      <span class="p">:</span>  <span class="s1">&#39;all&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+    <span class="s1">&#39;*&#39;</span>      <span class="p">:</span>  <span class="s1">&#39;all&#39;</span>
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mftt</span><span class="o">.</span><span class="n">keep_show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "2f245c2dd6bc4d65943f17762a89448a", "version_major": 2, "version_minor": 0}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mftt.modeldump(r&#39;../../../../model_repo/ftt.pcim&#39;) # Dumps the model and data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content\FTT"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="FTT%20targets%20instruments.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>FTT model - goal seeking</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ib Hansen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
