@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432pt" height="107pt" viewBox="0.00 0.00 432.00 107.11">
 <g id="graph0" class="graph" transform="scale(0.885246 0.885246) rotate(0) translate(4 117)">
 <title>TD</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-117 484,-117 484,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-117 484,-117 484,4 -4,4"/>
 <text text-anchor="middle" x="240" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">XGDP</text>
 <!-- XFS -->
 <g id="node1" class="node">
@@ -27,8 +27,8 @@ FRML &lt;Z&gt; XGDP = EXP(XGDP_A+XGDP_AERR+ (LOG(XGDP(-1))+0.9985*LOG(XFS/XFS(-1
 <g id="edge1" class="edge">
 <title>XFS-&gt;XGDP</title>
 <g id="a_edge1"><a xlink:href="bogus" xlink:title=" XFS -&gt; XGDP Min. att. -195%  max: 589%">
-<path fill="none" stroke="black" stroke-width="8" d="M305.01,-79.02C313.83,-78.09 322.5,-77.18 330.85,-76.3"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="331.64,-83.25 340.85,-75.24 330.17,-69.33 331.64,-83.25"/>
+<path fill="none" stroke="black" stroke-width="8" d="M305.38,-78.98C311.65,-78.32 317.84,-77.67 323.89,-77.03"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="324.37,-84.02 333.58,-76.01 322.9,-70.09 324.37,-84.02"/>
 </a>
 </g>
 </g>
@@ -46,8 +46,8 @@ FRML &lt;Z&gt; KI = KI(-1)*EXP(KI_A+KI_AERR+ (-0.00120624751419073+0.01469206254
 <g id="edge2" class="edge">
 <title>KI-&gt;XGDP</title>
 <g id="a_edge2"><a xlink:href="bogus" xlink:title=" KI -&gt; XGDP Min. att. -88%  max: 189%">
-<path fill="none" stroke="black" stroke-width="8" d="M273.63,-53.67C293.05,-55.72 312.71,-57.79 330.82,-59.7"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="330.32,-66.69 341,-60.78 331.79,-52.76 330.32,-66.69"/>
+<path fill="none" stroke="black" stroke-width="8" d="M273.63,-53.67C290.61,-55.46 307.77,-57.27 323.91,-58.97"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="323.03,-65.92 333.71,-60.01 324.5,-52 323.03,-65.92"/>
 </a>
 </g>
 </g>

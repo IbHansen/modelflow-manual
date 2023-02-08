@@ -1,25 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="488pt" height="229pt" viewBox="0.00 0.00 488.00 229.00">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 225)">
 <title>TD</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-225 484,-225 484,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-225 484,-225 484,4 -4,4"/>
 <text text-anchor="middle" x="240" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">XGDP</text>
-<!-- XGDP_A -->
+<!-- KI -->
 <g id="node1" class="node">
-<title>XGDP_A</title>
-<g id="a_node1"><a xlink:title="XGDP_A
-Exogen">
-<polygon fill="yellow" stroke="black" points="187.5,-221 117.5,-221 117.5,-185 187.5,-185 187.5,-221"/>
-<text text-anchor="start" x="123.5" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP_A:</text>
+<title>KI</title>
+<g id="a_node1"><a xlink:title="Stock of private inventories, cw 2012$
+FRML &lt;Z&gt; KI = KI(-1)*EXP(KI_A+KI_AERR+ (-0.00120624751419073+0.01469206254903638*(LOG(QKIR)-LOG(KI(-1)/XFS(-1)))+0.4567399290262596*(((LOG(KI(-1)))-(LOG(KI(-2))))--0.00120624751419073)+0.236031927797704*((LOG(XFS(-1)))-(LOG(XFS(-2))))+0.3072281431760363*((LOG(XFS(-2)))-(LOG(XFS(-3))))) ) $">
+<polygon fill="#63b8ff" stroke="black" points="273.5,-221 31.5,-221 31.5,-185 273.5,-185 273.5,-221"/>
+<text text-anchor="start" x="37.5" y="-198.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">KI:Stock of private inventories, cw 2012$</text>
 </a>
 </g>
 </g>
 <!-- XGDP -->
-<g id="node5" class="node">
+<g id="node4" class="node">
 <title>XGDP</title>
-<g id="a_node5"><a xlink:title="GDP, cw 2012$
+<g id="a_node4"><a xlink:title="GDP, cw 2012$
 FRML &lt;Z&gt; XGDP = EXP(XGDP_A+XGDP_AERR+ (LOG(XGDP(-1))+0.9985*LOG(XFS/XFS(-1))+0.6264*(LOG(KI)-LOG(KI(-1)))+-0.6249*(LOG(KI(-1))-LOG(KI(-2)))) ) $">
 <polygon fill="red" stroke="black" points="480,-140 341,-140 341,-104 480,-104 480,-140"/>
 <text text-anchor="start" x="347.5" y="-117.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP:GDP, cw 2012$</text>
+</a>
+</g>
+</g>
+<!-- KI&#45;&gt;XGDP -->
+<g id="edge4" class="edge">
+<title>KI-&gt;XGDP</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title=" KI -&gt; XGDP Min. att. -88%  max: 189%">
+<path fill="none" stroke="black" stroke-width="8" d="M273.85,-185C284.49,-182.37 295.01,-179.39 305,-176 325.6,-169.02 347.14,-158.5 365.28,-148.6"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="368.58,-154.77 373.85,-143.76 361.7,-142.58 368.58,-154.77"/>
+</a>
+</g>
+</g>
+<!-- XGDP_A -->
+<g id="node2" class="node">
+<title>XGDP_A</title>
+<g id="a_node2"><a xlink:title="XGDP_A
+Exogen">
+<polygon fill="yellow" stroke="black" points="187.5,-167 117.5,-167 117.5,-131 187.5,-131 187.5,-167"/>
+<text text-anchor="start" x="123.5" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP_A:</text>
 </a>
 </g>
 </g>
@@ -27,65 +46,46 @@ FRML &lt;Z&gt; XGDP = EXP(XGDP_A+XGDP_AERR+ (LOG(XGDP(-1))+0.9985*LOG(XFS/XFS(-1
 <g id="edge1" class="edge">
 <title>XGDP_A-&gt;XGDP</title>
 <g id="a_edge1"><a xlink:href="bogus" xlink:title=" XGDP_A -&gt; XGDP Min. att. 0%  max: 0%">
-<path fill="none" stroke="black" d="M187.63,-199.88C218.82,-196.34 265.91,-189.25 305,-176 328.04,-168.19 352.27,-155.96 371.59,-145.11"/>
-<polygon fill="black" stroke="black" points="373.43,-148.08 380.37,-140.08 369.96,-142.01 373.43,-148.08"/>
-</a>
-</g>
-</g>
-<!-- KI -->
-<g id="node2" class="node">
-<title>KI</title>
-<g id="a_node2"><a xlink:title="Stock of private inventories, cw 2012$
-FRML &lt;Z&gt; KI = KI(-1)*EXP(KI_A+KI_AERR+ (-0.00120624751419073+0.01469206254903638*(LOG(QKIR)-LOG(KI(-1)/XFS(-1)))+0.4567399290262596*(((LOG(KI(-1)))-(LOG(KI(-2))))--0.00120624751419073)+0.236031927797704*((LOG(XFS(-1)))-(LOG(XFS(-2))))+0.3072281431760363*((LOG(XFS(-2)))-(LOG(XFS(-3))))) ) $">
-<polygon fill="#63b8ff" stroke="black" points="273.5,-167 31.5,-167 31.5,-131 273.5,-131 273.5,-167"/>
-<text text-anchor="start" x="37.5" y="-144.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">KI:Stock of private inventories, cw 2012$</text>
-</a>
-</g>
-</g>
-<!-- KI&#45;&gt;XGDP -->
-<g id="edge3" class="edge">
-<title>KI-&gt;XGDP</title>
-<g id="a_edge3"><a xlink:href="bogus" xlink:title=" KI -&gt; XGDP Min. att. -88%  max: 189%">
-<path fill="none" stroke="black" stroke-width="8" d="M273.63,-136.33C293.05,-134.28 312.71,-132.21 330.82,-130.3"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="331.79,-137.24 341,-129.22 330.32,-123.31 331.79,-137.24"/>
-</a>
-</g>
-</g>
-<!-- XGDP_AERR -->
-<g id="node3" class="node">
-<title>XGDP_AERR</title>
-<g id="a_node3"><a xlink:title="XGDP_AERR
-Exogen">
-<polygon fill="yellow" stroke="black" points="200.5,-113 104.5,-113 104.5,-77 200.5,-77 200.5,-113"/>
-<text text-anchor="start" x="110.5" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP_AERR:</text>
-</a>
-</g>
-</g>
-<!-- XGDP_AERR&#45;&gt;XGDP -->
-<g id="edge4" class="edge">
-<title>XGDP_AERR-&gt;XGDP</title>
-<g id="a_edge4"><a xlink:href="bogus" xlink:title=" XGDP_AERR -&gt; XGDP Min. att. 0%  max: 0%">
-<path fill="none" stroke="black" d="M200.75,-99.98C237.13,-103.82 288.22,-109.21 330.75,-113.69"/>
-<polygon fill="black" stroke="black" points="330.49,-117.19 340.8,-114.75 331.22,-110.22 330.49,-117.19"/>
+<path fill="none" stroke="black" d="M187.76,-145.39C223.77,-141.59 281.69,-135.48 329.31,-130.46"/>
+<polygon fill="black" stroke="black" points="329.46,-133.96 339.04,-129.43 328.73,-127 329.46,-133.96"/>
 </a>
 </g>
 </g>
 <!-- XFS -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>XFS</title>
-<g id="a_node4"><a xlink:title="Final sales of gross domestic product, cw 2012$
+<g id="a_node3"><a xlink:title="Final sales of gross domestic product, cw 2012$
 FRML &lt;Z&gt; XFS = EXP(XFS_A+XFS_AERR+ (LOG(XFS(-1))+0.6849*LOG(ECNIA/ECNIA(-1))+0.0386*LOG(EH/EH(-1))+0.1324*LOG(EBFI/EBFI(-1))+0.0429*LOG(EGFE/EGFE(-1))+0.0223*LOG(EGFL/EGFL(-1))+0.0395*LOG(EGSE/EGSE(-1))+0.0691*LOG(EGSL/EGSL(-1))+0.1203*LOG(EX/EX(-1))+-0.1399*LOG(EMO/EMO(-1))+-0.0101*LOG(EMP/EMP(-1))) ) $">
-<polygon fill="#63b8ff" stroke="black" points="305,-59 0,-59 0,-23 305,-23 305,-59"/>
-<text text-anchor="start" x="6.5" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XFS:Final sales of gross domestic product, cw 2012$</text>
+<polygon fill="#63b8ff" stroke="black" points="305,-113 0,-113 0,-77 305,-77 305,-113"/>
+<text text-anchor="start" x="6.5" y="-90.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XFS:Final sales of gross domestic product, cw 2012$</text>
 </a>
 </g>
 </g>
 <!-- XFS&#45;&gt;XGDP -->
-<g id="edge2" class="edge">
+<g id="edge3" class="edge">
 <title>XFS-&gt;XGDP</title>
-<g id="a_edge2"><a xlink:href="bogus" xlink:title=" XFS -&gt; XGDP Min. att. -195%  max: 589%">
-<path fill="none" stroke="black" stroke-width="8" d="M273.85,-59C284.49,-61.63 295.01,-64.61 305,-68 328.04,-75.81 352.27,-88.04 371.59,-98.89"/>
-<polygon fill="black" stroke="black" stroke-width="8" points="368.22,-105.03 380.37,-103.92 375.17,-92.88 368.22,-105.03"/>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title=" XFS -&gt; XGDP Min. att. -195%  max: 589%">
+<path fill="none" stroke="black" stroke-width="8" d="M305.38,-111.02C311.65,-111.68 317.84,-112.33 323.89,-112.97"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="322.9,-119.91 333.58,-113.99 324.37,-105.98 322.9,-119.91"/>
+</a>
+</g>
+</g>
+<!-- XGDP_AERR -->
+<g id="node5" class="node">
+<title>XGDP_AERR</title>
+<g id="a_node5"><a xlink:title="XGDP_AERR
+Exogen">
+<polygon fill="yellow" stroke="black" points="200.5,-59 104.5,-59 104.5,-23 200.5,-23 200.5,-59"/>
+<text text-anchor="start" x="110.5" y="-36.8" font-family="Times New Roman,serif" font-size="14.00" fill="blue">XGDP_AERR:</text>
+</a>
+</g>
+</g>
+<!-- XGDP_AERR&#45;&gt;XGDP -->
+<g id="edge2" class="edge">
+<title>XGDP_AERR-&gt;XGDP</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title=" XGDP_AERR -&gt; XGDP Min. att. 0%  max: 0%">
+<path fill="none" stroke="black" d="M200.83,-45.72C231.17,-49.65 271.09,-56.51 305,-68 327.46,-75.61 351.05,-87.43 370.12,-98.07"/>
+<polygon fill="black" stroke="black" points="368.19,-101 378.61,-102.91 371.66,-94.92 368.19,-101"/>
 </a>
 </g>
 </g>
