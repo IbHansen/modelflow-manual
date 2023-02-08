@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>16. Onboard all models defined in .wf1 files &#8212; Some models in Python with ModelFlow</title>
+    <title>16. Onboard all models defined in .wf1 files &#8212; MFMod models in Python with ModelFlow</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <h1 class="site-logo" id="site-title">Some models in Python with ModelFlow</h1>
+      <h1 class="site-logo" id="site-title">MFMod models in Python with ModelFlow</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
@@ -445,6 +445,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
+<a href="https://github.com/IbHansen/modelflow-manual"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -799,10 +812,11 @@ Eviewsline to run :Scalar _MDASBBREV_at_COEF_2 = _MDASBBREV.@COEF(+2)
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model: MDA is unlinked 
 Writing C:\modelflow manual\papers\mfbook\content\howto\onboard\eviews\wfs\MDAsoln_modelflow.wf2
-Model name: MDA
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing the model:MDA
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model name: MDA
+
+Processing the model:MDA
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated coifficients are substituted
@@ -862,17 +876,16 @@ Calculation of add factors for PER calculated
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGO calculated  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chekking residuals for AGO 2016 to 2060
+
+Chekking residuals for AGO 2016 to 2060
 
 Variable with residuals above threshold
 AGONECONPRVTCN                        , Max difference:  2861.03139496 Max Pct    0.0000106457% It is number    44 in the solveorder and error number 1
-AGONEGDIFGOVCN                        , Max difference:    21.01837921 Max Pct    0.0000013130% It is number    55 in the solveorder and error number 2
-AGONEGDIFTOTCN                        , Max difference:   177.46922302 Max Pct    0.0000007316% It is number    58 in the solveorder and error number 3
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGONEEXPNOILCN                        , Max difference:    34.74809837 Max Pct    0.0000022911% It is number    63 in the solveorder and error number 4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGONEGDIFGOVCN                        , Max difference:    21.01837921 Max Pct    0.0000013130% It is number    55 in the solveorder and error number 2
+AGONEGDIFTOTCN                        , Max difference:   177.46922302 Max Pct    0.0000007316% It is number    58 in the solveorder and error number 3
+AGONEEXPNOILCN                        , Max difference:    34.74809837 Max Pct    0.0000022911% It is number    63 in the solveorder and error number 4
 AGONEEXPGOILCN                        , Max difference:   544.94689941 Max Pct    0.0000026926% It is number    66 in the solveorder and error number 5
 AGONEEXPGNFSCN                        , Max difference:   504.25928497 Max Pct    0.0000023486% It is number    67 in the solveorder and error number 6
 AGONEIMPGNFSCN                        , Max difference:  1101.58077240 Max Pct    0.0000111348% It is number    71 in the solveorder and error number 7
@@ -959,12 +972,12 @@ mda run and saved
 
 10-01-2023  21:48    &lt;DIR&gt;          .
 07-02-2023  17:26    &lt;DIR&gt;          ..
-08-02-2023  10:31         1.434.224 ago.pcim
-08-02-2023  10:31         1.029.644 mda.pcim
-08-02-2023  10:31         3.386.734 pak.pcim
-08-02-2023  10:31        11.980.064 per.pcim
+08-02-2023  11:21         1.434.224 ago.pcim
+08-02-2023  11:21         1.029.644 mda.pcim
+08-02-2023  11:21         3.386.734 pak.pcim
+08-02-2023  11:21        11.980.064 per.pcim
                4 File(s)     17.830.666 bytes
-               2 Dir(s)  731.739.594.752 bytes free
+               2 Dir(s)  731.259.088.896 bytes free
 </pre></div>
 </div>
 </div>
@@ -1126,11 +1139,11 @@ mper, per_baseline and per_cmodel has been created
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;PAKLMEMPTOTLCN_X&#39;, &#39;Fix value:Employment&#39;)
-(&#39;PAKLMEMPTOTLCN&#39;, &#39;Employment&#39;)
-(&#39;PAKLMEMPTOTLCN_FITTED&#39;, &#39;Fitted  value:Employment&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;PAKLMEMPTOTLCN&#39;, &#39;Employment&#39;)
+(&#39;PAKLMEMPTOTLCN_X&#39;, &#39;Fix value:Employment&#39;)
 (&#39;PAKLMEMPTOTLCN_D&#39;, &#39;Fix dummy:Employment&#39;)
 (&#39;PAKLMEMPTOTLCN_A&#39;, &#39;Add factor:Employment&#39;)
+(&#39;PAKLMEMPTOTLCN_FITTED&#39;, &#39;Fitted  value:Employment&#39;)
 </pre></div>
 </div>
 </div>
@@ -1142,22 +1155,22 @@ mper, per_baseline and per_cmodel has been created
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGOGGEXPWAGECN_A&#39;, &#39;Add factor:Wages and Salaries&#39;)
-(&#39;AGOGGEXPWAGECN&#39;, &#39;Wages and Salaries&#39;)
-(&#39;AGOGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Wages and Salaries&#39;)
-(&#39;AGOGGEXPWAGECN_VALUE_2019&#39;, &#39;AGOGGEXPWAGECN_VALUE_2019&#39;)
-(&#39;AGOGGEXPWAGECN_D&#39;, &#39;Fix dummy:Wages and Salaries&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;AGOGGEXPWAGECN&#39;, &#39;Wages and Salaries&#39;)
 (&#39;AGOGGEXPWAGECN_X&#39;, &#39;Fix value:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_D&#39;, &#39;Fix dummy:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_VALUE_2019&#39;, &#39;AGOGGEXPWAGECN_VALUE_2019&#39;)
+(&#39;AGOGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Wages and Salaries&#39;)
+(&#39;AGOGGEXPWAGECN_A&#39;, &#39;Add factor:Wages and Salaries&#39;)
+(&#39;MDAGGEXPWAGECN_X&#39;, &#39;Fix value:Expenditure: Wages and Salaries LCU millions&#39;)
+(&#39;MDAGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Expenditure: Wages and Salaries LCU millions&#39;)
 (&#39;MDAGGEXPWAGECN_A&#39;, &#39;Add factor:Expenditure: Wages and Salaries LCU millions&#39;)
 (&#39;MDAGGEXPWAGECN_D&#39;, &#39;Fix dummy:Expenditure: Wages and Salaries LCU millions&#39;)
-(&#39;MDAGGEXPWAGECN_X&#39;, &#39;Fix value:Expenditure: Wages and Salaries LCU millions&#39;)
 (&#39;MDAGGEXPWAGECN&#39;, &#39;Expenditure: Wages and Salaries LCU millions&#39;)
-(&#39;MDAGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:Expenditure: Wages and Salaries LCU millions&#39;)
-(&#39;PERGGEXPWAGECN_X&#39;, &#39;Fix value:PERGGEXPWAGECN&#39;)
-(&#39;PERGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:PERGGEXPWAGECN&#39;)
 (&#39;PERGGEXPWAGECN&#39;, &#39;PERGGEXPWAGECN&#39;)
 (&#39;PERGGEXPWAGECN_D&#39;, &#39;Fix dummy:PERGGEXPWAGECN&#39;)
 (&#39;PERGGEXPWAGECN_A&#39;, &#39;Add factor:PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN_X&#39;, &#39;Fix value:PERGGEXPWAGECN&#39;)
+(&#39;PERGGEXPWAGECN_FITTED&#39;, &#39;Fitted  value:PERGGEXPWAGECN&#39;)
 </pre></div>
 </div>
 </div>

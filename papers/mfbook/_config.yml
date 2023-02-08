@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Some models in Python with ModelFlow
+title: MFMod models in Python with ModelFlow
 author: Ib Hansen
 #logo: logo.png
 
@@ -37,7 +37,7 @@ bibtex_bibfiles:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: False
-  use_repository_button: False
+  use_repository_button: True
 parse:
   myst_enable_extensions:
    # don't forget to list any other extensions you want enabled,
