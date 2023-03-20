@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>22. Logical structure and dependencies. &#8212; MFMod models in Python with ModelFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24. Logical structure and dependencies. &#8212; MFMod models in Python with ModelFlow</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,30 +18,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="23. Attribution" href="../attribution/Attribution%20background.html" />
-    <link rel="prev" title="21. Useful model instance properties and methods" href="../../notebooks/modelflow_features.html" />
+    <link rel="next" title="25. Attribution" href="../attribution/Attribution%20background.html" />
+    <link rel="prev" title="23. Useful model instance properties and methods" href="../../notebooks/modelflow_features.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -63,21 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -86,10 +70,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
       
@@ -102,79 +85,89 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../introduction.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Model, solutions and Modelflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../notebooks/intro/model%20and%20solution.html">
-   1. What is a Model in ModelFlow ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../notebooks/intro/Example%20Solow.html">
-   3. Example Solow model
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Python and pandas stuff
+  Macrostructural Models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../MacroStructuralModels.html">
+   1. Macrostructural models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../MFModAndModelFlow.html">
+   2. Modelflow and the MFMod models of the World Bank
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Installation of modelflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Installation/InstallingPython.html">
+   3. Installation of Modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Installation/InstallingModelFlow.html">
+   4. Installation of Modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Installation/TestingModelFlow.html">
+   5. Testing your installation of modelflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Some Jupyter, Python and pandas essentials
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../notebooks/Intro_Jupyter_notebook.html">
-   4. Introduction to the Jupyter Notebook
+   6. Introduction to  Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../notebooks/pandas/dataframes.html">
-   5. Introduction to Pandas dataframes
+  <a class="reference internal" href="../../notebooks/PythonPackagesEtc.html">
+   7. Some Python basics
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Updating variables
+  Modeflflow extensions to pandas
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../update/model%20update.html">
-   6. Update, modifying series in a dataframe using modelflow
+   10. Modelflows extensions to pandas
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../update/extending_dataframes.html">
-   7. Extend Pandas dataframes with ModelFLow capabilities.
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  A small demo model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../smallmodel/modelstart.html">
-   8. Create a small model from scratch and save it
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../smallmodel/modelstart%20export%20up.html">
-   9. Experiment: Export up
+   11.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   an extension of standard Pandas
   </a>
  </li>
 </ul>
@@ -186,29 +179,29 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../experiments/create_experiment.html">
-   10. Create an experiment, simulate it and access results
+   12. Create an experiment, simulate it and access results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../experiments/create_save_scenarios.html">
-   12. Create many scenarios, simulate them  and access results
+   14. Create many scenarios, simulate them  and access results
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../experiments/Standard%20experiment%20simple.html">
-   13. A experiment using Taxes on Goods and Services
+   15. A experiment using Taxes on Goods and Services
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Keept experiments
+  Kept scenarios
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../keep/Create%20and%20modify%20charts%20with%20keep_plot.html">
-   14. Load a model and data inclusive the keept scenarios
+   16. Load a model and data inclusive the keept scenarios
   </a>
  </li>
 </ul>
@@ -220,17 +213,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../onboard/eviews/onboard%20one%20model%20from%20%20wf1.html">
-   15. Onboard a model defined in a .wf1 file
+   17. Onboard a model defined in a .wf1 file
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../onboard/eviews/onboard%20many%20models%20from%20wf1.html">
-   16. Onboard all models  defined in .wf1 files
+   18. Onboard all models  defined in .wf1 files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../onboard/eviews/Normalizing%20when%20onboarding%20eviews.html">
-   17. Normalizing when onboarding  eviews models
+   19. Normalizing when onboarding  eviews models
   </a>
  </li>
 </ul>
@@ -242,12 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../fixing/Fixing%20variables.html">
-   18. Fixing the value of variables
+   20. Fixing the value of variables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../modifymodel/create_real_model.html">
-   19. Modified equation to to keep real tax rates
+   21. Modified equation to to keep real tax rates
   </a>
  </li>
 </ul>
@@ -259,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../notebooks/modelflow_features.html">
-   21. Useful model instance properties and methods
+   23. Useful model instance properties and methods
   </a>
  </li>
 </ul>
@@ -271,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   22. Logical structure and dependencies.
+   24. Logical structure and dependencies.
   </a>
  </li>
 </ul>
@@ -283,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../attribution/Attribution%20background.html">
-   23. Attribution
+   25. Attribution
   </a>
  </li>
 </ul>
@@ -295,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../targetinstruments/One%20target%20one%20instrument%20with%203%20instrument%20variables.html">
-   24. One target one instrument with 3 instrument variables
+   26. One target one instrument with 3 instrument variables
   </a>
  </li>
 </ul>
@@ -307,19 +300,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../notebooks/intro/model%20specification.html">
-   25. Specification of models (introduction)
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Optimization
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../optimization/Optimize_simpel.html">
-   26. Mean variance optimization
+   27. Specification of models (introduction)
   </a>
  </li>
 </ul>
@@ -331,23 +312,18 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../litterature.html">
-   27. Litterature
+   28. Litterature
   </a>
  </li>
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -355,236 +331,156 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/howto/structure/Logical_structure.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/howto/structure/Logical_structure.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/IbHansen/modelflow-manual"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-
-</a>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/content/howto/structure/Logical_structure.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/howto/structure/Logical_structure.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/IbHansen/modelflow-manual"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/howto/structure/Logical_structure.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/howto/structure/Logical_structure.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#load-a-pre-existing-model-data-and-descriptions">
-   22.1. Load a pre-existing model, data and descriptions
+   24.1. Load a pre-existing model, data and descriptions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trace-upstream-variables">
-   22.2. Trace upstream variables:
+   24.2. Trace upstream variables:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-incoming-variables-can-be-displayed-as-a-graph">
-     22.2.1. The incoming variables can be displayed as a graph
+     24.2.1. The incoming variables can be displayed as a graph
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-filter-minimal-impact-pruning-the-tree">
-     22.2.2. .tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree
+     24.2.2. .tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-up-upstream-levels">
-     22.2.3. .tracepre(,,,up=&lt;upstream levels&gt;)
+     24.2.3. .tracepre(,,,up=&lt;upstream levels&gt;)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables">
-     22.2.4. tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables
+     24.2.4. tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tracedep-match-tracepre-for-downstream-dependent-variables">
-   22.3. .tracedep match .tracepre for downstream (dependent variables)
+   24.3. .tracedep match .tracepre for downstream (dependent variables)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modeldash-the-really-convenient-way-to-navigate-the-dependency-graph">
-   22.4. .modeldash() The really convenient  way to navigate the dependency graph
+   24.4. .modeldash() The really convenient  way to navigate the dependency graph
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-adjacency-matrix-for-current-periode">
-   22.5. Plot the adjacency matrix for current periode
+   24.5. Plot the adjacency matrix for current periode
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-adjacency-matrix-including-lagged-effects">
-   22.6. Plot the adjacency matrix including lagged effects
+   24.6. Plot the adjacency matrix including lagged effects
   </a>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Logical structure and dependencies.</h1>
@@ -599,54 +495,54 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#load-a-pre-existing-model-data-and-descriptions">
-   22.1. Load a pre-existing model, data and descriptions
+   24.1. Load a pre-existing model, data and descriptions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#trace-upstream-variables">
-   22.2. Trace upstream variables:
+   24.2. Trace upstream variables:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-incoming-variables-can-be-displayed-as-a-graph">
-     22.2.1. The incoming variables can be displayed as a graph
+     24.2.1. The incoming variables can be displayed as a graph
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-filter-minimal-impact-pruning-the-tree">
-     22.2.2. .tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree
+     24.2.2. .tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-up-upstream-levels">
-     22.2.3. .tracepre(,,,up=&lt;upstream levels&gt;)
+     24.2.3. .tracepre(,,,up=&lt;upstream levels&gt;)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables">
-     22.2.4. tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables
+     24.2.4. tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tracedep-match-tracepre-for-downstream-dependent-variables">
-   22.3. .tracedep match .tracepre for downstream (dependent variables)
+   24.3. .tracedep match .tracepre for downstream (dependent variables)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modeldash-the-really-convenient-way-to-navigate-the-dependency-graph">
-   22.4. .modeldash() The really convenient  way to navigate the dependency graph
+   24.4. .modeldash() The really convenient  way to navigate the dependency graph
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-adjacency-matrix-for-current-periode">
-   22.5. Plot the adjacency matrix for current periode
+   24.5. Plot the adjacency matrix for current periode
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-the-adjacency-matrix-including-lagged-effects">
-   22.6. Plot the adjacency matrix including lagged effects
+   24.6. Plot the adjacency matrix including lagged effects
   </a>
  </li>
 </ul>
@@ -655,14 +551,13 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="logical-structure-and-dependencies">
-<h1><span class="section-number">22. </span>Logical structure and dependencies.<a class="headerlink" href="#logical-structure-and-dependencies" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="logical-structure-and-dependencies">
+<h1><span class="section-number">24. </span>Logical structure and dependencies.<a class="headerlink" href="#logical-structure-and-dependencies" title="Permalink to this headline">¶</a></h1>
 <p>When solving models it is useful to be able to use the causal (logical) structure of the model.</p>
-<p>An introduction to causal analysis of models can be found in <span id="id1"><a class="reference internal" href="../../litterature.html#id4" title="K.C. Kogiku. An Introduction to Macroeconomic Models. McGwaw-Hill, 1968. URL: https://books.google.de/books?id=jp4LzQEACAAJ.">Kogiku</a></span>(1968). A more elaborate text is here <span id="id2"><a class="reference internal" href="../../litterature.html#id2" title="Ron Berndsen. Causal ordering in economic models. Decision Support Systems, 1995. doi:10.1016/0167-9236(94)00034-P.">Berndsen</a></span>(1995).</p>
+<p>An introduction to causal analysis of models can be found in <span id="id1"></span>(1968). A more elaborate text is here <span id="id2"></span>(1995).</p>
 <p>By identifying equations which comprise simultaneous block (contain feedback loops) and recursive
 blocks the model can be divided into smaller sub-models. Only simultaneous equations have to be solved iterative. The recursive equations have to be <a class="reference external" href="https://en.wikipedia.org/wiki/Topological_sorting">topological sorted</a> and then calculated in the sorted order.</p>
 <p>In this chapter different ways to look at the logical structure is explored. <br>
@@ -680,8 +575,8 @@ The logical structure can be viewed as a <a class="reference external" href="htt
 </div>
 </div>
 </div>
-<section id="load-a-pre-existing-model-data-and-descriptions">
-<h2><span class="section-number">22.1. </span>Load a pre-existing model, data and descriptions<a class="headerlink" href="#load-a-pre-existing-model-data-and-descriptions" title="Permalink to this headline">#</a></h2>
+<div class="section" id="load-a-pre-existing-model-data-and-descriptions">
+<h2><span class="section-number">24.1. </span>Load a pre-existing model, data and descriptions<a class="headerlink" href="#load-a-pre-existing-model-data-and-descriptions" title="Permalink to this headline">¶</a></h2>
 <p>The file <code class="docutils literal notranslate"><span class="pre">pak.pcim</span></code> contains a dump of model equations, dataframe, simulation options and variable descriptions.
 The next cell:</p>
 <ul class="simple">
@@ -699,14 +594,14 @@ The next cell:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\modelflow manual\papers\mfbook\content\models\pak.pcim
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\Users\wb268970\OneDrive - WBG\Ldrive\MFM\modelflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="trace-upstream-variables">
-<h2><span class="section-number">22.2. </span>Trace upstream variables:<a class="headerlink" href="#trace-upstream-variables" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="trace-upstream-variables">
+<h2><span class="section-number">24.2. </span>Trace upstream variables:<a class="headerlink" href="#trace-upstream-variables" title="Permalink to this headline">¶</a></h2>
 <p>Lets look at The equation for <strong>GDP</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -732,8 +627,8 @@ PAKNYGDPDISCKN: Statistical Discrepency (Expenditure Side)
 </div>
 </div>
 </div>
-<section id="the-incoming-variables-can-be-displayed-as-a-graph">
-<h3><span class="section-number">22.2.1. </span>The incoming variables can be displayed as a graph<a class="headerlink" href="#the-incoming-variables-can-be-displayed-as-a-graph" title="Permalink to this headline">#</a></h3>
+<div class="section" id="the-incoming-variables-can-be-displayed-as-a-graph">
+<h3><span class="section-number">24.2.1. </span>The incoming variables can be displayed as a graph<a class="headerlink" href="#the-incoming-variables-can-be-displayed-as-a-graph" title="Permalink to this headline">¶</a></h3>
 <p>That is, the preceding variables on the right hand side of the equation for GDP is shown as a directed graph. The width of the arrow reflect how much of the impact can be attributed to this variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -743,7 +638,70 @@ PAKNYGDPDISCKN: Statistical Discrepency (Expenditure Side)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/Logical_structure_8_0.svg" src="../../../_images/Logical_structure_8_0.svg" /></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error in generation graph picture:
+Error: Could not open &quot;graph\PAKNYGDPMKTPKN.svg&quot; for writing : No such file or directory
+
+Perhaps it is already open - then close the application
+Error in generation graph picture:
+Error: Could not open &quot;graph\PAKNYGDPMKTPKN.png&quot; for writing : No such file or directory
+
+Perhaps it is already open - then close the application
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:3548,</span> in <span class="ni">Graph_Draw_Mixin.display_graph</span><span class="nt">(out, fname, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3547</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3548</span>     <span class="n">display</span><span class="p">(</span><span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">svgname</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">3549</span> <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\IPython\core\display.py:327,</span> in <span class="ni">DisplayObject.__init__</span><span class="nt">(self, data, url, filename, metadata)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">--&gt; </span><span class="mi">327</span> <span class="bp">self</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_data</span><span class="p">()</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\IPython\core\display.py:353,</span> in <span class="ni">DisplayObject.reload</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span> <span class="n">encoding</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span> <span class="k">else</span> <span class="s2">&quot;utf-8&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">353</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>     <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;graph\\PAKNYGDPMKTPKN.svg&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">latex</span><span class="o">=</span><span class="mi">0</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">mpak</span><span class="o">.</span><span class="n">PAKNYGDPMKTPKN</span><span class="o">.</span><span class="n">tracepre</span><span class="p">(</span><span class="n">png</span><span class="o">=</span><span class="n">latex</span><span class="p">)</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelvis.py:323,</span> in <span class="ni">varvis.tracepre</span><span class="nt">(self, up, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> <span class="k">def</span> <span class="nf">tracepre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>   <span class="sd">&#39;&#39;&#39;Trace dependensies of name down to level down&#39;&#39;&#39;</span>
+<span class="ne">--&gt; </span><span class="mi">323</span>   <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">,</span><span class="n">down</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="n">up</span><span class="p">,</span><span class="n">sink</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:2835,</span> in <span class="ni">Graph_Draw_Mixin.draw</span><span class="nt">(self, navn, down, up, lag, endo, filter, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2832</span> <span class="n">downlinks</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="o">-</span><span class="n">level</span><span class="p">,</span> <span class="n">navn</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span> <span class="k">for</span> <span class="n">level</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">navn</span> <span class="ow">in</span>
+<span class="g g-Whitespace">   </span><span class="mi">2833</span>              <span class="bp">self</span><span class="o">.</span><span class="n">upwalk</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">navn</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">maxlevel</span><span class="o">=</span><span class="n">down</span><span class="p">,</span> <span class="n">lpre</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="nb">filter</span><span class="o">=</span><span class="nb">filter</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">2834</span> <span class="n">alllinks</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">uplinks</span><span class="p">,</span> <span class="n">downlinks</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2835</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">todot2</span><span class="p">(</span><span class="n">alllinks</span><span class="p">,</span> <span class="n">navn</span><span class="o">=</span><span class="n">navn</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">down</span><span class="o">=</span><span class="n">down</span><span class="p">,</span> <span class="n">up</span><span class="o">=</span><span class="n">up</span><span class="p">,</span> <span class="nb">filter</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">,</span><span class="n">fokus2all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:3436,</span> in <span class="ni">Graph_Draw_Mixin.todot2</span><span class="nt">(self, alledges, navn, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3433</span> <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dot&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3434</span>     <span class="k">return</span> <span class="n">dot</span>
+<span class="ne">-&gt; </span><span class="mi">3436</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_graph</span><span class="p">(</span><span class="n">dot</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3437</span> <span class="k">return</span>
+
+<span class="nn">File ~\.conda\envs\mf_pinned_developement_test\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:3549,</span> in <span class="ni">Graph_Draw_Mixin.display_graph</span><span class="nt">(out, fname, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3547</span>     <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3548</span>         <span class="n">display</span><span class="p">(</span><span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">svgname</span><span class="p">))</span>
+<span class="ne">-&gt; </span><span class="mi">3549</span>     <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3550</span>         <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">pngname</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">3552</span> <span class="k">if</span> <span class="n">browser</span><span class="p">:</span>
+
+<span class="ne">NameError</span>: name &#39;Error&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -755,9 +713,9 @@ On mouseover on an edge the percent attribution for this variable is displayed</
 <p>Unfortunately this <em>jupyter book</em> (that is not a notebook) can not be build into a latex and PDF  form using images in svg format.</p>
 <p>When a  pdf file is created, the latex variable has to be set to True. If this notebook is used as a notebook set latex=0 and use the mouseover feature.</p>
 </div>
-</section>
-<section id="tracepre-filter-minimal-impact-pruning-the-tree">
-<h3><span class="section-number">22.2.2. </span>.tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree<a class="headerlink" href="#tracepre-filter-minimal-impact-pruning-the-tree" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="tracepre-filter-minimal-impact-pruning-the-tree">
+<h3><span class="section-number">24.2.2. </span>.tracepre(,,,filter=&lt;minimal impact&gt;) Pruning the tree<a class="headerlink" href="#tracepre-filter-minimal-impact-pruning-the-tree" title="Permalink to this headline">¶</a></h3>
 <p>Not all preceding variables have impact. By using filter=&lt;minimal impact&gt; only  links where the minimal impact is more than &lt;minimal impact&gt; are show.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -768,9 +726,9 @@ On mouseover on an edge the percent attribution for this variable is displayed</
 <div class="cell_output docutils container">
 <img alt="../../../_images/Logical_structure_11_0.svg" src="../../../_images/Logical_structure_11_0.svg" /></div>
 </div>
-</section>
-<section id="tracepre-up-upstream-levels">
-<h3><span class="section-number">22.2.3. </span>.tracepre(,,,up=&lt;upstream levels&gt;)<a class="headerlink" href="#tracepre-up-upstream-levels" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="tracepre-up-upstream-levels">
+<h3><span class="section-number">24.2.3. </span>.tracepre(,,,up=&lt;upstream levels&gt;)<a class="headerlink" href="#tracepre-up-upstream-levels" title="Permalink to this headline">¶</a></h3>
 <p>Combined with filter we can look behind the dependencies</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -781,9 +739,9 @@ On mouseover on an edge the percent attribution for this variable is displayed</
 <div class="cell_output docutils container">
 <img alt="../../../_images/Logical_structure_13_0.svg" src="../../../_images/Logical_structure_13_0.svg" /></div>
 </div>
-</section>
-<section id="tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables">
-<h3><span class="section-number">22.2.4. </span>tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables<a class="headerlink" href="#tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables">
+<h3><span class="section-number">24.2.4. </span>tracepre(,fokus2=&lt;variable pattern&gt;,growthshow=True) Additional information regarding selected variables<a class="headerlink" href="#tracepre-fokus2-variable-pattern-growthshow-true-additional-information-regarding-selected-variables" title="Permalink to this headline">¶</a></h3>
 <p>The data for selected nodes can be displayed by mentioning the variable in fokus2=&lt;variable pattern&gt;.<br>
 To also show growth rates, growthshow=True can be specified.</p>
 <div class="cell docutils container">
@@ -796,10 +754,10 @@ To also show growth rates, growthshow=True can be specified.</p>
 <div class="cell_output docutils container">
 <img alt="../../../_images/Logical_structure_15_0.svg" src="../../../_images/Logical_structure_15_0.svg" /></div>
 </div>
-</section>
-</section>
-<section id="tracedep-match-tracepre-for-downstream-dependent-variables">
-<h2><span class="section-number">22.3. </span>.tracedep match .tracepre for downstream (dependent variables)<a class="headerlink" href="#tracedep-match-tracepre-for-downstream-dependent-variables" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+<div class="section" id="tracedep-match-tracepre-for-downstream-dependent-variables">
+<h2><span class="section-number">24.3. </span>.tracedep match .tracepre for downstream (dependent variables)<a class="headerlink" href="#tracedep-match-tracepre-for-downstream-dependent-variables" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">PAKNYGDPMKTPKN</span><span class="o">.</span><span class="n">tracedep</span><span class="p">()</span>
@@ -809,9 +767,9 @@ To also show growth rates, growthshow=True can be specified.</p>
 <div class="cell_output docutils container">
 <img alt="../../../_images/Logical_structure_17_0.svg" src="../../../_images/Logical_structure_17_0.svg" /></div>
 </div>
-</section>
-<section id="modeldash-the-really-convenient-way-to-navigate-the-dependency-graph">
-<h2><span class="section-number">22.4. </span>.modeldash() The really convenient  way to navigate the dependency graph<a class="headerlink" href="#modeldash-the-really-convenient-way-to-navigate-the-dependency-graph" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="modeldash-the-really-convenient-way-to-navigate-the-dependency-graph">
+<h2><span class="section-number">24.4. </span>.modeldash() The really convenient  way to navigate the dependency graph<a class="headerlink" href="#modeldash-the-really-convenient-way-to-navigate-the-dependency-graph" title="Permalink to this headline">¶</a></h2>
 <p>This is the way to navigate the dependency graph. You can point and click and much more.</p>
 <p>Unfortunately you can not run this facility from this manual. It only works in a live notebook on your local computer.</p>
 <div class="cell docutils container">
@@ -833,9 +791,9 @@ Dash app running on http://127.0.0.1:5001/
 </div>
 <p>And it will look like this</p>
 <p><img alt="dash.png" src="../../../_images/dash.png" /></p>
-</section>
-<section id="plot-the-adjacency-matrix-for-current-periode">
-<h2><span class="section-number">22.5. </span>Plot the adjacency matrix for current periode<a class="headerlink" href="#plot-the-adjacency-matrix-for-current-periode" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="plot-the-adjacency-matrix-for-current-periode">
+<h2><span class="section-number">24.5. </span>Plot the adjacency matrix for current periode<a class="headerlink" href="#plot-the-adjacency-matrix-for-current-periode" title="Permalink to this headline">¶</a></h2>
 <p>Another way to display the logical graph is as an <a class="reference external" href="https://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a>.</p>
 <p>This is the structure of the graph of  endogenous variables.</p>
 <div class="cell docutils container">
@@ -848,9 +806,9 @@ Dash app running on http://127.0.0.1:5001/
 <img alt="../../../_images/Logical_structure_23_0.png" src="../../../_images/Logical_structure_23_0.png" />
 </div>
 </div>
-</section>
-<section id="plot-the-adjacency-matrix-including-lagged-effects">
-<h2><span class="section-number">22.6. </span>Plot the adjacency matrix including lagged effects<a class="headerlink" href="#plot-the-adjacency-matrix-including-lagged-effects" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="plot-the-adjacency-matrix-including-lagged-effects">
+<h2><span class="section-number">24.6. </span>Plot the adjacency matrix including lagged effects<a class="headerlink" href="#plot-the-adjacency-matrix-including-lagged-effects" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">plotadjacency</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span><span class="n">nolag</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
@@ -861,8 +819,8 @@ Dash app running on http://127.0.0.1:5001/
 <img alt="../../../_images/Logical_structure_25_0.png" src="../../../_images/Logical_structure_25_0.png" />
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 <script type="application/vnd.jupyter.widget-state+json">
@@ -892,48 +850,42 @@ Dash app running on http://127.0.0.1:5001/
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../../notebooks/modelflow_features.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">21. </span>Useful model instance properties and methods</p>
+            <p class="prev-next-title"><span class="section-number">23. </span>Useful model instance properties and methods</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../attribution/Attribution%20background.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">23. </span>Attribution</p>
+        <p class="prev-next-title"><span class="section-number">25. </span>Attribution</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ib Hansen<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Andrew Burns and Ib Hansen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

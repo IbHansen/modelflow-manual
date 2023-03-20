@@ -29,10 +29,11 @@ doall = '--all' if 'all' in options else ''
 
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
-(destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
+# (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
 fileloc = str((buildhtml / 'index.html').absolute())
 
-print(f'{fileloc=}\n{destination=}')
+#print(f'{fileloc=}\n{destination=}')
+print(f'{fileloc=}\n') #dropped destination
 # breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
 # wb.open(rf'file://C:\wb new\Modelflow\working_paper\{bookdir}\_build\html\index.html', new=2)

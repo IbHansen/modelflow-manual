@@ -1,99 +1,118 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
-
 format: jb-book
-root: content/introduction
+root: content/frontispiece.ipynb
 options:
   numbered: true
 parts:
-  - caption: Model, solutions and Modelflow
+  - caption: Foreword
     numbered: true  
     chapters:
-    - file: content/notebooks/intro/model and solution
-    - file: content/notebooks/intro/Example Solow
-  - caption: Python and pandas stuff 
-    numbered: true  
-    chapters:   
-    - file: content/notebooks/Intro_Jupyter_notebook
-    - file: content/notebooks/pandas/dataframes
-  - caption: Updating variables 
-    numbered: true  
-    chapters:   
-    - file: content/howto/update/model update
-    - file: content/howto/update/extending_dataframes
+    - file: content/00_Foreword/Foreword
 
-  - caption: A small demo model
-    numbered: true  
-    chapters: 
-    - file: content/howto/smallmodel/modelstart   
-    - file: content/howto/smallmodel/modelstart export up   
-    
-    
-  - caption: Make experiments
-    numbered: true  
-    chapters: 
-    - file: content/howto/experiments/create_experiment   
-    - file: content/howto/experiments/create_save_scenarios
-    - file: content/howto/experiments/Standard experiment simple
-    
-  - caption: Keept experiments
-    numbered: true  
-    chapters: 
-    - file: content/howto/keep/Create and modify charts with keep_plot
-    
-
-
-  - caption: Onboarding MFMod models from .wf1  
-    numbered: true  
-    chapters:   
-    - file: content/howto/onboard/eviews/onboard one model from  wf1
-    - file: content/howto/onboard/eviews/onboard many models from wf1  
-    - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
-
-
-  - caption: modifying models 
-    numbered: true  
-    chapters:  
-    - file: content/howto/fixing/Fixing variables
-    - file: content/howto/modifymodel/create_real_model
-    
-  - caption: Features
-    numbered: true  
-    chapters:      
-    - file: content/notebooks/modelflow_features
-    
-  - caption: Structure   
-    numbered: true  
-    chapters:   
-    - file: content/howto/structure/Logical_structure    
-    
-  - caption: Attribution  
-    numbered: true  
-    chapters:   
-    - file: content/howto/attribution/Attribution background
-
-  - caption: Target and instruments   
-    numbered: true  
-    chapters:   
-    - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
-
-  - caption: Specification  
-    numbered: true  
-    chapters:   
-    - file: content/notebooks/intro/model specification
-
-  - caption: Optimization
-    numbered: true  
-    chapters:    
-    - file: content/howto/optimization/Optimize_simpel  
-    
-  - caption: More
+  - caption: Introduction
     numbered: true  
     chapters:
-    - file: content/litterature
-#  - caption: Jupyter book test
-#    numbered: true  
-#    chapters:     
-#    - file: content/booktest
+    - file: content/01_Introduction/Introduction
+
+#   - caption: Macrostructural Models
+#     numbered: true  
+#     chapters:
+#     - file: content/02_MacrostructuralModels/MacroStructuralModels 
+#     - file: content/02_MacrostructuralModels/MFModAndModelFlow
+
+# # *****************
+#   - caption: Installation of modelflow 
+#     numbered: true  
+#     chapters:   
+#     - file: content/03_Installation/InstallingPython     
+#     - file: content/03_Installation/InstallingModelFlow
+#     - file: content/03_Installation/TestingModelFlow
+    
+# # *****************
+#   - caption: Some Jupyter, Python and pandas essentials
+#     numbered: true      
+#     chapters:   
+#     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
+#     - file: content/04_PythonEssentials/PythonPackagesEtc
+# #    - file: content/notebooks/Pandas
+# #****************
+#   - caption: Modeflflow extensions to pandas 
+#     numbered: true  
+#     chapters:   
+#     - file: content/howto/update/model update
+#     - file: content/howto/update/extending_dataframes
+# #*********
+#   - caption: Using modelflow with World Bank models
+#     numbered: true      
+#     chapters:   
+#     - file: content/notebooks/LoadingTheModel
+#     - file: content/notebooks/CreatingTheBaseline
+#     - file: content/notebooks/SimulatingtheSimpleModel
+# #**********
+#   - caption: Make experiments
+#     numbered: true  
+#     chapters: 
+#     - file: content/howto/experiments/create_experiment   
+#     - file: content/howto/experiments/create_save_scenarios
+#     - file: content/howto/experiments/Standard experiment simple
+    
+#   - caption: Kept scenarios
+#     numbered: true  
+#     chapters: 
+#     - file: content/howto/keep/Create and modify charts with keep_plot
+
+#   - caption: Onboarding MFMod models from .wf1  
+#     numbered: true  
+#     chapters:   
+#     - file: content/howto/onboard/eviews/onboard one model from  wf1
+#     - file: content/howto/onboard/eviews/onboard many models from wf1  
+#     - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
+
+#   - caption: modifying models 
+#     numbered: true  
+#     chapters:  
+#     - file: content/howto/fixing/Fixing variables
+#     - file: content/howto/modifymodel/create_real_model
+    
+#   - caption: Features
+#     numbered: true  
+#     chapters:      
+#     - file: content/notebooks/modelflow_features
+    
+#   - caption: Structure   
+#     numbered: true  
+#     chapters:   
+#     - file: content/howto/structure/Logical_structure    
+    
+#   - caption: Attribution  
+#     numbered: true  
+#     chapters:   
+#     - file: content/howto/attribution/Attribution background
+
+#   - caption: Target and instruments   
+#     numbered: true  
+#     chapters:   
+#     - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
+
+#   - caption: Specification  
+#     numbered: true  
+#     chapters:   
+#     - file: content/notebooks/intro/model specification
+
+#   - caption: Optimization
+#     numbered: true  
+#     chapters:    
+#     - file: content/howto/optimization/Optimize_simple  
+    
+   - caption: More
+     numbered: true  
+     chapters:
+     - file: content/litterature
+# #  - caption: Jupyter book test
+# #    numbered: true  
+# #    chapters:     
+# #    - file: content/booktest
     

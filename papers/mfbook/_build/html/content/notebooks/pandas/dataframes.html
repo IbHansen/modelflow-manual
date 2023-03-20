@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>5. Introduction to Pandas dataframes &#8212; MFMod models in Python with ModelFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Introduction to Pandas dataframes &#8212; MFMod models in Python with ModelFlow</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,30 +18,30 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
+    
+      
+
+    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6. Update, modifying series in a dataframe using modelflow" href="../../howto/update/model%20update.html" />
-    <link rel="prev" title="4. Introduction to the Jupyter Notebook" href="../Intro_Jupyter_notebook.html" />
+    <link rel="next" title="8. Update, modifying series in a dataframe using modelflow" href="../../howto/update/model%20update.html" />
+    <link rel="prev" title="6. Introduction to the Jupyter Notebook" href="../Intro_Jupyter_notebook.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -63,21 +61,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -86,10 +70,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
       
@@ -102,28 +85,63 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../introduction.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Model, solutions and Modelflow
+  Macrostructural Models
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro/model%20and%20solution.html">
-   1. What is a Model in ModelFlow ?
+  <a class="reference internal" href="../../MacroStructuralModels.html">
+   1. Macrostructural models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelflow and the MFMod framework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../MFModAndModelFlow.html">
+   2. Modelflow and the MFMod models of the World Bank
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Installation of python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Installation/InstallingPython.html">
+   3. Installation of Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Installation of the modelflow library
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Installation/InstallingModelFlow.html">
+   4. Installation of Modelflow
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro/Example%20Solow.html">
-   3. Example Solow model
+  <a class="reference internal" href="../../Installation/TestingModelFlow.html">
+   5. Testing your installation of modelflow
   </a>
  </li>
 </ul>
@@ -135,12 +153,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Intro_Jupyter_notebook.html">
-   4. Introduction to the Jupyter Notebook
+   6. Introduction to the Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   5. Introduction to Pandas dataframes
+   7. Introduction to Pandas dataframes
   </a>
  </li>
 </ul>
@@ -152,29 +170,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../howto/update/model%20update.html">
-   6. Update, modifying series in a dataframe using modelflow
+   8. Update, modifying series in a dataframe using modelflow
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../howto/update/extending_dataframes.html">
-   7. Extend Pandas dataframes with ModelFLow capabilities.
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  A small demo model
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../howto/smallmodel/modelstart.html">
-   8. Create a small model from scratch and save it
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../howto/smallmodel/modelstart%20export%20up.html">
-   9. Experiment: Export up
+   9. Extend Pandas dataframes with ModelFLow capabilities.
   </a>
  </li>
 </ul>
@@ -337,17 +338,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -355,240 +351,159 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/notebooks/pandas/dataframes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/notebooks/pandas/dataframes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/IbHansen/modelflow-manual"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-
-</a>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/content/notebooks/pandas/dataframes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/notebooks/pandas/dataframes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/IbHansen/modelflow-manual"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/notebooks/pandas/dataframes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/notebooks/pandas/dataframes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-the-pandas-library">
-   5.1. Import the pandas library
+   7.1. Import the pandas library
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-dataframe">
-   5.2. What is a dataframe
+   7.2. What is a dataframe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#attributes">
-   5.3. Attributes
+   7.3. Attributes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#columns-column-names">
-     5.3.1. .columns, column names
+     7.3.1. .columns, column names
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#column-names-in-modelflow">
-     5.3.2. Column names in  Modelflow
+     7.3.2. Column names in  Modelflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#index-and-time-dimensions-in-modelflow">
-     5.3.3. .index and time dimensions in Modelflow
+     7.3.3. .index and time dimensions in Modelflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#eval-evalueation-expressions">
-     5.3.4. .eval() evalueation expressions
+     7.3.4. .eval() evalueation expressions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#loc-when-slicing-a-dataframe">
-     5.3.5. .loc[] when slicing a dataframe
+     7.3.5. .loc[] when slicing a dataframe
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-row-column-a-single-element">
-       5.3.5.1. .loc[row,column] A single element
+       7.3.5.1. .loc[row,column] A single element
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-column-a-single-column">
-       5.3.5.2. .loc[:,column] A single column
+       7.3.5.2. .loc[:,column] A single column
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-row-a-single-row">
-       5.3.5.3. .loc[row,:] A single row
+       7.3.5.3. .loc[row,:] A single row
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-names-several-columns">
-       5.3.5.4. .loc[:,[names…]] Several columns
+       7.3.5.4. .loc[:,[names…]] Several columns
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-slices-of-the-dataframe-can-also-be-assigned-values">
-       5.3.5.5. .loc[] Slices of the dataframe can also be assigned values
+       7.3.5.5. .loc[] Slices of the dataframe can also be assigned values
       </a>
      </li>
     </ul>
@@ -597,11 +512,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Introduction to Pandas dataframes</h1>
@@ -616,67 +532,67 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-the-pandas-library">
-   5.1. Import the pandas library
+   7.1. Import the pandas library
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-dataframe">
-   5.2. What is a dataframe
+   7.2. What is a dataframe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#attributes">
-   5.3. Attributes
+   7.3. Attributes
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#columns-column-names">
-     5.3.1. .columns, column names
+     7.3.1. .columns, column names
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#column-names-in-modelflow">
-     5.3.2. Column names in  Modelflow
+     7.3.2. Column names in  Modelflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#index-and-time-dimensions-in-modelflow">
-     5.3.3. .index and time dimensions in Modelflow
+     7.3.3. .index and time dimensions in Modelflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#eval-evalueation-expressions">
-     5.3.4. .eval() evalueation expressions
+     7.3.4. .eval() evalueation expressions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#loc-when-slicing-a-dataframe">
-     5.3.5. .loc[] when slicing a dataframe
+     7.3.5. .loc[] when slicing a dataframe
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-row-column-a-single-element">
-       5.3.5.1. .loc[row,column] A single element
+       7.3.5.1. .loc[row,column] A single element
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-column-a-single-column">
-       5.3.5.2. .loc[:,column] A single column
+       7.3.5.2. .loc[:,column] A single column
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-row-a-single-row">
-       5.3.5.3. .loc[row,:] A single row
+       7.3.5.3. .loc[row,:] A single row
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-names-several-columns">
-       5.3.5.4. .loc[:,[names…]] Several columns
+       7.3.5.4. .loc[:,[names…]] Several columns
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#loc-slices-of-the-dataframe-can-also-be-assigned-values">
-       5.3.5.5. .loc[] Slices of the dataframe can also be assigned values
+       7.3.5.5. .loc[] Slices of the dataframe can also be assigned values
       </a>
      </li>
     </ul>
@@ -689,19 +605,18 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pandas-dataframes">
-<h1><span class="section-number">5. </span>Introduction to Pandas dataframes<a class="headerlink" href="#introduction-to-pandas-dataframes" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-pandas-dataframes">
+<h1><span class="section-number">7. </span>Introduction to Pandas dataframes<a class="headerlink" href="#introduction-to-pandas-dataframes" title="Permalink to this headline">¶</a></h1>
 <p>Modelflow is built on top of the Pandas library. Pandas is the Swiss knife of data science and can perform an impressing array of tasks.</p>
 <p>This tutorial is a very short introduction to how pandas dataframes are used with Modelflow.</p>
 <p>For more info on pandas:</p>
 <p><a class="reference external" href="https://pandas.pydata.org/">Pandas homepage</a></p>
 <p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html">Pandas community tutorials</a></p>
-<section id="import-the-pandas-library">
-<h2><span class="section-number">5.1. </span>Import the pandas library<a class="headerlink" href="#import-the-pandas-library" title="Permalink to this headline">#</a></h2>
+<div class="section" id="import-the-pandas-library">
+<h2><span class="section-number">7.1. </span>Import the pandas library<a class="headerlink" href="#import-the-pandas-library" title="Permalink to this headline">¶</a></h2>
 <p>The convention is, that pandas is imported as pd</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -710,9 +625,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="what-is-a-dataframe">
-<h2><span class="section-number">5.2. </span>What is a dataframe<a class="headerlink" href="#what-is-a-dataframe" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="what-is-a-dataframe">
+<h2><span class="section-number">7.2. </span>What is a dataframe<a class="headerlink" href="#what-is-a-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>A dataframe is a two-dimensional data structure with named rows and columns </span></p>
 <p>Creating a dataframe can be done in many ways. Here we are creating a Dataframe from a dictionary and  assigning a list of years as the index.</p>
 <div class="cell docutils container">
@@ -778,18 +693,18 @@ title="Print to PDF"
 <p>In modelflow each column is a  time serie for an economic variable. So in this dataframe A, B and C are economic time series.</p>
 <p>In this manual all variables will be timeseries scalars (numbers). <br>
 However for more advanced use a variable can also be a timeserie of matrices or vectors.</p>
-</section>
-<section id="attributes">
-<h2><span class="section-number">5.3. </span>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="attributes">
+<h2><span class="section-number">7.3. </span>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>Lets take a look at some of the most important attributes of a dataframe.</p>
 <p>To learn more check out the <a class="reference external" href="https://pandas.pydata.org/docs/reference/frame.html">official pandas website</a>.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title">Python object properties</p>
 <p>A python object such as <code class="docutils literal notranslate"><span class="pre">df</span></code> has properties and methods.<br>
 They are accessed by the . operator</p>
-</aside>
-<section id="columns-column-names">
-<h3><span class="section-number">5.3.1. </span>.columns, column names<a class="headerlink" href="#columns-column-names" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="columns-column-names">
+<h3><span class="section-number">7.3.1. </span>.columns, column names<a class="headerlink" href="#columns-column-names" title="Permalink to this headline">¶</a></h3>
 <p>.columns gives you the names of the columns in the dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -804,13 +719,13 @@ They are accessed by the . operator</p>
 </div>
 </div>
 <p>The dataframe df has 3 columns.</p>
-</section>
-<section id="column-names-in-modelflow">
-<h3><span class="section-number">5.3.2. </span>Column names in  Modelflow<a class="headerlink" href="#column-names-in-modelflow" title="Permalink to this headline">#</a></h3>
-<aside class="margin sidebar">
+</div>
+<div class="section" id="column-names-in-modelflow">
+<h3><span class="section-number">7.3.2. </span>Column names in  Modelflow<a class="headerlink" href="#column-names-in-modelflow" title="Permalink to this headline">¶</a></h3>
+<div class="margin sidebar">
 <p class="sidebar-title">Modelflow variable names</p>
 <p>Many python Objects are legal as column names in a dataframe, but not as variable names (column names)  in modelflow</p>
-</aside>
+</div>
 <p>The columns have names.<br>In A dataframe column names can be many different python objects. So for instance 123.4  is a legal column name. That would make construction of models very impossible.
 <br>To facilitate construction of models modelflow a column name has to be a  string and start with a letter or _  and followed by letters, underscore or digits.<br>
 <strong>All letters in column names should be upper case.</strong></p>
@@ -821,9 +736,9 @@ They are accessed by the . operator</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">_HORSE1</span></code> is legal</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AVERY_LONG_VAIABLE_NAME_WHIS_IS_LEGAL</span></code> is legal</p></li>
 </ul>
-</section>
-<section id="index-and-time-dimensions-in-modelflow">
-<h3><span class="section-number">5.3.3. </span>.index and time dimensions in Modelflow<a class="headerlink" href="#index-and-time-dimensions-in-modelflow" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="index-and-time-dimensions-in-modelflow">
+<h3><span class="section-number">7.3.3. </span>.index and time dimensions in Modelflow<a class="headerlink" href="#index-and-time-dimensions-in-modelflow" title="Permalink to this headline">¶</a></h3>
 <p>The row names are called .index. For yearly models a list of integers like in <code class="docutils literal notranslate"><span class="pre">df</span></code> is fine.<br>
 Pandas has a number of data types for different date and time objects. They can all be used for models with other frequencies.<br>However be aware that plots will not necessary be working well with all index names.</p>
 <p>When modelflow uses a lagged variable like <code class="docutils literal notranslate"><span class="pre">A(-1)</span></code> It will take the value from the row above the current row. No matter if the index is an integer, a year, quarter or a millisecond. The same goes for leads <code class="docutils literal notranslate"><span class="pre">A(+1)</span></code>  That will be the value in the next row.</p>
@@ -839,9 +754,9 @@ Pandas has a number of data types for different date and time objects. They can 
 </div>
 </div>
 </div>
-</section>
-<section id="eval-evalueation-expressions">
-<h3><span class="section-number">5.3.4. </span>.eval() evalueation expressions<a class="headerlink" href="#eval-evalueation-expressions" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="eval-evalueation-expressions">
+<h3><span class="section-number">7.3.4. </span>.eval() evalueation expressions<a class="headerlink" href="#eval-evalueation-expressions" title="Permalink to this headline">¶</a></h3>
 <p>With this method expressions can be evaluated and new columns created.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -914,11 +829,11 @@ Pandas has a number of data types for different date and time objects. They can 
 </div></div></div>
 </div>
 <p>However, .eval cannot handle lagged variables and no systems of equations. Modelflow can!</p>
-</section>
-<section id="loc-when-slicing-a-dataframe">
-<h3><span class="section-number">5.3.5. </span>.loc[] when slicing a dataframe<a class="headerlink" href="#loc-when-slicing-a-dataframe" title="Permalink to this headline">#</a></h3>
-<section id="loc-row-column-a-single-element">
-<h4><span class="section-number">5.3.5.1. </span>.loc[row,column] A single element<a class="headerlink" href="#loc-row-column-a-single-element" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="loc-when-slicing-a-dataframe">
+<h3><span class="section-number">7.3.5. </span>.loc[] when slicing a dataframe<a class="headerlink" href="#loc-when-slicing-a-dataframe" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="loc-row-column-a-single-element">
+<h4><span class="section-number">7.3.5.1. </span>.loc[row,column] A single element<a class="headerlink" href="#loc-row-column-a-single-element" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2019</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
@@ -931,9 +846,9 @@ Pandas has a number of data types for different date and time objects. They can 
 </div>
 </div>
 </div>
-</section>
-<section id="loc-column-a-single-column">
-<h4><span class="section-number">5.3.5.2. </span>.loc[:,column] A single column<a class="headerlink" href="#loc-column-a-single-column" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="loc-column-a-single-column">
+<h4><span class="section-number">7.3.5.2. </span>.loc[:,column] A single column<a class="headerlink" href="#loc-column-a-single-column" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
@@ -950,9 +865,9 @@ Name: C, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="loc-row-a-single-row">
-<h4><span class="section-number">5.3.5.3. </span>.loc[row,:] A single row<a class="headerlink" href="#loc-row-a-single-row" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="loc-row-a-single-row">
+<h4><span class="section-number">7.3.5.3. </span>.loc[row,:] A single row<a class="headerlink" href="#loc-row-a-single-row" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2019</span><span class="p">,:]</span>
@@ -968,9 +883,9 @@ Name: 2019, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="loc-names-several-columns">
-<h4><span class="section-number">5.3.5.4. </span>.loc[:,[names…]] Several columns<a class="headerlink" href="#loc-names-several-columns" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="loc-names-several-columns">
+<h4><span class="section-number">7.3.5.4. </span>.loc[:,[names…]] Several columns<a class="headerlink" href="#loc-names-several-columns" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]]</span>
@@ -1025,9 +940,9 @@ Name: 2019, dtype: int64
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="loc-slices-of-the-dataframe-can-also-be-assigned-values">
-<h4><span class="section-number">5.3.5.5. </span>.loc[] Slices of the dataframe can also be assigned values<a class="headerlink" href="#loc-slices-of-the-dataframe-can-also-be-assigned-values" title="Permalink to this headline">#</a></h4>
+</div>
+<div class="section" id="loc-slices-of-the-dataframe-can-also-be-assigned-values">
+<h4><span class="section-number">7.3.5.5. </span>.loc[] Slices of the dataframe can also be assigned values<a class="headerlink" href="#loc-slices-of-the-dataframe-can-also-be-assigned-values" title="Permalink to this headline">¶</a></h4>
 <p>This can be very handy when updating scenarios.<br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1094,10 +1009,10 @@ Name: 2019, dtype: int64
 <p>The dimensions on the right hand side of = and the left hand side should match. That is: either the dimensions should be the same, or the right hand side should be broadcasted into the left hand slice.
 A link <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html">here</a></p>
 </div>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1121,48 +1036,42 @@ A link <a class="reference external" href="https://jakevdp.github.io/PythonDataS
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Intro_Jupyter_notebook.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Introduction to the Jupyter Notebook</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Introduction to the Jupyter Notebook</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../howto/update/model%20update.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Update, modifying series in a dataframe using modelflow</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Update, modifying series in a dataframe using modelflow</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ib Hansen<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Andrew Burns and Ib Hansen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
