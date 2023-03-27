@@ -2,54 +2,74 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/frontispiece.ipynb
+root: content/introduction
 options:
   numbered: true
 parts:
-  - caption: Foreword
-    numbered: true  
-    chapters:
-    - file: content/00_Foreword/Foreword
+   - caption: Foreword
+     numbered: false #true  
+     chapters:
+     - file: content/00_Foreword/Foreword
 
-  - caption: Introduction
-    numbered: true  
-    chapters:
-    - file: content/01_Introduction/Introduction
+   - caption: Introduction
+     numbered: true  
+     chapters:
+     - file: content/01_Introduction/Introduction
 
-#   - caption: Macrostructural Models
-#     numbered: true  
-#     chapters:
-#     - file: content/02_MacrostructuralModels/MacroStructuralModels 
-#     - file: content/02_MacrostructuralModels/MFModAndModelFlow
+   - caption: Macrostructural Models
+     numbered: true  
+     chapters:
+     - file: content/02_MacrostructuralModels/MacroStructuralModels 
+     - file: content/02_MacrostructuralModels/MFModAndModelFlow
 
 # # *****************
-#   - caption: Installation of modelflow 
-#     numbered: true  
-#     chapters:   
-#     - file: content/03_Installation/InstallingPython     
-#     - file: content/03_Installation/InstallingModelFlow
-#     - file: content/03_Installation/TestingModelFlow
+   - caption: Installation of modelflow 
+     numbered: true  
+     chapters:   
+     - file: content/03_Installation/InstallingPython     
+     - file: content/03_Installation/InstallingModelFlow
+     - file: content/03_Installation/TestingModelFlow
     
 # # *****************
-#   - caption: Some Jupyter, Python and pandas essentials
-#     numbered: true      
-#     chapters:   
-#     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
-#     - file: content/04_PythonEssentials/PythonPackagesEtc
-# #    - file: content/notebooks/Pandas
+   - caption: Some Jupyter, Python and pandas essentials
+     numbered: true      
+     chapters:   
+     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
+     - file: content/04_PythonEssentials/PythonPackagesEtc
+     - file: content/04_PythonEssentials/UpdateCommand
+     - file: content/04_PythonEssentials/ExtendingDataFrames
+ #    - file: content/notebooks/Pandas
 # #****************
-#   - caption: Modeflflow extensions to pandas 
+   - caption: A simple MFMod-Style Model in modelflow
+     numbered: true      
+     chapters:   
+     - file: content/05_SimpleModel/SimpleModel
+     #- file: content/05_SimpleNodel/SimulatingTheModel
+#     - file: content/06_SimpleNodel/SimulatingTheModel
+
+#*********
+   - caption: Using modelflow with World Bank models
+     numbered: true      
+     chapters:   
+     - file: content/06_WBModels/LoadingWBModel
+     - file: content/06_WBModels/DifferentSimulations
+     #- file: content/06_WBModels/TheKeepOption
+
+#   - caption: modifying models 
+#     numbered: true  
+#     chapters:  
+#     - file: content/howto/fixing/Fixing variables
+#     - file: content/howto/modifymodel/create_real_model
+
+
+
+#   - caption: Onboarding MFMod models from .wf1  
 #     numbered: true  
 #     chapters:   
-#     - file: content/howto/update/model update
-#     - file: content/howto/update/extending_dataframes
-# #*********
-#   - caption: Using modelflow with World Bank models
-#     numbered: true      
-#     chapters:   
-#     - file: content/notebooks/LoadingTheModel
-#     - file: content/notebooks/CreatingTheBaseline
-#     - file: content/notebooks/SimulatingtheSimpleModel
+#     - file: content/howto/onboard/eviews/onboard one model from  wf1
+#     - file: content/howto/onboard/eviews/onboard many models from wf1  
+#     - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
 # #**********
 #   - caption: Make experiments
 #     numbered: true  
@@ -63,19 +83,6 @@ parts:
 #     chapters: 
 #     - file: content/howto/keep/Create and modify charts with keep_plot
 
-#   - caption: Onboarding MFMod models from .wf1  
-#     numbered: true  
-#     chapters:   
-#     - file: content/howto/onboard/eviews/onboard one model from  wf1
-#     - file: content/howto/onboard/eviews/onboard many models from wf1  
-#     - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
-
-
-#   - caption: modifying models 
-#     numbered: true  
-#     chapters:  
-#     - file: content/howto/fixing/Fixing variables
-#     - file: content/howto/modifymodel/create_real_model
     
 #   - caption: Features
 #     numbered: true  
@@ -107,10 +114,10 @@ parts:
 #     chapters:    
 #     - file: content/howto/optimization/Optimize_simple  
     
-   - caption: More
-     numbered: true  
-     chapters:
-     - file: content/litterature
+#   - caption: More
+#     numbered: true  
+##     chapters:
+#     - file: content/litterature
 # #  - caption: Jupyter book test
 # #    numbered: true  
 # #    chapters:     

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Foreword &#8212; MFMod models in Python with ModelFlow</title>
+    <title>Foreword &#8212; MFMod models in Python with ModelFlow</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -48,10 +48,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Introduction" href="../01_Introduction/Introduction.html" />
-    <link rel="prev" title="The World Bank’s MFMod models in python using Modelflow" href="frontispiece.html" />
+    <link rel="next" title="1. Introduction" href="../01_Introduction/Introduction.html" />
+    <link rel="prev" title="The World Bank’s MFMod models in python using Modelflow" href="../introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -85,7 +87,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="frontispiece.html">
+  <a class="reference internal" href="../introduction.html">
    The World Bank’s MFMod models in python using Modelflow
   </a>
  </li>
@@ -98,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Foreword
+   Foreword
   </a>
  </li>
 </ul>
@@ -110,7 +112,104 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Introduction/Introduction.html">
-   2. Introduction
+   1. Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Macrostructural Models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_MacrostructuralModels/MacroStructuralModels.html">
+   2. Macrostructural models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_MacrostructuralModels/MFModAndModelFlow.html">
+   3. Modelflow and the MFMod models of the World Bank
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Installation of modelflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Installation/InstallingPython.html">
+   4. Installation of Modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Installation/InstallingModelFlow.html">
+   5. Installation of Modelflow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Installation/TestingModelFlow.html">
+   6. Testing your installation of modelflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Some Jupyter, Python and pandas essentials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">
+   7. Introduction to  Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/PythonPackagesEtc.html">
+   8. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/ExtendingDataFrames.html">
+   11.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   an extension of standard Pandas
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  A simple MFMod-Style Model in modelflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05_SimpleModel/SimpleModel.html">
+   12. A simple macrostructural model in Modelflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Using modelflow with World Bank models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
+   13. Using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     modelflow
+    </span>
+   </code>
+   with World Bank models
   </a>
  </li>
 </ul>
@@ -192,7 +291,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/main?urlpath=tree/papers/mfbook/content/00_Foreword/Foreword.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/AndrewEdits?urlpath=tree/papers/mfbook/content/00_Foreword/Foreword.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -200,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/mfbook/content/00_Foreword/Foreword.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/AndrewEdits/papers/mfbook/content/00_Foreword/Foreword.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -233,7 +332,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="foreword">
-<h1><span class="section-number">1. </span>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h1>
+<h1>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h1>
 <p>Lorem Ipsum
 “Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…”
 “There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…”</p>
@@ -271,7 +370,7 @@ World Bank Chief Economist</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="frontispiece.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
@@ -281,7 +380,7 @@ World Bank Chief Economist</p>
     <a class='right-next' id="next-link" href="../01_Introduction/Introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Introduction</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
