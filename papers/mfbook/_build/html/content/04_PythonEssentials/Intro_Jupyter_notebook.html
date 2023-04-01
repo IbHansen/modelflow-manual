@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Introduction to Jupyter Notebook &#8212; MFMod models in Python with ModelFlow</title>
+    <title>6. Introduction to Jupyter Notebook &#8212; MFMod models in Python with ModelFlow</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8. Some Python basics" href="PythonPackagesEtc.html" />
-    <link rel="prev" title="6. Testing your installation of modelflow" href="../03_Installation/TestingModelFlow.html" />
+    <link rel="next" title="7. Some Python basics" href="PythonPackagesEtc.html" />
+    <link rel="prev" title="5. Installation of Modelflow" href="../03_Installation/InstallingModelFlow.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Foreword
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -108,22 +108,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Introduction/Introduction.html">
    1. Introduction
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Macrostructural Models
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02_MacrostructuralModels/MacroStructuralModels.html">
    2. Macrostructural models
@@ -134,13 +127,6 @@ const thebe_selector_output = ".output, .cell_output"
    3. Modelflow and the MFMod models of the World Bank
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Installation of modelflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../03_Installation/InstallingPython.html">
    4. Installation of Modelflow
@@ -151,26 +137,19 @@ const thebe_selector_output = ".output, .cell_output"
    5. Installation of Modelflow
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../03_Installation/TestingModelFlow.html">
-   6. Testing your installation of modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Some Jupyter, Python and pandas essentials
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. Introduction to  Jupyter Notebook
+   6. Introduction to  Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="PythonPackagesEtc.html">
-   8. Some Python basics
+   7. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UpdateCommand.html">
+   10. Modelflows extensions to pandas
   </a>
  </li>
  <li class="toctree-l1">
@@ -187,31 +166,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  A simple MFMod-Style Model in modelflow
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../05_SimpleModel/SimpleModel.html">
-   12. A simple macrostructural model in Modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Using modelflow with World Bank models
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
-   13. Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     modelflow
-    </span>
-   </code>
-   with World Bank models
+   13. A simple macrostructural model in Modelflow
   </a>
  </li>
 </ul>
@@ -322,73 +283,78 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-idea-of-the-notebook">
-   7.1. The idea of the notebook
+   6.1. The idea of the notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupter-notebook-cells">
-   7.2. Jupter Notebook cells
+   6.2. Jupter Notebook cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#execution-of-cells">
-   7.3. Execution of cells
+   6.3. Execution of cells
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#execution-of-code-cells">
-     7.3.1. Execution of code cells
+     6.3.1. Execution of code cells
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-semi-colon-supresses-output-in-jn">
-       7.3.1.1. the semi-colon “;” supresses output in JN
+      <a class="reference internal nav-link" href="#the-semi-colon-supresses-output-in-jupyter-notebook">
+       6.3.1.1. the semi-colon “;” supresses output in Jupyter Notebook
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#auto-complete-and-context-sensitive-help">
-     7.3.2. Auto-complete and context-sensitive help
+     6.3.2. Auto-complete and context-sensitive help
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-markdown-scripting-language-in-jn">
-   7.4. The markdown scripting language in JN
+  <a class="reference internal nav-link" href="#the-markdown-scripting-language-in-jupyter-notebook">
+   6.4. The markdown scripting language in Jupyter Notebook
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#common-markdown-commands">
-     7.4.1. Common markdown commands
+     6.4.1. Common markdown commands
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tables-in-markdown">
-     7.4.2. Tables in markdown
+     6.4.2. Tables in markdown
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#links-to-mire-info-on-markdown">
-     7.4.3. links to mire info on markdown
+    <a class="reference internal nav-link" href="#displaying-code">
+     6.4.3. Displaying code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rendering-mathematics-in-markdown">
+     6.4.4. Rendering mathematics in markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links-to-more-info-on-markdown">
+     6.4.5. links to more info on markdown
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rendering-mathematics-in-markdown">
-   7.5. Rendering mathematics in markdown
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-add-delete-and-move-cells">
-   7.6. How to add, delete and move cells
+   6.5. How to add, delete and move cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#change-the-type-of-a-cell">
-   7.7. Change the type of a cell
+   6.6. Change the type of a cell
   </a>
  </li>
 </ul>
@@ -413,73 +379,78 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-idea-of-the-notebook">
-   7.1. The idea of the notebook
+   6.1. The idea of the notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupter-notebook-cells">
-   7.2. Jupter Notebook cells
+   6.2. Jupter Notebook cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#execution-of-cells">
-   7.3. Execution of cells
+   6.3. Execution of cells
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#execution-of-code-cells">
-     7.3.1. Execution of code cells
+     6.3.1. Execution of code cells
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-semi-colon-supresses-output-in-jn">
-       7.3.1.1. the semi-colon “;” supresses output in JN
+      <a class="reference internal nav-link" href="#the-semi-colon-supresses-output-in-jupyter-notebook">
+       6.3.1.1. the semi-colon “;” supresses output in Jupyter Notebook
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#auto-complete-and-context-sensitive-help">
-     7.3.2. Auto-complete and context-sensitive help
+     6.3.2. Auto-complete and context-sensitive help
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-markdown-scripting-language-in-jn">
-   7.4. The markdown scripting language in JN
+  <a class="reference internal nav-link" href="#the-markdown-scripting-language-in-jupyter-notebook">
+   6.4. The markdown scripting language in Jupyter Notebook
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#common-markdown-commands">
-     7.4.1. Common markdown commands
+     6.4.1. Common markdown commands
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tables-in-markdown">
-     7.4.2. Tables in markdown
+     6.4.2. Tables in markdown
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#links-to-mire-info-on-markdown">
-     7.4.3. links to mire info on markdown
+    <a class="reference internal nav-link" href="#displaying-code">
+     6.4.3. Displaying code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rendering-mathematics-in-markdown">
+     6.4.4. Rendering mathematics in markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links-to-more-info-on-markdown">
+     6.4.5. links to more info on markdown
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rendering-mathematics-in-markdown">
-   7.5. Rendering mathematics in markdown
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-add-delete-and-move-cells">
-   7.6. How to add, delete and move cells
+   6.5. How to add, delete and move cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#change-the-type-of-a-cell">
-   7.7. Change the type of a cell
+   6.6. Change the type of a cell
   </a>
  </li>
 </ul>
@@ -492,14 +463,14 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-jupyter-notebook">
-<h1><span class="section-number">7. </span>Introduction to  Jupyter Notebook<a class="headerlink" href="#introduction-to-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
-<p>Jupyter Notebook is a web application for creating, annotating, experimenting and working with computational documents.  Originally developed for python, the latest versions of EViews also support jupyter Notebooks. Junpyter Notebook (JN) offers a simple, streamlined, document-centric experience and can be a great environment for documenting the work you are doing, and trying alternative methods of achieving desirable results.  Many of the methods in <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> have been developed to work well with Jupyter notebook and indeed this documentation was written as a series of Jupyter Notebooks bound together with Jupyter Book.</p>
-<p>Jupyter Notebook is not the only way to work with modelflow or Python.  Indeed, as users become more advanced they are likely to migrate to a more program-centric IDE (Interactive Development Environment) like Spyder or Microsoft Visual Code.</p>
+<h1><span class="section-number">6. </span>Introduction to  Jupyter Notebook<a class="headerlink" href="#introduction-to-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+<p>Jupyter Notebook is a web application for creating, annotating, simulating and working with computational documents.  Originally developed for python, the latest versions of EViews also support Jupyter Notebooks. Jupyter Notebook offers a simple, streamlined, document-centric experience and can be a great environment for documenting the work you are doing, and trying alternative methods of achieving desirable results.  Many of the methods in <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> have been developed to work well with Jupyter Notebook. Indeed this documentation was written as a series of Jupyter Notebooks bound together with Jupyter Book.</p>
+<p>Jupyter Notebook is not the only way to work with modelflow or Python.  As users become more advanced they are likely to migrate to a more program-centric IDE (Interactive Development Environment) like Spyder or Microsoft Visual Code.</p>
 <p>However, to start Jupyter Notebooks are a great way to learn, follow work done by others and tweak them to fit your own needs.</p>
 <p>There are many fine tutorials on Jupyter Notebook on the web, and <a class="reference external" href="https://docs.jupyter.org/en/latest/">The official Jupyter site</a> is a good starting point. The following aims to provide enough information to get a user started.</p>
 <div class="section" id="the-idea-of-the-notebook">
-<h2><span class="section-number">7.1. </span>The idea of the notebook<a class="headerlink" href="#the-idea-of-the-notebook" title="Permalink to this headline">¶</a></h2>
-<p>The idea behind jupyter notebook [JN] was to create an interactive version of the notebooks that scientists use(d) to:</p>
+<h2><span class="section-number">6.1. </span>The idea of the notebook<a class="headerlink" href="#the-idea-of-the-notebook" title="Permalink to this headline">¶</a></h2>
+<p>The idea behind jupyter notebook was to create an interactive version of the notebooks that scientists use(d) to:</p>
 <ul class="simple">
 <li><p>record what they have done</p></li>
 <li><p>perhaps explain why</p></li>
@@ -509,12 +480,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The motivation for these notebooks and Jupyter notebook is to encourage practices that will ensure that if followed exactly by others, that they will be able to generate the same results.</p>
 </div>
 <div class="section" id="jupter-notebook-cells">
-<h2><span class="section-number">7.2. </span>Jupter Notebook cells<a class="headerlink" href="#jupter-notebook-cells" title="Permalink to this headline">¶</a></h2>
-<p>A JN does all of that (and perhaps a bit more).  It is divided into ‘cells’.</p>
-<p><em><strong>JN Cells can contain:</strong></em></p>
+<h2><span class="section-number">6.2. </span>Jupter Notebook cells<a class="headerlink" href="#jupter-notebook-cells" title="Permalink to this headline">¶</a></h2>
+<p>A Jupyter Notebook  does all of that (and perhaps a bit more).  It is divided into ‘cells’.</p>
+<p><em><strong>Jupyter Notebook cells can contain:</strong></em></p>
 <ul class="simple">
 <li><p><strong>computer code</strong> (typically python code, but as noted other kernels – like Eviews – can be used with jupyter).</p></li>
-<li><p><strong>markdown text</strong>: plain text that can include special characters that make some text appear as bold, or indicate the text is headers, or instruct JN to render the text as a mathematical formula.  All of the text in this document was entered using JN’s markdown language</p></li>
+<li><p><strong>markdown text</strong>: plain text that can include special characters that make some text appear as bold, or indicate the text is headers, or instruct JN to render the text as a mathematical formula.  All of the text in this document was entered using Jupyter Notebook’s markdown language</p></li>
 <li><p>Results (in the form of tables or graphs) from the execution of computer code specified in a code cell</p></li>
 </ul>
 <p><strong>Every cell has two modes:</strong></p>
@@ -529,16 +500,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="execution-of-cells">
-<h2><span class="section-number">7.3. </span>Execution of cells<a class="headerlink" href="#execution-of-cells" title="Permalink to this headline">¶</a></h2>
-<p>Every cell in a JN can be executed, either by using the Run button on the JN menu, or by using one of <strong>two keyboard shortcuts</strong>:</p>
+<h2><span class="section-number">6.3. </span>Execution of cells<a class="headerlink" href="#execution-of-cells" title="Permalink to this headline">¶</a></h2>
+<p>Every cell in a JN can be executed, either by using the Run button on the Jupyter Notebook menu, or by using one of <strong>two keyboard shortcuts</strong>:</p>
 <ul class="simple">
 <li><p><strong>ctrl + Enter</strong>: Executes the code in the cell or formats the markdown of a cell.  The current cell retains the focus – cursor stays on cell executed.</p></li>
-<li><p><strong>shift + enter</strong>: Executes the code in the cell or formats the markdown of a cell. Focus (cursor) jump to the next cell</p></li>
+<li><p><strong>shift + enter</strong>: Executes the code in the cell or formats the markdown of a cell. Focus (cursor) jumps to the next cell</p></li>
 </ul>
-<p>Useful shortcuts: (see also “Help” =&gt; “Keyboard Shortcuts” or simply press keyboard icon in the toolbar)</p>
+<p>For other useful shortcuts see “Help” =&gt; “Keyboard Shortcuts” or simply press keyboard icon in the toolbar.</p>
 <div class="section" id="execution-of-code-cells">
-<h3><span class="section-number">7.3.1. </span>Execution of code cells<a class="headerlink" href="#execution-of-code-cells" title="Permalink to this headline">¶</a></h3>
-<p>Below is a code with some standard python that declares a variable “x” and assigns it the value 10, and declares a second variable “y” and assigns it the value 45.  The final line of y alone, instructs python to display the value of the variable y.  The results of the operation appear in the KN in an output cell.</p>
+<h3><span class="section-number">6.3.1. </span>Execution of code cells<a class="headerlink" href="#execution-of-code-cells" title="Permalink to this headline">¶</a></h3>
+<p>Below is a code with some standard python that declares a variable “x”, assigns it the value 10, declares a second variable “y” and assigns it the value 45.  The final line of y alone, instructs python to display the value of the variable y.  The results of the operation appear in Jupyter Notebook as an output cell Out[#].</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
@@ -553,9 +524,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="the-semi-colon-supresses-output-in-jn">
-<h4><span class="section-number">7.3.1.1. </span>the semi-colon “;” supresses output in JN<a class="headerlink" href="#the-semi-colon-supresses-output-in-jn" title="Permalink to this headline">¶</a></h4>
-<p>In the example below, a semi-colon “;” has been appended to the final line.  This supresses the display of the value contained by y;  As a result there is no output cell.</p>
+<div class="section" id="the-semi-colon-supresses-output-in-jupyter-notebook">
+<h4><span class="section-number">6.3.1.1. </span>the semi-colon “;” supresses output in Jupyter Notebook<a class="headerlink" href="#the-semi-colon-supresses-output-in-jupyter-notebook" title="Permalink to this headline">¶</a></h4>
+<p>In the example below, a semi-colon “;” has been appended to the final line.  This suppresses the display of the value contained by y;  As a result there is no output cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
@@ -579,7 +550,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Variables in a JN session are persistent, as a result in the subsequent cell, we can declare a variable ‘z’ equal to 2*y and it will have the value 90.</p>
+<p>Variables in a Jupyter Notebook session are persistent, as a result in the subsequent cell, we can declare a variable ‘z’ equal to 2*y and it will have the value 90.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">=</span><span class="n">y</span><span class="o">*</span><span class="mi">2</span>
@@ -596,7 +567,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="auto-complete-and-context-sensitive-help">
-<h3><span class="section-number">7.3.2. </span>Auto-complete and context-sensitive help<a class="headerlink" href="#auto-complete-and-context-sensitive-help" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>Auto-complete and context-sensitive help<a class="headerlink" href="#auto-complete-and-context-sensitive-help" title="Permalink to this headline">¶</a></h3>
 <p>When editing a code cell, you can use these short-cuts to autocomplete and or call up documentation for a command.</p>
 <ul class="simple">
 <li><p><strong>tab</strong>: autocomplete and  method selection</p></li>
@@ -604,12 +575,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 </div>
-<div class="section" id="the-markdown-scripting-language-in-jn">
-<h2><span class="section-number">7.4. </span>The markdown scripting language in JN<a class="headerlink" href="#the-markdown-scripting-language-in-jn" title="Permalink to this headline">¶</a></h2>
-<p>Markdown is a lightweight markup language for creating formatted text using a plain-text editor.  Used in a markdown cell of RN it can be used to produce nicely formatted text that mixes text, code and outputs from executed python code.</p>
+<div class="section" id="the-markdown-scripting-language-in-jupyter-notebook">
+<h2><span class="section-number">6.4. </span>The markdown scripting language in Jupyter Notebook<a class="headerlink" href="#the-markdown-scripting-language-in-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Text cells in a notebook can be made more interesting by using markdown.</p>
+<p>Cells designated as markdown cells when executed are rendered in a rich text format (html).</p>
+<p>Markdown is a lightweight markup language for creating formatted text using a plain-text editor.  Used in a markdown cell of Jupyter Notebook it can be used to produce nicely formatted text that mixes text, mathematical formulae, code and outputs from executed python code.</p>
 <p>Rather than the relatively complex commands of html &lt;h1&gt;&lt;/h1&gt;, markdown uses a simplified set of commands to control how text elements should be rendered.</p>
 <div class="section" id="common-markdown-commands">
-<h3><span class="section-number">7.4.1. </span>Common markdown commands<a class="headerlink" href="#common-markdown-commands" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Common markdown commands<a class="headerlink" href="#common-markdown-commands" title="Permalink to this headline">¶</a></h3>
 <p>Some of the most common of these include:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -624,24 +597,27 @@ const thebe_selector_output = ".output, .cell_output"
 <tr class="row-odd"><td class="text-align:left"><p>##</p></td>
 <td class="text-align:left"><p>second level</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>**Bold text**</p></td>
+<tr class="row-even"><td class="text-align:left"><p>###</p></td>
+<td class="text-align:left"><p>third level etc.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>**Bold text**</p></td>
 <td class="text-align:left"><p><strong>Bold text</strong></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>*Italics text*</p></td>
+<tr class="row-even"><td class="text-align:left"><p>*Italics text*</p></td>
 <td class="text-align:left"><p><em>Italics text</em></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>* text</p></td>
+<tr class="row-odd"><td class="text-align:left"><p>* text</p></td>
 <td class="text-align:left"><p>Bulleted text or dot notes</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>1. text</p></td>
+<tr class="row-even"><td class="text-align:left"><p>1. text</p></td>
 <td class="text-align:left"><p>1. Numbered bullets</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="tables-in-markdown">
-<h3><span class="section-number">7.4.2. </span>Tables in markdown<a class="headerlink" href="#tables-in-markdown" title="Permalink to this headline">¶</a></h3>
-<p>Tables like the one above can be constructed using | as separators.  To display a (an unexecutable)  block of code within a markdown cell it can be commented by encapsulating it in  three ` at the beginning and end ``` text to be rendered as code ```.</p>
+<h3><span class="section-number">6.4.2. </span>Tables in markdown<a class="headerlink" href="#tables-in-markdown" title="Permalink to this headline">¶</a></h3>
+<p>Tables like the one above can be constructed using | as separators.</p>
 <p>Below is the markdown code that generated the above table:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">symbol</span>           <span class="o">|</span> <span class="n">Effect</span>          <span class="o">|</span>
 <span class="o">|</span><span class="p">:</span><span class="o">--|</span><span class="p">:</span><span class="o">-----------------|</span>
@@ -655,21 +631,22 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="section" id="links-to-mire-info-on-markdown">
-<h3><span class="section-number">7.4.3. </span>links to mire info on markdown<a class="headerlink" href="#links-to-mire-info-on-markdown" title="Permalink to this headline">¶</a></h3>
-<p>There are several very good markdown cheatsheets on the internet, one of these is <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">here</a></p>
-</div>
+<div class="section" id="displaying-code">
+<h3><span class="section-number">6.4.3. </span>Displaying code<a class="headerlink" href="#displaying-code" title="Permalink to this headline">¶</a></h3>
+<p>To display a (unexecutable)  block of code within a markdown cell, encapsulate it (sourround it) with three ` at the beginning and end.  The below code entered in a markdown cell,</p>
+<p>``` text to be rendered as code ```.</p>
+<p>will be rendered as: <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">rendered</span> <span class="pre">as</span> <span class="pre">code</span></code>.</p>
 </div>
 <div class="section" id="rendering-mathematics-in-markdown">
-<h2><span class="section-number">7.5. </span>Rendering mathematics in markdown<a class="headerlink" href="#rendering-mathematics-in-markdown" title="Permalink to this headline">¶</a></h2>
-<p>JN Markdown mode supports LaTeX mathematical notation.<br></p>
-<p>Inline enclose the latex in <code class="docutils literal notranslate"><span class="pre">$</span></code>:</p>
+<h3><span class="section-number">6.4.4. </span>Rendering mathematics in markdown<a class="headerlink" href="#rendering-mathematics-in-markdown" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter Notebook’s inmplementation of Markdown supports <span class="math notranslate nohighlight">\(\LaTeX\)</span> mathematical notation.<br></p>
+<p>Inline enclose the <span class="math notranslate nohighlight">\(\LaTeX\)</span> code in <code class="docutils literal notranslate"><span class="pre">$</span></code>:</p>
 <p>An Equation: <code class="docutils literal notranslate"><span class="pre">$y_t</span> <span class="pre">=</span> <span class="pre">\beta_0</span> <span class="pre">+</span> <span class="pre">\beta_1</span> <span class="pre">x_t</span> <span class="pre">+</span> <span class="pre">u_t\$</span></code> will renders as: <span class="math notranslate nohighlight">\(y_t = \beta_0 + \beta_1 x_t + u_t\)</span></p>
-<p>if enclosed in <code class="docutils literal notranslate"><span class="pre">$$</span></code> <code class="docutils literal notranslate"><span class="pre">$$</span></code> it will be centered on its on line.</p>
+<p>if enclosed in <code class="docutils literal notranslate"><span class="pre">$$</span></code> <code class="docutils literal notranslate"><span class="pre">$$</span></code> it will be centered on its own line.</p>
 <div class="math notranslate nohighlight">
 \[y_t = \beta_0 + \beta_1 x_t + u_t\]</div>
 <p>If you want the math to stand alone (not be in-line, then use two <code class="docutils literal notranslate"><span class="pre">$</span></code> signs)</p>
-<p>The below block renders as below</p>
+<p>The below block renders as below, with the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> symbol telling <span class="math notranslate nohighlight">\(\LaTeX\)</span> to align the different lines (separates by <code class="docutils literal notranslate"><span class="pre">\\</span></code>) on the character immediately after the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>. Here it is used to align the texts on the space preceding the equals sign in each line.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
 <span class="n">Y_t</span>  <span class="o">&amp;=</span>  <span class="n">C_t</span><span class="o">+</span><span class="n">I_t</span><span class="o">+</span><span class="n">G</span><span class="o">+</span><span class="n">t</span><span class="o">+</span> <span class="p">(</span><span class="n">X_t</span><span class="o">-</span><span class="n">M_t</span><span class="p">)</span> \\
 <span class="n">C_t</span> <span class="o">&amp;=</span> <span class="n">c_t</span><span class="p">(</span><span class="n">C_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span><span class="n">C_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span><span class="n">I_t</span><span class="p">,</span><span class="n">G_t</span><span class="p">,</span><span class="n">X_t</span><span class="p">,</span><span class="n">M_t</span><span class="p">,</span><span class="n">P_t</span><span class="p">)</span>\\
@@ -690,9 +667,14 @@ X_t &amp;= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 \end{align*}\]</div>
 </div>
+<div class="section" id="links-to-more-info-on-markdown">
+<h3><span class="section-number">6.4.5. </span>links to more info on markdown<a class="headerlink" href="#links-to-more-info-on-markdown" title="Permalink to this headline">¶</a></h3>
+<p>There are several very good markdown cheatsheets on the internet, one of these is <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">here</a></p>
+</div>
+</div>
 <div class="section" id="how-to-add-delete-and-move-cells">
-<h2><span class="section-number">7.6. </span>How to add, delete and move cells<a class="headerlink" href="#how-to-add-delete-and-move-cells" title="Permalink to this headline">¶</a></h2>
-<p>JN cells can be added, deleted and moved.</p>
+<h2><span class="section-number">6.5. </span>How to add, delete and move cells<a class="headerlink" href="#how-to-add-delete-and-move-cells" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Notebook cells can be added, deleted and moved.</p>
 <p><strong>Using the Toolbar</strong></p>
 <ul class="simple">
 <li><p><strong>+ button</strong>: add a cell below the current cell</p></li>
@@ -709,7 +691,7 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 </ul>
 </div>
 <div class="section" id="change-the-type-of-a-cell">
-<h2><span class="section-number">7.7. </span>Change the type of a cell<a class="headerlink" href="#change-the-type-of-a-cell" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Change the type of a cell<a class="headerlink" href="#change-the-type-of-a-cell" title="Permalink to this headline">¶</a></h2>
 <p>You can also change the type of a cell. New cells are by default “code” cells.</p>
 <p><strong>Using the Toolbar</strong></p>
 <ul class="simple">
@@ -755,17 +737,17 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../03_Installation/TestingModelFlow.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../03_Installation/InstallingModelFlow.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Testing your installation of modelflow</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Installation of Modelflow</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="PythonPackagesEtc.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Some Python basics</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Some Python basics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

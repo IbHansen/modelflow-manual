@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6. Testing your installation of modelflow" href="TestingModelFlow.html" />
+    <link rel="next" title="6. Introduction to Jupyter Notebook" href="../04_PythonEssentials/Intro_Jupyter_notebook.html" />
     <link rel="prev" title="4. Installation of Modelflow" href="InstallingPython.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Foreword
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -106,22 +106,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Introduction/Introduction.html">
    1. Introduction
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Macrostructural Models
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02_MacrostructuralModels/MacroStructuralModels.html">
    2. Macrostructural models
@@ -132,13 +125,6 @@ const thebe_selector_output = ".output, .cell_output"
    3. Modelflow and the MFMod models of the World Bank
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Installation of modelflow
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="InstallingPython.html">
    4. Installation of Modelflow
@@ -150,25 +136,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TestingModelFlow.html">
-   6. Testing your installation of modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Some Jupyter, Python and pandas essentials
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">
-   7. Introduction to  Jupyter Notebook
+   6. Introduction to  Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/PythonPackagesEtc.html">
-   8. Some Python basics
+   7. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">
+   10. Modelflows extensions to pandas
   </a>
  </li>
  <li class="toctree-l1">
@@ -185,31 +164,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  A simple MFMod-Style Model in modelflow
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../05_SimpleModel/SimpleModel.html">
-   12. A simple macrostructural model in Modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Using modelflow with World Bank models
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
-   13. Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     modelflow
-    </span>
-   </code>
-   with World Bank models
+   13. A simple macrostructural model in Modelflow
   </a>
  </li>
 </ul>
@@ -371,16 +332,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="installation-of-modelflow">
 <h1><span class="section-number">5. </span>Installation of Modelflow<a class="headerlink" href="#installation-of-modelflow" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The following instructions concern the installation of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> within an Anaconda installation of python.  Different flavors of Python may require slight changes to this recipe, but are not covered here.</p>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is a python package that defines the modelflow class <code class="docutils literal notranslate"><span class="pre">model</span></code> among others.  <code class="docutils literal notranslate"><span class="pre">Modelflow1</span></code> has many dependencies. Installing the class the first time can take some time depending on your internet connection and computer speed.  It is essential that you follow all of the steps outlined below to ensure that your version of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> operates as expected.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
+<p>The following instructions concern the installation of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> within an Anaconda installation of python.  Different flavors of Python may require slight changes to this recipe, but are not covered here.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is built and tested using the anaconda python environment.  It is strongly recommended to use Anaconda with ````modelflow```.</p>
 <p>If you have not already installed Anaconda following the instructions in the preceding chapter, please do so <strong>Now</strong>.</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is a python package that defines the modelflow class <code class="docutils literal notranslate"><span class="pre">model</span></code> among other things.  <code class="docutils literal notranslate"><span class="pre">Modelflow1</span></code> has many dependencies. Installing the class the first time can take some time depending on your internet connection and computer speed.  It is essential that you follow all of the steps outlined below to ensure that your version of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> operates as expected.</p>
 <div class="section" id="installation-of-modelflow-under-anaconda">
 <h2><span class="section-number">5.1. </span>Installation of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> under Anaconda<a class="headerlink" href="#installation-of-modelflow-under-anaconda" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -399,7 +357,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 </pre></div>
 </div>
-<p>Depending on the speed of your computer and of your internet connection installation could take as little as 10 minutes or more than 1/2 of an hour.</p>
+<p>Depending on the speed of your computer and of your internet connection installation could take as little as 10 minutes or more than 1/2 an hour.</p>
 <p>At the end of the process you will have a new conda environment ModelFlow, and this will have been activated.</p>
 <p>Once modelflow is installed you are ready to work with it.  The following sections give a brief introduction to Jupyter notebook, which is a flexible tool that allows us to execute python code, interact with the modelflow class and World Bank Models and annotate what we have done for future replication.</p>
 <div class="admonition note">
@@ -410,10 +368,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Activate the ModelFlow environment we just created by executing the folling command</p></li>
 </ol>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">modelflow</span></code></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are already familiar with python and jupyter notebooks you can probably skip to chapter [xx].</p>
 </div>
 </div>
 </div>
@@ -450,10 +404,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title"><span class="section-number">4. </span>Installation of Modelflow</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="TestingModelFlow.html" title="next page">
+    <a class='right-next' id="next-link" href="../04_PythonEssentials/Intro_Jupyter_notebook.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Testing your installation of modelflow</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Introduction to  Jupyter Notebook</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Foreword
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -106,22 +106,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Introduction/Introduction.html">
    1. Introduction
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Macrostructural Models
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="MacroStructuralModels.html">
    2. Macrostructural models
@@ -132,13 +125,6 @@ const thebe_selector_output = ".output, .cell_output"
    3. Modelflow and the MFMod models of the World Bank
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Installation of modelflow
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../03_Installation/InstallingPython.html">
    4. Installation of Modelflow
@@ -150,25 +136,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03_Installation/TestingModelFlow.html">
-   6. Testing your installation of modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Some Jupyter, Python and pandas essentials
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">
-   7. Introduction to  Jupyter Notebook
+   6. Introduction to  Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/PythonPackagesEtc.html">
-   8. Some Python basics
+   7. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">
+   10. Modelflows extensions to pandas
   </a>
  </li>
  <li class="toctree-l1">
@@ -185,31 +164,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  A simple MFMod-Style Model in modelflow
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../05_SimpleModel/SimpleModel.html">
-   12. A simple macrostructural model in Modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Using modelflow with World Bank models
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
-   13. Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     modelflow
-    </span>
-   </code>
-   with World Bank models
+   13. A simple macrostructural model in Modelflow
   </a>
  </li>
 </ul>
@@ -359,11 +320,12 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="modelflow-and-the-mfmod-models-of-the-world-bank">
 <h1><span class="section-number">3. </span>Modelflow and the MFMod models of the World Bank<a class="headerlink" href="#modelflow-and-the-mfmod-models-of-the-world-bank" title="Permalink to this headline">¶</a></h1>
-<p>At the World Bank models built using the MFMod framework are developed in <span class="xref myst">EViews</span> and when disseminated to clients are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved and operated under any system capable of solving a system of simultaneous equations, as long as the equations and data can be transferred from EViews to the secondary system. <code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> facilitates this process and offers a wide range of features that permit not only solving the model, but also provides a rich and powerful suite of tools for analyzing the model and reporting results.</p>
+<p>At the World Bank models built using the MFMod framework are developed in <span class="xref myst">EViews</span>. When disseminated to clients, the models are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved, and operated under any system capable of solving a system of simultaneous equations – as long as the equations and data can be transferred from EViews to the secondary system. <code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.</p>
 <div class="section" id="a-brief-history-of-modelflow">
 <h2><span class="section-number">3.1. </span>A brief history of ModelFlow<a class="headerlink" href="#a-brief-history-of-modelflow" title="Permalink to this headline">¶</a></h2>
-<p>Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro-structural  model to python, but also been used to bring several stress-testing models developed by European Central Banks and the European Central Bank into a the python environment.</p>
-<p>Beginning in 2019 Ib has worked with the World Bank to develop additional features that facilitate working with models built using the Bank’s MFMod Framework, with the objective of creating an open source platform through which the Bank’s models can be made available to the public.  This paper and the models that accompany are the initial product of this collaboration.</p>
+<p>Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro-structural  model to python, but also been used to bring several stress-testing models developed by European Central Banks and the European Central Bank into a python environment.</p>
+<p>Beginning in 2019, Hansen has worked with the World Bank to develop additional features that facilitate working with models built using the Bank’s MFMod Framework, with the objective of creating an open source platform through which the Bank’s models can be made available to the public.</p>
+<p>This paper, and the models that accompany it, are the product of this collaboration.</p>
 </div>
 </div>
 

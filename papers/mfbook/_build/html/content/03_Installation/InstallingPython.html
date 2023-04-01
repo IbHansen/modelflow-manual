@@ -94,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Foreword
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -106,22 +106,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Getting started
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Introduction/Introduction.html">
    1. Introduction
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Macrostructural Models
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../02_MacrostructuralModels/MacroStructuralModels.html">
    2. Macrostructural models
@@ -132,13 +125,6 @@ const thebe_selector_output = ".output, .cell_output"
    3. Modelflow and the MFMod models of the World Bank
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Installation of modelflow
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    4. Installation of Modelflow
@@ -150,25 +136,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TestingModelFlow.html">
-   6. Testing your installation of modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Some Jupyter, Python and pandas essentials
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">
-   7. Introduction to  Jupyter Notebook
+   6. Introduction to  Jupyter Notebook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/PythonPackagesEtc.html">
-   8. Some Python basics
+   7. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">
+   10. Modelflows extensions to pandas
   </a>
  </li>
  <li class="toctree-l1">
@@ -185,31 +164,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  A simple MFMod-Style Model in modelflow
+  The World Bank's MFMod Framework and Modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../05_SimpleModel/SimpleModel.html">
-   12. A simple macrostructural model in Modelflow
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Using modelflow with World Bank models
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
-   13. Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     modelflow
-    </span>
-   </code>
-   with World Bank models
+   13. A simple macrostructural model in Modelflow
   </a>
  </li>
 </ul>
@@ -393,15 +354,12 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="installation-of-modelflow">
 <h1><span class="section-number">4. </span>Installation of Modelflow<a class="headerlink" href="#installation-of-modelflow" title="Permalink to this headline">¶</a></h1>
-<p>Modelflow is a python package that defines the <code class="docutils literal notranslate"><span class="pre">model</span></code> class, its methods and a number of other functions that extend and combine pre-existing python functions to allow the easy solution of complex systems of equations including macro-structural models like MFMod.  To tale advantage of the function, a user needs to first install python, or preferably the Anaconda variant, several supporting packages, and the <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> package.  While <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> can be run directly from the python command-line or IDEs (Interactive Development Environments) like Spyder or Microsoft’s Visual Code, it is suggested that users also install the Jupyter notebook system, which facilitates and interactive approach to building python programs, annotating them and ultimately doing simulations using MFMod under <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>.</p>
+<p>Modelflow is a python package that defines the <code class="docutils literal notranslate"><span class="pre">model</span></code> class, its methods and a number of other functions that extend and combine pre-existing python functions to allow the easy solution of complex systems of equations including macro-structural models like MFMod.  To work with <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>, a user needs to first install python (preferably the Anaconda variant), several supporting packages, and of course the <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> package itself.  While <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> can be run directly from the python command-line or IDEs (Interactive Development Environments) like <code class="docutils literal notranslate"><span class="pre">Spyder</span></code> or Microsoft’s <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Code</span></code>, it is suggested that users also install the Jupyter notebook system. Jupyter Notebook facilitates an interactive approach to building python programs, annotating them and ultimately doing simulations using MFMod under <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>. This entire manual and the examples in it were all written and executed in the Jupyter Notebook environment.</p>
 <div class="section" id="installation-of-python">
 <h2><span class="section-number">4.1. </span>Installation of Python<a class="headerlink" href="#installation-of-python" title="Permalink to this headline">¶</a></h2>
-<p>Python is an extremely powerful and versatile and extensible open-source language. It is widely used for artificial intelligence application, interactive web sites, and scientific processing. As of 14 November 2022, the Python Package Index (PyPI), the official repository for third-party Python software, contained over 415,000 packages that extend its functionality (1). Modelflow is one of these packages.</p>
+<p>Python is an extremely powerful and versatile and extensible open-source language. It is widely used for artificial intelligence application, interactive web sites, and scientific processing. As of 14 November 2022, the Python Package Index (PyPI), the official repository for third-party Python software, contained over 415,000 packages that extend its functionality <a class="footnote-reference brackets" href="#pythonlibrary" id="id1">1</a>. Modelflow is one of these packages.</p>
 <p>Python comes in many flavors and <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> will work with any of them.  However, it is strongly suggested that you use the Anaconda version of Python.  The remainder of this section points to instructions on how to install the Anaconda version of python (under Windows, MacOS and under Linux). Modelflow works equally well under all three.</p>
-<p>The following section describes the steps necessary to create an anaconda environment with all the necessary packages to run <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>.</p>
-<ol class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia article on python</a>.</p></li>
-</ol>
+<p>This is followed by section that describes the steps necessary to create an anaconda environment with all the necessary packages to run <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>.</p>
 <div class="section" id="installation-of-anaconda-under-windows">
 <h3><span class="section-number">4.1.1. </span>Installation of Anaconda under Windows<a class="headerlink" href="#installation-of-anaconda-under-windows" title="Permalink to this headline">¶</a></h3>
 <p>The definitive source for installing Anaconda under windows can be found <a class="reference external" href="https://docs.anaconda.com/anaconda/install/windows/">here</a>.</p>
@@ -414,7 +372,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="installation-of-python-under-linux">
 <h3><span class="section-number">4.1.3. </span>Installation of Python under Linux<a class="headerlink" href="#installation-of-python-under-linux" title="Permalink to this headline">¶</a></h3>
 <p>The definitive source for installing Anaconda under Linux can be found <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">here</a>.</p>
-<p>Once Anaconda is fully installed, you can then go to the installation of modelflow instructions.</p>
+<p>Once Anaconda is fully installed, you can then go to the following instruction on how to install <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> and the packages on which it depends.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="pythonlibrary"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia article on python</a></p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
