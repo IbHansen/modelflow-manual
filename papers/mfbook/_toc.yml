@@ -16,32 +16,34 @@ parts:
      chapters:
      - file: content/01_Introduction/Introduction
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
-     - file: content/02_MacrostructuralModels/MFModAndModelFlow
+       sections:
+       - file: content/02_MacrostructuralModels/MFModAndModelFlow
      - file: content/03_Installation/InstallingPython     
-     - file: content/03_Installation/InstallingModelFlow
+       sections:
+       - file: content/03_Installation/InstallingModelFlow
 #    # - file: content/03_Installation/TestingModelFlow
     
 # *****************
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook
      - file: content/04_PythonEssentials/PythonPackagesEtc
-     - file: content/04_PythonEssentials/UpdateCommand
-     - file: content/04_PythonEssentials/ExtendingDataFrames
+       sections:
+       - file: content/04_PythonEssentials/UpdateCommand
+       - file: content/04_PythonEssentials/ExtendingDataFrames
  #    - file: content/notebooks/Pandas
 #****************
    - caption: The World Bank's MFMod Framework and Modelflow
      numbered: true      
      chapters:   
      - file: content/05_SimpleModel/SimpleModel
-     - file: content/05_SimpleNodel/SimulatingTheModel
-     - file: content/06_SimpleNodel/SimulatingTheModel
+     - file: content/05_SimpleNodel/SimulatingTheModel     
 
-# #*********
-#    # - caption: Using modelflow with World Bank models
-#    #   numbered: true      
-#    #   chapters:   
-#    #   - file: content/06_WBModels/LoadingWBModel
-#    #   - file: content/06_WBModels/DifferentSimulations
-#    #   #- file: content/06_WBModels/TheKeepOption
+#*********
+   - caption: Using modelflow with World Bank models
+     numbered: true      
+     chapters:   
+     - file: content/06_WBModels/LoadingWBModel
+     - file: content/06_WBModels/DifferentSimulations
+     - file: content/06_WBModels/TheKeepOption
 
 # #   - caption: modifying models 
 # #     numbered: true  
@@ -102,10 +104,11 @@ parts:
 # #     chapters:    
 # #     - file: content/howto/optimization/Optimize_simple  
     
-# #   - caption: More
-# #     numbered: true  
-# ##     chapters:
-# #     - file: content/litterature
+   - caption: References
+     numbered: false
+     chapters:
+     - file: content/99_BackMatter/References
+
 # # #  - caption: Jupyter book test
 # # #    numbered: true  
 # # #    chapters:     

@@ -1,0 +1,154 @@
+\selectlanguage *{english}
+\contentsline {part}{I\hspace {1em}Foreword}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Foreword}{5}{chapter.1}%
+\contentsline {part}{II\hspace {1em}Introduction}{7}{part.2}%
+\contentsline {chapter}{\numberline {2}Introduction}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Background}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Climate change and the MFMod system}{9}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Early steps to bring the MFMod system to the broader economics community}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Moving the framework to an open\sphinxhyphen {}source footing}{10}{section.2.3}%
+\contentsline {part}{III\hspace {1em}Macrostructural Models}{11}{part.3}%
+\contentsline {chapter}{\numberline {3}Macrostructural models}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A system of equations}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Behavioural equations}{14}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Modelflow and the MFMod models of the World Bank}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A brief history of ModelFlow}{15}{section.4.1}%
+\contentsline {part}{IV\hspace {1em}Installation of modelflow}{17}{part.4}%
+\contentsline {chapter}{\numberline {5}Installation of Modelflow}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Installation of Python}{19}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Installation of Anaconda under Windows}{19}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Installation of Python under macOS}{20}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Installation of Python under Linux}{20}{subsection.5.1.3}%
+\contentsline {chapter}{\numberline {6}Installation of Modelflow}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Installation of \sphinxstyleliteralintitle {\sphinxupquote {modelflow}} under Anaconda}{21}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Testing your installation of modelflow}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Specifying the model}{23}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Create some data}{24}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Putting it together}{25}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Create a scenario and run again}{26}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Inspect results}{26}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Graphical representations of results}{26}{subsection.7.5.1}%
+\contentsline {subsubsection}{The .dif.plot() method}{26}{subsubsection*.3}%
+\contentsline {subsubsection}{Using the kept solutions}{27}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {7.5.2}Textual and tabular display of results}{27}{subsection.7.5.2}%
+\contentsline {subsubsection}{The \sphinxstyleliteralintitle {\sphinxupquote {.dif.df}} method}{28}{subsubsection*.5}%
+\contentsline {subsubsection}{The \sphinxstyleliteralintitle {\sphinxupquote {.difpct.df}} method}{28}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {7.5.3}Interactive display of impacts}{29}{subsection.7.5.3}%
+\contentsline {part}{V\hspace {1em}Some Jupyter, Python and pandas essentials}{31}{part.5}%
+\contentsline {chapter}{\numberline {8}Introduction to Jupyter Notebook}{33}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The idea of the notebook}{33}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Jupter Notebook cells}{33}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Execution of cells}{34}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Execution of code cells}{34}{subsection.8.3.1}%
+\contentsline {subsubsection}{the semi\sphinxhyphen {}colon “;” supresses output in JN}{34}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {8.3.2}Auto\sphinxhyphen {}complete and context\sphinxhyphen {}sensitive help}{35}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.4}The markdown scripting language in JN}{35}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Common markdown commands}{35}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Tables in markdown}{36}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}links to mire info on markdown}{36}{subsection.8.4.3}%
+\contentsline {section}{\numberline {8.5}Rendering mathematics in markdown}{36}{section.8.5}%
+\contentsline {section}{\numberline {8.6}How to add, delete and move cells}{37}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Change the type of a cell}{37}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Some Python basics}{39}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Python packages, libraries and classes}{39}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Importing packages, libraries, modules and classes}{39}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}import specific elements or classes from a module or library}{40}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}import a class but give it an alias}{40}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Standard aliases}{41}{subsection.9.2.3}%
+\contentsline {chapter}{\numberline {10}Introduction to Pandas dataframes}{43}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Import the pandas library}{45}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Pandas series}{45}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Series declared from a list}{45}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Series declared using a specific index}{46}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}Create Series from a dictionary}{47}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}Properties and methods of dataframes in modelflow}{47}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}The pandas dataframe}{48}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Creating or instantiating a dataframe}{48}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}Adding a column to a dataframe}{48}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.4}Revising values}{49}{subsection.11.2.4}%
+\contentsline {section}{\numberline {11.3}Column names in Modelflow}{49}{section.11.3}%
+\contentsline {section}{\numberline {11.4}.index and time dimensions in Modelflow}{50}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Leads and lags}{50}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}.columns lists the column names of a dataframe}{50}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}.size indicates the dimension of a list}{50}{subsection.11.4.3}%
+\contentsline {subsection}{\numberline {11.4.4}.eval() evaluates calculates an expression on the data of a dataframe}{51}{subsection.11.4.4}%
+\contentsline {subsection}{\numberline {11.4.5}.loc{[}{]} selects a portion (slice) of a dataframe}{52}{subsection.11.4.5}%
+\contentsline {subsubsection}{.loc{[}row,column{]} A single element}{52}{subsubsection*.8}%
+\contentsline {subsubsection}{.loc{[}:,column{]} A single column}{52}{subsubsection*.9}%
+\contentsline {subsubsection}{.loc{[}row,:{]} A single row}{52}{subsubsection*.10}%
+\contentsline {subsubsection}{.loc{[}:,{[}names…{]}{]} Several columns}{52}{subsubsection*.11}%
+\contentsline {subsubsection}{.loc using the colon to select a range}{53}{subsubsection*.12}%
+\contentsline {subsubsection}{.loc{[}{]} can also be used on the left hand side to assign values to specific cells}{53}{subsubsection*.13}%
+\contentsline {chapter}{\numberline {12}\sphinxstyleliteralintitle {\sphinxupquote {.mfcalc()}} an extension of standard Pandas}{55}{chapter.12}%
+\contentsline {section}{\numberline {12.1}.mfcalc usage}{55}{section.12.1}%
+\contentsline {section}{\numberline {12.2}workspace initialization}{55}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Create a simple dataframe}{55}{section.12.3}%
+\contentsline {section}{\numberline {12.4}\sphinxstyleliteralintitle {\sphinxupquote {.mfcalc()}} in action}{56}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}\sphinxstyleliteralintitle {\sphinxupquote {.mfcalc()}} example to calculate a new series}{56}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}Recalculate A so it grows by 2 percent}{57}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}mfcalc(), the showeq option}{57}{subsection.12.4.3}%
+\contentsline {subsection}{\numberline {12.4.4}Using .diff (\(\mitDelta \)) with mfcalc}{58}{subsection.12.4.4}%
+\contentsline {subsection}{\numberline {12.4.5}mfcalc with several equations and arguments}{58}{subsection.12.4.5}%
+\contentsline {subsection}{\numberline {12.4.6}Setting a time frame with mfcalc.}{59}{subsection.12.4.6}%
+\contentsline {part}{VI\hspace {1em}A simple MFMod\sphinxhyphen {}Style Model in modelflow}{61}{part.6}%
+\contentsline {chapter}{\numberline {13}A simple macrostructural model in Modelflow}{63}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Setting up the environment}{63}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Load a pre\sphinxhyphen {}existing Eviews model}{63}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Load a model – the method \sphinxstyleliteralintitle {\sphinxupquote {.modelload()}}}{64}{subsection.13.2.1}%
+\contentsline {section}{\numberline {13.3}Extract information about the model}{64}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}List all identities in the model}{65}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}List all behavioural equations in the model}{66}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}List all exogenous variables in the model}{66}{subsection.13.3.3}%
+\contentsline {section}{\numberline {13.4}Equations in a \sphinxstyleliteralintitle {\sphinxupquote {modelflow}} model}{66}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Identities}{66}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Behavioural equations: Fitted Values and Add Factors}{66}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.4.3}Using Add factors when forecasting}{67}{subsection.13.4.3}%
+\contentsline {subsection}{\numberline {13.4.4}Extracting information about equations}{68}{subsection.13.4.4}%
+\contentsline {subsubsection}{The \sphinxstyleliteralintitle {\sphinxupquote {.frml}} method}{68}{subsubsection*.14}%
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {\sphinxupquote {.frml}} output of a simple identity}{68}{subsubsection*.15}%
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {\sphinxupquote {.frml}} output of a behavioural}{68}{subsubsection*.16}%
+\contentsline {paragraph}{Automatically generated variables associated with behavioural equations}{69}{paragraph*.17}%
+\contentsline {paragraph}{Function of the \_X \_D variables in the model}{69}{paragraph*.18}%
+\contentsline {subsubsection}{Passing multiple variables to \sphinxstyleliteralintitle {\sphinxupquote {.frml}}}{70}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {13.4.5}The mathemetically endogenous and exogenous variables of the model}{70}{subsection.13.4.5}%
+\contentsline {subsubsection}{The mathematically endogenous variables in our model.}{71}{subsubsection*.20}%
+\contentsline {section}{\numberline {13.5}Data storage in modelflow}{71}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Simulating the model}{72}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}Shock an exogenous variable}{73}{subsection.13.6.1}%
+\contentsline {section}{\numberline {13.7}Text\sphinxhyphen {}based modelflow methods for displaying simulation results}{75}{section.13.7}%
+\contentsline {subsection}{\numberline {13.7.1}.dif The difference in levels between solutions}{75}{subsection.13.7.1}%
+\contentsline {subsection}{\numberline {13.7.2}.difpct the difference between the growth rates from the pre\sphinxhyphen {}shock and post\sphinxhyphen {}shock database}{76}{subsection.13.7.2}%
+\contentsline {subsection}{\numberline {13.7.3}.difpctlevel \sphinxhyphen {} the percent change in the level of the variable.}{76}{subsection.13.7.3}%
+\contentsline {section}{\numberline {13.8}Graphics\sphinxhyphen {}based modelflow visualization methods}{77}{section.13.8}%
+\contentsline {subsection}{\numberline {13.8.1}Change in the growth rates}{77}{subsection.13.8.1}%
+\contentsline {section}{\numberline {13.9}Interactive comparisons of results}{78}{section.13.9}%
+\contentsline {part}{VII\hspace {1em}Using modelflow with World Bank models}{79}{part.7}%
+\contentsline {chapter}{\numberline {14}Using \sphinxstyleliteralintitle {\sphinxupquote {modelflow}} with World Bank models}{81}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Accessing a world bank model}{83}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Preparing your python environment}{85}{chapter.16}%
+\contentsline {chapter}{\numberline {17}Working with PakMod under modelflow}{87}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Load a pre\sphinxhyphen {}existing model, data and descriptions}{87}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Variables in World Bank models}{88}{section.17.2}%
+\contentsline {section}{\numberline {17.3}Extract a list of variables}{89}{section.17.3}%
+\contentsline {chapter}{\numberline {18}Behavioural equations in the MFMod framework}{91}{chapter.18}%
+\contentsline {section}{\numberline {18.1}The ECM specification}{91}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}The short run relationship}{91}{subsection.18.1.1}%
+\contentsline {subsection}{\numberline {18.1.2}The long run equation}{91}{subsection.18.1.2}%
+\contentsline {section}{\numberline {18.2}The long run equation in the steady state}{92}{section.18.2}%
+\contentsline {section}{\numberline {18.3}Putting it together}{92}{section.18.3}%
+\contentsline {subsection}{\numberline {18.3.1}Lamda, the speed of adjustment}{92}{subsection.18.3.1}%
+\contentsline {chapter}{\numberline {19}Scenario analysis}{95}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Different kinds of simulations}{95}{section.19.1}%
+\contentsline {subsection}{\numberline {19.1.1}A shock to an exogenous variable}{96}{subsection.19.1.1}%
+\contentsline {subsection}{\numberline {19.1.2}Running the simulation}{97}{subsection.19.1.2}%
+\contentsline {subsubsection}{Results}{97}{subsubsection*.21}%
+\contentsline {section}{\numberline {19.2}An exogenous shock to a Behavioural variable}{99}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Temporarily exogenize a behavioural variable}{100}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Temporary shock exogenized for the whole period}{101}{subsection.19.3.1}%
+\contentsline {subsection}{\numberline {19.3.2}Temporary shock exogenized for the whole period}{101}{subsection.19.3.2}%
+\contentsline {section}{\numberline {19.4}Simulate the model}{102}{section.19.4}%
+\contentsline {section}{\numberline {19.5}Access results}{103}{section.19.5}%
+\contentsline {section}{\numberline {19.6}Or use keep\_plot to make more bespoken charts which can be saved in many formats}{103}{section.19.6}%
+\contentsline {subsection}{\numberline {19.6.1}Differences of growth rates}{103}{subsection.19.6.1}%
+\contentsline {subsection}{\numberline {19.6.2}Differences in percent of baseline values}{103}{subsection.19.6.2}%
+\contentsline {section}{\numberline {19.7}Some variations on keep\_plot(}{103}{section.19.7}%
