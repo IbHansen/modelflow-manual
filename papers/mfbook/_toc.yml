@@ -31,13 +31,13 @@ parts:
      - file: content/03_Installation/TestingModelFlow
 #   
 # # *****************
-#  - caption: Some Jupyter, Python and pandas essentials
-#    numbered: true      
-#    chapters:   
-#    - file: content/04_PythonEssentials/Intro_Jupyter_notebook
-#    - file: content/04_PythonEssentials/PythonPackagesEtc
-#    - file: content/04_PythonEssentials/UpdateCommand
-#    - file: content/04_PythonEssentials/ExtendingDataFrames
+   - caption: Some Jupyter, Python and pandas essentials
+     numbered: true      
+     chapters:   
+     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
+     - file: content/04_PythonEssentials/PythonPackagesEtc
+     - file: content/04_PythonEssentials/UpdateCommand
+     - file: content/04_PythonEssentials/ExtendingDataFrames
  #    - file: content/notebooks/Pandas
 # #****************
 #  - caption: A simple MFMod-Style Model in modelflow
@@ -116,6 +116,8 @@ parts:
     
    - caption: More
 #     numbered: true  
+
+
      chapters:
      - file: content/litterature
 # #  - caption: Jupyter book test

@@ -639,17 +639,17 @@ The last line displays the values of the simulated model, which now includes res
 2008  108.285671  100.880357   0.5  1.0               0.05          0.01   
 2009  109.368527  101.093830   0.5  1.0               0.05          0.01   
 
-      SAVING\PYGZus{}RATE         GDP  CAPITAL\PYGZus{}INTENSITY  INVESTMENT  CONSUMPTION  
-2000         0.05    0.000000           0.000000    0.000000     0.000000  
-2001         0.05  100.511609           0.990352    5.025580    95.486029  
-2002         0.05  101.038487           0.981043    5.051924    95.986562  
-2003         0.05  101.580575           0.972060    5.079029    96.501546  
-2004         0.05  102.137821           0.963390    5.106891    97.030930  
-2005         0.05  102.710176           0.955022    5.135509    97.574667  
-2006         0.05  103.297593           0.946943    5.164880    98.132713  
-2007         0.05  103.900030           0.939144    5.195002    98.705029  
-2008         0.05  104.517449           0.931613    5.225872    99.291576  
-2009         0.05  105.149813           0.924341    5.257491    99.892323  
+      SAVING\PYGZus{}RATE  CONSUMPTION         GDP  INVESTMENT  CAPITAL\PYGZus{}INTENSITY  
+2000         0.05     0.000000    0.000000    0.000000           0.000000  
+2001         0.05    95.486029  100.511609    5.025580           0.990352  
+2002         0.05    95.986562  101.038487    5.051924           0.981043  
+2003         0.05    96.501546  101.580575    5.079029           0.972060  
+2004         0.05    97.030930  102.137821    5.106891           0.963390  
+2005         0.05    97.574667  102.710176    5.135509           0.955022  
+2006         0.05    98.132713  103.297593    5.164880           0.946943  
+2007         0.05    98.705029  103.900030    5.195002           0.939144  
+2008         0.05    99.291576  104.517449    5.225872           0.931613  
+2009         0.05    99.892323  105.149813    5.257491           0.924341  
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -911,6 +911,3539 @@ Tab(children=(Tab(children=(HTML(value=\PYGZsq{}\PYGZlt{}?xml version=\PYGZdq{}1
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxstepscope
+
+
+\part{Some Jupyter, Python and pandas essentials}
+
+\sphinxstepscope
+
+
+\chapter{Introduction to  Jupyter Notebook}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:introduction-to-jupyter-notebook}}\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook::doc}}
+\sphinxAtStartPar
+Jupyter Notebook is a web application for creating, annotating, simulating and working with computational documents.  Originally developed for python, the latest versions of EViews also support Jupyter Notebooks. Jupyter Notebook offers a simple, streamlined, document\sphinxhyphen{}centric experience and can be a great environment for documenting the work you are doing, and trying alternative methods of achieving desirable results.  Many of the methods in \sphinxcode{\sphinxupquote{modelflow}} have been developed to work well with Jupyter Notebook. Indeed this documentation was written as a series of Jupyter Notebooks bound together with Jupyter Book.
+
+\sphinxAtStartPar
+Jupyter Notebook is not the only way to work with modelflow or Python.  As users become more advanced they are likely to migrate to a more program\sphinxhyphen{}centric IDE (Interactive Development Environment) like Spyder or Microsoft Visual Code.
+
+\sphinxAtStartPar
+However, to start Jupyter Notebooks are a great way to learn, follow work done by others and tweak them to fit your own needs.
+
+\sphinxAtStartPar
+There are many fine tutorials on Jupyter Notebook on the web, and \sphinxhref{https://docs.jupyter.org/en/latest/}{The official Jupyter site} is a good starting point. The following aims to provide enough information to get a user started.
+
+
+\section{The idea of the notebook}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:the-idea-of-the-notebook}}
+\sphinxAtStartPar
+The idea behind jupyter notebook was to create an interactive version of the notebooks that scientists use(d) to:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+record what they have done
+
+\item {} 
+\sphinxAtStartPar
+perhaps explain why
+
+\item {} 
+\sphinxAtStartPar
+document how data was generated, and
+
+\item {} 
+\sphinxAtStartPar
+record the results of their experiments
+
+\end{itemize}
+
+\sphinxAtStartPar
+The motivation for these notebooks and Jupyter notebook is to encourage practices that will ensure that if followed exactly by others, that they will be able to generate the same results.
+
+
+\section{Jupter Notebook cells}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:jupter-notebook-cells}}
+\sphinxAtStartPar
+A Jupyter Notebook  does all of that (and perhaps a bit more).  It is divided into ‘cells’.
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{\sphinxstylestrong{Jupyter Notebook cells can contain:}}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{computer code} (typically python code, but as noted other kernels – like Eviews – can be used with jupyter).
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{markdown text}: plain text that can include special characters that make some text appear as bold, or indicate the text is headers, or instruct JN to render the text as a mathematical formula.  All of the text in this document was entered using Jupyter Notebook’s markdown language
+
+\item {} 
+\sphinxAtStartPar
+Results (in the form of tables or graphs) from the execution of computer code specified in a code cell
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Every cell has two modes:}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Edit mode – indicated by a green vertical bar. In edit mode the user can change the code, or the markdown.
+
+\item {} 
+\sphinxAtStartPar
+Select/Copy mode – indicated by a blue vertical bar.  This will be teh state of the cell when its content has been executed.  For markdown cells this means that the text and special characters have been rendered into formatted text.  For code cells, this means the code has been executed and its output (if any) displayed in an output cell.
+
+\end{enumerate}
+
+\sphinxAtStartPar
+The notebook has associated with it a “Kernel”, which is an instance of the computing environment in which code will be executed. For JN taht work with modelflow this will be a Python Kernel.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+Jupyter Notebooks were designed to facilitate \sphinxstyleemphasis{replicability}: the idea that a scientific analysis should contain \sphinxhyphen{} in addition to the final output (text, graphs, tables) \sphinxhyphen{} all the computational steps needed to get from raw input data to the results.
+\end{sphinxadmonition}
+
+
+\section{Execution of cells}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:execution-of-cells}}
+\sphinxAtStartPar
+Every cell in a JN can be executed, either by using the Run button on the Jupyter Notebook menu, or by using one of \sphinxstylestrong{two keyboard shortcuts}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{ctrl + Enter}: Executes the code in the cell or formats the markdown of a cell.  The current cell retains the focus – cursor stays on cell executed.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{shift + enter}: Executes the code in the cell or formats the markdown of a cell. Focus (cursor) jumps to the next cell
+
+\end{itemize}
+
+\sphinxAtStartPar
+For other useful shortcuts see “Help” => “Keyboard Shortcuts” or simply press keyboard icon in the toolbar.
+
+
+\subsection{Execution of code cells}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:execution-of-code-cells}}
+\sphinxAtStartPar
+Below is a code with some standard python that declares a variable “x”, assigns it the value 10, declares a second variable “y” and assigns it the value 45.  The final line of y alone, instructs python to display the value of the variable y.  The results of the operation appear in Jupyter Notebook as an output cell Out{[}\#{]}.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{45}
+\PYG{n}{y}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+45
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{the semi\sphinxhyphen{}colon “;” supresses output in Jupyter Notebook}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:the-semi-colon-supresses-output-in-jupyter-notebook}}
+\sphinxAtStartPar
+In the example below, a semi\sphinxhyphen{}colon “;” has been appended to the final line.  This suppresses the display of the value contained by y;  As a result there is no output cell.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{45}
+\PYG{n}{y}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Another way to display results is to use the print function.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+10
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Variables in a Jupyter Notebook session are persistent, as a result in the subsequent cell, we can declare a variable ‘z’ equal to 2*y and it will have the value 90.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{z}\PYG{o}{=}\PYG{n}{y}\PYG{o}{*}\PYG{l+m+mi}{2}
+\PYG{n}{z}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+90
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Auto\sphinxhyphen{}complete and context\sphinxhyphen{}sensitive help}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:auto-complete-and-context-sensitive-help}}
+\sphinxAtStartPar
+When editing a code cell, you can use these short\sphinxhyphen{}cuts to autocomplete and or call up documentation for a command.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{tab}: autocomplete and  method selection
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{double tab}: documention (double tab for full doc)
+
+\end{itemize}
+
+
+\section{The markdown scripting language in Jupyter Notebook}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:the-markdown-scripting-language-in-jupyter-notebook}}
+\sphinxAtStartPar
+Text cells in a notebook can be made more interesting by using markdown.
+
+\sphinxAtStartPar
+Cells designated as markdown cells when executed are rendered in a rich text format (html).
+
+\sphinxAtStartPar
+Markdown is a lightweight markup language for creating formatted text using a plain\sphinxhyphen{}text editor.  Used in a markdown cell of Jupyter Notebook it can be used to produce nicely formatted text that mixes text, mathematical formulae, code and outputs from executed python code.
+
+\sphinxAtStartPar
+Rather than the relatively complex commands of html <h1></h1>, markdown uses a simplified set of commands to control how text elements should be rendered.
+
+
+\subsection{Common markdown commands}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:common-markdown-commands}}
+\sphinxAtStartPar
+Some of the most common of these include:
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+symbol
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Effect
+\\
+\hline
+\sphinxAtStartPar
+\#
+&
+\sphinxAtStartPar
+Header
+\\
+\hline
+\sphinxAtStartPar
+\#\#
+&
+\sphinxAtStartPar
+second level
+\\
+\hline
+\sphinxAtStartPar
+\#\#\#
+&
+\sphinxAtStartPar
+third level etc.
+\\
+\hline
+\sphinxAtStartPar
+**Bold text**
+&
+\sphinxAtStartPar
+\sphinxstylestrong{Bold text}
+\\
+\hline
+\sphinxAtStartPar
+*Italics text*
+&
+\sphinxAtStartPar
+\sphinxstyleemphasis{Italics text}
+\\
+\hline
+\sphinxAtStartPar
+* text
+&
+\sphinxAtStartPar
+Bulleted text or dot notes
+\\
+\hline
+\sphinxAtStartPar
+1. text
+&
+\sphinxAtStartPar
+1. Numbered bullets
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsection{Tables in markdown}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:tables-in-markdown}}
+\sphinxAtStartPar
+Tables like the one above can be constructed using | as separators.
+
+\sphinxAtStartPar
+Below is the markdown code that generated the above table:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{|} \PYG{n}{symbol}           \PYG{o}{|} \PYG{n}{Effect}          \PYG{o}{|}
+\PYG{o}{|}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{|}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{o}{|}
+\PYG{o}{|} \PYGZbs{}\PYG{c+c1}{\PYGZsh{}               | Header        |}
+\PYG{o}{|} \PYGZbs{}\PYG{c+c1}{\PYGZsh{}\PYGZbs{}\PYGZsh{}             | second level |}
+\PYG{o}{|} \PYGZbs{}\PYG{o}{*}\PYGZbs{}\PYG{o}{*}\PYG{n}{Bold} \PYG{n}{text}\PYGZbs{}\PYG{o}{*}\PYGZbs{}\PYG{o}{*} \PYG{o}{|} \PYG{o}{*}\PYG{o}{*}\PYG{n}{Bold} \PYG{n}{text}\PYG{o}{*}\PYG{o}{*}   \PYG{o}{|}
+\PYG{o}{|} \PYGZbs{}\PYG{o}{*}\PYG{n}{Italics} \PYG{n}{text}\PYGZbs{}\PYG{o}{*} \PYG{o}{|} \PYG{o}{*}\PYG{n}{Italics} \PYG{n}{text}\PYG{o}{*}   \PYG{o}{|}
+\PYG{o}{|} 
+\PYG{o}{|} \PYG{l+m+mi}{1}\PYGZbs{}\PYG{o}{.} \PYG{n}{text}  \PYG{o}{|} \PYG{l+m+mf}{1.} \PYG{n}{Numbered} \PYG{n}{bullets}   \PYG{o}{|}
+
+\end{sphinxVerbatim}
+
+
+\subsection{Displaying code}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:displaying-code}}
+\sphinxAtStartPar
+To display a (unexecutable)  block of code within a markdown cell, encapsulate it (sourround it) with three ` at the beginning and end.  The below code entered in a markdown cell,
+
+\sphinxAtStartPar
+``` text to be rendered as code ```.
+
+\sphinxAtStartPar
+will be rendered as: \sphinxcode{\sphinxupquote{text to be rendered as code}}.
+
+
+\subsection{Rendering mathematics in markdown}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:rendering-mathematics-in-markdown}}
+\sphinxAtStartPar
+Jupyter Notebook’s inmplementation of Markdown supports LaTeX mathematical notation.
+
+\sphinxAtStartPar
+Inline enclose the LaTeX code in \sphinxcode{\sphinxupquote{\$}}:
+
+\sphinxAtStartPar
+An Equation: \sphinxcode{\sphinxupquote{\$y\_t = \textbackslash{}beta\_0 + \textbackslash{}beta\_1 x\_t + u\_t\textbackslash{}\$}} will renders as: \(y_t = \beta_0 + \beta_1 x_t + u_t\)
+
+\sphinxAtStartPar
+if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$}} it will be centered on its own line.
+\begin{equation*}
+\begin{split}y_t = \beta_0 + \beta_1 x_t + u_t\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If you want the math to stand alone (not be in\sphinxhyphen{}line, then use two \sphinxcode{\sphinxupquote{\$}} signs)
+
+\sphinxAtStartPar
+The below block renders as below, with the \sphinxcode{\sphinxupquote{\&}} symbol telling LaTeX to align the different lines (separates by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. Here it is used to align the texts on the space preceding the equals sign in each line.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
+\PYG{n}{Y\PYGZus{}t}  \PYG{o}{\PYGZam{}}\PYG{o}{=}  \PYG{n}{C\PYGZus{}t}\PYG{o}{+}\PYG{n}{I\PYGZus{}t}\PYG{o}{+}\PYG{n}{G}\PYG{o}{+}\PYG{n}{t}\PYG{o}{+} \PYG{p}{(}\PYG{n}{X\PYGZus{}t}\PYG{o}{\PYGZhy{}}\PYG{n}{M\PYGZus{}t}\PYG{p}{)} \PYGZbs{}\PYGZbs{}
+\PYG{n}{C\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{I\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{G\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{X\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{M\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}
+\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+\begin{align*}
+Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
+C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
+I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
+G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
+X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
+M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
+\end{align*}
+
+\subsection{links to more info on markdown}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:links-to-more-info-on-markdown}}
+\sphinxAtStartPar
+There are several very good markdown cheatsheets on the internet, one of these is \sphinxhref{https://www.markdownguide.org/cheat-sheet/}{here}
+
+
+\section{How to add, delete and move cells}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:how-to-add-delete-and-move-cells}}
+\sphinxAtStartPar
+Jupyter Notebook cells can be added, deleted and moved.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Using the Toolbar}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{+ button}: add a cell below the current cell
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{scissors}: cut  current cell (can be undone from “Edit” tab)
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{clipboard}: paste a previously cut cell to the current location
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{up\sphinxhyphen{} and down arrows}: move cells
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{hold shift + click cells in left margin}: select multiple cells (vertical bar must be blue)
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Using keyboard short cuts}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{esc + a}: add a cell above the current cell
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{esc + b}: add a cell below the current cell
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{esc + d+d}: delete the current cell
+
+\end{itemize}
+
+
+\section{Change the type of a cell}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:change-the-type-of-a-cell}}
+\sphinxAtStartPar
+You can also change the type of a cell. New cells are by default “code” cells.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Using the Toolbar}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Select the desired type from the drop down.  options include
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Markdown
+
+\item {} 
+\sphinxAtStartPar
+Code
+
+\item {} 
+\sphinxAtStartPar
+Raw NBConvert
+
+\item {} 
+\sphinxAtStartPar
+Heading
+
+\end{itemize}
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Using keyboard short cuts}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{esc + m}: make the current cell a markdown cell
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{esc + y}: make the current cell a code  cell
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\chapter{Some Python basics}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:some-python-basics}}\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc::doc}}
+\sphinxAtStartPar
+Before using \sphinxcode{\sphinxupquote{modelflow}} with the World Bank’s MFMod models, users  will have to understand at least some basic elements of \sphinxcode{\sphinxupquote{python}} syntax and usage.  Notably they will need to understand about packages, libraries and classes, how to access them.
+
+
+\section{Python  packages, libraries and classes}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:python-packages-libraries-and-classes}}
+\sphinxAtStartPar
+Some features of \sphinxcode{\sphinxupquote{python}} are built\sphinxhyphen{}in out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.  Others build up on these basic features.
+
+\sphinxAtStartPar
+A \sphinxstylestrong{python class} is a code template that defines a python object. Classes can have member variables (data) associated with them and methods (behaviours or functions)associated with them. In python a class is created by the keyword class. An object of type class is created (instantiated) using the classes “constructor”.
+
+\sphinxAtStartPar
+A \sphinxstylestrong{module} is a Python object consisting of Python code. A module can define functions, classes and variables. A module can also include runnable code.
+
+\sphinxAtStartPar
+A \sphinxstylestrong{python package} is a collection of modules that are related to each other. When a module from an external package is required by a program, that package (or module in the package) must  be \sphinxstylestrong{imported} into the current session for its modules can be put to use.
+
+\sphinxAtStartPar
+A \sphinxstylestrong{python library} is a collection of related modules or packages.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In modelflow the model is a class and we can create an instance of a model (an object filled with the characteristics of the class) by executing the code \sphinxcode{\sphinxupquote{mymodel = model(myformulas)}} see below for a working example.
+\end{sphinxadmonition}
+
+
+\section{Importing packages, libraries, modules and classes}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:importing-packages-libraries-modules-and-classes}}
+\sphinxAtStartPar
+Some libraries, packages, modules are part of the core python package and will be available (importable) from the get go.  Others are not and need to be installed on your system before importing them into your sessions.
+
+\sphinxAtStartPar
+If you followed the modelflow installation instructions you have already downloaded and installed on your computer all the packages necessary for running World Bank models under modelflow.  But to work with them in a given Jupyter Notebook session or in a program context, you will also need to \sphinxcode{\sphinxupquote{import}} them into your session before you call them.
+
+\sphinxAtStartPar
+Typically a python program will start with the importation of the libraries, classes and modules that will be used.  Because a Jupyter Notebook is essentially a heavily annotated program, it also requires that packages used be imported.
+
+\sphinxAtStartPar
+Below, some insight into the structure and content of packages and different ways to import them into a program or Typically a python program will start with the importation of the libraries, classes and modules that will be used.  Because a Jupyter Notebook.
+
+\sphinxAtStartPar
+As described above packages, libraries and modules are containers that can include other elements.  Take for example the package Math.
+
+\sphinxAtStartPar
+To import the Math Package we execute the command \sphinxcode{\sphinxupquote{ import math}}.  Having done that we can can call the functions and data that are defined in it.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} the \PYGZdq{}\PYGZsh{}\PYGZdq{}\PYGZdq{} in a code cell indicates a comment, test after the \PYGZsh{} will not be executed}
+\PYG{k+kn}{import} \PYG{n+nn}{math}
+
+\PYG{c+c1}{\PYGZsh{} Now that we have imported math we can access some of the elements identified in the package, }
+\PYG{c+c1}{\PYGZsh{} For example math contains a definition for pi, we can access that by executing the pi method }
+\PYG{c+c1}{\PYGZsh{} of the library math}
+\PYG{n}{math}\PYG{o}{.}\PYG{n}{pi}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+3.141592653589793
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Import specific elements or classes from a module or library}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:import-specific-elements-or-classes-from-a-module-or-library}}
+\sphinxAtStartPar
+The python package \sphinxcode{\sphinxupquote{math}} contains several functions and classes.
+
+\sphinxAtStartPar
+If I want I can import them directly. Then when I call them I will not have to precede them with the name of their libary. to do this I use the \sphinxstylestrong{from} syntax.  \sphinxcode{\sphinxupquote{from math import pi,cos,sin}} will import the pi constant and the two functions cos and sin and allow me to call them directly.
+
+\sphinxAtStartPar
+Compared these calls with the one in the preceding section – there the call to the method pi has to be preceded by its namespace designator math.  i.e. \sphinxcode{\sphinxupquote{math.pi}}. Below we import pi directly and can just call it with pi.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{math} \PYG{k+kn}{import} \PYG{n}{pi}\PYG{p}{,}\PYG{n}{cos}\PYG{p}{,}\PYG{n}{sin}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+3.141592653589793
+\PYGZhy{}0.9899924966004454
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{import a class but give it an alias}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:import-a-class-but-give-it-an-alias}}
+\sphinxAtStartPar
+A class and instead of using its full name as above or it can be given an alias, that is hopefully shorter but still obvious enough that the user knows what class is being referred to.
+
+\sphinxAtStartPar
+For example  \sphinxcode{\sphinxupquote{import math as m}} allows a call to pi using the more succint syntax \sphinxcode{\sphinxupquote{m.py}}.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{math} \PYG{k}{as} \PYG{n+nn}{m}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{m}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{m}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+3.141592653589793
+\PYGZhy{}0.9899924966004454
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Standard aliases}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:standard-aliases}}
+\sphinxAtStartPar
+Some packages are so frequently used that by convention they have been “assigned” specific aliases.
+
+\sphinxAtStartPar
+For example:
+
+\sphinxAtStartPar
+\sphinxstylestrong{Common aliases}
+|Alias|aliased package | example | functionalty|
+|:==|:==|:==|
+|pd|pandas| import pandas as pd |Pandas are used for storing and retriveing data|
+|np|numpy| import numpy as np | Numpy gives access to some advanced mathematical features|
+
+\sphinxAtStartPar
+You don’t have to use those conventions but it will make your code easier to read by others who are familiar with it.
+
+
+\section{Introduction to Pandas dataframes}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:introduction-to-pandas-dataframes}}
+\sphinxAtStartPar
+Modelflow is built on top of the Pandas library. Pandas is the Swiss knife of data science and can perform an impressing array of date oriented tasks.
+
+\sphinxAtStartPar
+This tutorial is a very short introduction to how pandas dataframes are used with Modelflow. For a more complete discussion see any of the many tutorials on the internet, notably:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/}{Pandas homepage}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/pandas-docs/stable/getting\_started/tutorials.html}{Pandas community tutorials}
+
+\end{itemize}
+
+
+\section{Import the pandas library}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:import-the-pandas-library}}
+\sphinxAtStartPar
+As with any python program, in order to use a package or library it must first be imported into the session. As noted above, by  convention pandas is imported as pd
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd} 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Pandas like any libarary contains many classes and methods.  Here we are going to focus on a \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames}, each of which are very useful for time\sphinxhyphen{}series data.
+
+\sphinxAtStartPar
+Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  In \sphinxcode{\sphinxupquote{modelflow}} and macroeconomists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
+
+
+\section{Pandas series}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:pandas-series}}
+\sphinxAtStartPar
+A pandas series is an object that holds a two dimensional array comprised of values and index.
+
+\sphinxAtStartPar
+The constructor for a pandas.Series is \sphinxcode{\sphinxupquote{pandas.Series()}}.  The content inside the parentheses will determine the nature of the series.  As an object\sphinxhyphen{}oriented language Python supports \sphinxcode{\sphinxupquote{overrides}} (which is to say a method can have more than one way in which it can be called). Specifically there can be different constructors defined for a class, depending on how the data that is to be used to initialize it is organized.
+
+
+\subsection{Series declared from a list}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:series-declared-from-a-list}}
+\sphinxAtStartPar
+The simplest way to create a Series is to pass an array of values as a Python list to the Series constructor.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+A list in python is a comma delimited collection of items.  It could be text, numbers or even more complex objects.  When declared (and returned) list are enclosed in square brackets.
+
+\sphinxAtStartPar
+mylist={[}2,7,8,9{]}
+mylist2={[}“Some text”,”Some more Text”,2,3{]}
+
+\sphinxAtStartPar
+Note the list is entirely agnostic about the type of data it contains.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+In the examples below Simplest, Simple and simple3 are series – although series3 which is derived from a list mixing text and numeric values would be hard to interpret as an economic series.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{15}\PYG{p}{]}
+\PYG{n}{weird}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Some text}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Some more Text}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} Here the constructor is passed a numeric list}
+\PYG{n}{Simplest}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{15}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{Simplest}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+0     2
+1     3
+2     4
+3     5
+4   \PYGZhy{}15
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} In this case the constructor is passed a string variable that contains a list}
+\PYG{n}{simple2}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{n}{values}\PYG{p}{)}
+\PYG{n}{simple2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+0     2
+1     3
+2     4
+3     5
+4   \PYGZhy{}15
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Here the constructor is passed a string containing a list that is a mix of }
+\PYG{c+c1}{\PYGZsh{} alphanumerics and numerical values}
+\PYG{n}{simple3}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{n}{weird}\PYG{p}{)}
+\PYG{n}{simple3}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+0         Some text
+1    Some more Text
+2                 2
+3                 3
+dtype: object
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Constructed in this way each of these Series are automatically assigned a zero\sphinxhyphen{}based index.
+
+
+\subsection{Series declared using a specific index}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:series-declared-using-a-specific-index}}
+\sphinxAtStartPar
+In this example the series Simple and Simple2 are  recreated, but this time an index is specified. Here the index is declared as a list.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} In this example the constructor is given both the values }
+\PYG{c+c1}{\PYGZsh{} and specific values for the index}
+\PYG{n}{Simplest}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{15}\PYG{p}{]}\PYG{p}{,}\PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{1966}\PYG{p}{,}\PYG{l+m+mi}{1967}\PYG{p}{,}\PYG{l+m+mi}{1996}\PYG{p}{,}\PYG{l+m+mi}{1999}\PYG{p}{,}\PYG{l+m+mi}{2000}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{Simplest}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+1966     2
+1967     3
+1996     4
+1999     5
+2000   \PYGZhy{}15
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{simple2}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{n}{values}\PYG{p}{,}\PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{1966}\PYG{p}{,}\PYG{l+m+mi}{1967}\PYG{p}{,}\PYG{l+m+mi}{1996}\PYG{p}{,}\PYG{l+m+mi}{1999}\PYG{p}{,}\PYG{l+m+mi}{2000}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{simple2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+1966     2
+1967     3
+1996     4
+1999     5
+2000   \PYGZhy{}15
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Now the Series look more like time series data!
+
+
+\subsection{Create Series from a dictionary}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:create-series-from-a-dictionary}}
+\sphinxAtStartPar
+In python a dictionary is a data structure that is more generally known in computer science as an associative array. A dictionary consists of a collection of key\sphinxhyphen{}value pairs, where each key\sphinxhyphen{}value pair \sphinxstyleemphasis{maps} or \sphinxstyleemphasis{links} the key to its associated value.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+A dictionary is enclosed in curly brackets \{\}, versus a list which is enclosed in square brackets{[}{]}.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Thus mydict=\{“1966”:2,”1967”:3,”1968”:4,”1969”:5,”2000”:\sphinxhyphen{}15\} creates an object called mydict.   \sphinxcode{\sphinxupquote{mydict}}maps (or links) the key “1966” to the value 2.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In this example the Key was a string but we could just as easily made it a numerical value:
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+mydict2=\{1966:2,1967:3,1968:4,1969:5,2000:\sphinxhyphen{}15\} creates an object called mydict2 that links (maps) the key “1966” to the value 2.
+
+\sphinxAtStartPar
+The series constructor also accepts a dictionary, and maps the key to the index of the Series.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mydict2}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1966}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1967}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{1968}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{1969}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{2000}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{15}\PYG{p}{\PYGZcb{}}
+\PYG{n}{simple2}\PYG{o}{=}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{n}{mydict2}\PYG{p}{)}
+\PYG{n}{simple2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+1966     2
+1967     3
+1968     4
+1969     5
+2000   \PYGZhy{}15
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{Properties and methods of dataframes in modelflow}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:properties-and-methods-of-dataframes-in-modelflow}}
+\sphinxAtStartPar
+Any class can have both properties (data) and methods (functions that operate on the data of the particular instance of the class). With object\sphinxhyphen{}oriented programming languages like python, classes can be built as supersets of existing classes. The Modelflow class \sphinxcode{\sphinxupquote{model}} inherits or encapsulates all of the features of the pandas dataframe and extends it in many important ways.  Some of the methods below are standard pandas methods, others have been added to it by \sphinxcode{\sphinxupquote{modelflow}} features
+
+\sphinxAtStartPar
+Much more detail on standard pandas dataframes can be found on the \sphinxhref{https://pandas.pydata.org/docs/reference/frame.html}{official pandas website}.
+
+
+\subsection{dataframes}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:dataframes}}
+\sphinxAtStartPar
+The dataframe is the primary structure of pandas and is a two\sphinxhyphen{}dimensional data structure with named rows and columns.  Each columns can have different data types (numeric, string, etc).
+
+\sphinxAtStartPar
+By convention, a dataframe if often called df or some other modifier followed by df, to assist in reading the code.
+
+
+\subsection{Creating or instantiating a dataframe}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:creating-or-instantiating-a-dataframe}}
+\sphinxAtStartPar
+Like any object we an create a dataframe by calling the dataframe constructor of the pandas class.  Each class has many constructors, so there are very many ways to create a dataframe.
+
+\sphinxAtStartPar
+The code example below creates a dataframe of three columns A,B,C and  indexed between 2019 and 2021.  Macroeconomists may interpret the index as dates, but for pandas they are just numbers.  The .DataFrame() method is constructor for the dataframe class. It takes several forms (as with series), but always returns an instance of a (instantiates) dataframe – i.e. a variable that is a dataframe.
+
+\sphinxAtStartPar
+Below a Dataframe named \sphinxcode{\sphinxupquote{df}} is instantiated from a dictionary and assigned a specific index by passing a list of years as the index.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{]}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{E}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2018}\PYG{p}{,}\PYG{l+m+mi}{2019}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2021}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{df} 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+      B  C  E
+2018  1  1  4
+2019  1  2  4
+2020  1  3  4
+2021  1  6  4
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In the dataframes that are used in macrostructural models like MFMod, each  column is a  time series for an economic variable. So in this dataframe,  A, B and C woudl normally be interpreted as economic time series.
+
+\sphinxAtStartPar
+Although less frequent, \sphinxcode{\sphinxupquote{modelflow}} and pandas can also contain timeseries of matrices or vectors.
+\end{sphinxadmonition}
+
+
+\subsection{Adding a column to a dataframe}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:adding-a-column-to-a-dataframe}}
+\sphinxAtStartPar
+If we assign a value to a column that does not exist, then pandas will add a column with that name and the values of the calculation.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{NEW}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{13}\PYG{p}{]}
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+      B  C  E  NEW
+2018  1  1  4   10
+2019  1  2  4   12
+2020  1  3  4   10
+2021  1  6  4   13
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Revising values}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:revising-values}}
+\sphinxAtStartPar
+If the column exists than the = method will revise the values of the rows with the values assigned in the statement.
+
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+The dimensions of the list assigned via the \sphinxcode{\sphinxupquote{=}} method must be the same as the dataframe (i.e. you must provide exactly as many values as there are rows).  Alternatively if you provide just one, then that value will replace all of the values in the specified column.
+\end{sphinxadmonition}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{NEW}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{11}\PYG{p}{,}\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{14}\PYG{p}{]}
+
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+      B  C  E  NEW
+2018  1  1  4   11
+2019  1  2  4   12
+2020  1  3  4   10
+2021  1  6  4   14
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} replace all of the rows of column B with the same value}
+\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{17}
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C  E  NEW
+2018  17  1  4   11
+2019  17  2  4   12
+2020  17  3  4   10
+2021  17  6  4   14
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{Column names in  Modelflow}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:column-names-in-modelflow}}
+\begin{sphinxShadowBox}
+\sphinxstylesidebartitle{Modelflow variable names}
+
+\sphinxAtStartPar
+Modelflow places more restrictions on columnnames than do pandas per se.
+\end{sphinxShadowBox}
+
+\sphinxAtStartPar
+While pandas dataframes are very liberal in what names can be given to columns, \sphinxcode{\sphinxupquote{modelflow}} is more restrictive.
+
+\sphinxAtStartPar
+Specifically, in modelflow a variable name must:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+start with a letter
+
+\item {} 
+\sphinxAtStartPar
+be upper case
+
+\end{itemize}
+
+\sphinxAtStartPar
+Thus while all these are legal column names in pandas, some are illegal in modelflow.
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Variable Name
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Legal in modelfow?
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Reason
+\\
+\hline
+\sphinxAtStartPar
+IB
+&
+\sphinxAtStartPar
+yes
+&
+\sphinxAtStartPar
+Starts with a letter and is uppercase
+\\
+\hline
+\sphinxAtStartPar
+ib
+&
+\sphinxAtStartPar
+no
+&
+\sphinxAtStartPar
+ lowercase letters are not allowed
+\\
+\hline
+\sphinxAtStartPar
+42ANSWER
+&
+\sphinxAtStartPar
+No
+&
+\sphinxAtStartPar
+ does not start with a letter 
+\\
+\hline
+\sphinxAtStartPar
+\_HORSE1
+&
+\sphinxAtStartPar
+No
+&
+\sphinxAtStartPar
+does not start with a letter 
+\\
+\hline
+\sphinxAtStartPar
+A\_VERY\_LONG\_NAME\_THAT\_IS\_LEGAL\_3
+&
+\sphinxAtStartPar
+Yes
+&
+\sphinxAtStartPar
+ Starts with a letter and is uppercase 
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\section{.index and time dimensions in Modelflow}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:index-and-time-dimensions-in-modelflow}}
+\sphinxAtStartPar
+As we saw above, series have indices.  Dataframes also have indices, which are the row names of the dataframe.
+
+\sphinxAtStartPar
+In \sphinxcode{\sphinxupquote{modelflow}} the index series is typically understood to represent a date.
+
+\sphinxAtStartPar
+For yearly models a list of integers like in the above example works fine.
+
+\sphinxAtStartPar
+For higher frequency models the index can be one of pandas datatypes.
+
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+Not all datetypes work well with the graphics routines of modelflow.  Users are advised to use use the \sphinxcode{\sphinxupquote{pd.period\_range()}} method to generate date indexes.
+
+\sphinxAtStartPar
+For example:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{dates} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{period\PYGZus{}range}\PYG{p}{(}\PYG{n}{start}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1975q1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{end}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2125q4}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{freq}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Q}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{index}\PYG{o}{=}\PYG{n}{dates}
+\end{sphinxVerbatim}
+\end{sphinxadmonition}
+
+
+\subsection{Leads and lags}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:leads-and-lags}}
+\sphinxAtStartPar
+In modelflow leads and lags can be indicated by following the variable with a parenthesis and either \sphinxhyphen{}1 or \sphinxhyphen{}2 two for one or two period lags (where the number following the negative sign indicates the number of time periods that are lagged). Positive numbers are used for forward leads (no +sign required).
+
+\sphinxAtStartPar
+When \sphinxcode{\sphinxupquote{modelflow}} encounters something like \sphinxcode{\sphinxupquote{A(\sphinxhyphen{}1)}}, it will take the value from the row above the current row. No matter if the index is an integer, a year, quarter or a millisecond. The same goes for leads \sphinxcode{\sphinxupquote{A(+1)}}  That will be the value in the next row.
+
+\sphinxAtStartPar
+As a result in a quarterly model \sphinxcode{\sphinxupquote{B=A(\sphinxhyphen{}4)}} would assign B the value of A from teh same quarter in the previous year.
+
+
+\subsection{.columns lists the column names of a dataframe}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:columns-lists-the-column-names-of-a-dataframe}}
+\sphinxAtStartPar
+The method \sphinxcode{\sphinxupquote{.columns}} returns the names of the columns in the dataframe.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{columns}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Index([\PYGZsq{}B\PYGZsq{}, \PYGZsq{}C\PYGZsq{}, \PYGZsq{}E\PYGZsq{}, \PYGZsq{}NEW\PYGZsq{}], dtype=\PYGZsq{}object\PYGZsq{})
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{.size indicates the dimension of a list}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:size-indicates-the-dimension-of-a-list}}
+\sphinxAtStartPar
+so \sphinxcode{\sphinxupquote{df.columns.size}} returns the number of columns in a dataframe.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{columns}\PYG{o}{.}\PYG{n}{size}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+4
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+The dataframe df has 4 columns.
+
+
+\subsection{.eval() evaluates calculates an expression on the data of a dataframe}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:eval-evaluates-calculates-an-expression-on-the-data-of-a-dataframe}}
+\sphinxAtStartPar
+.eval is a native dataframe method, which allows us to do calculations on a dataframe. With this method expressions can be evaluated and new columns created.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{l+s+s1}{X = B*C}
+\PYG{l+s+s1}{           THE\PYGZus{}ANSWER = 42}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C  E  NEW    X  THE\PYGZus{}ANSWER
+2018  17  1  4   11   17          42
+2019  17  2  4   12   34          42
+2020  17  3  4   10   51          42
+2021  17  6  4   14  102          42
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C  E  NEW
+2018  17  1  4   11
+2019  17  2  4   12
+2020  17  3  4   10
+2021  17  6  4   14
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+In the above example the resulting dataframe is displayed but is not stored.
+
+\sphinxAtStartPar
+To store it, the results of the calculation must be assigned to a variable.  The pre\sphinxhyphen{}existing dataframe can be overwritten by assigning it the result of the eval statement.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{eval}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{l+s+s1}{X = B*C}
+\PYG{l+s+s1}{           THE\PYGZus{}ANSWER = 42}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C  E  NEW    X  THE\PYGZus{}ANSWER
+2018  17  1  4   11   17          42
+2019  17  2  4   12   34          42
+2020  17  3  4   10   51          42
+2021  17  6  4   14  102          42
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+With this operation the new columns, x and THE\_ANSWER have been appended to the dataframe df.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{.eval()}} method is a native pandas method.  As such it cannot handle lagged variables (because pandas do not support the idea of a lagged variable.
+
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{.mfcalc()}} and the \sphinxcode{\sphinxupquote{upd()}} methods discussed below are \sphinxcode{\sphinxupquote{modelflow}} features appended to dataframe that allows such calculations to be performed.
+\end{sphinxadmonition}
+
+
+\subsection{.loc{[}{]} selects a portion (slice) of a dataframe}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-selects-a-portion-slice-of-a-dataframe}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{.loc{[}{]}}} method allows you to display and/or revise specific sub\sphinxhyphen{}sections of a column or row in a dataframe.
+
+
+\subsubsection{.loc{[}row,column{]} A single element}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-row-column-a-single-element}}
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.loc{[}row,column{]}}} operates on a single cell in the dataframe.  Thus the below displays the value of the cell with index=2019 observation from the  column C.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2019}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+2
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{.loc{[}:,column{]} A single column}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-column-a-single-column}}
+\sphinxAtStartPar
+The lone colon in a loc statement indicates all the rows or columns.  Here all of the rows.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{p}{:}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+2018    1
+2019    2
+2020    3
+2021    6
+Name: C, dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{.loc{[}row,:{]} A single row}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-row-a-single-row}}
+\sphinxAtStartPar
+Here all of the columns, for the selected row.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2019}\PYG{p}{,}\PYG{p}{:}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+B             17
+C              2
+E              4
+NEW           12
+X             34
+THE\PYGZus{}ANSWER    42
+Name: 2019, dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{.loc{[}:,{[}names…{]}{]} Several columns}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-names-several-columns}}
+\sphinxAtStartPar
+Passing a list in either the rows or columns portion of the loc statement will allow multiple rows or columns to be displayed.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mi}{2018}\PYG{p}{,}\PYG{l+m+mi}{2021}\PYG{p}{]}\PYG{p}{,}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C
+2018  17  1
+2021  17  6
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{.loc using the colon to select a range}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-using-the-colon-to-select-a-range}}
+\sphinxAtStartPar
+with the colon operator we can also select a range of results.
+
+\sphinxAtStartPar
+Here from 2018 to 2019.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2018}\PYG{p}{:}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B  C
+2018  17  1
+2019  17  2
+2020  17  3
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{.loc{[}{]} can also be used on the left hand side to assign values to specific cells}
+\label{\detokenize{content/04_PythonEssentials/PythonPackagesEtc:loc-can-also-be-used-on-the-left-hand-side-to-assign-values-to-specific-cells}}
+\sphinxAtStartPar
+This can be very handy when updating scenarios.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2019}\PYG{p}{:}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{17}
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+       B   C  E  NEW    X  THE\PYGZus{}ANSWER
+2018  17   1  4   11   17          42
+2019  17  17  4   12   34          42
+2020  17  17  4   10   51          42
+2021  17   6  4   14  102          42
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+The dimensions on the right hand side of = and the left hand side should match. That is: either the dimensions should be the same, or the right hand side should be \sphinxcode{\sphinxupquote{broadcasted}} into the left hand slice.
+
+\sphinxAtStartPar
+For more on broadcasting \sphinxhref{https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html}{see here}
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{For more info on the .loc{[}{]} method}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html}{Description}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=pandas+dataframe+loc\&newwindow=1}{Search}
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{For more info on pandas:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/}{Pandas homepage}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/pandas-docs/stable/getting\_started/tutorials.html}{Pandas community tutorials}
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\chapter{Modelflows extensions to pandas}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:modelflows-extensions-to-pandas}}\label{\detokenize{content/04_PythonEssentials/UpdateCommand::doc}}
+\sphinxAtStartPar
+Modeflow inherits all the capabilities of pandas and extends some as well.
+
+\sphinxAtStartPar
+As we have seen above we can modify data in a dataframe directly with built\sphinxhyphen{}in pandas functionalities like \sphinxcode{\sphinxupquote{.loc{[}{]}}}.
+
+
+\section{.upd() method of modelflow}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-method-of-modelflow}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{.upd()}} method extends these capabilities in important ways.  It gives the user a concise and expressive way to modify data in a dataframe in the way that a user or database\sphinxhyphen{}manager of the World Bank MFMod models might.
+
+\sphinxAtStartPar
+Notably it allows us to employ formula’s to do updates, including lags and leads on variables.
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.upd()}}  be used to:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Perform different types of  updates
+
+\item {} 
+\sphinxAtStartPar
+Perform multiple updates each on a new line
+
+\item {} 
+\sphinxAtStartPar
+Perform changes over specific periods
+
+\item {} 
+\sphinxAtStartPar
+Use one input which is used for all time frames, or a input for each time
+
+\item {} 
+\sphinxAtStartPar
+Preserve pre\sphinxhyphen{}shock growth rates for out of sample time\sphinxhyphen{}periods
+
+\item {} 
+\sphinxAtStartPar
+Display results
+
+\end{itemize}
+
+
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{.upd()}} method operators}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-method-operators}}
+\sphinxAtStartPar
+Below are some of the operators that can be used in the \sphinxcode{\sphinxupquote{.upd()}} method
+
+\sphinxAtStartPar
+\sphinxstylestrong{Types of update:}
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Update to perform
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Use this operator
+\\
+\hline
+\sphinxAtStartPar
+Set a variable equal to the input
+&
+\sphinxAtStartPar
+=
+\\
+\hline
+\sphinxAtStartPar
+Add the input to the input
+&
+\sphinxAtStartPar
++
+\\
+\hline
+\sphinxAtStartPar
+Set the variable to itself multiplied by the input
+&
+\sphinxAtStartPar
+*
+\\
+\hline
+\sphinxAtStartPar
+Increase/Decrease the variable by a percent of itself (1+input/100)
+&
+\sphinxAtStartPar
+\%
+\\
+\hline
+\sphinxAtStartPar
+Set the growth rate of the variable to the input
+&
+\sphinxAtStartPar
+=growth
+\\
+\hline
+\sphinxAtStartPar
+Change the growth rate of the variable to its current growth rate plus the input value in percentage points
+&
+\sphinxAtStartPar
++growth
+\\
+\hline
+\sphinxAtStartPar
+Specify the amount by which the variable should increase from its previous period level (\(\Delta = var_t - var_{t-1}\)
+&
+\sphinxAtStartPar
+=diff
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+\begin{sphinxadmonition}{danger}{Danger:}
+\sphinxAtStartPar
+Note: the syntax of an update command requires that there be a space between variable names and the operators.
+
+\sphinxAtStartPar
+Thus \sphinxcode{\sphinxupquote{df.upd("A = 7")}} is fine, but \sphinxcode{\sphinxupquote{df.upd("A =7")}} will generate an error.
+
+\sphinxAtStartPar
+Similarly  \sphinxcode{\sphinxupquote{df.upd("A * 1.1")}} is fine, but \sphinxcode{\sphinxupquote{df.upd("A=* 1.1")}} will generate an error.
+\end{sphinxadmonition}
+
+
+\section{\sphinxstyleliteralintitle{\sphinxupquote{.upd()}} some examples}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-some-examples}}
+
+\subsection{Setting up the python environment}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:setting-up-the-python-environment}}
+\sphinxAtStartPar
+In order to use \sphinxcode{\sphinxupquote{.upd()}} we need to first import all of the necessary libraries to out python session.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZpc{}}\PYG{k}{load\PYGZus{}ext} autoreload
+\PYG{o}{\PYGZpc{}}\PYG{k}{autoreload} 2
+
+\PYG{c+c1}{\PYGZsh{} First we must import pandas as modelflow into ouir workspace}
+\PYG{c+c1}{\PYGZsh{} There is no problem importing multiple times, though it is not very efficient.}
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{k+kn}{from} \PYG{n+nn}{modelclass} \PYG{k+kn}{import} \PYG{n}{model} 
+\PYG{c+c1}{\PYGZsh{} functions that improve rendering of modelflow outputs under Jupyter Notebook}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{widescreen}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{scroll\PYGZus{}off}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Now create a dataframe using standard pandas syntax.  In this instance with years as the index and a dictionary defining the variables and their data.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Create a dataframe using standard pandas}
+
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{6}\PYG{p}{]}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{E}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2018}\PYG{p}{,}\PYG{l+m+mi}{2019}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2021}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{df} 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+      B  C  E
+2018  1  1  4
+2019  1  2  4
+2020  1  3  4
+2021  1  6  4
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+If we want to be a bit more creative we could use a loop to create the dataframe for dates that we pass as an argument.  For example, below we create a dataframe df with two Series (A and B), which we initialize with the values 100 for all data points.
+
+\sphinxAtStartPar
+In this case we we define the index dynamically as the result of a loop \sphinxcode{\sphinxupquote{index={[}2020+v for v in range(number\_of\_rows){]}}}.
+
+\sphinxAtStartPar
+This bit of code runs a loop that runs for number\_of\_rows times setting v equal to 2020+0, 2020+1,…,202+5. The resulting list whose values are assigned to index is {[}2020,2021,2022,2023,2024,2025{]}.
+
+\sphinxAtStartPar
+The big advanatge of this method is that if the user wanted to have data created for the period 1990 to 2030, they would only have to change number\_of\_rows from 6 to 41 and 2020 in the loop to 1990.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}define the number of years for which the data is to be created.}
+\PYG{n}{number\PYGZus{}of\PYGZus{}rows} \PYG{o}{=} \PYG{l+m+mi}{6} 
+
+\PYG{c+c1}{\PYGZsh{} call the dataframe constructor}
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{,}
+       \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2020}\PYG{o}{+}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{number\PYGZus{}of\PYGZus{}rows}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{} create row index}
+       \PYG{c+c1}{\PYGZsh{} equivalent to index=[2020,2021,2022,2023,2024,2025] }
+       \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}                                 \PYG{c+c1}{\PYGZsh{} create column name }
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B
+2020  100  100
+2021  100  100
+2022  100  100
+2023  100  100
+2024  100  100
+2025  100  100
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Use .upd to create a new variable (= operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:use-upd-to-create-a-new-variable-operator}}
+\sphinxAtStartPar
+We know from above that with pandas we can add a column (series) to a dataframe simply by assigning a adding to a dataframe.  For example:
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{df{[}'NEW2'{]}={[}17,12,14,15{]}}}
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.upd()}} provides this functionality as well.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df2}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{c = 142}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} 
+\PYG{n}{df2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B      C
+2020  100  100  142.0
+2021  100  100  142.0
+2022  100  100  142.0
+2023  100  100  142.0
+2024  100  100  142.0
+2025  100  100  142.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+note that the new variable name is in lower case here.  We know that lowercase letters are not legal \sphinxcode{\sphinxupquote{modelflow}} variable names.  But because the .upd() method knows this also, it automatically translates these into upper case so that the statement works.
+\end{sphinxadmonition}
+
+
+\subsection{multiple updates and specific time periods}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:multiple-updates-and-specific-time-periods}}
+\sphinxAtStartPar
+The modelflow method \sphinxcode{\sphinxupquote{.upd()}} takes a string as an argument.  That string can contain a single update command or can contain multiple commands.
+
+\sphinxAtStartPar
+The below illustrates this, modifying two existing variables A, B over different time periods and creating a new variable.
+
+\begin{sphinxadmonition}{danger}{Danger:}
+\sphinxAtStartPar
+Note that the third line inherits the time period of the previous line.
+\end{sphinxadmonition}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s2}{\PYGZlt{}2021 2024\PYGZgt{} A = 42 44 45 46    \PYGZsh{} 4 years}
+\PYG{l+s+s2}{\PYGZlt{}2020     \PYGZgt{} B = 200            \PYGZsh{} 1 year }
+\PYG{l+s+s2}{c = 500                        \PYGZsh{} Same period as previous}
+\PYG{l+s+s2}{\PYGZlt{}\PYGZhy{}0 \PYGZhy{}1\PYGZgt{} D = 33                   \PYGZsh{} All years }
+\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B      C     D
+2020  100  200  500.0  33.0
+2021   42  100    0.0  33.0
+2022   44  100    0.0  33.0
+2023   45  100    0.0  33.0
+2024   46  100    0.0  33.0
+2025  100  100    0.0  33.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+**Time scope of .upd()**
+
+
+
+The update command takes a variety of mathematical operators ```=, +, *, \PYGZpc{} =GROWTH, +GROWTH, =DIFF``` and applies them to data for the period set in the leading \PYGZlt{}\PYGZgt{}.
+
+If the user wants to modify a series or group of series for only a specific point in time or a period of time, she can indicate the period in the command line.
+
+ \PYGZhy{} If **one date** is specified the operation is applied to a single point in time
+ \PYGZhy{} If **two dates**  are specifies the operation is applied over a period of time.
+
+The time will persist until re\PYGZhy{}set with a new time specification. Useful to avoid visual noise if several variables are going to be updated for the same time period. 
+
+ \PYGZhy{} To indicate the start of the dataframe use \PYGZhy{}0
+ \PYGZhy{} To indicate the end of the dataframe use \PYGZhy{}1
+ 
+If no time is provided the dataframe start and end period will be used.  
+\end{sphinxVerbatim}
+
+
+\subsubsection{Setting specific datapoints to specific values}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:setting-specific-datapoints-to-specific-values}}
+\sphinxAtStartPar
+In this example, upd uses the equals operator.  This indicates that the variable a should be set equal to the indicated values following the = operator (42 44 45 46 in this example). The dates enclosed in <> indicate the period over which the change should be applied.
+
+\sphinxAtStartPar
+Either:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The number of data points provided must match the number of dates in the period, Or
+
+\item {} 
+\sphinxAtStartPar
+Only one data point is provided, it is applied to all dates in the period.
+
+\end{itemize}
+
+\sphinxAtStartPar
+If only one period is to be modified then it can be followed by just one date.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s2}{\PYGZlt{}2021 2024\PYGZgt{} A = 42 44 45 46    \PYGZsh{} 4 years}
+\PYG{l+s+s2}{\PYGZlt{}2020     \PYGZgt{} B = 200            \PYGZsh{} 1 year }
+\PYG{l+s+s2}{c = 500}
+\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B      C
+2020  100  200  500.0
+2021   42  100    0.0
+2022   44  100    0.0
+2023   45  100    0.0
+2024   46  100    0.0
+2025  100  100    0.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Adding  the specified  values to all values in a range (the + operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:adding-the-specified-values-to-all-values-in-a-range-the-operator}}
+\sphinxAtStartPar
+NB: Here upd with the  + operator indicates that we are adding 42.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Or one number to all years in between start and end }
+\PYG{l+s+s1}{\PYGZlt{}2022 2024\PYGZgt{} B  +  42    \PYGZsh{} one value broadcast to 3 years }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B
+2020  100  100
+2021  100  100
+2022  100  142
+2023  100  142
+2024  100  142
+2025  100  100
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Multiplying all values in a range by the specified values (the * operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:multiplying-all-values-in-a-range-by-the-specified-values-the-operator}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{\PYGZlt{}2021 2023\PYGZgt{} A *  42 44 55}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+         A    B
+2020   100  100
+2021  4200  100
+2022  4400  100
+2023  5500  100
+2024   100  100
+2025   100  100
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Increasing all  values in a range by a  specified percent amount (the \% operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator}}
+\sphinxAtStartPar
+In this example:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+A is increased by 42 and 44\% over the range 2021 through 2022.
+
+\item {} 
+\sphinxAtStartPar
+B is increased by 10 percent in all years
+
+\item {} 
+\sphinxAtStartPar
+C, a new variable, is created and set to 100 for the whole range
+
+\item {} 
+\sphinxAtStartPar
+C is decreased by 12 percent over the range 2023 through 2025.
+
+\end{itemize}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2021 2022 \PYGZgt{} A }\PYG{l+s+s1}{\PYGZpc{}}\PYG{l+s+s1}{  42 44   }
+\PYG{l+s+s1}{\PYGZlt{}\PYGZhy{}0 \PYGZhy{}1\PYGZgt{} B }\PYG{l+s+s1}{\PYGZpc{}}\PYG{l+s+s1}{ 10            \PYGZsh{} all rows }
+\PYG{l+s+s1}{C = 100                   \PYGZsh{} all rows persist }
+\PYG{l+s+s1}{\PYGZlt{}2023 2025\PYGZgt{} C }\PYG{l+s+s1}{\PYGZpc{}}\PYG{l+s+s1}{ \PYGZhy{}12       \PYGZsh{} now only for 3 years }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A      B      C
+2020  100  110.0  100.0
+2021  142  110.0  100.0
+2022  144  110.0  100.0
+2023  100  110.0   88.0
+2024  100  110.0   88.0
+2025  100  110.0   88.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Set the percent growth rate to specified values (=GROWTH)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:set-the-percent-growth-rate-to-specified-values-growth}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{\PYGZlt{}2021 2022\PYGZgt{} A =GROWTH  1 5  }
+\PYG{l+s+s1}{\PYGZlt{}2020\PYGZgt{} c = 100 }
+\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{} c =GROWTH 2 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Dataframe:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Growth:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Explained b}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Dataframe:
+           A    B           C
+2020  100.00  100  100.000000
+2021  101.00  100  102.000000
+2022  106.05  100  104.040000
+2023  100.00  100  106.120800
+2024  100.00  100  108.243216
+2025  100.00  100  110.408080
+
+Growth:
+             A    B    C
+2020       NaN  NaN  NaN
+2021  1.000000  0.0  2.0
+2022  5.000000  0.0  2.0
+2023 \PYGZhy{}5.704856  0.0  2.0
+2024  0.000000  0.0  2.0
+2025  0.000000  0.0  2.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Add or subtract from the existing percent growth rate (+GROWTH operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:add-or-subtract-from-the-existing-percent-growth-rate-growth-operator}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{} A =GROWTH  1  }
+\PYG{l+s+s1}{\PYGZsh{} now we add values  to the growth rate, }
+\PYG{l+s+s1}{a +growth   2 3 4 5 6 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Dataframe:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Growth:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Dataframe:
+               A    B
+2020  100.000000  100
+2021  103.000000  100
+2022  107.120000  100
+2023  112.476000  100
+2024  119.224560  100
+2025  127.570279  100
+
+Growth:
+        A    B
+2020  NaN  NaN
+2021  3.0  0.0
+2022  4.0  0.0
+2023  5.0  0.0
+2024  6.0  0.0
+2025  7.0  0.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Set \protect\(\Delta = var_t - var_{t-1}\protect\) to specified values (=diff operator)}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:set-delta-var-t-var-t-1-to-specified-values-diff-operator}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{\PYGZlt{} 2021 2022\PYGZgt{} A =diff  2 4   }
+\PYG{l+s+s1}{\PYGZsh{} cv number to all years in between start and end }
+
+\PYG{l+s+s1}{\PYGZlt{}2020 \PYGZgt{} same = 100 }
+\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{} same =diff  2  }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B   SAME
+2020  100  100  100.0
+2021  102  100  102.0
+2022  106  100  104.0
+2023  100  100  106.0
+2024  100  100  108.0
+2025  100  100  110.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Recall  that we have not overwritten df, so the df dataframe is unchanged.}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:recall-that-we-have-not-overwritten-df-so-the-df-dataframe-is-unchanged}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A    B
+2020  100  100
+2021  100  100
+2022  100  100
+2023  100  100
+2024  100  100
+2025  100  100
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Keep growth rates after the update time – the –kg option}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:keep-growth-rates-after-the-update-time-the-kg-option}}
+\sphinxAtStartPar
+In a long projection it can sometime be useful to be able to update variables for which new information is available, but for the subsequent periods keep the growth rate the same as before the update. In database management this is frequently done when two time\sphinxhyphen{}series with different levels are spliced together.
+
+\sphinxAtStartPar
+The \sphinxhyphen{}kg or –keep\_growth option instructs modelview to calculate the growth rate of the existing pre\sphinxhyphen{}change series, and then use it to preserve the pre\sphinxhyphen{}change growth rates of the series for the periods that were \sphinxstylestrong{not} changed.
+
+\sphinxAtStartPar
+This allows to update variables for which new information is available, but keep the growth rate the same as before the update in the period after the update time.
+
+
+\subsubsection{The default keep\_growth behaviour}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:the-default-keep-growth-behaviour}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{upd()}} method has a parameter \sphinxcode{\sphinxupquote{keep\_growth}}, which by default is equal to \sphinxcode{\sphinxupquote{False}}.
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{keep\_growth}} determines how data in  the time periods after those where an update is executed are treated.
+
+\sphinxAtStartPar
+If \sphinxcode{\sphinxupquote{keep\_growth}} is \sphinxcode{\sphinxupquote{False}} then data in the sub\sphinxhyphen{}period after a change is left unchanged.
+
+\sphinxAtStartPar
+if \sphinxcode{\sphinxupquote{keep\_growth}} is set to “\sphinxcode{\sphinxupquote{True}}” then the system will preserve the pre\sphinxhyphen{}change growth rate of the affected variable in the time period \sphinxstyleemphasis{after the change}.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+At the line level:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{keep\_growth=True}} can be expressed as –kg
+
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{keep\_growth=False}} can be expressed as –nkg
+
+\end{itemize}
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+Let’s see this in a concrete example.  Consider the following \sphinxcode{\sphinxupquote{dataframe}} df with two variables A and B, that each grow by 2\% per period, with A initialized at a level of 100 and B at a level of 110 so that we can see each separately on a graph.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{,}
+       \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2020}\PYG{o}{+}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{number\PYGZus{}of\PYGZus{}rows}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{} create row index}
+       \PYG{c+c1}{\PYGZsh{} equivalent to index=[2020,2021,2022,2023,2024,2025] }
+       \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)} 
+
+\PYG{n}{df}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2021 \PYGZhy{}1\PYGZgt{} A =growth 2}
+\PYG{l+s+s2}{           \PYGZlt{}2020 \PYGZhy{}1\PYGZgt{}   B = 110}
+\PYG{l+s+s2}{          \PYGZlt{}2021 \PYGZhy{}1\PYGZgt{}    B =growth 2}
+\PYG{l+s+s2}{          }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Store these variables for later use in comparisons}
+\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A\PYGZus{}ORIG}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B\PYGZus{}ORIG}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.000000  110.000000  100.000000  110.000000
+2021  102.000000  112.200000  102.000000  112.200000
+2022  104.040000  114.444000  104.040000  114.444000
+2023  106.120800  116.732880  106.120800  116.732880
+2024  108.243216  119.067538  108.243216  119.067538
+2025  110.408080  121.448888  110.408080  121.448888
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Axes: \PYGZgt{}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Now lets modify each by adding 5 to the level in 2022 and 2023.  For B we will do setting the keep\_growth option as False and for ‘B’ keep\_growth positive.  While the keep\_growth is a global variable it can be set at the line level also using the –kg option (\sphinxcode{\sphinxupquote{keep\_growth=True}}) and –nkg option ( (\sphinxcode{\sphinxupquote{keep\_growth=False}}).
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{            \PYGZlt{}2022 2023\PYGZgt{} A + 5 \PYGZhy{}\PYGZhy{}kg}
+\PYG{l+s+s2}{            \PYGZlt{}2022 2023\PYGZgt{} B + 5 \PYGZhy{}\PYGZhy{}nkg}
+\PYG{l+s+s2}{            }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{df}\PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A\PYGZus{}ORIG}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B\PYGZus{}ORIG}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{p}{)}
+    
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Axes: \PYGZgt{}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+In the first example ‘A’ (the green and blue lines) the level of A is increased by 5 for two periods (2021\sphinxhyphen{}2022) and then the subsequent values are also increased they were calculated to maintain the growth rate of the original series.
+
+\sphinxAtStartPar
+For the ‘B’ variable the same level change was input but because of the \sphinxcode{\sphinxupquote{\sphinxhyphen{}\sphinxhyphen{}nkg}} (equivalent to \sphinxcode{\sphinxupquote{keep\_growth=False}} ) the periods after the change were affected retained their old values.
+
+\sphinxAtStartPar
+Below we plot the growth rates of the two transformed series.
+
+\sphinxAtStartPar
+Here series both series accelerate growth in 2022 By slightly less than 5 percentage points because a) the base of each is more than 100, with the base of B being higher (it was initialized at 110). In 2023 teh growth rate of A returns to 2 percent, while the growth rate of B is actually negative because the level (see earlier graph) has fallen back to its original level.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{dfg}\PYG{o}{=}\PYG{n}{df}\PYG{p}{[}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}
+\PYG{n}{dfg}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Axes: \PYGZgt{}
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+\sphinxstylestrong{Python constructs}
+\begin{quote}
+
+\sphinxAtStartPar
+print(f’Dataframe:\textbackslash{}n\{res\}\textbackslash{}n\textbackslash{}nGrowth:\textbackslash{}n\{res.pct\_change()*100\}\textbackslash{}n’)
+\end{quote}
+
+\sphinxAtStartPar
+Uses
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Python construct
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Explanation
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Links
+\\
+\hline
+\sphinxAtStartPar
+‘\textbackslash{}n’
+&
+\sphinxAtStartPar
+A line break
+&
+\sphinxAtStartPar
+
+\\
+\hline
+\sphinxAtStartPar
+dataframe.pct\_change
+&
+\sphinxAtStartPar
+Percentage change between the current and a prior element.
+&
+\sphinxAtStartPar
+\sphinxhref{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pct\_change.html}{Description}
+\\
+\hline
+\sphinxAtStartPar
+f’\{varname\} = ….’
+&
+\sphinxAtStartPar
+A f\sphinxhyphen{}string, \{expression\} is replaced by the value of expression
+&
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=python+f-string\&newwindow=1}{Search}
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+\end{sphinxadmonition}
+
+
+\section{.upd(,,,keep\_growth) some more examples}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-keep-growth-some-more-examples}}
+
+\subsection{Initialize a new dataframe First make a dataframe with some growth rate}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:initialize-a-new-dataframe-first-make-a-dataframe-with-some-growth-rate}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{dftest} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{,}
+       \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2020}\PYG{o}{+}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{number\PYGZus{}of\PYGZus{}rows}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{} create row index}
+       \PYG{c+c1}{\PYGZsh{} equivalent to index=[2020,2021,2022,2023,2024,2025] }
+       \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}                                 \PYG{c+c1}{\PYGZsh{} create column name }
+
+
+\PYG{n}{original} \PYG{o}{=} \PYG{n}{dftest}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{} a =growth 1 2 3 4 5}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}  
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Levels:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{original}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Growth:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{original}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Levels:
+               A
+2020  100.000000
+2021  101.000000
+2022  103.020000
+2023  106.110600
+2024  110.355024
+2025  115.872775
+
+Growth:
+        A
+2020  NaN
+2021  1.0
+2022  2.0
+2023  3.0
+2024  4.0
+2025  5.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{now update A in 2021 to 2023 to a new value}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:now-update-a-in-2021-to-2023-to-a-new-value}}
+\sphinxAtStartPar
+Below we do the same operation, the first time we assign the updated value to the dataframe nkg and the default behaviour of \sphinxcode{\sphinxupquote{keep\_growth}} is \sphinxcode{\sphinxupquote{False}}
+
+\sphinxAtStartPar
+In the second example we use the \sphinxcode{\sphinxupquote{\sphinxhyphen{}kg}} line option, telling modelview to maintain the growth rates of the dependent variable in the periods after the update is executed.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{nokg} \PYG{o}{=} \PYG{n}{original}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{}  a =growth 1 2 3 4 5 }
+\PYG{l+s+s1}{\PYGZlt{}2021 2023\PYGZgt{}  a = 120  }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+
+\PYG{n}{kg} \PYG{o}{=} \PYG{n}{original}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2021 2025\PYGZgt{}  a =growth 1 2 3 4 5 }
+\PYG{l+s+s1}{\PYGZlt{}2021 2023\PYGZgt{}  a = 120  \PYGZhy{}\PYGZhy{}kg}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{growth No kg:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{nokg}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{growth kg:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{kg}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Level No kg:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{nokg}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Level kg:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{kg}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+growth No kg:
+             A
+2020       NaN
+2021  20.00000
+2022   0.00000
+2023   0.00000
+2024  \PYGZhy{}8.03748
+2025   5.00000
+growth kg:
+         A
+2020   NaN
+2021  20.0
+2022   0.0
+2023   0.0
+2024   4.0
+2025   5.0
+
+
+Level No kg:
+               A
+2020  100.000000
+2021  120.000000
+2022  120.000000
+2023  120.000000
+2024  110.355024
+2025  115.872775
+Level kg:
+           A
+2020  100.00
+2021  120.00
+2022  120.00
+2023  120.00
+2024  124.80
+2025  131.04
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In the first where KG (keep\_growth) \sphinxstylestrong{was not set}, because the level was set constant for three periods at 120 the rate of growth was 0 for the final two years of the set period.  But following this update, the level of A in 2023 is 120. With \sphinxcode{\sphinxupquote{keep\_Growth=False}} (its default value)m the level of A in 2024 remains at its unchanged  unchanged (lower) level of 100.35. As a result, the growth rate in 2024 is negative.
+
+\sphinxAtStartPar
+In the \sphinxstylestrong{–kg} example, the pre\sphinxhyphen{}exsting growth rate (of 4\%) is applied to the new value of 120 and so the level in 2024 is (120*1.04)=124.8
+\end{sphinxadmonition}
+
+
+\subsubsection{.upd() with the option keep\_growth set globally}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-with-the-option-keep-growth-set-globally}}
+\sphinxAtStartPar
+Above we used the line level option –keep\_growth or –kg to keep the growth rate for a given operation.
+
+\sphinxAtStartPar
+This works because by default the option Keep\_growth is set to false, so in effect we are temporarily setting it to true for the specific lines above.
+
+\sphinxAtStartPar
+We can also change the keep\_growth variable for all the lines by setting the option in the command line.
+
+\sphinxAtStartPar
+In the below example we set the global option \sphinxcode{\sphinxupquote{keep\_growth=True}}.
+
+\sphinxAtStartPar
+Now as default, all lines will keep the growth rate
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+c,d are updated in 2022 and 2023 and keep the growth rates afterwards
+
+\item {} 
+\sphinxAtStartPar
+e the –no\_keep\_growth in this line prevents the updating 2024\sphinxhyphen{}2025
+
+\end{itemize}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Create a data frame}
+\PYG{n}{dftest} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{,}
+       \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{2020}\PYG{o}{+}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{number\PYGZus{}of\PYGZus{}rows}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{} create row index}
+       \PYG{c+c1}{\PYGZsh{} equivalent to index=[2020,2021,2022,2023,2024,2025] }
+       \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{D}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{E}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}                                 \PYG{c+c1}{\PYGZsh{} create column name }
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.000000  110.000000  100.000000  110.000000
+2021  102.000000  112.200000  102.000000  112.200000
+2022  109.040000  119.444000  104.040000  114.444000
+2023  111.120800  121.732880  106.120800  116.732880
+2024  113.343216  119.067538  108.243216  119.067538
+2025  115.610080  121.448888  110.408080  121.448888
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{dfres} \PYG{o}{=} \PYG{n}{dftest}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2022 2023\PYGZgt{} c = 200 }
+\PYG{l+s+s1}{\PYGZlt{}2022 2023\PYGZgt{} d = 300  }
+\PYG{l+s+s1}{\PYGZlt{}2022 2023\PYGZgt{} e = 400  \PYGZhy{}\PYGZhy{}no\PYGZus{}keep\PYGZus{}growth }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{keep\PYGZus{}growth}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} \PYGZlt{}===  Here we have set the keep\PYGZus{}growth to True for the entirety of the command, }
+                       \PYG{c+c1}{\PYGZsh{} except for e where it is overridden by the \PYGZhy{}\PYGZhy{}no\PYGZus{}keep\PYGZus{}growth flag}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Dataframe:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{dfres}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Growth:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{dfres}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Dataframe:
+        A    B      C      D    E
+2020  100  100  100.0  100.0  100
+2021  100  100  100.0  100.0  100
+2022  100  100  200.0  300.0  400
+2023  100  100  200.0  300.0  400
+2024  100  100  200.0  300.0  100
+2025  100  100  200.0  300.0  100
+
+Growth:
+        A    B      C      D      E
+2020  NaN  NaN    NaN    NaN    NaN
+2021  0.0  0.0    0.0    0.0    0.0
+2022  0.0  0.0  100.0  200.0  300.0
+2023  0.0  0.0    0.0    0.0    0.0
+2024  0.0  0.0    0.0    0.0  \PYGZhy{}75.0
+2025  0.0  0.0    0.0    0.0    0.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Some more advanced example}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:some-more-advanced-example}}
+\sphinxAtStartPar
+These examples continue to use update, but with some examples of how to embed Python loops into commands.
+
+
+\subsubsection{First create a string with update lines}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:first-create-a-string-with-update-lines}}
+\sphinxAtStartPar
+In this example we create a string dynamically is comprised of a variety of update statements.  The loop repeats the two lines above replacing the \{varname\} expression with c d e and f as the loop is executed.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{lines} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}                               
+ \PYG{p}{[}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}2020     \PYGZgt{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{varname}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ = 100 }
+\PYG{l+s+s1}{      \PYGZlt{}2021 2025\PYGZgt{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{varname}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ =growth 1 2 3 4 5}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+     \PYG{k}{for} \PYG{n}{varname} \PYG{o+ow}{in} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{c d e f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{)} 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}2020     \PYGZgt{} c = 100 
+      \PYGZlt{}2021 2025\PYGZgt{} c =growth 1 2 3 4 5
+\PYGZlt{}2020     \PYGZgt{} d = 100 
+      \PYGZlt{}2021 2025\PYGZgt{} d =growth 1 2 3 4 5
+\PYGZlt{}2020     \PYGZgt{} e = 100 
+      \PYGZlt{}2021 2025\PYGZgt{} e =growth 1 2 3 4 5
+\PYGZlt{}2020     \PYGZgt{} f = 100 
+      \PYGZlt{}2021 2025\PYGZgt{} f =growth 1 2 3 4 5
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+\sphinxstyleemphasis{\sphinxstylestrong{Python constructs}}
+
+\sphinxAtStartPar
+The creation of update lines involves a number of useful python constructs. A short
+description:
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Python construct
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+explanation
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Google
+\\
+\hline
+\sphinxAtStartPar
+‘a b’.split()
+&
+\sphinxAtStartPar
+splits a string by \sphinxcode{\sphinxupquote{blanks}}into a list
+&
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=python+split\&newwindow=1}{Search}
+\\
+\hline
+\sphinxAtStartPar
+‘\textbackslash{}n’.join()
+&
+\sphinxAtStartPar
+Creates a string from a list of string separated by \textbackslash{}n (linebreak)
+&
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=python+string+join\&newwindow=1}{Search}
+\\
+\hline
+\sphinxAtStartPar
+f’\{varname\} = ….’
+&
+\sphinxAtStartPar
+A f\sphinxhyphen{}string, \{varname\} is replaced by the value of varname
+&
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=python+f-string\&newwindow=1}{Search}
+\\
+\hline
+\sphinxAtStartPar
+{[}varname for varname in a\_list{]}
+&
+\sphinxAtStartPar
+List comprehension which creates an implicit loop
+&
+\sphinxAtStartPar
+\sphinxhref{https://www.google.com/search?q=python+list+comprehension\&newwindow=1}{Search}
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+\end{sphinxadmonition}
+
+
+\subsubsection{Use the update lines to update a dataframe}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:use-the-update-lines-to-update-a-dataframe}}
+\sphinxAtStartPar
+Here we pass the variable lines to the \sphinxcode{\sphinxupquote{upd}} method.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{dfnew} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{)}
+\PYG{n}{dfnew}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG           C           D  \PYGZbs{}
+2020  100.000000  110.000000  100.000000  110.000000  100.000000  100.000000   
+2021  102.000000  112.200000  102.000000  112.200000  101.000000  101.000000   
+2022  109.040000  119.444000  104.040000  114.444000  103.020000  103.020000   
+2023  111.120800  121.732880  106.120800  116.732880  106.110600  106.110600   
+2024  113.343216  119.067538  108.243216  119.067538  110.355024  110.355024   
+2025  115.610080  121.448888  110.408080  121.448888  115.872775  115.872775   
+
+               E           F  
+2020  100.000000  100.000000  
+2021  101.000000  101.000000  
+2022  103.020000  103.020000  
+2023  106.110600  106.110600  
+2024  110.355024  110.355024  
+2025  115.872775  115.872775  
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{–kg can replace –keep\_growth and –nkg can replace –non\_keep\_growth}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:kg-can-replace-keep-growth-and-nkg-can-replace-non-keep-growth}}
+\sphinxAtStartPar
+Just to make typing more easy
+
+
+\section{Update several variable in one line}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:update-several-variable-in-one-line}}
+\sphinxAtStartPar
+Sometime there is a need to update several variable with the same value over the same time frame. To ease this case .update can accept several variables in one line
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2022 2024\PYGZgt{} h i j k =      40 }
+\PYG{l+s+s1}{\PYGZlt{}2020\PYGZgt{}      p q r s =       1000}
+\PYG{l+s+s1}{\PYGZlt{}2021 \PYGZhy{}1\PYGZgt{}   p q r s =growth 2     \PYGZsh{} \PYGZhy{}1 indicates the last year }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG     H     I     J     K  \PYGZbs{}
+2020  100.000000  110.000000  100.000000  110.000000   0.0   0.0   0.0   0.0   
+2021  102.000000  112.200000  102.000000  112.200000   0.0   0.0   0.0   0.0   
+2022  109.040000  119.444000  104.040000  114.444000  40.0  40.0  40.0  40.0   
+2023  111.120800  121.732880  106.120800  116.732880  40.0  40.0  40.0  40.0   
+2024  113.343216  119.067538  108.243216  119.067538  40.0  40.0  40.0  40.0   
+2025  115.610080  121.448888  110.408080  121.448888   0.0   0.0   0.0   0.0   
+
+                P            Q            R            S  
+2020  1000.000000  1000.000000  1000.000000  1000.000000  
+2021  1020.000000  1020.000000  1020.000000  1020.000000  
+2022  1040.400000  1040.400000  1040.400000  1040.400000  
+2023  1061.208000  1061.208000  1061.208000  1061.208000  
+2024  1082.432160  1082.432160  1082.432160  1082.432160  
+2025  1104.080803  1104.080803  1104.080803  1104.080803  
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{.upd(,,scale=<number, default=1>) Scale the updates}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-scale-number-default-1-scale-the-updates}}
+\sphinxAtStartPar
+When running a scenario it can be useful to be able to create a number of scenarios based on one update but with different scale.
+
+\sphinxAtStartPar
+This can be particularly useful when we want to do sensitivity analyses of model results, depending on how heavily a shocked variable is hit
+
+\sphinxAtStartPar
+When using the scale option, scale=0  the baseline while scale=0.5 is a scenario half
+the severity.
+
+\sphinxAtStartPar
+In the example below the values of the dataframes are printed. We use the scale option (setting to to 0, 0.5 and 1) to run three scenarios using the same code but where the update in each case is multiplied by either 0, 0.5 or 1.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+Here we are just printing the outputs, a more interesting example would involve the solving a  model using different levels of a given shock.
+\end{sphinxadmonition}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{input dataframe: }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{df}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{severity} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{:} 
+    \PYG{c+c1}{\PYGZsh{} First make a dataframe with some growth rate }
+    \PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{    \PYGZlt{}2021 2025\PYGZgt{}}
+\PYG{l+s+s1}{    a =growth 1 2 3 4 5 }
+\PYG{l+s+s1}{    b + 10}
+\PYG{l+s+s1}{    }\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{scale}\PYG{o}{=}\PYG{n}{severity}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{severity}\PYG{l+s+si}{=\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Dataframe:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Growth:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{res}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{}  }
+    \PYG{c+c1}{\PYGZsh{} Here the updated dataframe is only printed. }
+    \PYG{c+c1}{\PYGZsh{} A more realistic use case is to simulate a model like this: }
+    \PYG{c+c1}{\PYGZsh{} dummy\PYGZus{} = mpak(res,keep=\PYGZsq{}Severity \PYGZob{}serverity\PYGZcb{}\PYGZsq{})    \PYGZsh{} more realistic }
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+input dataframe: 
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.000000  110.000000  100.000000  110.000000
+2021  102.000000  112.200000  102.000000  112.200000
+2022  109.040000  119.444000  104.040000  114.444000
+2023  111.120800  121.732880  106.120800  116.732880
+2024  113.343216  119.067538  108.243216  119.067538
+2025  115.610080  121.448888  110.408080  121.448888
+
+
+severity=0
+Dataframe:
+          A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.0  110.000000  100.000000  110.000000
+2021  100.0  112.200000  102.000000  112.200000
+2022  100.0  119.444000  104.040000  114.444000
+2023  100.0  121.732880  106.120800  116.732880
+2024  100.0  119.067538  108.243216  119.067538
+2025  100.0  121.448888  110.408080  121.448888
+
+Growth:
+        A         B  A\PYGZus{}ORIG  B\PYGZus{}ORIG
+2020  NaN       NaN     NaN     NaN
+2021  0.0  2.000000     2.0     2.0
+2022  0.0  6.456328     2.0     2.0
+2023  0.0  1.916279     2.0     2.0
+2024  0.0 \PYGZhy{}2.189501     2.0     2.0
+2025  0.0  2.000000     2.0     2.0
+
+
+severity=0.5
+Dataframe:
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.000000  110.000000  100.000000  110.000000
+2021  100.500000  117.200000  102.000000  112.200000
+2022  101.505000  124.444000  104.040000  114.444000
+2023  103.027575  126.732880  106.120800  116.732880
+2024  105.088126  124.067538  108.243216  119.067538
+2025  107.715330  126.448888  110.408080  121.448888
+
+Growth:
+        A         B  A\PYGZus{}ORIG  B\PYGZus{}ORIG
+2020  NaN       NaN     NaN     NaN
+2021  0.5  6.545455     2.0     2.0
+2022  1.0  6.180887     2.0     2.0
+2023  1.5  1.839285     2.0     2.0
+2024  2.0 \PYGZhy{}2.103118     2.0     2.0
+2025  2.5  1.919399     2.0     2.0
+
+
+severity=1
+Dataframe:
+               A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020  100.000000  110.000000  100.000000  110.000000
+2021  101.000000  122.200000  102.000000  112.200000
+2022  103.020000  129.444000  104.040000  114.444000
+2023  106.110600  131.732880  106.120800  116.732880
+2024  110.355024  129.067538  108.243216  119.067538
+2025  115.872775  131.448888  110.408080  121.448888
+
+Growth:
+        A          B  A\PYGZus{}ORIG  B\PYGZus{}ORIG
+2020  NaN        NaN     NaN     NaN
+2021  1.0  11.090909     2.0     2.0
+2022  2.0   5.927987     2.0     2.0
+2023  3.0   1.768240     2.0     2.0
+2024  4.0  \PYGZhy{}2.023293     2.0     2.0
+2025  5.0   1.845042     2.0     2.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{.upd(,,lprint=True ) prints values the before and after update}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-lprint-true-prints-values-the-before-and-after-update}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{lPrint}} option of the method \sphinxcode{\sphinxupquote{upd()}} is by defualt \sphinxcode{\sphinxupquote{= False}}.  By setting it true an update command will output the results of the calculation comapriong the values of the dataframe (over the impacted period) before, after and the difference between the two.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{\PYGZlt{}2021 2022\PYGZgt{} A *  42 44}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Update * [42.0, 44.0] 2021 2022
+A                    Before                After                 Diff
+2021               102.0000            4284.0000            4182.0000
+2022               109.0400            4797.7600            4688.7200
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+                A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
+2020   100.000000  110.000000  100.000000  110.000000
+2021  4284.000000  112.200000  102.000000  112.200000
+2022  4797.760000  119.444000  104.040000  114.444000
+2023   111.120800  121.732880  106.120800  116.732880
+2024   113.343216  119.067538  108.243216  119.067538
+2025   115.610080  121.448888  110.408080  121.448888
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{.upd(,,create=True ) Requires the variable to exist}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:upd-create-true-requires-the-variable-to-exist}}
+\sphinxAtStartPar
+Until now .upd has created variables if they did not exist in the input dataframe.
+
+\sphinxAtStartPar
+To catch misspellings the parameter \sphinxcode{\sphinxupquote{create}} can be set to False.
+New variables will not be created, and an exception will be raised.
+
+\sphinxAtStartPar
+Here Pythons exception handling is used, so the notebook will continue to run the cells below.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{xx} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{    \PYGZsh{} Same number of values as years}
+\PYG{l+s+s1}{    \PYGZlt{}2021 2022\PYGZgt{} Aa *  42 44}
+\PYG{l+s+s1}{    }\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{create}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{xx}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{inst}\PYG{p}{:}
+    \PYG{n}{xx} \PYG{o}{=} \PYG{k+kc}{None}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{inst}\PYG{p}{)} 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Variable to update not found:AA, timespan = [2021 2022] 
+Set create=True if you want the variable created: 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{The call}
+\label{\detokenize{content/04_PythonEssentials/UpdateCommand:the-call}}
+\sphinxAtStartPar
+def upd(indf, updates, lprint=False,scale = 1.0,create=True,keep\_growth=False,start=’’,end=’’)
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Args:
+        indf (DataFrame): input dataframe.
+        basis (string): lines with variable updates look below.
+        lprint (bool, optional): if True each update is printed  Defaults to False.
+        scale (float, optional): A multiplier used on all update input . Defaults to 1.0.
+        create (bool, optional): Creates a variables if not in the dataframe . Defaults to True.
+        keep\PYGZus{}growth(bool, optional): Keep the growth rate after the update time frame. Defaults to False.
+
+    Returns:
+        df (TYPE): the updated dataframe .
+        
+    A line in updates looks like this:     
+           
+    \PYGZdq{}\PYGZlt{}\PYGZdq{}[[start] end]\PYGZdq{}\PYGZgt{}\PYGZdq{} \PYGZlt{}var....\PYGZgt{} \PYGZlt{}=|+|*|\PYGZpc{}|=growth|+growth|=diff\PYGZgt{} \PYGZlt{}value\PYGZgt{}...  [\PYGZhy{}\PYGZhy{}keep\PYGZus{}growth\PYGZus{}rate|\PYGZhy{}\PYGZhy{}no\PYGZus{}keep\PYGZus{}growth\PYGZus{}rate]
+\end{sphinxVerbatim}
+
+\sphinxstepscope
+
+
+\chapter{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} an extension of standard Pandas}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-an-extension-of-standard-pandas}}\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames::doc}}
+
+\section{.mfcalc usage}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-usage}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{.mfcalc()}} method extends dataframe and the method \sphinxcode{\sphinxupquote{.upd()}}.  It can be particularly useful when creating scenarios.
+
+\sphinxAtStartPar
+But it can also be used to perform quick and dirty  calculations or even to see how modelflow would normalize an equation.
+
+
+\section{workspace initialization}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:workspace-initialization}}
+\sphinxAtStartPar
+Setting up our python session to use pandas and modelflow by importing their packages.  \sphinxcode{\sphinxupquote{modelmf}} is an extension of dataframes that is part of the modelflow installation package (and also used by modelflow itself).
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}  \PYG{c+c1}{\PYGZsh{} Python data science library}
+\PYG{k+kn}{import} \PYG{n+nn}{modelmf}       \PYG{c+c1}{\PYGZsh{} Add useful features to pandas dataframes }
+                     \PYG{c+c1}{\PYGZsh{} using utlities initially developed for modelflow}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+
+\section{Create a  simple dataframe}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:create-a-simple-dataframe}}
+\sphinxAtStartPar
+Create a Pandas dataframe with one column with the name A and 6 rows.
+
+\sphinxAtStartPar
+Set set the index to 2020 through 2026 and set the values of all the cells to 100.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{pd.DataFrame}} creates a dataframe  \sphinxhref{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html\#pandas.DataFrame}{Description}
+
+\item {} 
+\sphinxAtStartPar
+The expression \sphinxcode{\sphinxupquote{{[}v for v in range(2020,2026){]}}} dynamically creates a  python list, and fills it with  integers beginning with 2020 and ending 2025
+
+\end{itemize}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}                                 \PYG{c+c1}{\PYGZsh{} call the dataframe constructure }
+    \PYG{l+m+mf}{100.000}\PYG{p}{,}                                           \PYG{c+c1}{\PYGZsh{} the values }
+    \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2026}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,}           \PYG{c+c1}{\PYGZsh{}index}
+    \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}                                  \PYG{c+c1}{\PYGZsh{} the column name }
+                 \PYG{p}{)}
+\PYG{n}{df}   \PYG{c+c1}{\PYGZsh{} the result of the last statement is displayed in the output cell }
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A
+2020  100.0
+2021  100.0
+2022  100.0
+2023  100.0
+2024  100.0
+2025  100.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} in action}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-in-action}}
+
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} example to calculate a new series}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-example-to-calculate-a-new-series}}
+\sphinxAtStartPar
+Use  mfcalc to calculate a new column (series) as a function of the existing A column series
+
+\sphinxAtStartPar
+The below call creates a new column x.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{x = x(\PYGZhy{}1) + a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0  100.0
+2022  100.0  200.0
+2023  100.0  300.0
+2024  100.0  400.0
+2025  100.0  500.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+\sphinxstylestrong{NOTE:}
+
+\sphinxAtStartPar
+By default \sphinxcode{\sphinxupquote{.mfcalc}} will initialize a new variable with zeroes.
+Moreover, if a formula passed to \sphinxcode{\sphinxupquote{.mfcalc}} contains a lag a value will be calculated for the first row only if there is data in the series for the preceding row.
+
+\sphinxAtStartPar
+Combining these two behaviours generates the result where the command \sphinxcode{\sphinxupquote{df.mfcalc('x = x(\sphinxhyphen{}1) + a')}} results in a zero in 2020 for X (because there was no X variable defined for 2019 (indeed no such row exists), but then the subsequent rows add the contempraenous value of A to the preceding value of x.
+
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+In the above example a  dataframe with the result is created and displayed, but the df dataframe did not change.  To have it change we would have had to assign it the result of the initial operation, as below.
+\end{sphinxadmonition}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A
+2020  100.0
+2021  100.0
+2022  100.0
+2023  100.0
+2024  100.0
+2025  100.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df2}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{x = x(\PYGZhy{}1) + a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Assign the result to df2}
+\PYG{n}{df2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0  100.0
+2022  100.0  200.0
+2023  100.0  300.0
+2024  100.0  400.0
+2025  100.0  500.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Recalculate A so  it grows by 2 percent}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:recalculate-a-so-it-grows-by-2-percent}}
+\sphinxAtStartPar
+mfcalcs knows that it can not start to calculate in 2020 as there is no lagged variable. So it will start calculating in 2021 and leave the pre\sphinxhyphen{}existing value unchanged.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a =  1.02 *  a(\PYGZhy{}1)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{res}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A
+2020  100.000000
+2021  102.000000
+2022  104.040000
+2023  106.120800
+2024  108.243216
+2025  110.408080
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100} \PYG{c+c1}{\PYGZsh{} to display the percent changes}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A
+2020  NaN
+2021  2.0
+2022  2.0
+2023  2.0
+2024  2.0
+2025  2.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{mfcalc(), the showeq option}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-the-showeq-option}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{showeq}} option is by default \sphinxcode{\sphinxupquote{= False}}.
+
+\sphinxAtStartPar
+By setting equal to \sphinxcode{\sphinxupquote{True}}, mfcalc can be used to express the normalization of an entered equation.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dlog( a) =  0.02}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{showeq}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+FRML \PYGZlt{}\PYGZgt{} A=EXP(LOG(A(\PYGZhy{}1))+0.02)\PYGZdl{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+In \sphinxcode{\sphinxupquote{modelflow}} the expression \sphinxcode{\sphinxupquote{dlog(a)}} refers to the difference in the natural logarithm \(dlog(x_t) \equiv ln(x_t)-ln(x_{t-1})\) and is equal to the growth rate for the variable.
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.mfcalc()}} normalizes the equation such that the systems solves for a as follows:
+\begin{equation*}
+\begin{split}dlog(a)  = 0.02\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}log(a)-log(a_{t-1}) = .02\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}log(a)=log(a_{t-1})+.02\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}a = e^{log(a_{t-1})+0.02}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}a =a_{t-1}*e^{0.02}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+which expressed in the business logic language of \sphinxcode{\sphinxupquote{modelflow}} is:
+
+\sphinxAtStartPar
+A=EXP(LOG(A(\sphinxhyphen{}1))+0.02)
+
+
+\subsection{Using .diff (\protect\(\Delta\protect\)) with mfcalc}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:using-diff-delta-with-mfcalc}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diff(a) =  2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Set delta to 2 }
+\PYG{n}{res}\PYG{o}{.}\PYG{n}{diff}\PYG{p}{(}\PYG{p}{)}                      \PYG{c+c1}{\PYGZsh{} Display the delta }
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A
+2020  NaN
+2021  2.0
+2022  2.0
+2023  2.0
+2024  2.0
+2025  2.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{mfcalc with several equations and arguments}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:mfcalc-with-several-equations-and-arguments}}
+\sphinxAtStartPar
+In addition to a single equation multiple commands can be executed with one command.
+
+\sphinxAtStartPar
+However, \sphinxstylestrong{be careful} because the equation commands are executed simultaneously, which, combined with the treatments of lags, means that results may differ from what would be expected if you ran the two commands sequentially.
+
+\sphinxAtStartPar
+For example:
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res}
+
+\PYG{c+c1}{\PYGZsh{} use res.diff() to see the difference}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  102.0  144.0
+2022  104.0  146.0
+2023  106.0  148.0
+2024  108.0  150.0
+2025  110.0  152.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+Here the diff(a) is not defined for 2020 because there is no value for a in 2019.
+
+\sphinxAtStartPar
+As a result \sphinxcode{\sphinxupquote{modelflow}} generates a result only for the periodf 2021 through 2025 and it is this result that is passed to the second equation, which adds 42 to this number. Thus X in 2020 is not 142 as one might have expected but zero, the value to which the newly created variable defaults.
+
+\sphinxAtStartPar
+Compare the results above with the results (below) when the two steps are not undertaken in the same mfcalc command.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res1} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res2} \PYG{o}{=} \PYG{n}{res1}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{res2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0  142.0
+2021  102.0  144.0
+2022  104.0  146.0
+2023  106.0  148.0
+2024  108.0  150.0
+2025  110.0  152.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{danger}{Danger:}
+\sphinxAtStartPar
+In \sphinxcode{\sphinxupquote{.mfcalc()}}, when there are multiple equation commands is single call, they are executed simultaneously. This, combined with \sphinxcode{\sphinxupquote{mfcalc}}’s  treatments of lags, means only the results of the lagged calculation will be passed to other commands equations defined in the \sphinxcode{\sphinxupquote{.mfcalc}} command. As a consequence, results may differ from what would be expected and what you would see if you ran the two commands sequentially.
+\end{sphinxadmonition}
+
+
+\subsection{Setting a time frame with mfcalc.}
+\label{\detokenize{content/04_PythonEssentials/ExtendingDataFrames:setting-a-time-frame-with-mfcalc}}
+\sphinxAtStartPar
+It can useful in some circumstances to limit the time frame for which the calculations are performed. By specifying a start date and end date enclosed in <> in a  line we can restrict the time period over which calculation is performed.
+
+\sphinxAtStartPar
+Below, as in the example above we have zeroes for x prior to 2023 when the expressions are executed.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2023 2025\PYGZgt{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res}\PYG{o}{.}\PYG{n}{diff}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{res}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0    0.0
+2022  100.0    0.0
+2023  102.0  144.0
+2024  104.0  146.0
+2025  106.0  148.0
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
