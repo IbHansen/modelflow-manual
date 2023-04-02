@@ -1,0 +1,2002 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="1008pt" viewBox="0.00 0.00 1080.00 1007.62">
+<g id="graph0" class="graph" transform="scale(0.661765 0.661765) rotate(0) translate(4 1518.62)">
+<title>TD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1518.62 1628,-1518.62 1628,4 -4,4"/>
+<text text-anchor="middle" x="812" y="-7.8" font-family="Times New Roman,serif" font-size="14.00">A_model_graph</text>
+<!-- SIGMA_T2_T4 -->
+<g id="node1" class="node">
+<title>SIGMA_T2_T4</title>
+<g id="a_node1"><a xlink:title="SIGMA_T2_T4
+FRML SIGMA SIGMA_T2_T4  = SQRT(SIGMA_T2**2*SIGMA_T4**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1174.7 118,-1174.7 118,-1138.7 222,-1138.7 222,-1174.7"/>
+<text text-anchor="start" x="124" y="-1152.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T2_T4:</text>
+</a>
+</g>
+</g>
+<!-- F_T2_T4 -->
+<g id="node12" class="node">
+<title>F_T2_T4</title>
+<g id="a_node12"><a xlink:title="F_T2_T4
+FRML PREFERENCES F_T2_T4  = ((1)/(1+EXP((((C_T2-C_T4))/(SIGMA_T2_T4))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1174.7 258,-1174.7 258,-1138.7 325,-1138.7 325,-1174.7"/>
+<text text-anchor="start" x="264.5" y="-1152.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T2_T4:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T4&#45;&gt;F_T2_T4 -->
+<g id="edge132" class="edge">
+<title>SIGMA_T2_T4-&gt;F_T2_T4</title>
+<g id="a_edge132"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-1156.7C230.64,-1156.7 239.12,-1156.7 247.17,-1156.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-1160.2 257.06,-1156.7 247.06,-1153.2 247.06,-1160.2"/>
+</a>
+</g>
+</g>
+<!-- TAU_T2 -->
+<g id="node2" class="node">
+<title>TAU_T2</title>
+<g id="a_node2"><a xlink:title="TAU_T2
+Exogen">
+<polygon fill="yellow" stroke="black" points="324,-1012.7 259,-1012.7 259,-976.7 324,-976.7 324,-1012.7"/>
+<text text-anchor="start" x="265.5" y="-990.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TAU_T2:</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T1 -->
+<g id="node4" class="node">
+<title>SHARE_T1</title>
+<g id="a_node4"><a xlink:title="SHARE_T1
+FRML SHARES2 SHARE_T1=SHARE_T1(-1)+((SHARE_T1*SHARE_T1*(F_T1_T1/TAU_T1-F_T1_T1/TAU_T1)+SHARE_T1*SHARE_T2*(F_T1_T2/TAU_T2-F_T2_T1/TAU_T1)+SHARE_T1*SHARE_T3*(F_T1_T3/TAU_T3-F_T3_T1/TAU_T1)+SHARE_T1*SHARE_T4*(F_T1_T4/TAU_T4-F_T4_T1/TAU_T1)))$">
+<polygon fill="#63b8ff" stroke="black" points="771,-838.7 689,-838.7 689,-802.7 771,-802.7 771,-838.7"/>
+<text text-anchor="start" x="695" y="-816.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T1:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T2&#45;&gt;SHARE_T1 -->
+<g id="edge128" class="edge">
+<title>TAU_T2-&gt;SHARE_T1</title>
+<g id="a_edge128"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.05,-990.67C382.06,-982.37 508.54,-960.13 605,-913.7 641.44,-896.16 677.83,-867.17 701.67,-846.21"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="703.87,-848.94 708.99,-839.67 699.2,-843.72 703.87,-848.94"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2 -->
+<g id="node9" class="node">
+<title>SHARE_T2</title>
+<g id="a_node9"><a xlink:title="SHARE_T2
+FRML SHARES2 SHARE_T2=SHARE_T2(-1)+((SHARE_T2*SHARE_T1*(F_T2_T1/TAU_T1-F_T1_T2/TAU_T2)+SHARE_T2*SHARE_T2*(F_T2_T2/TAU_T2-F_T2_T2/TAU_T2)+SHARE_T2*SHARE_T3*(F_T2_T3/TAU_T3-F_T3_T2/TAU_T2)+SHARE_T2*SHARE_T4*(F_T2_T4/TAU_T4-F_T4_T2/TAU_T2)))$">
+<polygon fill="#63b8ff" stroke="black" points="524,-634.7 442,-634.7 442,-598.7 524,-598.7 524,-634.7"/>
+<text text-anchor="start" x="448" y="-612.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T2:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T2&#45;&gt;SHARE_T2 -->
+<g id="edge91" class="edge">
+<title>TAU_T2-&gt;SHARE_T2</title>
+<g id="a_edge91"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M317.13,-976.38C319.98,-973.66 322.69,-970.74 325,-967.7 405.48,-861.63 455.86,-707.77 474.19,-644.98"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="477.44,-646.33 476.84,-635.75 470.71,-644.4 477.44,-646.33"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4 -->
+<g id="node29" class="node">
+<title>SHARE_T4</title>
+<g id="a_node29"><a xlink:title="SHARE_T4
+FRML SHARES2 SHARE_T4=SHARE_T4(-1)+((SHARE_T4*SHARE_T1*(F_T4_T1/TAU_T1-F_T1_T4/TAU_T4)+SHARE_T4*SHARE_T2*(F_T4_T2/TAU_T2-F_T2_T4/TAU_T4)+SHARE_T4*SHARE_T3*(F_T4_T3/TAU_T3-F_T3_T4/TAU_T4)+SHARE_T4*SHARE_T4*(F_T4_T4/TAU_T4-F_T4_T4/TAU_T4)))$">
+<polygon fill="#63b8ff" stroke="black" points="1375.5,-893.7 1293.5,-893.7 1293.5,-857.7 1375.5,-857.7 1375.5,-893.7"/>
+<text text-anchor="start" x="1299.5" y="-871.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T4:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T2&#45;&gt;SHARE_T4 -->
+<g id="edge55" class="edge">
+<title>TAU_T2-&gt;SHARE_T4</title>
+<g id="a_edge55"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.32,-994.69C443.03,-994.09 870.84,-986.79 1214,-915.7 1237.2,-910.9 1262.15,-903 1283.22,-895.49"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1284.32,-898.81 1292.52,-892.1 1281.93,-892.23 1284.32,-898.81"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3 -->
+<g id="node53" class="node">
+<title>SHARE_T3</title>
+<g id="a_node53"><a xlink:title="SHARE_T3
+FRML SHARES2 SHARE_T3=SHARE_T3(-1)+((SHARE_T3*SHARE_T1*(F_T3_T1/TAU_T1-F_T1_T3/TAU_T3)+SHARE_T3*SHARE_T2*(F_T3_T2/TAU_T2-F_T2_T3/TAU_T3)+SHARE_T3*SHARE_T3*(F_T3_T3/TAU_T3-F_T3_T3/TAU_T3)+SHARE_T3*SHARE_T4*(F_T3_T4/TAU_T4-F_T4_T3/TAU_T3)))$">
+<polygon fill="#63b8ff" stroke="black" points="1075.5,-622.7 993.5,-622.7 993.5,-586.7 1075.5,-586.7 1075.5,-622.7"/>
+<text text-anchor="start" x="999.5" y="-600.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T3:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T2&#45;&gt;SHARE_T3 -->
+<g id="edge84" class="edge">
+<title>TAU_T2-&gt;SHARE_T3</title>
+<g id="a_edge84"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.35,-1000.34C415.2,-1014.45 678.08,-1041.17 819,-907.7 857.58,-871.17 828.08,-839.51 855,-793.7 894.71,-726.13 962.68,-663.27 1002.3,-629.82"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1004.29,-632.72 1009.72,-623.62 999.8,-627.34 1004.29,-632.72"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T4 -->
+<g id="node3" class="node">
+<title>F_T4_T4</title>
+<g id="a_node3"><a xlink:title="F_T4_T4
+FRML PREFERENCES F_T4_T4  = ((1)/(1+EXP((((C_T4-C_T4))/(SIGMA_T4_T4))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1444.7 258,-1444.7 258,-1408.7 325,-1408.7 325,-1444.7"/>
+<text text-anchor="start" x="264.5" y="-1422.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T4_T4:</text>
+</a>
+</g>
+</g>
+<!-- F_T4_T4&#45;&gt;SHARE_T4 -->
+<g id="edge72" class="edge">
+<title>F_T4_T4-&gt;SHARE_T4</title>
+<g id="a_edge72"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.23,-1437.72C456.81,-1479.73 952.59,-1615.9 1214,-1377.7 1285.34,-1312.7 1321.25,-1001.49 1330.83,-904.58"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1334.29,-905.15 1331.77,-894.86 1327.32,-904.47 1334.29,-905.15"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_T1 -->
+<g id="edge118" class="edge">
+<title>SHARE_T1-&gt;SHARE_T1</title>
+<g id="a_edge118"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M688.67,-835.49C675.22,-846.12 688.99,-856.7 730,-856.7 758.19,-856.7 773.51,-851.7 775.96,-845.12"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="779.15,-843.67 771.65,-836.18 772.84,-846.7 779.15,-843.67"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_T2 -->
+<g id="edge81" class="edge">
+<title>SHARE_T1-&gt;SHARE_T2</title>
+<g id="a_edge81"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M688.63,-822.56C671.87,-818.75 653.47,-810.97 641,-797.7 602.28,-756.51 642.82,-717.72 605,-675.7 586.7,-655.38 558.88,-643.11 534.52,-634.89"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="535.65,-631.57 525.06,-631.83 533.5,-638.23 535.65,-631.57"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_T4 -->
+<g id="edge86" class="edge">
+<title>SHARE_T1-&gt;SHARE_T4</title>
+<g id="a_edge86"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M771.48,-823.34C795.58,-828.01 826.84,-834.84 855,-838.7 1009.76,-859.95 1194.85,-865.09 1282.57,-869.87"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1282.34,-873.36 1292.52,-870.44 1282.74,-866.38 1282.34,-873.36"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_T1 -->
+<g id="node32" class="node">
+<title>USEFULDEMAND_T1</title>
+<g id="a_node32"><a xlink:title="USEFULDEMAND_T1
+FRML UD USEFULDEMAND_T1  = SHARE_T1*USEFULDEMAND_TOTAL $">
+<polygon fill="#63b8ff" stroke="black" points="1109,-292.7 960,-292.7 960,-256.7 1109,-256.7 1109,-292.7"/>
+<text text-anchor="start" x="966.5" y="-270.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_T1:</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;USEFULDEMAND_T1 -->
+<g id="edge83" class="edge">
+<title>SHARE_T1-&gt;USEFULDEMAND_T1</title>
+<g id="a_edge83"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M757.78,-802.34C777.69,-787.27 803.92,-764.16 819,-737.7 855.09,-674.37 828.18,-645.48 855,-577.7 898.13,-468.72 976.95,-352.8 1013.68,-301.63"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1016.36,-303.9 1019.38,-293.74 1010.69,-299.8 1016.36,-303.9"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1(&#45;1) -->
+<g id="node44" class="node">
+<title>SHARE_T1(-1)</title>
+<g id="a_node44"><a xlink:title="SHARE_T1
+FRML SHARES2 SHARE_T1=SHARE_T1(-1)+((SHARE_T1*SHARE_T1*(F_T1_T1/TAU_T1-F_T1_T1/TAU_T1)+SHARE_T1*SHARE_T2*(F_T1_T2/TAU_T2-F_T2_T1/TAU_T1)+SHARE_T1*SHARE_T3*(F_T1_T3/TAU_T3-F_T3_T1/TAU_T1)+SHARE_T1*SHARE_T4*(F_T1_T4/TAU_T4-F_T4_T1/TAU_T1)))$">
+<polygon fill="springgreen" stroke="black" points="1119,-838.7 950,-838.7 950,-802.7 1119,-802.7 1119,-838.7"/>
+<text text-anchor="start" x="956.5" y="-816.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T1(-1):SHARE_T1</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_T1(&#45;1) -->
+<g id="edge103" class="edge">
+<title>SHARE_T1-&gt;SHARE_T1(-1)</title>
+<g id="a_edge103"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M771.48,-815.93C814.06,-813.99 882.56,-813.48 938.84,-814.39"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="938.74,-817.89 948.8,-814.57 938.87,-810.89 938.74,-817.89"/>
+</a>
+</g>
+</g>
+<!-- SHARE_TOTAL -->
+<g id="node47" class="node">
+<title>SHARE_TOTAL</title>
+<g id="a_node47"><a xlink:title="SHARE_TOTAL
+FRML CHECK_SHARES SHARE_TOTAL   = (SHARE_T1+SHARE_T2+SHARE_T3+SHARE_T4) $">
+<polygon fill="#63b8ff" stroke="black" points="1595,-705.7 1484,-705.7 1484,-669.7 1595,-669.7 1595,-705.7"/>
+<text text-anchor="start" x="1490.5" y="-683.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_TOTAL:</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_TOTAL -->
+<g id="edge150" class="edge">
+<title>SHARE_T1-&gt;SHARE_TOTAL</title>
+<g id="a_edge150"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M771.36,-811.27C795.55,-805.77 826.95,-798.93 855,-793.7 1081.04,-751.61 1351.31,-713.18 1473.2,-696.49"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1473.64,-699.96 1483.07,-695.14 1472.69,-693.02 1473.64,-699.96"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1&#45;&gt;SHARE_T3 -->
+<g id="edge69" class="edge">
+<title>SHARE_T1-&gt;SHARE_T3</title>
+<g id="a_edge69"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M744.8,-802.21C762.45,-783.56 793.77,-754.85 819,-728.7 835.84,-711.25 835.89,-702.63 855,-687.7 894.47,-656.87 945.86,-631.67 983.35,-617.08"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="984.22,-620.5 992.34,-613.7 981.75,-613.94 984.22,-620.5"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T3 -->
+<g id="node5" class="node">
+<title>SIGMA_T2_T3</title>
+<g id="a_node5"><a xlink:title="SIGMA_T2_T3
+FRML SIGMA SIGMA_T2_T3  = SQRT(SIGMA_T2**2*SIGMA_T3**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-526.7 118,-526.7 118,-490.7 222,-490.7 222,-526.7"/>
+<text text-anchor="start" x="124" y="-504.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T2_T3:</text>
+</a>
+</g>
+</g>
+<!-- F_T2_T3 -->
+<g id="node57" class="node">
+<title>F_T2_T3</title>
+<g id="a_node57"><a xlink:title="F_T2_T3
+FRML PREFERENCES F_T2_T3  = ((1)/(1+EXP((((C_T2-C_T3))/(SIGMA_T2_T3))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-580.7 258,-580.7 258,-544.7 325,-544.7 325,-580.7"/>
+<text text-anchor="start" x="264.5" y="-558.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T2_T3:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T3&#45;&gt;F_T2_T3 -->
+<g id="edge67" class="edge">
+<title>SIGMA_T2_T3-&gt;F_T2_T3</title>
+<g id="a_edge67"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-527.13C223.52,-532.43 236.33,-538.22 248.15,-543.56"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.55,-546.68 257.11,-547.61 249.44,-540.31 246.55,-546.68"/>
+</a>
+</g>
+</g>
+<!-- TAU_T1 -->
+<g id="node6" class="node">
+<title>TAU_T1</title>
+<g id="a_node6"><a xlink:title="TAU_T1
+Exogen">
+<polygon fill="yellow" stroke="black" points="324,-904.7 259,-904.7 259,-868.7 324,-868.7 324,-904.7"/>
+<text text-anchor="start" x="265.5" y="-882.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TAU_T1:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T1&#45;&gt;SHARE_T1 -->
+<g id="edge25" class="edge">
+<title>TAU_T1-&gt;SHARE_T1</title>
+<g id="a_edge25"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.46,-882.15C381.05,-874.04 502.57,-856.5 605,-840.7 628.98,-837 655.55,-832.74 677.92,-829.1"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="678.48,-832.56 687.79,-827.49 677.35,-825.65 678.48,-832.56"/>
+</a>
+</g>
+</g>
+<!-- TAU_T1&#45;&gt;SHARE_T2 -->
+<g id="edge136" class="edge">
+<title>TAU_T1-&gt;SHARE_T2</title>
+<g id="a_edge136"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M316.36,-868.33C319.41,-865.58 322.37,-862.67 325,-859.7 387.54,-789.19 442.75,-691.48 467.78,-644.34"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="470.74,-646.22 472.3,-635.74 464.55,-642.96 470.74,-646.22"/>
+</a>
+</g>
+</g>
+<!-- TAU_T1&#45;&gt;SHARE_T4 -->
+<g id="edge137" class="edge">
+<title>TAU_T1-&gt;SHARE_T4</title>
+<g id="a_edge137"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M314.7,-905.14C327.41,-914.48 344.13,-924.85 361,-929.7 465.21,-959.7 496.63,-933.71 605,-929.7 860.02,-920.26 1164.22,-892.3 1282.73,-880.77"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1282.92,-884.26 1292.53,-879.81 1282.23,-877.3 1282.92,-884.26"/>
+</a>
+</g>
+</g>
+<!-- TAU_T1&#45;&gt;SHARE_T3 -->
+<g id="edge124" class="edge">
+<title>TAU_T1-&gt;SHARE_T3</title>
+<g id="a_edge124"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.23,-895.65C411.49,-918.28 659.17,-968.94 819,-865.7 849.05,-846.29 834.5,-823.02 855,-793.7 900.28,-728.96 967.09,-664.39 1004.82,-630.02"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1006.78,-632.97 1011.85,-623.67 1002.09,-627.78 1006.78,-632.97"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T4 -->
+<g id="node7" class="node">
+<title>F_T1_T4</title>
+<g id="a_node7"><a xlink:title="F_T1_T4
+FRML PREFERENCES F_T1_T4  = ((1)/(1+EXP((((C_T1-C_T4))/(SIGMA_T1_T4))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1336.7 258,-1336.7 258,-1300.7 325,-1300.7 325,-1336.7"/>
+<text text-anchor="start" x="264.5" y="-1314.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T1_T4:</text>
+</a>
+</g>
+</g>
+<!-- F_T1_T4&#45;&gt;SHARE_T1 -->
+<g id="edge64" class="edge">
+<title>F_T1_T4-&gt;SHARE_T1</title>
+<g id="a_edge64"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.26,-1300.24C386.97,-1264.08 521.69,-1178.47 605,-1075.7 663.63,-1003.38 703.31,-898.75 720.04,-849.01"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="723.3,-850.3 723.11,-839.7 716.65,-848.1 723.3,-850.3"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T4&#45;&gt;SHARE_T4 -->
+<g id="edge28" class="edge">
+<title>F_T1_T4-&gt;SHARE_T4</title>
+<g id="a_edge28"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.09,-1331.17C456.09,-1378.96 949.97,-1536.33 1214,-1301.7 1274.85,-1247.63 1316.86,-991.06 1329.51,-904.39"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1332.94,-905.14 1330.9,-894.75 1326.01,-904.15 1332.94,-905.14"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T3 -->
+<g id="node8" class="node">
+<title>SIGMA_T1_T3</title>
+<g id="a_node8"><a xlink:title="SIGMA_T1_T3
+FRML SIGMA SIGMA_T1_T3  = SQRT(SIGMA_T1**2*SIGMA_T3**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-634.7 118,-634.7 118,-598.7 222,-598.7 222,-634.7"/>
+<text text-anchor="start" x="124" y="-612.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T1_T3:</text>
+</a>
+</g>
+</g>
+<!-- F_T1_T3 -->
+<g id="node43" class="node">
+<title>F_T1_T3</title>
+<g id="a_node43"><a xlink:title="F_T1_T3
+FRML PREFERENCES F_T1_T3  = ((1)/(1+EXP((((C_T1-C_T3))/(SIGMA_T1_T3))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-634.7 258,-634.7 258,-598.7 325,-598.7 325,-634.7"/>
+<text text-anchor="start" x="264.5" y="-612.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T1_T3:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T3&#45;&gt;F_T1_T3 -->
+<g id="edge82" class="edge">
+<title>SIGMA_T1_T3-&gt;F_T1_T3</title>
+<g id="a_edge82"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-616.7C230.64,-616.7 239.12,-616.7 247.17,-616.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-620.2 257.06,-616.7 247.06,-613.2 247.06,-620.2"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_T1 -->
+<g id="edge122" class="edge">
+<title>SHARE_T2-&gt;SHARE_T1</title>
+<g id="a_edge122"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M524.34,-616.39C550.73,-621.77 584.09,-634.47 605,-657.7 642.82,-699.72 602.28,-738.51 641,-779.7 651.03,-790.38 664.91,-797.5 678.68,-802.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.32,-805.88 687.91,-805.82 679.59,-799.26 677.32,-805.88"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_T2 -->
+<g id="edge87" class="edge">
+<title>SHARE_T2-&gt;SHARE_T2</title>
+<g id="a_edge87"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M448.36,-634.85C443.03,-644.24 454.57,-652.7 483,-652.7 499.88,-652.7 510.81,-649.72 515.78,-645.33"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="519.21,-646.06 517.51,-635.6 512.32,-644.83 519.21,-646.06"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_T2 -->
+<g id="node17" class="node">
+<title>USEFULDEMAND_T2</title>
+<g id="a_node17"><a xlink:title="USEFULDEMAND_T2
+FRML UD USEFULDEMAND_T2  = SHARE_T2*USEFULDEMAND_TOTAL $">
+<polygon fill="#63b8ff" stroke="black" points="1109,-200.7 960,-200.7 960,-164.7 1109,-164.7 1109,-200.7"/>
+<text text-anchor="start" x="966.5" y="-178.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_T2:</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;USEFULDEMAND_T2 -->
+<g id="edge29" class="edge">
+<title>SHARE_T2-&gt;USEFULDEMAND_T2</title>
+<g id="a_edge29"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M497.43,-598.58C541.91,-539.76 690.91,-351.95 855,-247.7 884.39,-229.03 919.9,-214.71 951.48,-204.32"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="952.4,-207.7 960.86,-201.31 950.27,-201.03 952.4,-207.7"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_T4 -->
+<g id="edge51" class="edge">
+<title>SHARE_T2-&gt;SHARE_T4</title>
+<g id="a_edge51"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M524.4,-614.31C550.16,-618.19 582.75,-628.5 605,-648.7 633.86,-674.92 609.33,-705.96 641,-728.7 744.93,-803.32 1093.79,-740.9 1214,-784.7 1252.49,-798.73 1290.35,-828.08 1312.82,-849.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1310.05,-852.08 1319.57,-856.73 1315.03,-847.16 1310.05,-852.08"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2(&#45;1) -->
+<g id="node39" class="node">
+<title>SHARE_T2(-1)</title>
+<g id="a_node39"><a xlink:title="SHARE_T2
+FRML SHARES2 SHARE_T2=SHARE_T2(-1)+((SHARE_T2*SHARE_T1*(F_T2_T1/TAU_T1-F_T1_T2/TAU_T2)+SHARE_T2*SHARE_T2*(F_T2_T2/TAU_T2-F_T2_T2/TAU_T2)+SHARE_T2*SHARE_T3*(F_T2_T3/TAU_T3-F_T3_T2/TAU_T2)+SHARE_T2*SHARE_T4*(F_T2_T4/TAU_T4-F_T4_T2/TAU_T2)))$">
+<polygon fill="springgreen" stroke="black" points="814.5,-728.7 645.5,-728.7 645.5,-692.7 814.5,-692.7 814.5,-728.7"/>
+<text text-anchor="start" x="652" y="-706.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T2(-1):SHARE_T2</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_T2(&#45;1) -->
+<g id="edge152" class="edge">
+<title>SHARE_T2-&gt;SHARE_T2(-1)</title>
+<g id="a_edge152"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M524.22,-625.59C555.87,-636.62 601.13,-654.58 641,-669.7 656.96,-675.75 674.63,-682.22 689.93,-688.37"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="688.31,-691.49 698.89,-692.07 690.98,-685.02 688.31,-691.49"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_TOTAL -->
+<g id="edge117" class="edge">
+<title>SHARE_T2-&gt;SHARE_TOTAL</title>
+<g id="a_edge117"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M524.3,-621.44C555.99,-625.07 601.28,-630.07 641,-633.7 951.7,-662.13 1324.33,-679.08 1472.8,-685.15"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1472.63,-688.65 1482.76,-685.56 1472.91,-681.65 1472.63,-688.65"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2&#45;&gt;SHARE_T3 -->
+<g id="edge78" class="edge">
+<title>SHARE_T2-&gt;SHARE_T3</title>
+<g id="a_edge78"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M524.41,-612.08C622.65,-606.05 873.91,-600.44 982.38,-601.69"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="982.23,-605.19 992.28,-601.83 982.33,-598.19 982.23,-605.19"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2 -->
+<g id="node10" class="node">
+<title>SIGMA_T2</title>
+<g id="a_node10"><a xlink:title="SIGMA_T2
+Exogen">
+<polygon fill="yellow" stroke="black" points="82,-850.7 0,-850.7 0,-814.7 82,-814.7 82,-850.7"/>
+<text text-anchor="start" x="6" y="-828.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T2_T4 -->
+<g id="edge56" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T2_T4</title>
+<g id="a_edge56"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M53,-851.03C62.12,-867.03 74.73,-891.16 82,-913.7 111.87,-1006.33 61.09,-1050.75 118,-1129.7 118.29,-1130.11 118.59,-1130.51 118.9,-1130.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.29,-1133.24 125.82,-1137.88 121.26,-1128.31 116.29,-1133.24"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T2_T3 -->
+<g id="edge125" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T2_T3</title>
+<g id="a_edge125"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M45.77,-814.45C58.53,-753.29 100.26,-558.23 118,-535.7 118.49,-535.08 118.99,-534.48 119.52,-533.88"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="121.61,-536.71 126.57,-527.35 116.86,-531.57 121.61,-536.71"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T2 -->
+<g id="node11" class="node">
+<title>SIGMA_T4_T2</title>
+<g id="a_node11"><a xlink:title="SIGMA_T4_T2
+FRML SIGMA SIGMA_T4_T2  = SQRT(SIGMA_T4**2*SIGMA_T2**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1282.7 118,-1282.7 118,-1246.7 222,-1246.7 222,-1282.7"/>
+<text text-anchor="start" x="124" y="-1260.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T4_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T4_T2 -->
+<g id="edge3" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T4_T2</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M53.31,-850.93C62.63,-866.88 75.35,-890.97 82,-913.7 102.35,-983.23 77.26,-1177.8 118,-1237.7 118.28,-1238.12 118.57,-1238.52 118.87,-1238.93"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.2,-1241.19 125.64,-1246 121.26,-1236.36 116.2,-1241.19"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T2 -->
+<g id="node34" class="node">
+<title>SIGMA_T3_T2</title>
+<g id="a_node34"><a xlink:title="SIGMA_T3_T2
+FRML SIGMA SIGMA_T3_T2  = SQRT(SIGMA_T3**2*SIGMA_T2**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-472.7 118,-472.7 118,-436.7 222,-436.7 222,-472.7"/>
+<text text-anchor="start" x="124" y="-450.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T3_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T3_T2 -->
+<g id="edge140" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T3_T2</title>
+<g id="a_edge140"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M45.83,-814.52C60.9,-743.05 115.4,-485.13 118,-481.7 118.3,-481.3 118.61,-480.91 118.93,-480.52"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="121.27,-483.13 125.97,-473.64 116.38,-478.12 121.27,-483.13"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T2 -->
+<g id="node37" class="node">
+<title>SIGMA_T2_T2</title>
+<g id="a_node37"><a xlink:title="SIGMA_T2_T2
+FRML SIGMA SIGMA_T2_T2  = SQRT(SIGMA_T2**2*SIGMA_T2**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-742.7 118,-742.7 118,-706.7 222,-706.7 222,-742.7"/>
+<text text-anchor="start" x="124" y="-720.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T2_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T2_T2 -->
+<g id="edge4" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T2_T2</title>
+<g id="a_edge4"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-814.31C70.51,-796.71 93.78,-770.19 118,-751.7 119.24,-750.75 120.53,-749.82 121.84,-748.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="123.67,-751.88 130.17,-743.52 119.87,-746 123.67,-751.88"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T1 -->
+<g id="node46" class="node">
+<title>SIGMA_T2_T1</title>
+<g id="a_node46"><a xlink:title="SIGMA_T2_T1
+FRML SIGMA SIGMA_T2_T1  = SQRT(SIGMA_T2**2*SIGMA_T1**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-958.7 118,-958.7 118,-922.7 222,-922.7 222,-958.7"/>
+<text text-anchor="start" x="124" y="-936.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T2_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T2_T1 -->
+<g id="edge41" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T2_T1</title>
+<g id="a_edge41"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-851.1C70.51,-868.69 93.78,-895.21 118,-913.7 119.24,-914.65 120.53,-915.59 121.84,-916.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="119.87,-919.4 130.17,-921.88 123.67,-913.52 119.87,-919.4"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T2 -->
+<g id="node50" class="node">
+<title>SIGMA_T1_T2</title>
+<g id="a_node50"><a xlink:title="SIGMA_T1_T2
+FRML SIGMA SIGMA_T1_T2  = SQRT(SIGMA_T1**2*SIGMA_T2**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-850.7 118,-850.7 118,-814.7 222,-814.7 222,-850.7"/>
+<text text-anchor="start" x="124" y="-828.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T1_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2&#45;&gt;SIGMA_T1_T2 -->
+<g id="edge32" class="edge">
+<title>SIGMA_T2-&gt;SIGMA_T1_T2</title>
+<g id="a_edge32"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-832.7C90.15,-832.7 98.69,-832.7 107.19,-832.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="107.14,-836.2 117.14,-832.7 107.14,-829.2 107.14,-836.2"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T2 -->
+<g id="node27" class="node">
+<title>F_T4_T2</title>
+<g id="a_node27"><a xlink:title="F_T4_T2
+FRML PREFERENCES F_T4_T2  = ((1)/(1+EXP((((C_T4-C_T2))/(SIGMA_T4_T2))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1228.7 258,-1228.7 258,-1192.7 325,-1192.7 325,-1228.7"/>
+<text text-anchor="start" x="264.5" y="-1206.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T4_T2:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T2&#45;&gt;F_T4_T2 -->
+<g id="edge80" class="edge">
+<title>SIGMA_T4_T2-&gt;F_T4_T2</title>
+<g id="a_edge80"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-1246.27C223.52,-1240.97 236.33,-1235.18 248.15,-1229.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.44,-1233.1 257.11,-1225.79 246.55,-1226.72 249.44,-1233.1"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T4&#45;&gt;SHARE_T2 -->
+<g id="edge60" class="edge">
+<title>F_T2_T4-&gt;SHARE_T2</title>
+<g id="a_edge60"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M317.82,-1138.32C320.49,-1135.65 322.97,-1132.76 325,-1129.7 432.95,-967.53 469.31,-727.9 479,-645.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="482.46,-646.19 480.11,-635.86 475.5,-645.41 482.46,-646.19"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T4&#45;&gt;SHARE_T4 -->
+<g id="edge24" class="edge">
+<title>F_T2_T4-&gt;SHARE_T4</title>
+<g id="a_edge24"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.09,-1164.1C452.1,-1190.97 921.28,-1271.91 1214,-1074.7 1275.6,-1033.2 1310.44,-948.31 1325.13,-904.02"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1328.41,-905.25 1328.12,-894.66 1321.74,-903.12 1328.41,-905.25"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T1 -->
+<g id="node13" class="node">
+<title>SIGMA_T3_T1</title>
+<g id="a_node13"><a xlink:title="SIGMA_T3_T1
+FRML SIGMA SIGMA_T3_T1  = SQRT(SIGMA_T3**2*SIGMA_T1**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-688.7 118,-688.7 118,-652.7 222,-652.7 222,-688.7"/>
+<text text-anchor="start" x="124" y="-666.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T3_T1:</text>
+</a>
+</g>
+</g>
+<!-- F_T3_T1 -->
+<g id="node24" class="node">
+<title>F_T3_T1</title>
+<g id="a_node24"><a xlink:title="F_T3_T1
+FRML PREFERENCES F_T3_T1  = ((1)/(1+EXP((((C_T3-C_T1))/(SIGMA_T3_T1))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-688.7 258,-688.7 258,-652.7 325,-652.7 325,-688.7"/>
+<text text-anchor="start" x="264.5" y="-666.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T3_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T1&#45;&gt;F_T3_T1 -->
+<g id="edge63" class="edge">
+<title>SIGMA_T3_T1-&gt;F_T3_T1</title>
+<g id="a_edge63"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-670.7C230.64,-670.7 239.12,-670.7 247.17,-670.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-674.2 257.06,-670.7 247.06,-667.2 247.06,-674.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4 -->
+<g id="node14" class="node">
+<title>SIGMA_T4</title>
+<g id="a_node14"><a xlink:title="SIGMA_T4
+Exogen">
+<polygon fill="yellow" stroke="black" points="82,-1282.7 0,-1282.7 0,-1246.7 82,-1246.7 82,-1282.7"/>
+<text text-anchor="start" x="6" y="-1260.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T4:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T2_T4 -->
+<g id="edge33" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T2_T4</title>
+<g id="a_edge33"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-1246.31C70.51,-1228.71 93.78,-1202.19 118,-1183.7 119.24,-1182.75 120.53,-1181.82 121.84,-1180.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="123.67,-1183.88 130.17,-1175.52 119.87,-1178 123.67,-1183.88"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T4_T2 -->
+<g id="edge131" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T4_T2</title>
+<g id="a_edge131"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-1264.7C90.15,-1264.7 98.69,-1264.7 107.19,-1264.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="107.14,-1268.2 117.14,-1264.7 107.14,-1261.2 107.14,-1268.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T1 -->
+<g id="node21" class="node">
+<title>SIGMA_T4_T1</title>
+<g id="a_node21"><a xlink:title="SIGMA_T4_T1
+FRML SIGMA SIGMA_T4_T1  = SQRT(SIGMA_T4**2*SIGMA_T1**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1336.7 118,-1336.7 118,-1300.7 222,-1300.7 222,-1336.7"/>
+<text text-anchor="start" x="124" y="-1314.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T4_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T4_T1 -->
+<g id="edge23" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T4_T1</title>
+<g id="a_edge23"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-1281.79C92.86,-1286.33 104.56,-1291.3 115.82,-1296.09"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="114.29,-1299.24 124.86,-1299.94 117.03,-1292.8 114.29,-1299.24"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T4 -->
+<g id="node28" class="node">
+<title>SIGMA_T1_T4</title>
+<g id="a_node28"><a xlink:title="SIGMA_T1_T4
+FRML SIGMA SIGMA_T1_T4  = SQRT(SIGMA_T1**2*SIGMA_T4**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1390.7 118,-1390.7 118,-1354.7 222,-1354.7 222,-1390.7"/>
+<text text-anchor="start" x="124" y="-1368.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T1_T4:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T1_T4 -->
+<g id="edge133" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T1_T4</title>
+<g id="a_edge133"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-1283.1C70.51,-1300.69 93.78,-1327.21 118,-1345.7 119.24,-1346.65 120.53,-1347.59 121.84,-1348.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="119.87,-1351.4 130.17,-1353.88 123.67,-1345.52 119.87,-1351.4"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T4 -->
+<g id="node30" class="node">
+<title>SIGMA_T3_T4</title>
+<g id="a_node30"><a xlink:title="SIGMA_T3_T4
+FRML SIGMA SIGMA_T3_T4  = SQRT(SIGMA_T3**2*SIGMA_T4**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1120.7 118,-1120.7 118,-1084.7 222,-1084.7 222,-1120.7"/>
+<text text-anchor="start" x="124" y="-1098.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T3_T4:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T3_T4 -->
+<g id="edge9" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T3_T4</title>
+<g id="a_edge9"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M48.42,-1246.41C59.06,-1218.28 82.75,-1164.05 118,-1129.7 118.81,-1128.92 119.64,-1128.15 120.5,-1127.39"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="122.34,-1130.4 128.15,-1121.54 118.08,-1124.84 122.34,-1130.4"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T3 -->
+<g id="node33" class="node">
+<title>SIGMA_T4_T3</title>
+<g id="a_node33"><a xlink:title="SIGMA_T4_T3
+FRML SIGMA SIGMA_T4_T3  = SQRT(SIGMA_T4**2*SIGMA_T3**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1066.7 118,-1066.7 118,-1030.7 222,-1030.7 222,-1066.7"/>
+<text text-anchor="start" x="124" y="-1044.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T4_T3:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T4_T3 -->
+<g id="edge7" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T4_T3</title>
+<g id="a_edge7"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M45.03,-1246.35C51.91,-1209.79 71.85,-1126.95 118,-1075.7 118.54,-1075.1 119.1,-1074.51 119.67,-1073.93"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="121.88,-1076.65 127.24,-1067.51 117.35,-1071.31 121.88,-1076.65"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T4 -->
+<g id="node60" class="node">
+<title>SIGMA_T4_T4</title>
+<g id="a_node60"><a xlink:title="SIGMA_T4_T4
+FRML SIGMA SIGMA_T4_T4  = SQRT(SIGMA_T4**2*SIGMA_T4**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1444.7 118,-1444.7 118,-1408.7 222,-1408.7 222,-1444.7"/>
+<text text-anchor="start" x="124" y="-1422.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T4_T4:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4&#45;&gt;SIGMA_T4_T4 -->
+<g id="edge14" class="edge">
+<title>SIGMA_T4-&gt;SIGMA_T4_T4</title>
+<g id="a_edge14"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M48.42,-1282.99C59.06,-1311.13 82.75,-1365.35 118,-1399.7 118.81,-1400.49 119.64,-1401.26 120.5,-1402.01"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="118.08,-1404.57 128.15,-1407.86 122.34,-1399.01 118.08,-1404.57"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL -->
+<g id="node15" class="node">
+<title>USEFULDEMAND_TOTAL</title>
+<g id="a_node15"><a xlink:title="USEFULDEMAND_TOTAL
+FRML UD_TOTAL USEFULDEMAND_TOTAL   = USEFULDEMAND_TOTAL(-1)*(1+((USEFULDEMAND_TOTAL_GROWTH)/(100))) $">
+<polygon fill="#63b8ff" stroke="black" points="819,-146.7 641,-146.7 641,-110.7 819,-110.7 819,-146.7"/>
+<text text-anchor="start" x="647" y="-124.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_TOTAL:</text>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL&#45;&gt;USEFULDEMAND_T2 -->
+<g id="edge129" class="edge">
+<title>USEFULDEMAND_TOTAL-&gt;USEFULDEMAND_T2</title>
+<g id="a_edge129"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M812.22,-147.17C826.45,-150.18 841.13,-153.15 855,-155.7 885.61,-161.34 919.32,-166.67 949.13,-171.08"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="948.35,-174.5 958.75,-172.49 949.37,-167.57 948.35,-174.5"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL(&#45;1) -->
+<g id="node20" class="node">
+<title>USEFULDEMAND_TOTAL(-1)</title>
+<g id="a_node20"><a xlink:title="USEFULDEMAND_TOTAL
+FRML UD_TOTAL USEFULDEMAND_TOTAL   = USEFULDEMAND_TOTAL(-1)*(1+((USEFULDEMAND_TOTAL_GROWTH)/(100))) $">
+<polygon fill="springgreen" stroke="black" points="1214,-146.7 855,-146.7 855,-110.7 1214,-110.7 1214,-146.7"/>
+<text text-anchor="start" x="861.5" y="-124.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_TOTAL(-1):USEFULDEMAND_TOTAL</text>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL&#45;&gt;USEFULDEMAND_TOTAL(&#45;1) -->
+<g id="edge11" class="edge">
+<title>USEFULDEMAND_TOTAL-&gt;USEFULDEMAND_TOTAL(-1)</title>
+<g id="a_edge11"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M819.31,-122.5C827.28,-122.35 835.53,-122.24 843.96,-122.15"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="843.98,-125.65 853.95,-122.06 843.92,-118.65 843.98,-125.65"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL&#45;&gt;USEFULDEMAND_T1 -->
+<g id="edge151" class="edge">
+<title>USEFULDEMAND_TOTAL-&gt;USEFULDEMAND_T1</title>
+<g id="a_edge151"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M755.17,-146.9C779.46,-164.59 818.44,-191.41 855,-209.7 889.08,-226.75 928.76,-241.65 962.04,-252.87"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="960.84,-256.16 971.43,-256 963.05,-249.52 960.84,-256.16"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_T4 -->
+<g id="node36" class="node">
+<title>USEFULDEMAND_T4</title>
+<g id="a_node36"><a xlink:title="USEFULDEMAND_T4
+FRML UD USEFULDEMAND_T4  = SHARE_T4*USEFULDEMAND_TOTAL $">
+<polygon fill="#63b8ff" stroke="black" points="1614,-341.7 1465,-341.7 1465,-305.7 1614,-305.7 1614,-341.7"/>
+<text text-anchor="start" x="1471.5" y="-319.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_T4:</text>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL&#45;&gt;USEFULDEMAND_T4 -->
+<g id="edge106" class="edge">
+<title>USEFULDEMAND_TOTAL-&gt;USEFULDEMAND_T4</title>
+<g id="a_edge106"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M754.54,-110.47C778.36,-93.28 816.98,-68.69 855,-58.7 1009.32,-18.15 1063.71,-5.13 1214,-58.7 1350.2,-107.25 1470.55,-240.2 1517.53,-297.19"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1514.67,-299.22 1523.7,-304.76 1520.1,-294.8 1514.67,-299.22"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_T3 -->
+<g id="node40" class="node">
+<title>USEFULDEMAND_T3</title>
+<g id="a_node40"><a xlink:title="USEFULDEMAND_T3
+FRML UD USEFULDEMAND_T3  = SHARE_T3*USEFULDEMAND_TOTAL $">
+<polygon fill="#63b8ff" stroke="black" points="1409,-330.7 1260,-330.7 1260,-294.7 1409,-294.7 1409,-330.7"/>
+<text text-anchor="start" x="1266.5" y="-308.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_T3:</text>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL&#45;&gt;USEFULDEMAND_T3 -->
+<g id="edge59" class="edge">
+<title>USEFULDEMAND_TOTAL-&gt;USEFULDEMAND_T3</title>
+<g id="a_edge59"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M777.5,-110.28C868.44,-77.46 1073.24,-19.65 1214,-101.7 1282.16,-141.43 1314.57,-236.07 1327.04,-283.93"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1323.6,-284.62 1329.42,-293.48 1330.4,-282.93 1323.6,-284.62"/>
+</a>
+</g>
+</g>
+<!-- C_T2 -->
+<g id="node16" class="node">
+<title>C_T2</title>
+<g id="a_node16"><a xlink:title="C_T2
+Exogen">
+<polygon fill="yellow" stroke="black" points="197,-796.7 143,-796.7 143,-760.7 197,-760.7 197,-796.7"/>
+<text text-anchor="start" x="153" y="-774.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">C_T2:</text>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T2_T4 -->
+<g id="edge107" class="edge">
+<title>C_T2-&gt;F_T2_T4</title>
+<g id="a_edge107"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.39,-786.84C206.62,-791.02 216.14,-797.09 222,-805.7 301.57,-922.7 194.53,-998.53 259.34,-1128.85"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.21,-1130.43 263.96,-1137.66 262.41,-1127.18 256.21,-1130.43"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T2 -->
+<g id="node19" class="node">
+<title>F_T3_T2</title>
+<g id="a_node19"><a xlink:title="F_T3_T2
+FRML PREFERENCES F_T3_T2  = ((1)/(1+EXP((((C_T3-C_T2))/(SIGMA_T3_T2))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-526.7 258,-526.7 258,-490.7 325,-490.7 325,-526.7"/>
+<text text-anchor="start" x="264.5" y="-504.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T3_T2:</text>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T3_T2 -->
+<g id="edge21" class="edge">
+<title>C_T2-&gt;F_T3_T2</title>
+<g id="a_edge21"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.41,-770.27C206.53,-766.08 215.97,-760.07 222,-751.7 276.96,-675.45 214.12,-623.73 259.26,-536.55"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="262.32,-538.27 264.11,-527.83 256.19,-534.87 262.32,-538.27"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T2 -->
+<g id="node25" class="node">
+<title>F_T2_T2</title>
+<g id="a_node25"><a xlink:title="F_T2_T2
+FRML PREFERENCES F_T2_T2  = ((1)/(1+EXP((((C_T2-C_T2))/(SIGMA_T2_T2))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-742.7 258,-742.7 258,-706.7 325,-706.7 325,-742.7"/>
+<text text-anchor="start" x="264.5" y="-720.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T2_T2:</text>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T2_T2 -->
+<g id="edge70" class="edge">
+<title>C_T2-&gt;F_T2_T2</title>
+<g id="a_edge70"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-766.85C212.16,-760.1 231.22,-751.49 248.22,-743.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.58,-747.04 257.25,-739.73 246.69,-740.66 249.58,-747.04"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T2 -->
+<g id="node26" class="node">
+<title>F_T1_T2</title>
+<g id="a_node26"><a xlink:title="F_T1_T2
+FRML PREFERENCES F_T1_T2  = ((1)/(1+EXP((((C_T1-C_T2))/(SIGMA_T1_T2))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-796.7 258,-796.7 258,-760.7 325,-760.7 325,-796.7"/>
+<text text-anchor="start" x="264.5" y="-774.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T1_T2:</text>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T1_T2 -->
+<g id="edge143" class="edge">
+<title>C_T2-&gt;F_T1_T2</title>
+<g id="a_edge143"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-778.7C211.88,-778.7 230.51,-778.7 247.26,-778.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.18,-782.2 257.18,-778.7 247.18,-775.2 247.18,-782.2"/>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T4_T2 -->
+<g id="edge94" class="edge">
+<title>C_T2-&gt;F_T4_T2</title>
+<g id="a_edge94"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.46,-786.79C206.71,-790.96 216.21,-797.04 222,-805.7 313.98,-943.25 184.39,-1031.03 259.52,-1183.19"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.21,-1184.41 263.91,-1191.69 262.43,-1181.2 256.21,-1184.41"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T1 -->
+<g id="node42" class="node">
+<title>F_T2_T1</title>
+<g id="a_node42"><a xlink:title="F_T2_T1
+FRML PREFERENCES F_T2_T1  = ((1)/(1+EXP((((C_T2-C_T1))/(SIGMA_T2_T1))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-850.7 258,-850.7 258,-814.7 325,-814.7 325,-850.7"/>
+<text text-anchor="start" x="264.5" y="-828.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T2_T1:</text>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T2_T1 -->
+<g id="edge96" class="edge">
+<title>C_T2-&gt;F_T2_T1</title>
+<g id="a_edge96"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-790.55C212.16,-797.3 231.22,-805.91 248.22,-813.59"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.69,-816.75 257.25,-817.68 249.58,-810.37 246.69,-816.75"/>
+</a>
+</g>
+</g>
+<!-- C_T2&#45;&gt;F_T2_T3 -->
+<g id="edge19" class="edge">
+<title>C_T2-&gt;F_T2_T3</title>
+<g id="a_edge19"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.44,-769.97C206.45,-765.77 215.81,-759.83 222,-751.7 266.71,-693.04 219.57,-652.65 258,-589.7 258.12,-589.51 258.24,-589.31 258.36,-589.12"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="260.93,-591.51 264.47,-581.52 255.48,-587.12 260.93,-591.51"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4(&#45;1) -->
+<g id="node18" class="node">
+<title>SHARE_T4(-1)</title>
+<g id="a_node18"><a xlink:title="SHARE_T4
+FRML SHARES2 SHARE_T4=SHARE_T4(-1)+((SHARE_T4*SHARE_T1*(F_T4_T1/TAU_T1-F_T1_T4/TAU_T4)+SHARE_T4*SHARE_T2*(F_T4_T2/TAU_T2-F_T2_T4/TAU_T4)+SHARE_T4*SHARE_T3*(F_T4_T3/TAU_T3-F_T3_T4/TAU_T4)+SHARE_T4*SHARE_T4*(F_T4_T4/TAU_T4-F_T4_T4/TAU_T4)))$">
+<polygon fill="springgreen" stroke="black" points="1624,-893.7 1455,-893.7 1455,-857.7 1624,-857.7 1624,-893.7"/>
+<text text-anchor="start" x="1461.5" y="-871.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T4(-1):SHARE_T4</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T4(&#45;1)&#45;&gt;SHARE_T4 -->
+<g id="edge88" class="edge">
+<title>SHARE_T4(-1)-&gt;SHARE_T4</title>
+<g id="a_edge88"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1454.82,-882.36C1431.5,-882.61 1406.88,-882.36 1386.1,-881.63"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1386.5,-878.15 1376.36,-881.24 1386.21,-885.14 1386.5,-878.15"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T2&#45;&gt;SHARE_T2 -->
+<g id="edge1" class="edge">
+<title>F_T3_T2-&gt;SHARE_T2</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.65,-527.02C356.63,-545.25 405.85,-573.3 440.72,-593.17"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="438.62,-596.01 449.04,-597.92 442.08,-589.92 438.62,-596.01"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T2&#45;&gt;SHARE_T3 -->
+<g id="edge148" class="edge">
+<title>F_T3_T2-&gt;SHARE_T3</title>
+<g id="a_edge148"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M320.98,-490.33C332.86,-483.71 347.11,-477.05 361,-473.7 558.94,-426.06 623.31,-426.52 819,-482.7 889.44,-502.93 961.52,-550.6 1001.59,-580"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="999.4,-582.73 1009.51,-585.89 1003.58,-577.12 999.4,-582.73"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL(&#45;1)&#45;&gt;USEFULDEMAND_TOTAL -->
+<g id="edge6" class="edge">
+<title>USEFULDEMAND_TOTAL(-1)-&gt;USEFULDEMAND_TOTAL</title>
+<g id="a_edge6"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M854.71,-135.35C846.26,-135.29 837.92,-135.2 829.82,-135.08"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="830.12,-131.58 820.07,-134.92 830.01,-138.58 830.12,-131.58"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T1 -->
+<g id="node48" class="node">
+<title>F_T4_T1</title>
+<g id="a_node48"><a xlink:title="F_T4_T1
+FRML PREFERENCES F_T4_T1  = ((1)/(1+EXP((((C_T4-C_T1))/(SIGMA_T4_T1))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1282.7 258,-1282.7 258,-1246.7 325,-1246.7 325,-1282.7"/>
+<text text-anchor="start" x="264.5" y="-1260.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T4_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T1&#45;&gt;F_T4_T1 -->
+<g id="edge46" class="edge">
+<title>SIGMA_T4_T1-&gt;F_T4_T1</title>
+<g id="a_edge46"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-1300.27C223.52,-1294.97 236.33,-1289.18 248.15,-1283.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.44,-1287.1 257.11,-1279.79 246.55,-1280.72 249.44,-1287.1"/>
+</a>
+</g>
+</g>
+<!-- C_T3 -->
+<g id="node22" class="node">
+<title>C_T3</title>
+<g id="a_node22"><a xlink:title="C_T3
+Exogen">
+<polygon fill="yellow" stroke="black" points="197,-580.7 143,-580.7 143,-544.7 197,-544.7 197,-580.7"/>
+<text text-anchor="start" x="153" y="-558.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">C_T3:</text>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T3_T2 -->
+<g id="edge105" class="edge">
+<title>C_T3-&gt;F_T3_T2</title>
+<g id="a_edge105"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-550.85C212.16,-544.1 231.22,-535.49 248.22,-527.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.58,-531.04 257.25,-523.73 246.69,-524.66 249.58,-531.04"/>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T3_T1 -->
+<g id="edge98" class="edge">
+<title>C_T3-&gt;F_T3_T1</title>
+<g id="a_edge98"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.24,-573.47C205.72,-577.73 214.79,-583.19 222,-589.7 243.4,-609.04 238.7,-622.26 258,-643.7 258.33,-644.07 258.67,-644.44 259.01,-644.8"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.54,-647.28 266.14,-651.77 261.43,-642.28 256.54,-647.28"/>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T1_T3 -->
+<g id="edge119" class="edge">
+<title>C_T3-&gt;F_T1_T3</title>
+<g id="a_edge119"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-574.55C212.16,-581.3 231.22,-589.91 248.22,-597.59"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.69,-600.75 257.25,-601.68 249.58,-594.37 246.69,-600.75"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T3 -->
+<g id="node45" class="node">
+<title>F_T4_T3</title>
+<g id="a_node45"><a xlink:title="F_T4_T3
+FRML PREFERENCES F_T4_T3  = ((1)/(1+EXP((((C_T4-C_T3))/(SIGMA_T4_T3))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1066.7 258,-1066.7 258,-1030.7 325,-1030.7 325,-1066.7"/>
+<text text-anchor="start" x="264.5" y="-1044.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T4_T3:</text>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T4_T3 -->
+<g id="edge111" class="edge">
+<title>C_T3-&gt;F_T4_T3</title>
+<g id="a_edge111"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.25,-570.64C206.58,-574.8 216.2,-580.92 222,-589.7 273.37,-667.5 217.34,-919.31 259.66,-1020.76"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.45,-1022.16 263.9,-1029.69 262.78,-1019.16 256.45,-1022.16"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T4 -->
+<g id="node49" class="node">
+<title>F_T3_T4</title>
+<g id="a_node49"><a xlink:title="F_T3_T4
+FRML PREFERENCES F_T3_T4  = ((1)/(1+EXP((((C_T3-C_T4))/(SIGMA_T3_T4))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-1120.7 258,-1120.7 258,-1084.7 325,-1084.7 325,-1120.7"/>
+<text text-anchor="start" x="264.5" y="-1098.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T3_T4:</text>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T3_T4 -->
+<g id="edge39" class="edge">
+<title>C_T3-&gt;F_T3_T4</title>
+<g id="a_edge39"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.29,-570.61C206.63,-574.77 216.24,-580.9 222,-589.7 279.51,-677.7 212.55,-962.09 259.61,-1074.68"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.44,-1076.15 263.87,-1083.71 262.77,-1073.17 256.44,-1076.15"/>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T2_T3 -->
+<g id="edge138" class="edge">
+<title>C_T3-&gt;F_T2_T3</title>
+<g id="a_edge138"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-562.7C211.88,-562.7 230.51,-562.7 247.26,-562.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.18,-566.2 257.18,-562.7 247.18,-559.2 247.18,-566.2"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T3 -->
+<g id="node58" class="node">
+<title>F_T3_T3</title>
+<g id="a_node58"><a xlink:title="F_T3_T3
+FRML PREFERENCES F_T3_T3  = ((1)/(1+EXP((((C_T3-C_T3))/(SIGMA_T3_T3))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-306.7 258,-306.7 258,-270.7 325,-270.7 325,-306.7"/>
+<text text-anchor="start" x="264.5" y="-284.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T3_T3:</text>
+</a>
+</g>
+</g>
+<!-- C_T3&#45;&gt;F_T3_T3 -->
+<g id="edge75" class="edge">
+<title>C_T3-&gt;F_T3_T3</title>
+<g id="a_edge75"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.42,-554.28C206.55,-550.09 215.98,-544.08 222,-535.7 277.89,-457.91 213.35,-405.28 259.33,-316.44"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="262.32,-318.27 264.1,-307.82 256.19,-314.88 262.32,-318.27"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3 -->
+<g id="node23" class="node">
+<title>SIGMA_T3</title>
+<g id="a_node23"><a xlink:title="SIGMA_T3
+Exogen">
+<polygon fill="yellow" stroke="black" points="82,-634.7 0,-634.7 0,-598.7 82,-598.7 82,-634.7"/>
+<text text-anchor="start" x="6" y="-612.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T3:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T2_T3 -->
+<g id="edge22" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T2_T3</title>
+<g id="a_edge22"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-598.31C70.51,-580.71 93.78,-554.19 118,-535.7 119.24,-534.75 120.53,-533.82 121.84,-532.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="123.67,-535.88 130.17,-527.52 119.87,-530 123.67,-535.88"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T1_T3 -->
+<g id="edge101" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T1_T3</title>
+<g id="a_edge101"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-616.7C90.15,-616.7 98.69,-616.7 107.19,-616.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="107.14,-620.2 117.14,-616.7 107.14,-613.2 107.14,-620.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T3_T1 -->
+<g id="edge31" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T3_T1</title>
+<g id="a_edge31"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-633.79C92.86,-638.33 104.56,-643.3 115.82,-648.09"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="114.29,-651.24 124.86,-651.94 117.03,-644.8 114.29,-651.24"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T3_T4 -->
+<g id="edge116" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T3_T4</title>
+<g id="a_edge116"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M46.39,-635.12C54.3,-668.82 71.16,-742.74 82,-805.7 92.27,-865.35 83.41,-1026.03 118,-1075.7 118.29,-1076.11 118.58,-1076.52 118.88,-1076.92"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.23,-1079.21 125.71,-1083.95 121.26,-1074.34 116.23,-1079.21"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T4_T3 -->
+<g id="edge79" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T4_T3</title>
+<g id="a_edge79"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M46.18,-635.16C53.78,-668.92 70.13,-742.92 82,-805.7 100.08,-901.33 61.09,-942.75 118,-1021.7 118.29,-1022.11 118.59,-1022.51 118.9,-1022.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.29,-1025.24 125.82,-1029.88 121.26,-1020.31 116.29,-1025.24"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T3_T2 -->
+<g id="edge37" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T3_T2</title>
+<g id="a_edge37"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M48.42,-598.41C59.06,-570.28 82.75,-516.05 118,-481.7 118.81,-480.92 119.64,-480.15 120.5,-479.39"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="122.34,-482.4 128.15,-473.54 118.08,-476.84 122.34,-482.4"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T3 -->
+<g id="node41" class="node">
+<title>SIGMA_T3_T3</title>
+<g id="a_node41"><a xlink:title="SIGMA_T3_T3
+FRML SIGMA SIGMA_T3_T3  = SQRT(SIGMA_T3**2*SIGMA_T3**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-362.7 118,-362.7 118,-326.7 222,-326.7 222,-362.7"/>
+<text text-anchor="start" x="124" y="-340.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T3_T3:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3&#45;&gt;SIGMA_T3_T3 -->
+<g id="edge20" class="edge">
+<title>SIGMA_T3-&gt;SIGMA_T3_T3</title>
+<g id="a_edge20"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M48.24,-598.27C60.12,-563.94 87.53,-488.19 118,-427.7 127.73,-408.38 140.47,-387.65 150.78,-371.74"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="153.56,-373.89 156.11,-363.61 147.7,-370.05 153.56,-373.89"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T1&#45;&gt;SHARE_T1 -->
+<g id="edge145" class="edge">
+<title>F_T3_T1-&gt;SHARE_T1</title>
+<g id="a_edge145"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M315.07,-689.07C318.44,-691.92 321.84,-694.86 325,-697.7 341.6,-712.62 341.26,-722.3 361,-732.7 458.87,-784.24 497.87,-754.18 605,-781.7 629.45,-787.98 656.21,-796.22 678.59,-803.51"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.23,-806.75 687.83,-806.54 679.42,-800.1 677.23,-806.75"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T1&#45;&gt;SHARE_T3 -->
+<g id="edge97" class="edge">
+<title>F_T3_T1-&gt;SHARE_T3</title>
+<g id="a_edge97"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M316.32,-652.3C319.37,-649.55 322.35,-646.65 325,-643.7 344.3,-622.26 335.57,-603.31 361,-589.7 468.12,-532.37 845.4,-578.15 982.89,-597.3"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="982,-600.7 992.39,-598.63 982.97,-593.77 982,-600.7"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T2&#45;&gt;SHARE_T2 -->
+<g id="edge53" class="edge">
+<title>F_T2_T2-&gt;SHARE_T2</title>
+<g id="a_edge53"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.65,-706.38C356.63,-688.15 405.85,-660.1 440.72,-640.23"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="442.08,-643.48 449.04,-635.49 438.62,-637.4 442.08,-643.48"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T2&#45;&gt;SHARE_T1 -->
+<g id="edge144" class="edge">
+<title>F_T1_T2-&gt;SHARE_T1</title>
+<g id="a_edge144"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.31,-781.86C400.85,-789.13 587.52,-807.09 678.09,-815.8"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.6,-819.27 687.89,-816.75 678.27,-812.3 677.6,-819.27"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T2&#45;&gt;SHARE_T2 -->
+<g id="edge108" class="edge">
+<title>F_T1_T2-&gt;SHARE_T2</title>
+<g id="a_edge108"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M314.57,-760.45C318.07,-757.54 321.64,-754.54 325,-751.7 369.86,-713.79 421.42,-669.27 452.84,-642.03"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="454.93,-644.85 460.2,-635.66 450.35,-639.56 454.93,-644.85"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T2&#45;&gt;SHARE_T2 -->
+<g id="edge5" class="edge">
+<title>F_T4_T2-&gt;SHARE_T2</title>
+<g id="a_edge5"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M317.9,-1192.37C320.56,-1189.69 323.01,-1186.78 325,-1183.7 355.42,-1136.64 449.07,-753.57 475.18,-645.18"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="478.51,-646.28 477.45,-635.74 471.71,-644.65 478.51,-646.28"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T2&#45;&gt;SHARE_T4 -->
+<g id="edge13" class="edge">
+<title>F_T4_T2-&gt;SHARE_T4</title>
+<g id="a_edge13"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.1,-1220.07C454.12,-1255 935.51,-1364.92 1214,-1147.7 1293.31,-1085.84 1321.13,-960.4 1329.89,-904.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1333.3,-904.99 1331.28,-894.59 1326.37,-903.98 1333.3,-904.99"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T4&#45;&gt;F_T1_T4 -->
+<g id="edge45" class="edge">
+<title>SIGMA_T1_T4-&gt;F_T1_T4</title>
+<g id="a_edge45"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-1354.27C223.52,-1348.97 236.33,-1343.18 248.15,-1337.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.44,-1341.1 257.11,-1333.79 246.55,-1334.72 249.44,-1341.1"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_T1 -->
+<g id="edge66" class="edge">
+<title>SHARE_T4-&gt;SHARE_T1</title>
+<g id="a_edge66"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1293.28,-880.44C1210.73,-883.5 1016.38,-878.86 855,-856.7 830.69,-853.37 804.07,-847.82 781.74,-841.88"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="782.78,-838.54 772.21,-839.24 780.91,-845.29 782.78,-838.54"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_T2 -->
+<g id="edge26" class="edge">
+<title>SHARE_T4-&gt;SHARE_T2</title>
+<g id="a_edge26"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1304.92,-857.23C1282.06,-839.84 1248.28,-815.19 1214,-802.7 1093.79,-758.9 744.93,-821.32 641,-746.7 609.33,-723.96 633.86,-692.92 605,-666.7 585.62,-649.1 558.39,-639.01 534.67,-632.37"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="535.7,-629.03 525.13,-629.83 533.89,-635.79 535.7,-629.03"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_T4(&#45;1) -->
+<g id="edge77" class="edge">
+<title>SHARE_T4-&gt;SHARE_T4(-1)</title>
+<g id="a_edge77"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1375.61,-870.2C1395.33,-869.28 1420.02,-868.87 1444.16,-868.97"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1444.04,-872.47 1454.07,-869.04 1444.09,-865.47 1444.04,-872.47"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_T4 -->
+<g id="edge30" class="edge">
+<title>SHARE_T4-&gt;SHARE_T4</title>
+<g id="a_edge30"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1297.41,-893.85C1291.71,-903.24 1304.07,-911.7 1334.5,-911.7 1352.57,-911.7 1364.27,-908.72 1369.59,-904.33"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1373.02,-905.08 1371.44,-894.6 1366.14,-903.77 1373.02,-905.08"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;USEFULDEMAND_T4 -->
+<g id="edge127" class="edge">
+<title>SHARE_T4-&gt;USEFULDEMAND_T4</title>
+<g id="a_edge127"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1342.25,-857.34C1372.06,-776.29 1491.92,-450.35 1528.11,-351.96"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1531.29,-353.44 1531.46,-342.85 1524.72,-351.02 1531.29,-353.44"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_TOTAL -->
+<g id="edge99" class="edge">
+<title>SHARE_T4-&gt;SHARE_TOTAL</title>
+<g id="a_edge99"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1355.33,-857.33C1391.72,-823.64 1469.2,-751.88 1510.77,-713.38"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1513.07,-716.02 1518.03,-706.66 1508.31,-710.89 1513.07,-716.02"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T4&#45;&gt;SHARE_T3 -->
+<g id="edge18" class="edge">
+<title>SHARE_T4-&gt;SHARE_T3</title>
+<g id="a_edge18"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1313.58,-857.49C1290.79,-832.28 1251.76,-786.77 1214,-751.7 1163.78,-705.06 1098.82,-657.71 1062.73,-629.53"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1065.24,-627.06 1055.23,-623.61 1060.91,-632.55 1065.24,-627.06"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T4&#45;&gt;F_T3_T4 -->
+<g id="edge120" class="edge">
+<title>SIGMA_T3_T4-&gt;F_T3_T4</title>
+<g id="a_edge120"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-1102.7C230.64,-1102.7 239.12,-1102.7 247.17,-1102.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-1106.2 257.06,-1102.7 247.06,-1099.2 247.06,-1106.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T1 -->
+<g id="node31" class="node">
+<title>SIGMA_T1_T1</title>
+<g id="a_node31"><a xlink:title="SIGMA_T1_T1
+FRML SIGMA SIGMA_T1_T1  = SQRT(SIGMA_T1**2*SIGMA_T1**2) $">
+<polygon fill="#63b8ff" stroke="black" points="222,-1012.7 118,-1012.7 118,-976.7 222,-976.7 222,-1012.7"/>
+<text text-anchor="start" x="124" y="-990.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T1_T1:</text>
+</a>
+</g>
+</g>
+<!-- F_T1_T1 -->
+<g id="node38" class="node">
+<title>F_T1_T1</title>
+<g id="a_node38"><a xlink:title="F_T1_T1
+FRML PREFERENCES F_T1_T1  = ((1)/(1+EXP((((C_T1-C_T1))/(SIGMA_T1_T1))))) $">
+<polygon fill="#63b8ff" stroke="black" points="325,-958.7 258,-958.7 258,-922.7 325,-922.7 325,-958.7"/>
+<text text-anchor="start" x="264.5" y="-936.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">F_T1_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T1&#45;&gt;F_T1_T1 -->
+<g id="edge50" class="edge">
+<title>SIGMA_T1_T1-&gt;F_T1_T1</title>
+<g id="a_edge50"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-976.27C223.52,-970.97 236.33,-965.18 248.15,-959.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.44,-963.1 257.11,-955.79 246.55,-956.72 249.44,-963.1"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T3&#45;&gt;F_T4_T3 -->
+<g id="edge40" class="edge">
+<title>SIGMA_T4_T3-&gt;F_T4_T3</title>
+<g id="a_edge40"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-1048.7C230.64,-1048.7 239.12,-1048.7 247.17,-1048.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-1052.2 257.06,-1048.7 247.06,-1045.2 247.06,-1052.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T2&#45;&gt;F_T3_T2 -->
+<g id="edge90" class="edge">
+<title>SIGMA_T3_T2-&gt;F_T3_T2</title>
+<g id="a_edge90"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-473.13C223.52,-478.43 236.33,-484.22 248.15,-489.56"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.55,-492.68 257.11,-493.61 249.44,-486.31 246.55,-492.68"/>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL_GROWTH -->
+<g id="node35" class="node">
+<title>USEFULDEMAND_TOTAL_GROWTH</title>
+<g id="a_node35"><a xlink:title="USEFULDEMAND_TOTAL_GROWTH
+Exogen">
+<polygon fill="yellow" stroke="black" points="605,-146.7 361,-146.7 361,-110.7 605,-110.7 605,-146.7"/>
+<text text-anchor="start" x="367" y="-124.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">USEFULDEMAND_TOTAL_GROWTH:</text>
+</a>
+</g>
+</g>
+<!-- USEFULDEMAND_TOTAL_GROWTH&#45;&gt;USEFULDEMAND_TOTAL -->
+<g id="edge153" class="edge">
+<title>USEFULDEMAND_TOTAL_GROWTH-&gt;USEFULDEMAND_TOTAL</title>
+<g id="a_edge153"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M605.42,-128.7C613.71,-128.7 622,-128.7 630.14,-128.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="629.99,-132.2 639.99,-128.7 629.99,-125.2 629.99,-132.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T2&#45;&gt;F_T2_T2 -->
+<g id="edge74" class="edge">
+<title>SIGMA_T2_T2-&gt;F_T2_T2</title>
+<g id="a_edge74"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-724.7C230.64,-724.7 239.12,-724.7 247.17,-724.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-728.2 257.06,-724.7 247.06,-721.2 247.06,-728.2"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T1&#45;&gt;SHARE_T1 -->
+<g id="edge155" class="edge">
+<title>F_T1_T1-&gt;SHARE_T1</title>
+<g id="a_edge155"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.38,-935.37C382.87,-925.63 505.06,-903.03 605,-871.7 630.06,-863.85 657.11,-853.01 679.53,-843.35"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="680.7,-846.66 688.47,-839.45 677.9,-840.24 680.7,-846.66"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T2(&#45;1)&#45;&gt;SHARE_T2 -->
+<g id="edge52" class="edge">
+<title>SHARE_T2(-1)-&gt;SHARE_T2</title>
+<g id="a_edge52"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M653.11,-692.24C649.01,-690.73 644.95,-689.2 641,-687.7 600.4,-672.31 554.2,-653.96 522.49,-639.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="524.36,-636.51 513.82,-635.46 521.41,-642.85 524.36,-636.51"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T3_T3&#45;&gt;F_T3_T3 -->
+<g id="edge10" class="edge">
+<title>SIGMA_T3_T3-&gt;F_T3_T3</title>
+<g id="a_edge10"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M210.46,-326.21C222.58,-320.53 235.97,-314.26 248.27,-308.49"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.6,-311.73 257.17,-304.32 246.63,-305.39 249.6,-311.73"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T1&#45;&gt;SHARE_T1 -->
+<g id="edge95" class="edge">
+<title>F_T2_T1-&gt;SHARE_T1</title>
+<g id="a_edge95"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.31,-831.8C400.85,-829.72 587.52,-824.59 678.09,-822.1"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.98,-825.61 687.88,-821.83 677.79,-818.61 677.98,-825.61"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T1&#45;&gt;SHARE_T2 -->
+<g id="edge54" class="edge">
+<title>F_T2_T1-&gt;SHARE_T2</title>
+<g id="a_edge54"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M315.7,-814.33C318.91,-811.53 322.1,-808.61 325,-805.7 378.75,-751.95 433.75,-681.44 462.21,-643.56"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="464.9,-645.81 468.08,-635.71 459.29,-641.62 464.9,-645.81"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T3&#45;&gt;SHARE_T1 -->
+<g id="edge114" class="edge">
+<title>F_T1_T3-&gt;SHARE_T1</title>
+<g id="a_edge114"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M316.25,-635.17C319.31,-637.91 322.31,-640.79 325,-643.7 343.83,-664.08 337.42,-680.07 361,-694.7 454.26,-752.56 513.02,-672.83 605,-732.7 629.8,-748.84 617.88,-770.23 641,-788.7 651.93,-797.44 665.46,-803.91 678.6,-808.67"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.21,-811.89 687.81,-811.73 679.43,-805.25 677.21,-811.89"/>
+</a>
+</g>
+</g>
+<!-- F_T1_T3&#45;&gt;SHARE_T3 -->
+<g id="edge65" class="edge">
+<title>F_T1_T3-&gt;SHARE_T3</title>
+<g id="a_edge65"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M315,-598.25C318.37,-595.42 321.79,-592.5 325,-589.7 341.35,-575.43 340.77,-564.57 361,-556.7 550.71,-482.91 616.68,-534.34 819,-556.7 875.94,-563 939.86,-578.41 983,-590.09"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="981.93,-593.43 992.5,-592.7 983.78,-586.68 981.93,-593.43"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T1(&#45;1)&#45;&gt;SHARE_T1 -->
+<g id="edge85" class="edge">
+<title>SHARE_T1(-1)-&gt;SHARE_T1</title>
+<g id="a_edge85"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M949.56,-826.82C895.8,-827.9 827.8,-827.6 782.04,-825.91"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="782.37,-822.42 772.24,-825.51 782.09,-829.41 782.37,-822.42"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T3&#45;&gt;SHARE_T4 -->
+<g id="edge49" class="edge">
+<title>F_T4_T3-&gt;SHARE_T4</title>
+<g id="a_edge49"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.41,-1051.12C382.45,-1054.86 503.32,-1060.83 605,-1052.7 878.28,-1030.85 958.59,-1054.31 1214,-954.7 1247.28,-941.72 1280.84,-918.43 1303.88,-900.49"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1305.93,-903.34 1311.59,-894.38 1301.58,-897.86 1305.93,-903.34"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T3&#45;&gt;SHARE_T3 -->
+<g id="edge35" class="edge">
+<title>F_T4_T3-&gt;SHARE_T3</title>
+<g id="a_edge35"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.23,-1048.46C429.47,-1046.95 750.92,-1036.48 819,-964.7 872.45,-908.35 818.99,-862.51 855,-793.7 891.15,-724.64 959.77,-662.74 1000.59,-629.77"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1002.63,-632.62 1008.27,-623.65 998.27,-627.15 1002.63,-632.62"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T2_T1&#45;&gt;F_T2_T1 -->
+<g id="edge15" class="edge">
+<title>SIGMA_T2_T1-&gt;F_T2_T1</title>
+<g id="a_edge15"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M210.75,-922.24C214.74,-919.64 218.58,-916.79 222,-913.7 243.4,-894.36 238.7,-881.14 258,-859.7 258.33,-859.33 258.67,-858.97 259.01,-858.6"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="261.43,-861.13 266.14,-851.63 256.54,-856.12 261.43,-861.13"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T1&#45;&gt;SHARE_T1 -->
+<g id="edge48" class="edge">
+<title>F_T4_T1-&gt;SHARE_T1</title>
+<g id="a_edge48"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M317.08,-1246.34C319.94,-1243.63 322.67,-1240.72 325,-1237.7 348.09,-1207.8 337.74,-1190.47 361,-1160.7 446.98,-1050.65 504.48,-1059.65 605,-962.7 644.02,-925.06 684.46,-876.68 708.15,-847.22"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="710.67,-849.66 714.18,-839.66 705.21,-845.29 710.67,-849.66"/>
+</a>
+</g>
+</g>
+<!-- F_T4_T1&#45;&gt;SHARE_T4 -->
+<g id="edge121" class="edge">
+<title>F_T4_T1-&gt;SHARE_T4</title>
+<g id="a_edge121"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.21,-1275.78C455.66,-1317.71 944.68,-1453.04 1214,-1224.7 1312.59,-1141.11 1330,-972.41 1332.96,-904.75"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1336.45,-904.93 1333.31,-894.81 1329.46,-904.68 1336.45,-904.93"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T4&#45;&gt;SHARE_T4 -->
+<g id="edge27" class="edge">
+<title>F_T3_T4-&gt;SHARE_T4</title>
+<g id="a_edge27"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.14,-1107.68C449.47,-1125.04 902.14,-1173.24 1214,-1009.7 1260.78,-985.17 1297.99,-934.39 1317.81,-902.87"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1320.75,-904.76 1322.99,-894.4 1314.78,-901.1 1320.75,-904.76"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T4&#45;&gt;SHARE_T3 -->
+<g id="edge12" class="edge">
+<title>F_T3_T4-&gt;SHARE_T3</title>
+<g id="a_edge12"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.29,-1108.38C418.07,-1122.38 684.39,-1147.89 819,-1007.7 885.8,-938.13 812.03,-880.05 855,-793.7 889.73,-723.91 958.85,-662.27 1000.14,-629.54"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1002.19,-632.38 1007.91,-623.47 997.88,-626.87 1002.19,-632.38"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1_T2&#45;&gt;F_T1_T2 -->
+<g id="edge93" class="edge">
+<title>SIGMA_T1_T2-&gt;F_T1_T2</title>
+<g id="a_edge93"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M211.79,-814.27C223.52,-808.97 236.33,-803.18 248.15,-797.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.44,-801.1 257.11,-793.79 246.55,-794.72 249.44,-801.1"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1 -->
+<g id="node51" class="node">
+<title>SIGMA_T1</title>
+<g id="a_node51"><a xlink:title="SIGMA_T1
+Exogen">
+<polygon fill="yellow" stroke="black" points="82,-958.7 0,-958.7 0,-922.7 82,-922.7 82,-958.7"/>
+<text text-anchor="start" x="6" y="-936.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SIGMA_T1:</text>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T1_T3 -->
+<g id="edge130" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T1_T3</title>
+<g id="a_edge130"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M53,-922.38C62.12,-906.37 74.73,-882.24 82,-859.7 111.87,-767.07 61.09,-722.66 118,-643.7 118.29,-643.3 118.59,-642.9 118.9,-642.5"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="121.26,-645.09 125.82,-635.52 116.29,-640.16 121.26,-645.09"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T3_T1 -->
+<g id="edge68" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T3_T1</title>
+<g id="a_edge68"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M52.7,-922.27C61.63,-906.21 74.13,-882.04 82,-859.7 106.51,-790.14 73.29,-756.36 118,-697.7 118.3,-697.3 118.61,-696.91 118.93,-696.52"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="121.27,-699.13 125.99,-689.65 116.39,-694.12 121.27,-699.13"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T4_T1 -->
+<g id="edge17" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T4_T1</title>
+<g id="a_edge17"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M43.91,-958.91C50.94,-1023.07 77.14,-1237.79 118,-1291.7 118.3,-1292.1 118.61,-1292.5 118.93,-1292.88"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.38,-1295.28 125.97,-1299.77 121.27,-1290.27 116.38,-1295.28"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T1_T4 -->
+<g id="edge126" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T1_T4</title>
+<g id="a_edge126"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M44.49,-959.05C54.77,-1033.91 94.51,-1313.8 118,-1345.7 118.3,-1346.11 118.6,-1346.5 118.91,-1346.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="116.33,-1349.26 125.88,-1353.83 121.26,-1344.3 116.33,-1349.26"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T1_T1 -->
+<g id="edge134" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T1_T1</title>
+<g id="a_edge134"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-957.79C92.86,-962.33 104.56,-967.3 115.82,-972.09"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="114.29,-975.24 124.86,-975.94 117.03,-968.8 114.29,-975.24"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T2_T1 -->
+<g id="edge8" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T2_T1</title>
+<g id="a_edge8"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M82.18,-940.7C90.15,-940.7 98.69,-940.7 107.19,-940.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="107.14,-944.2 117.14,-940.7 107.14,-937.2 107.14,-944.2"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T1&#45;&gt;SIGMA_T1_T2 -->
+<g id="edge149" class="edge">
+<title>SIGMA_T1-&gt;SIGMA_T1_T2</title>
+<g id="a_edge149"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M56.24,-922.31C70.51,-904.71 93.78,-878.19 118,-859.7 119.24,-858.75 120.53,-857.82 121.84,-856.9"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="123.67,-859.88 130.17,-851.52 119.87,-854 123.67,-859.88"/>
+</a>
+</g>
+</g>
+<!-- C_T4 -->
+<g id="node52" class="node">
+<title>C_T4</title>
+<g id="a_node52"><a xlink:title="C_T4
+Exogen">
+<polygon fill="yellow" stroke="black" points="197,-1228.7 143,-1228.7 143,-1192.7 197,-1192.7 197,-1228.7"/>
+<text text-anchor="start" x="153" y="-1206.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">C_T4:</text>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T4_T4 -->
+<g id="edge100" class="edge">
+<title>C_T4-&gt;F_T4_T4</title>
+<g id="a_edge100"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.26,-1219.92C206.14,-1224.15 215.46,-1229.98 222,-1237.7 254.7,-1276.31 240.57,-1298.2 258,-1345.7 264.55,-1363.56 272.49,-1383.37 278.88,-1398.94"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="275.49,-1399.88 282.54,-1407.79 281.95,-1397.21 275.49,-1399.88"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T1_T4 -->
+<g id="edge38" class="edge">
+<title>C_T4-&gt;F_T1_T4</title>
+<g id="a_edge38"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.24,-1221.47C205.72,-1225.73 214.79,-1231.19 222,-1237.7 243.4,-1257.04 238.7,-1270.26 258,-1291.7 258.33,-1292.07 258.67,-1292.44 259.01,-1292.8"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.54,-1295.28 266.14,-1299.77 261.43,-1290.28 256.54,-1295.28"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T2_T4 -->
+<g id="edge47" class="edge">
+<title>C_T4-&gt;F_T2_T4</title>
+<g id="a_edge47"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-1198.85C212.16,-1192.1 231.22,-1183.49 248.22,-1175.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.58,-1179.04 257.25,-1171.73 246.69,-1172.66 249.58,-1179.04"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T4_T2 -->
+<g id="edge34" class="edge">
+<title>C_T4-&gt;F_T4_T2</title>
+<g id="a_edge34"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-1210.7C211.88,-1210.7 230.51,-1210.7 247.26,-1210.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.18,-1214.2 257.18,-1210.7 247.18,-1207.2 247.18,-1214.2"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T4_T3 -->
+<g id="edge113" class="edge">
+<title>C_T4-&gt;F_T4_T3</title>
+<g id="a_edge113"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.26,-1201.49C206.14,-1197.25 215.46,-1191.42 222,-1183.7 254.7,-1145.1 229.45,-1117.47 258,-1075.7 258.13,-1075.51 258.26,-1075.32 258.39,-1075.14"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="260.91,-1077.58 264.76,-1067.71 255.6,-1073.02 260.91,-1077.58"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T4_T1 -->
+<g id="edge141" class="edge">
+<title>C_T4-&gt;F_T4_T1</title>
+<g id="a_edge141"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-1222.55C212.16,-1229.3 231.22,-1237.91 248.22,-1245.59"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.69,-1248.75 257.25,-1249.68 249.58,-1242.37 246.69,-1248.75"/>
+</a>
+</g>
+</g>
+<!-- C_T4&#45;&gt;F_T3_T4 -->
+<g id="edge44" class="edge">
+<title>C_T4-&gt;F_T3_T4</title>
+<g id="a_edge44"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.24,-1199.93C205.72,-1195.67 214.79,-1190.22 222,-1183.7 243.4,-1164.36 238.7,-1151.14 258,-1129.7 258.33,-1129.33 258.67,-1128.97 259.01,-1128.6"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="261.43,-1131.13 266.14,-1121.63 256.54,-1126.12 261.43,-1131.13"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_T1 -->
+<g id="edge16" class="edge">
+<title>SHARE_T3-&gt;SHARE_T1</title>
+<g id="a_edge16"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1001.75,-623.2C964.35,-640.96 901.43,-669.44 855,-705.7 835.89,-720.63 835.84,-729.25 819,-746.7 802.86,-763.43 784.22,-781.21 768.26,-795.28"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="766.03,-792.58 760.76,-801.78 770.61,-797.88 766.03,-792.58"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_T2 -->
+<g id="edge123" class="edge">
+<title>SHARE_T3-&gt;SHARE_T2</title>
+<g id="a_edge123"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M993.03,-609.33C894.73,-615.35 643.46,-620.97 535.06,-619.71"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="535.21,-616.21 525.16,-619.57 535.11,-623.21 535.21,-616.21"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_T4 -->
+<g id="edge92" class="edge">
+<title>SHARE_T3-&gt;SHARE_T4</title>
+<g id="a_edge92"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1071.91,-623.12C1109.1,-647.27 1167.79,-690.79 1214,-733.7 1253.58,-770.46 1294.56,-818.69 1316.75,-848.65"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1313.88,-850.65 1322.57,-856.71 1319.56,-846.55 1313.88,-850.65"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;USEFULDEMAND_T3 -->
+<g id="edge142" class="edge">
+<title>SHARE_T3-&gt;USEFULDEMAND_T3</title>
+<g id="a_edge142"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1054.14,-586.44C1105.36,-536.25 1248.33,-396.15 1307.43,-338.25"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1309.63,-340.99 1314.33,-331.49 1304.73,-335.99 1309.63,-340.99"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_TOTAL -->
+<g id="edge2" class="edge">
+<title>SHARE_T3-&gt;SHARE_TOTAL</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1075.83,-608.09C1146.05,-614.4 1295.11,-629.65 1419,-654.7 1436.81,-658.3 1455.87,-663.12 1473.42,-667.96"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1472.26,-671.26 1482.83,-670.59 1474.15,-664.52 1472.26,-671.26"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_T3 -->
+<g id="edge115" class="edge">
+<title>SHARE_T3-&gt;SHARE_T3</title>
+<g id="a_edge115"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M993.21,-615.02C963.9,-626.92 977.66,-640.7 1034.5,-640.7 1083.79,-640.7 1100.68,-630.34 1085.19,-619.82"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1086.97,-616.8 1076.47,-615.37 1083.78,-623.03 1086.97,-616.8"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3(&#45;1) -->
+<g id="node56" class="node">
+<title>SHARE_T3(-1)</title>
+<g id="a_node56"><a xlink:title="SHARE_T3
+FRML SHARES2 SHARE_T3=SHARE_T3(-1)+((SHARE_T3*SHARE_T1*(F_T3_T1/TAU_T1-F_T1_T3/TAU_T3)+SHARE_T3*SHARE_T2*(F_T3_T2/TAU_T2-F_T2_T3/TAU_T3)+SHARE_T3*SHARE_T3*(F_T3_T3/TAU_T3-F_T3_T3/TAU_T3)+SHARE_T3*SHARE_T4*(F_T3_T4/TAU_T4-F_T4_T3/TAU_T3)))$">
+<polygon fill="springgreen" stroke="black" points="1419,-602.7 1250,-602.7 1250,-566.7 1419,-566.7 1419,-602.7"/>
+<text text-anchor="start" x="1256.5" y="-580.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">SHARE_T3(-1):SHARE_T3</text>
+</a>
+</g>
+</g>
+<!-- SHARE_T3&#45;&gt;SHARE_T3(&#45;1) -->
+<g id="edge147" class="edge">
+<title>SHARE_T3-&gt;SHARE_T3(-1)</title>
+<g id="a_edge147"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1076,-597.18C1117.71,-592.48 1184.2,-587.51 1239.17,-584.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1239.07,-588.21 1248.88,-584.23 1238.72,-581.22 1239.07,-588.21"/>
+</a>
+</g>
+</g>
+<!-- C_T1 -->
+<g id="node54" class="node">
+<title>C_T1</title>
+<g id="a_node54"><a xlink:title="C_T1
+Exogen">
+<polygon fill="yellow" stroke="black" points="197,-904.7 143,-904.7 143,-868.7 197,-868.7 197,-904.7"/>
+<text text-anchor="start" x="153" y="-882.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">C_T1:</text>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T1_T4 -->
+<g id="edge139" class="edge">
+<title>C_T1-&gt;F_T1_T4</title>
+<g id="a_edge139"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.46,-894.79C206.71,-898.96 216.21,-905.04 222,-913.7 313.98,-1051.25 184.39,-1139.03 259.52,-1291.19"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.21,-1292.41 263.91,-1299.69 262.43,-1289.2 256.21,-1292.41"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T3_T1 -->
+<g id="edge58" class="edge">
+<title>C_T1-&gt;F_T3_T1</title>
+<g id="a_edge58"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.44,-877.97C206.45,-873.77 215.81,-867.83 222,-859.7 266.71,-801.04 219.57,-760.65 258,-697.7 258.12,-697.51 258.24,-697.31 258.36,-697.12"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="260.93,-699.51 264.47,-689.52 255.48,-695.12 260.93,-699.51"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T1_T2 -->
+<g id="edge42" class="edge">
+<title>C_T1-&gt;F_T1_T2</title>
+<g id="a_edge42"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.24,-875.93C205.72,-871.67 214.79,-866.22 222,-859.7 243.4,-840.36 238.7,-827.14 258,-805.7 258.33,-805.33 258.67,-804.97 259.01,-804.6"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="261.43,-807.13 266.14,-797.63 256.54,-802.12 261.43,-807.13"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T1_T1 -->
+<g id="edge135" class="edge">
+<title>C_T1-&gt;F_T1_T1</title>
+<g id="a_edge135"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-898.55C212.16,-905.3 231.22,-913.91 248.22,-921.59"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="246.69,-924.75 257.25,-925.68 249.58,-918.37 246.69,-924.75"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T2_T1 -->
+<g id="edge104" class="edge">
+<title>C_T1-&gt;F_T2_T1</title>
+<g id="a_edge104"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.22,-874.85C212.16,-868.1 231.22,-859.49 248.22,-851.81"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="249.58,-855.04 257.25,-847.73 246.69,-848.66 249.58,-855.04"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T1_T3 -->
+<g id="edge43" class="edge">
+<title>C_T1-&gt;F_T1_T3</title>
+<g id="a_edge43"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.41,-878.27C206.53,-874.08 215.97,-868.07 222,-859.7 276.96,-783.45 214.12,-731.73 259.26,-644.55"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="262.32,-646.27 264.11,-635.83 256.19,-642.87 262.32,-646.27"/>
+</a>
+</g>
+</g>
+<!-- C_T1&#45;&gt;F_T4_T1 -->
+<g id="edge61" class="edge">
+<title>C_T1-&gt;F_T4_T1</title>
+<g id="a_edge61"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M197.39,-894.84C206.62,-899.02 216.14,-905.09 222,-913.7 301.57,-1030.7 194.53,-1106.53 259.34,-1236.85"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="256.21,-1238.43 263.96,-1245.66 262.41,-1235.18 256.21,-1238.43"/>
+</a>
+</g>
+</g>
+<!-- TAU_T4 -->
+<g id="node55" class="node">
+<title>TAU_T4</title>
+<g id="a_node55"><a xlink:title="TAU_T4
+Exogen">
+<polygon fill="yellow" stroke="black" points="324,-454.7 259,-454.7 259,-418.7 324,-418.7 324,-454.7"/>
+<text text-anchor="start" x="265.5" y="-432.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TAU_T4:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T4&#45;&gt;SHARE_T1 -->
+<g id="edge146" class="edge">
+<title>TAU_T4-&gt;SHARE_T1</title>
+<g id="a_edge146"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M308.35,-454.87C314.4,-462.66 320.84,-472.16 325,-481.7 357.63,-556.48 301.52,-605.86 361,-661.7 440.78,-736.61 519.21,-626.77 605,-694.7 640.07,-722.47 609.1,-757.34 641,-788.7 651.25,-798.78 664.93,-805.72 678.43,-810.48"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="677.36,-813.81 687.95,-813.48 679.47,-807.13 677.36,-813.81"/>
+</a>
+</g>
+</g>
+<!-- TAU_T4&#45;&gt;SHARE_T2 -->
+<g id="edge109" class="edge">
+<title>TAU_T4-&gt;SHARE_T2</title>
+<g id="a_edge109"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M311.71,-454.95C345.62,-487.16 416.16,-554.16 454.96,-591.02"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="452.53,-593.53 462.19,-597.88 457.35,-588.46 452.53,-593.53"/>
+</a>
+</g>
+</g>
+<!-- TAU_T4&#45;&gt;SHARE_T4 -->
+<g id="edge73" class="edge">
+<title>TAU_T4-&gt;SHARE_T4</title>
+<g id="a_edge73"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M318.17,-418.38C330.5,-410.69 345.86,-402.62 361,-398.7 558.07,-347.7 620.2,-357.96 819,-401.7 1006.7,-443 1080.69,-439.26 1214,-577.7 1289.57,-656.19 1319.41,-788.55 1329.29,-846.76"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1325.84,-847.32 1330.89,-856.63 1332.75,-846.2 1325.84,-847.32"/>
+</a>
+</g>
+</g>
+<!-- TAU_T4&#45;&gt;SHARE_T3 -->
+<g id="edge57" class="edge">
+<title>TAU_T4-&gt;SHARE_T3</title>
+<g id="a_edge57"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.28,-429.8C408.14,-413.06 641.18,-376.07 819,-438.7 900.06,-467.25 974.57,-539.47 1010.66,-578.58"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1007.94,-580.79 1017.26,-585.83 1013.12,-576.08 1007.94,-580.79"/>
+</a>
+</g>
+</g>
+<!-- SHARE_T3(&#45;1)&#45;&gt;SHARE_T3 -->
+<g id="edge76" class="edge">
+<title>SHARE_T3(-1)-&gt;SHARE_T3</title>
+<g id="a_edge76"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M1249.64,-596.47C1197.2,-601.04 1131.35,-605.16 1086.62,-606.51"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1086.66,-603.01 1076.76,-606.77 1086.84,-610 1086.66,-603.01"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T3&#45;&gt;SHARE_T2 -->
+<g id="edge110" class="edge">
+<title>F_T2_T3-&gt;SHARE_T2</title>
+<g id="a_edge110"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.08,-571.99C354.33,-580.32 397.73,-592.69 431.48,-602.31"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="430.31,-605.61 440.89,-604.99 432.23,-598.88 430.31,-605.61"/>
+</a>
+</g>
+</g>
+<!-- F_T2_T3&#45;&gt;SHARE_T3 -->
+<g id="edge102" class="edge">
+<title>F_T2_T3-&gt;SHARE_T3</title>
+<g id="a_edge102"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M314.94,-544.36C330.84,-531.81 351.05,-516.9 361,-513.7 554.87,-451.5 619.61,-482.48 819,-523.7 878.67,-536.04 943.68,-562.58 986.3,-581.93"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="984.6,-585.01 995.15,-586 987.52,-578.65 984.6,-585.01"/>
+</a>
+</g>
+</g>
+<!-- F_T3_T3&#45;&gt;SHARE_T3 -->
+<g id="edge89" class="edge">
+<title>F_T3_T3-&gt;SHARE_T3</title>
+<g id="a_edge89"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M325.19,-284.18C411.76,-273.84 651.79,-255.77 819,-345.7 919.44,-399.73 991.49,-522.11 1020,-577.07"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1016.81,-578.52 1024.47,-585.84 1023.04,-575.34 1016.81,-578.52"/>
+</a>
+</g>
+</g>
+<!-- TAU_T3 -->
+<g id="node59" class="node">
+<title>TAU_T3</title>
+<g id="a_node59"><a xlink:title="TAU_T3
+Exogen">
+<polygon fill="yellow" stroke="black" points="324,-360.7 259,-360.7 259,-324.7 324,-324.7 324,-360.7"/>
+<text text-anchor="start" x="265.5" y="-338.5" font-family="Times New Roman,serif" font-size="14.00" fill="blue">TAU_T3:</text>
+</a>
+</g>
+</g>
+<!-- TAU_T3&#45;&gt;SHARE_T1 -->
+<g id="edge112" class="edge">
+<title>TAU_T3-&gt;SHARE_T1</title>
+<g id="a_edge112"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.38,-358.5C388.25,-391.86 532.01,-475.9 605,-589.7 641.55,-646.69 606.98,-679.18 641,-737.7 654.27,-760.53 675.74,-780.96 694.14,-795.84"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="691.72,-798.38 701.75,-801.8 696.04,-792.88 691.72,-798.38"/>
+</a>
+</g>
+</g>
+<!-- TAU_T3&#45;&gt;SHARE_T2 -->
+<g id="edge71" class="edge">
+<title>TAU_T3-&gt;SHARE_T2</title>
+<g id="a_edge71"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M305.23,-361.11C337.93,-408.39 425.01,-534.3 463.39,-589.79"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="460.33,-591.52 468.9,-597.76 466.09,-587.54 460.33,-591.52"/>
+</a>
+</g>
+</g>
+<!-- TAU_T3&#45;&gt;SHARE_T4 -->
+<g id="edge36" class="edge">
+<title>TAU_T3-&gt;SHARE_T4</title>
+<g id="a_edge36"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.21,-337.1C335.78,-335.07 348.98,-332.76 361,-330.7 580.43,-293.05 633.14,-266.21 855,-247.7 934.5,-241.07 1154.88,-194.14 1214,-247.7 1274.24,-302.28 1233.66,-532.08 1250,-611.7 1268.06,-699.7 1304.25,-799.89 1322.47,-847.59"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1319.15,-848.71 1326.01,-856.78 1325.68,-846.19 1319.15,-848.71"/>
+</a>
+</g>
+</g>
+<!-- TAU_T3&#45;&gt;SHARE_T3 -->
+<g id="edge62" class="edge">
+<title>TAU_T3-&gt;SHARE_T3</title>
+<g id="a_edge62"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M324.39,-339.34C409.52,-331.79 647.27,-320.02 819,-401.7 905.85,-443.01 980.59,-532.77 1014.33,-577.8"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="1011.51,-579.87 1020.27,-585.83 1017.14,-575.71 1011.51,-579.87"/>
+</a>
+</g>
+</g>
+<!-- SIGMA_T4_T4&#45;&gt;F_T4_T4 -->
+<g id="edge154" class="edge">
+<title>SIGMA_T4_T4-&gt;F_T4_T4</title>
+<g id="a_edge154"><a xlink:href="bogus" xlink:title="NA">
+<path fill="none" stroke="black" stroke-width="0.5" d="M222.37,-1426.7C230.64,-1426.7 239.12,-1426.7 247.17,-1426.7"/>
+<polygon fill="black" stroke="black" stroke-width="0.5" points="247.06,-1430.2 257.06,-1426.7 247.06,-1423.2 247.06,-1430.2"/>
+</a>
+</g>
+</g>
+</g>
+</svg>

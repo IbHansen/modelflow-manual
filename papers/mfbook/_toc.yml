@@ -2,14 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/introduction
+root: introduction
 options:
   numbered: true
 parts:
-   - caption: Foreword
-     numbered: false #true  
-     chapters:
-     - file: content/00_Foreword/Foreword
+   # - caption: Foreword
+     # numbered: false #true  
+     # chapters:
+     # - file: content/00_Foreword/Foreword
 
    - caption: Introduction
      numbered: true  
@@ -29,30 +29,30 @@ parts:
      - file: content/03_Installation/InstallingPython     
      - file: content/03_Installation/InstallingModelFlow
      - file: content/03_Installation/TestingModelFlow
-    
+#   
 # # *****************
-   - caption: Some Jupyter, Python and pandas essentials
-     numbered: true      
-     chapters:   
-     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
-     - file: content/04_PythonEssentials/PythonPackagesEtc
-     - file: content/04_PythonEssentials/UpdateCommand
-     - file: content/04_PythonEssentials/ExtendingDataFrames
+#  - caption: Some Jupyter, Python and pandas essentials
+#    numbered: true      
+#    chapters:   
+#    - file: content/04_PythonEssentials/Intro_Jupyter_notebook
+#    - file: content/04_PythonEssentials/PythonPackagesEtc
+#    - file: content/04_PythonEssentials/UpdateCommand
+#    - file: content/04_PythonEssentials/ExtendingDataFrames
  #    - file: content/notebooks/Pandas
 # #****************
-   - caption: A simple MFMod-Style Model in modelflow
-     numbered: true      
-     chapters:   
-     - file: content/05_SimpleModel/SimpleModel
-     #- file: content/05_SimpleNodel/SimulatingTheModel
+#  - caption: A simple MFMod-Style Model in modelflow
+#    numbered: true      
+#    chapters:   
+#    - file: content/05_SimpleModel/SimpleModel
+#    #- file: content/05_SimpleNodel/SimulatingTheModel
 #     - file: content/06_SimpleNodel/SimulatingTheModel
-
+#
 #*********
-   - caption: Using modelflow with World Bank models
-     numbered: true      
-     chapters:   
-     - file: content/06_WBModels/LoadingWBModel
-     - file: content/06_WBModels/DifferentSimulations
+#  - caption: Using modelflow with World Bank models
+#    numbered: true      
+#    chapters:   
+#    - file: content/06_WBModels/LoadingWBModel
+#    - file: content/06_WBModels/DifferentSimulations
      #- file: content/06_WBModels/TheKeepOption
 
 #   - caption: modifying models 
@@ -84,10 +84,10 @@ parts:
 #     - file: content/howto/keep/Create and modify charts with keep_plot
 
     
-#   - caption: Features
-#     numbered: true  
-#     chapters:      
-#     - file: content/notebooks/modelflow_features
+   - caption: Features
+     numbered: true  
+     chapters:      
+     - file: content/notebooks/modelflow_features
     
 #   - caption: Structure   
 #     numbered: true  
@@ -114,10 +114,10 @@ parts:
 #     chapters:    
 #     - file: content/howto/optimization/Optimize_simple  
     
-#   - caption: More
+   - caption: More
 #     numbered: true  
-##     chapters:
-#     - file: content/litterature
+     chapters:
+     - file: content/litterature
 # #  - caption: Jupyter book test
 # #    numbered: true  
 # #    chapters:     

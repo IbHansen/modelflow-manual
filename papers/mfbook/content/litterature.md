@@ -1,5 +1,3 @@
-# Litterature
-
 
 ```{bibliography}
 :style: alpha
