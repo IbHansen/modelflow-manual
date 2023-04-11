@@ -85,8 +85,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="content/introduction.html">
-   The World Bank’s MFMod models in python using Modelflow
+  <a class="reference internal" href="content/Introduction.html">
+   Foreword
   </a>
  </li>
 </ul>
@@ -96,26 +96,9 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="content/00_Foreword/Foreword.html">
-   Foreword
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting started
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="content/01_Introduction/Introduction.html">
    1. Introduction
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="content/02_MacrostructuralModels/MacroStructuralModels.html">
-   2. Macrostructural models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -124,15 +107,20 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="content/02_MacrostructuralModels/MacroStructuralModels.html">
+     1.4. Macrostructural models
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="content/02_MacrostructuralModels/MFModAndModelFlow.html">
-     2.3. Modelflow and the MFMod models of the World Bank
+     1.5. Modelflow and the MFMod models of the World Bank
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="content/03_Installation/InstallingPython.html">
-   3. Installation of Modelflow
+   2. Installation of Modelflow
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -142,32 +130,57 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="content/03_Installation/InstallingModelFlow.html">
-     3.2. Installation of Modelflow
+     2.2. Installation of Modelflow
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/04_PythonEssentials/Intro_Jupyter_notebook.html">
-   4. Introduction to  Jupyter Notebook
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/04_PythonEssentials/PythonPackagesEtc.html">
-   5. Some Python basics
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  The World Bank's MFMod Framework and Modelflow
+  Some python essentials for using WorldBank models with modelflow
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="content/05_SimpleModel/SimpleModel.html">
-   8. A simple macrostructural model in Modelflow
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="content/04_PythonEssentials/Intro_Jupyter_notebook.html">
+   1. Introduction to  Jupyter Notebook
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/04_PythonEssentials/PythonPackagesEtc.html">
+     1.8. Some Python basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="content/04_PythonEssentials/UpdateCommand.html">
+   2. Modelflows extensions to pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/04_PythonEssentials/mfcalc.html">
+     2.8.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .mfcalc()
+      </span>
+     </code>
+     an extension of standard Pandas
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -178,7 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="content/06_WBModels/LoadingWBModel.html">
-   9. Using
+   1. Using
    <code class="docutils literal notranslate">
     <span class="pre">
      modelflow
@@ -189,7 +202,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="content/06_WBModels/DifferentSimulations.html">
-   15. Scenario analysis
+   2. Scenario analysis
   </a>
  </li>
 </ul>

@@ -44,6 +44,8 @@ bibtex_bibfiles:
 html:
   use_issues_button: False
   use_repository_button: True
+  use_multitoc_numbering: false  # Restarts the numbering in each part
+  
 parse:
   myst_enable_extensions:
    # don't forget to list any other extensions you want enabled,

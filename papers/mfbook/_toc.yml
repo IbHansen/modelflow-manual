@@ -2,48 +2,46 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/introduction
+root: content/Introduction
 options:
   numbered: true
 parts:
    - caption: The World Bank's MFMod Framework and Modelflow
-     numbered: false #true  
-     chapters:
-     - file: content/00_Foreword/Foreword
-
-   - caption: Getting started
      numbered: true  
      chapters:
-     - file: content/01_Introduction/Introduction
-     - file: content/02_MacrostructuralModels/MacroStructuralModels 
-       sections:
+     - file: content/01_Introduction/Introduction     
+       sections:     
+       - file: content/02_MacrostructuralModels/MacroStructuralModels 
        - file: content/02_MacrostructuralModels/MFModAndModelFlow
      - file: content/03_Installation/InstallingPython     
        sections:
        - file: content/03_Installation/InstallingModelFlow
-#    # - file: content/03_Installation/TestingModelFlow
+# #    # - file: content/03_Installation/TestingModelFlow
     
-# *****************
-     - file: content/04_PythonEssentials/Intro_Jupyter_notebook
-     - file: content/04_PythonEssentials/PythonPackagesEtc
+# # *****************
+   - caption: Some python essentials for using WorldBank models with modelflow
+     numbered: true 
+     chapters: 
+     - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
+     - file: content/04_PythonEssentials/PythonPandasDataframes
+     - file: content/04_PythonEssentials/UpdateCommand
        sections:
-       - file: content/04_PythonEssentials/UpdateCommand
-       - file: content/04_PythonEssentials/ExtendingDataFrames
- #    - file: content/notebooks/Pandas
-#****************
-   - caption: The World Bank's MFMod Framework and Modelflow
-     numbered: true      
-     chapters:   
-     - file: content/05_SimpleModel/SimpleModel
-     - file: content/05_SimpleNodel/SimulatingTheModel     
+       - file: content/04_PythonEssentials/mfcalc
+ 
+# #****************
+#   - caption: The World Bank's MFMod Framework and Modelflow
+#     numbered: true      
+#     chapters:   
+#     - file: content/05_SimpleModel/SimpleModel
+#     - file: content/05_SimpleNodel/SimulatingTheModel     
 
 #*********
    - caption: Using modelflow with World Bank models
      numbered: true      
      chapters:   
      - file: content/06_WBModels/LoadingWBModel
-     - file: content/06_WBModels/DifferentSimulations
-     - file: content/06_WBModels/TheKeepOption
+#     - file: content/06_WBModels/DifferentSimulations
+#     - file: content/06_WBModels/TheKeepOption
 
 # #   - caption: modifying models 
 # #     numbered: true  
@@ -109,8 +107,3 @@ parts:
      chapters:
      - file: content/99_BackMatter/References
 
-# # #  - caption: Jupyter book test
-# # #    numbered: true  
-# # #    chapters:     
-# # #    - file: content/booktest
-    
