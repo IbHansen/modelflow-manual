@@ -98,30 +98,81 @@
 \pagestyle{plain}
 \sphinxtableofcontents
 \pagestyle{normal}
-\phantomsection\label{\detokenize{content/Introduction::doc}}
+\phantomsection\label{\detokenize{content/introduction::doc}}
 
+
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+This Jupyter book is work in progress and very much a draft.
 
 \sphinxAtStartPar
-Lorem Ipsum
-“Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…”
-“There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…”
+Please send any suggestions and comments to Ib
+\end{sphinxadmonition}
 
 \sphinxAtStartPar
-freestar
+The purpose of this \sphinxhref{https://jupyterbook.org/en/stable/intro.html}{Jupyter Book} is to show some examples of different models in the \sphinxstylestrong{Modelflow} (aka \sphinxstylestrong{PCIM 2.0}) framework.
 
 \sphinxAtStartPar
-freestar
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam varius mi. Suspendisse pharetra egestas viverra. Aenean viverra hendrerit sagittis. Curabitur vel lectus at arcu mattis blandit. Quisque aliquet erat nunc, vitae consequat eros venenatis eu. Vivamus ut arcu eget ipsum mollis iaculis. Aliquam rhoncus bibendum orci. Donec lacinia, mauris placerat auctor vehicula, odio eros efficitur leo, et porttitor est urna vitae erat. Cras tempor nec purus at tincidunt. Maecenas viverra massa diam, sit amet tristique mi scelerisque non. Etiam scelerisque, risus ac mollis hendrerit, ex velit vehicula tortor, quis accumsan leo enim sed leo. Suspendisse potenti. Nulla libero diam, eleifend nec sollicitudin ut, varius non eros.
+This Jupyterbook is \sphinxstylestrong{displaying} a number of individual notebooks which each shows different aspects of the model and the framework. Most of the notebooks can be executed in the cloud. Either through \sphinxhref{https://colab.research.google.com/}{Google Colab} or \sphinxhref{https://mybinder.org/}{Mybinder} To do this move to the small rocket in the menu line. There you can choose to launch the notebook in either Mybinder or Colab. Usual it makes sense to launch in a new tab (by right click) as launch can take some time.
 
 \sphinxAtStartPar
-Ut sit amet mollis ipsum. Donec tempor magna ac blandit gravida. Phasellus viverra, arcu at euismod auctor, lectus justo vehicula eros, sit amet posuere felis mi ac purus. Nullam gravida lacinia bibendum. Vivamus ultrices justo sed aliquam feugiat. Mauris vulputate sapien in tempus posuere. Morbi nec purus eget ipsum fermentum congue. Vivamus auctor, mi sit amet lacinia suscipit, ipsum lectus pulvinar risus, non condimentum eros felis sed quam. Pellentesque consectetur leo sit amet condimentum commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis risus mi, elementum ac leo ut, ultrices scelerisque dui.
+For more information on the capabilities of the framework look in \sphinxhref{https://ibhansen.github.io/mfbook}{this manual}. It is based on the
+the handeling of the \sphinxhref{https://openknowledge.worldbank.org/handle/10986/32217}{World Bank’s macroeconomic and fiscal model(MFMod)}
 
 \sphinxAtStartPar
-Sed quis arcu et dui viverra interdum vitae id enim. In euismod diam quis eleifend viverra. Nullam sodales dictum turpis, vestibulum sodales erat. Morbi quis orci dictum mauris volutpat porttitor at at sapien. Maecenas nec metus ut felis malesuada dapibus. Duis semper lacus eget hendrerit congue. Aenean condimentum, ligula ac sagittis rutrum, turpis elit pulvinar libero, eget tristique sapien sem eget lacus. Curabitur egestas velit quis eros volutpat rhoncus. Nunc quam nibh, commodo ac egestas non, tristique sit amet nisl. Ut vitae lacinia justo.
+ModelFlow is a Python library developed to leverage on the Pandas data management library and the broader Python ecosystem. Using Modelflow you can:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Solve models
+
+\item {} 
+\sphinxAtStartPar
+Analyze models
+
+\item {} 
+\sphinxAtStartPar
+Analyze results
+
+\item {} 
+\sphinxAtStartPar
+Visualize results
+
+\end{itemize}
 
 \sphinxAtStartPar
-Indermit Gil
-World Bank Chief Economist
+\sphinxstylestrong{Model Specification} With ModelFlow you can specify your models as concise and intuitive equations. ModelFlow transforms your equations into Python code and solves your model.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Large models}.
+ModelFlow can handle models with 1 million equations and more. The library is therefore also suited for very large models.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Agile model development}
+The models are specified at a high level of abstraction and are processed fast. This makes ModelFlow the obvious choice when developing and experimenting with large models.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Onboarding models}.
+Creating a model often entails recycling several models specified in different ways: Eviews, Excel, Latex, Dynare, Python and other languages/tools.
+ModelFlow, which is nested in the Python’s ecosystem, makes it possible to transform models defined in many different languages into ModelFlow models.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Onboarding data}.
+ModelFlow is build on top of Pythons Pandas Library. Pandas is the swiss army knife for datascience and has a lot of data wrangeling capabilities and in addition makes it easy to import and manage data from different sources.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Analytic} ModelFlow provides you with a range of visual tools that help you understand your models and your results.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Open Source}
+Be part of the community. The entire library is written in Python and is to be found on this \sphinxhref{https://github.com/IbHansen/Modelflow2}{Github page}  . So you can adjust the tools to your needs or help develope the library further.
+
+\sphinxAtStartPar
+The documentation can be viewed \sphinxhref{https://ibhansen.github.io/doc}{here}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Acknowledgment}
+<Fortcomming>
 
 \sphinxstepscope
 
@@ -460,7 +511,7 @@ There are many fine tutorials on Jupyter Notebook on the web, and \sphinxhref{ht
 \sphinxAtStartPar
 Each time, a user wants to work with \sphinxcode{\sphinxupquote{modelflow}}, they will need to activate the \sphinxcode{\sphinxupquote{modelflow}} environment by
 \begin{enumerate}
-\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
 \sphinxAtStartPar
 Opening the Anaconda command prompt window
@@ -1222,7 +1273,7 @@ Numpy gives access to some advanced mathematical features
 You don’t have to use those conventions but it will make your code easier to read by others who are familiar with it.
 
 
-\chapter{Introduction to Pandas dataframes}
+\section{Introduction to Pandas dataframes}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:introduction-to-pandas-dataframes}}
 \sphinxAtStartPar
 Modelflow is built on top of the Pandas library. Pandas is the Swiss knife of data science and can perform an impressing array of date oriented tasks.
@@ -1241,7 +1292,7 @@ This tutorial is a very short introduction to how pandas dataframes are used wit
 \end{itemize}
 
 
-\section{Import the pandas library}
+\subsection{Import the pandas library}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:import-the-pandas-library}}
 \sphinxAtStartPar
 As with any python program, in order to use a package or library it must first be imported into the session. As noted above, by  convention pandas is imported as pd
@@ -1257,10 +1308,11 @@ As with any python program, in order to use a package or library it must first b
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
+Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.\\
+Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
 
 
-\section{The \sphinxstyleliteralintitle{\sphinxupquote{Pandas}} class \sphinxstyleliteralintitle{\sphinxupquote{series}}}
+\subsection{The \sphinxstyleliteralintitle{\sphinxupquote{Pandas}} class \sphinxstyleliteralintitle{\sphinxupquote{series}}}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:the-pandas-class-series}}
 \sphinxAtStartPar
 A pandas series is class that can be used to instantiate an object that holds a two dimensional array comprised of values and an index.
@@ -1269,7 +1321,7 @@ A pandas series is class that can be used to instantiate an object that holds a 
 The constructor for a \sphinxcode{\sphinxupquote{Series}} object is \sphinxcode{\sphinxupquote{pandas.Series()}}.  The content inside the parentheses will determine the nature of the series\sphinxhyphen{}object generated.  As an object\sphinxhyphen{}oriented language Python supports \sphinxcode{\sphinxupquote{overrides}} (which is to say a method can have more than one way in which it can be called). Specifically there can be different constructors defined for a class, depending on how the data that is to be used to initialize it is organized.
 
 
-\subsection{Series declared from a list}
+\subsubsection{Series declared from a list}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:series-declared-from-a-list}}
 \sphinxAtStartPar
 The simplest way to create a Series is to pass an array of values as a Python list to the Series constructor.
@@ -1377,7 +1429,7 @@ Note that all three series have different length.
 Moreover, constructed in this way (by passing a list to the constructor) each of these \sphinxcode{\sphinxupquote{Series}} are automatically assigned a zero\sphinxhyphen{}based index (a numerial index that starts with 0).
 
 
-\subsection{Series declared using a specific index}
+\subsubsection{Series declared using a specific index}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:series-declared-using-a-specific-index}}
 \sphinxAtStartPar
 In this example the series Simple and Simple2 are recreated (overwritten), but this time an index is specified. Here the index is declared as a(nother) list.
@@ -1436,7 +1488,7 @@ dtype: int64
 Now the Series look more like time series data!
 
 
-\subsection{Create Series from a dictionary}
+\subsubsection{Create Series from a dictionary}
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:create-series-from-a-dictionary}}
 \sphinxAtStartPar
 In python a dictionary is a data structure that is more generally known in computer science as an associative array. A dictionary consists of a collection of key\sphinxhyphen{}value pairs, where each key\sphinxhyphen{}value pair \sphinxstyleemphasis{maps} or \sphinxstyleemphasis{links} the key to its associated value.
@@ -2957,10 +3009,10 @@ Let’s see this in a concrete example.  Consider the following \sphinxcode{\sph
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_34_1}.png}
+\noindent\sphinxincludegraphics{{c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -2986,10 +3038,10 @@ Now lets modify each by adding 5 to the level in 2022 and 2023.  For B we will d
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_36_1}.png}
+\noindent\sphinxincludegraphics{{b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3019,10 +3071,10 @@ Here the growth in both series accelerates in 2022, by slightly less than 5 perc
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_38_1}.png}
+\noindent\sphinxincludegraphics{{93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3386,8 +3438,9 @@ Growth:
 2023  1.5  1.839285     2.0     2.0
 2024  2.0 \PYGZhy{}2.103118     2.0     2.0
 2025  2.5  1.919399     2.0     2.0
+\end{sphinxVerbatim}
 
-
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 severity=1
 Dataframe:
                A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
@@ -3494,7 +3547,7 @@ Set create=True if you want the variable created:
 \sphinxstepscope
 
 
-\section{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} an extension of standard Pandas}
+\chapter{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} an extension of standard Pandas}
 \label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-an-extension-of-standard-pandas}}\label{\detokenize{content/04_PythonEssentials/mfcalc::doc}}
 \sphinxAtStartPar
 Like\sphinxcode{\sphinxupquote{.upd()}}, the \sphinxcode{\sphinxupquote{.mfcalc()}} method can be used to extend the functionality of standard pandas.  It is actually a much more powerful method that can be used to solve models or mini\sphinxhyphen{}models or see how modelflow normalizes equations.  It can be particularly useful when creating scenarios – uses that are presented elsewhere.
@@ -3503,7 +3556,7 @@ Like\sphinxcode{\sphinxupquote{.upd()}}, the \sphinxcode{\sphinxupquote{.mfcalc(
 Here , the focus is but is on using \sphinxcode{\sphinxupquote{mfcalc()}}to perform quick and dirty calculations and modify datafames.
 
 
-\subsection{workspace initialization}
+\section{workspace initialization}
 \label{\detokenize{content/04_PythonEssentials/mfcalc:workspace-initialization}}
 \sphinxAtStartPar
 Setting up our python session to use pandas and modelflow by importing their packages.  \sphinxcode{\sphinxupquote{modelmf}} is an extension of dataframes that is part of the modelflow installation package (and also used by modelflow itself).
@@ -3592,6 +3645,10 @@ The below call creates a new column x.
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3664,6 +3721,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3697,6 +3758,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                A
 2020  100.000000
@@ -3755,6 +3820,7 @@ By setting equal to \sphinxcode{\sphinxupquote{True}}, mfcalc can be used to exp
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=EXP(LOG(A(\PYGZhy{}1))+0.02)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3801,6 +3867,7 @@ The diff() operator, effectively normalizes to an equation that will add the val
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=A(\PYGZhy{}1)+(2)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3847,6 +3914,10 @@ For example:
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
@@ -3896,6 +3967,10 @@ Compare the results above with the results (below) when the two steps are now un
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0  142.0
@@ -4013,7 +4088,7 @@ Each of these models has been developed as part of the outreach work of the Worl
 This book uses as an example a climate aware model for Pakistan developed in 2020 and described in Burns \sphinxstyleemphasis{et al.} {[}\hyperlink{cite.content/99_BackMatter/References:id14}{2021}{]} .
 
 \sphinxAtStartPar
-The World Bank models are distributed in the \sphinxcode{\sphinxupquote{pcim}} file format of the \sphinxcode{\sphinxupquote{modelflow}} and can be downloaded by right clicking on the links above.  The Pakistan model can be downloaded \DUrole{xref,myst}{here} by right clicking on the above link and selecting Save Link as and placing the file on a directory accessible by your \sphinxcode{\sphinxupquote{modelflow}} installation.
+The World Bank models are distributed in the \sphinxcode{\sphinxupquote{pcim}} file format of the \sphinxcode{\sphinxupquote{modelflow}} and can be downloaded by right clicking on the links above.  The Pakistan model can be downloaded \DUrole{xref,download,myst}{here} by right clicking on the above link and selecting Save Link as and placing the file on a directory accessible by your \sphinxcode{\sphinxupquote{modelflow}} installation.
 
 
 
@@ -4145,7 +4220,7 @@ The \sphinxcode{\sphinxupquote{keep}} option instructs \sphinxcode{\sphinxupquot
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
+Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4660,9 +4735,9 @@ Return a dictionary comprised of the mnemonics and the descriptions of all the v
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNECONPRVTCN : Pvt. Cons., LCU mn
-PAKNECONPRVTKN : HH. Cons Real
-PAKNECONPRVTXN : PAKNECONPRVTXN
+PAKNECONPRVTCN : Household demand
+PAKNECONPRVTKN : Household Consumption
+PAKNECONPRVTXN : Household demand
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4757,26 +4832,22 @@ If we look at the equation for consumption in \sphinxcode{\sphinxupquote{mpak}} 
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Endogeneous: PAKNECONPRVTKN: HH. Cons Real
-Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG(1.21203101101442)\PYGZhy{}LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+0.763938860758873*((LOG((((PAKBXFSTREMTCD\PYGZhy{}PAKBMFSTREMTCD)*PAKPANUSATLS)+PAKGGEXPTRNSCN+PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))\PYGZhy{}0.0634474791568939*DURING\PYGZus{}2009\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
+Endogeneous: PAKNECONPRVTKN: Household Consumption
+Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(\PYGZhy{}PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+1*((LOG((PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))+0.0303228629698929+0.0163839011059956*DURING\PYGZus{}2010\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
 
-PAKNECONPRVTKN  : HH. Cons Real
-DURING\PYGZus{}2009     : 
-PAKBMFSTREMTCD  : Imp., Remittances (BOP), US\PYGZdl{} mn
-PAKBXFSTREMTCD  : Exp., Remittances (BOP), US\PYGZdl{} mn
-PAKFMLBLPOLYXN  : Key Policy Interest Rate
-PAKGGEXPTRNSCN  : Current Transfers
-PAKGGREVDRCTXN  : Direct Revenue Tax Rate
-PAKNECONPRVTKN\PYGZus{}A: Add factor:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}D: Fix dummy:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}X: Fix value:HH. Cons Real
-PAKNECONPRVTXN  : 
-PAKNYYWBTOTLCN  : 
-PAKPANUSATLS    : Exchange rate LCU / US\PYGZdl{} \PYGZhy{} Pakistan
+PAKNECONPRVTKN  : Household Consumption
+DURING\PYGZus{}2010     : 
+PAKFMLBLPOLYXN  : Policy Rate
+PAKGGREVDRCTXN  : Effective tax rates
+PAKNECONPRVTKN\PYGZus{}A: Add factor:Household Consumption
+PAKNECONPRVTKN\PYGZus{}D: Exo dummy:Household Consumption
+PAKNECONPRVTKN\PYGZus{}X: Exo value:Household Consumption
+PAKNECONPRVTXN  : Household demand
+PAKNYYWBTOTLCN  : Economy\PYGZhy{}wide wage bill
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZsq{}Real GDP\PYGZsq{}
+\PYGZsq{}GDP Expenditure side at market prices\PYGZsq{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5016,6 +5087,11 @@ Looking at an ECM equation we can then break it up into its component parts.  Fo
 \sphinxAtStartPar
 An essential feature of a model is that when given a specific set of inputs (the exogenous variables to the model) it will always return the same results. As noted when, as was the case of the load, the model is solved without changing any inputs the model should return (reproduce) exactly the same data as before{[}\textasciicircum{}fn2{]}.  To test this for \sphinxcode{\sphinxupquote{mpak}} we can compare the results from the simulation using the \sphinxcode{\sphinxupquote{basedf}} and \sphinxcode{\sphinxupquote{lastdf}} dataframes.
 
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{model}} object (\sphinxcode{\sphinxupquote{mpak}} in this instance) always contains two dataframes, the \sphinxcode{\sphinxupquote{.basedf}} dataframe that contains the initial values for the variables of the model, and the \sphinxcode{\sphinxupquote{.lastdf}} which contain the results of the most recently executed scenario.
+\end{sphinxadmonition}
+
 \sphinxAtStartPar
 Below we are gratified to see that the percent difference between the variables in the two dataframes following a simulation where the inputs were not changes is zero.
 
@@ -5201,13 +5277,16 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_39_0}.png}
+\noindent\sphinxincludegraphics{{e35405f76e07a3aaeb59ee48fab7099439874ba025c06b0c6e9d1c0c4131cc33}.png}
+
+\noindent\sphinxincludegraphics{{fe4d31515fd44b9e8353864df0e7bd89d59f7ed072d0f5dd8c3a9c37d6823f2a}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-The graphs show the change in the level as a percent of the previous level. The graphs suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 1.5 percent, that the impact would diminish in the second year to about \sphinxhyphen{}.25 percent and that the impact would turn positive in the fourth year when the price effect was eliminated.The negative impact would on household consumption would be stronger but follow a similar pattern.  The reason that the GDP impact is smaller, is partly because of the impact on imports which decline strongly.  Because imports enter into the GDP identity with a negative sign. lower imports actually increase aggregate GDP.
+The graphs show the change in the level as a percent of the previous level. The graphs suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 1.5 percent, that the impact would diminish in the second year to about \sphinxhyphen{}.25 percent and that the impact would turn positive in the fourth year when the price effect was eliminated.\\
+The negative impact would on household consumption would be stronger but follow a similar pattern.  The reason that the GDP impact is smaller, is partly because of the impact on imports which decline strongly.  Because imports enter into the GDP identity with a negative sign. lower imports actually increase aggregate GDP.
 
 \sphinxAtStartPar
 Finally as could be expected prices rise sharply initially with higher oil prices, but as the slow down in growth is felt, inflationary pressures turn negative and the overall impact on the price level turns negative.  The graph above shows what is happening to the \sphinxstylestrong{price level}. To see the impact on inflation (the rate of growth of prices) requires a separate graph using \sphinxcode{\sphinxupquote{difpct.mul100}}, which shows the change in the rate of growth of variables where the growth rate is expressed as a per cent.
@@ -5223,7 +5302,7 @@ Finally as could be expected prices rise sharply initially with higher oil price
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_41_0}.png}
+\noindent\sphinxincludegraphics{{783d422442dd0257528ba29abdf936720c18c01600646458d1c15dc51d030c01}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5303,7 +5382,7 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_48_0}.png}
+\noindent\sphinxincludegraphics{{b6a43a443bd4602f047382c0421d8c9509d2809b6943b27f53b96cfcac84730a}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5325,26 +5404,26 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
       PAKNYGDPMKTPKN  PAKNECONPRVTKN  PAKNEIMPGNFSKN  PAKNECONPRVTXN
 2020            0.00            0.00            0.00            0.00
-2021            0.00            0.00            0.00            0.00
-2022            0.00            0.00            0.00            0.00
+2021           \PYGZhy{}0.00            0.00           \PYGZhy{}0.00            0.00
+2022           \PYGZhy{}0.00            0.00            0.00            0.00
 2023            0.00            0.00            0.00            0.00
-2024            0.00            0.00            0.00            0.00
-2025            2.01            2.50            2.27            0.44
-2026            2.07            2.50            2.43            1.06
-2027            2.05            2.50            2.59            1.69
-2028            1.99            2.50            2.78            2.31
-2029            1.92            2.50            2.99            2.90
-2030            1.83            2.50            3.22            3.47
-2031            1.43            2.50            4.03            4.53
-2032            1.37            2.50            4.18            4.92
-2033            1.30            2.50            4.34            5.29
-2034            1.23            2.50            4.50            5.64
-2035            1.16            2.50            4.66            5.97
-2036            1.09            2.50            4.81            6.28
-2037            1.03            2.50            4.96            6.56
-2038            0.96            2.50            5.10            6.82
-2039            0.90            2.50            5.24            7.06
-2040            0.84            2.50            5.36            7.28
+2024           \PYGZhy{}0.00            0.00            0.00            0.00
+2025            1.86            2.50            2.11            0.65
+2026            1.84            2.50            2.29            1.60
+2027            1.72            2.50            2.56            2.61
+2028            1.56            2.50            2.92            3.61
+2029            1.37            2.50            3.37            4.56
+2030            1.17            2.50            3.88            5.45
+2031            0.99            2.50            4.42            6.25
+2032            0.81            2.50            4.99            6.96
+2033            0.66            2.50            5.55            7.57
+2034            0.54            2.50            6.10            8.08
+2035            0.44            2.50            6.61            8.50
+2036            0.36            2.50            7.07            8.85
+2037            0.30            2.50            7.49            9.12
+2038            0.27            2.50            7.86            9.34
+2039            0.24            2.50            8.17            9.52
+2040            0.24            2.50            8.45            9.65
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5404,7 +5483,7 @@ Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_52_0}.png}
+\noindent\sphinxincludegraphics{{c906ce7242d9433010067d22257a20672c6da0f7f2865bd53bdea9520d31a629}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5440,7 +5519,7 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_55_0}.png}
+\noindent\sphinxincludegraphics{{e82cb2b74a5b1d4b22c1d826a15e3a6bd3825c2f8a49da485827d0853425e356}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5471,7 +5550,7 @@ What this means is that the consumption function will be de\sphinxhyphen{}actvat
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_57_0}.png}
+\noindent\sphinxincludegraphics{{5089cf442ee04d799614d778149a4fe5ebfc2c63676186dcb6edf52867d56bd6}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5501,12 +5580,12 @@ These results have subtle differences compared with the previous.  The most obvi
 Consumption base and shock levels
 
 Real values in 2030
-Base value:  27,241,278.	Shocked value: 27,616,949.
-Percent difference: 5.36
+Base value:  28,135,788.	Shocked value: 28,448,932.
+Percent difference: 5.04
 
 Real values in 2040
-Base value:  38,676,995.	Shocked value: 38,693,167.
-Percent difference: 0.04
+Base value:  37,822,748.	Shocked value: 37,958,655.
+Percent difference: 0.36
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5627,9 +5706,9 @@ Above we identified the shock as to be a 1 percent of GDP increase in FDI that f
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-WLDFBANANA\PYGZus{}US            : TEMP
+WLDFBANANA\PYGZus{}US            : WLDFBANANA\PYGZus{}US
 WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010 : WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010
-WLDFBEEF                 : TEMP
+WLDFBEEF                 : WLDFBEEF
 WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010      : WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010
 \end{sphinxVerbatim}
 
@@ -5695,7 +5774,7 @@ Use the .eviews command or .original command to identify the functional forms if
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNEGDIFPRVKN : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNEGDIFPRVKN = (PAKNEGDIFPRVKN\PYGZus{}A*PAKNEGDIKSTKKN(\PYGZhy{}1)+ (0.00212272413966296+0.970234989019907*(PAKNEGDIFPRVKN(\PYGZhy{}1)/PAKNEGDIKSTKKN(\PYGZhy{}2))+(1\PYGZhy{}0.970234989019907)*(((LOG(PAKNYGDPPOTLKN))\PYGZhy{}(LOG(PAKNYGDPPOTLKN(\PYGZhy{}1))))+PAKDEPR)+0.0525240494260597*((LOG(PAKNEKRTTOTLCN/PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNEKRTTOTLCN(\PYGZhy{}1)/PAKNYGDPFCSTXN(\PYGZhy{}1))))) *PAKNEGDIKSTKKN(\PYGZhy{}1)) * (1\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}D)+ PAKNEGDIFPRVKN\PYGZus{}X*PAKNEGDIFPRVKN\PYGZus{}D \PYGZdl{}
+PAKNEGDIFPRVKN : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNEGDIFPRVKN = (\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}A*PAKNEGDIKSTKKN(\PYGZhy{}1)+ (\PYGZhy{}0.00526826150713402+0.826734606421746*(PAKNEGDIFPRVKN(\PYGZhy{}1)/PAKNEGDIKSTKKN(\PYGZhy{}2))+(1\PYGZhy{}0.826734606421746)*(((LOG(PAKNYGDPPOTLKN))\PYGZhy{}(LOG(PAKNYGDPPOTLKN(\PYGZhy{}1))))+PAKDEPR)\PYGZhy{}0.00378813564556318*((LOG(PAKNEKRTTOTLCN/PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNEKRTTOTLCN(\PYGZhy{}1)/PAKNYGDPFCSTXN(\PYGZhy{}1))))) *PAKNEGDIKSTKKN(\PYGZhy{}1)) * (1\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}D)+ PAKNEGDIFPRVKN\PYGZus{}X*PAKNEGDIFPRVKN\PYGZus{}D \PYGZdl{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5735,12 +5814,12 @@ Pre shock levels
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2025   \PYGZhy{}0.000458
-2026   \PYGZhy{}0.000389
-2027   \PYGZhy{}0.000331
-2028   \PYGZhy{}0.000281
-2029   \PYGZhy{}0.000239
-2030   \PYGZhy{}0.000203
+2025   \PYGZhy{}0.000309
+2026   \PYGZhy{}0.000262
+2027   \PYGZhy{}0.000223
+2028   \PYGZhy{}0.000190
+2029   \PYGZhy{}0.000161
+2030   \PYGZhy{}0.000137
 Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \end{sphinxVerbatim}
 
@@ -5766,12 +5845,12 @@ Post shock levels
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2025   \PYGZhy{}0.000458
-2026   \PYGZhy{}0.000389
-2027   \PYGZhy{}0.000331
-2028    0.000681
-2029   \PYGZhy{}0.000239
-2030   \PYGZhy{}0.000203
+2025   \PYGZhy{}0.000309
+2026   \PYGZhy{}0.000262
+2027   \PYGZhy{}0.000223
+2028    0.000312
+2029   \PYGZhy{}0.000161
+2030   \PYGZhy{}0.000137
 Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \end{sphinxVerbatim}
 
@@ -5793,7 +5872,7 @@ Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_69_0}.png}
+\noindent\sphinxincludegraphics{{79d8b9e8c523d592cda1e7ab6617ee58c3cff8ff297aff86ad4b97e13124b7bb}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6084,9 +6163,52 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{LoadingWBModel_81_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}modelflow2\PYGZbs{}modelflow\PYGZbs{}modelclass.py:4214: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max\PYGZus{}open\PYGZus{}warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, ax = plt.subplots(figsize=(10, 6))
+\end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{LoadingWBModel_81_1}.png}
+\noindent\sphinxincludegraphics{{fa3a099b0bfa23f8a543e0734f5b0c16e46ce86590ccae8b394f17ff49ef1652}.png}
+
+\noindent\sphinxincludegraphics{{8c194e9e6b15d06f095c7eba59d108a8bc7c48a54de2751011a4e4830b46d65c}.png}
+
+\noindent\sphinxincludegraphics{{b97212f4a63b6b098f59bd2fcc210b0474dddf81b30041ecf73924a0aec884d8}.png}
+
+\noindent\sphinxincludegraphics{{9f1004811c335a4a5cea4a1400f6548aebf678c776565c59b8d26f0943752b9e}.png}
+
+\noindent\sphinxincludegraphics{{b6cbc952bb78753c8380c7ebe2fa8ef1e295908d7c7f5ab6c613e58a5affe66a}.png}
+
+\noindent\sphinxincludegraphics{{959ae5c57ffcc7d163e4fed909a713745dee03c5cd92c20458097c7de136d6ba}.png}
+
+\noindent\sphinxincludegraphics{{150c5b876729763438692c81571f7d2a43009b5e1ac50f443525ca2339ef388e}.png}
+
+\noindent\sphinxincludegraphics{{fc40b3edbf65c3843d7f5d702fc4df7969bf6cfc9dd0fcc440d5502790b269b9}.png}
+
+\noindent\sphinxincludegraphics{{8f658788e2f5e1e97feff180b4ac8f3bc2e42d40eb83dd2f2d6a92b85524826c}.png}
+
+\noindent\sphinxincludegraphics{{f7958d2f3bfddc920da1f71a592bdf47e0e1adc3306fa8fe5398279e01f6010c}.png}
+
+\noindent\sphinxincludegraphics{{047316d81bfe4f196d88a9402df626be1cc7508ffae80ffac1cd16dc2742e6ee}.png}
+
+\noindent\sphinxincludegraphics{{ed2f89ea388f7a2489127ccbd7158166c7ce46a0e9b6523c5478ef9c21d233e2}.png}
+
+\noindent\sphinxincludegraphics{{e0825c20d8cbea677125a7daab441f080521239d1d574fa5b88e3b6855dcff3b}.png}
+
+\noindent\sphinxincludegraphics{{2620d998ad340bd19c37ae1893d06bb43fef71a0c5ad386773c49864d1b0e091}.png}
+
+\noindent\sphinxincludegraphics{{c059673a0d3cdf42c0974c0c203112fff3e7ada173a8ff0f9e8bbd7d497f7180}.png}
+
+\noindent\sphinxincludegraphics{{f46610849beab03b55c79094421cbcd84ee1e5642c68a778a304db37133144dc}.png}
+
+\noindent\sphinxincludegraphics{{b42596a7bc141788e9a45b1663ccbfc7a927b5fd0aff43924e4bc2441ec9336b}.png}
+
+\noindent\sphinxincludegraphics{{8b7c531194ff91713206b9be7e4e28ca38d60820d9372a3073f954d45ecde42e}.png}
+
+\noindent\sphinxincludegraphics{{4379a88d61552c46167684d7e13069c14f2b2c0f633b0adec556a5837a355a26}.png}
+
+\noindent\sphinxincludegraphics{{cd870da1b8f22d959a939dabc8ab1f7e886eaa20b71503b0396b1e9fd5e7d403}.png}
+
+\noindent\sphinxincludegraphics{{db9025dea072b311ee0f0645f2d5de380d630c4194efc29bc21582ddbd3ab32e}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6101,9 +6223,6 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 
 \chapter{References}
 \label{\detokenize{content/99_BackMatter/References:references}}\label{\detokenize{content/99_BackMatter/References::doc}}
-\sphinxAtStartPar
-
-
 \begin{sphinxthebibliography}{BCJ+19}
 \bibitem[Add89]{content/99_BackMatter/References:id20}
 \sphinxAtStartPar

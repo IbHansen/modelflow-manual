@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/Introduction
+root: content/introduction
 options:
   numbered: true
 parts:
@@ -25,8 +25,8 @@ parts:
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
      - file: content/04_PythonEssentials/PythonPandasDataframes
      - file: content/04_PythonEssentials/UpdateCommand
-       sections:
-       - file: content/04_PythonEssentials/mfcalc
+#       sections:
+     - file: content/04_PythonEssentials/mfcalc
  
 # #****************
 #   - caption: The World Bank's MFMod Framework and Modelflow
