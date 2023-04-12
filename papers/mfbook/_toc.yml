@@ -40,6 +40,7 @@ parts:
      numbered: true      
      chapters:   
      - file: content/06_WBModels/LoadingWBModel
+     - file: content/06_WBModels/ScenarioAnalysis
 #     - file: content/06_WBModels/DifferentSimulations
 #     - file: content/06_WBModels/TheKeepOption
 

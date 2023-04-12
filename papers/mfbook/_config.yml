@@ -3,6 +3,7 @@
 
 title: The World Bank's MFMod Framework in Python with Modelflow
 author: Andrew Burns and Ib Hansen
+copyright: "World Bank. 2023"
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -45,7 +46,7 @@ html:
   use_issues_button: False
   use_repository_button: True
   use_multitoc_numbering: false  # Restarts the numbering in each part
-  
+
 parse:
   myst_enable_extensions:
    # don't forget to list any other extensions you want enabled,
