@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/Introduction
+root: content/introduction
 options:
   numbered: true
 parts:
@@ -12,13 +12,13 @@ parts:
      - file: content/01_Introduction/Introduction     
        sections:     
        - file: content/02_MacrostructuralModels/MacroStructuralModels 
-       - file: content/02_MacrostructuralModels/MFModAndModelFlow
-     - file: content/03_Installation/InstallingPython     
+     - file: content/02_MacrostructuralModels/MFModAndModelFlow     
        sections:
+       - file: content/03_Installation/InstallingPython     
        - file: content/03_Installation/InstallingModelFlow
 # #    # - file: content/03_Installation/TestingModelFlow
     
-# # *****************
+#  *****************
    - caption: Some python essentials for using WorldBank models with modelflow
      numbered: true 
      chapters: 
@@ -27,6 +27,18 @@ parts:
      - file: content/04_PythonEssentials/UpdateCommand
        sections:
        - file: content/04_PythonEssentials/mfcalc
+
+   - caption: Using modelflow with World Bank models
+     numbered: true      
+     chapters:   
+     - file: content/06_WBModels/LoadingWBModel
+     - file: content/06_WBModels/ScenarioAnalysis
+
+   - caption: References
+     numbered: false
+     chapters:
+     - file: content/99_BackMatter/References
+
  
 # #****************
 #   - caption: The World Bank's MFMod Framework and Modelflow
@@ -36,11 +48,8 @@ parts:
 #     - file: content/05_SimpleNodel/SimulatingTheModel     
 
 #*********
-   - caption: Using modelflow with World Bank models
-     numbered: true      
-     chapters:   
-     - file: content/06_WBModels/LoadingWBModel
-     - file: content/06_WBModels/ScenarioAnalysis
+
+
 #     - file: content/06_WBModels/DifferentSimulations
 #     - file: content/06_WBModels/TheKeepOption
 
@@ -103,8 +112,3 @@ parts:
 # #     chapters:    
 # #     - file: content/howto/optimization/Optimize_simple  
     
-   - caption: References
-     numbered: false
-     chapters:
-     - file: content/99_BackMatter/References
-

@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 12, 2023}
+\date{Apr 14, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -98,8 +98,11 @@
 \pagestyle{plain}
 \sphinxtableofcontents
 \pagestyle{normal}
-\phantomsection\label{\detokenize{content/Introduction::doc}}
+\phantomsection\label{\detokenize{content/introduction::doc}}
 
+
+\sphinxAtStartPar
+\(\Large{Foreword}\)
 
 \sphinxAtStartPar
 Lorem Ipsum
@@ -203,10 +206,7 @@ This paper reports on the results of these efforts. In particular, it provides s
 The economics profession uses a wide range of models for different purposes.  Macro\sphinxhyphen{}structural models (also known as semi\sphinxhyphen{}structural or Macro\sphinxhyphen{}econometric models) are a class of models that seek to summarize the most important interconnections and determinants of economic activity in an economy. Computable General Equilibrium (CGE), and Dynamic Stochastic General Equilibrium (DSGE) models are other classes of models that also seek, using somewhat different methodologies, to capture the main economic channels by which the actions of agents (firms, households, governments) interact and help determine the structure, level and rate of growth of economic activity in an economy.
 
 \sphinxAtStartPar
-Olivier Blanchard, former Chief Economist at the International Monetary Fund, in a series of articles published between 2016 and 2018 that were summarized in Blanchard {[}\hyperlink{cite.content/99_BackMatter/References:id17}{2018}{]}. In these articles, he lays out his views on the relative strengths and weaknesses of each of these systems, concluding that each has a role to play in helping economists analyze the macro\sphinxhyphen{}economy.
-
-\sphinxAtStartPar
-Typically organizations, including the World Bank, use all of these tools, privileging one or the other for specific purposes. Macrostructural models like the MFMod framework are widely used by Central Banks, Ministries of Finance; and professional forecasters both for the purposes of generating forecasts and policy analysis.
+Olivier Blanchard, former Chief Economist at the International Monetary Fund, in a series of articles published between 2016 and 2018 that were summarized in Blanchard {[}\hyperlink{cite.content/99_BackMatter/References:id17}{2018}{]}, lays out his views on the relative strengths and weaknesses of each of these systems, concluding that each has a role to play in helping economists analyze the macro\sphinxhyphen{}economy. Typically, organizations, including the World Bank, use all of these tools, privileging one or the other for specific purposes. Macrostructural models like the MFMod framework are widely used by Central Banks, Ministries of Finance; and professional forecasters both for the purposes of generating forecasts and policy analysis.
 
 
 \subsection{A system of equations}
@@ -233,7 +233,7 @@ Mathematically, macro\sphinxhyphen{}structural models are a system of equations 
 
 \sphinxAtStartPar
 In a fully general form it can be written as:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:26fdc837-08dd-42aa-a860-d6949ff5d8ee}\begin{align}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:075333d2-009d-4e53-8234-630cb625b7aa}\begin{align}
 y_t^1  &=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
@@ -243,8 +243,8 @@ y_t^n  &=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{
 where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous variable and there are as many equations as there are unknown (endogenous variables).
 
 \sphinxAtStartPar
-Rewritten for our GDP identity and substituting the variable mnemonics Y,C,I,G,X,M we could write a simple model as a system of 6 equations in 6 unknowns:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:2d330e2b-72c7-444a-bf8e-3eff0c4d9377}\begin{align}
+Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:f22af9ff-c868-4f56-9824-ac1d3f90fe41}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -255,68 +255,16 @@ M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 \sphinxAtStartPar
 and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogenous in this simple model.
 
-
-\subsection{Behavioural equations}
-\label{\detokenize{content/02_MacrostructuralModels/MacroStructuralModels:behavioural-equations}}
-\sphinxAtStartPar
-Behavioural equations in a macrostructural equation are typically estimated. In MFMod they are often expressed in Error Correction form. In this approach the behaviour of the dependent variable (say Consumption) is assumed to be the joint product of a long\sphinxhyphen{}term economic relationship – usually drawn from economic theory, and various short\sphinxhyphen{}run influences which can be more ad hoc in nature. The ECM formulation has the advantage of tieing down the long run behavior of the economy to economic theory, while allowing its short\sphinxhyphen{}run dynamics (where short\sphinxhyphen{}run can in some cases be 5 or more years) to reflect the way the economy actually operates (not how textbooks say it should behave).
-
-\sphinxAtStartPar
-For the consumption equation, utility maximization subject to a budget constraint might lead us to define a long run relationship like this :
-\begin{equation*}
-\begin{split}
-\begin{align}
-C_t &= \alpha + \beta_1{\frac{rK_t + WB_{t} + GTR_{t}(1-\tau^{Direct}}{PC_t}}\\
-&-\beta_3(r_t-\dot{p}_t)*(1-\tau^{Direct})*{\frac{rK_t + WB_{t} + GTR_{t}(1-\tau^{Direct}}{PC_t}} +\eta_t
-\end{align}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Where real disposable income is given by interest earned on capital (\(rK_t\)) plus earnings from labour (\(WB_{t}\)) + Government transfers to households (\(GTR_{t}\)) and can be written as \(Y^{Disp}_t\).
-
-\sphinxAtStartPar
-Replacing the expression following \(\beta_1\) with \(Y^{disp}_t\), the above simplifies and can be rewritten as:
-\begin{equation*}
-\begin{split} C_t= (\alpha + \beta_1{Y^{disp}_t}-\beta_3(r_t-\dot{p}_t)*Y^{Disp}_t)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-dividing both sides by \(Y^{disp}_t\) and taking the limit as \({Y^{disp}_t} => \infty\) (at which point \(\frac{\alpha}{Y^{disp}_t} => 0\), giving:
-\begin{equation*}
-\begin{split}\frac{C_t}{Y^{disp}_t} = \beta_1 -\beta_3\frac{r_t-\dot{p}_t}{Y^{disp}_t}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Implying that in the long run consumption (\(C_t\)) for a given interest rate is a stable share of real disposable income, and a  constant savings rate. The final term reflects the influence of real interest rates on final consumption, such that as real interest rates rise consumption as a share of disposable income declines (the savings rate rises).
-
-\sphinxAtStartPar
-Rewritten in logarithms gives:
-\begin{equation*}
-\begin{split}{c_{t-1}}-{y^{disp}_{t-1}} - ln(\beta_1) +\beta_3 ln(r_{t-1}-\dot{p}_{t-1} -{y^{disp}_{t-1}})=\eta_{t-1}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-we can then write our ECM equation as
-\begin{equation*}
-\begin{split} \Delta c_t = -\lambda(\eta_{t-1})+ SR_t \end{split}
-\end{equation*}
-\sphinxAtStartPar
-Substituting the LR expression for the error term in t\sphinxhyphen{}1 we get
-\begin{equation*}
-\begin{split} \Delta c_t = -\lambda({c_{t-1}}-{y^{disp}_{t-1}} - ln(\beta_1) +\beta_3 ln(r_{t-1}-\dot{p}_{t-1}))+ \beta_{SR1}{y^{disp}_{t}} - \beta_{SR2}ln(r_{t}-\dot{p}_{t})  \end{split}
-\end{equation*}
-\sphinxAtStartPar
-where \(\beta+1\) is the savings rate (for zero real interest rates), \(\beta_3\) is the long run elasticity of the consumption rate to real interest rates,  \(\beta_{SR1}\) is the short run elasticity of consumption to disposable income; \(\beta_{SR2}\) is the short run real interest rate elasticity of consumption and \(\lambda\) is the speed of adjustment (the rate at which past errors are corrected in each period).
-
-\sphinxAtStartPar
-Burns \sphinxstyleemphasis{et al.} {[}\hyperlink{cite.content/99_BackMatter/References:id15}{2019}{]} provides more complete derivations of the functional forms for most of the behavioural equations in MFmod.
-
 \sphinxstepscope
 
 
-\section{Modelflow and the MFMod models of the World Bank}
+\chapter{Modelflow and the MFMod models of the World Bank}
 \label{\detokenize{content/02_MacrostructuralModels/MFModAndModelFlow:modelflow-and-the-mfmod-models-of-the-world-bank}}\label{\detokenize{content/02_MacrostructuralModels/MFModAndModelFlow::doc}}
 \sphinxAtStartPar
 At the World Bank models built using the MFMod framework are developed in \DUrole{xref,myst}{EViews}. When disseminated to clients, the models are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved, and operated under any system capable of solving a system of simultaneous equations – as long as the equations and data can be transferred from EViews to the secondary system. \sphinxcode{\sphinxupquote{Modelflow}} is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.
 
 
-\subsection{A brief history of ModelFlow}
+\section{A brief history of ModelFlow}
 \label{\detokenize{content/02_MacrostructuralModels/MFModAndModelFlow:a-brief-history-of-modelflow}}
 \sphinxAtStartPar
 Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro\sphinxhyphen{}structural  model to python, but also been used to bring several stress\sphinxhyphen{}testing models developed by European Central Banks and the European Central Bank into a python environment.
@@ -327,16 +275,20 @@ Beginning in 2019, Hansen has worked with the World Bank to develop additional f
 \sphinxAtStartPar
 This paper, and the models that accompany it, are the product of this collaboration.
 
+\begin{sphinxShadowBox}
+\sphinxstylesidebartitle{}
+\end{sphinxShadowBox}
+
 \sphinxstepscope
 
 
-\chapter{Installation of Modelflow}
+\section{Installation of Modelflow}
 \label{\detokenize{content/03_Installation/InstallingPython:installation-of-modelflow}}\label{\detokenize{content/03_Installation/InstallingPython::doc}}
 \sphinxAtStartPar
 Modelflow is a python package that defines the \sphinxcode{\sphinxupquote{model}} class, its methods and a number of other functions that extend and combine pre\sphinxhyphen{}existing python functions to allow the easy solution of complex systems of equations including macro\sphinxhyphen{}structural models like MFMod.  To work with \sphinxcode{\sphinxupquote{modelflow}}, a user needs to first install python (preferably the Anaconda variant), several supporting packages, and of course the \sphinxcode{\sphinxupquote{modelflow}} package itself.  While \sphinxcode{\sphinxupquote{modelflow}} can be run directly from the python command\sphinxhyphen{}line or IDEs (Interactive Development Environments) like \sphinxcode{\sphinxupquote{Spyder}} or Microsoft’s \sphinxcode{\sphinxupquote{Visual Code}}, it is suggested that users also install the Jupyter notebook system. Jupyter Notebook facilitates an interactive approach to building python programs, annotating them and ultimately doing simulations using MFMod under \sphinxcode{\sphinxupquote{modelflow}}. This entire manual and the examples in it were all written and executed in the Jupyter Notebook environment.
 
 
-\section{Installation of Python}
+\subsection{Installation of Python}
 \label{\detokenize{content/03_Installation/InstallingPython:installation-of-python}}
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{Python}} is an extremely powerful, versatile and extensible open\sphinxhyphen{}source language. It is widely used for artificial intelligence application, interactive web sites, and scientific processing. As of 14 November 2022, the \sphinxcode{\sphinxupquote{Python Package Index}} (PyPI), the official repository for third\sphinxhyphen{}party Python software, contained over 415,000 packages that extend its functionality %
@@ -352,7 +304,7 @@ Python comes in many flavors and \sphinxcode{\sphinxupquote{modelflow}} will wor
 The remainder of this section points to instructions on how to install the Anaconda version of python (under Windows, MacOS and under Linux). \sphinxcode{\sphinxupquote{Modelflow}} works equally well under all three. This is followed by section that describes the steps necessary to create an anaconda environment with all the necessary packages to run \sphinxcode{\sphinxupquote{modelflow}}.
 
 
-\subsection{Installation of Anaconda under Windows}
+\subsubsection{Installation of Anaconda under Windows}
 \label{\detokenize{content/03_Installation/InstallingPython:installation-of-anaconda-under-windows}}
 \sphinxAtStartPar
 The definitive source for installing Anaconda under windows can be found \sphinxhref{https://docs.anaconda.com/anaconda/install/windows/}{here}.
@@ -363,13 +315,13 @@ The definitive source for installing Anaconda under windows can be found \sphinx
 \end{sphinxadmonition}
 
 
-\subsection{Installation of Python under macOS}
+\subsubsection{Installation of Python under macOS}
 \label{\detokenize{content/03_Installation/InstallingPython:installation-of-python-under-macos}}
 \sphinxAtStartPar
 The definitive source for installing Anaconda under macOS can be found \sphinxhref{https://docs.anaconda.com/anaconda/install/mac-os/}{here}.
 
 
-\subsection{Installation of Python under Linux}
+\subsubsection{Installation of Python under Linux}
 \label{\detokenize{content/03_Installation/InstallingPython:installation-of-python-under-linux}}
 \sphinxAtStartPar
 The definitive source for installing Anaconda under Linux can be found \sphinxhref{https://docs.anaconda.com/anaconda/install/linux/}{here}.
@@ -394,7 +346,7 @@ The following instructions concern the installation of \sphinxcode{\sphinxupquot
 \sphinxcode{\sphinxupquote{Modelflow}} is built and tested using the anaconda python environment.  It is strongly recommended to use Anaconda with \sphinxcode{\sphinxupquote{modelflow}}.
 
 \sphinxAtStartPar
-If you have not already installed Anaconda following the instructions in the preceding chapter, please do so \sphinxstylestrong{Now}.
+If you have not already installed Anaconda following the instructions in the preceding section, please do so \sphinxstylestrong{Now}.
 \end{sphinxadmonition}
 
 
@@ -431,7 +383,7 @@ Press enter
 Depending on the speed of your computer and of your internet connection installation could take as little as 10 minutes or more than 1/2 an hour.
 
 \sphinxAtStartPar
-At the end of the process you will have a new conda environment called ModelFlow, and this will have been activated. The computer set up is complete and the user is ready to work with \sphinxcode{\sphinxupquote{modelflow}}.
+At the end of the process you will have a new conda environment called \sphinxcode{\sphinxupquote{modelflow}}, and this will have been activated. The computer set up is complete and the user is ready to work with \sphinxcode{\sphinxupquote{modelflow}}.
 
 \sphinxAtStartPar
 The following sections give a brief introduction to Jupyter notebook, which is a flexible tool that allows us to execute python code, interact with the modelflow class and World Bank Models and annotate what we have done for future replication.
@@ -494,13 +446,16 @@ This will launch the Jupyter environment in your default web browser, which shou
 \sphinxincludegraphics{{NewJNSession}.png}
 
 \sphinxAtStartPar
-where the directory structure that you will see will be that of the directory from which you executed the \sphinxcode{\sphinxupquote{jupyter notebook}} command.
+where the directory structure presented is that of the directory from the \sphinxcode{\sphinxupquote{jupyter notebook}} command was executed.
 
 \begin{sphinxadmonition}{warning}{Warning:}
 \sphinxAtStartPar
 Note the directory from which you execute the \sphinxcode{\sphinxupquote{jupyter notebook}} \sphinxstylestrong{mfbook} in the example above will be the \sphinxstylestrong{root} directory for the jupyter session, and only directories and files below this root directory will be accessible by jupyter.
 \end{sphinxadmonition}
 
+
+\section{Creating a notebook}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:creating-a-notebook}}
 \sphinxAtStartPar
 The idea behind jupyter notebook was to create an interactive version of the notebooks that scientists use(d) to:
 \begin{itemize}
@@ -523,30 +478,38 @@ record the results of their experiments
 \end{itemize}
 
 \sphinxAtStartPar
-The motivation for these notebooks and Jupyter notebook is to encourage practices that will ensure that if followed exactly by others, that they will be able to generate the same results.
+The motivation for these notebooks and Jupyter notebook is to record the precise steps taken to produce a set of results, which if followed by others would allow the to generate the same results.
 
-
-\section{Creating a notebook}
-\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:creating-a-notebook}}
 \sphinxAtStartPar
 To create a notebook you must select from the Jupyter Notebook menu
 
 \sphinxAtStartPar
 File\sphinxhyphen{}> New Notebook
 
-\sphinxAtStartPar
-\sphinxincludegraphics{{NewNotebook}.png}
+\begin{figure}[htbp]
+\centering
+\capstart
 
-\begin{sphinxadmonition}{warning}{Warning:}
-\sphinxAtStartPar
-Each notebook has associated with it a “Kernel”, which is an instance of the computing environment in which code will be executed. For Jupyter Notebooks that work with \sphinxcode{\sphinxupquote{modelflow}} this will be a Python Kernel. If your computer has more than one “kernel’s” installed on it, you may be prompted when creating a new notebook for the kernel with which to associate it.  Typically this should be the Python Kernel under which your modelflow was built – currently python 3.9 in April 2023.
-\end{sphinxadmonition}
+\noindent\sphinxincludegraphics[height=150\sphinxpxdimen]{{NewNotebook}.png}
+\caption{A newly created Jupyter Notebook session}\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:new-notebook}}\end{figure}
 
 \sphinxAtStartPar
 This will generate a blank unnamed notebook with one empty cell, that looks something like this:
 
 \sphinxAtStartPar
-\sphinxincludegraphics{{Newcell}.png}
+\sphinxcode{\sphinxupquote{!{[}NewCell{]}(./Newcell.png)}}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[height=150\sphinxpxdimen]{{Newcell}.png}
+\caption{A newly created Jupyter Notebook}\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:id1}}\end{figure}
+
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+Each notebook has associated with it a “Kernel”, which is an instance of the computing environment in which code will be executed. For Jupyter Notebooks that work with \sphinxcode{\sphinxupquote{modelflow}} this will be a Python Kernel. If your computer has more than one “kernel’s” installed on it, you may be prompted when creating a new notebook for the kernel with which to associate it.  Typically this should be the Python Kernel under which your modelflow was built – currently python 3.9 in April 2023.
+\end{sphinxadmonition}
 
 
 \section{Jupter Notebook cells}
@@ -597,7 +560,7 @@ Jupyter Notebooks were designed to facilitate \sphinxstyleemphasis{replicability
 \end{sphinxadmonition}
 
 
-\section{How to add, delete and move cells}
+\subsection{How to add, delete and move cells}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:how-to-add-delete-and-move-cells}}
 \sphinxAtStartPar
 The newly created Jupyter Notebook will have a code cell by default.  Cells can be added, deleted and moved either via mouse using the toolbar or by keyboard shortcut.
@@ -690,6 +653,22 @@ Heading
 
 \end{itemize}
 
+\sphinxAtStartPar
+\sphinxstylestrong{Auto\sphinxhyphen{}complete and context\sphinxhyphen{}sensitive help}
+
+\sphinxAtStartPar
+When editing a code cell, you can use these short\sphinxhyphen{}cuts to autocomplete and or call up documentation for a command.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{tab}: autocomplete and  method selection
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{double tab}: documention (double tab for full doc)
+
+\end{itemize}
+
 
 \section{Execution of cells}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:execution-of-cells}}
@@ -709,6 +688,9 @@ Every cell in a Jupyter Notebook can be executed, either by using the Run button
 \sphinxAtStartPar
 For other useful shortcuts see “Help” => “Keyboard Shortcuts” or simply press keyboard icon in the toolbar.
 
+
+\subsection{Executing python code}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:executing-python-code}}
 \sphinxAtStartPar
 Below is a code with some standard python that declares a variable “x”, assigns it the value 10, declares a second variable “y” and assigns it the value 45.  The final line of y alone, instructs python to display the value of the variable y.  The results of the operation appear in Jupyter Notebook as an output cell Out{[}\#{]}.  By pressing \sphinxstylestrong{Ctrl\sphinxhyphen{}Enter} the code will be executed and the output displayed below.
 
@@ -794,22 +776,6 @@ Variables in a Jupyter Notebook session are persistent, as a result in the subse
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
-
-\subsection{Auto\sphinxhyphen{}complete and context\sphinxhyphen{}sensitive help}
-\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:auto-complete-and-context-sensitive-help}}
-\sphinxAtStartPar
-When editing a code cell, you can use these short\sphinxhyphen{}cuts to autocomplete and or call up documentation for a command.
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{tab}: autocomplete and  method selection
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{double tab}: documention (double tab for full doc)
-
-\end{itemize}
-
 
 \section{Markdown cells and the markdown scripting language in Jupyter Notebook}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:markdown-cells-and-the-markdown-scripting-language-in-jupyter-notebook}}
@@ -977,33 +943,30 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 \begin{equation*}
 \begin{split}y_t = \beta_0 + \beta_1 x_t + u_t\end{split}
 \end{equation*}
-\sphinxAtStartPar
-If the math is supposed to  stand alone (not be in\sphinxhyphen{}line), then use two \sphinxcode{\sphinxupquote{\$}} signs.
 
-\sphinxAtStartPar
-**Complex and multi\sphinxhyphen{}line math **
-
+\subsubsection{Complex and multi\sphinxhyphen{}line math}
+\label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:complex-and-multi-line-math}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
+\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{p}{\PYGZcb{}}
 \PYG{n}{Y\PYGZus{}t}  \PYG{o}{\PYGZam{}}\PYG{o}{=}  \PYG{n}{C\PYGZus{}t}\PYG{o}{+}\PYG{n}{I\PYGZus{}t}\PYG{o}{+}\PYG{n}{G}\PYG{o}{+}\PYG{n}{t}\PYG{o}{+} \PYG{p}{(}\PYG{n}{X\PYGZus{}t}\PYG{o}{\PYGZhy{}}\PYG{n}{M\PYGZus{}t}\PYG{p}{)} \PYGZbs{}\PYGZbs{}
 \PYG{n}{C\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
 \PYG{n}{I\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
 \PYG{n}{G\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
 \PYG{n}{X\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
 \PYG{n}{M\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}
-\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
+\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\begin{align*}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:66a6c5e8-6985-45de-8a29-561f043e7f29}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align*}
+\end{align}
 
 \subsection{links to more info on markdown}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:links-to-more-info-on-markdown}}
@@ -1017,6 +980,62 @@ There are several very good markdown cheatsheets on the internet, one of these i
 \label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:some-python-basics}}\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes::doc}}
 \sphinxAtStartPar
 Before using \sphinxcode{\sphinxupquote{modelflow}} with the World Bank’s MFMod models, users  will have to understand at least some basic elements of \sphinxcode{\sphinxupquote{python}} syntax and usage.  Notably they will need to understand about packages, libraries and classes, how to access them.
+
+
+\section{Starting python in windows}
+\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:starting-python-in-windows}}
+\sphinxAtStartPar
+To begin using \sphinxcode{\sphinxupquote{modelflow}}, python itself needs to be started.  This can be done either using the \sphinxcode{\sphinxupquote{Anaconda}} navigator or from the command line shell. In either case, the user will need to start python and select the \sphinxcode{\sphinxupquote{modelflow}} environment.
+
+
+\section{Anaconda navigator}
+\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:anaconda-navigator}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Start Anaconda Navigator by typing Anaconda in the Start window and opening the Navigator (see Figure).
+
+\item {} 
+\sphinxAtStartPar
+From Anaconda Navigator select the \sphinxcode{\sphinxupquote{Modelflow}} environment (see figure)
+
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[height=180\sphinxpxdimen]{{AnacondaNav1}.png}
+\caption{A newly created Jupyter Notebook session}\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:start-anaconda-navigator}}\end{figure}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Once the environment is selected the user can either select a command line environment or start jupyter notebook by clicking on either the
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumii}{enumiii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Jupyter Notebook environment
+
+\item {} 
+\sphinxAtStartPar
+The command line environment
+
+\item {} 
+\sphinxAtStartPar
+A programming IDE environment
+
+\end{enumerate}
+
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[height=180\sphinxpxdimen]{{NavigatorChoices}.png}
+\caption{A newly created Jupyter Notebook session}\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:id1}}\end{figure}
 
 
 \section{Python  packages, libraries and classes}
@@ -4986,7 +5005,7 @@ When the model is not in the steady state the expression \(y_{t-1}-A-βx_{t-1}\)
 The parameter \(\lambda\) can be interpreted as the speed of adjustment.  As long as \(\lambda\) is greater than zero and less or equal to one if there are no further disturbances ( \(\epsilon_t=0\)) the expression multiplied by lambda will slowly decline toward zero. How fast depends on how large or small is \(\lambda\).
 
 \sphinxAtStartPar
-To be convergent \(\lambda\) must be between 0 and 1, if its is negative or greater than one, then the long run portion of the equation will cause the disequilibrium to grow each period (\(\lambda >1) not diminish or oscillate from positive to negative (\)\textbackslash{}lambda <0\$).
+To be convergent \(\lambda\) must be between 0 and 2, if its is negative or greater than one, then the long run portion of the equation will cause the disequilibrium to grow each period (\(\lambda\) >1) not diminish or if  (\(\lambda\) >1<2) output will oscillate from positive to negative (\(\lambda <0\)).
 
 \sphinxAtStartPar
 Intuitively, the long run error term measures how far we are from equilibrium one period earlier (at t\sphinxhyphen{}1). The ECM term ensures that we will slowly converge to equilibrium – the point at which the long run equation holds exactly. If \$\(\lambda\)\( is greater than zero but less than one (or equal to one) some portion of the previous period year's disequilibrium will be absorbed each year. How much is absorbed depends on the size of estimated speed of the adjustment coefficient \)\textbackslash{}lambda\$. 
@@ -4995,7 +5014,7 @@ Intuitively, the long run error term measures how far we are from equilibrium on
 Looking at an ECM equation we can then break it up into its component parts.  For the consumption function it will look something like this:
 \begin{equation*}
 \begin{split}\Delta c_t = -\lambda (\underbrace{
-        log(C_{t-1})-log(Wages_{t-1}-Taxes_{t-1}+Transfers_{t-1} + \alpha)}   _\text{Long run}
+        log(C_{t-1})-log(Wages_{t-1}-Taxes_{t-1}+Transfers_{t-1} + \alpha)}  _\text{Long run}
 +\beta \underbrace{\Delta y_t}_\text{short run}\end{split}
 \end{equation*}
 \sphinxstepscope
@@ -5236,7 +5255,7 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_15_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_15_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5297,7 +5316,7 @@ Finally as could be expected prices rise sharply initially with higher oil price
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_18_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_18_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5377,7 +5396,7 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_25_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_25_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5478,7 +5497,7 @@ Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_29_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_29_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5514,7 +5533,7 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_32_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_32_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5545,7 +5564,7 @@ What this means is that the consumption function will be de\sphinxhyphen{}actvat
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_34_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_34_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5867,7 +5886,7 @@ Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_46_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_46_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6158,9 +6177,9 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_58_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_0}.png}
 
-\noindent\sphinxincludegraphics{{C:/mflow/modelflow-manual/papers/mfbook/_build/jupyter_execute/content/ScenarioAnalysis_58_1}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6172,9 +6191,6 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 
 \sphinxstepscope
 
-
-\chapter{References}
-\label{\detokenize{content/99_BackMatter/References:references}}\label{\detokenize{content/99_BackMatter/References::doc}}
 \sphinxAtStartPar
 
 

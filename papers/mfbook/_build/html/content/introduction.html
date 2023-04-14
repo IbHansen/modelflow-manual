@@ -50,6 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Introduction" href="01_Introduction/Introduction.html" />
@@ -112,16 +114,11 @@ const thebe_selector_output = ".output, .cell_output"
      1.4. Macrostructural models
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_MacrostructuralModels/MFModAndModelFlow.html">
-     1.5. Modelflow and the MFMod models of the World Bank
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="03_Installation/InstallingPython.html">
-   2. Installation of Modelflow
+  <a class="reference internal" href="02_MacrostructuralModels/MFModAndModelFlow.html">
+   2. Modelflow and the MFMod models of the World Bank
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -130,8 +127,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="03_Installation/InstallingModelFlow.html">
+    <a class="reference internal" href="03_Installation/InstallingPython.html">
      2.2. Installation of Modelflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_Installation/InstallingModelFlow.html">
+     2.3. Installation of Modelflow
     </a>
    </li>
   </ul>
@@ -143,9 +145,19 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="04_PythonEssentials/Intro_Jupyter_notebook.html">
    1. Introduction to  Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_PythonEssentials/PythonPandasDataframes.html">
+   2. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="04_PythonEssentials/UpdateCommand.html">
+   4. Modelflow extensions to pandas
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -154,25 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="04_PythonEssentials/PythonPackagesEtc.html">
-     1.8. Some Python basics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="04_PythonEssentials/UpdateCommand.html">
-   2. Modelflows extensions to pandas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="04_PythonEssentials/mfcalc.html">
-     2.8.
+     4.2.
      <code class="docutils literal notranslate">
       <span class="pre">
        .mfcalc()
@@ -202,20 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06_WBModels/DifferentSimulations.html">
+  <a class="reference internal" href="06_WBModels/ScenarioAnalysis.html">
    2. Scenario analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  References
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="99_BackMatter/References.html">
-   References
   </a>
  </li>
 </ul>
@@ -259,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/Introduction.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/introduction.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -297,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/AndrewEdits?urlpath=tree/papers/mfbook/content/Introduction.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/AndrewEdits?urlpath=tree/papers/mfbook/content/introduction.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -305,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/AndrewEdits/papers/mfbook/content/Introduction.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/AndrewEdits/papers/mfbook/content/introduction.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -339,6 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="foreword">
 <h1>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\Large{Foreword}\)</span></p>
 <p>Lorem Ipsum
 “Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…”
 “There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…”</p>
@@ -400,7 +384,7 @@ World Bank Chief Economist</p>
     
       By Andrew Burns and Ib Hansen<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; Copyright World Bank. 2023.<br/>
   </p>
 </footer>
 </main>

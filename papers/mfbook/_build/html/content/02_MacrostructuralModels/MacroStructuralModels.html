@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.5. Modelflow and the MFMod models of the World Bank" href="MFModAndModelFlow.html" />
+    <link rel="next" title="2. Modelflow and the MFMod models of the World Bank" href="MFModAndModelFlow.html" />
     <link rel="prev" title="1. Introduction" href="../01_Introduction/Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Introduction.html">
+  <a class="reference internal" href="../introduction.html">
    Foreword
   </a>
  </li>
@@ -115,16 +115,11 @@ const thebe_selector_output = ".output, .cell_output"
      1.4. Macrostructural models
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="MFModAndModelFlow.html">
-     1.5. Modelflow and the MFMod models of the World Bank
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../03_Installation/InstallingPython.html">
-   2. Installation of Modelflow
+  <a class="reference internal" href="MFModAndModelFlow.html">
+   2. Modelflow and the MFMod models of the World Bank
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -133,8 +128,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../03_Installation/InstallingModelFlow.html">
+    <a class="reference internal" href="../03_Installation/InstallingPython.html">
      2.2. Installation of Modelflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_Installation/InstallingModelFlow.html">
+     2.3. Installation of Modelflow
     </a>
    </li>
   </ul>
@@ -146,9 +146,19 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">
    1. Introduction to  Jupyter Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_PythonEssentials/PythonPandasDataframes.html">
+   2. Some Python basics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">
+   4. Modelflow extensions to pandas
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -157,25 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../04_PythonEssentials/PythonPackagesEtc.html">
-     1.8. Some Python basics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">
-   2. Modelflows extensions to pandas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../04_PythonEssentials/mfcalc.html">
-     2.8.
+     4.2.
      <code class="docutils literal notranslate">
       <span class="pre">
        .mfcalc()
@@ -205,20 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/DifferentSimulations.html">
+  <a class="reference internal" href="../06_WBModels/ScenarioAnalysis.html">
    2. Scenario analysis
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  References
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../99_BackMatter/References.html">
-   References
   </a>
  </li>
 </ul>
@@ -332,11 +313,6 @@ const thebe_selector_output = ".output, .cell_output"
    1.4.1. A system of equations
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#behavioural-equations">
-   1.4.2. Behavioural equations
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -362,11 +338,6 @@ const thebe_selector_output = ".output, .cell_output"
    1.4.1. A system of equations
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#behavioural-equations">
-   1.4.2. Behavioural equations
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -379,8 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="macrostructural-models">
 <h1><span class="section-number">1.4. </span>Macrostructural models<a class="headerlink" href="#macrostructural-models" title="Permalink to this headline">¶</a></h1>
 <p>The economics profession uses a wide range of models for different purposes.  Macro-structural models (also known as semi-structural or Macro-econometric models) are a class of models that seek to summarize the most important interconnections and determinants of economic activity in an economy. Computable General Equilibrium (CGE), and Dynamic Stochastic General Equilibrium (DSGE) models are other classes of models that also seek, using somewhat different methodologies, to capture the main economic channels by which the actions of agents (firms, households, governments) interact and help determine the structure, level and rate of growth of economic activity in an economy.</p>
-<p>Olivier Blanchard, former Chief Economist at the International Monetary Fund, in a series of articles published between 2016 and 2018 that were summarized in <span id="id1">Blanchard [<a class="reference internal" href="../99_BackMatter/References.html#id17" title="Olivier Blanchard. On the future of Macroeconomic models. Oxford Review of Economic Policy, 34(1-2):43–54, 2018. URL: https://academic.oup.com/oxrep/article/34/1-2/43/4781808, doi:https://doi.org/10.1093/oxrep/grx045.">2018</a>]</span>. In these articles, he lays out his views on the relative strengths and weaknesses of each of these systems, concluding that each has a role to play in helping economists analyze the macro-economy.</p>
-<p>Typically organizations, including the World Bank, use all of these tools, privileging one or the other for specific purposes. Macrostructural models like the MFMod framework are widely used by Central Banks, Ministries of Finance; and professional forecasters both for the purposes of generating forecasts and policy analysis.</p>
+<p>Olivier Blanchard, former Chief Economist at the International Monetary Fund, in a series of articles published between 2016 and 2018 that were summarized in <span id="id1">Blanchard [<a class="reference internal" href="../99_BackMatter/References.html#id17" title="Olivier Blanchard. On the future of Macroeconomic models. Oxford Review of Economic Policy, 34(1-2):43–54, 2018. URL: https://academic.oup.com/oxrep/article/34/1-2/43/4781808, doi:https://doi.org/10.1093/oxrep/grx045.">2018</a>]</span>, lays out his views on the relative strengths and weaknesses of each of these systems, concluding that each has a role to play in helping economists analyze the macro-economy. Typically, organizations, including the World Bank, use all of these tools, privileging one or the other for specific purposes. Macrostructural models like the MFMod framework are widely used by Central Banks, Ministries of Finance; and professional forecasters both for the purposes of generating forecasts and policy analysis.</p>
 <div class="section" id="a-system-of-equations">
 <h2><span class="section-number">1.4.1. </span>A system of equations<a class="headerlink" href="#a-system-of-equations" title="Permalink to this headline">¶</a></h2>
 <p>Mathematically, macro-structural models are a system of equations comprised of two kinds of equations and three kinds of variables.</p>
@@ -391,51 +361,25 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">Exogenous</span></code> variables are not determined by the model. Typically there are set either by assumption or from data external to the model.  For an individual country model, the exogenous variables would often include the global price of crude oil  because the level of activity of the economy itself is unlikely to affect the world price of oil.</p></li>
 </ul>
 <p>In a fully general form it can be written as:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
+<div class="amsmath math notranslate nohighlight" id="equation-075333d2-009d-4e53-8234-630cb625b7aa">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-075333d2-009d-4e53-8234-630cb625b7aa" title="Permalink to this equation">¶</a></span>\[\begin{align}
 y_t^1  &amp;=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &amp;=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
 y_t^n  &amp;=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^r,x..._{t-s}^1...,x_{t-s}^k)
-\end{align*}\]</div>
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\( y_t^1 \)</span> is one of n endogenous variables and <span class="math notranslate nohighlight">\(x_t^1\)</span> is an exogenous variable and there are as many equations as there are unknown (endogenous variables).</p>
-<p>Rewritten for our GDP identity and substituting the variable mnemonics Y,C,I,G,X,M we could write a simple model as a system of 6 equations in 6 unknowns:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
+<p>Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f22af9ff-c868-4f56-9824-ac1d3f90fe41">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-f22af9ff-c868-4f56-9824-ac1d3f90fe41" title="Permalink to this equation">¶</a></span>\[\begin{align}
 Y_t  &amp;=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &amp;= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &amp;= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &amp;= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &amp;= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align*}\]</div>
+\end{align}\]</div>
 <p>and where <span class="math notranslate nohighlight">\(P_t, P^f_t\)</span> (domestic and foreign prices, respectively) are exogenous in this simple model.</p>
-</div>
-<div class="section" id="behavioural-equations">
-<h2><span class="section-number">1.4.2. </span>Behavioural equations<a class="headerlink" href="#behavioural-equations" title="Permalink to this headline">¶</a></h2>
-<p>Behavioural equations in a macrostructural equation are typically estimated. In MFMod they are often expressed in Error Correction form. In this approach the behaviour of the dependent variable (say Consumption) is assumed to be the joint product of a long-term economic relationship – usually drawn from economic theory, and various short-run influences which can be more ad hoc in nature. The ECM formulation has the advantage of tieing down the long run behavior of the economy to economic theory, while allowing its short-run dynamics (where short-run can in some cases be 5 or more years) to reflect the way the economy actually operates (not how textbooks say it should behave).</p>
-<p>For the consumption equation, utility maximization subject to a budget constraint might lead us to define a long run relationship like this :</p>
-<div class="math notranslate nohighlight">
-\[ C_t = \alpha + \beta_1{\frac{rK_t + WB_{t} + GTR_{t}(1-\tau^{Direct}}{PC_t}}-\beta_3(r_t-\dot{p}_t)*(1-\tau^{Direct})*{\frac{rK_t + WB_{t} + GTR_{t}(1-\tau^{Direct}}{PC_t}} +\eta_t\]</div>
-<p>Where real disposable income is given by interest earned on capital (<span class="math notranslate nohighlight">\(rK_t\)</span>) plus earnings from labour (<span class="math notranslate nohighlight">\(WB_{t}\)</span>) + Government transfers to households (<span class="math notranslate nohighlight">\(GTR_{t}\)</span>) and can be written as <span class="math notranslate nohighlight">\(Y^{Disp}_t\)</span>.</p>
-<p>Replacing the expression following <span class="math notranslate nohighlight">\(\beta_1\)</span> with <span class="math notranslate nohighlight">\(Y^{disp}_t\)</span>, the above simplifies and can be rewritten as:</p>
-<div class="math notranslate nohighlight">
-\[ C_t= (\alpha + \beta_1{Y^{disp}_t}-\beta_3(r_t-\dot{p}_t)*Y^{Disp}_t)\]</div>
-<p>dividing both sides by <span class="math notranslate nohighlight">\(Y^{disp}_t\)</span> and taking the limit as <span class="math notranslate nohighlight">\({Y^{disp}_t} =&gt; \infty\)</span> (at which point <span class="math notranslate nohighlight">\(\frac{\alpha}{Y^{disp}_t} =&gt; 0\)</span>, giving:</p>
-<div class="math notranslate nohighlight">
-\[\frac{C_t}{Y^{disp}_t} = \beta_1 -\beta_3\frac{r_t-\dot{p}_t}{Y^{disp}_t}\]</div>
-<p>Implying that in the long run consumption (<span class="math notranslate nohighlight">\(C_t\)</span>) for a given interest rate is a stable share of real disposable income, and a  constant savings rate. The final term reflects the influence of real interest rates on final consumption, such that as real interest rates rise consumption as a share of disposable income declines (the savings rate rises).</p>
-<p>Rewritten in logarithms gives:</p>
-<div class="math notranslate nohighlight">
-\[{c_{t-1}}-{y^{disp}_{t-1}} - ln(\beta_1) +\beta_3 ln(r_{t-1}-\dot{p}_{t-1} -{y^{disp}_{t-1}})=\eta_{t-1}\]</div>
-<p>we can then write our ECM equation as</p>
-<div class="math notranslate nohighlight">
-\[ \Delta c_t = -\lambda(\eta_{t-1})+ SR_t \]</div>
-<p>Substituting the LR expression for the error term in t-1 we get</p>
-<div class="math notranslate nohighlight">
-\[ \Delta c_t = -\lambda({c_{t-1}}-{y^{disp}_{t-1}} - ln(\beta_1) +\beta_3 ln(r_{t-1}-\dot{p}_{t-1}))+ \beta_{SR1}{y^{disp}_{t}} - \beta_{SR2}ln(r_{t}-\dot{p}_{t})  \]</div>
-<p>where <span class="math notranslate nohighlight">\(\beta+1\)</span> is the savings rate (for zero real interest rates), <span class="math notranslate nohighlight">\(\beta_3\)</span> is the long run elasticity of the consumption rate to real interest rates,  <span class="math notranslate nohighlight">\(\beta_{SR1}\)</span> is the short run elasticity of consumption to disposable income; <span class="math notranslate nohighlight">\(\beta_{SR2}\)</span> is the short run real interest rate elasticity of consumption and <span class="math notranslate nohighlight">\(\lambda\)</span> is the speed of adjustment (the rate at which past errors are corrected in each period).</p>
-<p><span id="id2">Burns <em>et al.</em> [<a class="reference internal" href="../99_BackMatter/References.html#id15" title="Andrew Burns, Benoit Campagne, Charl Jooste, David Stephan, and Thi Thanh Bui. The World Bank Macro-Fiscal Model Technical Description. Number 8965 in Policy Research Working Papers. World Bank, Washington DC., 2019. URL: https://openknowledge.worldbank.org/handle/10986/32217.">2019</a>]</span> provides more complete derivations of the functional forms for most of the behavioural equations in MFmod.</p>
 </div>
 </div>
 
@@ -474,7 +418,7 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
     <a class='right-next' id="next-link" href="MFModAndModelFlow.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>Modelflow and the MFMod models of the World Bank</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Modelflow and the MFMod models of the World Bank</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -487,7 +431,7 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
     
       By Andrew Burns and Ib Hansen<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; Copyright World Bank. 2023.<br/>
   </p>
 </footer>
 </main>
