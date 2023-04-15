@@ -1,3 +1,10 @@
+# Create new jupyterbook enviorement. 
+# check out with conda search if you want new versions 
+# it takes forever to solve the enviorement 
+
+conda create -n mfbook   jupyter-book=0.13.1  python=3.9  modelflow=1.53  pyeviews -c ibh -c conda-forge
+pip install dash_interactive_graphviz
+
 # jupyter book 
 build.py builds the html site 
             and copies all /_build/ png,svg and pdf files to the root
@@ -122,3 +129,5 @@ with mpak.set_smpl(2018,2030):
 
 
 :::
+
+jb build mfbook/ --builder pdflatex
