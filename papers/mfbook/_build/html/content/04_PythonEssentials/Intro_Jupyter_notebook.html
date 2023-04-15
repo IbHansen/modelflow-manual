@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1. Introduction to Jupyter Notebook &#8212; The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,38 +20,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -63,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -72,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
       
@@ -87,14 +102,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Foreword
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   The World Bank's MFMod Framework and Modelflow
  </span>
@@ -156,158 +172,203 @@ const thebe_selector_output = ".output, .cell_output"
    2. Some Python basics
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="UpdateCommand.html">
    4. Modelflow extensions to pandas
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mfcalc.html">
-     4.2.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     an extension of standard Pandas
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Using modelflow with World Bank models
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
-   1. Using
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     modelflow
-    </span>
-   </code>
-   with World Bank models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/ScenarioAnalysis.html">
-   2. Scenario analysis
-  </a>
  </li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/IbHansen/modelflow-manual"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/AndrewEdits?urlpath=tree/papers/mfbook/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/AndrewEdits/papers/mfbook/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/IbHansen/modelflow-manual/AndrewEdits?urlpath=tree/papers/mfbook/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/AndrewEdits/papers/mfbook/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/IbHansen/modelflow-manual"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#starting-jupyter-notebook">
    1.1. Starting Jupyter Notebook
@@ -388,12 +449,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Introduction to  Jupyter Notebook</h1>
@@ -490,17 +550,18 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-jupyter-notebook">
-<h1><span class="section-number">1. </span>Introduction to  Jupyter Notebook<a class="headerlink" href="#introduction-to-jupyter-notebook" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-jupyter-notebook">
+<h1><span class="section-number">1. </span>Introduction to  Jupyter Notebook<a class="headerlink" href="#introduction-to-jupyter-notebook" title="Permalink to this headline">#</a></h1>
 <p>Jupyter Notebook is a web application for creating, annotating, simulating and working with computational documents.  Originally developed for python, the latest versions of EViews also support Jupyter Notebooks. Jupyter Notebook offers a simple, streamlined, document-centric experience and can be a great environment for documenting the work you are doing, and trying alternative methods of achieving desirable results.  Many of the methods in <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> have been developed to work well with Jupyter Notebook. Indeed this documentation was written as a series of Jupyter Notebooks bound together with Jupyter Book.</p>
 <p>Jupyter Notebook is not the only way to work with modelflow or Python.  As users become more advanced they are likely to migrate to a more program-centric IDE (Interactive Development Environment) like Spyder or Microsoft Visual Code.</p>
 <p>However, to start Jupyter Notebooks are a great way to learn, follow work done by others and tweak them to fit your own needs.</p>
 <p>There are many fine tutorials on Jupyter Notebook on the web, and <a class="reference external" href="https://docs.jupyter.org/en/latest/">The official Jupyter site</a> is a good starting point. The following aims to provide enough information to get a user started.  Another good reference is <a class="reference external" href="https://jupyter.brynmawr.edu/services/public/dblank/Jupyter%20Notebook%20Users%20Manual.ipynb">here.</a></p>
-<div class="section" id="starting-jupyter-notebook">
-<h2><span class="section-number">1.1. </span>Starting Jupyter Notebook<a class="headerlink" href="#starting-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<section id="starting-jupyter-notebook">
+<h2><span class="section-number">1.1. </span>Starting Jupyter Notebook<a class="headerlink" href="#starting-jupyter-notebook" title="Permalink to this headline">#</a></h2>
 <p>Each time, a user wants to work with <code class="docutils literal notranslate"><span class="pre">modelflow</span></code>, they will need to activate the <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> environment by</p>
 <ol class="simple">
 <li><p>Opening the Anaconda command prompt window</p></li>
@@ -517,9 +578,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Warning</p>
 <p>Note the directory from which you execute the <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> <strong>mfbook</strong> in the example above will be the <strong>root</strong> directory for the jupyter session, and only directories and files below this root directory will be accessible by jupyter.</p>
 </div>
-</div>
-<div class="section" id="creating-a-notebook">
-<h2><span class="section-number">1.2. </span>Creating a notebook<a class="headerlink" href="#creating-a-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creating-a-notebook">
+<h2><span class="section-number">1.2. </span>Creating a notebook<a class="headerlink" href="#creating-a-notebook" title="Permalink to this headline">#</a></h2>
 <p>The idea behind jupyter notebook was to create an interactive version of the notebooks that scientists use(d) to:</p>
 <ul class="simple">
 <li><p>record what they have done</p></li>
@@ -530,23 +591,27 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The motivation for these notebooks and Jupyter notebook is to record the precise steps taken to produce a set of results, which if followed by others would allow the to generate the same results.</p>
 <p>To create a notebook you must select from the Jupyter Notebook menu</p>
 <p>File-&gt; New Notebook</p>
-<div class="figure align-default" id="new-notebook">
+<figure class="align-default" id="new-notebook">
 <a class="reference internal image-reference" href="../../_images/NewNotebook.png"><img alt="../../_images/NewNotebook.png" src="../../_images/NewNotebook.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">A newly created Jupyter Notebook session</span><a class="headerlink" href="#new-notebook" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">A newly created Jupyter Notebook session</span><a class="headerlink" href="#new-notebook" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>This will generate a blank unnamed notebook with one empty cell, that looks something like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">![NewCell](./Newcell.png)</span></code></p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/Newcell.png"><img alt="../../_images/Newcell.png" src="../../_images/Newcell.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">A newly created Jupyter Notebook</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">A newly created Jupyter Notebook</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Each notebook has associated with it a “Kernel”, which is an instance of the computing environment in which code will be executed. For Jupyter Notebooks that work with <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> this will be a Python Kernel. If your computer has more than one “kernel’s” installed on it, you may be prompted when creating a new notebook for the kernel with which to associate it.  Typically this should be the Python Kernel under which your modelflow was built – currently python 3.9 in April 2023.</p>
 </div>
-</div>
-<div class="section" id="jupter-notebook-cells">
-<h2><span class="section-number">1.3. </span>Jupter Notebook cells<a class="headerlink" href="#jupter-notebook-cells" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="jupter-notebook-cells">
+<h2><span class="section-number">1.3. </span>Jupter Notebook cells<a class="headerlink" href="#jupter-notebook-cells" title="Permalink to this headline">#</a></h2>
 <p>A Jupyter Notebook is comprised of a series of cells.</p>
 <p><em><strong>Jupyter Notebook cells can contain:</strong></em></p>
 <ul class="simple">
@@ -565,8 +630,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Note</p>
 <p>Jupyter Notebooks were designed to facilitate <em>replicability</em>: the idea that a scientific analysis should contain - in addition to the final output (text, graphs, tables) - all the computational steps needed to get from raw input data to the results.</p>
 </div>
-<div class="section" id="how-to-add-delete-and-move-cells">
-<h3><span class="section-number">1.3.1. </span>How to add, delete and move cells<a class="headerlink" href="#how-to-add-delete-and-move-cells" title="Permalink to this headline">¶</a></h3>
+<section id="how-to-add-delete-and-move-cells">
+<h3><span class="section-number">1.3.1. </span>How to add, delete and move cells<a class="headerlink" href="#how-to-add-delete-and-move-cells" title="Permalink to this headline">#</a></h3>
 <p>The newly created Jupyter Notebook will have a code cell by default.  Cells can be added, deleted and moved either via mouse using the toolbar or by keyboard shortcut.</p>
 <p><strong>Using the Toolbar</strong></p>
 <ul class="simple">
@@ -582,9 +647,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>esc + b</strong>: add a cell below the current cell</p></li>
 <li><p><strong>esc + d+d</strong>: delete the current cell</p></li>
 </ul>
-</div>
-<div class="section" id="change-the-type-of-a-cell">
-<h3><span class="section-number">1.3.2. </span>Change the type of a cell<a class="headerlink" href="#change-the-type-of-a-cell" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="change-the-type-of-a-cell">
+<h3><span class="section-number">1.3.2. </span>Change the type of a cell<a class="headerlink" href="#change-the-type-of-a-cell" title="Permalink to this headline">#</a></h3>
 <p>You can also change the type of a cell. New cells are by default “code” cells.</p>
 <p><strong>Using the Toolbar</strong></p>
 <ul class="simple">
@@ -608,18 +673,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>tab</strong>: autocomplete and  method selection</p></li>
 <li><p><strong>double tab</strong>: documention (double tab for full doc)</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="execution-of-cells">
-<h2><span class="section-number">1.4. </span>Execution of cells<a class="headerlink" href="#execution-of-cells" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="execution-of-cells">
+<h2><span class="section-number">1.4. </span>Execution of cells<a class="headerlink" href="#execution-of-cells" title="Permalink to this headline">#</a></h2>
 <p>Every cell in a Jupyter Notebook can be executed, either by using the Run button on the Jupyter Notebook menu, or by using one of <strong>two keyboard shortcuts</strong>:</p>
 <ul class="simple">
 <li><p><strong>ctrl + Enter</strong>: Executes the code in the cell or formats the markdown of a cell.  The current cell retains the focus – cursor stays on cell executed.</p></li>
 <li><p><strong>shift + enter</strong>: Executes the code in the cell or formats the markdown of a cell. Focus (cursor) jumps to the next cell</p></li>
 </ul>
 <p>For other useful shortcuts see “Help” =&gt; “Keyboard Shortcuts” or simply press keyboard icon in the toolbar.</p>
-<div class="section" id="executing-python-code">
-<h3><span class="section-number">1.4.1. </span>Executing python code<a class="headerlink" href="#executing-python-code" title="Permalink to this headline">¶</a></h3>
+<section id="executing-python-code">
+<h3><span class="section-number">1.4.1. </span>Executing python code<a class="headerlink" href="#executing-python-code" title="Permalink to this headline">#</a></h3>
 <p>Below is a code with some standard python that declares a variable “x”, assigns it the value 10, declares a second variable “y” and assigns it the value 45.  The final line of y alone, instructs python to display the value of the variable y.  The results of the operation appear in Jupyter Notebook as an output cell Out[#].  By pressing <strong>Ctrl-Enter</strong> the code will be executed and the output displayed below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -674,16 +739,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="markdown-cells-and-the-markdown-scripting-language-in-jupyter-notebook">
-<h2><span class="section-number">1.5. </span>Markdown cells and the markdown scripting language in Jupyter Notebook<a class="headerlink" href="#markdown-cells-and-the-markdown-scripting-language-in-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="markdown-cells-and-the-markdown-scripting-language-in-jupyter-notebook">
+<h2><span class="section-number">1.5. </span>Markdown cells and the markdown scripting language in Jupyter Notebook<a class="headerlink" href="#markdown-cells-and-the-markdown-scripting-language-in-jupyter-notebook" title="Permalink to this headline">#</a></h2>
 <p>Text cells in a notebook can be made more interesting by using markdown.</p>
 <p>Cells designated as markdown cells when executed are rendered in a rich text format (html).</p>
 <p>Markdown is a lightweight markup language for creating formatted text using a plain-text editor.  Used in a markdown cell of Jupyter Notebook it can be used to produce nicely formatted text that mixes text, mathematical formulae, code and outputs from executed python code.</p>
 <p>Rather than the relatively complex commands of html &lt;h1&gt;&lt;/h1&gt;, markdown uses a simplified set of commands to control how text elements should be rendered.</p>
-<div class="section" id="common-markdown-commands">
-<h3><span class="section-number">1.5.1. </span>Common markdown commands<a class="headerlink" href="#common-markdown-commands" title="Permalink to this headline">¶</a></h3>
+<section id="common-markdown-commands">
+<h3><span class="section-number">1.5.1. </span>Common markdown commands<a class="headerlink" href="#common-markdown-commands" title="Permalink to this headline">#</a></h3>
 <p>Some of the most common of these include:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -715,9 +780,9 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="tables-in-markdown">
-<h3><span class="section-number">1.5.2. </span>Tables in markdown<a class="headerlink" href="#tables-in-markdown" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tables-in-markdown">
+<h3><span class="section-number">1.5.2. </span>Tables in markdown<a class="headerlink" href="#tables-in-markdown" title="Permalink to this headline">#</a></h3>
 <p>Tables like the one above can be constructed using | as separators.</p>
 <p>The |:–|:—————–| on the second line tells the Table generator how to justifythe cintents of columns.  :– means left justify :–: means center justify and –: means right justify.</p>
 <p>Below is the markdown code that generated the above table:</p>
@@ -732,9 +797,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 </pre></div>
 </div>
-</div>
-<div class="section" id="displaying-code">
-<h3><span class="section-number">1.5.3. </span>Displaying code<a class="headerlink" href="#displaying-code" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="displaying-code">
+<h3><span class="section-number">1.5.3. </span>Displaying code<a class="headerlink" href="#displaying-code" title="Permalink to this headline">#</a></h3>
 <p>To display a (unexecutable)  block of code within a markdown cell, encapsulate it (surround it) with backticks `.</p>
 <p>For a multiline section of code use three backticks at the beginning and end.</p>
 <p>```
@@ -752,17 +817,17 @@ text to be rendered as code
 <p>An example sentence with some back-ticked `text as code` in the middle.</p>
 <p><strong>will render as:</strong></p>
 <p>An example sentence with some back-ticked <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">as</span> <span class="pre">code</span></code> in the middle.</p>
-</div>
-<div class="section" id="rendering-mathematics-in-markdown">
-<h3><span class="section-number">1.5.4. </span>Rendering mathematics in markdown<a class="headerlink" href="#rendering-mathematics-in-markdown" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rendering-mathematics-in-markdown">
+<h3><span class="section-number">1.5.4. </span>Rendering mathematics in markdown<a class="headerlink" href="#rendering-mathematics-in-markdown" title="Permalink to this headline">#</a></h3>
 <p>Jupyter Notebook’s implementation of Markdown supports <code class="docutils literal notranslate"><span class="pre">latex</span></code> mathematical notation.<br></p>
 <p>Inline enclose the <code class="docutils literal notranslate"><span class="pre">latex</span></code> code in <code class="docutils literal notranslate"><span class="pre">$</span></code>:</p>
 <p>An Equation: <code class="docutils literal notranslate"><span class="pre">$y_t</span> <span class="pre">=</span> <span class="pre">\beta_0</span> <span class="pre">+</span> <span class="pre">\beta_1</span> <span class="pre">x_t</span> <span class="pre">+</span> <span class="pre">u_t\$</span></code> will renders as: <span class="math notranslate nohighlight">\(y_t = \beta_0 + \beta_1 x_t + u_t\)</span></p>
 <p>if enclosed in <code class="docutils literal notranslate"><span class="pre">$$</span></code> <code class="docutils literal notranslate"><span class="pre">$$</span></code> it will be centered on its own line.</p>
 <div class="math notranslate nohighlight">
 \[y_t = \beta_0 + \beta_1 x_t + u_t\]</div>
-<div class="section" id="complex-and-multi-line-math">
-<h4><span class="section-number">1.5.4.1. </span>Complex and multi-line math<a class="headerlink" href="#complex-and-multi-line-math" title="Permalink to this headline">¶</a></h4>
+<section id="complex-and-multi-line-math">
+<h4><span class="section-number">1.5.4.1. </span>Complex and multi-line math<a class="headerlink" href="#complex-and-multi-line-math" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
 <span class="n">Y_t</span>  <span class="o">&amp;=</span>  <span class="n">C_t</span><span class="o">+</span><span class="n">I_t</span><span class="o">+</span><span class="n">G</span><span class="o">+</span><span class="n">t</span><span class="o">+</span> <span class="p">(</span><span class="n">X_t</span><span class="o">-</span><span class="n">M_t</span><span class="p">)</span> \\
 <span class="n">C_t</span> <span class="o">&amp;=</span> <span class="n">c_t</span><span class="p">(</span><span class="n">C_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span><span class="n">C_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span><span class="n">I_t</span><span class="p">,</span><span class="n">G_t</span><span class="p">,</span><span class="n">X_t</span><span class="p">,</span><span class="n">M_t</span><span class="p">,</span><span class="n">P_t</span><span class="p">)</span>\\
@@ -774,8 +839,8 @@ text to be rendered as code
 </pre></div>
 </div>
 <p>The above <code class="docutils literal notranslate"><span class="pre">latex</span></code> mathematics code uses the  <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> symbol to tell <code class="docutils literal notranslate"><span class="pre">latex</span></code> to align the different lines (separated by <code class="docutils literal notranslate"><span class="pre">\\</span></code>) on the character immediately after the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>. In this instance the equals “=” sign.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66a6c5e8-6985-45de-8a29-561f043e7f29">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-66a6c5e8-6985-45de-8a29-561f043e7f29" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1e91bedf-4003-45af-a21a-e0744585338d">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-1e91bedf-4003-45af-a21a-e0744585338d" title="Permalink to this equation">#</a></span>\[\begin{align}
 Y_t  &amp;=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &amp;= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &amp;= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -783,14 +848,14 @@ G_t &amp;= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &amp;= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 \end{align}\]</div>
-</div>
-</div>
-<div class="section" id="links-to-more-info-on-markdown">
-<h3><span class="section-number">1.5.5. </span>links to more info on markdown<a class="headerlink" href="#links-to-more-info-on-markdown" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="links-to-more-info-on-markdown">
+<h3><span class="section-number">1.5.5. </span>links to more info on markdown<a class="headerlink" href="#links-to-more-info-on-markdown" title="Permalink to this headline">#</a></h3>
 <p>There are several very good markdown cheatsheets on the internet, one of these is <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">here</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -814,9 +879,11 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../03_Installation/InstallingModelFlow.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -832,24 +899,28 @@ M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Andrew Burns and Ib Hansen<br/>
+  
+      &copy; Copyright World Bank. 2023.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Andrew Burns and Ib Hansen<br/>
-    
-        &copy; Copyright World Bank. 2023.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
