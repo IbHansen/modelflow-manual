@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 15, 2023}
+\date{Apr 16, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -233,7 +233,7 @@ Mathematically, macro\sphinxhyphen{}structural models are a system of equations 
 
 \sphinxAtStartPar
 In a fully general form it can be written as:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:34a990c2-2bc2-4fc2-a4c3-d4691d40f6a9}\begin{align}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:a7fbc4c0-df18-4c00-9b64-7ee07c16dfdd}\begin{align}
 y_t^1  &=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
@@ -244,7 +244,7 @@ where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous
 
 \sphinxAtStartPar
 Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:ee99f0d0-3cf1-46f2-b304-6d7a9e9ee0fa}\begin{align}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:ae4da3ea-9928-4fa1-a5e6-d30f3b77ad0a}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -263,9 +263,10 @@ and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogeno
 \sphinxAtStartPar
 At the World Bank models built using the MFMod framework are developed in \DUrole{xref,myst}{EViews}. When disseminated to clients, the models are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved, and operated under any system capable of solving a system of simultaneous equations – as long as the equations and data can be transferred from EViews to the secondary system. \sphinxcode{\sphinxupquote{Modelflow}} is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.
 
+\begin{sphinxShadowBox}
+\sphinxstylesidebartitle{}
+\subsubsection*{A brief history of ModelFlow}
 
-\section{A brief history of ModelFlow}
-\label{\detokenize{content/02_MacrostructuralModels/MFModAndModelFlow:a-brief-history-of-modelflow}}
 \sphinxAtStartPar
 Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro\sphinxhyphen{}structural  model to python, but also been used to bring several stress\sphinxhyphen{}testing models developed by European Central Banks and the European Central Bank into a python environment.
 
@@ -274,9 +275,6 @@ Beginning in 2019, Hansen has worked with the World Bank to develop additional f
 
 \sphinxAtStartPar
 This paper, and the models that accompany it, are the product of this collaboration.
-
-\begin{sphinxShadowBox}
-\sphinxstylesidebartitle{}
 \end{sphinxShadowBox}
 
 \sphinxstepscope
@@ -416,7 +414,7 @@ There are many fine tutorials on Jupyter Notebook on the web, and \sphinxhref{ht
 \sphinxAtStartPar
 Each time, a user wants to work with \sphinxcode{\sphinxupquote{modelflow}}, they will need to activate the \sphinxcode{\sphinxupquote{modelflow}} environment by
 \begin{enumerate}
-\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
 \sphinxAtStartPar
 Opening the Anaconda command prompt window
@@ -959,7 +957,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:1e91bedf-4003-45af-a21a-e0744585338d}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:2665cfcd-b330-4d62-ac4e-1d05489eee38}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -1009,6 +1007,7 @@ From Anaconda Navigator select the \sphinxcode{\sphinxupquote{Modelflow}} enviro
 \caption{A newly created Jupyter Notebook session}\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:start-anaconda-navigator}}\end{figure}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{2}
 \item {} 
 \sphinxAtStartPar
 Once the environment is selected the user can either select a command line environment or start jupyter notebook by clicking on either the
@@ -1274,7 +1273,8 @@ As with any python program, in order to use a package or library it must first b
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
+Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.\\
+Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
 
 
 \section{The \sphinxstyleliteralintitle{\sphinxupquote{Pandas}} class \sphinxstyleliteralintitle{\sphinxupquote{series}}}
@@ -2974,10 +2974,10 @@ Let’s see this in a concrete example.  Consider the following \sphinxcode{\sph
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot: \PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_34_1}.png}
+\noindent\sphinxincludegraphics{{c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3003,10 +3003,10 @@ Now lets modify each by adding 5 to the level in 2022 and 2023.  For B we will d
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot: \PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_36_1}.png}
+\noindent\sphinxincludegraphics{{b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3036,10 +3036,10 @@ Here the growth in both series accelerates in 2022, by slightly less than 5 perc
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot: \PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_38_1}.png}
+\noindent\sphinxincludegraphics{{93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3493,6 +3493,488 @@ Here Pythons exception handling is used, so the notebook will continue to run th
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Variable to update not found:AA, timespan = [2021 2022] 
 Set create=True if you want the variable created: 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxstepscope
+
+
+\section{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} an extension of standard Pandas}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-an-extension-of-standard-pandas}}\label{\detokenize{content/04_PythonEssentials/mfcalc::doc}}
+\sphinxAtStartPar
+Like\sphinxcode{\sphinxupquote{.upd()}}, the \sphinxcode{\sphinxupquote{.mfcalc()}} method can be used to extend the functionality of standard pandas.  It is actually a much more powerful method that can be used to solve models or mini\sphinxhyphen{}models or see how modelflow normalizes equations.  It can be particularly useful when creating scenarios – uses that are presented elsewhere.
+
+\sphinxAtStartPar
+Here , the focus is but is on using \sphinxcode{\sphinxupquote{mfcalc()}}to perform quick and dirty calculations and modify datafames.
+
+
+\subsection{workspace initialization}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:workspace-initialization}}
+\sphinxAtStartPar
+Setting up our python session to use pandas and modelflow by importing their packages.  \sphinxcode{\sphinxupquote{modelmf}} is an extension of dataframes that is part of the modelflow installation package (and also used by modelflow itself).
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}  \PYG{c+c1}{\PYGZsh{} Python data science library}
+\PYG{k+kn}{import} \PYG{n+nn}{modelmf}       \PYG{c+c1}{\PYGZsh{} Add useful features to pandas dataframes }
+                     \PYG{c+c1}{\PYGZsh{} using utlities initially developed for modelflow}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+
+\subsection{Create a  simple dataframe}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:create-a-simple-dataframe}}
+\sphinxAtStartPar
+Create a Pandas dataframe with one column with the name A and 6 rows.
+
+\sphinxAtStartPar
+Set set the index to 2020 through 2026 and set the values of all the cells to 100.
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{pd.DataFrame}} creates a dataframe  \sphinxhref{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html\#pandas.DataFrame}{Description}
+
+\item {} 
+\sphinxAtStartPar
+The expression \sphinxcode{\sphinxupquote{{[}v for v in range(2020,2026){]}}} dynamically creates a  python list, and fills it with  integers beginning with 2020 and ending 2025
+
+\end{itemize}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}                                 \PYG{c+c1}{\PYGZsh{} call the dataframe constructure }
+    \PYG{l+m+mf}{100.000}\PYG{p}{,}                                           \PYG{c+c1}{\PYGZsh{} the values }
+    \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{n}{v} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2026}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,}           \PYG{c+c1}{\PYGZsh{}index}
+    \PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}                                  \PYG{c+c1}{\PYGZsh{} the column name }
+                 \PYG{p}{)}
+\PYG{n}{df}   \PYG{c+c1}{\PYGZsh{} the result of the last statement is displayed in the output cell }
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A
+2020  100.0
+2021  100.0
+2022  100.0
+2023  100.0
+2024  100.0
+2025  100.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} in action}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-in-action}}
+
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} example to calculate a new series}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-example-to-calculate-a-new-series}}
+\sphinxAtStartPar
+Use  mfcalc to calculate a new column (series) as a function of the existing A column series
+
+\sphinxAtStartPar
+The below call creates a new column x.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{x = x(\PYGZhy{}1) + a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0  100.0
+2022  100.0  200.0
+2023  100.0  300.0
+2024  100.0  400.0
+2025  100.0  500.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{warning}{Warning:}
+\sphinxAtStartPar
+By default \sphinxcode{\sphinxupquote{.mfcalc}} will initialize a new variable with zeroes.
+
+\sphinxAtStartPar
+Moreover, if a formula passed to \sphinxcode{\sphinxupquote{.mfcalc}} contains a lag a value will be calculated for the a row only if there is data in the series for the preceding row.
+
+\sphinxAtStartPar
+These two behaviors affects how calculations generated with \sphinxcode{\sphinxupquote{.mfcalc}} are executed and can generate results that may sometimes by unexpected.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+The initialization of new variables with zero and the treatment of lags combined means that when the command \sphinxcode{\sphinxupquote{df.mfcalc('x = x(\sphinxhyphen{}1) + a')}} is executed, the value for X in 2020 will be zero (not n/a). This results because there was no X variable defined for 2019 (no such row exists). \sphinxcode{\sphinxupquote{modelflow}} first initializes all values of X with zero.  It then goes to calculate X in 2020.  There is no X value for 2019 so it skips ahead to 2021 and calculates X as equal to 0 (the value of x in 2020) + the value for a in 2021 – etc.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A
+2020  100.0
+2021  100.0
+2022  100.0
+2023  100.0
+2024  100.0
+2025  100.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Storing the result of an \sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} call}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:storing-the-result-of-an-mfcalc-call}}
+\sphinxAtStartPar
+Above the results of the \sphinxcode{\sphinxupquote{.mfcalc()}} operation was not assigned to an object – the \sphinxcode{\sphinxupquote{DataFrame}} object df itself was not changed.
+
+\sphinxAtStartPar
+Below the results of the same operation are assigned to the variable df2 and therefore stored.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df2}\PYG{o}{=}\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{x = x(\PYGZhy{}1) + a}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Assign the result to df2}
+\PYG{n}{df2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0  100.0
+2022  100.0  200.0
+2023  100.0  300.0
+2024  100.0  400.0
+2025  100.0  500.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{Recalculate A so  it grows by 2 percent}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:recalculate-a-so-it-grows-by-2-percent}}
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{mfcalc()}}knows that it can not start to calculate in 2020 A (the lagged variable) has no value in 2019.
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.mfcalc()}} therefore begins its calculation in 2021. Note, the existing value for 2020 is preserved.  This behaviour differs from other programs that might return a n/a value for the 2020.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{a =  1.02 *  a(\PYGZhy{}1)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{res}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+               A
+2020  100.000000
+2021  102.000000
+2022  104.040000
+2023  106.120800
+2024  108.243216
+2025  110.408080
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res}\PYG{o}{.}\PYG{n}{pct\PYGZus{}change}\PYG{p}{(}\PYG{p}{)}\PYG{o}{*}\PYG{l+m+mi}{100} \PYG{c+c1}{\PYGZsh{} to display the percent changes}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+        A
+2020  NaN
+2021  2.0
+2022  2.0
+2023  2.0
+2024  2.0
+2025  2.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{.mfcalc()}} \sphinxhyphen{} the showeq option}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-the-showeq-option}}
+\sphinxAtStartPar
+The \sphinxcode{\sphinxupquote{showeq}} option is by default \sphinxcode{\sphinxupquote{= False}}.
+
+\sphinxAtStartPar
+By setting equal to \sphinxcode{\sphinxupquote{True}}, mfcalc can be used to express the normalization of an entered equation.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{dlog( a) =  0.02}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{showeq}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+FRML \PYGZlt{}\PYGZgt{} A=EXP(LOG(A(\PYGZhy{}1))+0.02)\PYGZdl{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+In \sphinxcode{\sphinxupquote{modelflow}} the expression \sphinxcode{\sphinxupquote{dlog(a)}} refers to the difference in the natural logarithm \(dlog(x_t) \equiv ln(x_t)-ln(x_{t-1})\) and is equal to the growth rate for the variable.
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.mfcalc()}} normalizes the equation such that the systems solves for a as follows:
+\begin{align*}
+dlog(yyyya) &= 0.02\\
+log(a)-log(a_{t-1}) &= .02\\
+log(a) &=log(a_{t-1})+.02\\
+a &= e^{log(a_{t-1})+0.02}\\
+a &=a_{t-1}*e^{0.02}\\
+\end{align*}
+\sphinxAtStartPar
+which expressed in the business logic language of \sphinxcode{\sphinxupquote{modelflow}} is:
+
+\sphinxAtStartPar
+A=EXP(LOG(A(\sphinxhyphen{}1))+0.02)
+
+
+\subsection{Using the diff() operator with mfcalc}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:using-the-diff-operator-with-mfcalc}}
+\sphinxAtStartPar
+The diff() operator, effectively normalizes to an equation that will add the value to the right of the equals sign to the lagged variable inserted in the diff operator.  Thus,  diff(a)=x normalizes to a=a(\sphinxhyphen{}1)+x
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{diff(a) =  2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{showeq}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+FRML \PYGZlt{}\PYGZgt{} A=A(\PYGZhy{}1)+(2)\PYGZdl{}
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A
+2020  100.0
+2021  102.0
+2022  104.0
+2023  106.0
+2024  108.0
+2025  110.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsection{mfcalc with several equations and arguments}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:mfcalc-with-several-equations-and-arguments}}
+\sphinxAtStartPar
+In addition to a single equation multiple commands can be executed with one command.
+
+\sphinxAtStartPar
+However, \sphinxstylestrong{be careful} because the equation commands are executed simultaneously, which, combined with the treatments of lags, means that results may differ from what they would be if the commands were run sequentially.
+
+\sphinxAtStartPar
+For example:
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res}
+
+\PYG{c+c1}{\PYGZsh{} use res.diff() to see the difference}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  102.0  144.0
+2022  104.0  146.0
+2023  106.0  148.0
+2024  108.0  150.0
+2025  110.0  152.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+In this example the \sphinxcode{\sphinxupquote{DataFarame}} df was initialized to 100 for the period 2020 through 2025.
+
+\sphinxAtStartPar
+The first line of the \sphinxcode{\sphinxupquote{.mfcalc()}} routine produces results only for the period 2021 \sphinxhyphen{} 2025 because there is no value for \sphinxcode{\sphinxupquote{a}} in 2019.  The value of a in 2020 is unchanged, and the following values rise by 2 in each period.
+
+\sphinxAtStartPar
+When calculating X however, \sphinxcode{\sphinxupquote{.mfcalc}} does not use the final result of the calculation of \sphinxcode{\sphinxupquote{A}}, but the intermediate result (the values for 2021 through 2025.
+
+\sphinxAtStartPar
+As a result, it is this series that is passed to the second question which adds 42 to that result.
+
+\sphinxAtStartPar
+\sphinxstylestrong{X in 2020 is not 142 as one might have expected but zero, the value to which the newly created variable defaults.}
+
+\sphinxAtStartPar
+Compare the results above with the results (below) when the two steps are now undertaken in two separate calls to \sphinxcode{\sphinxupquote{.mfcalc()}}.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res1} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res2} \PYG{o}{=} \PYG{n}{res1}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{res2}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0  142.0
+2021  102.0  144.0
+2022  104.0  146.0
+2023  106.0  148.0
+2024  108.0  150.0
+2025  110.0  152.0
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxadmonition}{danger}{Danger:}
+\sphinxAtStartPar
+In \sphinxcode{\sphinxupquote{.mfcalc()}}, when there are multiple equation commands in a single call, they are executed simultaneously. This, combined with \sphinxcode{\sphinxupquote{mfcalc}}’s  treatments of lags, means only the results of the lagged calculation will be passed to other commands equations defined in the \sphinxcode{\sphinxupquote{.mfcalc}} command. As a consequence, results may differ from what would be expected and what would be seen if the two commands were run sequentially.
+\end{sphinxadmonition}
+
+
+\subsection{Setting a time frame with mfcalc.}
+\label{\detokenize{content/04_PythonEssentials/mfcalc:setting-a-time-frame-with-mfcalc}}
+\sphinxAtStartPar
+It can useful in some circumstances to limit the time frame for which the calculations are performed. Specifying a start date and end date enclosed in <> in a line restricts the time period over which subsequent calculations are performed.
+
+\sphinxAtStartPar
+In the example below zeroes are generated for x prior to 2023 when the expressions are executed.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{res} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZlt{}2023 2025\PYGZgt{}}
+\PYG{l+s+s1}{diff(a) =  2}
+\PYG{l+s+s1}{x = a + 42 }
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{res}\PYG{o}{.}\PYG{n}{diff}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{res}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+          A      X
+2020  100.0    0.0
+2021  100.0    0.0
+2022  100.0    0.0
+2023  102.0  144.0
+2024  104.0  146.0
+2025  106.0  148.0
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
