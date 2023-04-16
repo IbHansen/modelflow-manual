@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 14, 2023}
+\date{Apr 16, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -233,7 +233,7 @@ Mathematically, macro\sphinxhyphen{}structural models are a system of equations 
 
 \sphinxAtStartPar
 In a fully general form it can be written as:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:5c8a370d-512b-4637-9118-8b826f0e98eb}\begin{align}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:51ad5b0e-f5bc-4c1d-84f8-c8a09055e8ab}\begin{align}
 y_t^1  &=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
@@ -244,7 +244,7 @@ where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous
 
 \sphinxAtStartPar
 Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:130a8588-34c5-4c16-904d-7c1106c2b8a6}\begin{align}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:fe92b1b7-6568-476a-a133-a116b86cb3a8}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -263,9 +263,10 @@ and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogeno
 \sphinxAtStartPar
 At the World Bank models built using the MFMod framework are developed in \DUrole{xref,myst}{EViews}. When disseminated to clients, the models are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved, and operated under any system capable of solving a system of simultaneous equations – as long as the equations and data can be transferred from EViews to the secondary system. \sphinxcode{\sphinxupquote{Modelflow}} is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.
 
+\begin{sphinxShadowBox}
+\sphinxstylesidebartitle{}
+\subsubsection*{A brief history of ModelFlow}
 
-\section{A brief history of ModelFlow}
-\label{\detokenize{content/02_MacrostructuralModels/MFModAndModelFlow:a-brief-history-of-modelflow}}
 \sphinxAtStartPar
 Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro\sphinxhyphen{}structural  model to python, but also been used to bring several stress\sphinxhyphen{}testing models developed by European Central Banks and the European Central Bank into a python environment.
 
@@ -274,9 +275,6 @@ Beginning in 2019, Hansen has worked with the World Bank to develop additional f
 
 \sphinxAtStartPar
 This paper, and the models that accompany it, are the product of this collaboration.
-
-\begin{sphinxShadowBox}
-\sphinxstylesidebartitle{}
 \end{sphinxShadowBox}
 
 \sphinxstepscope
@@ -416,7 +414,7 @@ There are many fine tutorials on Jupyter Notebook on the web, and \sphinxhref{ht
 \sphinxAtStartPar
 Each time, a user wants to work with \sphinxcode{\sphinxupquote{modelflow}}, they will need to activate the \sphinxcode{\sphinxupquote{modelflow}} environment by
 \begin{enumerate}
-\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{)}%
 \item {} 
 \sphinxAtStartPar
 Opening the Anaconda command prompt window
@@ -959,7 +957,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:1b3bf474-37e5-4e8e-981e-2379ec1f1ef1}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:e6b476c0-9a1f-4db7-8f09-26fc9489b2d9}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -1009,6 +1007,7 @@ From Anaconda Navigator select the \sphinxcode{\sphinxupquote{Modelflow}} enviro
 \caption{A newly created Jupyter Notebook session}\label{\detokenize{content/04_PythonEssentials/PythonPandasDataframes:start-anaconda-navigator}}\end{figure}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{2}
 \item {} 
 \sphinxAtStartPar
 Once the environment is selected the user can either select a command line environment or start jupyter notebook by clicking on either the
@@ -1274,7 +1273,8 @@ As with any python program, in order to use a package or library it must first b
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
+Pandas, like any library, contains many classes and methods.  The discussion below focuses on \sphinxstylestrong{Series} and \sphinxstylestrong{DataFrames} two classes that are part of the pandas library.  Both \sphinxcode{\sphinxupquote{series}} and \sphinxcode{\sphinxupquote{dataframes}} are containers that can be used to store time\sphinxhyphen{}series data and that have associated with them a number of very useful methods for displaying and manipulating time\sphinxhyphen{}series data.\\
+Unlike other statistical packages neither \sphinxcode{\sphinxupquote{series}} nor \sphinxcode{\sphinxupquote{dataframes}} are inherently or exclusively time\sphinxhyphen{}series in nature.  \sphinxcode{\sphinxupquote{Modelflow}} and macro\sphinxhyphen{}economists use them in this way, but the classes themselves are not dated in anyway out\sphinxhyphen{}of\sphinxhyphen{}the\sphinxhyphen{}box.
 
 
 \section{The \sphinxstyleliteralintitle{\sphinxupquote{Pandas}} class \sphinxstyleliteralintitle{\sphinxupquote{series}}}
@@ -2974,10 +2974,10 @@ Let’s see this in a concrete example.  Consider the following \sphinxcode{\sph
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_34_1}.png}
+\noindent\sphinxincludegraphics{{c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3003,10 +3003,10 @@ Now lets modify each by adding 5 to the level in 2022 and 2023.  For B we will d
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_36_1}.png}
+\noindent\sphinxincludegraphics{{b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3036,10 +3036,10 @@ Here the growth in both series accelerates in 2022, by slightly less than 5 perc
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}AxesSubplot:\PYGZgt{}
+\PYGZlt{}Axes: \PYGZgt{}
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{UpdateCommand_38_1}.png}
+\noindent\sphinxincludegraphics{{93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -3353,8 +3353,9 @@ input dataframe:
 2023  111.120800  121.732880  106.120800  116.732880
 2024  113.343216  119.067538  108.243216  119.067538
 2025  115.610080  121.448888  110.408080  121.448888
+\end{sphinxVerbatim}
 
-
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 severity=0
 Dataframe:
           A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
@@ -3599,6 +3600,10 @@ The below call creates a new column x.
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3671,6 +3676,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3704,6 +3713,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                A
 2020  100.000000
@@ -3762,6 +3775,7 @@ By setting equal to \sphinxcode{\sphinxupquote{True}}, mfcalc can be used to exp
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=EXP(LOG(A(\PYGZhy{}1))+0.02)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3773,17 +3787,13 @@ In \sphinxcode{\sphinxupquote{modelflow}} the expression \sphinxcode{\sphinxupqu
 
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.mfcalc()}} normalizes the equation such that the systems solves for a as follows:
-\begin{equation*}
-\begin{split}
-\begin{align}
+\begin{align*}
 dlog(a) &= 0.02\\
 log(a)-log(a_{t-1}) &= .02\\
 log(a) &=log(a_{t-1})+.02\\
 a &= e^{log(a_{t-1})+0.02}\\
 a &=a_{t-1}*e^{0.02}\\
-\end{align}
-\end{split}
-\end{equation*}
+\end{align*}
 \sphinxAtStartPar
 which expressed in the business logic language of \sphinxcode{\sphinxupquote{modelflow}} is:
 
@@ -3808,6 +3818,7 @@ The diff() operator, effectively normalizes to an equation that will add the val
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=A(\PYGZhy{}1)+(2)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3854,6 +3865,10 @@ For example:
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
@@ -3903,6 +3918,10 @@ Compare the results above with the results (below) when the two steps are now un
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0  142.0
@@ -4020,7 +4039,7 @@ Each of these models has been developed as part of the outreach work of the Worl
 This book uses as an example a climate aware model for Pakistan developed in 2020 and described in Burns \sphinxstyleemphasis{et al.} {[}\hyperlink{cite.content/99_BackMatter/References:id14}{2021}{]} .
 
 \sphinxAtStartPar
-The World Bank models are distributed in the \sphinxcode{\sphinxupquote{pcim}} file format of the \sphinxcode{\sphinxupquote{modelflow}} and can be downloaded by right clicking on the links above.  The Pakistan model can be downloaded \DUrole{xref,myst}{here} by right clicking on the above link and selecting Save Link as and placing the file on a directory accessible by your \sphinxcode{\sphinxupquote{modelflow}} installation.
+The World Bank models are distributed in the \sphinxcode{\sphinxupquote{pcim}} file format of the \sphinxcode{\sphinxupquote{modelflow}} and can be downloaded by right clicking on the links above.  The Pakistan model can be downloaded \DUrole{xref,download,myst}{here} by right clicking on the above link and selecting Save Link as and placing the file on a directory accessible by your \sphinxcode{\sphinxupquote{modelflow}} installation.
 
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{from worldbankMFModModels import pak}}
@@ -4150,7 +4169,7 @@ The \sphinxcode{\sphinxupquote{keep}} option instructs \sphinxcode{\sphinxupquot
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
+Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4665,9 +4684,9 @@ Return a dictionary comprised of the mnemonics and the descriptions of all the v
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNECONPRVTCN : Pvt. Cons., LCU mn
-PAKNECONPRVTKN : HH. Cons Real
-PAKNECONPRVTXN : PAKNECONPRVTXN
+PAKNECONPRVTCN : Household demand
+PAKNECONPRVTKN : Household Consumption
+PAKNECONPRVTXN : Household demand
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4762,26 +4781,22 @@ The equation for consumption in \sphinxcode{\sphinxupquote{mpak}} we see that it
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Endogeneous: PAKNECONPRVTKN: HH. Cons Real
-Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG(1.21203101101442)\PYGZhy{}LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+0.763938860758873*((LOG((((PAKBXFSTREMTCD\PYGZhy{}PAKBMFSTREMTCD)*PAKPANUSATLS)+PAKGGEXPTRNSCN+PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))\PYGZhy{}0.0634474791568939*DURING\PYGZus{}2009\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
+Endogeneous: PAKNECONPRVTKN: Household Consumption
+Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(\PYGZhy{}PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+1*((LOG((PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))+0.0303228629698929+0.0163839011059956*DURING\PYGZus{}2010\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
 
-PAKNECONPRVTKN  : HH. Cons Real
-DURING\PYGZus{}2009     : 
-PAKBMFSTREMTCD  : Imp., Remittances (BOP), US\PYGZdl{} mn
-PAKBXFSTREMTCD  : Exp., Remittances (BOP), US\PYGZdl{} mn
-PAKFMLBLPOLYXN  : Key Policy Interest Rate
-PAKGGEXPTRNSCN  : Current Transfers
-PAKGGREVDRCTXN  : Direct Revenue Tax Rate
-PAKNECONPRVTKN\PYGZus{}A: Add factor:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}D: Fix dummy:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}X: Fix value:HH. Cons Real
-PAKNECONPRVTXN  : 
-PAKNYYWBTOTLCN  : 
-PAKPANUSATLS    : Exchange rate LCU / US\PYGZdl{} \PYGZhy{} Pakistan
+PAKNECONPRVTKN  : Household Consumption
+DURING\PYGZus{}2010     : 
+PAKFMLBLPOLYXN  : Policy Rate
+PAKGGREVDRCTXN  : Effective tax rates
+PAKNECONPRVTKN\PYGZus{}A: Add factor:Household Consumption
+PAKNECONPRVTKN\PYGZus{}D: Exo dummy:Household Consumption
+PAKNECONPRVTKN\PYGZus{}X: Exo value:Household Consumption
+PAKNECONPRVTXN  : Household demand
+PAKNYYWBTOTLCN  : Economy\PYGZhy{}wide wage bill
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZsq{}Real GDP\PYGZsq{}
+\PYGZsq{}GDP Expenditure side at market prices\PYGZsq{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4905,14 +4920,11 @@ Economy\sphinxhyphen{}wide wage bill
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
-\begin{equation*}
-\begin{split}\begin{align}
+\begin{align*}
 \Delta log(CON^{KN}_t) = &-0.2*\bigg[LOG(CON^{KN}_{t-1})-LOG\bigg({\frac{WAGEBILL^{CN}_{t-1}*(1-DirectTxR_{t-1}/100)}{CON^{XN}_{t-1}}}\bigg)\bigg]  \\
 &+1.0*\Delta log \bigg({\frac{WAGEBILL^{CN}_{t}*(1-DirectTxR_{t}/100)}{CON^{XN}_{t}}}\bigg)  \\
 &+0.030 + 0.016*D^{2010}_t-0.3*\bigg(r^{policy}_t/100-\Delta log(CON^{XN}_{t})\bigg) -CON^{KN_AF}_t
-\end{align}
-\end{split}
-\end{equation*}
+\end{align*}
 \sphinxAtStartPar
 Where in this instance the short\sphinxhyphen{}run elasticity of consumption to disposable income has been constrained to 1, and the short run elasticity of consumption to the real interest rate is 0.3.
 
@@ -5059,7 +5071,7 @@ Below we prepare a new \sphinxcode{\sphinxupquote{ModelFlow}} session, initializ
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
+Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5253,7 +5265,9 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_15_0}.png}
+\noindent\sphinxincludegraphics{{e35405f76e07a3aaeb59ee48fab7099439874ba025c06b0c6e9d1c0c4131cc33}.png}
+
+\noindent\sphinxincludegraphics{{fe4d31515fd44b9e8353864df0e7bd89d59f7ed072d0f5dd8c3a9c37d6823f2a}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5272,33 +5286,34 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
       PAKNYGDPMKTPKN  PAKNECONPRVTKN  PAKNEIMPGNFSKN  PAKNECONPRVTXN
 2020            0.00            0.00            0.00            0.00
-2021            0.00            0.00            0.00            0.00
-2022            0.00            0.00            0.00            0.00
+2021           \PYGZhy{}0.00           \PYGZhy{}0.00           \PYGZhy{}0.00            0.00
+2022           \PYGZhy{}0.00            0.00            0.00            0.00
 2023            0.00            0.00            0.00            0.00
 2024            0.00            0.00            0.00            0.00
-2025           \PYGZhy{}0.89           \PYGZhy{}1.32           \PYGZhy{}1.49            1.64
-2026           \PYGZhy{}0.85           \PYGZhy{}1.48           \PYGZhy{}2.65            1.35
-2027           \PYGZhy{}0.64           \PYGZhy{}1.37           \PYGZhy{}3.19            1.08
-2028            0.34           \PYGZhy{}0.08           \PYGZhy{}2.17           \PYGZhy{}0.51
-2029            0.50            0.20           \PYGZhy{}1.25           \PYGZhy{}0.43
-2030            0.45            0.19           \PYGZhy{}0.80           \PYGZhy{}0.31
-2031           \PYGZhy{}0.04            0.02           \PYGZhy{}0.10            0.26
-2032           \PYGZhy{}0.06            0.01           \PYGZhy{}0.01            0.20
-2033           \PYGZhy{}0.08            0.00            0.03            0.15
-2034           \PYGZhy{}0.08            0.01            0.04            0.11
-2035           \PYGZhy{}0.07            0.03            0.05            0.08
-2036           \PYGZhy{}0.06            0.04            0.05            0.06
-2037           \PYGZhy{}0.04            0.05            0.05            0.06
-2038           \PYGZhy{}0.03            0.05            0.05            0.08
-2039           \PYGZhy{}0.03            0.04            0.04            0.09
-2040           \PYGZhy{}0.04            0.03            0.02            0.11
+2025           \PYGZhy{}1.76           \PYGZhy{}2.45           \PYGZhy{}2.48            1.16
+2026           \PYGZhy{}1.15           \PYGZhy{}1.94           \PYGZhy{}3.15            0.41
+2027           \PYGZhy{}0.41           \PYGZhy{}1.23           \PYGZhy{}3.31           \PYGZhy{}0.08
+2028            1.48            1.14           \PYGZhy{}1.52           \PYGZhy{}1.31
+2029            1.05            0.64           \PYGZhy{}1.32           \PYGZhy{}0.84
+2030            0.39           \PYGZhy{}0.11           \PYGZhy{}1.51           \PYGZhy{}0.55
+2031            0.01           \PYGZhy{}0.46           \PYGZhy{}1.49           \PYGZhy{}0.44
+2032           \PYGZhy{}0.08           \PYGZhy{}0.45           \PYGZhy{}1.28           \PYGZhy{}0.40
+2033           \PYGZhy{}0.06           \PYGZhy{}0.32           \PYGZhy{}1.02           \PYGZhy{}0.38
+2034           \PYGZhy{}0.02           \PYGZhy{}0.20           \PYGZhy{}0.80           \PYGZhy{}0.34
+2035           \PYGZhy{}0.00           \PYGZhy{}0.14           \PYGZhy{}0.65           \PYGZhy{}0.30
+2036           \PYGZhy{}0.00           \PYGZhy{}0.11           \PYGZhy{}0.54           \PYGZhy{}0.26
+2037           \PYGZhy{}0.01           \PYGZhy{}0.09           \PYGZhy{}0.46           \PYGZhy{}0.22
+2038           \PYGZhy{}0.02           \PYGZhy{}0.09           \PYGZhy{}0.40           \PYGZhy{}0.19
+2039           \PYGZhy{}0.02           \PYGZhy{}0.08           \PYGZhy{}0.35           \PYGZhy{}0.17
+2040           \PYGZhy{}0.03           \PYGZhy{}0.08           \PYGZhy{}0.31           \PYGZhy{}0.15
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-The graphs show the change in the level as a percent of the previous level. They suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 0.9 percent, that the impact would diminish by the third year to \sphinxhyphen{}.64 percent, and then turn positive in the fourth year when the price effect was eliminated.The negative impact would on household consumption would be stronger but follow a similar pattern.  The reason that the GDP impact is smaller, is partly because of the impact on imports which decline strongly.  Because imports enter into the GDP identity with a negative sign, lower imports actually increase aggregate GDP.
+The graphs show the change in the level as a percent of the previous level. They suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 0.9 percent, that the impact would diminish by the third year to \sphinxhyphen{}.64 percent, and then turn positive in the fourth year when the price effect was eliminated.\\
+The negative impact would on household consumption would be stronger but follow a similar pattern.  The reason that the GDP impact is smaller, is partly because of the impact on imports which decline strongly.  Because imports enter into the GDP identity with a negative sign, lower imports actually increase aggregate GDP.
 
 \sphinxAtStartPar
 Finally as could be expected prices rise sharply initially with higher oil prices, but as the slow down in growth is felt, inflationary pressures turn negative and the overall impact on the price level turns negative.  The graph and table above shows what is happening to the \sphinxstylestrong{price level}. To see the impact on inflation (the rate of growth of prices) requires a separate graph using \sphinxcode{\sphinxupquote{difpct.mul100}}, which shows the change in the rate of growth of variables where the growth rate is expressed as a per cent.
@@ -5314,7 +5329,7 @@ Finally as could be expected prices rise sharply initially with higher oil price
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_18_0}.png}
+\noindent\sphinxincludegraphics{{783d422442dd0257528ba29abdf936720c18c01600646458d1c15dc51d030c01}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5394,7 +5409,7 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_25_0}.png}
+\noindent\sphinxincludegraphics{{b6a43a443bd4602f047382c0421d8c9509d2809b6943b27f53b96cfcac84730a}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5416,26 +5431,26 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
       PAKNYGDPMKTPKN  PAKNECONPRVTKN  PAKNEIMPGNFSKN  PAKNECONPRVTXN
 2020            0.00            0.00            0.00            0.00
-2021            0.00            0.00            0.00            0.00
-2022            0.00            0.00            0.00            0.00
+2021           \PYGZhy{}0.00            0.00           \PYGZhy{}0.00            0.00
+2022           \PYGZhy{}0.00            0.00            0.00            0.00
 2023            0.00            0.00            0.00            0.00
-2024            0.00            0.00            0.00            0.00
-2025            2.01            2.50            2.27            0.44
-2026            2.07            2.50            2.43            1.06
-2027            2.05            2.50            2.59            1.69
-2028            1.99            2.50            2.78            2.31
-2029            1.92            2.50            2.99            2.90
-2030            1.83            2.50            3.22            3.47
-2031            1.43            2.50            4.03            4.53
-2032            1.37            2.50            4.18            4.92
-2033            1.30            2.50            4.34            5.29
-2034            1.23            2.50            4.50            5.64
-2035            1.16            2.50            4.66            5.97
-2036            1.09            2.50            4.81            6.28
-2037            1.03            2.50            4.96            6.56
-2038            0.96            2.50            5.10            6.82
-2039            0.90            2.50            5.24            7.06
-2040            0.84            2.50            5.36            7.28
+2024           \PYGZhy{}0.00            0.00            0.00            0.00
+2025            1.86            2.50            2.11            0.65
+2026            1.84            2.50            2.29            1.60
+2027            1.72            2.50            2.56            2.61
+2028            1.56            2.50            2.92            3.61
+2029            1.37            2.50            3.37            4.56
+2030            1.17            2.50            3.88            5.45
+2031            0.99            2.50            4.42            6.25
+2032            0.81            2.50            4.99            6.96
+2033            0.66            2.50            5.55            7.57
+2034            0.54            2.50            6.10            8.08
+2035            0.44            2.50            6.61            8.50
+2036            0.36            2.50            7.07            8.85
+2037            0.30            2.50            7.49            9.12
+2038            0.27            2.50            7.86            9.34
+2039            0.24            2.50            8.17            9.52
+2040            0.24            2.50            8.45            9.65
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5495,7 +5510,7 @@ Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_29_0}.png}
+\noindent\sphinxincludegraphics{{c906ce7242d9433010067d22257a20672c6da0f7f2865bd53bdea9520d31a629}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5531,7 +5546,7 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_32_0}.png}
+\noindent\sphinxincludegraphics{{e82cb2b74a5b1d4b22c1d826a15e3a6bd3825c2f8a49da485827d0853425e356}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5562,7 +5577,7 @@ What this means is that the consumption function will be de\sphinxhyphen{}actvat
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_34_0}.png}
+\noindent\sphinxincludegraphics{{5089cf442ee04d799614d778149a4fe5ebfc2c63676186dcb6edf52867d56bd6}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5592,12 +5607,12 @@ These results have subtle differences compared with the previous.  The most obvi
 Consumption base and shock levels
 
 Real values in 2030
-Base value:  27,241,278.	Shocked value: 27,616,949.
-Percent difference: 5.36
+Base value:  28,135,788.	Shocked value: 28,448,932.
+Percent difference: 5.04
 
 Real values in 2040
-Base value:  38,676,995.	Shocked value: 38,693,167.
-Percent difference: 0.04
+Base value:  37,822,748.	Shocked value: 37,958,655.
+Percent difference: 0.36
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5718,9 +5733,9 @@ Above we identified the shock as to be a 1 percent of GDP increase in FDI that f
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-WLDFBANANA\PYGZus{}US            : TEMP
+WLDFBANANA\PYGZus{}US            : WLDFBANANA\PYGZus{}US
 WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010 : WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010
-WLDFBEEF                 : TEMP
+WLDFBEEF                 : WLDFBEEF
 WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010      : WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010
 \end{sphinxVerbatim}
 
@@ -5786,7 +5801,7 @@ Use the .eviews command or .original command to identify the functional forms if
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNEGDIFPRVKN : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNEGDIFPRVKN = (PAKNEGDIFPRVKN\PYGZus{}A*PAKNEGDIKSTKKN(\PYGZhy{}1)+ (0.00212272413966296+0.970234989019907*(PAKNEGDIFPRVKN(\PYGZhy{}1)/PAKNEGDIKSTKKN(\PYGZhy{}2))+(1\PYGZhy{}0.970234989019907)*(((LOG(PAKNYGDPPOTLKN))\PYGZhy{}(LOG(PAKNYGDPPOTLKN(\PYGZhy{}1))))+PAKDEPR)+0.0525240494260597*((LOG(PAKNEKRTTOTLCN/PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNEKRTTOTLCN(\PYGZhy{}1)/PAKNYGDPFCSTXN(\PYGZhy{}1))))) *PAKNEGDIKSTKKN(\PYGZhy{}1)) * (1\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}D)+ PAKNEGDIFPRVKN\PYGZus{}X*PAKNEGDIFPRVKN\PYGZus{}D \PYGZdl{}
+PAKNEGDIFPRVKN : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNEGDIFPRVKN = (\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}A*PAKNEGDIKSTKKN(\PYGZhy{}1)+ (\PYGZhy{}0.00526826150713402+0.826734606421746*(PAKNEGDIFPRVKN(\PYGZhy{}1)/PAKNEGDIKSTKKN(\PYGZhy{}2))+(1\PYGZhy{}0.826734606421746)*(((LOG(PAKNYGDPPOTLKN))\PYGZhy{}(LOG(PAKNYGDPPOTLKN(\PYGZhy{}1))))+PAKDEPR)\PYGZhy{}0.00378813564556318*((LOG(PAKNEKRTTOTLCN/PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNEKRTTOTLCN(\PYGZhy{}1)/PAKNYGDPFCSTXN(\PYGZhy{}1))))) *PAKNEGDIKSTKKN(\PYGZhy{}1)) * (1\PYGZhy{}PAKNEGDIFPRVKN\PYGZus{}D)+ PAKNEGDIFPRVKN\PYGZus{}X*PAKNEGDIFPRVKN\PYGZus{}D \PYGZdl{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5826,12 +5841,12 @@ Pre shock levels
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2025   \PYGZhy{}0.000458
-2026   \PYGZhy{}0.000389
-2027   \PYGZhy{}0.000331
-2028   \PYGZhy{}0.000281
-2029   \PYGZhy{}0.000239
-2030   \PYGZhy{}0.000203
+2025   \PYGZhy{}0.000309
+2026   \PYGZhy{}0.000262
+2027   \PYGZhy{}0.000223
+2028   \PYGZhy{}0.000190
+2029   \PYGZhy{}0.000161
+2030   \PYGZhy{}0.000137
 Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \end{sphinxVerbatim}
 
@@ -5857,12 +5872,12 @@ Post shock levels
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2025   \PYGZhy{}0.000458
-2026   \PYGZhy{}0.000389
-2027   \PYGZhy{}0.000331
-2028    0.000681
-2029   \PYGZhy{}0.000239
-2030   \PYGZhy{}0.000203
+2025   \PYGZhy{}0.000309
+2026   \PYGZhy{}0.000262
+2027   \PYGZhy{}0.000223
+2028    0.000312
+2029   \PYGZhy{}0.000161
+2030   \PYGZhy{}0.000137
 Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \end{sphinxVerbatim}
 
@@ -5884,7 +5899,7 @@ Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_46_0}.png}
+\noindent\sphinxincludegraphics{{79d8b9e8c523d592cda1e7ab6617ee58c3cff8ff297aff86ad4b97e13124b7bb}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5925,9 +5940,9 @@ For example below we have graphs of the growth rates of GDP, Consumption and Imp
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZob{}\PYGZsq{}PAKNYGDPMKTPCN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
- \PYGZsq{}PAKNECONPRVTKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
- \PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{}\PYGZcb{}
+\PYGZob{}\PYGZsq{}PAKNYGDPMKTPCN\PYGZsq{}: \PYGZlt{}Figure size 1000x600 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNECONPRVTKN\PYGZsq{}: \PYGZlt{}Figure size 1000x600 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}: \PYGZlt{}Figure size 1000x600 with 1 Axes\PYGZgt{}\PYGZcb{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -6175,9 +6190,9 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_0}.png}
+\noindent\sphinxincludegraphics{{9af36267e7ae5b677c1055ebb153e1be502bb95ed7042872bcd9bc5af23e2813}.png}
 
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_1}.png}
+\noindent\sphinxincludegraphics{{2f48a888dc00691549a8ac1ec27169874b5c3b1a75d0480a9fb0ae96cee6522d}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -6188,9 +6203,6 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \part{References}
 
 \sphinxstepscope
-
-\sphinxAtStartPar
-
 
 \begin{sphinxthebibliography}{BCJ+19}
 \bibitem[Add89]{content/99_BackMatter/References:id20}
