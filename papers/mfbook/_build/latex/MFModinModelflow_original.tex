@@ -155,7 +155,7 @@ Economic modelling has a long tradition at the World Bank.  The Bank has had a l
 \section{The MFMod Framework at the World Bank}
 \label{\detokenize{content/01_Introduction/Introduction:the-mfmod-framework-at-the-world-bank}}
 \sphinxAtStartPar
-MFMod is the World Bank’s work\sphinxhyphen{}horse macro\sphinxhyphen{}structural economic modelling framework. It exists both a linked system of 184 country specific models that can be solved either independently or as a larger system (\sphinxcode{\sphinxupquote{MFMod}}), and as a series of  standalone customized models, known collectively as MFMod Standalones (MFMod SAs) that have been developed from the central model to the fit the specific needs of individual countries. Both modelling systems can be solved using the EViews modelling language, or through the intermediation of an easy\sphinxhyphen{}to\sphinxhyphen{}use excel front end developed by the Bank.
+MFMod is the World Bank’s work\sphinxhyphen{}horse macro\sphinxhyphen{}structural economic modelling framework. It exists both a linked system of 184 country specific models that can be solved either independently or as a larger system (\sphinxcode{\sphinxupquote{MFMod}}), and as a series of  standalone customized models, known collectively as MFMod Standalones (MFMod SAs) that have been developed from the central model to the fit the specific needs of individual countries. Both modelling systems can be solved using the EViews modelling languiage, or through the intermediation of an easy\sphinxhyphen{}to\sphinxhyphen{}use excel front end developed by the Bank.
 
 \sphinxAtStartPar
 The main \sphinxcode{\sphinxupquote{MFMod}} global model evolved from earlier macro\sphinxhyphen{}structural models developed during the 2000s to strengthen the basis for the forecasts produced by the World Bank. Some examples of these models were released on the World Bank’s isimulate platform early in 2010 along with several CGE models dating from this period. These earlier models were substantially extended into what has become the main MFMod (MacroFiscalModel) model during 2014. Since 2015, MFMod replaced the Bank’s RMSIM\sphinxhyphen{}X model ({[}\hyperlink{cite.content/99_BackMatter/References:id20}{Addison, 1989}{]}), as the Bank’s main tool for forecasting and economic analysis, and is used for the World Bank’s twice annual forecasting exercise \sphinxhref{https://www.worldbank.org/en/publication/macro-poverty-outlook}{The Macro Poverty Outlook}.
@@ -191,7 +191,7 @@ Training and dissemination around these customized versions of MFMod have been o
 Models in the MFMod family are normally built using the proprietary \DUrole{xref,myst}{EViews} econometric and modelling package. While offering many advantages for model development and maintenance, its cost may be a barrier to clients in developing countries.  As a result, the World Bank joined with Ib Hansen, a Danish economist formerly with the European Central Bank and the Danish Central Bank, who over the years has developed \sphinxcode{\sphinxupquote{modelflow}} a generalized solution engine written in Python for economic models. Together with World Bank, Hansen has worked to extend \sphinxcode{\sphinxupquote{modelflow}} so that MFMod models can be ported and run in the framework.
 
 \sphinxAtStartPar
-This paper reports on the results of these efforts. In particular, it provides step by step instructions on how to install the \sphinxcode{\sphinxupquote{modelflow}} framework, import a World Bank macrostructural model,  perform simulations with that model and report results using the many analytical and reporting tools that have been built into \sphinxcode{\sphinxupquote{modelflow}}.  It is not a manual for \sphinxcode{\sphinxupquote{modelflow}}, a documentation can be found \sphinxhref{https://ibhansen.github.io/doc/index}{here} nor is it documentation for the MFMod system, such documentation can be found here {[}\hyperlink{cite.content/99_BackMatter/References:id15}{Burns \sphinxstyleemphasis{et al.}, 2019}{]} and here {[}\hyperlink{cite.content/99_BackMatter/References:id18}{Burns \sphinxstyleemphasis{et al.}, 2021}{]}, {[}\hyperlink{cite.content/99_BackMatter/References:id14}{Burns \sphinxstyleemphasis{et al.}, 2021}{]}). Nor is it documentation for the specific models described and worked with below.
+This paper reports on the results of these efforts. In particular, it provides step by step instructions on how to install the \sphinxcode{\sphinxupquote{modelflow}} framework, import a World Bank macrostructural model,  perform simulations with that model and report results using the many analytical and reporting tools that have been built into \sphinxcode{\sphinxupquote{modelflow}}.  It is not a manual for \sphinxcode{\sphinxupquote{modelflow}}, such a manual can be found \sphinxhref{https://ibhansen.github.io/doc/index}{here} nor is it documentation for the MFMod system, such documentation can be found here {[}\hyperlink{cite.content/99_BackMatter/References:id15}{Burns \sphinxstyleemphasis{et al.}, 2019}{]} and here {[}\hyperlink{cite.content/99_BackMatter/References:id18}{Burns \sphinxstyleemphasis{et al.}, 2021}{]}, {[}\hyperlink{cite.content/99_BackMatter/References:id14}{Burns \sphinxstyleemphasis{et al.}, 2021}{]}). Nor is it documentation for the specific models described and worked with below.
 
 
 \bigskip\hrule\bigskip
@@ -233,25 +233,25 @@ Mathematically, macro\sphinxhyphen{}structural models are a system of equations 
 
 \sphinxAtStartPar
 In a fully general form it can be written as:
-\begin{align*}
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:51ad5b0e-f5bc-4c1d-84f8-c8a09055e8ab}\begin{align}
 y_t^1  &=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
 y_t^n  &=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^r,x..._{t-s}^1...,x_{t-s}^k)
-\end{align*}
+\end{align}
 \sphinxAtStartPar
 where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous variable and there are as many equations as there are unknown (endogenous variables).
 
 \sphinxAtStartPar
-Substituting the variable mnemonics Y,C,I,G,X,M from above a simple model can be written as as a system of 6 equations in 6 unknowns:
-\begin{align*}
+Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:
+\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:fe92b1b7-6568-476a-a133-a116b86cb3a8}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align*}
+\end{align}
 \sphinxAtStartPar
 and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogenous in this simple model.
 
@@ -957,7 +957,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:d0083a72-ebd5-463d-9a08-97b2f8d9b56c}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:e6b476c0-9a1f-4db7-8f09-26fc9489b2d9}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -3353,8 +3353,9 @@ input dataframe:
 2023  111.120800  121.732880  106.120800  116.732880
 2024  113.343216  119.067538  108.243216  119.067538
 2025  115.610080  121.448888  110.408080  121.448888
+\end{sphinxVerbatim}
 
-
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
 severity=0
 Dataframe:
           A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
@@ -3373,9 +3374,8 @@ Growth:
 2023  0.0  1.916279     2.0     2.0
 2024  0.0 \PYGZhy{}2.189501     2.0     2.0
 2025  0.0  2.000000     2.0     2.0
-\end{sphinxVerbatim}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
+
 severity=0.5
 Dataframe:
                A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
@@ -6207,16 +6207,16 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \begin{sphinxthebibliography}{BCJ+19}
 \bibitem[Add89]{content/99_BackMatter/References:id20}
 \sphinxAtStartPar
-Doug Addison. \sphinxstyleemphasis{The World Bank revised minimum standard model (RMSM) : concepts and issues}. Number WPS231 in Policy Research Working Papers. World Bank, Washington DC., 1989. URL: \sphinxurl{https://documents.worldbank.org/en/publication/documents-reports/documentdetail/997721468765042532/the-world-bank-revised-minimum-standard-model-rmsm-concepts-and-issues}.
+Doug Addison. \sphinxstyleemphasis{The World Bank revised minimum standard model (RMSM) : concepts and issues}. Number WPS231 in Policy Research Working Papers. World Bank, Washington DC., 1989. URL: \sphinxurl{https://documents.worldbank.org/en/publication/documents-reports/documentdetail/997721468765042532/the-world-bank-revised-minimum-standard-model-rmsm-concepts-and-issues}.
 \bibitem[Bla18]{content/99_BackMatter/References:id17}
 \sphinxAtStartPar
 Olivier Blanchard. On the future of Macroeconomic models. \sphinxstyleemphasis{Oxford Review of Economic Policy}, 34(1\sphinxhyphen{}2):43–54, 2018. URL: \sphinxurl{https://academic.oup.com/oxrep/article/34/1-2/43/4781808}, \sphinxhref{https://doi.org/https://doi.org/10.1093/oxrep/grx045}{doi:https://doi.org/10.1093/oxrep/grx045}.
 \bibitem[BCJ+19]{content/99_BackMatter/References:id15}
 \sphinxAtStartPar
-Andrew Burns, Benoit Campagne, Charl Jooste, David Stephan, and Thi Thanh Bui. \sphinxstyleemphasis{The World Bank Macro\sphinxhyphen{}Fiscal Model Technical Description}. Number 8965 in Policy Research Working Papers. World Bank, Washington DC., 2019. URL: \sphinxurl{https://openknowledge.worldbank.org/handle/10986/32217}.
+Andrew Burns, Benoit Campagne, Charl Jooste, David Stephan, and Thi Thanh Bui. \sphinxstyleemphasis{The World Bank Macro\sphinxhyphen{}Fiscal Model Technical Description}. Number 8965 in Policy Research Working Papers. World Bank, Washington DC., 2019. URL: \sphinxurl{https://openknowledge.worldbank.org/handle/10986/32217}.
 \bibitem[BJS21a]{content/99_BackMatter/References:id14}
 \sphinxAtStartPar
-Andrew Burns, Charl Jooste, and Gregor Schwerhoff. \sphinxstyleemphasis{Climate Modeling for Macroeconomic Policy : A Case Study for Pakistan}. Number 9780 in Policy Research Working Papers. World Bank, Washington, DC, 2021. URL: \sphinxurl{https://openknowledge.worldbank.org/bitstream/handle/10986/36307/Climate-Modeling-for-Macroeconomic-Policy-A-Case-Study-for-Pakistan.pdf?sequence=1\&isAllowed=y}.
+Andrew Burns, Charl Jooste, and Gregor Schwerhoff. \sphinxstyleemphasis{Climate Modeling for Macroeconomic Policy : A Case Study for Pakistan}. Number 9780 in Policy Research Working Papers. World Bank, Washington, DC, 2021. URL: \sphinxurl{https://openknowledge.worldbank.org/bitstream/handle/10986/36307/Climate-Modeling-for-Macroeconomic-Policy-A-Case-Study-for-Pakistan.pdf?sequence=1\&isAllowed=y}.
 \bibitem[BJS21b]{content/99_BackMatter/References:id18}
 \sphinxAtStartPar
 Andrew Burns, Charl Jooste, and Gregor Schwerhoff. \sphinxstyleemphasis{Macroeconomic Modeling of Managing Hurricane Damage in the Caribbean: The Case of Jamaica}. Volume 9505 of Policy Research Working Paper. World Bank, Washington DC., 2021. URL: \sphinxurl{https://documents1.worldbank.org/curated/en/593351609776234361/pdf/Macroeconomic-Modeling-of-Managing-Hurricane-Damage-in-the-Caribbean-The-Case-of-Jamaica.pdf}.
@@ -6225,7 +6225,7 @@ Andrew Burns, Charl Jooste, and Gregor Schwerhoff. \sphinxstyleemphasis{Macroeco
 Hollis Chenery. \sphinxstyleemphasis{Studies in Development Planning.} Harvard University Press,, Cambridge, MA., 1971.
 \bibitem[WB88]{content/99_BackMatter/References:id16}
 \sphinxAtStartPar
-M. R. Wickens and T. S. Breusch. Dynamic Specification, the Long\sphinxhyphen{}Run and the Estimation of Transformed Regression Models. \sphinxstyleemphasis{The Economic Journal}, 98:189–205, April 1988.
+M. R. Wickens and T. S. Breusch. Dynamic Specification, the Long\sphinxhyphen{}Run and the Estimation of Transformed Regression Models. \sphinxstyleemphasis{The Economic Journal}, 98:189–205, April 1988.
 \end{sphinxthebibliography}
 
 

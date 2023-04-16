@@ -26,7 +26,6 @@ else:
     bookdir = 'mfbook'    
     
 doall = '--all' if 'all' in options else ''
-
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
 # (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
@@ -67,8 +66,7 @@ for dir in sorted(Path(f'{bookdir}/_build/jupyter_execute').glob('**')):
      
 if 'latex-pdf' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')
-    #  xx0 = run(f'cd {bookdir}/_build/latex/')
-    #  xx0 = run(f'latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex')
+     xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
      
 if 'copy' in options:
     copytree(buildhtml,destination,dirs_exist_ok=True )
