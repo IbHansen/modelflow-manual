@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 14, 2023}
+\date{Apr 19, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -233,25 +233,25 @@ Mathematically, macro\sphinxhyphen{}structural models are a system of equations 
 
 \sphinxAtStartPar
 In a fully general form it can be written as:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:5c8a370d-512b-4637-9118-8b826f0e98eb}\begin{align}
+\begin{align*}
 y_t^1  &=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
 y_t^n  &=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^r,x..._{t-s}^1...,x_{t-s}^k)
-\end{align}
+\end{align*}
 \sphinxAtStartPar
 where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous variable and there are as many equations as there are unknown (endogenous variables).
 
 \sphinxAtStartPar
 Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:
-\label{equation:content/02_MacrostructuralModels/MacroStructuralModels:130a8588-34c5-4c16-904d-7c1106c2b8a6}\begin{align}
+\begin{align*}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align}
+\end{align*}
 \sphinxAtStartPar
 and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogenous in this simple model.
 
@@ -959,7 +959,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:1b3bf474-37e5-4e8e-981e-2379ec1f1ef1}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:39ac74b5-30c0-4788-9780-c13aca63f0d3}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -3773,17 +3773,13 @@ In \sphinxcode{\sphinxupquote{modelflow}} the expression \sphinxcode{\sphinxupqu
 
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.mfcalc()}} normalizes the equation such that the systems solves for a as follows:
-\begin{equation*}
-\begin{split}
-\begin{align}
+\begin{align*}
 dlog(a) &= 0.02\\
 log(a)-log(a_{t-1}) &= .02\\
 log(a) &=log(a_{t-1})+.02\\
 a &= e^{log(a_{t-1})+0.02}\\
 a &=a_{t-1}*e^{0.02}\\
-\end{align}
-\end{split}
-\end{equation*}
+\end{align*}
 \sphinxAtStartPar
 which expressed in the business logic language of \sphinxcode{\sphinxupquote{modelflow}} is:
 
@@ -4393,7 +4389,7 @@ Information returned
 \sphinxcode{\sphinxupquote{.des}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname\textbackslash{}{[}'PAKNECONPRVTXN'\textbackslash{}{]}.des}}
+\sphinxcode{\sphinxupquote{modelname{[}'PAKNECONPRVTXN'{]}.des}}
 &
 \sphinxAtStartPar
 Dictionary of mnemonics and their variable descriptions
@@ -4403,7 +4399,7 @@ Dictionary of mnemonics and their variable descriptions
 \sphinxcode{\sphinxupquote{.desc}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname\textbackslash{}{[}'PAKNECONPRVTXN'\textbackslash{}{]}.desc}}
+\sphinxcode{\sphinxupquote{modelname{[}'PAKNECONPRVTXN'{]}.desc}}
 &
 \sphinxAtStartPar
 List of variable description alone
@@ -4420,7 +4416,7 @@ The \sphinxcode{\sphinxupquote{*}} character in the command \sphinxcode{\sphinxu
 \end{sphinxadmonition}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Information about anumber of variables that meet certain search criteria}
+\sphinxstylestrong{Information about a number of variables that meet certain search criteria}
 
 \sphinxAtStartPar
 The above functions can be used in conjunction with a wildcard specification to extract the same information about a number of variables that meet the criteria. To extract a list of all variables matching a pattern, we can use same methods.
@@ -4905,14 +4901,11 @@ Economy\sphinxhyphen{}wide wage bill
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
-\begin{equation*}
-\begin{split}\begin{align}
+\begin{align*}
 \Delta log(CON^{KN}_t) = &-0.2*\bigg[LOG(CON^{KN}_{t-1})-LOG\bigg({\frac{WAGEBILL^{CN}_{t-1}*(1-DirectTxR_{t-1}/100)}{CON^{XN}_{t-1}}}\bigg)\bigg]  \\
 &+1.0*\Delta log \bigg({\frac{WAGEBILL^{CN}_{t}*(1-DirectTxR_{t}/100)}{CON^{XN}_{t}}}\bigg)  \\
 &+0.030 + 0.016*D^{2010}_t-0.3*\bigg(r^{policy}_t/100-\Delta log(CON^{XN}_{t})\bigg) -CON^{KN_AF}_t
-\end{align}
-\end{split}
-\end{equation*}
+\end{align*}
 \sphinxAtStartPar
 Where in this instance the short\sphinxhyphen{}run elasticity of consumption to disposable income has been constrained to 1, and the short run elasticity of consumption to the real interest rate is 0.3.
 
@@ -5024,7 +5017,7 @@ Looking at an ECM equation we can then break it up into its component parts.  Fo
 An essential feature of a model is that when given a specific set of inputs (the exogenous variables to the model) it will always return the same results.
 
 \sphinxAtStartPar
-Below we prepare a new \sphinxcode{\sphinxupquote{ModelFlow}} session, initializing a pandas session and importing and solving a saved WBG model (NB: these are precisely the same commands they we used to start the previous chapter).
+Below a new \sphinxcode{\sphinxupquote{ModelFlow}} sessionis prepared, initializing a pandas session and importing and solving a saved WBG model (NB: these are precisely the same commands they used to start the previous chapter) and would form the essential initialization commands of any python session using \sphinxcode{\sphinxupquote{ModelFlow}}.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 

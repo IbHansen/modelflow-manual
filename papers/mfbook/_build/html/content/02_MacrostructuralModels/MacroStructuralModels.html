@@ -361,24 +361,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">Exogenous</span></code> variables are not determined by the model. Typically there are set either by assumption or from data external to the model.  For an individual country model, the exogenous variables would often include the global price of crude oil  because the level of activity of the economy itself is unlikely to affect the world price of oil.</p></li>
 </ul>
 <p>In a fully general form it can be written as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5c8a370d-512b-4637-9118-8b826f0e98eb">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-5c8a370d-512b-4637-9118-8b826f0e98eb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 y_t^1  &amp;=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &amp;=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
 y_t^n  &amp;=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^r,x..._{t-s}^1...,x_{t-s}^k)
-\end{align}\]</div>
+\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\( y_t^1 \)</span> is one of n endogenous variables and <span class="math notranslate nohighlight">\(x_t^1\)</span> is an exogenous variable and there are as many equations as there are unknown (endogenous variables).</p>
 <p>Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-130a8588-34c5-4c16-904d-7c1106c2b8a6">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-130a8588-34c5-4c16-904d-7c1106c2b8a6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 Y_t  &amp;=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &amp;= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &amp;= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &amp;= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &amp;= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align}\]</div>
+\end{align*}\]</div>
 <p>and where <span class="math notranslate nohighlight">\(P_t, P^f_t\)</span> (domestic and foreign prices, respectively) are exogenous in this simple model.</p>
 </div>
 </div>

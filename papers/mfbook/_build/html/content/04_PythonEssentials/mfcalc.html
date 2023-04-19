@@ -947,16 +947,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>In <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> the expression <code class="docutils literal notranslate"><span class="pre">dlog(a)</span></code> refers to the difference in the natural logarithm <span class="math notranslate nohighlight">\(dlog(x_t) \equiv ln(x_t)-ln(x_{t-1})\)</span> and is equal to the growth rate for the variable.</p>
 <p><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> normalizes the equation such that the systems solves for a as follows:<br></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 dlog(a) &amp;= 0.02\\
 log(a)-log(a_{t-1}) &amp;= .02\\
 log(a) &amp;=log(a_{t-1})+.02\\
 a &amp;= e^{log(a_{t-1})+0.02}\\
 a &amp;=a_{t-1}*e^{0.02}\\
-\end{align}
-\end{split}\]</div>
+\end{align*}\]</div>
 <p>which expressed in the business logic language of <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> is:</p>
 <p>A=EXP(LOG(A(-1))+0.02)</p>
 </div>

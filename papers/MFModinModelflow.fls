@@ -1,4 +1,4 @@
 PWD C:\mflow\modelflow-manual\papers
 INPUT C:\Users\wb268970\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT mfbook\_build\latex\MFModinModelflow.tex
-OUTPUT MFModinModelflow.log
+INPUT mfbook\_build\latex\Mfmodinmodelflow.tex
+OUTPUT Mfmodinmodelflow.log
