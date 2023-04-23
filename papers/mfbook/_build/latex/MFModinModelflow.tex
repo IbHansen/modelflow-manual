@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 16, 2023}
+\date{Apr 20, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -245,12 +245,24 @@ where \( y_t^1 \) is one of n endogenous variables and \(x_t^1\) is an exogenous
 \sphinxAtStartPar
 Substituting the variable mnemonics Y,C,I,G,X,M from above a simple model can be written as as a system of 6 equations in 6 unknowns:
 \begin{align*}
-Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
+Y_t  &=  C_t+I_t+G_t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
+\end{align*}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+Ib:I would suggest:
+\end{sphinxadmonition}
+\begin{align*}
+Y_t  &=  C_t+I_t+G_t+ (X_t-M_t) \\
+C_t &= c(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
+I_t &= i(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
+G_t &= g(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
+X_t &= x(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
+M_t &= m(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 \end{align*}
 \sphinxAtStartPar
 and where \(P_t, P^f_t\) (domestic and foreign prices, respectively) are exogenous in this simple model.
@@ -268,7 +280,7 @@ At the World Bank models built using the MFMod framework are developed in \DUrol
 \subsubsection*{A brief history of ModelFlow}
 
 \sphinxAtStartPar
-Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro\sphinxhyphen{}structural  model to python, but also been used to bring several stress\sphinxhyphen{}testing models developed by European Central Banks and the European Central Bank into a python environment.
+Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro\sphinxhyphen{}structural  model to python, but also been used to bring several stress\sphinxhyphen{}testing models developed by Danish Central Bank and the European Central Bank into a python environment.
 
 \sphinxAtStartPar
 Beginning in 2019, Hansen has worked with the World Bank to develop additional features that facilitate working with models built using the Bank’s MFMod Framework, with the objective of creating an open source platform through which the Bank’s models can be made available to the public.
@@ -296,7 +308,7 @@ Modelflow is a python package that defines the \sphinxcode{\sphinxupquote{model}
 \end{footnote}. Modelflow is one of these packages.
 
 \sphinxAtStartPar
-Python comes in many flavors and \sphinxcode{\sphinxupquote{modelflow}} will work with any of them.  However, \sphinxstylestrong{users are strongly advised to use the Anaconda version of Python}.
+Python can be installed from many distributions and \sphinxcode{\sphinxupquote{modelflow}} should  work with any of them.  However, \sphinxstylestrong{users are strongly advised to use the Anaconda version of Python}. Also the version of python should be 3.8 or higher.
 
 \sphinxAtStartPar
 The remainder of this section points to instructions on how to install the Anaconda version of python (under Windows, MacOS and under Linux). \sphinxcode{\sphinxupquote{Modelflow}} works equally well under all three. This is followed by section that describes the steps necessary to create an anaconda environment with all the necessary packages to run \sphinxcode{\sphinxupquote{modelflow}}.
@@ -366,7 +378,7 @@ Press enter
 \end{enumerate}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{conda} \PYG{n}{create} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{ModelFlow} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{ibh} \PYG{o}{\PYGZhy{}}\PYG{n}{c}  \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{modelflow\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test} \PYG{o}{\PYGZhy{}}\PYG{n}{y}
+\PYG{n}{conda} \PYG{n}{create} \PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{n}{ModelFlow} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{ibh} \PYG{o}{\PYGZhy{}}\PYG{n}{c}  \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{n}{modelflow\PYGZus{}pinned} \PYG{o}{\PYGZhy{}}\PYG{n}{y}
 \PYG{n}{conda} \PYG{n}{activate} \PYG{n}{ModelFlow}
 \PYG{n}{pip} \PYG{n}{install} \PYG{n}{dash\PYGZus{}interactive\PYGZus{}graphviz}
 \PYG{n}{conda} \PYG{n}{install} \PYG{n}{pyeviews} \PYG{o}{\PYGZhy{}}\PYG{n}{c} \PYG{n}{conda}\PYG{o}{\PYGZhy{}}\PYG{n}{forge} \PYG{o}{\PYGZhy{}}\PYG{n}{y}
@@ -945,26 +957,29 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 \subsubsection{Complex and multi\sphinxhyphen{}line math}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:complex-and-multi-line-math}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{p}{\PYGZcb{}}
-\PYG{n}{Y\PYGZus{}t}  \PYG{o}{\PYGZam{}}\PYG{o}{=}  \PYG{n}{C\PYGZus{}t}\PYG{o}{+}\PYG{n}{I\PYGZus{}t}\PYG{o}{+}\PYG{n}{G}\PYG{o}{+}\PYG{n}{t}\PYG{o}{+} \PYG{p}{(}\PYG{n}{X\PYGZus{}t}\PYG{o}{\PYGZhy{}}\PYG{n}{M\PYGZus{}t}\PYG{p}{)} \PYGZbs{}\PYGZbs{}
-\PYG{n}{C\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
-\PYG{n}{I\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
-\PYG{n}{G\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
-\PYG{n}{X\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
-\PYG{n}{M\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c\PYGZus{}t}\PYG{p}{(}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}
-\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{p}{\PYGZcb{}}
+\PYGZbs{}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
+\PYG{n}{Y\PYGZus{}t}  \PYG{o}{\PYGZam{}}\PYG{o}{=}  \PYG{n}{C\PYGZus{}t}\PYG{o}{+}\PYG{n}{I\PYGZus{}t}\PYG{o}{+}\PYG{n}{G\PYGZus{}t}\PYG{o}{+} \PYG{p}{(}\PYG{n}{X\PYGZus{}t}\PYG{o}{\PYGZhy{}}\PYG{n}{M\PYGZus{}t}\PYG{p}{)} \PYGZbs{}\PYGZbs{}
+\PYG{n}{C\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{c}\PYG{p}{(}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{I\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{i}\PYG{p}{(}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{I\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{G\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{g}\PYG{p}{(}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{G\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{X\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{x}\PYG{p}{(}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{X\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{M\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}\PYGZbs{}\PYGZbs{}
+\PYG{n}{M\PYGZus{}t} \PYG{o}{\PYGZam{}}\PYG{o}{=} \PYG{n}{m}\PYG{p}{(}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{M\PYGZus{}}\PYG{p}{\PYGZob{}}\PYG{n}{t}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{n}{C\PYGZus{}t}\PYG{p}{,}\PYG{n}{I\PYGZus{}t}\PYG{p}{,}\PYG{n}{G\PYGZus{}t}\PYG{p}{,}\PYG{n}{X\PYGZus{}t}\PYG{p}{,}\PYG{n}{P\PYGZus{}t}\PYG{p}{,}\PYG{n}{P}\PYG{o}{\PYGZca{}}\PYG{n}{f\PYGZus{}t}\PYG{p}{)}
+\PYGZbs{}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{align}\PYG{o}{*}\PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:d0083a72-ebd5-463d-9a08-97b2f8d9b56c}\begin{align}
-Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
-C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
-I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
-G_t &= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
-X_t &= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
-M_t &= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
-\end{align}
+
+\sphinxAtStartPar
+Also note that markdown interpret the text braced by: \sphinxcode{\sphinxupquote{\textbackslash{}begin\{align*\}}} and \sphinxcode{\sphinxupquote{\textbackslash{}end\{align*\}}} as latex mathematic code.
+\begin{align*}
+Y_t  &=  C_t+I_t+G_t+ (X_t-M_t) \\
+C_t &= c(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
+I_t &= i(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
+G_t &= g(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
+X_t &= x(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
+M_t &= m(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
+\end{align*}
 
 \subsection{links to more info on markdown}
 \label{\detokenize{content/04_PythonEssentials/Intro_Jupyter_notebook:links-to-more-info-on-markdown}}
@@ -3373,9 +3388,8 @@ Growth:
 2023  0.0  1.916279     2.0     2.0
 2024  0.0 \PYGZhy{}2.189501     2.0     2.0
 2025  0.0  2.000000     2.0     2.0
-\end{sphinxVerbatim}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
+
 severity=0.5
 Dataframe:
                A           B      A\PYGZus{}ORIG      B\PYGZus{}ORIG
@@ -6193,6 +6207,26 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \noindent\sphinxincludegraphics{{9af36267e7ae5b677c1055ebb153e1be502bb95ed7042872bcd9bc5af23e2813}.png}
 
 \noindent\sphinxincludegraphics{{2f48a888dc00691549a8ac1ec27169874b5c3b1a75d0480a9fb0ae96cee6522d}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPCN PAKNECONPRVTKN PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{legend}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{0c0b2ccf9ca72579b7fd090afcb740b567128f4304abafd466a302f3afb03920}.png}
+
+\noindent\sphinxincludegraphics{{d08fb769f4ce79ffa668d722e8b70ed4639ed21499e5b3d5f4c1bd06fee897f6}.png}
+
+\noindent\sphinxincludegraphics{{bf5b31f0032c6239b84a7f14deb109f69ff0641c8eafac9882c00d3a8c0e4f37}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 

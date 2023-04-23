@@ -407,12 +407,25 @@ y_t^n  &amp;=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...
 <p>Substituting the variable mnemonics Y,C,I,G,X,M from above a simple model can be written as as a system of 6 equations in 6 unknowns:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-Y_t  &amp;=  C_t+I_t+G+t+ (X_t-M_t) \\
+Y_t  &amp;=  C_t+I_t+G_t+ (X_t-M_t) \\
 C_t &amp;= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &amp;= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
 G_t &amp;= c_t(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
 X_t &amp;= c_t(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
 M_t &amp;= c_t(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
+\end{align*}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ib:I would suggest:</p>
+</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+Y_t  &amp;=  C_t+I_t+G_t+ (X_t-M_t) \\
+C_t &amp;= c(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
+I_t &amp;= i(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
+G_t &amp;= g(G_{t-1},G_{t-2},C_t,I_t,X_t,M_t,P_t)\\
+X_t &amp;= x(X_{t-1},X_{t-2},C_t,I_t,G_t,M_t,P_t,P^f_t)\\
+M_t &amp;= m(M_{t-1},M_{t-2},C_t,I_t,G_t,X_t,P_t,P^f_t)
 \end{align*}\]</div>
 <p>and where <span class="math notranslate nohighlight">\(P_t, P^f_t\)</span> (domestic and foreign prices, respectively) are exogenous in this simple model.</p>
 </section>
