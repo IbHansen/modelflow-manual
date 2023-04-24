@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 19, 2023}
+\date{Apr 20, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -387,6 +387,12 @@ At the end of the process you will have a new conda environment called \sphinxco
 
 \sphinxAtStartPar
 The following sections give a brief introduction to Jupyter notebook, which is a flexible tool that allows us to execute python code, interact with the modelflow class and World Bank Models and annotate what we have done for future replication.
+
+\begin{sphinxadmonition}{note}{note}
+
+\sphinxAtStartPar
+Once installed, a \sphinxcode{\sphinxupquote{modelflow}} environment can be updated by activating the \sphinxcode{\sphinxupquote{modelflow}} environment created above – \sphinxcode{\sphinxupquote{conda activate modelflow}} – and then executing the command: \sphinxcode{\sphinxupquote{conda install modelflow \sphinxhyphen{}c ibh \sphinxhyphen{}\sphinxhyphen{}no\sphinxhyphen{}deps}}.
+\end{sphinxadmonition}
 
 \sphinxstepscope
 
@@ -959,7 +965,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:39ac74b5-30c0-4788-9780-c13aca63f0d3}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:a88a86d2-aaf1-4e0a-a0d4-083986f85813}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -3599,6 +3605,10 @@ The below call creates a new column x.
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3671,6 +3681,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
 2021  100.0  100.0
@@ -3704,6 +3718,10 @@ Below the results of the same operation are assigned to the variable df2 and the
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
                A
 2020  100.000000
@@ -3762,6 +3780,7 @@ By setting equal to \sphinxcode{\sphinxupquote{True}}, mfcalc can be used to exp
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=EXP(LOG(A(\PYGZhy{}1))+0.02)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3804,6 +3823,7 @@ The diff() operator, effectively normalizes to an equation that will add the val
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
 FRML \PYGZlt{}\PYGZgt{} A=A(\PYGZhy{}1)+(2)\PYGZdl{}
 \end{sphinxVerbatim}
 
@@ -3850,6 +3870,10 @@ For example:
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0    0.0
@@ -3899,6 +3923,10 @@ Compare the results above with the results (below) when the two steps are now un
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+* Take care. Lags or leads in the equations, mfcalc run for 2021 to 2022
+\end{sphinxVerbatim}
+
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
           A      X
 2020  100.0  142.0
@@ -4609,43 +4637,6 @@ Return all variables that begin \sphinxcode{\sphinxupquote{PAKNECON}} and end \s
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
-\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
-
-\begin{sphinxuseclass}{cell_input}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{fnmatch}
-
-\PYG{k}{def} \PYG{n+nf}{match\PYGZus{}desc}\PYG{p}{(}\PYG{n}{model}\PYG{p}{,}\PYG{n}{s2Match}\PYG{p}{)}\PYG{p}{:}
-    \PYG{n}{reverse\PYGZus{}des}  \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{v}\PYG{p}{:}\PYG{n}{k} \PYG{k}{for} \PYG{n}{k}\PYG{p}{,}\PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{model}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{o}{.}\PYG{n}{items}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZcb{}}
-    \PYG{n}{list\PYGZus{}des} \PYG{o}{=} \PYG{n}{fnmatch}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{reverse\PYGZus{}des}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{(}\PYG{p}{)}\PYG{p}{,}\PYG{n}{s2Match}\PYG{p}{)}
-    \PYG{n}{list\PYGZus{}var} \PYG{o}{=} \PYG{p}{[}\PYG{n}{reverse\PYGZus{}des}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{list\PYGZus{}des}\PYG{p}{]}
-    \PYG{n}{Results} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{p}{\PYGZcb{}}
-    \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{val} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{list\PYGZus{}var}\PYG{p}{,}\PYG{n}{list\PYGZus{}des}\PYG{p}{)}\PYG{p}{:}
-        \PYG{n}{Results}\PYG{o}{.}\PYG{n}{setdefault}\PYG{p}{(}\PYG{n}{key}\PYG{p}{,}\PYG{n}{val}\PYG{p}{)}
-    \PYG{k}{return} \PYG{n}{Results}
-
-\PYG{k}{def} \PYG{n+nf}{match\PYGZus{}mnem}\PYG{p}{(}\PYG{n}{model}\PYG{p}{,}\PYG{n}{s2Match}\PYG{p}{)}\PYG{p}{:}
-    \PYG{n}{model}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{o}{.}\PYG{n}{items}\PYG{p}{(}\PYG{p}{)}
-    \PYG{n}{list\PYGZus{}des} \PYG{o}{=} \PYG{n}{fnmatch}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{model}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{(}\PYG{p}{)}\PYG{p}{,}\PYG{n}{s2Match}\PYG{p}{)}
-    \PYG{n}{list\PYGZus{}var} \PYG{o}{=} \PYG{p}{[}\PYG{n}{model}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{list\PYGZus{}des}\PYG{p}{]}
-    \PYG{n}{Results} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{p}{\PYGZcb{}}
-    \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{val} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{list\PYGZus{}var}\PYG{p}{,}\PYG{n}{list\PYGZus{}des}\PYG{p}{)}\PYG{p}{:}
-        \PYG{n}{Results}\PYG{o}{.}\PYG{n}{setdefault}\PYG{p}{(}\PYG{n}{key}\PYG{p}{,}\PYG{n}{val}\PYG{p}{)}
-    \PYG{k}{return} \PYG{n}{Results}
-
-\PYG{n}{desc}\PYG{o}{=}\PYG{n}{match\PYGZus{}desc}\PYG{p}{(}\PYG{n}{mpak}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{*GDP*}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{mnems}\PYG{o}{=}\PYG{n}{match\PYGZus{}mnem}\PYG{p}{(}\PYG{n}{mpak}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{PAKNYGDPMKTP*N}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-
-\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}!*GDP*\PYGZsq{}].des \PYGZsh{}returns the des of vars whose description match the string}
-\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}\PYGZsh{}listname\PYGZsq{}].des\PYGZsh{}the descriptions of teh variables in th list}
-\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}PAKNYGDPMKTP*N\PYGZsq{}].des  \PYGZsh{}the descriptions of the mnemonics that matchg}
-
-\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}!*GDP*\PYGZsq{}].desc\PYGZsh{}returns the des of vars whose description match the string}
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimInput}
-
-\end{sphinxuseclass}
 \sphinxAtStartPar
 Return a dictionary comprised of the mnemonics and the descriptions of all the variables that begin \sphinxcode{\sphinxupquote{PAKNECONPRVT}} and end \sphinxcode{\sphinxupquote{N}}, but have one character between the T and the N.
 
@@ -4676,11 +4667,24 @@ Return a list of the full description  all the variables that have the word GDP 
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{} Not yet released}
-\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}!*GDP*\PYGZsq{}].des}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{!*GDP*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+PAKNYGDPFCSTKN        : GDP Factor Cost Local Currency units Volumes National base year
+PAKNYGDPFCSTXN\PYGZus{}A      : Add factor:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}D      : Fix dummy:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}FITTED : Fitted  value:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}X      : Fix value:PAKNYGDPFCSTXN
+PAKNYGDPMKTPCN        : GDP, Market Prices, LCU mn
+PAKNYGDPMKTPKN        : Real GDP
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
@@ -4690,7 +4694,7 @@ Return a dictionary comprised of the variable name and description if all variab
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{}Functionality not yet activated.}
+\PYG{c+c1}{\PYGZsh{} Not yet available}
 \PYG{c+c1}{\PYGZsh{}mylist=[\PYGZsq{}PAKNECONPRVTKN\PYGZsq{},\PYGZsq{}PAKNECONGOVTKN\PYGZsq{},\PYGZsq{}PAKNEGDIFTOTKN\PYGZsq{},\PYGZsq{}PAKNEEXPGNGSKN\PYGZsq{},\PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}]}
 \PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}\PYGZsh{}mylist\PYGZsq{}].des}
 \end{sphinxVerbatim}
@@ -4791,7 +4795,7 @@ The \sphinxcode{\sphinxupquote{mpak{[}'PAKNECONPRVTKN'{]}.eviews}} command retur
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}\PYGZsh{} This command not yet released, un comment when available.}
-\PYG{c+c1}{\PYGZsh{}\PYGZsh{}mpak.PAKNECONPRVTKN.eviews}
+\PYG{c+c1}{\PYGZsh{}mpak.PAKNECONPRVTKN.eviews}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -5059,13 +5063,13 @@ file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYG
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-As noted when, as was the case of the load, the model is solved without changing any inputs the model should return (reproduce) exactly the same data as before{[}\textasciicircum{}fn2{]}.  To test this for \sphinxcode{\sphinxupquote{mpak}} we can compare the results from the simulation using the \sphinxcode{\sphinxupquote{basedf}} and \sphinxcode{\sphinxupquote{lastdf}} DataFrames.
+As noted, when the model is solved without changing any inputs (as was the case of the load) the model should return (reproduce) exactly the same data as before{[}\textasciicircum{}fn2{]}.  To test this for \sphinxcode{\sphinxupquote{mpak}} the results from the simulation can be compared by using the \sphinxcode{\sphinxupquote{basedf}} and \sphinxcode{\sphinxupquote{lastdf}} DataFrames.
 
 \sphinxAtStartPar
 {[}\textasciicircum{}fn2:{]} If it does not, the model has violated he principle of reproducibility and there is something wrong (usually one of the identities does not hold).
 
 \sphinxAtStartPar
-Below the percent difference between in the values of the variables for real GDP and Consumer demand  in the two \sphinxcode{\sphinxupquote{dataframes}} \sphinxcode{\sphinxupquote{.basedf}} and \sphinxcode{\sphinxupquote{lastdf}} is zero following a simulation where the inputs were not changed is zero.
+Below, the percent difference between the values of the variables for real GDP and Consumer demand in the two \sphinxcode{\sphinxupquote{dataframes}} \sphinxcode{\sphinxupquote{.basedf}} and \sphinxcode{\sphinxupquote{lastdf}} is zero following a simulation where the inputs were not changed – confirming the reproduction of results.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5124,22 +5128,22 @@ A mixed shock of a behavioural variable, achieved by temporarily exogenixing the
 \end{enumerate}
 
 \sphinxAtStartPar
-Although technically modelflow would allow us to shock identities, that would violate their nature as accounting rules so we exclude this possibility.
+Although technically modelflow would allow us to shock identities, that would violate their nature as accounting rules. \sphinxstylestrong{Effectively such a shock would break the economic sense of the model.}
+
+\sphinxAtStartPar
+As a result, this we possibility is not discussed.
 
 
 \subsection{A shock to an exogenous variable}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:a-shock-to-an-exogenous-variable}}
 \sphinxAtStartPar
-A World Bank model will reproduce the same values if inputs (exogenous variables) are not changed.  In the simulation below we change the oil price increasing it by \$25 for the three years between 2025 and 2027 inclusive.
+A World Bank model will reproduce the same values if inputs (exogenous variables) are not changed.  In the simulation below, the oil price is changed – increasing by \$25 for the three years between 2025 and 2027 inclusive.
 
 \sphinxAtStartPar
-To do this we first create a new input dataframe with the revised data.
+As a first step a new input dataframe is created as a copy of the original and then the oil price in that data frame is modified using the \sphinxcode{\sphinxupquote{mfcalc}} method to change the value for the three years in question.
 
 \sphinxAtStartPar
-Then we use the \sphinxcode{\sphinxupquote{mfcalc}} method to change the value for the three years in question.
-
-\sphinxAtStartPar
-Finally we do a but of pandas math to display the initial value, the changed value and the difference between the two, confirming that the mfcalc statement did what we hoped.
+Finally pandas math is used to display the initial value, the changed value and the difference between the two, confirming that the mfcalc statement revised the oil price data.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5178,26 +5182,33 @@ Finally we do a but of pandas math to display the initial value, the changed val
 \subsubsection{Running the simulation}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:running-the-simulation}}
 \sphinxAtStartPar
-Having created a new dataframe comprised of all the old data plus the changed data for the oil price we can execute the simulation.  In the command below, the simulation is run from 2020 to 2040, using the oilshockdf as the input dataframe.  The results of the simulation will be put into a new dataframe \sphinxcode{\sphinxupquote{ExogOilSimul}}.  The \sphinxcode{\sphinxupquote{Keep}} command ensures that the mpak model object stores (keeps) a copy of the results identified by the text name \sphinxstyleemphasis{‘\$25 increase in oil prices 2025\sphinxhyphen{}27’}.
+Having created a new dataframe comprised of all the old data plus the changed data for the oil price, a simulation can now be run.
+
+\sphinxAtStartPar
+In the command below, the simulation is run from 2020 to 2040, using the \sphinxcode{\sphinxupquote{oilshockdf}} as the input \sphinxcode{\sphinxupquote{DataFrame}}.  The results of the simulation are assigned to a new \sphinxcode{\sphinxupquote{DataFrame}}  named \sphinxcode{\sphinxupquote{ExogOilSimul}}.  The \sphinxcode{\sphinxupquote{Keep}} command ensures that the mpak model object stores (keeps) a copy of the results identified by the text name \sphinxstyleemphasis{‘\$25 increase in oil prices 2025\sphinxhyphen{}27’}.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{ExogOilSimul} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{oilshockdf}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}25 increase in oil prices 2025\PYGZhy{}27}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} simulates the model }
+\PYG{c+c1}{\PYGZsh{}Simulate the model }
+\PYG{n}{ExogOilSimul} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{oilshockdf}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}25 increase in oil prices 2025\PYGZhy{}27}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} 
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 
 \end{sphinxuseclass}
-\sphinxAtStartPar
-Using the \sphinxcode{\sphinxupquote{modelflow}} visualization tools we can see the impacts of the shock; as a print out; as charts and within Jupyter notebook as an interactive widget.
-
 
 \paragraph{Results}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:results}}
 \sphinxAtStartPar
-The display below confirms that the shock we wanted to introduce was executed. The \sphinxcode{\sphinxupquote{dif.df}} method returns the difference between the \sphinxcode{\sphinxupquote{.lastdf}} and \sphinxcode{\sphinxupquote{.basedf}} values of the selected variable(s) as a \sphinxcode{\sphinxupquote{dataframe}}. The with \sphinxcode{\sphinxupquote{mpak.set\_smpl(2020,2030):}} clauses temporarily restricts the sample period over which the following \sphinxstylestrong{indented} commands are executed.  Alternatively the \sphinxcode{\sphinxupquote{mpak.smpl(2020,2030)}}could be used. This would restricts the time period of over which \sphinxstylestrong{all} subsequent commands are executed.
+\sphinxcode{\sphinxupquote{ModelFlow}} tools can be used to visualize the impacts of the shock; as a print out; as charts and within Jupyter notebook as an interactive widget.
+
+\sphinxAtStartPar
+The display below confirms that the shock was executed as desired. The \sphinxcode{\sphinxupquote{dif.df}} method returns the difference between the \sphinxcode{\sphinxupquote{.lastdf}} and \sphinxcode{\sphinxupquote{.basedf}} values of the selected variable(s) as a \sphinxcode{\sphinxupquote{DataFrame}}. The \sphinxcode{\sphinxupquote{with mpak.set\_smpl(2020,2030):}} clause temporarily restricts the sample period over which the following \sphinxstylestrong{indented} commands are executed.
+
+\sphinxAtStartPar
+Alternatively the \sphinxcode{\sphinxupquote{mpak.smpl(2020,2030)}}could be used. This would restricts the time period of over which \sphinxstylestrong{all} subsequent commands are executed.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5230,7 +5241,7 @@ The display below confirms that the shock we wanted to introduce was executed. T
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-Below we look at the impact of this change on a few variables, expressed as a percent deviation of the variable from its pre\sphinxhyphen{}shock level.
+Below the impact of this change on a few variables are expressed graphically and in a table.
 
 \sphinxAtStartPar
 The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s real GDP, the second \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}} is real consumption and the third is the Consumer price deflator \sphinxcode{\sphinxupquote{PAKNECONPRVTXN}}.
@@ -5246,7 +5257,12 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_15_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_15_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5291,10 +5307,16 @@ The first variable \sphinxcode{\sphinxupquote{PAKNYGDPMKTPKN}} is Pakistan’s r
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-The graphs show the change in the level as a percent of the previous level. They suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 0.9 percent, that the impact would diminish by the third year to \sphinxhyphen{}.64 percent, and then turn positive in the fourth year when the price effect was eliminated.The negative impact would on household consumption would be stronger but follow a similar pattern.  The reason that the GDP impact is smaller, is partly because of the impact on imports which decline strongly.  Because imports enter into the GDP identity with a negative sign, lower imports actually increase aggregate GDP.
+The graphs show the change in the level as a percent of the previous level. They suggest that a temporary \$25 oil price hike would reduce GDP in the first year by about 0.9 percent, that the impact would diminish by the third year to \sphinxhyphen{}.64 percent, and then turn positive in the fourth year when the price effect was eliminated.
 
 \sphinxAtStartPar
-Finally as could be expected prices rise sharply initially with higher oil prices, but as the slow down in growth is felt, inflationary pressures turn negative and the overall impact on the price level turns negative.  The graph and table above shows what is happening to the \sphinxstylestrong{price level}. To see the impact on inflation (the rate of growth of prices) requires a separate graph using \sphinxcode{\sphinxupquote{difpct.mul100}}, which shows the change in the rate of growth of variables where the growth rate is expressed as a per cent.
+The impacts on household consumption are stronger but follow a similar pattern.
+
+\sphinxAtStartPar
+The GDP impact is smaller partly because the decline in domestic demand reduces imports.  Because imports enter into the GDP identity with a negative sign. Therefore a reduction in imports actually increase aggregate GDP – or in this case partially offsets the declines coming from reduced consumption (and investment).
+
+\sphinxAtStartPar
+Finally as could be expected, initially prices rise sharply with higher oil prices. However, as the slow down in growth is felt, inflationary pressures turn negative and the overall impact on the price level turns negative.  The graph and table above shows what is happening to the \sphinxstylestrong{price level}. To see the impact on inflation (the rate of growth of prices), a separate graph can be generated using \sphinxcode{\sphinxupquote{difpct.mul100}}, which shows the change in the rate of growth of variables where the growth rate is expressed as a per cent \(\bigg[\bigg(\frac{x^{shock}_t}{x^{shock}_{t-1}}-1\bigg)\) \( - \bigg(\frac{x^{baseline}_t}{x^{baseline}_{t-1}}-1\bigg)\Bigg]*100\).
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5307,7 +5329,12 @@ Finally as could be expected prices rise sharply initially with higher oil price
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_18_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_18_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5316,31 +5343,39 @@ Finally as could be expected prices rise sharply initially with higher oil price
  Ib how come this graph shows up so small.  How can we affect its size?
 
 \sphinxAtStartPar
-This view, gives a more nuanced result.  Inflation spikes initially by about 1.2 percent, but falls below its pre\sphinxhyphen{}shock level as the influence of the slowdown weighs on the lagged effect of higher oil prices. In 2028 when oil prices drop back to their previous level this adds to the dis\sphinxhyphen{}inflationary forces in the economy at first, but the boost to demand from lower prices soon translates into an acceleration in growth and higher inflation.
+This view, gives a more nuanced result.  The inflation rate increases initially by about 1.2 percentage points, but falls compared with the baseline below in the 2026\sphinxhyphen{}2027 period as the as the influence of the slowdown in GDP more than offsets the continued inflationary impetus from the lagged increase in oil prices. In 2028, when oil prices drop back to their previous level, there is an additional dis\sphinxhyphen{}inflationary force and sharp drop in inflation as compared with the baseline. Overtime, the boost to demand from lower prices translates into an acceleration in growth and a return of inflation back to its trend rate.
 
 
 \subsection{An exogenous shock to a Behavioural variable}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:an-exogenous-shock-to-a-behavioural-variable}}
 \sphinxAtStartPar
-Behavioural equations can be de\sphinxhyphen{}activated by exogenizing them, either for the entire simulation period, or for a selected sub period.  In this example we exogenize consumption for the entire simulation period.
+Behavioural equations can be de\sphinxhyphen{}activated by exogenizing them, either for the entire simulation period, or for a selected sub period.  In this example, consumption is exogenized for the entire simulation period.
 
 \sphinxAtStartPar
-To motivate the simulation, assume that a change in weather patterns has increased the number of sunny days by 10 percent. This increases households happiness and therefore causes them to permanently increase their spending by 2.5\% beginning in 2025.
+To motivate the simulation, it is assumed that a change in weather patterns has increased the number of sunny days by 10 percent. This increases households happiness and causes them to permanently increase their spending by 2.5\% beginning in 2025.
 
 \sphinxAtStartPar
-Such a shock can be specified either manually or use the method \sphinxcode{\sphinxupquote{.fix()}}. Below the simpler \sphinxcode{\sphinxupquote{.fix()}} method is used, but the equivalent manual steps performed by \sphinxcode{\sphinxupquote{.fix()}} are also explained.
+Such a shock can be specified either manually or by using the\sphinxcode{\sphinxupquote{.fix()}} method. Below the simpler \sphinxcode{\sphinxupquote{.fix()}} method is used, but the equivalent manual steps performed by \sphinxcode{\sphinxupquote{.fix()}} are also explained.
 
 \sphinxAtStartPar
-To exogenize \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}} for the entire simulation period, initially a new \sphinxcode{\sphinxupquote{DataFrame}} is created as a slightly modified version of  \sphinxcode{\sphinxupquote{mpak.basedf}}.
+To exogenize \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}} for the entire simulation period, initially a new \sphinxcode{\sphinxupquote{DataFrame}} \sphinxcode{\sphinxupquote{Cfixed}} is created as a slightly modified version of  \sphinxcode{\sphinxupquote{mpak.basedf}} using the \sphinxcode{\sphinxupquote{.fix()}} command.
 
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{Cfixed=mpak.fix(mpak.basedf,PAKNECONPRVTKN)}}
 
 \sphinxAtStartPar
-This does two things, that could have been done manually.  First it sets the dummy variable \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_D=1}} for the entire simulation period – effectively transforming the equation to \sphinxcode{\sphinxupquote{PAKNECONPRVTKN=PAKNECONPRVTKN\_X}}.  Then it sets the variable \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_X}} in the \sphinxcode{\sphinxupquote{Cfixed}} dataframe equal to the value of \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}} in the \sphinxcode{\sphinxupquote{basedf}} \sphinxcode{\sphinxupquote{.DataFrame}}. All the other variables are  just copies of their values in \sphinxcode{\sphinxupquote{.basedf}}.
+This does two things, that could have been done manually.  First it sets the dummy variable \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_D=1}} for the entire simulation period. Recall the consumption equation like all behavioural equations of World Banjk models implemented in \sphinxcode{\sphinxupquote{ModelFlow}}is expressed in tow parts.
+\begin{equation*}
+\begin{split} cons= (1-cons_D)*\bigg[C'(X)\bigg] + cons_d*cons_x\end{split}
+\end{equation*}
+\sphinxAtStartPar
+When \(cons_D=1\) the first part (as it does in this scenario) the equation evaluate to zero and consumption is equal to (1)* \(cons_x\).  If instead (which would be the normal case \(cons_d\) were set to zero. the the equation would simplify to \( cons= C'(X) \)
 
 \sphinxAtStartPar
-With \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_D=1}} throughout the normal behavioral equation is effectively de\sphinxhyphen{}activated or exogenized.
+Then \sphinxcode{\sphinxupquote{.fix()}} method then sets the variable \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_X}} in the \sphinxcode{\sphinxupquote{Cfixed}} dataframe equal to the value of \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}} in the \sphinxcode{\sphinxupquote{basedf}} \sphinxcode{\sphinxupquote{.DataFrame}}. All the other variables are  just copies of their values in \sphinxcode{\sphinxupquote{.basedf}}.
+
+\sphinxAtStartPar
+With \sphinxcode{\sphinxupquote{PAKNECONPRVTKN\_D=1}} throughout the normal behavioral equation is effectively de\sphinxhyphen{}activated or exogenized … \(PAKNECONPRVTKN=PAKNECONPRVTKN_X\).
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5370,10 +5405,13 @@ The \sphinxcode{\sphinxupquote{.upd()}} method can be used to implement the assu
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataFrame to the mpak model solve routine.
+To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataFrame is input to the \sphinxcode{\sphinxupquote{mpak}} model solve routine.
 
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{CFixedRes = mpak(Cfixed,2020,2040,keep='2.5\% increase in C 2025\sphinxhyphen{}40') }}
+\sphinxcode{\sphinxupquote{CFixedRes = mpak(Cfixed,2020,2040,keep='2.5\% increase in C 2025\sphinxhyphen{}40 (fix)')}}
+
+\sphinxAtStartPar
+And then the results can be examined graphically as before.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5387,7 +5425,12 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_25_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_26_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5435,49 +5478,27 @@ To perform the simulation, the revised \sphinxcode{\sphinxupquote{CFixed}} DataF
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-The permanent rise in consumption by 2.5 percent causes a temporary increase in GDP of close to 2\% (1.86). Higher imports tend to diminish the effect on GDP, while over time higher prices due to the inflationary pressures caused by the additional demand cause the GDP impact to diminish to close to less than 1 percent by 2040.
+The permanent rise in consumption by 2.5 percent causes a temporary increase in GDP of close to 2\% (1.86). Higher imports tend to diminish the effect on GDP. Over time higher prices due to the inflationary pressures caused by the additional demand cause the GDP impact to diminish to close to less than 1 percent by 2040.
 
 
 \subsection{Temporarily exogenize a behavioural variable}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:temporarily-exogenize-a-behavioural-variable}}
 \sphinxAtStartPar
-The third method of formulating a scenario involves temporarily exogenizing a variable.    The methodology is the same except the period for which the variable is exogenized is different.
+The third method of formulating a scenario involves temporarily exogenizing a variable. The methodology is the same except the period for which the variable is exogenized is different.
 
-\sphinxAtStartPar
-To fully explore the differences in the approaches, three scenarios are executed.
-\begin{enumerate}
-\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
-\item {} 
-\sphinxAtStartPar
-Exogenizes the variable for the whole period, but shock it for three years (2025\sphinxhyphen{}2027). Afterwards, the level of consumption falls to (and is frozen at) its pre\sphinxhyphen{}shock levels.
-
-\item {} 
-\sphinxAtStartPar
-Exogenizes the variable for the whole period, but shock it for three years (2025\sphinxhyphen{}2027). On this occasion the –kg option is used to hold \sphinxstylestrong{the growth rates} of the exogenized variable the same in the post\sphinxhyphen{}shock period.
-
-\item {} 
-\sphinxAtStartPar
-Exogenizes the variable only for the period during period that the dependent variable is shocked (2025\sphinxhyphen{}2027). Afterwards the consumption equation is activated and determines the path of post\sphinxhyphen{}shock consumption.
-
-\end{enumerate}
-
-
-\subsubsection{Temporary shock exogenized for the whole period}
-\label{\detokenize{content/06_WBModels/ScenarioAnalysis:temporary-shock-exogenized-for-the-whole-period}}
 \sphinxAtStartPar
 Here the set up is basically the same as before.
-
-\sphinxAtStartPar
-mpak.smpl() \# reset the active sample period to the full model.
-Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{smpl}\PYG{p}{(}\PYG{p}{)}                                                            \PYG{c+c1}{\PYGZsh{} reset the active sample period to the full model.}
-\PYG{n}{CTempExogAll}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{fix}\PYG{p}{(}\PYG{n}{bline}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONPRVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}                          \PYG{c+c1}{\PYGZsh{} create a copy of the bline DataFrame, but setting the PAKNECONPRVTKN\PYGZus{}D variable to 1 for the period 2025 through 2027}
-\PYG{n}{CTempExogAll}\PYG{o}{=}\PYG{n}{CTempExogAll}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2025 2027\PYGZgt{} PAKNECONPRVTKN\PYGZus{}X * 1.025}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} multiply the exogenized value of consumption by 2.5\PYGZpc{} for 2025 through 2027}
+\PYG{c+c1}{\PYGZsh{}reset the active sample period to the full period}
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{smpl}\PYG{p}{(}\PYG{p}{)}                                  
+\PYG{c+c1}{\PYGZsh{} create a copy of the bline DataFrame, but setting the PAKNECONPRVTKN\PYGZus{}D variable to 1 for the period 2025 through 2027}
+\PYG{n}{CTempExogAll}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{fix}\PYG{p}{(}\PYG{n}{bline}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONPRVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} 
+\PYG{c+c1}{\PYGZsh{} multiply the exogenized value of consumption by 2.5\PYGZpc{} for 2025 through 2027}
+\PYG{n}{CTempExogAll}\PYG{o}{=}\PYG{n}{CTempExogAll}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2025 2027\PYGZgt{} PAKNECONPRVTKN\PYGZus{}X * 1.025}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}  
 
 \PYG{c+c1}{\PYGZsh{}Solve the model}
 \PYG{n}{CTempXAllRes} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{CTempExogAll}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} simulates the model }
@@ -5488,7 +5509,12 @@ Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_29_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_30_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5497,11 +5523,11 @@ Cfixed=mpak.fix(baseline,’PAKNECONPRVTKN’)
 The results are quite different.  GDP is boosted initially as before but when consumption drops back to its pre\sphinxhyphen{}shock level, GDP and imports decline sharply.
 
 \sphinxAtStartPar
-Prices (and inflation) are higher initially but when the economy starts to slow after 2025 prices start to fall (disinflation).
+Prices (and inflation) are higher initially but when the economy starts to slow after 2025 prices actually fall (deflation). While prices are falling, the level of prices remains higher at the end of the simulation.
 
 
 \subsubsection{Temporary shock exogenized for the whole period}
-\label{\detokenize{content/06_WBModels/ScenarioAnalysis:id1}}
+\label{\detokenize{content/06_WBModels/ScenarioAnalysis:temporary-shock-exogenized-for-the-whole-period}}
 \sphinxAtStartPar
 This scenario is the same as the previous, but this time the \sphinxcode{\sphinxupquote{\sphinxhyphen{}\sphinxhyphen{}KG}} (keep\_growth) option is used to maintain the pre\sphinxhyphen{}shock growth rates of consumption in the post\sphinxhyphen{}shock period.  Effectively this is the same as a permanent increase in the level of consumption by 2.5\% because the final shocked value of consumption (which was 2.5\% higher then its pre\sphinxhyphen{}shock level) is grown at the same pre\sphinxhyphen{}shock rate – ensuring that all post\sphinxhyphen{}shock variables are also up by 2.5\%.
 
@@ -5516,7 +5542,7 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{}Now we solve the model}
-\PYG{n}{CTempXAllResKG} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{CTempExogAllKG}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}keep\PYGZus{}growth=True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} simulates the model }
+\PYG{n}{CTempXAllResKG} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{CTempExogAllKG}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}KG=True}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} simulates the model }
 \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNEIMPGNFSKN PAKNECONPRVTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{2.5}\PYG{l+s+s2}{\PYGZpc{}}\PYG{l+s+s2}{ boost to cons 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{}kg=True}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
@@ -5524,7 +5550,12 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_32_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_33_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -5533,10 +5564,31 @@ This scenario is the same as the previous, but this time the \sphinxcode{\sphinx
 \subsection{Exogenize the variable only for the period during which it is shocked}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:exogenize-the-variable-only-for-the-period-during-which-it-is-shocked}}
 \sphinxAtStartPar
-This is version of our scenario introduces a subtle but import difference.  Here we will exogenize the variable, again using the fix syntax. But this time we will exogonize it only for the period where the variable is shocked.
+This scenario introduces a subtle but import difference.  Here we the variable is again exogenized using the fix syntax. But this time it is exogonized only for the period where the variable is shocked.
 
 \sphinxAtStartPar
-What this means is that the consumption function will be de\sphinxhyphen{}actvated for only three years (instead of the whole period as in the previous examples).  As a result, the values consumption take in 2028, 2029, … 2040 will depend on the model, not the level it was set to when exogenized (which was the case in the 3 previous versions).
+This means that the consumption function will be de\sphinxhyphen{}activated for only three years (instead of the whole period as in the previous examples).  As a result, the values that consumption takes in 2028, 2029, … 2040 depend on the model, not the level it was set to when exogenized (which was the case in the 3 previous versions).
+
+\sphinxAtStartPar
+Looking at the maths of the model the consumption equation is effectively split into two.
+
+\sphinxAtStartPar
+for the period before 2025 \(cons_d=0\) and the consumption equation simplifies to:
+
+\sphinxAtStartPar
+\(cons=C(X)\)
+
+\sphinxAtStartPar
+for the period 2025\sphinxhyphen{}2028 it is exogenized (\(cons_d=1\)) so it simplifies to:
+
+\sphinxAtStartPar
+\(cons=cons_x\)
+
+\sphinxAtStartPar
+but in the final period 2028\sphinxhyphen{}2040 (\(cons_d=0\)) and the equation reverts to:
+
+\sphinxAtStartPar
+\(cons=C(X)\)
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5555,13 +5607,18 @@ What this means is that the consumption function will be de\sphinxhyphen{}actvat
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_34_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_35_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-These results have subtle differences compared with the previous.  The most obvious is visible in looking at the graph for Consumption.  Rather than reverting immediately to its earlier pre\sphinxhyphen{}shock level, it falls more gradually, actually overshoots (falls below its earlier level) and then gradually returns to its pre\sphinxhyphen{}shock level.  That is because unlike in the previous shocks, its path is being determined endogenously and reacting to changes elsewhere in the model, notably changes to prices, wages and government spending.
+These results have subtle differences compared with the previous.  The most obvious is visible in looking at the graph for Consumption.  Rather than reverting immediately to its earlier pre\sphinxhyphen{}shock level, it falls more gradually and actually overshoots (falls below its earlier level), before returning slowly to its pre\sphinxhyphen{}shock level.  That is because unlike in the previous shocks, its path is being determined endogenously and reacting to changes elsewhere in the model, notably changes to prices, wages and government spending as well as the lagged level of consumption.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -5603,7 +5660,7 @@ Percent difference: 0.04
 Add factors are a crucial element of the macromodels of the World Bank and serve multiple purposes.
 
 \sphinxAtStartPar
-In simulation, add\sphinxhyphen{}factors allow simulations to be conducted \sphinxstylestrong{without} de\sphinxhyphen{}activating behavioural equations.  As such, they are often referred to as \sphinxstylestrong{endogenous} shocks (versus an exogenous shock).
+In simulation, add\sphinxhyphen{}factors allow simulations to be conducted \sphinxstylestrong{without} de\sphinxhyphen{}activating behavioural equations.  Such shocks are often referred to as \sphinxstylestrong{endogenous} shocks because the equation of the behavioural variable that is shocked remains  active throughout.
 
 \sphinxAtStartPar
 In some ways they are very similar to a temporary exogenous shock. Both ways of producing the shock allow the shocked variable to respond endogenously in the period after the shock.  The main difference between the two approaches is that:
@@ -5618,7 +5675,7 @@ This approach makes most sense for “animal spirits”, shocks where the underl
 
 \item {} 
 \sphinxAtStartPar
-Also makes sense when actions of one part of an aggregate is likely to impact behaviour of other sectors within an aggregate
+It also makes sense when actions of one part of an aggregate is likely to impact behaviour of other sectors within an aggregate
 
 \item {} 
 \sphinxAtStartPar
@@ -5646,7 +5703,7 @@ Changes in government spending policy, something that is often largely an econom
 \subsubsection{Simulating the impact of a planned investment}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:simulating-the-impact-of-a-planned-investment}}
 \sphinxAtStartPar
-The below simulation uses the add\sphinxhyphen{}factor to simulate the impact of a 3 year investment  program of 1 percent of GDP per year, beginning in 2025, being financed through foreign direct investment.  The add\sphinxhyphen{}factor approach is chosen because the additional investment is likely to increase demand for the products of other firms and have important knock on effects for investment as well as other components of demand.
+The below simulation uses the add\sphinxhyphen{}factor to simulate the impact of a 3 year investment  program beginning in 2025 of 1 percent of GDP per year, that is financed through an increase in foreign direct investment. This might reflect a specific large scale plant that is being constructed due to a deal reached by the government with a foreign manufacturer.  The add\sphinxhyphen{}factor approach is chosen because the additional investment is likely to increase demand for the products of other firms, which is likely to incite them to add to their investments as well.
 
 
 \paragraph{How to translate the economic shock into a model shock}
@@ -5703,7 +5760,7 @@ Above we identified the shock as to be a 1 percent of GDP increase in FDI that f
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{*FB*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{*NY*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -5711,10 +5768,46 @@ Above we identified the shock as to be a 1 percent of GDP increase in FDI that f
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-WLDFBANANA\PYGZus{}US            : TEMP
-WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010 : WLDFBANANA\PYGZus{}US\PYGZus{}VALUE\PYGZus{}2010
-WLDFBEEF                 : TEMP
-WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010      : WLDFBEEF\PYGZus{}VALUE\PYGZus{}2010
+PAKNYGDPDISCCN            : PAKNYGDPDISCCN
+PAKNYGDPDISCKN            : PAKNYGDPDISCKN
+PAKNYGDPFCSTCN            : GDP Factor Cost Local Currency units Volumes National base year
+PAKNYGDPFCSTKN            : GDP Factor Cost Local Currency units Volumes National base year
+PAKNYGDPFCSTXN            : PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}A          : Add factor:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}D          : Fix dummy:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}FITTED     : Fitted  value:PAKNYGDPFCSTXN
+PAKNYGDPFCSTXN\PYGZus{}X          : Fix value:PAKNYGDPFCSTXN
+PAKNYGDPGAP\PYGZus{}              : PAKNYGDPGAP\PYGZus{}
+PAKNYGDPMKTPCD            : PAKNYGDPMKTPCD
+PAKNYGDPMKTPCN            : GDP, Market Prices, LCU mn
+PAKNYGDPMKTPCN\PYGZus{}VALUE\PYGZus{}2010 : PAKNYGDPMKTPCN\PYGZus{}VALUE\PYGZus{}2010
+PAKNYGDPMKTPKD            : PAKNYGDPMKTPKD
+PAKNYGDPMKTPKN            : Real GDP
+PAKNYGDPMKTPKN\PYGZus{}VALUE\PYGZus{}2010 : PAKNYGDPMKTPKN\PYGZus{}VALUE\PYGZus{}2010
+PAKNYGDPMKTPXN            : PAKNYGDPMKTPXN
+PAKNYGDPPOTLKN            : PAKNYGDPPOTLKN
+PAKNYGDPTFP               : Total factor productivity
+PAKNYTAXNINDCN            : PAKNYTAXNINDCN
+PAKNYTAXNINDKN            : PAKNYTAXNINDKN
+PAKNYWBFORMSH             : PAKNYWBFORMSH
+PAKNYWBINFMSH             : PAKNYWBINFMSH
+PAKNYWRTFORMCN            : PAKNYWRTFORMCN
+PAKNYWRTFORMCN\PYGZus{}A          : Add factor:PAKNYWRTFORMCN
+PAKNYWRTFORMCN\PYGZus{}D          : Fix dummy:PAKNYWRTFORMCN
+PAKNYWRTFORMCN\PYGZus{}FITTED     : Fitted  value:PAKNYWRTFORMCN
+PAKNYWRTFORMCN\PYGZus{}X          : Fix value:PAKNYWRTFORMCN
+PAKNYWRTINFMCN            : PAKNYWRTINFMCN
+PAKNYWRTINFMCN\PYGZus{}A          : Add factor:PAKNYWRTINFMCN
+PAKNYWRTINFMCN\PYGZus{}D          : Fix dummy:PAKNYWRTINFMCN
+PAKNYWRTINFMCN\PYGZus{}FITTED     : Fitted  value:PAKNYWRTINFMCN
+PAKNYWRTINFMCN\PYGZus{}X          : Fix value:PAKNYWRTINFMCN
+PAKNYWRTTOTLCN            : PAKNYWRTTOTLCN
+PAKNYYGOSOTLCN            : PAKNYYGOSOTLCN
+PAKNYYWBFORMCN            : PAKNYYWBFORMCN
+PAKNYYWBINFMCN            : PAKNYYWBINFMCN
+PAKNYYWBINFMCN\PYGZus{}           : PAKNYYWBINFMCN\PYGZus{}
+PAKNYYWBTOTLCN            : PAKNYYWBTOTLCN
+PAKNYYWBTOTLCN\PYGZus{}           : Labor Share of Income
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5771,6 +5864,7 @@ Use the .eviews command or .original command to identify the functional forms if
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} This needs to be rewritten to use the eviews expression when published}
 \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{frml}
 \end{sphinxVerbatim}
 
@@ -5789,25 +5883,26 @@ PAKNEGDIFPRVKN : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNEGDIFPRVKN = (PAKNEGDIFPRVKN\P
 \paragraph{Calculate the size of the required add factor shock}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:calculate-the-size-of-the-required-add-factor-shock}}
 \sphinxAtStartPar
-The shock to be executed is 1 percent of GDP.
+The shock to be executed is 0.5 percent of GDP.
 
 \sphinxAtStartPar
 It is assumed that the financing will come from FDI and that all the money will be spent in one year on private investment.
 
 \sphinxAtStartPar
-The private investment equation is a growth rate equation, therefore the add\sphinxhyphen{}factor needs to be shocked by adding 1 percent of GDP to private investment in 2028 divided by private investment in 2027
+The private investment equation is written as a share of the capital stock.  Therefore, the add\sphinxhyphen{}factor needs to be shocked by adding 1 percent of GDP to private investment in 2028 divided by the capital stock in 2028.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}Create a DataFrame AFShock that is equal tothe baseline}
 \PYG{n}{AFShock}\PYG{o}{=}\PYG{n}{bline}
 
-\PYG{l+m+mf}{0.01}\PYG{o}{*}\PYG{p}{(}\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2020}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{/}\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2019}\PYG{p}{:}\PYG{l+m+mi}{2029}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
-
-
+\PYG{c+c1}{\PYGZsh{}Display the level of the AF}
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Pre shock levels}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2025}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN\PYGZus{}A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2025}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN\PYGZus{}A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIKSTKKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{}print(AFShock.loc[2025:2030,\PYGZsq{}PAKNEGDIFPRVKN\PYGZsq{}]/AFShock.loc[2025:2030,\PYGZsq{}PAKNYGDPMKTPKN\PYGZsq{}]*100)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -5819,23 +5914,26 @@ Pre shock levels
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2025   \PYGZhy{}0.000458
-2026   \PYGZhy{}0.000389
-2027   \PYGZhy{}0.000331
-2028   \PYGZhy{}0.000281
-2029   \PYGZhy{}0.000239
-2030   \PYGZhy{}0.000203
-Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
+      PAKNEGDIFPRVKN\PYGZus{}A  PAKNEGDIFPRVKN  PAKNEGDIKSTKKN
+2025         \PYGZhy{}0.000458    1.602854e+06    4.730392e+07
+2026         \PYGZhy{}0.000389    1.581104e+06    4.814879e+07
+2027         \PYGZhy{}0.000331    1.569541e+06    4.900980e+07
+2028         \PYGZhy{}0.000281    1.569141e+06    4.989869e+07
+2029         \PYGZhy{}0.000239    1.580577e+06    5.082694e+07
+2030         \PYGZhy{}0.000203    1.604394e+06    5.180590e+07
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+Below the mfcalc routine is used to set the addfactor variable equal to its previous value plus the equivalent of 1 percent of GDP when expressed as a percent of the previous period’s level of private investment.
+
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{AFShock}\PYG{o}{=}\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2028 2028\PYGZgt{} PAKNEGDIFPRVKN\PYGZus{}A = PAKNEGDIFPRVKN\PYGZus{}A + .00005*(PAKNYGDPMKTPKN/PAKNEGDIFPRVKN(\PYGZhy{}1))}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{AFShock}\PYG{o}{=}\PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2028 2028\PYGZgt{} PAKNEGDIFPRVKN\PYGZus{}A = PAKNEGDIFPRVKN\PYGZus{}A + (.01*PAKNYGDPMKTPKN/PAKNEGDIKSTKKN)}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 
 \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Post shock levels}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{AFShock}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2025}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFPRVKN\PYGZus{}A}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
@@ -5853,7 +5951,7 @@ Post shock levels
 2025   \PYGZhy{}0.000458
 2026   \PYGZhy{}0.000389
 2027   \PYGZhy{}0.000331
-2028    0.000681
+2028    0.005774
 2029   \PYGZhy{}0.000239
 2030   \PYGZhy{}0.000203
 Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
@@ -5869,30 +5967,38 @@ Name: PAKNEGDIFPRVKN\PYGZus{}A, dtype: float64
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{AFShockRes} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{AFShock}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1 }\PYG{l+s+si}{\PYGZpc{} o}\PYG{l+s+s1}{f GDP increase in FDI and private investment (AF shock)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNEGDIFPRVKN PAKNECONPRVTKN PAKNEIMPGNFSKN PAKNECONPRVTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Add factor shock on private investment .5 percent of GDP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{AFShockRes} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{AFShock}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1}\PYG{l+s+si}{\PYGZpc{} o}\PYG{l+s+s1}{f GDP increase in FDI and private investment (AF shock)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNEGDIFPRVKN PAKNECONPRVTKN PAKNEIMPGNFSKN PAKNEGDIFTOTKN PAKNECONPRVTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Add factor shock on private investment 1}\PYG{l+s+si}{\PYGZpc{} o}\PYG{l+s+s2}{f GDP}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_46_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_48_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 
-\section{The keep option}
+\chapter{Report writing and scenario results}
+\label{\detokenize{content/06_WBModels/ScenarioAnalysis:report-writing-and-scenario-results}}
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{ModelFlow}}, standard pandas routines and other python libraries like \sphinxcode{\sphinxupquote{Matplotlib}} and \sphinxcode{\sphinxupquote{Plotly}} can be used to visualize and compare dataframes and therefore the results, from scenarios – as indeed has been done in the preceding paragraphs.
+
+\sphinxAtStartPar
+In addition, \sphinxcode{\sphinxupquote{ModelFlow}} also provides several specific routines that make such comparisons easier.
+
+
+\section{The Keep option}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:the-keep-option}}
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{ModelFlow}}, standard pandas routines and other python libraries like \sphinxstylestrong{Matplotlib} and \sphinxstylestrong{Plotly} can be used to visualize and compare results, from scenarios – as indeed has been done in the preceding paragraphs.
-
-\sphinxAtStartPar
 The \sphinxstylestrong{Keep} option facilitates the comparison of results from different scenarios run on a give model object.  In each of the simulations executed above, the \sphinxcode{\sphinxupquote{keep}} option was activated. This causes the results from each simulation in a unique \sphinxcode{\sphinxupquote{DataFrame}} that can be identified by the descriptor given to it.
-
-\sphinxAtStartPar
-Modelflfow has several special routines that allow results from kept scenarios to be displayed and compared.
 
 
 \subsection{The \sphinxstyleliteralintitle{\sphinxupquote{.keep\_plot()}} method}
@@ -5926,6 +6032,32 @@ For example below we have graphs of the growth rates of GDP, Consumption and Imp
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPCN PAKNECONPRVTKN PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{diff}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{growth}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{legend}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Change in growth rates}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{showfig}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_54_0}.png}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_54_1}.png}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_54_2}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZob{}\PYGZsq{}PAKNYGDPMKTPCN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNECONPRVTKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{}\PYGZcb{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
 
 \subsubsection{Differences in percent of baseline values}
 \label{\detokenize{content/06_WBModels/ScenarioAnalysis:differences-in-percent-of-baseline-values}}
@@ -5936,10 +6068,29 @@ In this plot, the same results are presented, but as percent deviations from the
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPCN PAKNECONPRVTKN PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{legend}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPCN PAKNECONPRVTKN PAKNEIMPGNFSKN PAKNEGDIFTOTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{legend}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{showfig}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_56_0}.png}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_56_1}.png}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_56_2}.png}
+
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_56_3}.png}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZob{}\PYGZsq{}PAKNYGDPMKTPCN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNECONPRVTKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{},
+ \PYGZsq{}PAKNEGDIFTOTKN\PYGZsq{}: \PYGZlt{}Figure size 720x432 with 1 Axes\PYGZgt{}\PYGZcb{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 
@@ -6150,7 +6301,7 @@ Tab(children=(Tab(children=(HTML(value=\PYGZsq{}\PYGZlt{}?xml version=\PYGZdq{}1
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in oil prices 2025\PYGZhy{}27\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}40\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}keep\PYGZus{}growth=True\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} temporarily exogenized\PYGZsq{}, \PYGZsq{}1 \PYGZpc{} of GDP increase in FDI and private investment (AF shock)\PYGZsq{}])
+dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in oil prices 2025\PYGZhy{}27\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}40\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}KG=True\PYGZsq{}, \PYGZsq{}2.5\PYGZpc{} increase in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} temporarily exogenized\PYGZsq{}, \PYGZsq{}1\PYGZpc{} of GDP increase in FDI and private investment (AF shock)\PYGZsq{}])
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -6160,7 +6311,7 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{with} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keepswitch}\PYG{p}{(}\PYG{n}{scenarios}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}40|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}keep\PYGZus{}growth=True|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} temporarily exogenized}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
+\PYG{k}{with} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keepswitch}\PYG{p}{(}\PYG{n}{scenarios}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}40|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} exog whole period \PYGZhy{}\PYGZhy{}KG=True|2.5}\PYG{l+s+si}{\PYGZpc{} i}\PYG{l+s+s1}{ncrease in C 2025\PYGZhy{}27 \PYGZhy{}\PYGZhy{} temporarily exogenized}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
     \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKGGBALOVRLCN PAKGGDEBTTOTLCN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{legend}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
@@ -6168,9 +6319,56 @@ dict\PYGZus{}keys([\PYGZsq{}Baseline\PYGZsq{}, \PYGZsq{}\PYGZdl{}25 increase in 
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_0}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_61_0}.png}
 
-\noindent\sphinxincludegraphics{{ScenarioAnalysis_58_1}.png}
+\noindent\sphinxincludegraphics{{ScenarioAnalysis_61_1}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{n}{help}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{AttributeError}\PYG{g+gWhitespace}{                            }Traceback (most recent call last)
+\PYG{n+nn}{Input In [29],} in \PYG{n+ni}{\PYGZlt{}cell line: 1\PYGZgt{}}\PYG{n+nt}{()}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{1} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot}\PYG{p}{(}\PYG{n}{help}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZti{}\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}ModelFlow\PYGZhy{}1.0.8\PYGZhy{}py3.9.egg\PYGZbs{}modelclass.py:4373,} in \PYG{n+ni}{Display\PYGZus{}Mixin.keep\PYGZus{}plot}\PYG{n+nt}{(self, pat, start, slut, start\PYGZus{}ofset, slut\PYGZus{}ofset, showtype, diff, diffpct, mul, title, legend, scale, yunit, ylabel, dec, trans, showfig, vline, savefig, keep\PYGZus{}dim, dataonly)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4371} \PYG{k}{try}\PYG{p}{:}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4372}     \PYG{k}{if} \PYG{n}{keep\PYGZus{}dim}\PYG{p}{:}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{4373}         \PYG{n}{dfs} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{keep\PYGZus{}get\PYGZus{}dict}\PYG{p}{(}\PYG{n}{pat}\PYG{p}{,} \PYG{n}{start}\PYG{p}{,} \PYG{n}{slut}\PYG{p}{,} \PYG{n}{start\PYGZus{}ofset}\PYG{p}{,} \PYG{n}{slut\PYGZus{}ofset}\PYG{p}{)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4374}     \PYG{k}{else}\PYG{p}{:} 
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4375}         \PYG{n}{dfs} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{keep\PYGZus{}var\PYGZus{}dict}\PYG{p}{(}\PYG{n}{pat}\PYG{p}{,} \PYG{n}{start}\PYG{p}{,} \PYG{n}{slut}\PYG{p}{,} \PYG{n}{start\PYGZus{}ofset}\PYG{p}{,} \PYG{n}{slut\PYGZus{}ofset}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZti{}\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}ModelFlow\PYGZhy{}1.0.8\PYGZhy{}py3.9.egg\PYGZbs{}modelclass.py:4023,} in \PYG{n+ni}{Display\PYGZus{}Mixin.keep\PYGZus{}get\PYGZus{}dict}\PYG{n+nt}{(self, pat, start, slut, start\PYGZus{}ofset, slut\PYGZus{}ofset, diff)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4020}     \PYG{k}{return}
+\PYG{n+nn}{   4021 allvars = list(\PYGZob{}c for k, df} in \PYG{n+ni}{self.keep\PYGZus{}solutions.items}\PYG{n+nt}{()}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4022}                \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{df}\PYG{o}{.}\PYG{n}{columns}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{4023} \PYG{n+nb}{vars} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{list\PYGZus{}names}\PYG{p}{(}\PYG{n}{allvars}\PYG{p}{,} \PYG{n}{pat}\PYG{p}{)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4024} \PYG{n}{res} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{p}{\PYGZcb{}}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{4025} \PYG{k}{with} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl}\PYG{p}{(}\PYG{n}{start}\PYG{p}{,} \PYG{n}{slut}\PYG{p}{)} \PYG{k}{as} \PYG{n}{a}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl\PYGZus{}relative}\PYG{p}{(}\PYG{n}{start\PYGZus{}ofset}\PYG{p}{,} \PYG{n}{slut\PYGZus{}ofset}\PYG{p}{)}\PYG{p}{:}
+
+\PYG{n+nn}{File \PYGZti{}\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}mf\PYGZus{}pinned\PYGZus{}developement\PYGZus{}test\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}ModelFlow\PYGZhy{}1.0.8\PYGZhy{}py3.9.egg\PYGZbs{}modelclass.py:1120,} in \PYG{n+ni}{Org\PYGZus{}model\PYGZus{}Mixin.list\PYGZus{}names}\PYG{n+nt}{(input, pat, sort)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1118} \PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}returns a list of variable in input  matching the pattern\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1119} \PYG{k}{if} \PYG{n}{sort}\PYG{p}{:}
+\PYG{n+nn}{\PYGZhy{}\PYGZgt{} 1120     out = [v for up} in \PYG{n+ni}{pat.split}\PYG{n+nt}{()}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1121}            \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{sorted}\PYG{p}{(}\PYG{n}{fnmatch}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{,} \PYG{n}{up}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{]}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1122} \PYG{k}{else}\PYG{p}{:}
+\PYG{n+nn}{   1123     out = [v for up} in \PYG{n+ni}{pat.split}\PYG{n+nt}{()}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1124}            \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{fnmatch}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{,} \PYG{n}{up}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{]}
+
+\PYG{n+ne}{AttributeError}: \PYGZsq{}\PYGZus{}Helper\PYGZsq{} object has no attribute \PYGZsq{}split\PYGZsq{}
+\end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 

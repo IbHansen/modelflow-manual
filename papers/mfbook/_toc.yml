@@ -33,6 +33,17 @@ parts:
      chapters:   
      - file: content/06_WBModels/LoadingWBModel
      - file: content/06_WBModels/ScenarioAnalysis
+     - file: content/06_WBModels/MoreComplexScenarios
+
+   - caption: More modelflow features
+     numbered: true      
+     chapters:   
+     - file: content/07_MoreFeatures/modelwidgets
+     #sections:
+        #-file: content/06_WBModels/ScenarioAnalysis
+        #- file: content/06_WBModels/MoreComplexScenarios
+
+
 
    - caption: References
      numbered: false
@@ -40,18 +51,10 @@ parts:
      - file: content/99_BackMatter/References
 
  
-# #****************
-#   - caption: The World Bank's MFMod Framework and Modelflow
-#     numbered: true      
-#     chapters:   
-#     - file: content/05_SimpleModel/SimpleModel
+
 #     - file: content/05_SimpleNodel/SimulatingTheModel     
 
-#*********
 
-
-#     - file: content/06_WBModels/DifferentSimulations
-#     - file: content/06_WBModels/TheKeepOption
 
 # #   - caption: modifying models 
 # #     numbered: true  
