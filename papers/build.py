@@ -13,6 +13,7 @@ from subprocess import run
 import webbrowser as wb
 from pathlib import Path
 import yaml 
+from shutil import copy, copytree
  
 import sys
 print(sys.argv)
@@ -36,8 +37,7 @@ fileloc = str((buildhtml / 'index.html').absolute())
 print(f'{fileloc=}\n') #dropped destination
 
 
-breakpoint()
-assert 1==2
+# breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
 # wb.open(rf'file://C:\wb new\Modelflow\working_paper\{bookdir}\_build\html\index.html', new=2)
 wb.open(rf'file://{fileloc}', new=2)
@@ -82,7 +82,7 @@ if 'latex-pdf' in options:
     
     pdffile = Path(f'{bookdir}/_build/latex/'+(texfile.split('.')[0]+'.pdf')).absolute()
     
-    
+    wb.open(rf'file://{pdffile}', new=2)
      
 if 'copy' in options:
     destination = Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')

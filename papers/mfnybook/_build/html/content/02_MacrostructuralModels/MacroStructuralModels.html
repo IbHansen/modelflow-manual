@@ -396,8 +396,8 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">Exogenous</span></code> variables are not determined by the model. Typically there are set either by assumption or from data external to the model.  For an individual country model, the exogenous variables would often include the global price of crude oil  because the level of activity of the economy itself is unlikely to affect the world price of oil.</p></li>
 </ul>
 <p>In a fully general form it can be written as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dbece523-be3c-459c-825b-e4be0f2edd8c">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-dbece523-be3c-459c-825b-e4be0f2edd8c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-35faa389-f0fb-4739-b4fb-4d95a1dce74e">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-35faa389-f0fb-4739-b4fb-4d95a1dce74e" title="Permalink to this equation">#</a></span>\[\begin{align}
 y_t^1  &amp;=  f^1(y_{t+u}^1...,y_{t+u}^n...,y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 y_t^2  &amp;=  f^2(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
 \vdots \\
@@ -405,8 +405,8 @@ y_t^n  &amp;=  f^n(y_{t+u}^1...,y_{t+u}^n...,y_t^1...,y_{t}^{n-1}...y_{t-r}^1...
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\( y_t^1 \)</span> is one of n endogenous variables and <span class="math notranslate nohighlight">\(x_t^1\)</span> is an exogenous variable and there are as many equations as there are unknown (endogenous variables).</p>
 <p>Substituting the variable mnemonics Y,C,I,G,X,M for the simple model the above can be rewritten as as a system of 6 equations in 6 unknowns:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b37a86b-03a3-4324-816f-956287e5f6bc">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-3b37a86b-03a3-4324-816f-956287e5f6bc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a1b8169e-dfbb-42cc-a864-aee3e9cb75ac">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-a1b8169e-dfbb-42cc-a864-aee3e9cb75ac" title="Permalink to this equation">#</a></span>\[\begin{align}
 Y_t  &amp;=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &amp;= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &amp;= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
