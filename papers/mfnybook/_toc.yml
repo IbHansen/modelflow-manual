@@ -1,0 +1,114 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/introduction
+options:
+  numbered: true
+parts:
+   - caption: The World Bank's MFMod Framework and Modelflow
+     numbered: true  
+     chapters:
+     - file: content/01_Introduction/Introduction     
+       sections:     
+       - file: content/02_MacrostructuralModels/MacroStructuralModels 
+     - file: content/02_MacrostructuralModels/MFModAndModelFlow     
+       sections:
+       - file: content/03_Installation/InstallingPython     
+       - file: content/03_Installation/InstallingModelFlow
+# #    # - file: content/03_Installation/TestingModelFlow
+    
+#  *****************
+   - caption: Some python essentials for using WorldBank models with modelflow
+     numbered: true 
+     chapters: 
+     - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
+     - file: content/04_PythonEssentials/PythonPandasDataframes
+     - file: content/04_PythonEssentials/UpdateCommand
+       sections:
+       - file: content/04_PythonEssentials/mfcalc
+
+   - caption: Using modelflow with World Bank models
+     numbered: true      
+     chapters:   
+     - file: content/06_WBModels/LoadingWBModel
+     - file: content/06_WBModels/ScenarioAnalysis
+
+   - caption: References
+     numbered: false
+     chapters:
+     - file: content/99_BackMatter/References
+
+ 
+# #****************
+#   - caption: The World Bank's MFMod Framework and Modelflow
+#     numbered: true      
+#     chapters:   
+#     - file: content/05_SimpleModel/SimpleModel
+#     - file: content/05_SimpleNodel/SimulatingTheModel     
+
+#*********
+
+
+#     - file: content/06_WBModels/DifferentSimulations
+#     - file: content/06_WBModels/TheKeepOption
+
+# #   - caption: modifying models 
+# #     numbered: true  
+# #     chapters:  
+# #     - file: content/howto/fixing/Fixing variables
+# #     - file: content/howto/modifymodel/create_real_model
+
+
+
+# #   - caption: Onboarding MFMod models from .wf1  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/onboard/eviews/onboard one model from  wf1
+# #     - file: content/howto/onboard/eviews/onboard many models from wf1  
+# #     - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
+# # #**********
+# #   - caption: Make experiments
+# #     numbered: true  
+# #     chapters: 
+# #     - file: content/howto/experiments/create_experiment   
+# #     - file: content/howto/experiments/create_save_scenarios
+# #     - file: content/howto/experiments/Standard experiment simple
+    
+# #   - caption: Kept scenarios
+# #     numbered: true  
+# #     chapters: 
+# #     - file: content/howto/keep/Create and modify charts with keep_plot
+
+    
+# #   - caption: Features
+# #     numbered: true  
+# #     chapters:      
+# #     - file: content/notebooks/modelflow_features
+    
+# #   - caption: Structure   
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/structure/Logical_structure    
+    
+# #   - caption: Attribution  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/attribution/Attribution background
+
+# #   - caption: Target and instruments   
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
+
+# #   - caption: Specification  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/notebooks/intro/model specification
+
+# #   - caption: Optimization
+# #     numbered: true  
+# #     chapters:    
+# #     - file: content/howto/optimization/Optimize_simple  
+    

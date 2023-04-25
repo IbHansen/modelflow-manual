@@ -131,3 +131,5 @@ with mpak.set_smpl(2018,2030):
 :::
 
 jb build mfbook/ --builder pdflatex
+
+<font color='red'>Ib : Inserted function names instead of c</font>
