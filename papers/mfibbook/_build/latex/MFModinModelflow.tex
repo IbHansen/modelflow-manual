@@ -963,7 +963,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:43dcd711-d434-4d66-b96b-2e83c0709618}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:08dc7a9f-d9ec-416b-a826-ffbc81a3bf90}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -4090,9 +4090,6 @@ where \sphinxcode{\sphinxupquote{modelflow}} is the name you have given to the \
 
 \PYG{n}{model}\PYG{o}{.}\PYG{n}{widescreen}\PYG{p}{(}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} These modelflow commands ensure that outputs from modelflow play well with Jupyter Notebook}
 \PYG{n}{model}\PYG{o}{.}\PYG{n}{scroll\PYGZus{}off}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{o}{\PYGZpc{}}\PYG{k}{load\PYGZus{}ext} autoreload   
-\PYG{o}{\PYGZpc{}}\PYG{k}{autoreload} 2
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -4106,6 +4103,9 @@ where \sphinxcode{\sphinxupquote{modelflow}} is the name you have given to the \
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+Ib : next text has been split out and hidden in JB in the metadata  
+
 
 \section{Working with PakMod under modelflow}
 \label{\detokenize{content/06_WBModels/LoadingWBModel:working-with-pakmod-under-modelflow}}
@@ -4142,6 +4142,9 @@ Visualize the results
 \subsection{Load a pre\sphinxhyphen{}existing model, data and descriptions}
 \label{\detokenize{content/06_WBModels/LoadingWBModel:load-a-pre-existing-model-data-and-descriptions}}
 \sphinxAtStartPar
+Ib : some changes 
+
+\sphinxAtStartPar
 To load a model use the \sphinxcode{\sphinxupquote{model.modelload()}} method of \sphinxcode{\sphinxupquote{modelflow}}.
 
 \sphinxAtStartPar
@@ -4152,17 +4155,21 @@ The command below
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-instantiates (creates an instance of) a \sphinxcode{\sphinxupquote{modelflow model}} object and assigns it to the variable name mpak.  The \sphinxcode{\sphinxupquote{run=1}} option executes the model and assigns the result of the model execution to the dataframe \sphinxcode{\sphinxupquote{bline}}.  The model is solved with the parameter alfa set to 0.7.  The \(alfa \in (0,1)\) parameter determines the step size of the solution engine. The larger alfa the larger the step size. Larger step sizes solve faster, but may have trouble finding a unique solution.  Smaller step sizes take longer to solve but are more likely to find a unique solution.  Values of alfa=.7 work well for World Bank models.
+instantiates (creates an instance of) a \sphinxcode{\sphinxupquote{modelflow model}} object and assigns it to the variable name mpak.  The \sphinxcode{\sphinxupquote{run=1}} option executes the model and assigns the result of the model execution to the dataframe \sphinxcode{\sphinxupquote{bline}}.  The model is solved with the parameter alfa set to 0.7.  The \(alfa \in (0,1)\) parameter determines the step size of the solution engine. The larger alfa the larger the step size. Larger step sizes may solve faster, but may have trouble finding a unique solution.  Smaller step sizes take longer to solve but are more likely to find a unique solution.  Values of alfa=.7 work well for World Bank models.
 
 \sphinxAtStartPar
 The \sphinxcode{\sphinxupquote{keep}} option instructs \sphinxcode{\sphinxupquote{modelflow}} to maintain in the model object (\sphinxcode{\sphinxupquote{mpak}}) the results of the intitial scenario, assigning it the text name \sphinxcode{\sphinxupquote{Baseline}}.
+
+\sphinxAtStartPar
+Ib : As it is now mpak will first look in the location specified, then
+it will look in the Global model repo. 
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{c+c1}{\PYGZsh{}Replace the path below with the location of the pak.pcim file on your computer}
-\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{bline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C:}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{mflow}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{modelflow\PYGZhy{}manual}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{papers}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{mfbook}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{content}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{models}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYGZbs{}
+\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{bline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C:}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{mflow}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{modelflow\PYGZhy{}manual}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{papers}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{mfbook}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{content}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{models}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
                                 \PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Baseline}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
@@ -4391,9 +4398,9 @@ Nepal BOP Exports of non\sphinxhyphen{}factor services (goods and services) in c
 \sphinxAtStartPar
 The newly loaded python object  \sphinxcode{\sphinxupquote{mpak}} is an instance of the model class and as such inherits the \sphinxcode{\sphinxupquote{methods}} (functions) and \sphinxcode{\sphinxupquote{properties}} (data) of that class. To learn about the model there are a variety of information methods that can be used to extract information about the model and its data.
 
-\sphinxAtStartPar
-\sphinxstylestrong{Information about a specific}
 
+\subsubsection{Information about a specific variable}
+\label{\detokenize{content/06_WBModels/LoadingWBModel:information-about-a-specific-variable}}
 
 \begin{savenotes}\sphinxattablestart
 \centering
@@ -4411,40 +4418,66 @@ Information returned
 \\
 \hline
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{.des}}
+\sphinxcode{\sphinxupquote{.<var name>.frml}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname{[}'PAKNECONPRVTXN'{]}.des}}
+\sphinxcode{\sphinxupquote{modelname.PAKNECONPRVTXN.frml}}
 &
 \sphinxAtStartPar
-Dictionary of mnemonics and their variable descriptions
-\\
-\hline
-\sphinxAtStartPar
-\sphinxcode{\sphinxupquote{.desc}}
-&
-\sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname{[}'PAKNECONPRVTXN'{]}.desc}}
-&
-\sphinxAtStartPar
-List of variable description alone
+The equation (formula) and variable descriptions
 \\
 \hline
 \end{tabulary}
 \par
 \sphinxattableend\end{savenotes}
 
-\begin{sphinxadmonition}{note}{Note:}
-\sphinxAtStartPar
-\sphinxstylestrong{Wildcards}
-The \sphinxcode{\sphinxupquote{*}} character in the command \sphinxcode{\sphinxupquote{mpak{[}'PAKNECON*XN'{]}.names}} is a \sphinxcode{\sphinxupquote{wildcard}} character and the extopression will return all variables that begin PAKNECON and end XN.  the \sphinxcode{\sphinxupquote{?}} is another wildcard expression. It will match only single characters.  Thus \sphinxcode{\sphinxupquote{mpak{[}'PAKNECONPRVT?N'{]}.names}}  would return three variables: \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}}, \sphinxcode{\sphinxupquote{PAKNECONPRVTXN}}, and \sphinxcode{\sphinxupquote{PAKNECONPRVTXN}}.  The real, current value, and deflators for household consumption expenditure.
-\end{sphinxadmonition}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
-\sphinxAtStartPar
-\sphinxstylestrong{Information about a number of variables that meet certain search criteria}
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{PAKNECONOTHRXN}\PYG{o}{.}\PYG{n}{frml}
+\end{sphinxVerbatim}
 
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Endogeneous: PAKNECONOTHRXN: Non\PYGZhy{}Energy Consumption
+Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONOTHRXN = (PAKNECONOTHRXN(\PYGZhy{}1)*EXP(\PYGZhy{}PAKNECONOTHRXN\PYGZus{}A+ (0.598859116610832*((LOG(PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNYGDPFCSTXN(\PYGZhy{}1))))+((PAKGGREVGNFSXN/100)\PYGZhy{}(PAKGGREVGNFSXN(\PYGZhy{}1)/100))+(1\PYGZhy{}0.598859116610832)*((LOG(PAKNEIMPGNFSXN))\PYGZhy{}(LOG(PAKNEIMPGNFSXN(\PYGZhy{}1))))+0.2*PAKNYGDPGAP\PYGZus{}/100) )) * (1\PYGZhy{}PAKNECONOTHRXN\PYGZus{}D)+ PAKNECONOTHRXN\PYGZus{}X*PAKNECONOTHRXN\PYGZus{}D  \PYGZdl{}
+
+PAKNECONOTHRXN  : Non\PYGZhy{}Energy Consumption
+PAKGGREVGNFSXN  : Effective tax rates
+PAKNECONOTHRXN\PYGZus{}A: Add factor:Non\PYGZhy{}Energy Consumption
+PAKNECONOTHRXN\PYGZus{}D: Exo dummy:Non\PYGZhy{}Energy Consumption
+PAKNECONOTHRXN\PYGZus{}X: Exo value:Non\PYGZhy{}Energy Consumption
+PAKNEIMPGNFSXN  : Imports (G\PYGZam{}S)
+PAKNYGDPFCSTXN  : GDP at factor cost
+PAKNYGDPGAP\PYGZus{}    : Output Gap (\PYGZpc{} of Potential GDP)
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\subsubsection{Information about a number of variables that meet certain search criteria**}
+\label{\detokenize{content/06_WBModels/LoadingWBModel:information-about-a-number-of-variables-that-meet-certain-search-criteria}}
 \sphinxAtStartPar
-The above functions can be used in conjunction with a wildcard specification to extract the same information about a number of variables that meet the criteria. To extract a list of all variables matching a pattern, we can use same methods.
+Variables can also be selected with a wildcard specification \sphinxhyphen{} a pattern. This allow the user to extract the same information about a number of variables that meet the criteria. There is a number of information the user can specify. The pattern can be used to match variables based on:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Variable names (memonics)
+
+\item {} 
+\sphinxAtStartPar
+Descriptions
+
+\item {} 
+\sphinxAtStartPar
+Pre defined groups of variables
+
+\end{itemize}
 
 \sphinxAtStartPar
 \sphinxstylestrong{Wildcards}
@@ -4475,27 +4508,37 @@ Information returned
 \sphinxcode{\sphinxupquote{modelname.{[}'*partialname*'{]}.des}}
 &
 \sphinxAtStartPar
-Returns Dictionary of all mnemonic and variable descriptions whose mnemonic matches
-\\
-\hline
-\sphinxAtStartPar
-\sphinxcode{\sphinxupquote{.desc}}
-&
-\sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'*partialname'{]}.desc}}
-&
-\sphinxAtStartPar
-Returns list of variable descriptions whose mnemonic matches
+Variable descriptions whose  \sphinxstylestrong{variable name} matches
 \\
 \hline
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.names}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'*partialname'{]}.names}}
+\sphinxcode{\sphinxupquote{modelname.{[}'*partialname*'{]}.names}}
 &
 \sphinxAtStartPar
-Returns list of variable mnemonics that match
+Variable names which match
+\\
+\hline
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.frml}}
+&
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{modelname.{[}'*partialname*'{]}.frml}}
+&
+\sphinxAtStartPar
+Returns a \sphinxstylestrong{normalized} version of the equation (the one actually used in modelflow)
+\\
+\hline
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{.eviews}}
+&
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{modelname.{[}'*partialname*'{]}.eviews}}
+&
+\sphinxAtStartPar
+In models imported from Eviews, reports the original eviews specification
 \\
 \hline
 \end{tabulary}
@@ -4529,27 +4572,27 @@ Information returned
 \sphinxcode{\sphinxupquote{modelname.{[}'!*GDP\textbackslash{}*'{]}.des}}
 &
 \sphinxAtStartPar
-Returns Dictionary of all mnemonic and variable descriptions whose description contains the string GDP
+Descriptions for all variable whose \sphinxstylestrong{description} contains the string GDP
 \\
 \hline
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.desc}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'!*Consumption*'{]}.desc}}
+\sphinxcode{\sphinxupquote{modelname.{[}'!*Consumption*'{]}.names}}
 &
 \sphinxAtStartPar
-Returns list of variable descriptions whose description contains the string Consumption
+Names for all variable whose \sphinxstylestrong{description} contains the string Consumption
 \\
 \hline
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.names}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'!*Agriculture*'{]}.names}}
+\sphinxcode{\sphinxupquote{modelname.{[}'!*Agriculture*'{]}.frml}}
 &
 \sphinxAtStartPar
-Returns list of variable mnemonics whose description contains the string Agriculture
+Equations for all variable whose \sphinxstylestrong{description} contains the the string Agriculture
 \\
 \hline
 \end{tabulary}
@@ -4558,7 +4601,7 @@ Returns list of variable mnemonics whose description contains the string Agricul
 
 \sphinxAtStartPar
 \sphinxstylestrong{\#Operator}
-The \sphinxstyleemphasis{\#} operator passes a predefined list to the search function and returns variable info about the variables in the  list
+The \sphinxstyleemphasis{\#} operator passes a predefined group of variables to the search function and returns variable info about the variables in the  group
 
 
 \begin{savenotes}\sphinxattablestart
@@ -4580,30 +4623,30 @@ Information returned
 \sphinxcode{\sphinxupquote{.des}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'\#MyList'{]}.des}}
+\sphinxcode{\sphinxupquote{modelname.{[}'\#Headline'{]}.des}}
 &
 \sphinxAtStartPar
-Returns Dictionary of all mnemonic and variable descriptions of the variables contained in the list MyList
+Descriptions for all variable from the group Headline
 \\
 \hline
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.desc}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'\#MyList'{]}.desc}}
+\sphinxcode{\sphinxupquote{modelname.{[}'\#Headline'{]}.names}}
 &
 \sphinxAtStartPar
-Returns list of variable descriptions of variables contained in the list MyList
+Names for all variable from the group Headline
 \\
 \hline
 \sphinxAtStartPar
 \sphinxcode{\sphinxupquote{.names}}
 &
 \sphinxAtStartPar
-\sphinxcode{\sphinxupquote{modelname.{[}'\#MyList'{]}.names}}
+\sphinxcode{\sphinxupquote{modelname.{[}'\#Headline'{]}.frml}}
 &
 \sphinxAtStartPar
-Returns list of variable mnemonics of variables contained in the list MyList
+Equations for all variable from the group Headline
 \\
 \hline
 \end{tabulary}
@@ -4616,11 +4659,14 @@ Returns list of variable mnemonics of variables contained in the list MyList
 \sphinxAtStartPar
 Return all variables that begin \sphinxcode{\sphinxupquote{PAKNECON}} and end \sphinxcode{\sphinxupquote{KN}}.
 
+\sphinxAtStartPar
+Ib : Changed KN to XN below so match with heading 
+
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECON*XN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{names}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECON*XN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -4628,12 +4674,21 @@ Return all variables that begin \sphinxcode{\sphinxupquote{PAKNECON}} and end \s
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-[\PYGZsq{}PAKNECONENGYXN\PYGZsq{}, \PYGZsq{}PAKNECONGOVTXN\PYGZsq{}, \PYGZsq{}PAKNECONOTHRXN\PYGZsq{}, \PYGZsq{}PAKNECONPRVTXN\PYGZsq{}]
+PAKNECONENGYXN : Energy Consumption
+PAKNECONGOVTXN : Government consumption (G\PYGZam{}S)
+PAKNECONOTHRXN : Non\PYGZhy{}Energy Consumption
+PAKNECONPRVTXN : Household demand
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\begin{sphinxadmonition}{note}{Note:}
+\sphinxAtStartPar
+\sphinxstylestrong{Wildcards}
+The \sphinxcode{\sphinxupquote{*}} character in the command \sphinxcode{\sphinxupquote{mpak{[}'PAKNECON*XN'{]}.names}} is a \sphinxcode{\sphinxupquote{wildcard}} character and the extopression will return all variables that begin PAKNECON and end XN.  the \sphinxcode{\sphinxupquote{?}} is another wildcard expression. It will match only single characters.  Thus \sphinxcode{\sphinxupquote{mpak{[}'PAKNECONPRVT?N'{]}.names}}  would return three variables: \sphinxcode{\sphinxupquote{PAKNECONPRVTKN}}, \sphinxcode{\sphinxupquote{PAKNECONPRVTXN}}, and \sphinxcode{\sphinxupquote{PAKNECONPRVTXN}}.  The real, current value, and deflators for household consumption expenditure.
+\end{sphinxadmonition}
+
 \sphinxAtStartPar
 Return a dictionary comprised of the mnemonics and the descriptions of all the variables that begin \sphinxcode{\sphinxupquote{PAKNECONPRVT}} and end \sphinxcode{\sphinxupquote{N}}, but have one character between the T and the N.
 
@@ -4690,15 +4745,23 @@ PAKNYGDPPOTLKN        : Potential GDP
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
+Ib : deleted it does not return a dict 
+
+\sphinxAtStartPar
 Return a dictionary comprised of the variable name and description if all variables in a list.
+
+
+\subsubsection{The matching pattern can be a list}
+\label{\detokenize{content/06_WBModels/LoadingWBModel:the-matching-pattern-can-be-a-list}}
+\sphinxAtStartPar
+Ib : Error in code reflection @lru\_cache(maxsize=2048), removed and works in new version 
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{}Why does this not work?}
 \PYG{n}{mylist}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONPRVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONGOVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFTOTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEEXPGNGSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZsh{}mylist}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{n}{mylist}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -4706,79 +4769,23 @@ Return a dictionary comprised of the variable name and description if all variab
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-No grouping like this. Select from: 
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{n+ne}{Exception}\PYG{g+gWhitespace}{                                 }Traceback (most recent call last)
-\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{6}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{3}
-\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{}Why does this not work?}
-\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{2} \PYG{n}{mylist}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONPRVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONGOVTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFTOTKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEEXPGNGSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{3} \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZsh{}mylist}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
-
-\PYG{n+nn}{File C:\PYGZbs{}modelflow2\PYGZbs{}modelflow\PYGZbs{}modelclass.py:1260,} in \PYG{n+ni}{Org\PYGZus{}model\PYGZus{}Mixin.\PYGZus{}\PYGZus{}getitem\PYGZus{}\PYGZus{}}\PYG{n+nt}{(self, name)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1252} \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}getitem\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{)}\PYG{p}{:}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1253}\PYG{+w}{     }\PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1254}\PYG{l+s+sd}{     To execute the index operator []}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1255}\PYG{l+s+sd}{     }
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1256}\PYG{l+s+sd}{     Uses the :any:`modelvis.vis` operator        }
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1257}\PYG{l+s+sd}{ }
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1258}\PYG{l+s+sd}{     \PYGZsq{}\PYGZsq{}\PYGZsq{}}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{1260}     \PYG{n}{a} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{vis}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1262}     \PYG{k}{return} \PYG{n}{a}
-
-\PYG{n+nn}{File C:\PYGZbs{}modelflow2\PYGZbs{}modelflow\PYGZbs{}modelclass.py:3735,} in \PYG{n+ni}{Display\PYGZus{}Mixin.vis}\PYG{n+nt}{(self, *args, **kwargs)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3733} \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZus{}vis}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}\PYG{p}{:}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3734}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}vis} \PYG{o}{=} \PYG{n}{mv}\PYG{o}{.}\PYG{n}{vis}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{3735} \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}vis}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}
-
-\PYG{n+nn}{File C:\PYGZbs{}modelflow2\PYGZbs{}modelflow\PYGZbs{}modelvis.py:50,} in \PYG{n+ni}{vis.\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{n+nt}{(self, model, pat, names, df)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{48} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}pat} \PYG{o}{=} \PYG{n}{pat}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{49} \PYG{k}{if} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{names}\PYG{p}{)} \PYG{o}{==} \PYG{n+nb}{type}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{50}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{names} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{vlist}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}pat}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{51} \PYG{k}{else}\PYG{p}{:} 
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{52}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{names} \PYG{o}{=} \PYG{n}{names} 
-
-\PYG{n+nn}{File C:\PYGZbs{}modelflow2\PYGZbs{}modelflow\PYGZbs{}modelclass.py:1107,} in \PYG{n+ni}{Org\PYGZus{}model\PYGZus{}Mixin.vlist}\PYG{n+nt}{(self, pat)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1105}             \PYG{n}{lf}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1106}             \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{No grouping like this. Select from: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{lf}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{lf}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{var\PYGZus{}groups}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{1107}             \PYG{k}{raise} \PYG{n+ne}{Exception}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Try with a correct group name}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1109} \PYG{n}{ipat} \PYG{o}{=} \PYG{n}{upat}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1110} \PYG{c+c1}{\PYGZsh{} breakpoint() }
-
-\PYG{n+ne}{Exception}: Try with a correct group name
+PAKNECONPRVTKN : Household Consumption
+PAKNECONGOVTKN : Government Consumption
+PAKNEGDIFTOTKN : Total Gross Capital Formation
+PAKNEIMPGNFSKN : Imports (G\PYGZam{}S)
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
-the method \sphinxcode{\sphinxupquote{.var\_description}} returns the descriptor of the associated variable.  This method does not accept wildcards.
+Ib : I would delete the var\_descriptions part  
 
-\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
-
-\begin{sphinxuseclass}{cell_input}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimInput}
-\begin{sphinxVerbatimOutput}
-
-\begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZsq{}*NYGDPMKTP?N\PYGZsq{}
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
-
-\end{sphinxuseclass}
 
 \subsubsection{Equation information methods}
 \label{\detokenize{content/06_WBModels/LoadingWBModel:equation-information-methods}}
 \sphinxAtStartPar
-There are two functions to extract the equations from a model.
+There are two properties .frml and .eviews to extract the equations from a model.
 
 
 \begin{savenotes}\sphinxattablestart
@@ -4826,22 +4833,18 @@ The equation for consumption in \sphinxcode{\sphinxupquote{mpak}} we see that it
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Endogeneous: PAKNECONPRVTKN: HH. Cons Real
-Formular: FRML \PYGZlt{}DAMP,STOC\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG(1.21203101101442)\PYGZhy{}LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+0.763938860758873*((LOG((((PAKBXFSTREMTCD\PYGZhy{}PAKBMFSTREMTCD)*PAKPANUSATLS)+PAKGGEXPTRNSCN+PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((((PAKBXFSTREMTCD(\PYGZhy{}1)\PYGZhy{}PAKBMFSTREMTCD(\PYGZhy{}1))*PAKPANUSATLS(\PYGZhy{}1))+PAKGGEXPTRNSCN(\PYGZhy{}1)+PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))\PYGZhy{}0.0634474791568939*DURING\PYGZus{}2009\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
+Endogeneous: PAKNECONPRVTKN: Household Consumption
+Formular: FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONPRVTKN = (PAKNECONPRVTKN(\PYGZhy{}1)*EXP(\PYGZhy{}PAKNECONPRVTKN\PYGZus{}A+ (\PYGZhy{}0.2*(LOG(PAKNECONPRVTKN(\PYGZhy{}1))\PYGZhy{}LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1)))+1*((LOG((PAKNYYWBTOTLCN*(1\PYGZhy{}PAKGGREVDRCTXN/100))/PAKNECONPRVTXN))\PYGZhy{}(LOG((PAKNYYWBTOTLCN(\PYGZhy{}1)*(1\PYGZhy{}PAKGGREVDRCTXN(\PYGZhy{}1)/100))/PAKNECONPRVTXN(\PYGZhy{}1))))+0.0303228629698929+0.0163839011059956*DURING\PYGZus{}2010\PYGZhy{}0.3*(PAKFMLBLPOLYXN/100\PYGZhy{}((LOG(PAKNECONPRVTXN))\PYGZhy{}(LOG(PAKNECONPRVTXN(\PYGZhy{}1)))))) )) * (1\PYGZhy{}PAKNECONPRVTKN\PYGZus{}D)+ PAKNECONPRVTKN\PYGZus{}X*PAKNECONPRVTKN\PYGZus{}D  \PYGZdl{}
 
-PAKNECONPRVTKN  : HH. Cons Real
-DURING\PYGZus{}2009     : 
-PAKBMFSTREMTCD  : Imp., Remittances (BOP), US\PYGZdl{} mn
-PAKBXFSTREMTCD  : Exp., Remittances (BOP), US\PYGZdl{} mn
-PAKFMLBLPOLYXN  : Key Policy Interest Rate
-PAKGGEXPTRNSCN  : Current Transfers
-PAKGGREVDRCTXN  : Direct Revenue Tax Rate
-PAKNECONPRVTKN\PYGZus{}A: Add factor:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}D: Fix dummy:HH. Cons Real
-PAKNECONPRVTKN\PYGZus{}X: Fix value:HH. Cons Real
-PAKNECONPRVTXN  : Implicit LCU defl., Pvt. Cons., 2000 = 1
-PAKNYYWBTOTLCN  : Total Wage Bill
-PAKPANUSATLS    : Exchange rate LCU / US\PYGZdl{} \PYGZhy{} Pakistan
+PAKNECONPRVTKN  : Household Consumption
+DURING\PYGZus{}2010     : 
+PAKFMLBLPOLYXN  : Policy Rate
+PAKGGREVDRCTXN  : Effective tax rates
+PAKNECONPRVTKN\PYGZus{}A: Add factor:Household Consumption
+PAKNECONPRVTKN\PYGZus{}D: Exo dummy:Household Consumption
+PAKNECONPRVTKN\PYGZus{}X: Exo value:Household Consumption
+PAKNECONPRVTXN  : Household demand
+PAKNYYWBTOTLCN  : Economy\PYGZhy{}wide wage bill
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -4862,7 +4865,7 @@ The \sphinxcode{\sphinxupquote{mpak{[}'PAKNECONPRVTKN'{]}.eviews}} command retur
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-DLOG(PAKNECONPRVTKN) =\PYGZhy{} 0.2*(LOG(PAKNECONPRVTKN( \PYGZhy{} 1)) \PYGZhy{} LOG(1.21203101101442) \PYGZhy{} LOG((((PAKBXFSTREMTCD( \PYGZhy{} 1) \PYGZhy{} PAKBMFSTREMTCD( \PYGZhy{} 1))*PAKPANUSATLS( \PYGZhy{} 1)) + PAKGGEXPTRNSCN( \PYGZhy{} 1) + PAKNYYWBTOTLCN( \PYGZhy{} 1)*(1 \PYGZhy{} PAKGGREVDRCTXN( \PYGZhy{} 1)/100))/PAKNECONPRVTXN( \PYGZhy{} 1))) + 0.763938860758873*DLOG((((PAKBXFSTREMTCD \PYGZhy{} PAKBMFSTREMTCD)*PAKPANUSATLS) + PAKGGEXPTRNSCN + PAKNYYWBTOTLCN*(1 \PYGZhy{} PAKGGREVDRCTXN/100))/PAKNECONPRVTXN) \PYGZhy{} 0.0634474791568939*@DURING(\PYGZdq{}2009\PYGZdq{}) \PYGZhy{} 0.3*(PAKFMLBLPOLYXN/100 \PYGZhy{} DLOG(PAKNECONPRVTXN))
+Not avaiable
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -5037,6 +5040,9 @@ The long run relates the level of the two (or more) variables.  We can write a s
 \begin{split}Y_t=αX_t^β+ \eta_t\end{split}
 \end{equation*}
 \sphinxAtStartPar
+Ib : shift from log to ln here
+
+\sphinxAtStartPar
 Rewriting this (in logarithms) it can be expressed as:
 \begin{equation*}
 \begin{split}y_t = ln⁡(α) + βy_t + \eta_t\end{split}
@@ -5064,6 +5070,11 @@ and in the steady state this will also be true for the lagged variables
 \begin{equation*}
 \begin{split}-\lambda(y_{t-1-} A - βx_{t-1})\end{split}
 \end{equation*}
+\sphinxAtStartPar
+Ib : small change to 
+\begin{equation*}
+\begin{split}-\lambda(y_{t-1} - A - βx_{t-1})\end{split}
+\end{equation*}
 
 \section{Putting it together}
 \label{\detokenize{content/06_WBModels/LoadingWBModel:putting-it-together}}
@@ -5076,6 +5087,11 @@ From before we have the short run equation:
 Inserting the steady state expression into the short run equation makes no difference (in the long run) because in the long run it is equal to zero.
 \begin{equation*}
 \begin{split}\Delta y_t = -\lambda(y_{t-1-}A-βx_{t-1})  + \alpha + \beta \Delta x_t +\epsilon_t\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Ib : small change to 
+\begin{equation*}
+\begin{split}\Delta y_t = -\lambda(y_{t-1}-A-βx_{t-1})  + \alpha + \beta \Delta x_t +\epsilon_t\end{split}
 \end{equation*}
 \sphinxAtStartPar
 When the model is not in the steady state the expression \(y_{t-1}-A-βx_{t-1}\) is of course the error term from the long run equation (a measure of how far the dependent variable is from equilibrium).

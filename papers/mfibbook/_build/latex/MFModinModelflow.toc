@@ -105,45 +105,48 @@
 \contentsline {section}{\numberline {7.3}Working with PakMod under modelflow}{64}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}Load a pre\sphinxhyphen {}existing model, data and descriptions}{65}{subsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.3.2}Extracting information about the model}{66}{subsection.7.3.2}%
-\contentsline {subsubsection}{Some examples}{67}{subsubsection*.15}%
-\contentsline {subsubsection}{Equation information methods}{69}{subsubsection*.16}%
+\contentsline {subsubsection}{Information about a specific variable}{66}{subsubsection*.15}%
+\contentsline {subsubsection}{Information about a number of variables that meet certain search criteria**}{67}{subsubsection*.16}%
+\contentsline {subsubsection}{Some examples}{68}{subsubsection*.17}%
+\contentsline {subsubsection}{The matching pattern can be a list}{69}{subsubsection*.18}%
+\contentsline {subsubsection}{Equation information methods}{69}{subsubsection*.19}%
 \contentsline {section}{\numberline {7.4}Behavioural equations in the MFMod framework}{70}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}The ECM specification}{71}{subsection.7.4.1}%
-\contentsline {subsubsection}{The short run relationship}{71}{subsubsection*.17}%
-\contentsline {subsubsection}{The long run equation}{72}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {7.4.2}The long run equation in the steady state}{72}{subsection.7.4.2}%
+\contentsline {subsubsection}{The short run relationship}{71}{subsubsection*.20}%
+\contentsline {subsubsection}{The long run equation}{71}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {7.4.2}The long run equation in the steady state}{71}{subsection.7.4.2}%
 \contentsline {section}{\numberline {7.5}Putting it together}{72}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Lambda, the speed of adjustment}{72}{subsection.7.5.1}%
-\contentsline {chapter}{\numberline {8}Scenario analysis}{75}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Different kinds of simulations}{76}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}A shock to an exogenous variable}{76}{subsection.8.1.1}%
-\contentsline {subsubsection}{Running the simulation}{77}{subsubsection*.19}%
-\contentsline {paragraph}{Results}{77}{paragraph*.20}%
-\contentsline {subsection}{\numberline {8.1.2}An exogenous shock to a Behavioural variable}{80}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Temporarily exogenize a behavioural variable}{82}{subsection.8.1.3}%
-\contentsline {subsubsection}{Temporary shock exogenized for the whole period}{83}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {8.1.4}Exogenize the variable only for the period during which it is shocked}{83}{subsection.8.1.4}%
-\contentsline {subsection}{\numberline {8.1.5}Simulation with Add factors}{85}{subsection.8.1.5}%
-\contentsline {subsubsection}{Simulating the impact of a planned investment}{86}{subsubsection*.22}%
-\contentsline {paragraph}{How to translate the economic shock into a model shock}{86}{paragraph*.23}%
-\contentsline {paragraph}{Determine the size of shock}{86}{paragraph*.24}%
-\contentsline {paragraph}{Identify the functional form(s)}{87}{paragraph*.25}%
-\contentsline {paragraph}{Calculate the size of the required add factor shock}{88}{paragraph*.26}%
-\contentsline {paragraph}{Run the shock}{89}{paragraph*.27}%
-\contentsline {chapter}{\numberline {9}Report writing and scenario results}{91}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The Keep option}{91}{section.9.1}%
-\contentsline {section}{\numberline {9.2}The \sphinxstyleliteralintitle {\sphinxupquote {.keep\_plot()}} method}{91}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}\sphinxstyleliteralintitle {\sphinxupquote {keep\_plot()}} options}{93}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}An example using the diff=TRUE option}{94}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}The \sphinxstyleliteralintitle {\sphinxupquote {showtype}} option}{96}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}The diffpct option}{97}{subsection.9.2.4}%
-\contentsline {subsubsection}{Differences in percent of baseline values}{98}{subsubsection*.28}%
-\contentsline {subsection}{\numberline {9.2.5}The \sphinxstyleliteralintitle {\sphinxupquote {.keep\_switch()}} method}{100}{subsection.9.2.5}%
-\contentsline {subsection}{\numberline {9.2.6}The results visualization widget view}{102}{subsection.9.2.6}%
-\contentsline {part}{IV\hspace {1em}More modelflow features}{103}{part.4}%
-\contentsline {chapter}{\numberline {10}The model widget class}{107}{chapter.10}%
-\contentsline {section}{\numberline {10.1}The \sphinxstyleliteralintitle {\sphinxupquote {.html\_widget\_df()}} method}{107}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}List of fixed variables}{118}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}Show the equations for the .calc\_add\_factor\_model}{118}{subsection.10.1.2}%
-\contentsline {part}{V\hspace {1em}References}{119}{part.5}%
-\contentsline {chapter}{Bibliography}{121}{chapter*.29}%
+\contentsline {chapter}{\numberline {8}Scenario analysis}{73}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Different kinds of simulations}{74}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}A shock to an exogenous variable}{74}{subsection.8.1.1}%
+\contentsline {subsubsection}{Running the simulation}{75}{subsubsection*.22}%
+\contentsline {paragraph}{Results}{75}{paragraph*.23}%
+\contentsline {subsection}{\numberline {8.1.2}An exogenous shock to a Behavioural variable}{78}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Temporarily exogenize a behavioural variable}{80}{subsection.8.1.3}%
+\contentsline {subsubsection}{Temporary shock exogenized for the whole period}{81}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {8.1.4}Exogenize the variable only for the period during which it is shocked}{81}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}Simulation with Add factors}{83}{subsection.8.1.5}%
+\contentsline {subsubsection}{Simulating the impact of a planned investment}{84}{subsubsection*.25}%
+\contentsline {paragraph}{How to translate the economic shock into a model shock}{84}{paragraph*.26}%
+\contentsline {paragraph}{Determine the size of shock}{84}{paragraph*.27}%
+\contentsline {paragraph}{Identify the functional form(s)}{85}{paragraph*.28}%
+\contentsline {paragraph}{Calculate the size of the required add factor shock}{86}{paragraph*.29}%
+\contentsline {paragraph}{Run the shock}{87}{paragraph*.30}%
+\contentsline {chapter}{\numberline {9}Report writing and scenario results}{89}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The Keep option}{89}{section.9.1}%
+\contentsline {section}{\numberline {9.2}The \sphinxstyleliteralintitle {\sphinxupquote {.keep\_plot()}} method}{89}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}\sphinxstyleliteralintitle {\sphinxupquote {keep\_plot()}} options}{91}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}An example using the diff=TRUE option}{92}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}The \sphinxstyleliteralintitle {\sphinxupquote {showtype}} option}{94}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}The diffpct option}{95}{subsection.9.2.4}%
+\contentsline {subsubsection}{Differences in percent of baseline values}{96}{subsubsection*.31}%
+\contentsline {subsection}{\numberline {9.2.5}The \sphinxstyleliteralintitle {\sphinxupquote {.keep\_switch()}} method}{98}{subsection.9.2.5}%
+\contentsline {subsection}{\numberline {9.2.6}The results visualization widget view}{100}{subsection.9.2.6}%
+\contentsline {part}{IV\hspace {1em}More modelflow features}{101}{part.4}%
+\contentsline {chapter}{\numberline {10}The model widget class}{105}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The \sphinxstyleliteralintitle {\sphinxupquote {.html\_widget\_df()}} method}{105}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}List of fixed variables}{116}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Show the equations for the .calc\_add\_factor\_model}{116}{subsection.10.1.2}%
+\contentsline {part}{V\hspace {1em}References}{117}{part.5}%
+\contentsline {chapter}{Bibliography}{119}{chapter*.32}%
