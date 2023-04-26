@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. Using modelflow with World Bank models" href="../06_WBModels/LoadingWBModel.html" />
+    <link rel="next" title="1. Using modelflow with World Bank models" href="../05_WBModels/LoadingWBModel.html" />
     <link rel="prev" title="4. Modelflow extensions to pandas" href="UpdateCommand.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -187,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
+  <a class="reference internal" href="../05_WBModels/LoadingWBModel.html">
    1. Using
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -198,8 +198,37 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/ScenarioAnalysis.html">
+  <a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">
    2. Scenario analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">
+   4. More complex scenarios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model Analytics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_ModelAnalytics/Attribution.html">
+   1. Attribution
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More modelflow features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07_MoreFeatures/modelwidgets.html">
+   1. The model widget class
   </a>
  </li>
 </ul>
@@ -308,94 +337,68 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   4.2.
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .mfcalc()
-    </span>
-   </code>
-   an extension of standard Pandas
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workspace-initialization">
+   4.2.1. workspace initialization
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#workspace-initialization">
-     4.2.1. workspace initialization
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-simple-dataframe">
-     4.2.2. Create a  simple dataframe
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mfcalc-in-action">
-   4.3.
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-simple-dataframe">
+   4.2.2. Create a  simple dataframe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-example-to-calculate-a-new-series">
+   4.2.3.
    <code class="docutils literal notranslate">
     <span class="pre">
      .mfcalc()
     </span>
    </code>
-   in action
+   example to calculate a new series
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-example-to-calculate-a-new-series">
-     4.3.1.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     example to calculate a new series
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#storing-the-result-of-an-mfcalc-call">
-     4.3.2. Storing the result of an
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     call
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recalculate-a-so-it-grows-by-2-percent">
-     4.3.3. Recalculate A so  it grows by 2 percent
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-the-showeq-option">
-     4.3.4.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     - the showeq option
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-the-diff-operator-with-mfcalc">
-     4.3.5. Using the diff() operator with mfcalc
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-with-several-equations-and-arguments">
-     4.3.6. mfcalc with several equations and arguments
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-a-time-frame-with-mfcalc">
-     4.3.7. Setting a time frame with mfcalc.
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storing-the-result-of-an-mfcalc-call">
+   4.2.4. Storing the result of an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   call
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recalculate-a-so-it-grows-by-2-percent">
+   4.2.5. Recalculate A so  it grows by 2 percent
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-the-showeq-option">
+   4.2.6.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   - the showeq option
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-diff-operator-with-mfcalc">
+   4.2.7. Using the diff() operator with mfcalc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-with-several-equations-and-arguments">
+   4.2.8. mfcalc with several equations and arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-a-time-frame-with-mfcalc">
+   4.2.9. Setting a time frame with mfcalc.
+  </a>
  </li>
 </ul>
 
@@ -417,94 +420,68 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   4.2.
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     .mfcalc()
-    </span>
-   </code>
-   an extension of standard Pandas
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workspace-initialization">
+   4.2.1. workspace initialization
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#workspace-initialization">
-     4.2.1. workspace initialization
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-simple-dataframe">
-     4.2.2. Create a  simple dataframe
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mfcalc-in-action">
-   4.3.
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-simple-dataframe">
+   4.2.2. Create a  simple dataframe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-example-to-calculate-a-new-series">
+   4.2.3.
    <code class="docutils literal notranslate">
     <span class="pre">
      .mfcalc()
     </span>
    </code>
-   in action
+   example to calculate a new series
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-example-to-calculate-a-new-series">
-     4.3.1.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     example to calculate a new series
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#storing-the-result-of-an-mfcalc-call">
-     4.3.2. Storing the result of an
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     call
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recalculate-a-so-it-grows-by-2-percent">
-     4.3.3. Recalculate A so  it grows by 2 percent
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-the-showeq-option">
-     4.3.4.
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .mfcalc()
-      </span>
-     </code>
-     - the showeq option
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-the-diff-operator-with-mfcalc">
-     4.3.5. Using the diff() operator with mfcalc
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mfcalc-with-several-equations-and-arguments">
-     4.3.6. mfcalc with several equations and arguments
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#setting-a-time-frame-with-mfcalc">
-     4.3.7. Setting a time frame with mfcalc.
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storing-the-result-of-an-mfcalc-call">
+   4.2.4. Storing the result of an
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   call
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recalculate-a-so-it-grows-by-2-percent">
+   4.2.5. Recalculate A so  it grows by 2 percent
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-the-showeq-option">
+   4.2.6.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .mfcalc()
+    </span>
+   </code>
+   - the showeq option
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-diff-operator-with-mfcalc">
+   4.2.7. Using the diff() operator with mfcalc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mfcalc-with-several-equations-and-arguments">
+   4.2.8. mfcalc with several equations and arguments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-a-time-frame-with-mfcalc">
+   4.2.9. Setting a time frame with mfcalc.
+  </a>
  </li>
 </ul>
 
@@ -603,11 +580,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 </div>
-</div>
-<div class="section" id="mfcalc-in-action">
-<h1><span class="section-number">4.3. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> in action<a class="headerlink" href="#mfcalc-in-action" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="mfcalc-example-to-calculate-a-new-series">
-<h2><span class="section-number">4.3.1. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> example to calculate a new series<a class="headerlink" href="#mfcalc-example-to-calculate-a-new-series" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.3. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> example to calculate a new series<a class="headerlink" href="#mfcalc-example-to-calculate-a-new-series" title="Permalink to this headline">¶</a></h2>
 <p>Use  mfcalc to calculate a new column (series) as a function of the existing A column series</p>
 <p>The below call creates a new column x.</p>
 <div class="cell docutils container">
@@ -743,7 +717,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="storing-the-result-of-an-mfcalc-call">
-<h2><span class="section-number">4.3.2. </span>Storing the result of an <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> call<a class="headerlink" href="#storing-the-result-of-an-mfcalc-call" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.4. </span>Storing the result of an <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> call<a class="headerlink" href="#storing-the-result-of-an-mfcalc-call" title="Permalink to this headline">¶</a></h2>
 <p>Above the results of the <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> operation was not assigned to an object – the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object df itself was not changed.</p>
 <p>Below the results of the same operation are assigned to the variable df2 and therefore stored.</p>
 <div class="cell docutils container">
@@ -816,7 +790,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="recalculate-a-so-it-grows-by-2-percent">
-<h2><span class="section-number">4.3.3. </span>Recalculate A so  it grows by 2 percent<a class="headerlink" href="#recalculate-a-so-it-grows-by-2-percent" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.5. </span>Recalculate A so  it grows by 2 percent<a class="headerlink" href="#recalculate-a-so-it-grows-by-2-percent" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mfcalc()</span></code>knows that it can not start to calculate in 2020 A (the lagged variable) has no value in 2019.</p>
 <p><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> therefore begins its calculation in 2021. Note, the existing value for 2020 is preserved.  This behaviour differs from other programs that might return a n/a value for the 2020.</p>
 <div class="cell docutils container">
@@ -939,7 +913,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="mfcalc-the-showeq-option">
-<h2><span class="section-number">4.3.4. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> - the showeq option<a class="headerlink" href="#mfcalc-the-showeq-option" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.6. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> - the showeq option<a class="headerlink" href="#mfcalc-the-showeq-option" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">showeq</span></code> option is by default <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">False</span></code>.</p>
 <p>By setting equal to <code class="docutils literal notranslate"><span class="pre">True</span></code>, mfcalc can be used to express the normalization of an entered equation.</p>
 <div class="cell docutils container">
@@ -969,7 +943,7 @@ a &amp;=a_{t-1}*e^{0.02}\\
 <p>A=EXP(LOG(A(-1))+0.02)</p>
 </div>
 <div class="section" id="using-the-diff-operator-with-mfcalc">
-<h2><span class="section-number">4.3.5. </span>Using the diff() operator with mfcalc<a class="headerlink" href="#using-the-diff-operator-with-mfcalc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.7. </span>Using the diff() operator with mfcalc<a class="headerlink" href="#using-the-diff-operator-with-mfcalc" title="Permalink to this headline">¶</a></h2>
 <p>The diff() operator, effectively normalizes to an equation that will add the value to the right of the equals sign to the lagged variable inserted in the diff operator.  Thus,  diff(a)=x normalizes to a=a(-1)+x</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1034,7 +1008,7 @@ FRML &lt;&gt; A=A(-1)+(2)$
 </div>
 </div>
 <div class="section" id="mfcalc-with-several-equations-and-arguments">
-<h2><span class="section-number">4.3.6. </span>mfcalc with several equations and arguments<a class="headerlink" href="#mfcalc-with-several-equations-and-arguments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.8. </span>mfcalc with several equations and arguments<a class="headerlink" href="#mfcalc-with-several-equations-and-arguments" title="Permalink to this headline">¶</a></h2>
 <p>In addition to a single equation multiple commands can be executed with one command.</p>
 <p>However, <strong>be careful</strong> because the equation commands are executed simultaneously, which, combined with the treatments of lags, means that results may differ from what they would be if the commands were run sequentially.</p>
 <p>For example:</p>
@@ -1198,7 +1172,7 @@ FRML &lt;&gt; A=A(-1)+(2)$
 </div>
 </div>
 <div class="section" id="setting-a-time-frame-with-mfcalc">
-<h2><span class="section-number">4.3.7. </span>Setting a time frame with mfcalc.<a class="headerlink" href="#setting-a-time-frame-with-mfcalc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.9. </span>Setting a time frame with mfcalc.<a class="headerlink" href="#setting-a-time-frame-with-mfcalc" title="Permalink to this headline">¶</a></h2>
 <p>It can useful in some circumstances to limit the time frame for which the calculations are performed. Specifying a start date and end date enclosed in &lt;&gt; in a line restricts the time period over which subsequent calculations are performed.</p>
 <p>In the example below zeroes are generated for x prior to 2023 when the expressions are executed.</p>
 <div class="cell docutils container">
@@ -1308,7 +1282,7 @@ FRML &lt;&gt; A=A(-1)+(2)$
             <p class="prev-next-title"><span class="section-number">4. </span>Modelflow extensions to pandas</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../06_WBModels/LoadingWBModel.html" title="next page">
+    <a class='right-next' id="next-link" href="../05_WBModels/LoadingWBModel.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">1. </span>Using <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> with World Bank models</p>

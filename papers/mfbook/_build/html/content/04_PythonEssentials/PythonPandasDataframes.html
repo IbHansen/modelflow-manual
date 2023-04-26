@@ -185,7 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
+  <a class="reference internal" href="../05_WBModels/LoadingWBModel.html">
    1. Using
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -196,8 +196,37 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/ScenarioAnalysis.html">
+  <a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">
    2. Scenario analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">
+   4. More complex scenarios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model Analytics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_ModelAnalytics/Attribution.html">
+   1. Attribution
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More modelflow features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07_MoreFeatures/modelwidgets.html">
+   1. The model widget class
   </a>
  </li>
 </ul>
@@ -395,12 +424,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-and-methods-of-dataframes-in-modelflow">
-     3.3. Properties and methods of dataframes in modelflow
+     3.3. Properties and methods of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataFrames
+      </span>
+     </code>
+     in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       modelflow
+      </span>
+     </code>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#dataframes">
-       3.3.1. dataframes
+       3.3.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataFrame
+        </span>
+       </code>
+       s
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -600,12 +646,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-and-methods-of-dataframes-in-modelflow">
-     3.3. Properties and methods of dataframes in modelflow
+     3.3. Properties and methods of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       DataFrames
+      </span>
+     </code>
+     in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       modelflow
+      </span>
+     </code>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#dataframes">
-       3.3.1. dataframes
+       3.3.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataFrame
+        </span>
+       </code>
+       s
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
@@ -1029,18 +1092,18 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="properties-and-methods-of-dataframes-in-modelflow">
-<h2><span class="section-number">3.3. </span>Properties and methods of dataframes in modelflow<a class="headerlink" href="#properties-and-methods-of-dataframes-in-modelflow" title="Permalink to this headline">¶</a></h2>
-<p>Any class can have both properties (data) and methods (functions that operate on the data of the particular instance of the class). With object-oriented programming languages like python, classes can be built as supersets of existing classes. The Modelflow class <code class="docutils literal notranslate"><span class="pre">model</span></code> inherits or encapsulates all of the features of the pandas dataframe and extends it in many important ways.  Some of the methods below are standard pandas methods, others have been added to it by <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> features</p>
+<h2><span class="section-number">3.3. </span>Properties and methods of <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> in <code class="docutils literal notranslate"><span class="pre">modelflow</span></code><a class="headerlink" href="#properties-and-methods-of-dataframes-in-modelflow" title="Permalink to this headline">¶</a></h2>
+<p>Any class can have both properties (data) and methods (functions that operate on the data of the particular instance of the class). With object-oriented programming languages like python, classes can be built as supersets of existing classes. The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> class <code class="docutils literal notranslate"><span class="pre">model</span></code> inherits or encapsulates all of the features of the pandas dataframe and extends it in many important ways.  Some of the methods below are standard pandas methods, others have been added to it by <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> features</p>
 <p>Much more detail on standard pandas dataframes can be found on the <a class="reference external" href="https://pandas.pydata.org/docs/reference/frame.html">official pandas website</a>.</p>
 <div class="section" id="dataframes">
-<h3><span class="section-number">3.3.1. </span>dataframes<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
-<p>The dataframe is the primary structure of pandas and is a two-dimensional data structure with named rows and columns.  Each columns can have different data types (numeric, string, etc).</p>
+<h3><span class="section-number">3.3.1. </span><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is the primary structure of pandas and is a two-dimensional data structure with named rows and columns.  Each columns can have different data types (numeric, string, etc).</p>
 <p>By convention, a dataframe if often called df or some other modifier followed by df, to assist in reading the code.</p>
 </div>
 <div class="section" id="creating-or-instantiating-a-dataframe">
 <h3><span class="section-number">3.3.2. </span>Creating or instantiating a dataframe<a class="headerlink" href="#creating-or-instantiating-a-dataframe" title="Permalink to this headline">¶</a></h3>
-<p>Like any object, a dataframe can be created by calling the constructor of the pandas class <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>.</p>
-<p>Each class has many constructors, so there are very many ways to create a <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>. The <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> method is constructor for the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> class. It takes several forms (as with <code class="docutils literal notranslate"><span class="pre">Series</span></code>), but always returns an instance of a (instantiates) <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object – i.e. a variable that is a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
+<p>Like any object, a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be created by calling the constructor of the pandas class <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
+<p>Each class has many constructors, so there are very many ways to create a <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>. The <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame()</span></code> method is constructor for the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> class. It takes several forms (as with <code class="docutils literal notranslate"><span class="pre">Series</span></code>), but always returns an instance (instantiates) of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object – i.e. a variable whose contents are a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
 <p>The code example below creates a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> of three columns A,B,C; indexed between 2019 and 2021.  Macroeconomists may interpret the index as dates, but for pandas they are just numbers.</p>
 <p>Below a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> named <code class="docutils literal notranslate"><span class="pre">df</span></code> is instantiated from a dictionary and assigned a specific index by passing a list of years as the index.</p>
 <div class="cell docutils container">
@@ -1105,8 +1168,8 @@ dtype: int64
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> that are used in macrostructural models like MFMod, each  column can be interpreted as a time-series of an economic variable. So in this dataframe,  A, B and C woudl normally be interpreted as economic time series.</p>
-<p>There is nothing in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> class that suggests that the data it stores must be time-series or even numeric in nature.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s that are used in macrostructural models like MFMod, each  column is often interpreted as a time-series of an economic variable. So in this dataframe,  normally A, B and C each be interpreted as economic time series.</p>
+<p>That said, there is nothing in the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> class that suggests that the data it stores must be time-series or even numeric in nature.</p>
 </div>
 </div>
 <div class="section" id="adding-a-column-to-a-dataframe">
@@ -1375,10 +1438,10 @@ dtype: int64
 <p>For higher frequency models the index can be one of pandas datatypes.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Not all datetypes work well with the graphics routines of modelflow.  Users are advised to use use the <code class="docutils literal notranslate"><span class="pre">pd.period_range()</span></code> method to generate date indexes.</p>
+<p>Not all datetypes work well with the graphics routines of modelflow.  Users are advised to use the <code class="docutils literal notranslate"><span class="pre">pd.period_range()</span></code> method to generate date indexes.</p>
 <p>For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1975q1&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;2125q4&#39;</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1975q1&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;2125q4&#39;</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span>
 </pre></div>
 </div>
 </div>

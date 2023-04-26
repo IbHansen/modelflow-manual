@@ -187,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/LoadingWBModel.html">
+  <a class="reference internal" href="../05_WBModels/LoadingWBModel.html">
    1. Using
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -198,8 +198,37 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06_WBModels/ScenarioAnalysis.html">
+  <a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">
    2. Scenario analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">
+   4. More complex scenarios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Model Analytics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_ModelAnalytics/Attribution.html">
+   1. Attribution
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More modelflow features
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07_MoreFeatures/modelwidgets.html">
+   1. The model widget class
   </a>
  </li>
 </ul>
@@ -616,7 +645,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="modelflow-extensions-to-pandas">
 <h1><span class="section-number">4. </span>Modelflow extensions to pandas<a class="headerlink" href="#modelflow-extensions-to-pandas" title="Permalink to this headline">¶</a></h1>
 <p>Modeflow inherits all the capabilities of pandas and extends some as well.</p>
-<p>Data in a dataframe can be modified directly with built-in pandas functionalities like <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code>, but <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> extends these capabilities with in important ways with the <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> and <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> methods.</p>
+<p>Data in a dataframe can be modified directly with built-in pandas functionalities like <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> and <code class="docutils literal notranslate"><span class="pre">eval()</span></code>, but <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> extends these capabilities with in important ways with the <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> and <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> methods.</p>
 <div class="section" id="upd-method-of-modelflow">
 <h2><span class="section-number">4.1. </span>.upd() method of modelflow<a class="headerlink" href="#upd-method-of-modelflow" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method extends pandas by giving the user a concise and expressive way to modify data in a dataframe using a syntax that a database-manager or macroeconomic modeler might find more natural.</p>
