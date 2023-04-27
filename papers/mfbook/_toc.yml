@@ -38,15 +38,15 @@ parts:
    - caption: Model Analytics
      numbered: true      
      chapters:   
-     #- file: content/06_ModelAnalytics/EigenValues
+     - file: content/06_ModelAnalytics/EigenValues
      - file: content/06_ModelAnalytics/Attribution
-#     - file: content/05_WBModels/MoreComplexScenarios
-
+     
    - caption: More modelflow features
      numbered: true      
      chapters:   
      - file: content/07_MoreFeatures/modelwidgets
      sections:
+      - file: content/07_MoreFeatures/GettingHelp
         #-file: content/07_MoreFeatures/ModifyingCharts
         #- file: content/06_WBModels/MoreComplexScenarios
 

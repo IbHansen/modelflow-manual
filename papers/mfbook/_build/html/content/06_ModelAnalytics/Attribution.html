@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Attribution &#8212; The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
+    <title>2. Attribution &#8212; The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1. The model widget class" href="../07_MoreFeatures/modelwidgets.html" />
-    <link rel="prev" title="4. More complex scenarios" href="../05_WBModels/MoreComplexScenarios.html" />
+    <link rel="prev" title="1. Model eigenvalues" href="EigenValues.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -214,9 +214,14 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="EigenValues.html">
+   1. Model eigenvalues
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Attribution
+   2. Attribution
   </a>
  </li>
 </ul>
@@ -339,101 +344,101 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-the-workspace">
-   1.1. Prepare the workspace
+   2.1. Prepare the workspace
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
-     1.1.1. Load the pre-existing model, data and descriptions
+     2.1.1. Load the pre-existing model, data and descriptions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
-   1.2. The mathematics of attribution
+   2.2. The mathematics of attribution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
-   1.3. Model attribution or  single equation attribution?
+   2.3. Model attribution or  single equation attribution?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formula-attribution">
-   1.4. Formula attribution
+   2.4. Formula attribution
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-output">
-     1.4.1. Single equation attribution output
+     2.4.1. Single equation attribution output
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#totdif-presents-the-impacts-at-the-model-level">
-   1.5. .totdif() presents the impacts at the model level
+   2.5. .totdif() presents the impacts at the model level
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#explain-all-will-visualize-the-results">
-     1.5.1. .explain_all will visualize the results
+     2.5.1. .explain_all will visualize the results
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-we-can-use-interactive-widgets">
-     1.5.2. Or we can use interactive widgets
+     2.5.2. Or we can use interactive widgets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-advanced-model-attribution">
-     1.5.3. More advanced model attribution
+     2.5.3. More advanced model attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-chart">
-     1.5.4. Single equation attribution chart
+     2.5.4. Single equation attribution chart
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-in-pct-of-the-total">
-     1.5.5. Chart in pct of the total
+     2.5.5. Chart in pct of the total
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-for-one-year">
-     1.5.6. Chart for one year
+     2.5.6. Chart for one year
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting-of-attribution">
-     1.5.7. Sorting of attribution
+     2.5.7. Sorting of attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truncate-attribution">
-     1.5.8. Truncate attribution
+     2.5.8. Truncate attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attribution-when-comparing-time-frames">
-     1.5.9. Attribution when comparing time frames
+     2.5.9. Attribution when comparing time frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualizing-attribution-in-dependency-graphs">
-     1.5.10. Visualizing attribution in dependency graphs
+     2.5.10. Visualizing attribution in dependency graphs
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-     1.5.11. The attribution can be filtered and more levels can be displayed.
+     2.5.11. The attribution can be filtered and more levels can be displayed.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-     1.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
+     2.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
     </a>
    </li>
   </ul>
@@ -460,101 +465,101 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-the-workspace">
-   1.1. Prepare the workspace
+   2.1. Prepare the workspace
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
-     1.1.1. Load the pre-existing model, data and descriptions
+     2.1.1. Load the pre-existing model, data and descriptions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
-   1.2. The mathematics of attribution
+   2.2. The mathematics of attribution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
-   1.3. Model attribution or  single equation attribution?
+   2.3. Model attribution or  single equation attribution?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formula-attribution">
-   1.4. Formula attribution
+   2.4. Formula attribution
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-output">
-     1.4.1. Single equation attribution output
+     2.4.1. Single equation attribution output
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#totdif-presents-the-impacts-at-the-model-level">
-   1.5. .totdif() presents the impacts at the model level
+   2.5. .totdif() presents the impacts at the model level
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#explain-all-will-visualize-the-results">
-     1.5.1. .explain_all will visualize the results
+     2.5.1. .explain_all will visualize the results
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-we-can-use-interactive-widgets">
-     1.5.2. Or we can use interactive widgets
+     2.5.2. Or we can use interactive widgets
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-advanced-model-attribution">
-     1.5.3. More advanced model attribution
+     2.5.3. More advanced model attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-chart">
-     1.5.4. Single equation attribution chart
+     2.5.4. Single equation attribution chart
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-in-pct-of-the-total">
-     1.5.5. Chart in pct of the total
+     2.5.5. Chart in pct of the total
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-for-one-year">
-     1.5.6. Chart for one year
+     2.5.6. Chart for one year
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting-of-attribution">
-     1.5.7. Sorting of attribution
+     2.5.7. Sorting of attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truncate-attribution">
-     1.5.8. Truncate attribution
+     2.5.8. Truncate attribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attribution-when-comparing-time-frames">
-     1.5.9. Attribution when comparing time frames
+     2.5.9. Attribution when comparing time frames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualizing-attribution-in-dependency-graphs">
-     1.5.10. Visualizing attribution in dependency graphs
+     2.5.10. Visualizing attribution in dependency graphs
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-     1.5.11. The attribution can be filtered and more levels can be displayed.
+     2.5.11. The attribution can be filtered and more levels can be displayed.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-     1.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
+     2.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
     </a>
    </li>
   </ul>
@@ -569,14 +574,14 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="attribution">
-<h1><span class="section-number">1. </span>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h1>
 <p>When working with a model it is often useful to have a better sense of the contribution of different channels to a final result.  For example, an increase in interest rates will tend to reduce investment and consumer demand – contributing to a reduction in GDP. At the same time, lower inflation as the higher interest rate takes effect will tend to work in the opposite direction.</p>
 <p>The modelflow method <code class="docutils literal notranslate"><span class="pre">.attributon</span></code> calculates the contributions of each channel to the overall result.</p>
 <div class="section" id="prepare-the-workspace">
-<h2><span class="section-number">1.1. </span>Prepare the workspace<a class="headerlink" href="#prepare-the-workspace" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Prepare the workspace<a class="headerlink" href="#prepare-the-workspace" title="Permalink to this headline">¶</a></h2>
 <p>As always before running <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> the python environment needs to be initialized and libraries to be used imported.</p>
 <div class="section" id="load-the-pre-existing-model-data-and-descriptions">
-<h3><span class="section-number">1.1.1. </span>Load the pre-existing model, data and descriptions<a class="headerlink" href="#load-the-pre-existing-model-data-and-descriptions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.1. </span>Load the pre-existing model, data and descriptions<a class="headerlink" href="#load-the-pre-existing-model-data-and-descriptions" title="Permalink to this headline">¶</a></h3>
 <p>The file <code class="docutils literal notranslate"><span class="pre">pak.pcim</span></code> contains a dump of model equations, dataframe, simulation options and variable descriptions:</p>
 <ul class="simple">
 <li><p>Loads model and simulates to establish a baseline.</p></li>
@@ -585,14 +590,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
 <span class="n">alternative</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2020 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 29&quot;</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Carbon tax nominal 29&#39;</span><span class="p">)</span> <span class="c1"># simulates the model </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow-manual/main/model_repo/pak.pcim
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\mflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
 </pre></div>
 </div>
 </div>
@@ -600,13 +605,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-mathematics-of-attribution">
-<h2><span class="section-number">1.2. </span>The mathematics of attribution<a class="headerlink" href="#the-mathematics-of-attribution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>The mathematics of attribution<a class="headerlink" href="#the-mathematics-of-attribution" title="Permalink to this headline">¶</a></h2>
 <p>At its root the idea of attribution is simply taking the total derivative of the model to identify the sensitivity of the equation we are interested in to changes elsewhere in the model and then combine that with the changes in other variables.</p>
 <p>Take a variable y that is a function of two other variables a and b.  In the model the relationship might be written as:</p>
 <p><span class="math notranslate nohighlight">\(y = f(a,b)\)</span></p>
 <p>If there are two observations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65aa274d-0b0d-4ae5-b106-ad9fc9365005">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-65aa274d-0b0d-4ae5-b106-ad9fc9365005" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-e935c3cc-0798-43a5-995e-a150596541b7">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-e935c3cc-0798-43a5-995e-a150596541b7" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
 y_0 = f(a_0,b_0)\\
 y_1 = f(a_1,b_1)
 \end{eqnarray}\]</div>
@@ -615,26 +620,26 @@ y_1 = f(a_1,b_1)
 \underbrace{\Delta b \dfrac{\partial {f}}{\partial{b}}(a,b)}_{\Omega b}+Residual\)</span></p>
 <p>The first expresion can be called <span class="math notranslate nohighlight">\(\Omega_a\)</span> or the contribution of changes in a to changes in y, and the second <span class="math notranslate nohighlight">\(\Omega_b\)</span>  or the contribution fo changes in b to changes in y.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"> <span class="pre">.totdif()</span></code> is used to calculate attributions. It performs a numerical approximation of <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> by performing two runs of the model:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ed30312-74e1-472d-853b-77f97c156951">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-8ed30312-74e1-472d-853b-77f97c156951" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
+<div class="amsmath math notranslate nohighlight" id="equation-455b5a84-4b74-4b12-8d91-1d675271bf8c">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-455b5a84-4b74-4b12-8d91-1d675271bf8c" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
 y_0&amp;=&amp;f(a_{0},b_{0}) \\
 y_1&amp;=&amp;f(a_0+\Delta a,b_{0}+ \Delta b)
 \end{eqnarray}\]</div>
 <p>and calculates <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e42adc78-d3b5-4103-a00e-8a3063ce9314">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-e42adc78-d3b5-4103-a00e-8a3063ce9314" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
+<div class="amsmath math notranslate nohighlight" id="equation-d824ece3-3c31-407a-aac2-365250ea933b">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-d824ece3-3c31-407a-aac2-365250ea933b" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
 \Omega f_a&amp;=&amp;f(a_1,b_1 )-f(a_1-\Delta a,b_1) \\
 \Omega f_b&amp;=&amp;f(a_1,b_1 )-f(a_1,b_1-\Delta  b)
 \end{eqnarray}\]</div>
 <p>And:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff1b6fad-6595-429c-9e08-a8951da072e3">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-ff1b6fad-6595-429c-9e08-a8951da072e3" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ed80eadb-e40a-463d-a1ff-b78d57f1891f">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-ed80eadb-e40a-463d-a1ff-b78d57f1891f" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
 residual = \Omega f_a + \Omega f_b -(y_1 - y_0) 
 \end{eqnarray}\]</div>
 <p>If the model is fairly linear, the residual will be small.</p>
 </div>
 <div class="section" id="model-attribution-or-single-equation-attribution">
-<h2><span class="section-number">1.3. </span>Model attribution or  single equation attribution?<a class="headerlink" href="#model-attribution-or-single-equation-attribution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Model attribution or  single equation attribution?<a class="headerlink" href="#model-attribution-or-single-equation-attribution" title="Permalink to this headline">¶</a></h2>
 <p>Above the relationship between y, a, and b was summarized by the function f().</p>
 <p><span class="math notranslate nohighlight">\(f(a,b)\)</span> could represent a single equation in the model or it could represent the entire model. In the first instance, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> would be treated as exogenous variables in the attribution calculation.  In the second instance, they would be all of the endogenous and exoegnous variables that directly and indirectly impact y.</p>
 <p>Assume the simple equation example such that  <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are simple variables. When <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> reflect the difference across scenarios (say the value of the three variables in <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> less the value in <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> then;</p>
@@ -643,15 +648,15 @@ residual = \Omega f_a + \Omega f_b -(y_1 - y_0)
 <p>If <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> are the changes over time (<span class="math notranslate nohighlight">\(\Delta y_t=y_t-y_{t-1}\)</span>), then <span class="math notranslate nohighlight">\(\Omega_a\)</span>, <span class="math notranslate nohighlight">\(\Omega_b\)</span> are the contributions of a and b to the rate of growth of y, while <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_a}{\Delta y_{t-1}}\bigg]\)</span>  <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_b}{\Delta y_{t-1}}\bigg]\)</span> are are the contributions of a and b to the rate of growth of y.</p>
 </div>
 <div class="section" id="formula-attribution">
-<h2><span class="section-number">1.4. </span>Formula attribution<a class="headerlink" href="#formula-attribution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Formula attribution<a class="headerlink" href="#formula-attribution" title="Permalink to this headline">¶</a></h2>
 <p>Attribution analysis on the formula level is performed by the method <strong>.dekomp</strong>.</p>
 <p>This method utilizes that two attributes .basedf and .lastdf containing the first and the last run are contained in the model instance. Also all the formulas are contained in the instance. Therefore a model, just with one formula - is created. Then experiments mentioned above is run for each period and each right hand side variable.</p>
 <div class="section" id="single-equation-attribution-output">
-<h3><span class="section-number">1.4.1. </span>Single equation attribution output<a class="headerlink" href="#single-equation-attribution-output" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.4.1. </span>Single equation attribution output<a class="headerlink" href="#single-equation-attribution-output" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">dekomp()</span></code> method calculates the contribution to changes in the level of the dependent variable in a given equation.  In the example below the contribution to the change in Total emissions is decomposed into the contribution from each of three sources in the model, the consumption of Crude Oil, Natural Gas and Coal.  As the equation for total emissions is just the sum of the three this is a fairly trivial decomposition, but it provides an easily understood illustration of the process at work.</p>
 <p>The results of the <code class="docutils literal notranslate"><span class="pre">.dekomp</span></code> command are divided into 4 separate tables.</p>
 <ol class="simple">
-<li><p>The first table of output shows the changes that are to be explained, having been drawn from the <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> DataFrames of the model object.</p></li>
+<li><p>The first table of output shows the changes that are to be explained/ <strong>The changes are always drawn from the most solution, i.e. from the <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> DataFrames</strong> of the model object.</p></li>
 <li><p>The seond table shows the changes between the contributions of the LHS variables to the changes in the RHS variable.  Because the equation is just and additive identity, these amount to the changes in each of the variables themselves.</p></li>
 <li><p>the third table expresses these changes as a share of the total change.</p></li>
 <li><p>The last shows the contributions of these changes to the change in the growth rate of the deopendent variable (these results would need to be multiplied by 100 to see that they add to the totals in table 1.</p></li>
@@ -664,35 +669,35 @@ residual = \Omega f_a + \Omega f_b -(y_1 - y_0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML  &lt;&gt; PAKCCEMISCO2TKN = PAKCCEMISCO2CKN+PAKCCEMISCO2OKN+PAKCCEMISCO2GKN $ 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML &lt;IDENT&gt; PAKCCEMISCO2TKN = PAKCCEMISCO2CKN+PAKCCEMISCO2OKN+PAKCCEMISCO2GKN $ 
 
                         2020         2021         2022         2023         2024         2025
 Variable    lag                                                                              
-Base        0   216055772.84 222601656.91 230049529.33 238103197.33 246127123.55 253659456.66
-Alternative 0   153705842.11 160634232.91 168319944.42 176432099.88 184790573.07 193170252.17
-Difference  0   -62349930.73 -61967424.00 -61729584.91 -61671097.45 -61336550.48 -60489204.50
-Percent     0         -28.86       -27.84       -26.83       -25.90       -24.92       -23.85
+Base        0   213515545.24 217548186.56 221072469.97 225253519.79 230370294.27 236240658.85
+Alternative 0   154655290.66 159024407.00 163163619.20 168028201.90 173929277.95 180696656.18
+Difference  0   -58860254.58 -58523779.56 -57908850.77 -57225317.88 -56441016.32 -55544002.66
+Percent     0         -27.57       -26.90       -26.19       -25.40       -24.50       -23.51
 
  Contributions to differende for  PAKCCEMISCO2TKN
                             2020         2021         2022         2023         2024         2025
 Variable        lag                                                                              
-PAKCCEMISCO2CKN 0   -24768096.25 -25017497.26 -25248615.93 -25456453.36 -25531990.77 -25414039.06
-PAKCCEMISCO2OKN 0   -15859351.44 -16379596.20 -16816413.36 -17232706.59 -17434843.28 -17332637.96
-PAKCCEMISCO2GKN 0   -21722483.03 -20570330.55 -19664555.61 -18981937.50 -18369716.44 -17742527.48
+PAKCCEMISCO2CKN 0   -23834819.21 -23889797.62 -23777548.63 -23622076.35 -23444796.31 -23239969.29
+PAKCCEMISCO2OKN 0   -13887796.96 -14589014.38 -15070531.59 -15363597.05 -15456777.50 -15387859.25
+PAKCCEMISCO2GKN 0   -21137638.41 -20044967.56 -19060770.55 -18239644.49 -17539442.51 -16916174.12
 
  Share of contributions to differende for  PAKCCEMISCO2TKN
                            2020        2021        2022        2023        2024        2025
 Variable        lag                                                                        
-PAKCCEMISCO2CKN 0           40%         40%         41%         41%         42%         42%
-PAKCCEMISCO2GKN 0           35%         33%         32%         31%         30%         29%
-PAKCCEMISCO2OKN 0           25%         26%         27%         28%         28%         29%
+PAKCCEMISCO2CKN 0           40%         41%         41%         41%         42%         42%
+PAKCCEMISCO2GKN 0           36%         34%         33%         32%         31%         30%
+PAKCCEMISCO2OKN 0           24%         25%         26%         27%         27%         28%
 Total           0          100%        100%        100%        100%        100%        100%
 Residual        0            0%          0%          0%          0%          0%          0%
 
  Contribution to growth rate PAKCCEMISCO2TKN
                            2020        2021        2022        2023        2024        2025
 Variable        lag                                                                        
-PAKCCEMISCO2CKN 0         -0.1%       -0.2%       -0.2%       -0.2%       -0.1%       -0.1%
+PAKCCEMISCO2CKN 0         -0.1%       -0.2%       -0.1%       -0.1%       -0.1%       -0.1%
 PAKCCEMISCO2OKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1%       -0.1%
 PAKCCEMISCO2GKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1%       -0.1%
 </pre></div>
@@ -708,7 +713,7 @@ PAKCCEMISCO2GKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1% 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONPRVTXN : Not avaible
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONPRVTXN : @IDENTITY PAKNECONPRVTXN  = ((PAKNECONENGYSH^PAKCESENGYCON)  * PAKNECONENGYXN^(1  - PAKCESENGYCON)  + (PAKNECONOTHRSH^PAKCESENGYCON)  * PAKNECONOTHRXN^(1  - PAKCESENGYCON))^(1  / (1  - PAKCESENGYCON))
 </pre></div>
 </div>
 </div>
@@ -721,7 +726,7 @@ PAKCCEMISCO2GKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1% 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONPRVTXN : FRML &lt;&gt; PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1-PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1-PAKCESENGYCON))**(1/(1-PAKCESENGYCON)) $
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONPRVTXN : FRML &lt;IDENT&gt; PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1-PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1-PAKCESENGYCON))**(1/(1-PAKCESENGYCON)) $
 </pre></div>
 </div>
 </div>
@@ -736,42 +741,42 @@ PAKCCEMISCO2GKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1% 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML  &lt;&gt; PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1-PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1-PAKCESENGYCON))**(1/(1-PAKCESENGYCON)) $ 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML &lt;IDENT&gt; PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1-PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1-PAKCESENGYCON))**(1/(1-PAKCESENGYCON)) $ 
 
                       2020       2021       2022       2023       2024       2025
 Variable    lag                                                                  
-Base        0         1.68       1.85       2.01       2.18       2.34       2.50
-Alternative 0         1.73       1.89       2.06       2.23       2.40       2.57
-Difference  0         0.05       0.05       0.05       0.06       0.06       0.07
-Percent     0         2.75       2.52       2.51       2.59       2.67       2.73
+Base        0         1.67       1.82       1.98       2.14       2.30       2.45
+Alternative 0         1.72       1.89       2.06       2.23       2.39       2.55
+Difference  0         0.06       0.07       0.08       0.09       0.09       0.10
+Percent     0         3.34       3.77       4.04       4.14       4.11       3.99
 
  Contributions to differende for  PAKNECONPRVTXN
                          2020       2021       2022       2023       2024       2025
 Variable       lag                                                                  
-PAKNECONENGYSH 0         0.00       0.00       0.00       0.00       0.00       0.00
-PAKCESENGYCON  0         0.00       0.00       0.00       0.00       0.00       0.00
+PAKNECONENGYSH 0        -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+PAKCESENGYCON  0        -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
 PAKNECONENGYXN 0         0.01       0.01       0.01       0.01       0.01       0.01
-PAKNECONOTHRSH 0         0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN 0         0.03       0.03       0.04       0.04       0.05       0.05
+PAKNECONOTHRSH 0        -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+PAKNECONOTHRXN 0         0.04       0.06       0.07       0.08       0.08       0.08
 
  Share of contributions to differende for  PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
 Variable       lag                                                                        
-PAKNECONOTHRXN 0           72%         71%         73%         76%         78%         80%
-PAKNECONENGYXN 0           28%         29%         27%         25%         23%         21%
-PAKNECONENGYSH 0            0%          0%          0%          0%          0%          0%
-PAKCESENGYCON  0            0%          0%          0%          0%          0%          0%
-PAKNECONOTHRSH 0            0%          0%          0%          0%          0%          0%
-Total          0          101%        101%        101%        100%        100%        100%
-Residual       0            1%          1%          1%          0%          0%          0%
+PAKNECONOTHRXN 0           77%         81%         83%         85%         86%         86%
+PAKNECONENGYXN 0           24%         20%         17%         16%         15%         14%
+PAKNECONENGYSH 0           -0%         -0%         -0%         -0%         -0%         -0%
+PAKCESENGYCON  0           -0%         -0%         -0%         -0%         -0%         -0%
+PAKNECONOTHRSH 0           -0%         -0%         -0%         -0%         -0%         -0%
+Total          0          101%        101%        101%        101%        101%        100%
+Residual       0            1%          1%          1%          1%          1%          0%
 
  Contribution to growth rate PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
 Variable       lag                                                                        
-PAKNECONENGYSH 0          0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKCESENGYCON  0          0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
+PAKNECONENGYSH 0         -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKCESENGYCON  0         -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 PAKNECONENGYXN 0          0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKNECONOTHRSH 0          0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
+PAKNECONOTHRSH 0         -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 PAKNECONOTHRXN 0          0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
 </pre></div>
 </div>
@@ -786,10 +791,7 @@ PAKNECONOTHRXN 0          0.0%        0.0%        0.0%        0.0%        0.0%  
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONOTHRXN : Not avaible
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNECONOTHRXN : DLOG(PAKNECONOTHRXN) = 0.590372627657176*DLOG(PAKNYGDPFCSTXN) + D(PAKGGREVGNFSXN/100) + (1 - 0.590372627657176)*DLOG(PAKNEIMPGNFSXN) + 0.2*PAKNYGDPGAP_/100
 </pre></div>
 </div>
 </div>
@@ -802,61 +804,61 @@ PAKNECONOTHRXN 0          0.0%        0.0%        0.0%        0.0%        0.0%  
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML &lt;Z,EXO&gt; PAKNECONOTHRXN = (PAKNECONOTHRXN(-1)*EXP(-PAKNECONOTHRXN_A+ (0.598859116610832*((LOG(PAKNYGDPFCSTXN))-(LOG(PAKNYGDPFCSTXN(-1))))+((PAKGGREVGNFSXN/100)-(PAKGGREVGNFSXN(-1)/100))+(1-0.598859116610832)*((LOG(PAKNEIMPGNFSXN))-(LOG(PAKNEIMPGNFSXN(-1))))+0.2*PAKNYGDPGAP_/100) )) * (1-PAKNECONOTHRXN_D)+ PAKNECONOTHRXN_X*PAKNECONOTHRXN_D  $ 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Formula        : FRML &lt;DAMP,STOC&gt; PAKNECONOTHRXN = (PAKNECONOTHRXN(-1)*EXP(PAKNECONOTHRXN_A+ (0.590372627657176*((LOG(PAKNYGDPFCSTXN))-(LOG(PAKNYGDPFCSTXN(-1))))+((PAKGGREVGNFSXN/100)-(PAKGGREVGNFSXN(-1)/100))+(1-0.590372627657176)*((LOG(PAKNEIMPGNFSXN))-(LOG(PAKNEIMPGNFSXN(-1))))+0.2*PAKNYGDPGAP_/100) )) * (1-PAKNECONOTHRXN_D)+ PAKNECONOTHRXN_X*PAKNECONOTHRXN_D  $ 
 
                       2020       2021       2022       2023       2024       2025
 Variable    lag                                                                  
-Base        0         1.71       1.88       2.05       2.22       2.39       2.55
-Alternative 0         1.75       1.91       2.09       2.26       2.44       2.61
-Difference  0         0.03       0.03       0.04       0.04       0.05       0.06
-Percent     0         2.02       1.84       1.88       2.00       2.12       2.22
+Base        0         1.70       1.86       2.02       2.18       2.34       2.50
+Alternative 0         1.74       1.92       2.09       2.26       2.43       2.59
+Difference  0         0.04       0.06       0.07       0.08       0.08       0.09
+Percent     0         2.63       3.12       3.44       3.59       3.60       3.51
 
  Contributions to differende for  PAKNECONOTHRXN
                            2020       2021       2022       2023       2024       2025
 Variable         lag                                                                  
-PAKNECONOTHRXN   -1        0.00       0.04       0.04       0.04       0.05       0.05
-PAKNECONOTHRXN_A  0        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNYGDPFCSTXN    0       -0.00      -0.00      -0.00       0.00       0.00       0.01
-                 -1        0.00       0.00       0.00       0.00      -0.00      -0.00
-PAKGGREVGNFSXN    0        0.00       0.00       0.00       0.00       0.00       0.00
-                 -1        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNEIMPGNFSXN    0        0.04       0.04       0.04       0.04       0.04       0.05
-                 -1        0.00      -0.04      -0.05      -0.05      -0.05      -0.05
-PAKNYGDPGAP_      0       -0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN_D  0        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN_X  0        0.00       0.00       0.00       0.00       0.00       0.00
+PAKNECONOTHRXN   -1       -0.00       0.05       0.06       0.08       0.08       0.09
+PAKNECONOTHRXN_A  0       -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+PAKNYGDPFCSTXN    0        0.00       0.01       0.01       0.02       0.02       0.02
+                 -1       -0.00      -0.00      -0.01      -0.01      -0.02      -0.02
+PAKGGREVGNFSXN    0       -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+                 -1       -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+PAKNEIMPGNFSXN    0        0.04       0.04       0.05       0.05       0.05       0.05
+                 -1       -0.00      -0.05      -0.05      -0.05      -0.05      -0.05
+PAKNYGDPGAP_      0        0.00       0.00       0.00       0.00       0.00      -0.00
+PAKNECONOTHRXN_D  0       -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
+PAKNECONOTHRXN_X  0       -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
 
  Share of contributions to differende for  PAKNECONOTHRXN
                             2020        2021        2022        2023        2024        2025
 Variable         lag                                                                        
-PAKNECONOTHRXN   -1           0%        110%         98%         94%         94%         96%
-PAKNEIMPGNFSXN    0         114%        118%        110%         98%         89%         81%
-PAKNYGDPFCSTXN    0          -6%        -10%         -7%          0%          6%         12%
-PAKNYGDPGAP_      0          -8%          1%          5%          5%          3%          3%
-PAKNECONOTHRXN_A  0           0%          0%          0%          0%          0%          0%
-PAKGGREVGNFSXN    0           0%          0%          0%          0%          0%          0%
-                 -1           0%          0%          0%          0%          0%          0%
-PAKNECONOTHRXN_D  0           0%          0%          0%          0%          0%          0%
-PAKNECONOTHRXN_X  0           0%          0%          0%          0%          0%          0%
-PAKNYGDPFCSTXN   -1           0%          7%         10%          6%         -0%         -6%
-PAKNEIMPGNFSXN   -1           0%       -129%       -118%       -105%        -95%        -87%
-Total             0         100%         97%         98%         98%         98%         99%
-Residual          0          -0%         -3%         -2%         -2%         -2%         -1%
+PAKNECONOTHRXN   -1          -0%         85%         91%         96%        100%        102%
+PAKNEIMPGNFSXN    0          92%         75%         66%         61%         58%         56%
+PAKNYGDPFCSTXN    0           2%         13%         19%         23%         26%         28%
+PAKNECONOTHRXN_A  0          -0%         -0%         -0%         -0%         -0%         -0%
+PAKGGREVGNFSXN    0          -0%         -0%         -0%         -0%         -0%         -0%
+                 -1          -0%         -0%         -0%         -0%         -0%         -0%
+PAKNECONOTHRXN_D  0          -0%         -0%         -0%         -0%         -0%         -0%
+PAKNECONOTHRXN_X  0          -0%         -0%         -0%         -0%         -0%         -0%
+PAKNYGDPGAP_      0           7%          7%          4%          2%          0%         -1%
+PAKNYGDPFCSTXN   -1          -0%         -2%        -12%        -19%        -24%        -27%
+PAKNEIMPGNFSXN   -1          -0%        -79%        -70%        -65%        -62%        -60%
+Total             0         100%         99%         99%         99%         99%         99%
+Residual          0           0%         -1%         -1%         -1%         -1%         -1%
 
  Contribution to growth rate PAKNECONOTHRXN
                             2020        2021        2022        2023        2024        2025
 Variable         lag                                                                        
-PAKNECONOTHRXN   -1         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKNECONOTHRXN_A  0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKNYGDPFCSTXN    0        -0.0%       -0.0%       -0.0%        0.0%        0.0%        0.0%
-                 -1         0.0%        0.0%        0.0%        0.0%       -0.0%       -0.0%
-PAKGGREVGNFSXN    0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-                 -1         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
+PAKNECONOTHRXN   -1        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKNECONOTHRXN_A  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKNYGDPFCSTXN    0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
+                 -1        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKGGREVGNFSXN    0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+                 -1        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 PAKNEIMPGNFSXN    0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-                 -1         0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
-PAKNYGDPGAP_      0        -0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKNECONOTHRXN_D  0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
-PAKNECONOTHRXN_X  0         0.0%        0.0%        0.0%        0.0%        0.0%        0.0%
+                 -1        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKNYGDPGAP_      0         0.0%        0.0%        0.0%        0.0%        0.0%       -0.0%
+PAKNECONOTHRXN_D  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
+PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </pre></div>
 </div>
 </div>
@@ -864,32 +866,1049 @@ PAKNECONOTHRXN_X  0         0.0%        0.0%        0.0%        0.0%        0.0%
 <p>These results are more interesting and indicate that much of the initial impact on prices is coming the increase in the price of imported goods (which includes a large fuel component). As time progresses the imported inflation component declines and the lagged consumption effect dominates.  Other factors such as the cost of domestically produced goods play a larger role and the net impact of imported prices (the total of the contemporaneous and lagged value) approaches zero. Cyclical pressure are initially adding to inflation before declining and eventually turning negative.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.02</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dif</span><span class="o">.</span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_20_0.png" src="../../_images/Attribution_20_0.png" />
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PAKNECONOTHRXN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020</th>
+      <td>0.044582</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>0.058001</td>
+    </tr>
+    <tr>
+      <th>2022</th>
+      <td>0.069577</td>
+    </tr>
+    <tr>
+      <th>2023</th>
+      <td>0.078417</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>0.084378</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2096</th>
+      <td>0.424055</td>
+    </tr>
+    <tr>
+      <th>2097</th>
+      <td>0.443432</td>
+    </tr>
+    <tr>
+      <th>2098</th>
+      <td>0.463762</td>
+    </tr>
+    <tr>
+      <th>2099</th>
+      <td>0.485087</td>
+    </tr>
+    <tr>
+      <th>2100</th>
+      <td>0.507454</td>
+    </tr>
+  </tbody>
+</table>
+<p>81 rows × 1 columns</p>
+</div></div></div>
+</div>
+<p>The dekomp_plot with option pct=False shows the change in the level of the LHS variable decomposed into the contribution of</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">control</span><span class="p">,</span><span class="n">delta</span><span class="p">,</span><span class="n">contributions</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">lprint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mpak</span><span class="o">.</span><span class="n">dekomp</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">lprint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">control</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>2020</th>
+      <th>2021</th>
+      <th>2022</th>
+      <th>2023</th>
+      <th>2024</th>
+      <th>2025</th>
+      <th>2026</th>
+      <th>2027</th>
+      <th>2028</th>
+      <th>2029</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>lag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Base</th>
+      <th>0</th>
+      <td>1.695682</td>
+      <td>1.857535</td>
+      <td>2.021492</td>
+      <td>2.183344</td>
+      <td>2.342145</td>
+      <td>2.49833</td>
+      <td>2.652585</td>
+      <td>2.8055</td>
+      <td>2.957674</td>
+      <td>3.109926</td>
+      <td>...</td>
+      <td>79.631396</td>
+      <td>84.163096</td>
+      <td>88.952875</td>
+      <td>94.015343</td>
+      <td>99.365938</td>
+      <td>105.020967</td>
+      <td>110.997662</td>
+      <td>117.31423</td>
+      <td>123.989906</td>
+      <td>131.045014</td>
+    </tr>
+    <tr>
+      <th>Alternative</th>
+      <th>0</th>
+      <td>1.740265</td>
+      <td>1.915535</td>
+      <td>2.091069</td>
+      <td>2.261761</td>
+      <td>2.426523</td>
+      <td>2.586135</td>
+      <td>2.741785</td>
+      <td>2.894545</td>
+      <td>3.045414</td>
+      <td>3.195536</td>
+      <td>...</td>
+      <td>79.97147</td>
+      <td>84.518369</td>
+      <td>89.32411</td>
+      <td>94.403339</td>
+      <td>99.771527</td>
+      <td>105.445022</td>
+      <td>111.441094</td>
+      <td>117.777991</td>
+      <td>124.474993</td>
+      <td>131.552467</td>
+    </tr>
+    <tr>
+      <th>Difference</th>
+      <th>0</th>
+      <td>0.044582</td>
+      <td>0.058001</td>
+      <td>0.069577</td>
+      <td>0.078417</td>
+      <td>0.084378</td>
+      <td>0.087805</td>
+      <td>0.0892</td>
+      <td>0.089045</td>
+      <td>0.08774</td>
+      <td>0.08561</td>
+      <td>...</td>
+      <td>0.340074</td>
+      <td>0.355273</td>
+      <td>0.371235</td>
+      <td>0.387995</td>
+      <td>0.405589</td>
+      <td>0.424055</td>
+      <td>0.443432</td>
+      <td>0.463762</td>
+      <td>0.485087</td>
+      <td>0.507454</td>
+    </tr>
+    <tr>
+      <th>Percent</th>
+      <th>0</th>
+      <td>2.629162</td>
+      <td>3.122452</td>
+      <td>3.441877</td>
+      <td>3.591603</td>
+      <td>3.60259</td>
+      <td>3.514546</td>
+      <td>3.362743</td>
+      <td>3.173934</td>
+      <td>2.966501</td>
+      <td>2.752779</td>
+      <td>...</td>
+      <td>0.42706</td>
+      <td>0.422124</td>
+      <td>0.417339</td>
+      <td>0.412693</td>
+      <td>0.408177</td>
+      <td>0.403781</td>
+      <td>0.399497</td>
+      <td>0.395316</td>
+      <td>0.391231</td>
+      <td>0.387236</td>
+    </tr>
+  </tbody>
+</table>
+<p>4 rows × 81 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>2020</th>
+      <th>2021</th>
+      <th>2022</th>
+      <th>2023</th>
+      <th>2024</th>
+      <th>2025</th>
+      <th>2026</th>
+      <th>2027</th>
+      <th>2028</th>
+      <th>2029</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>lag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PAKNECONOTHRXN</th>
+      <th>-1</th>
+      <td>-0.0</td>
+      <td>0.049072</td>
+      <td>0.063316</td>
+      <td>0.075257</td>
+      <td>0.08413</td>
+      <td>0.089928</td>
+      <td>0.09309</td>
+      <td>0.09417</td>
+      <td>0.093686</td>
+      <td>0.092065</td>
+      <td>...</td>
+      <td>0.344117</td>
+      <td>0.35941</td>
+      <td>0.375474</td>
+      <td>0.392345</td>
+      <td>0.410058</td>
+      <td>0.428653</td>
+      <td>0.448169</td>
+      <td>0.468647</td>
+      <td>0.490132</td>
+      <td>0.512668</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_A</th>
+      <th>0</th>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>...</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">PAKNYGDPFCSTXN</th>
+      <th>0</th>
+      <td>0.000827</td>
+      <td>0.007618</td>
+      <td>0.01354</td>
+      <td>0.018401</td>
+      <td>0.022052</td>
+      <td>0.024598</td>
+      <td>0.02621</td>
+      <td>0.027065</td>
+      <td>0.027309</td>
+      <td>0.027066</td>
+      <td>...</td>
+      <td>0.155984</td>
+      <td>0.163537</td>
+      <td>0.171467</td>
+      <td>0.179792</td>
+      <td>0.188531</td>
+      <td>0.197701</td>
+      <td>0.207322</td>
+      <td>0.217415</td>
+      <td>0.228002</td>
+      <td>0.239103</td>
+    </tr>
+    <tr>
+      <th>-1</th>
+      <td>-0.0</td>
+      <td>-0.000911</td>
+      <td>-0.008349</td>
+      <td>-0.014741</td>
+      <td>-0.019903</td>
+      <td>-0.023718</td>
+      <td>-0.026328</td>
+      <td>-0.027938</td>
+      <td>-0.028744</td>
+      <td>-0.028915</td>
+      <td>...</td>
+      <td>-0.157562</td>
+      <td>-0.165175</td>
+      <td>-0.173171</td>
+      <td>-0.181566</td>
+      <td>-0.190379</td>
+      <td>-0.199629</td>
+      <td>-0.209335</td>
+      <td>-0.21952</td>
+      <td>-0.230203</td>
+      <td>-0.241408</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">PAKGGREVGNFSXN</th>
+      <th>0</th>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>...</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+    </tr>
+    <tr>
+      <th>-1</th>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>...</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">PAKNEIMPGNFSXN</th>
+      <th>0</th>
+      <td>0.040852</td>
+      <td>0.043658</td>
+      <td>0.045895</td>
+      <td>0.047511</td>
+      <td>0.048539</td>
+      <td>0.049082</td>
+      <td>0.049244</td>
+      <td>0.04911</td>
+      <td>0.048747</td>
+      <td>0.04821</td>
+      <td>...</td>
+      <td>0.041552</td>
+      <td>0.041988</td>
+      <td>0.04245</td>
+      <td>0.042939</td>
+      <td>0.043457</td>
+      <td>0.044005</td>
+      <td>0.044583</td>
+      <td>0.045193</td>
+      <td>0.045835</td>
+      <td>0.046511</td>
+    </tr>
+    <tr>
+      <th>-1</th>
+      <td>-0.0</td>
+      <td>-0.046047</td>
+      <td>-0.04877</td>
+      <td>-0.050755</td>
+      <td>-0.052066</td>
+      <td>-0.052788</td>
+      <td>-0.053043</td>
+      <td>-0.052938</td>
+      <td>-0.052561</td>
+      <td>-0.051982</td>
+      <td>...</td>
+      <td>-0.043505</td>
+      <td>-0.043937</td>
+      <td>-0.044397</td>
+      <td>-0.044885</td>
+      <td>-0.045402</td>
+      <td>-0.045949</td>
+      <td>-0.046527</td>
+      <td>-0.047137</td>
+      <td>-0.047781</td>
+      <td>-0.048459</td>
+    </tr>
+    <tr>
+      <th>PAKNYGDPGAP_</th>
+      <th>0</th>
+      <td>0.002994</td>
+      <td>0.003799</td>
+      <td>0.003018</td>
+      <td>0.001664</td>
+      <td>0.000411</td>
+      <td>-0.000602</td>
+      <td>-0.001313</td>
+      <td>-0.001753</td>
+      <td>-0.001981</td>
+      <td>-0.002051</td>
+      <td>...</td>
+      <td>-0.000859</td>
+      <td>-0.000908</td>
+      <td>-0.000959</td>
+      <td>-0.001015</td>
+      <td>-0.001075</td>
+      <td>-0.001139</td>
+      <td>-0.001207</td>
+      <td>-0.001279</td>
+      <td>-0.001357</td>
+      <td>-0.001439</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_D</th>
+      <th>0</th>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>...</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_X</th>
+      <th>0</th>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>...</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+      <td>-0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>11 rows × 81 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contributions</span> <span class="c1"># as a percent of the total change (the omegas)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>2020</th>
+      <th>2021</th>
+      <th>2022</th>
+      <th>2023</th>
+      <th>2024</th>
+      <th>2025</th>
+      <th>2026</th>
+      <th>2027</th>
+      <th>2028</th>
+      <th>2029</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>Variable</th>
+      <th>lag</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PAKNECONOTHRXN</th>
+      <th>-1</th>
+      <td>-0.000002</td>
+      <td>8.460662e+01</td>
+      <td>9.100048e+01</td>
+      <td>9.596994e+01</td>
+      <td>9.970561e+01</td>
+      <td>102.418017</td>
+      <td>104.360990</td>
+      <td>105.755205</td>
+      <td>106.777404</td>
+      <td>107.540159</td>
+      <td>...</td>
+      <td>101.188729</td>
+      <td>101.164358</td>
+      <td>101.141817</td>
+      <td>101.121018</td>
+      <td>101.101875</td>
+      <td>101.084286</td>
+      <td>101.068162</td>
+      <td>101.053408</td>
+      <td>101.039937</td>
+      <td>101.027653</td>
+    </tr>
+    <tr>
+      <th>PAKNYGDPFCSTXN</th>
+      <th>0</th>
+      <td>1.856042</td>
+      <td>1.313438e+01</td>
+      <td>1.946052e+01</td>
+      <td>2.346548e+01</td>
+      <td>2.613470e+01</td>
+      <td>28.013805</td>
+      <td>29.383646</td>
+      <td>30.394521</td>
+      <td>31.125292</td>
+      <td>31.616110</td>
+      <td>...</td>
+      <td>45.867719</td>
+      <td>46.031293</td>
+      <td>46.188267</td>
+      <td>46.338833</td>
+      <td>46.483184</td>
+      <td>46.621509</td>
+      <td>46.753995</td>
+      <td>46.880832</td>
+      <td>47.002206</td>
+      <td>47.118299</td>
+    </tr>
+    <tr>
+      <th>PAKNEIMPGNFSXN</th>
+      <th>0</th>
+      <td>91.632877</td>
+      <td>7.527132e+01</td>
+      <td>6.596239e+01</td>
+      <td>6.058777e+01</td>
+      <td>5.752562e+01</td>
+      <td>55.898697</td>
+      <td>55.206151</td>
+      <td>55.151888</td>
+      <td>55.558763</td>
+      <td>56.313837</td>
+      <td>...</td>
+      <td>12.218479</td>
+      <td>11.818377</td>
+      <td>11.434709</td>
+      <td>11.066966</td>
+      <td>10.714628</td>
+      <td>10.377171</td>
+      <td>10.054064</td>
+      <td>9.744779</td>
+      <td>9.448788</td>
+      <td>9.165568</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_A</th>
+      <th>0</th>
+      <td>-0.000002</td>
+      <td>-8.349738e-07</td>
+      <td>-4.609774e-07</td>
+      <td>-8.605964e-07</td>
+      <td>-8.446033e-07</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>...</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">PAKGGREVGNFSXN</th>
+      <th>0</th>
+      <td>-0.000002</td>
+      <td>-8.349738e-07</td>
+      <td>-4.609774e-07</td>
+      <td>-8.605964e-07</td>
+      <td>-8.446033e-07</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>...</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+    </tr>
+    <tr>
+      <th>-1</th>
+      <td>-0.000002</td>
+      <td>-8.349738e-07</td>
+      <td>-4.609774e-07</td>
+      <td>-8.605964e-07</td>
+      <td>-8.446033e-07</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>...</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_D</th>
+      <th>0</th>
+      <td>-0.000002</td>
+      <td>-8.349738e-07</td>
+      <td>-4.609774e-07</td>
+      <td>-8.605964e-07</td>
+      <td>-8.446033e-07</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>...</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+    </tr>
+    <tr>
+      <th>PAKNECONOTHRXN_X</th>
+      <th>0</th>
+      <td>-0.000002</td>
+      <td>-8.349738e-07</td>
+      <td>-4.609774e-07</td>
+      <td>-8.605964e-07</td>
+      <td>-8.446033e-07</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000003</td>
+      <td>-0.000004</td>
+      <td>...</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000003</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+      <td>-0.000002</td>
+    </tr>
+    <tr>
+      <th>PAKNYGDPGAP_</th>
+      <th>0</th>
+      <td>6.715406</td>
+      <td>6.549233e+00</td>
+      <td>4.337007e+00</td>
+      <td>2.122444e+00</td>
+      <td>4.870008e-01</td>
+      <td>-0.685120</td>
+      <td>-1.471705</td>
+      <td>-1.968265</td>
+      <td>-2.257912</td>
+      <td>-2.395764</td>
+      <td>...</td>
+      <td>-0.252723</td>
+      <td>-0.255448</td>
+      <td>-0.258416</td>
+      <td>-0.261598</td>
+      <td>-0.264965</td>
+      <td>-0.268486</td>
+      <td>-0.272134</td>
+      <td>-0.275885</td>
+      <td>-0.279718</td>
+      <td>-0.283601</td>
+    </tr>
+    <tr>
+      <th>PAKNEIMPGNFSXN</th>
+      <th>-1</th>
+      <td>-0.000002</td>
+      <td>-7.939116e+01</td>
+      <td>-7.009483e+01</td>
+      <td>-6.472465e+01</td>
+      <td>-6.170561e+01</td>
+      <td>-60.119200</td>
+      <td>-59.465019</td>
+      <td>-59.451158</td>
+      <td>-59.906153</td>
+      <td>-60.719917</td>
+      <td>...</td>
+      <td>-12.792672</td>
+      <td>-12.367177</td>
+      <td>-11.959268</td>
+      <td>-11.568397</td>
+      <td>-11.194007</td>
+      <td>-10.835530</td>
+      <td>-10.492400</td>
+      <td>-10.164046</td>
+      <td>-9.849902</td>
+      <td>-9.549410</td>
+    </tr>
+    <tr>
+      <th>PAKNYGDPFCSTXN</th>
+      <th>-1</th>
+      <td>-0.000002</td>
+      <td>-1.571084e+00</td>
+      <td>-1.200007e+01</td>
+      <td>-1.879798e+01</td>
+      <td>-2.358831e+01</td>
+      <td>-27.012130</td>
+      <td>-29.516228</td>
+      <td>-31.374669</td>
+      <td>-32.760811</td>
+      <td>-33.775068</td>
+      <td>...</td>
+      <td>-46.331679</td>
+      <td>-46.492474</td>
+      <td>-46.647151</td>
+      <td>-46.795882</td>
+      <td>-46.938831</td>
+      <td>-47.076157</td>
+      <td>-47.208018</td>
+      <td>-47.334571</td>
+      <td>-47.455971</td>
+      <td>-47.572369</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th>0</th>
+      <td>100.204310</td>
+      <td>9.859930e+01</td>
+      <td>9.866549e+01</td>
+      <td>9.862301e+01</td>
+      <td>9.855901e+01</td>
+      <td>98.514058</td>
+      <td>98.497819</td>
+      <td>98.507506</td>
+      <td>98.536566</td>
+      <td>98.579339</td>
+      <td>...</td>
+      <td>99.897842</td>
+      <td>99.898918</td>
+      <td>99.899946</td>
+      <td>99.900928</td>
+      <td>99.901872</td>
+      <td>99.902782</td>
+      <td>99.903658</td>
+      <td>99.904507</td>
+      <td>99.905328</td>
+      <td>99.906128</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <th>0</th>
+      <td>0.204310</td>
+      <td>-1.400698e+00</td>
+      <td>-1.334509e+00</td>
+      <td>-1.376992e+00</td>
+      <td>-1.440990e+00</td>
+      <td>-1.485942</td>
+      <td>-1.502181</td>
+      <td>-1.492494</td>
+      <td>-1.463434</td>
+      <td>-1.420661</td>
+      <td>...</td>
+      <td>-0.102158</td>
+      <td>-0.101082</td>
+      <td>-0.100054</td>
+      <td>-0.099072</td>
+      <td>-0.098128</td>
+      <td>-0.097218</td>
+      <td>-0.096342</td>
+      <td>-0.095493</td>
+      <td>-0.094672</td>
+      <td>-0.093872</td>
+    </tr>
+  </tbody>
+</table>
+<p>13 rows × 81 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.02</span><span class="p">);</span> <span class="c1">#decomp of teh change in the level</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Attribution_25_0.png" src="../../_images/Attribution_25_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.02</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.02</span><span class="p">);</span> <span class="c1"># expressed as a share (the conmtrinutions share)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_21_0.png" src="../../_images/Attribution_21_0.png" />
+<img alt="../../_images/Attribution_26_0.png" src="../../_images/Attribution_26_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPFCSTXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.00</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPFCSTXN&#39;</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">threshold</span><span class="o">=</span><span class="mf">.02</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_22_0.png" src="../../_images/Attribution_22_0.png" />
+<img alt="../../_images/Attribution_27_0.png" src="../../_images/Attribution_27_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -901,7 +1920,7 @@ PAKNECONOTHRXN_X  0         0.0%        0.0%        0.0%        0.0%        0.0%
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method dekomp_plot in module modelclass:
 
-dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=&lt;function Dekomp_Mixin.&lt;lambda&gt; at 0x000001D0C305E160&gt;, time_att=False) method of modelclass.model instance
+dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=&lt;function Dekomp_Mixin.&lt;lambda&gt; at 0x000001C0C7ABE160&gt;, time_att=False) method of modelclass.model instance
     Returns  a chart with attribution for a variable over the smpl  
     
     Parameters
@@ -933,22 +1952,31 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mpak.dekomp_plot_per<span class="o">?</span>
+<span class="c1">#mpak.dekomp_plot_per(&#39;PAKNYGDPFCSTXN&#39;,per=(2020,2030))  # gives a waterfall of contributions</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="totdif-presents-the-impacts-at-the-model-level">
-<h2><span class="section-number">1.5. </span>.totdif() presents the impacts at the model level<a class="headerlink" href="#totdif-presents-the-impacts-at-the-model-level" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5. </span>.totdif() presents the impacts at the model level<a class="headerlink" href="#totdif-presents-the-impacts-at-the-model-level" title="Permalink to this headline">¶</a></h2>
 <p>The method <code class="docutils literal notranslate"><span class="pre">.totdif()</span></code> returns an instance  the totdif class, which provides a number of methods and properties to explore the attribution at the model level.</p>
 <p>It works by solving the model numerous time, each time changing one of the right hand side variables and calculating the impact on the dependent variable. By default it uses the values from the <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> Dataframe as the shock values and the values in <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> as the initial values.</p>
-<p>for the purpose of this exercise lets look at a simulation where monetary policy tightens raising the policy interest rate by 100 basis points for 3 years, and ten look at the impact on inflation.</p>
+<p>For the purpose of this exercise lets look at a simulation where monetary policy tightens raising the policy interest rate by 100 basis points for 3 years, and then look at the impact on inflation.</p>
+<p>For advanced users the RHS variables can be grouped into user defined blocks, which helps identify causal chains.</p>
 <p>To begin we reload the model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow-manual/main/model_repo/pak.pcim
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\mflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
 </pre></div>
 </div>
 </div>
@@ -961,16 +1989,21 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKFMLBLPOLYXN        : Policy Rate
-PAKFMLBLPOLYXN_A      : Add factor:Policy Rate
-PAKFMLBLPOLYXN_D      : Exo dummy:Policy Rate
-PAKFMLBLPOLYXN_FITTED : Fitted  value:Policy Rate
-PAKFMLBLPOLYXN_X      : Exo value:Policy Rate
-PAKINTRDDIFF          : Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF_A        : Add factor:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF_D        : Exo dummy:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF_FITTED   : Fitted  value:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF_X        : Exo value:Domestic interest rate differential (to policy rate)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKFMLBLPOLYXN        : Key Policy Interest Rate
+PAKFMLBLPOLYXN_A      : Add factor:Key Policy Interest Rate
+PAKFMLBLPOLYXN_D      : Fix dummy:Key Policy Interest Rate
+PAKFMLBLPOLYXN_FITTED : Fitted  value:Key Policy Interest Rate
+PAKFMLBLPOLYXN_X      : Fix value:Key Policy Interest Rate
+PAKINTRDDIFF          : Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF_A        : Add factor:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF_D        : Fix dummy:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF_FITTED   : Fitted  value:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF_X        : Fix value:Domestic Interest Rate Spread Over Policy Rate
+PAKINTREDIFF          : External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF_A        : Add factor:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF_D        : Fix dummy:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF_FITTED   : Fitted  value:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 </pre></div>
 </div>
 </div>
@@ -1006,52 +2039,67 @@ PAKINTRDDIFF_X        : Exo value:Domestic interest rate differential (to policy
   </thead>
   <tbody>
     <tr>
+      <th>2016</th>
+      <td>5.734297</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <td>5.754622</td>
+    </tr>
+    <tr>
+      <th>2018</th>
+      <td>5.805750</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>6.187512</td>
+    </tr>
+    <tr>
       <th>2020</th>
-      <td>6.789287</td>
+      <td>6.670351</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>7.142194</td>
+      <td>7.056445</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>7.398338</td>
+      <td>7.287498</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>7.565567</td>
+      <td>7.376232</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>7.649152</td>
+      <td>7.362666</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
+      <th>2025</th>
+      <td>7.285334</td>
     </tr>
     <tr>
-      <th>2096</th>
-      <td>3.981262</td>
+      <th>2026</th>
+      <td>7.171706</td>
     </tr>
     <tr>
-      <th>2097</th>
-      <td>3.991111</td>
+      <th>2027</th>
+      <td>7.039316</td>
     </tr>
     <tr>
-      <th>2098</th>
-      <td>4.001933</td>
+      <th>2028</th>
+      <td>6.899970</td>
     </tr>
     <tr>
-      <th>2099</th>
-      <td>4.013725</td>
+      <th>2029</th>
+      <td>6.763110</td>
     </tr>
     <tr>
-      <th>2100</th>
-      <td>4.026480</td>
+      <th>2030</th>
+      <td>6.637192</td>
     </tr>
   </tbody>
 </table>
-<p>81 rows × 1 columns</p>
 </div></div></div>
 </div>
 <p>Create a new dataframe for the shocks scenario and increase the Policy rate by 1 percentage point during the period 2025-2027.</p>
@@ -1062,24 +2110,37 @@ PAKINTRDDIFF_X        : Exo value:Domestic interest rate differential (to policy
 <span class="kn">import</span> <span class="nn">modelmf</span>
 
 
-<span class="n">MPShockdf</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="n">mpak</span><span class="o">.</span><span class="n">basedf</span><span class="p">,</span><span class="s1">&#39;PAKPANUSATLS&#39;</span><span class="p">)</span>
-<span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; PAKFMLBLPOLYXN + 1&#39;</span><span class="p">)</span>
-<span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s1">&#39;PAKPANUSATLS_X = PAKPANUSATLS&#39;</span><span class="p">)</span>
 
-<span class="n">MPShockdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;PAKFMLBLPOLYXN&#39;</span><span class="p">]</span>
+<span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; WLDFCRUDE_PETRO + 30&#39;</span><span class="p">)</span>
+
+
+<span class="n">MPShockdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;WLDFCRUDE_PETRO&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023    7.565567
-2024    7.649152
-2025    8.651216
-2026    8.576208
-2027    8.433440
-2028    7.236313
-2029    7.000191
-2030    6.740337
-Name: PAKFMLBLPOLYXN, dtype: float64
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#MPShockdf=baseline.copy() #Create new df as copy of the baseline</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">modelmf</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; WLDFCRUDE_PETRO + 30&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">MPShockdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;WLDFCRUDE_PETRO&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;MPShockdf&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check to see if a variable is endogenous or endogenous</span>
+<span class="s1">&#39;PAKFMLBLPOLYXN&#39;</span> <span class="ow">in</span> <span class="n">mpak</span><span class="o">.</span><span class="n">endogene</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1087,33 +2148,6 @@ Name: PAKFMLBLPOLYXN, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;*PAN*&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">des</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHNPANUSATLS            : CHNPANUSATLS
-CHNPANUSATLS_VALUE_2010 : CHNPANUSATLS_VALUE_2010
-DEUPANUSATLS            : DEUPANUSATLS
-DEUPANUSATLS_VALUE_2010 : DEUPANUSATLS_VALUE_2010
-FRAPANUSATLS            : FRAPANUSATLS
-FRAPANUSATLS_VALUE_2010 : FRAPANUSATLS_VALUE_2010
-GBRPANUSATLS            : GBRPANUSATLS
-GBRPANUSATLS_VALUE_2010 : GBRPANUSATLS_VALUE_2010
-ITAPANUSATLS            : ITAPANUSATLS
-ITAPANUSATLS_VALUE_2010 : ITAPANUSATLS_VALUE_2010
-PAKPANEUATLS            : LCU: Euro
-PAKPANEUATLSK           : PAKPANEUATLSK
-PAKPANEUATLS_VALUE_2010 : PAKPANEUATLS_VALUE_2010
-PAKPANUSATLS            : LCU: $
-PAKPANUSATLSK           : PAKPANUSATLSK
-PAKPANUSATLS_A          : Add factor:LCU: $
-PAKPANUSATLS_D          : Exo dummy:LCU: $
-PAKPANUSATLS_FITTED     : Fitted  value:LCU: $
-PAKPANUSATLS_VALUE_2010 : PAKPANUSATLS_VALUE_2010
-PAKPANUSATLS_VALUE_2011 : PAKPANUSATLS_VALUE_2011
-PAKPANUSATLS_X          : Exo value:LCU: $
-TURPANUSATLS            : TURPANUSATLS
-TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 </pre></div>
 </div>
 </div>
@@ -1127,7 +2161,8 @@ TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;3 years of 1 pct MP hike&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2040</span><span class="p">):</span>
+    <span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;3 years of 1 pct MP hike&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1136,41 +2171,128 @@ TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_34_1.png" src="../../_images/Attribution_34_1.png" />
+<img alt="../../_images/Attribution_44_1.png" src="../../_images/Attribution_44_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2040</span><span class="p">):</span>
-    <span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNEGDIFTOTKN PAKNYGDPMKTPKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">df</span><span class="p">;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">junk</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">exodif</span><span class="p">()</span>
+
+<span class="n">junk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2035</span><span class="p">,:]</span>
+    
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">20</span><span class="p">]</span>
-    <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2040</span><span class="p">):</span>
-                             <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PAKPANUSATLS_X</th>
+      <th>WLDFCRUDE_PETRO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023</th>
+      <td>106.693704</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>106.566459</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>106.454266</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2026</th>
+      <td>106.353322</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2027</th>
+      <td>106.261138</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2028</th>
+      <td>106.175825</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2029</th>
+      <td>106.095356</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2030</th>
+      <td>106.017313</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2031</th>
+      <td>105.984507</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2032</th>
+      <td>105.893285</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2033</th>
+      <td>105.799864</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2034</th>
+      <td>105.702380</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2035</th>
+      <td>105.599506</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">totdekomp</span> <span class="o">=</span> <span class="n">mpak</span><span class="o">.</span><span class="n">totdif</span><span class="p">()</span> <span class="c1"># Calculate the total derivatives of all equations in the model.</span>
 <span class="n">showvar</span> <span class="o">=</span> <span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span>
-<span class="n">totdekomp</span><span class="o">.</span><span class="n">explain_all</span><span class="p">(</span><span class="s1">&#39;PAKNECONPRVTXN&#39;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">top</span><span class="o">=</span><span class="mf">0.20</span><span class="p">);</span>    
+<span class="n">totdekomp</span><span class="o">.</span><span class="n">explain_all</span><span class="p">(</span><span class="n">showvar</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">top</span><span class="o">=</span><span class="mf">0.20</span><span class="p">);</span>    
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No variables to attribute to 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total dekomp took       :         1.625 Seconds
 </pre></div>
 </div>
+<img alt="../../_images/Attribution_47_1.png" src="../../_images/Attribution_47_1.png" />
 </div>
 </div>
 <div class="section" id="explain-all-will-visualize-the-results">
-<h3><span class="section-number">1.5.1. </span>.explain_all will visualize the results<a class="headerlink" href="#explain-all-will-visualize-the-results" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1. </span>.explain_all will visualize the results<a class="headerlink" href="#explain-all-will-visualize-the-results" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">showvar</span> <span class="o">=</span> <span class="s1">&#39;PAKNYGDPMKTPKN PAKCCEMISCO2CKN PAKCCEMISCO2OKN PAKCCEMISCO2GKN PAKGGREVTOTLCN&#39;</span>
@@ -1178,10 +2300,13 @@ TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Attribution_49_0.png" src="../../_images/Attribution_49_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="or-we-can-use-interactive-widgets">
-<h3><span class="section-number">1.5.2. </span>Or we can use interactive widgets<a class="headerlink" href="#or-we-can-use-interactive-widgets" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.2. </span>Or we can use interactive widgets<a class="headerlink" href="#or-we-can-use-interactive-widgets" title="Permalink to this headline">¶</a></h3>
 <p>This allows the user to select the specific variable of interest and what to display:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1205,7 +2330,7 @@ TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 <p>When the results are displayed, they can be filtered, sliced and diced in a number of ways.</p>
 </div>
 <div class="section" id="more-advanced-model-attribution">
-<h3><span class="section-number">1.5.3. </span>More advanced model attribution<a class="headerlink" href="#more-advanced-model-attribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.3. </span>More advanced model attribution<a class="headerlink" href="#more-advanced-model-attribution" title="Permalink to this headline">¶</a></h3>
 <p>For some  models (like the EBA bank stress test model) the number of changed exogenous variables can be large. Using a dictionary to contain the experiments allows us to create experiments where all variables for each country are analyzed, or each macro variable for all countries are analyzed.</p>
 <p>Also it is possible to use aggregated sums - useful for looking at impact on PD’s. Or just the last time period - useful for looking at CET1 ratios.</p>
 <p>If there are many experiments, data can be filtered in order to look only at the variables with an impact above a certain threshold.</p>
@@ -1213,7 +2338,7 @@ TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 the order of rows and/or columns - useful for bank names.</p>
 </div>
 <div class="section" id="single-equation-attribution-chart">
-<h3><span class="section-number">1.5.4. </span>Single equation attribution chart<a class="headerlink" href="#single-equation-attribution-chart" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.4. </span>Single equation attribution chart<a class="headerlink" href="#single-equation-attribution-chart" title="Permalink to this headline">¶</a></h3>
 <p>The results can be visualized in different ways.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1263,12 +2388,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_46_0.png" src="../../_images/Attribution_46_0.png" />
+<img alt="../../_images/Attribution_57_0.png" src="../../_images/Attribution_57_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="chart-in-pct-of-the-total">
-<h3><span class="section-number">1.5.5. </span>Chart in pct of the total<a class="headerlink" href="#chart-in-pct-of-the-total" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.5. </span>Chart in pct of the total<a class="headerlink" href="#chart-in-pct-of-the-total" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKGGREVTOTLCN&#39;</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
@@ -1276,30 +2401,27 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_49_0.png" src="../../_images/Attribution_49_0.png" />
+<img alt="../../_images/Attribution_60_0.png" src="../../_images/Attribution_60_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="chart-for-one-year">
-<h3><span class="section-number">1.5.6. </span>Chart for one year<a class="headerlink" href="#chart-for-one-year" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.6. </span>Chart for one year<a class="headerlink" href="#chart-for-one-year" title="Permalink to this headline">¶</a></h3>
 <p>The attribution for one year can be dispalyed in a waterfall chart.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot_per</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">,</span><span class="n">per</span><span class="o">=</span><span class="mi">2040</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ysize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">threshold</span> <span class="o">=</span><span class="mi">20</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mpak.dekomp_plot_per(&#39;PAKNYGDPMKTPXN&#39;,per=2040,rename=1,pct=0,ysize=12,threshold =20);</span>
+<span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPFCSTXN&#39;</span><span class="p">,</span><span class="n">per</span><span class="o">=</span><span class="mi">2040</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">threshold</span> <span class="o">=</span><span class="mf">0.001</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\wb268970\.conda\envs\modelflow\lib\site-packages\IPython\core\pylabtools.py:151: UserWarning: This figure was using constrained_layout, but that is incompatible with subplots_adjust and/or tight_layout; disabling constrained_layout.
-  fig.canvas.print_figure(bytes_io, **kw)
-</pre></div>
-</div>
-<img alt="../../_images/Attribution_51_1.png" src="../../_images/Attribution_51_1.png" />
+<img alt="../../_images/Attribution_62_0.png" src="../../_images/Attribution_62_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="sorting-of-attribution">
-<h3><span class="section-number">1.5.7. </span>Sorting of attribution<a class="headerlink" href="#sorting-of-attribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.7. </span>Sorting of attribution<a class="headerlink" href="#sorting-of-attribution" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot_per</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">,</span><span class="n">per</span><span class="o">=</span><span class="mi">2040</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">sort</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ysize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
@@ -1311,12 +2433,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_53_1.png" src="../../_images/Attribution_53_1.png" />
+<img alt="../../_images/Attribution_65_1.png" src="../../_images/Attribution_65_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="truncate-attribution">
-<h3><span class="section-number">1.5.8. </span>Truncate attribution<a class="headerlink" href="#truncate-attribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.8. </span>Truncate attribution<a class="headerlink" href="#truncate-attribution" title="Permalink to this headline">¶</a></h3>
 <p>Some equations have a lot of small contributions. These can be aggregated through the <code class="docutils literal notranslate"><span class="pre">threshold=&lt;some</span> <span class="pre">number&gt;</span></code> parameter.
 Variables for which all contributions are below the threshold will be lumped together in the <strong>small</strong> bin. Like below:</p>
 <div class="cell docutils container">
@@ -1330,12 +2452,12 @@ Variables for which all contributions are below the threshold will be lumped tog
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_55_1.png" src="../../_images/Attribution_55_1.png" />
+<img alt="../../_images/Attribution_67_1.png" src="../../_images/Attribution_67_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="attribution-when-comparing-time-frames">
-<h3><span class="section-number">1.5.9. </span>Attribution when comparing time frames<a class="headerlink" href="#attribution-when-comparing-time-frames" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.9. </span>Attribution when comparing time frames<a class="headerlink" href="#attribution-when-comparing-time-frames" title="Permalink to this headline">¶</a></h3>
 <p>In this case we seek to find out which variables explains the development from year to year. This is done only for the .lastdf dateframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1405,12 +2527,12 @@ PAKDISPREPKN   0         -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_58_0.png" src="../../_images/Attribution_58_0.png" />
+<img alt="../../_images/Attribution_70_0.png" src="../../_images/Attribution_70_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="visualizing-attribution-in-dependency-graphs">
-<h3><span class="section-number">1.5.10. </span>Visualizing attribution in dependency graphs<a class="headerlink" href="#visualizing-attribution-in-dependency-graphs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.10. </span>Visualizing attribution in dependency graphs<a class="headerlink" href="#visualizing-attribution-in-dependency-graphs" title="Permalink to this headline">¶</a></h3>
 <p>The logical graph of the model can be used to show the upstream and downstream variable for a specific variable. More on this <span class="xref myst">here</span><br>
 When drawing the logical graph for a variable the model attribution will be used to guide the thickness of edges between nodes (variables). This enables a visual impression of which
 variables drives the impact.</p>
@@ -1423,16 +2545,26 @@ enable svg format.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mpak[&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN&#39;].draw(up=3,down=0,png=latex,filter=20) # For book</span>
+<span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">up</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">down</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">png</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="nb">filter</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">svg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">40</span><span class="p">))</span><span class="c1">#3 for interactice</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Attribution_72_0.svg" src="../../_images/Attribution_72_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">up</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">down</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">png</span><span class="o">=</span><span class="n">latex</span><span class="p">)</span>  <span class="c1"># diagram all direct dependencies </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_60_0.svg" src="../../_images/Attribution_60_0.svg" /><img alt="../../_images/Attribution_60_1.svg" src="../../_images/Attribution_60_1.svg" /></div>
+<img alt="../../_images/Attribution_73_0.svg" src="../../_images/Attribution_73_0.svg" /><img alt="../../_images/Attribution_73_1.svg" src="../../_images/Attribution_73_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-<h3><span class="section-number">1.5.11. </span>The attribution can be filtered and more levels can be displayed.<a class="headerlink" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.11. </span>The attribution can be filtered and more levels can be displayed.<a class="headerlink" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">up</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">down</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">png</span><span class="o">=</span><span class="n">latex</span><span class="p">,</span><span class="nb">filter</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> 
@@ -1440,11 +2572,11 @@ enable svg format.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_62_0.svg" src="../../_images/Attribution_62_0.svg" /></div>
+<img alt="../../_images/Attribution_75_0.svg" src="../../_images/Attribution_75_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-<h3><span class="section-number">1.5.12. </span>Or it can be used in a dashboard (not avaiable in the offline manual)<a class="headerlink" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.12. </span>Or it can be used in a dashboard (not avaiable in the offline manual)<a class="headerlink" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -1457,6 +2589,13 @@ enable svg format.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No Dash
 No Dash, name &#39;DashInteractiveGraphviz&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install 
 </pre></div>
 </div>
 </div>
@@ -1496,11 +2635,11 @@ No Dash, name &#39;DashInteractiveGraphviz&#39; is not defined
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../05_WBModels/MoreComplexScenarios.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="EigenValues.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>More complex scenarios</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Model eigenvalues</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../07_MoreFeatures/modelwidgets.html" title="next page">

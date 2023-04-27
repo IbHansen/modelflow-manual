@@ -149,38 +149,42 @@
 \contentsline {section}{\numberline {10.1}Setting up the environment}{103}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Load a pre\sphinxhyphen {}existing model, data and descriptions}{103}{section.10.2}%
 \contentsline {section}{\numberline {10.3}The policy problem}{104}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Simulating the impact of a imposing a carbon price}{105}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Solve the model}{105}{subsection.10.4.1}%
-\contentsline {subsubsection}{Examining the results}{105}{subsubsection*.31}%
-\contentsline {section}{\numberline {10.5}Re\sphinxhyphen {}thinking the shock as an ex\sphinxhyphen {}ante real shock}{106}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Changing the model – modifying and or adding equations}{107}{section.10.6}%
-\contentsline {subsection}{\numberline {10.6.1}Solving the revised model}{109}{subsection.10.6.1}%
-\contentsline {subsection}{\numberline {10.6.2}Results}{111}{subsection.10.6.2}%
+\contentsline {section}{\numberline {10.4}Add variable descriptions}{105}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Simulating the impact of a imposing a carbon price}{105}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Solve the model}{106}{subsection.10.5.1}%
+\contentsline {subsubsection}{Examining the results}{106}{subsubsection*.31}%
+\contentsline {section}{\numberline {10.6}Re\sphinxhyphen {}thinking the shock as an ex\sphinxhyphen {}ante real shock}{107}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Changing the model – modifying and or adding equations}{107}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}Solving the revised model}{110}{subsection.10.7.1}%
+\contentsline {subsection}{\numberline {10.7.2}Results}{111}{subsection.10.7.2}%
 \contentsline {part}{IV\hspace {1em}Model Analytics}{113}{part.4}%
-\contentsline {chapter}{\numberline {11}Attribution}{115}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Prepare the workspace}{115}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Load the pre\sphinxhyphen {}existing model, data and descriptions}{115}{subsection.11.1.1}%
-\contentsline {section}{\numberline {11.2}The mathematics of attribution}{116}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Model attribution or single equation attribution?}{116}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Formula attribution}{117}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Single equation attribution output}{117}{subsection.11.4.1}%
-\contentsline {section}{\numberline {11.5}.totdif() presents the impacts at the model level}{124}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}.explain\_all will visualize the results}{127}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Or we can use interactive widgets}{128}{subsection.11.5.2}%
-\contentsline {subsection}{\numberline {11.5.3}More advanced model attribution}{128}{subsection.11.5.3}%
-\contentsline {subsection}{\numberline {11.5.4}Single equation attribution chart}{128}{subsection.11.5.4}%
-\contentsline {subsection}{\numberline {11.5.5}Chart in pct of the total}{130}{subsection.11.5.5}%
-\contentsline {subsection}{\numberline {11.5.6}Chart for one year}{130}{subsection.11.5.6}%
-\contentsline {subsection}{\numberline {11.5.7}Sorting of attribution}{132}{subsection.11.5.7}%
-\contentsline {subsection}{\numberline {11.5.8}Truncate attribution}{134}{subsection.11.5.8}%
-\contentsline {subsection}{\numberline {11.5.9}Attribution when comparing time frames}{135}{subsection.11.5.9}%
-\contentsline {subsection}{\numberline {11.5.10}Visualizing attribution in dependency graphs}{136}{subsection.11.5.10}%
-\contentsline {subsection}{\numberline {11.5.11}The attribution can be filtered and more levels can be displayed.}{137}{subsection.11.5.11}%
-\contentsline {subsection}{\numberline {11.5.12}Or it can be used in a dashboard (not avaiable in the offline manual)}{137}{subsection.11.5.12}%
-\contentsline {part}{V\hspace {1em}More modelflow features}{139}{part.5}%
-\contentsline {chapter}{\numberline {12}The model widget class}{143}{chapter.12}%
-\contentsline {section}{\numberline {12.1}The \sphinxstyleliteralintitle {\sphinxupquote {.html\_widget\_df()}} method}{143}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}List of fixed variables}{154}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Show the equations for the .calc\_add\_factor\_model}{154}{subsection.12.1.2}%
-\contentsline {part}{VI\hspace {1em}References}{155}{part.6}%
-\contentsline {chapter}{Bibliography}{159}{chapter*.32}%
+\contentsline {chapter}{\numberline {11}Model eigenvalues}{117}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Imports}{117}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Load a pre\sphinxhyphen {}existing model, data and descriptions}{117}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Attribution}{123}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Prepare the workspace}{123}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Load the pre\sphinxhyphen {}existing model, data and descriptions}{123}{subsection.12.1.1}%
+\contentsline {section}{\numberline {12.2}The mathematics of attribution}{124}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Model attribution or single equation attribution?}{124}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Formula attribution}{125}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Single equation attribution output}{125}{subsection.12.4.1}%
+\contentsline {section}{\numberline {12.5}.totdif() presents the impacts at the model level}{136}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}.explain\_all will visualize the results}{139}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Or we can use interactive widgets}{141}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {12.5.3}More advanced model attribution}{141}{subsection.12.5.3}%
+\contentsline {subsection}{\numberline {12.5.4}Single equation attribution chart}{141}{subsection.12.5.4}%
+\contentsline {subsection}{\numberline {12.5.5}Chart in pct of the total}{143}{subsection.12.5.5}%
+\contentsline {subsection}{\numberline {12.5.6}Chart for one year}{143}{subsection.12.5.6}%
+\contentsline {subsection}{\numberline {12.5.7}Sorting of attribution}{144}{subsection.12.5.7}%
+\contentsline {subsection}{\numberline {12.5.8}Truncate attribution}{146}{subsection.12.5.8}%
+\contentsline {subsection}{\numberline {12.5.9}Attribution when comparing time frames}{147}{subsection.12.5.9}%
+\contentsline {subsection}{\numberline {12.5.10}Visualizing attribution in dependency graphs}{148}{subsection.12.5.10}%
+\contentsline {subsection}{\numberline {12.5.11}The attribution can be filtered and more levels can be displayed.}{149}{subsection.12.5.11}%
+\contentsline {subsection}{\numberline {12.5.12}Or it can be used in a dashboard (not avaiable in the offline manual)}{149}{subsection.12.5.12}%
+\contentsline {part}{V\hspace {1em}More modelflow features}{151}{part.5}%
+\contentsline {chapter}{\numberline {13}The model widget class}{155}{chapter.13}%
+\contentsline {section}{\numberline {13.1}The \sphinxstyleliteralintitle {\sphinxupquote {.html\_widget\_df()}} method}{155}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}List of fixed variables}{166}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Show the equations for the .calc\_add\_factor\_model}{166}{subsection.13.1.2}%
+\contentsline {part}{VI\hspace {1em}References}{167}{part.6}%
+\contentsline {chapter}{Bibliography}{171}{chapter*.32}%

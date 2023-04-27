@@ -85,7 +85,7 @@
         
 
 \title{The World Bank's MFMod Framework in Python with Modelflow}
-\date{Apr 26, 2023}
+\date{Apr 27, 2023}
 \release{}
 \author{Andrew Burns and Ib Hansen}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -965,7 +965,7 @@ if enclosed in \sphinxcode{\sphinxupquote{\$\$}} \sphinxcode{\sphinxupquote{\$\$
 
 \sphinxAtStartPar
 The above \sphinxcode{\sphinxupquote{latex}} mathematics code uses the  \sphinxcode{\sphinxupquote{\&}} symbol to tell \sphinxcode{\sphinxupquote{latex}} to align the different lines (separated by \sphinxcode{\sphinxupquote{\textbackslash{}\textbackslash{}}}) on the character immediately after the \sphinxcode{\sphinxupquote{\&}}. In this instance the equals “=” sign.
-\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:87dcf496-7847-4be0-a551-ee3458e8d42c}\begin{align}
+\label{equation:content/04_PythonEssentials/Intro_Jupyter_notebook:774b9251-8335-484a-816d-cc84f2be0cc6}\begin{align}
 Y_t  &=  C_t+I_t+G+t+ (X_t-M_t) \\
 C_t &= c_t(C_{t-1},C_{t-2},I_t,G_t,X_t,M_t,P_t)\\
 I_t &= c_t(I_{t-1},I_{t-2},C_t,G_t,X_t,M_t,P_t)\\
@@ -3154,10 +3154,6 @@ Growth
 2023   0.0   0.00000
 2024   4.0  \PYGZhy{}8.03748
 2025   5.0   5.00000
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -6656,7 +6652,7 @@ Tab(children=(Tab(children=(HTML(value=\PYGZsq{}\PYGZlt{}?xml version=\PYGZdq{}1
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} notebook
+\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} inline
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -6709,7 +6705,7 @@ Load the Pakistan model, which is comprised of the model object, its estimated e
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Baseline}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Baseline}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -6717,7 +6713,7 @@ Load the Pakistan model, which is comprised of the model object, its estimated e
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
+file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -6789,9 +6785,9 @@ As discussed in earlier chapters the meaning of the mnemonics can be retrieved f
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKGGREVCO2CER : Tax/subsidy (Coal) (USD p/tco2)
-PAKGGREVCO2GER : Tax/subsidy (Gas) (USD p/tco2)
-PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
+PAKGGREVCO2CER : Carbon tax on coal (USD/t)
+PAKGGREVCO2GER : Carbon tax on gas (USD/t)
+PAKGGREVCO2OER : Carbon tax on oil (USD/t)
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -6804,7 +6800,7 @@ Alternatively one can search on the variable descriptions to retrieve the mnemon
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{!*Carbon*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{!*tco2*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -6812,12 +6808,42 @@ Alternatively one can search on the variable descriptions to retrieve the mnemon
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKGGREVEMISCN : Revenues (Subsidies if negative) from carbon
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{ValueError}\PYG{g+gWhitespace}{                                }Traceback (most recent call last)
+\PYG{n+nn}{Input In [6],} in \PYG{n+ni}{\PYGZlt{}cell line: 1\PYGZgt{}}\PYG{n+nt}{()}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{1} \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{!*tco2*}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{des}
+
+\PYG{n+nn}{File \PYGZti{}\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}ModelFlow\PYGZhy{}1.0.8\PYGZhy{}py3.9.egg\PYGZbs{}modelvis.py:153,} in \PYG{n+ni}{vis.des}\PYG{n+nt}{(self)}
+\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{151} \PYG{k}{def} \PYG{n+nf}{getdes}\PYG{p}{(}\PYG{n}{var}\PYG{p}{,}\PYG{n}{l}\PYG{p}{)}\PYG{p}{:}
+\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{152}     \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{var}\PYG{l+s+si}{:}\PYG{l+s+s1}{\PYGZlt{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{l}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ : }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{var\PYGZus{}description}\PYG{p}{[}\PYG{n}{var}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{153} \PYG{n}{mlength} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)} \PYG{k}{for} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{names}\PYG{p}{]}\PYG{p}{)} 
+\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{155} \PYG{n}{out} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{getdes}\PYG{p}{(}\PYG{n}{var}\PYG{p}{,}\PYG{n}{mlength}\PYG{p}{)} \PYG{k}{for} \PYG{n}{var} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{names}\PYG{p}{)}
+\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{156} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{out}\PYG{p}{)}
+
+\PYG{n+ne}{ValueError}: max() arg is an empty sequence
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+
+\section{Add variable descriptions}
+\label{\detokenize{content/05_WBModels/MoreComplexScenarios:add-variable-descriptions}}
+\sphinxAtStartPar
+A modelflow model imported from EViews will inherit the variable descriptors coming from Eviews.  Not all EViews variables will necessarily have a description so such descriptions can be added to the existing using the \sphinxcode{\sphinxupquote{.set\_var\_descri{[}tion()}} method as below.
+
+\sphinxAtStartPar
+As coded, the call
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{mpak.set\_var\_description(\{**mpak.var\_description,**extra\_description\})}}
+
+\sphinxAtStartPar
+adds the extra\_description dictionary to the pre\sphinxhyphen{}existing mpak,var\_description dictionary.
+
+\sphinxAtStartPar
+Several \sphinxcode{\sphinxupquote{modelflow}} methods include a \sphinxcode{\sphinxupquote{rename}} option, which if set to True will substitute the description for the variable name in any outputs.  Variables can also be selected for by using the \sphinxcode{\sphinxupquote{mpak{[}'!*subtext*'{]}}} syntax, where subtext is some text that appears in the variable descriptor.
+
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -6826,15 +6852,11 @@ PAKGGREVEMISCN : Revenues (Subsidies if negative) from carbon
 \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{EMISCOAL}\PYG{l+s+s1}{\PYGZsq{}}        \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Coal emissions}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
 \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{EMISGAS}\PYG{l+s+s1}{\PYGZsq{}}         \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Gas Emissions}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
 \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{EMISOIL}\PYG{l+s+s1}{\PYGZsq{}}         \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Gas Emissions}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
-\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2CKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{CO2 equivalent emissions from Coal}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
-\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2GKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{CO2 equivalent emissions from Natural Gas}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
-\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2OKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{CO2 equivalent emissions from Crude Oil}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
-\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2TKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{CO2 equivalent emissions Total}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2CKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Coal emissions, tCO2e}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2GKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Natural Gas emissions, tCO2e}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2OKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Crude Oil emissions, tCO2e}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
+\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2TKN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Total emissions, tCO2e}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
 \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGGREVEMISCN}\PYG{l+s+s1}{\PYGZsq{}}  \PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Revenue from emissions taxes}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
-\PYG{c+c1}{\PYGZsh{} \PYGZsq{}PAKNECONPRVTKN\PYGZsq{}: \PYGZsq{}Consumption\PYGZsq{},}
-\PYG{c+c1}{\PYGZsh{} \PYGZsq{}PAKNEGDIFTOTKN\PYGZsq{}: \PYGZsq{}Investment\PYGZsq{},}
-\PYG{c+c1}{\PYGZsh{} \PYGZsq{}PAKNEEXPGNFSKN\PYGZsq{}: \PYGZsq{}Exports\PYGZsq{},}
-\PYG{c+c1}{\PYGZsh{} \PYGZsq{}PAKNEIMPGNFSKN\PYGZsq{}: \PYGZsq{}Import\PYGZsq{},}
  \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKLMUNRTOTLCN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Unemployment rate}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
  \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGGDBTTOTLCN\PYGZus{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Debt (}\PYG{l+s+si}{\PYGZpc{}G}\PYG{l+s+s1}{DP)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
  \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGGREVTOTLCN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Fiscal revenues}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}
@@ -6883,12 +6905,13 @@ Solve the model using the newly altered df as the input df.
 The above used the \sphinxcode{\sphinxupquote{pandas}} function \sphinxcode{\sphinxupquote{.loc{[}{]}}} to change the Carbon Tax rate variables.
 
 \sphinxAtStartPar
-The \sphinxcode{\sphinxupquote{modelflow}} method \sphinxcode{\sphinxupquote{.upd()}} could be used to perform, the same change.
+The \sphinxcode{\sphinxupquote{modelflow}} method \sphinxcode{\sphinxupquote{.upd()}} could be used to perform the same change.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} This modelflow command is equivalent to the previous standard pandas command abive that used the .loc[] syntax}
 \PYG{n}{CT30df}  \PYG{o}{=}  \PYG{n}{baseline}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2025 2100\PYGZgt{} PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
@@ -6899,7 +6922,7 @@ The \sphinxcode{\sphinxupquote{modelflow}} method \sphinxcode{\sphinxupquote{.up
 \subsection{Solve the model}
 \label{\detokenize{content/05_WBModels/MoreComplexScenarios:solve-the-model}}
 \sphinxAtStartPar
-Solving the model is as simple as colling the mpak function with the altered \sphinxcode{\sphinxupquote{DataFrame}} and assigning the results to dataframe (\sphinxcode{\sphinxupquote{resultsdf}} in this instance).
+Solving the model is as simple as calling the mpak function with the altered \sphinxcode{\sphinxupquote{DataFrame}} and assigning the results to dataframe (\sphinxcode{\sphinxupquote{resultsdf}} in this instance).  The \sphinxcode{\sphinxupquote{keep}} option causes a copy of the dataframe to be stores within the mpak model obkect.
 
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
@@ -6950,50 +6973,16 @@ Abstracting from the fact that the impact is occurring too quickly (it would tak
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
-\begin{sphinxVerbatimOutput}
-
-\begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-      PAKCCEMISCO2CKN  PAKCCEMISCO2GKN  PAKCCEMISCO2OKN  PAKCCEMISCO2TKN
-2023             0.00             0.00             0.00             0.00
-2024             0.00             0.00             0.00             0.00
-2025           \PYGZhy{}42.05           \PYGZhy{}28.05           \PYGZhy{}12.24           \PYGZhy{}23.26
-2026           \PYGZhy{}40.70           \PYGZhy{}26.39           \PYGZhy{}11.94           \PYGZhy{}22.34
-2027           \PYGZhy{}39.31           \PYGZhy{}24.84           \PYGZhy{}11.56           \PYGZhy{}21.40
-2028           \PYGZhy{}37.96           \PYGZhy{}23.52           \PYGZhy{}11.21           \PYGZhy{}20.56
-2029           \PYGZhy{}36.59           \PYGZhy{}22.30           \PYGZhy{}10.82           \PYGZhy{}19.72
-2030           \PYGZhy{}35.17           \PYGZhy{}21.09           \PYGZhy{}10.32           \PYGZhy{}18.81
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{}Need to figure out why this does not render}
-
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Emissions impact of a \PYGZdl{}30 USD Carbon tax}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-
-\PYG{c+c1}{\PYGZsh{}with mpak.set\PYGZus{}smpl(2020,2100):}
-\PYG{c+c1}{\PYGZsh{}    mpak[\PYGZsq{}PAKCCEMISCO2*\PYGZsq{}].dif.mul100.plot(title=\PYGZsq{}Emissions imact f a \PYGZdl{}30 carbon tax\PYGZsq{});}
-    
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Emissions impact of a \PYGZdl{}30 USD Carbon tax}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{showfig}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
-\begin{sphinxVerbatimOutput}
-
-\begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.Javascript object\PYGZgt{}
-\end{sphinxVerbatim}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
@@ -7005,15 +6994,25 @@ Abstracting from the fact that the impact is occurring too quickly (it would tak
 \sphinxAtStartPar
 Inflation in Pakistan is relatively high so a \$30 shock quickly loses its relative price effect. Increasing the nominal value of the Carbon Tax by the amount of domestic inflation (converted into USD each year) would resolve the problem.
 
+\sphinxAtStartPar
+Below a new dataframe is created as acopy of the baseline and the three Carbon taxes are first set to \$30 in 2025 and then grown at the rate of domestic inflation to keep the relative price of the Carbon Tax constant.
+
+\sphinxAtStartPar
+Finally the model is re\sphinxhyphen{}solved.
+
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{modelmf}  \PYG{c+c1}{\PYGZsh{} import the mfcalc functionmality and append it to standard pandas}
-\PYG{n}{CT30realdf}  \PYG{o}{=}  \PYG{n}{baseline}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2025 2025\PYGZgt{} PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{CT30realdf}  \PYG{o}{=}  \PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2026 2100\PYGZgt{}  PAKGGREVCO2CER = PAKGGREVCO2CER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{CT30realdf}  \PYG{o}{=}  \PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2026 2100\PYGZgt{}  PAKGGREVCO2OER = PAKGGREVCO2OER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{n}{CT30realdf}  \PYG{o}{=}  \PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2026 2100\PYGZgt{}  PAKGGREVCO2CER = PAKGGREVCO2CER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{k+kn}{import} \PYG{n+nn}{modelmf}  \PYG{c+c1}{\PYGZsh{} import the mfcalc functionality and append it to standard pandas}
+\PYG{n}{CT30realdf}  \PYG{o}{=}  \PYG{n}{baseline}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{CT30realdf}\PYG{o}{=}\PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2025 2025\PYGZgt{} PAKGGREVCO2CER PAKGGREVCO2OER PAKGGREVCO2GER = 30}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{CT30realdf}\PYG{o}{=}\PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+s1}{                              \PYGZlt{}2026 2100\PYGZgt{} PAKGGREVCO2CER = PAKGGREVCO2CER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
+\PYG{l+s+s1}{                                      PAKGGREVCO2OER = PAKGGREVCO2OER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
+\PYG{l+s+s1}{                                      PAKGGREVCO2GER = PAKGGREVCO2CER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
+\PYG{l+s+s1}{                          }\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}                         
 
 \PYG{n}{CT30realdf}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2023}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGGREVCO2CER}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
 
@@ -7028,22 +7027,21 @@ Inflation in Pakistan is relatively high so a \$30 shock quickly loses its relat
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot\PYGZus{}multi}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2*KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{legend}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}  
+\PYG{k}{with} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl}\PYG{p}{(}\PYG{l+m+mi}{2023}\PYG{p}{,}\PYG{l+m+mi}{2030}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGG*ER}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{df}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
-\begin{sphinxVerbatimOutput}
 
-\begin{sphinxuseclass}{cell_output}
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.Javascript object\PYGZgt{}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Emissions impact of a \PYGZdl{}30 USD Carbon tax}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{showfig}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
 
 \end{sphinxuseclass}
 \sphinxAtStartPar
@@ -7053,7 +7051,7 @@ These results are better, but still there is an erosion of the effect of the tax
 On introspection, this is likely due to the fact that the carbon tax itself is inflationary.  As a result, prices probably rose to a higher level than supposed by the ex ante calculation.
 
 \sphinxAtStartPar
-To deal with this a different approach is needed.  Rather than maintaining the carbon price as an exogenous variable, instead it should be made an endogenous variable by changing the model and adding equations for all of the carbon tax variables.
+To deal with this, a different approach is needed.  Rather than maintaining the carbon price as an exogenous variable, instead it should be made an endogenous variable by changing the model and adding equations for all of the carbon tax variables.
 
 
 \section{Changing the model – modifying and or adding equations}
@@ -7065,7 +7063,8 @@ To endogenize the carbon price, an equation for each carbon price has to be adde
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpakreal}\PYG{p}{,}\PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{equpdate}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}}
+\PYG{n}{mpak1}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Baseline}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{mpakreal}\PYG{p}{,}\PYG{n}{baselinereal} \PYG{o}{=} \PYG{n}{mpak1}\PYG{o}{.}\PYG{n}{equpdate}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
 \PYG{l+s+s1}{\PYGZlt{}fixable\PYGZgt{} PAKGGREVCO2CER = PAKGGREVCO2CER(\PYGZhy{}1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
 \PYG{l+s+s1}{\PYGZlt{}fixable\PYGZgt{} PAKGGREVCO2OER = PAKGGREVCO2OER(\PYGZhy{}1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
 \PYG{l+s+s1}{\PYGZlt{}fixable\PYGZgt{} PAKGGREVCO2GER = PAKGGREVCO2GER(\PYGZhy{}1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1))}
@@ -7077,7 +7076,9 @@ To endogenize the carbon price, an equation for each carbon price has to be adde
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-The model:\PYGZdq{}pak model\PYGZdq{} got new equations, new model name is:\PYGZdq{}Pak model, with real Carbon price equations\PYGZdq{}
+file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
+
+The model:\PYGZdq{}PAK\PYGZdq{} got new equations, new model name is:\PYGZdq{}Pak model, with real Carbon price equations\PYGZdq{}
 New equation for For PAKGGREVCO2CER
 Old frml   :new endogeneous variable 
 New frml   :FRML \PYGZlt{}fixable\PYGZgt{} PAKGGREVCO2CER = (PAKGGREVCO2CER(\PYGZhy{}1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(\PYGZhy{}1)*PAKPANUSATLS(\PYGZhy{}1)))* (1\PYGZhy{}PAKGGREVCO2CER\PYGZus{}D)+ PAKGGREVCO2CER\PYGZus{}X*PAKGGREVCO2CER\PYGZus{}D\PYGZdl{}
@@ -7137,7 +7138,19 @@ Following the addition of the equations, the new variables (\_D and \_X) must be
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{baseline\PYGZus{}real}\PYG{o}{=}\PYG{n}{baseline}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}Exogenizes the newly added equations and sets the dummy =1 amd the \PYGZus{}x to the current value of the dependent variable  }
+\PYG{n}{baseline\PYGZus{}real}\PYG{o}{=}\PYG{n}{mpakreal}\PYG{o}{.}\PYG{n}{fix}\PYG{p}{(}\PYG{n}{baselinereal}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+The fix command above effectively does in one line all of the following code.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{baseline\PYGZus{}real}\PYG{o}{=}\PYG{n}{baselinereal}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{(}\PYG{p}{)}
+
 
 \PYG{c+c1}{\PYGZsh{}Create the \PYGZus{}X variables if we exogenize the equation}
 \PYG{n}{baseline\PYGZus{}real} \PYG{o}{=} \PYG{n}{baseline\PYGZus{}real}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
@@ -7146,16 +7159,13 @@ Following the addition of the equations, the new variables (\_D and \_X) must be
 \PYG{l+s+s1}{PAKGGREVCO2OER\PYGZus{}X = PAKGGREVCO2OER}
 \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{}create the \PYGZus{}D varibale so we can exogenize the equations \PYGZhy{}\PYGZhy{} currently it is exogenized \PYGZhy{}\PYGZhy{} set D=1}
+\PYG{c+c1}{\PYGZsh{}create the \PYGZus{}D varibale so we can exogenize the equations (set \PYGZus{}D=1)\PYGZhy{}\PYGZhy{} currently it is exogenized }
 \PYG{n}{baseline\PYGZus{}real} \PYG{o}{=} \PYG{n}{baseline\PYGZus{}real}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
 \PYG{l+s+s1}{\PYGZlt{}\PYGZhy{}0 \PYGZhy{}1\PYGZgt{} }
 \PYG{l+s+s1}{PAKGGREVCO2CER\PYGZus{}D PAKGGREVCO2GER\PYGZus{}D PAKGGREVCO2OER\PYGZus{}D = 1}
 \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\end{sphinxuseclass}\end{sphinxVerbatimInput}
-
-\end{sphinxuseclass}
 \sphinxAtStartPar
 Finally the new model is solved, the result is kept in a new baseline and a quick check ensures that the model did indeed reproduce the data that it was originally fed, including the initial Carbon Tax levels.
 
@@ -7163,7 +7173,7 @@ Finally the new model is solved, the result is kept in a new baseline and a quic
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{}Solve the model for teh baseline}
+\PYG{c+c1}{\PYGZsh{}Solve the model for the new baseline}
 \PYG{n}{res} \PYG{o}{=} \PYG{n}{mpakreal}\PYG{p}{(}\PYG{n}{baseline\PYGZus{}real}\PYG{p}{,}\PYG{l+m+mi}{2021}\PYG{p}{,}\PYG{l+m+mi}{2100}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Baseline \PYGZhy{} adjusted model}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} 
 
 \PYG{n}{mpakreal}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNECONPRVTXN PAKGGBALOVRL PAKGGREVCO2CER PAKCCEMISCO2TKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{df}
@@ -7219,10 +7229,10 @@ Solve the model.
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{scenario\PYGZus{}real\PYGZus{}CTax} \PYG{o}{=} \PYG{n}{baseline\PYGZus{}real}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
-\PYG{l+s+s1}{\PYGZlt{}2024 \PYGZgt{} }
+\PYG{l+s+s1}{\PYGZlt{}2024 2024\PYGZgt{} }
 \PYG{l+s+s1}{PAKGGREVCO2CER\PYGZus{}x PAKGGREVCO2GER\PYGZus{}x PAKGGREVCO2OER\PYGZus{}x = 30 \PYGZsh{} Sets the exogenous value to 29 in 2024}
 \PYG{l+s+s1}{\PYGZlt{}2025 2100 \PYGZgt{} }
-\PYG{l+s+s1}{PAKGGREVCO2CER\PYGZus{}D PAKGGREVCO2GER\PYGZus{}D PAKGGREVCO2OER\PYGZus{}d = 0   \PYGZsh{} Endogenizes the new equation for the rest of time so that the real\PYGZhy{}rate stays at 30USD}
+\PYG{l+s+s1}{PAKGGREVCO2CER\PYGZus{}D PAKGGREVCO2GER\PYGZus{}D PAKGGREVCO2OER\PYGZus{}d = 0   \PYGZsh{} Endogenizes the new equations for the rest of time so that the real\PYGZhy{}rate stays at 30USD}
 \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
 
 
@@ -7250,28 +7260,28 @@ Initially the Carbon tax comes in at 30 but gradually its rate in USD rises in l
       PAKGGREVCO2CER  PAKGGREVCO2GER  PAKGGREVCO2OER  PAKNECONPRVTXN  \PYGZbs{}
 2021            \PYGZhy{}5.5           \PYGZhy{}41.0            \PYGZhy{}8.7             1.8   
 2022            \PYGZhy{}5.5           \PYGZhy{}41.0            \PYGZhy{}8.7             2.0   
-2023            \PYGZhy{}5.5           \PYGZhy{}41.0            \PYGZhy{}8.7             2.2   
+2023            \PYGZhy{}5.5           \PYGZhy{}41.0            \PYGZhy{}8.7             2.1   
 2024            30.0            30.0            30.0             2.4   
-2025            32.0            32.0            32.0             2.6   
+2025            32.1            32.1            32.1             2.5   
 ...              ...             ...             ...             ...   
-2096           231.7           231.7           231.7            17.8   
-2097           237.9           237.9           237.9            18.2   
-2098           244.3           244.3           244.3            18.7   
-2099           250.9           250.9           250.9            19.2   
-2100           257.7           257.7           257.7            19.7   
+2096          1204.1          1204.1          1204.1           106.8   
+2097          1270.1          1270.1          1270.1           112.9   
+2098          1339.8          1339.8          1339.8           119.3   
+2099          1413.2          1413.2          1413.2           126.1   
+2100          1490.7          1490.7          1490.7           133.3   
 
       PAKPANUSATLS  
-2021         106.9  
-2022         106.7  
-2023         106.5  
-2024         106.1  
-2025         106.0  
+2021         107.0  
+2022         106.8  
+2023         106.7  
+2024         106.3  
+2025         106.2  
 ...            ...  
-2096         110.3  
-2097         110.4  
-2098         110.4  
-2099         110.5  
-2100         110.5  
+2096          94.3  
+2097          94.1  
+2098          93.9  
+2099          93.7  
+2100          93.5  
 
 [80 rows x 5 columns]
 \end{sphinxVerbatim}
@@ -7298,30 +7308,30 @@ The table below shows the same data but in growth rate terms – indicating that
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
       PAKGGREVCO2CER  PAKGGREVCO2GER  PAKGGREVCO2OER  PAKNECONPRVTXN  \PYGZbs{}
-2021        0.000000        0.000000        0.000000        9.552081   
-2022        0.000000        0.000000        0.000000        8.949959   
-2023        0.000000        0.000000        0.000000        8.272552   
-2024     \PYGZhy{}640.556268     \PYGZhy{}173.169155     \PYGZhy{}444.405991        9.893579   
-2025        6.557326        6.557326        6.557326        6.679298   
+2021        0.000000        0.000000        0.000000        9.476828   
+2022        0.000000        0.000000        0.000000        8.776453   
+2023        0.000000        0.000000        0.000000        7.978008   
+2024     \PYGZhy{}640.556268     \PYGZhy{}173.169155     \PYGZhy{}444.405991       10.081669   
+2025        6.922650        6.922650        6.922650        7.066610   
 ...              ...             ...             ...             ...   
-2096        2.667055        2.667055        2.667055        2.609021   
-2097        2.676483        2.676483        2.676483        2.619340   
-2098        2.686390        2.686390        2.686390        2.630184   
-2099        2.696765        2.696765        2.696765        2.641540   
-2100        2.707596        2.707596        2.707596        2.653396   
+2096        5.482659        5.482659        5.482659        5.695883   
+2097        5.482423        5.482423        5.482423        5.695627   
+2098        5.482121        5.482121        5.482121        5.695299   
+2099        5.481761        5.481761        5.481761        5.694908   
+2100        5.481351        5.481351        5.481351        5.694461   
 
       PAKPANUSATLS  
-2021     \PYGZhy{}0.198428  
-2022     \PYGZhy{}0.197339  
-2023     \PYGZhy{}0.182424  
-2024     \PYGZhy{}0.355185  
-2025     \PYGZhy{}0.114336  
+2021     \PYGZhy{}0.158806  
+2022     \PYGZhy{}0.155332  
+2023     \PYGZhy{}0.137261  
+2024     \PYGZhy{}0.328810  
+2025     \PYGZhy{}0.134458  
 ...            ...  
-2096      0.056558  
-2097      0.055684  
-2098      0.054766  
-2099      0.053804  
-2100      0.052800  
+2096     \PYGZhy{}0.201734  
+2097     \PYGZhy{}0.201715  
+2098     \PYGZhy{}0.201691  
+2099     \PYGZhy{}0.201662  
+2100     \PYGZhy{}0.201629  
 
 [80 rows x 5 columns]
 \end{sphinxVerbatim}
@@ -7339,8 +7349,7 @@ The results from the simulation with the Carbon Tax rate endogenized so as to ma
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpakreal}\PYG{o}{.}\PYG{n}{keep\PYGZus{}plot\PYGZus{}multi}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{2010}\PYG{p}{,}\PYG{l+m+mi}{2100}\PYG{p}{,}\PYG{n}{legend}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{showtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{level}\PYG{l+s+s1}{\PYGZsq{}} \PYG{p}{,}\PYG{n}{diffpct}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
-\PYG{n}{fig}
+\PYG{n}{mpakreal}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{df}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -7348,12 +7357,42 @@ The results from the simulation with the Carbon Tax rate endogenized so as to ma
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.Javascript object\PYGZgt{}
+      PAKCCEMISCO2CKN  PAKCCEMISCO2GKN  PAKCCEMISCO2OKN  PAKCCEMISCO2TKN
+2021         0.000000         0.000000         0.000000         0.000000
+2022         0.000000         0.000000         0.000000         0.000000
+2023         0.000000         0.000000         0.000000         0.000000
+2024       \PYGZhy{}42.758320       \PYGZhy{}28.536509       \PYGZhy{}11.513706       \PYGZhy{}23.275423
+2025       \PYGZhy{}43.001668       \PYGZhy{}27.652364       \PYGZhy{}12.167191       \PYGZhy{}23.390856
+...               ...              ...              ...              ...
+2096       \PYGZhy{}26.343289       \PYGZhy{}12.356617        \PYGZhy{}5.804034       \PYGZhy{}12.147898
+2097       \PYGZhy{}26.200340       \PYGZhy{}12.274552        \PYGZhy{}5.753062       \PYGZhy{}12.067369
+2098       \PYGZhy{}26.057915       \PYGZhy{}12.192940        \PYGZhy{}5.702492       \PYGZhy{}11.987293
+2099       \PYGZhy{}25.915998       \PYGZhy{}12.111773        \PYGZhy{}5.652313       \PYGZhy{}11.907659
+2100       \PYGZhy{}25.774578       \PYGZhy{}12.031041        \PYGZhy{}5.602516       \PYGZhy{}11.828457
+
+[80 rows x 4 columns]
 \end{sphinxVerbatim}
 
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\PYG{n}{mpakreal}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKCCEMISCO2?KN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Emissions impact of a \PYGZdl{}30 USD Carbon tax}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{showfig}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
 \end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{MoreComplexScenarios_43_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7363,6 +7402,248 @@ The results from the simulation with the Carbon Tax rate endogenized so as to ma
 
 \part{Model Analytics}
 
+\sphinxstepscope
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} inline
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+
+\chapter{Model eigenvalues}
+\label{\detokenize{content/06_ModelAnalytics/EigenValues:model-eigenvalues}}\label{\detokenize{content/06_ModelAnalytics/EigenValues::doc}}
+\sphinxAtStartPar
+Eigenvalues are a fundamental concept in dynamic models. In simple terms, they summarize the adjustment process within a model. In the context of dynamic models, the eigenvalues of the model describe the behavior of the system over time. The sign and magnitude of the eigenvalues determine whether a system of equations will converge to a stable equilibrium, oscillate, or diverge. For macro models they determine whether the model is stable, marginally stable, or unstable.
+
+\sphinxAtStartPar
+In the case of a macromodel, which is effectively a system of differential equations, the eigenvalues of the coefficient matrix determine whether the system is stable or unstable. If all the eigenvalues have negative real parts, then the system is stable and will converge to a steady state over time. If at least one eigenvalue has a positive real part, then the system is unstable, and the solutions will diverge over time.
+
+\sphinxAtStartPar
+This Notebook uses a  model for Pakistan described here: 
+
+
+\section{Imports}
+\label{\detokenize{content/06_ModelAnalytics/EigenValues:imports}}
+\sphinxAtStartPar
+Modelflow’s modelclass includes most of the methods needed to manage a model in Modelflow.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{modelclass} \PYG{k+kn}{import} \PYG{n}{model} 
+\PYG{k+kn}{from} \PYG{n+nn}{modelnewton} \PYG{k+kn}{import} \PYG{n}{newton\PYGZus{}diff}
+\PYG{k+kn}{import} \PYG{n+nn}{modelmf}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{widescreen}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{scroll\PYGZus{}off}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.HTML object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{Load a pre\sphinxhyphen{}existing model, data and descriptions}
+\label{\detokenize{content/06_ModelAnalytics/EigenValues:load-a-pre-existing-model-data-and-descriptions}}
+\sphinxAtStartPar
+The file \sphinxcode{\sphinxupquote{pak.pcim}} contains a dump of model equations, dataframe, simulation options and variable descriptions. The file has been created when onboarding the model.
+Examples can be found \sphinxhref{../../onboard/eviews/onboard\%20one\%20model\%20from\%20\%20wf1.html\#onboard-a-model-defined-in-a-wf1-file}{here}
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mpak\PYGZus{}newton} \PYG{o}{=} \PYG{n}{newton\PYGZus{}diff}\PYG{p}{(}\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{forcenum}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} create a newton\PYGZus{}diff instance which contains derivatives }
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{eig\PYGZus{}dic} \PYG{o}{=} \PYG{n}{mpak\PYGZus{}newton}\PYG{o}{.}\PYG{n}{get\PYGZus{}eigenvectors}\PYG{p}{(}\PYG{n}{filnan} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{periode}\PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{2023}\PYG{p}{,}\PYG{l+m+mi}{2024}\PYG{p}{,}\PYG{l+m+mi}{2027}\PYG{p}{,}\PYG{l+m+mi}{2099}\PYG{p}{)}\PYG{p}{,}\PYG{n}{silent}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{}  }
+\PYG{n}{mpak\PYGZus{}newton}\PYG{o}{.}\PYG{n}{eigplot\PYGZus{}all}\PYG{p}{(}\PYG{n}{eig\PYGZus{}dic}\PYG{p}{,}\PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}events.py:89: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
+  func(*args, **kwargs)
+\end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{EigenValues_9_1}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{help}\PYG{p}{(}\PYG{n}{mpak\PYGZus{}newton}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Help on newton\PYGZus{}diff in module modelnewton object:
+
+class newton\PYGZus{}diff(builtins.object)
+ |  newton\PYGZus{}diff(mmodel, df=None, endovar=None, onlyendocur=False, timeit=False, silent=True, forcenum=False, per=\PYGZsq{}\PYGZsq{}, ljit=0, nchunk=None, endoandexo=False)
+ |  
+ |  Class to handle newron solving 
+ |  this is for un\PYGZhy{}nomalized or normalized models ie models of the forrm 
+ |  
+ |  0 = G(y,x)
+ |  y = F(y,x)
+ |  
+ |  Methods defined here:
+ |  
+ |  \PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}(self, mmodel, df=None, endovar=None, onlyendocur=False, timeit=False, silent=True, forcenum=False, per=\PYGZsq{}\PYGZsq{}, ljit=0, nchunk=None, endoandexo=False)
+ |      Args:
+ |          mmodel (TYPE): Model to analyze.
+ |          df (TYPE, optional): Dataframe. if None mmodel.lastdf will be used 
+ |          endovar (TYPE, optional): if set defines which endogeneous to include . Defaults to None.
+ |          onlyendocur (TYPE, optional): Only calculate for the curren endogeneous variables. Defaults to False.
+ |          timeit (TYPE, optional): writeout time informations . Defaults to False.
+ |          silent (TYPE, optional):  Defaults to True.
+ |          forcenum (TYPE, optional): Force differentiation to be numeric else try sumbolic (slower)  Defaults to False.
+ |          per (TYPE, optional): Period for which to calculte the jacobi . Defaults to \PYGZsq{}\PYGZsq{}.
+ |          ljit (TYPE, optional): Trigger just in time compilation of the differential coiefficient. Defaults to 0.
+ |          nchunk (TYPE, optional): Chunks for which the model is written  \PYGZhy{} relevant if ljit == True. Defaults to None.
+ |          endoandexo (TYPE, optional): Calculate for both endogeneous and exogeneous . Defaults to False.
+ |      
+ |      Returns:
+ |          None.
+ |  
+ |  eigenvector\PYGZus{}plot(self, per=None, size=(4, 3), top=0.9)
+ |  
+ |  eigplot(self, eig\PYGZus{}dic=None, per=None, size=(4, 3), top=0.9)
+ |  
+ |  eigplot\PYGZus{}all(self, eig\PYGZus{}dic, size=(4, 3), maxfig=6)
+ |  
+ |  eigplot\PYGZus{}all0(self, eig\PYGZus{}dic, size=(4, 3))
+ |  
+ |  get\PYGZus{}diff\PYGZus{}df\PYGZus{}1per(self, df=None, periode=None)
+ |  
+ |  get\PYGZus{}diff\PYGZus{}df\PYGZus{}tot(self, periode=None, df=None)
+ |  
+ |  get\PYGZus{}diff\PYGZus{}mat\PYGZus{}1per(self, periode=None, df=None)
+ |      fetch a dict of one periode sparse jacobimatrices
+ |  
+ |  get\PYGZus{}diff\PYGZus{}mat\PYGZus{}all\PYGZus{}1per(self, periode=None, df=None, asdf=False)
+ |  
+ |  get\PYGZus{}diff\PYGZus{}mat\PYGZus{}tot(self, df=None)
+ |      Fetch a stacked jacobimatrix for the whole model.current\PYGZus{}per
+ |      
+ |      Returns a sparse matrix.
+ |  
+ |  get\PYGZus{}diff\PYGZus{}melted(self, periode=None, df=None)
+ |      returns a tall matrix with all values to construct jacobimatrix(es)
+ |  
+ |  get\PYGZus{}diff\PYGZus{}melted\PYGZus{}var(self, periode=None, df=None)
+ |      makes dict with all  derivative matrices for all lags
+ |  
+ |  get\PYGZus{}diff\PYGZus{}values\PYGZus{}all(self, periode=None, df=None, asdf=False)
+ |      stuff the values of derivatives into nested dic
+ |  
+ |  get\PYGZus{}diffmodel(self)
+ |      Returns a model which calculates the partial derivatives of a model
+ |  
+ |  get\PYGZus{}eigenvectors(self, periode=None, asdf=True, filnan=False, silent=False)
+ |  
+ |  get\PYGZus{}solve1per(self, df=None, periode=None)
+ |  
+ |  get\PYGZus{}solve1perlu(self, df=\PYGZsq{}\PYGZsq{}, periode=\PYGZsq{}\PYGZsq{})
+ |  
+ |  get\PYGZus{}solvestacked(self, df=\PYGZsq{}\PYGZsq{})
+ |  
+ |  get\PYGZus{}solvestacked\PYGZus{}it(self, df=\PYGZsq{}\PYGZsq{}, solver=\PYGZlt{}function bicg at 0x000001DC1DC938B0\PYGZgt{})
+ |  
+ |  modeldiff(self)
+ |      Differentiate relations for self.enovar with respect to endogeneous variable 
+ |      The result is placed in a dictory in the model instanse: model.diffendocur
+ |  
+ |  show\PYGZus{}diff(self, pat=\PYGZsq{}*\PYGZsq{})
+ |      Displays espressions for differential koifficients for a variable
+ |      if var ends with * all matchning variables are displayes
+ |  
+ |  show\PYGZus{}diff\PYGZus{}latex(self, pat=\PYGZsq{}*\PYGZsq{}, show\PYGZus{}expression=True, show\PYGZus{}values=True, maxper=5)
+ |  
+ |  show\PYGZus{}stacked\PYGZus{}diff(self, time=None, lhs=\PYGZsq{}\PYGZsq{}, rhs=\PYGZsq{}\PYGZsq{}, dec=2, show=True)
+ |      Parameters
+ |      \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+ |      time : list, optional
+ |          DESCRIPTION. The default is None. Time for which to retrieve stacked jacobi
+ |      lhs : string, optional
+ |          DESCRIPTION. The default is \PYGZsq{}\PYGZsq{}. Left hand side variables 
+ |      rhs : TYPE, optional
+ |          DESCRIPTION. The default is \PYGZsq{}\PYGZsq{}. Right hand side variabnles 
+ |      dec : TYPE, optional
+ |          DESCRIPTION. The default is 2.
+ |      show : TYPE, optional
+ |          DESCRIPTION. The default is True.
+ |      
+ |      Returns
+ |      \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+ |      selected rows and columns of stacked jacobi as dataframe .
+ |  
+ |  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+ |  Static methods defined here:
+ |  
+ |  get\PYGZus{}feedback(eig\PYGZus{}dic, per=None)
+ |      Returns a dict of max abs eigenvector and the sign
+ |  
+ |  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+ |  Data descriptors defined here:
+ |  
+ |  \PYGZus{}\PYGZus{}dict\PYGZus{}\PYGZus{}
+ |      dictionary for instance variables (if defined)
+ |  
+ |  \PYGZus{}\PYGZus{}weakref\PYGZus{}\PYGZus{}
+ |      list of weak references to the object (if defined)
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
 \sphinxstepscope
 
 
@@ -7404,7 +7685,7 @@ Simulates the new experiment.
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Business as Usual}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Business as Usual}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{alternative}  \PYG{o}{=}  \PYG{n}{baseline}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZlt{}2020 2100\PYGZgt{} PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 29}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{result} \PYG{o}{=} \PYG{n}{mpak}\PYG{p}{(}\PYG{n}{alternative}\PYG{p}{,}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2100}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Carbon tax nominal 29}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} simulates the model }
 \end{sphinxVerbatim}
@@ -7414,7 +7695,7 @@ Simulates the new experiment.
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
+file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7434,7 +7715,7 @@ Take a variable y that is a function of two other variables a and b.  In the mod
 
 \sphinxAtStartPar
 If there are two observations
-\label{equation:content/06_ModelAnalytics/Attribution:1d6f84c5-b494-48a1-94e8-732bfac68f9b}\begin{eqnarray}
+\label{equation:content/06_ModelAnalytics/Attribution:e3aa0c93-eb2f-46fc-b912-c7a04f410457}\begin{eqnarray}
 y_0 = f(a_0,b_0)\\
 y_1 = f(a_1,b_1)
 \end{eqnarray}
@@ -7450,19 +7731,19 @@ The first expresion can be called \(\Omega_a\) or the contribution of changes in
 
 \sphinxAtStartPar
 The \sphinxcode{\sphinxupquote{modelflow}} method \sphinxcode{\sphinxupquote{ .totdif()}} is used to calculate attributions. It performs a numerical approximation of \(\Omega_a\) and \(\Omega_b\) by performing two runs of the model:
-\label{equation:content/06_ModelAnalytics/Attribution:f70fb8f2-a09c-4e03-8415-2d13afdcf92a}\begin{eqnarray}  
+\label{equation:content/06_ModelAnalytics/Attribution:a58146ca-6d26-45e8-a580-3626dbcbc58f}\begin{eqnarray}  
 y_0&=&f(a_{0},b_{0}) \\
 y_1&=&f(a_0+\Delta a,b_{0}+ \Delta b)
 \end{eqnarray}
 \sphinxAtStartPar
 and calculates \(\Omega_a\) and \(\Omega_b\) as:
-\label{equation:content/06_ModelAnalytics/Attribution:7566b3e8-e196-4053-8677-1b3fd5f6eb08}\begin{eqnarray}  
+\label{equation:content/06_ModelAnalytics/Attribution:d865f44d-7695-46b2-9fa0-443b9b7fbfcb}\begin{eqnarray}  
 \Omega f_a&=&f(a_1,b_1 )-f(a_1-\Delta a,b_1) \\
 \Omega f_b&=&f(a_1,b_1 )-f(a_1,b_1-\Delta  b)
 \end{eqnarray}
 \sphinxAtStartPar
 And:
-\label{equation:content/06_ModelAnalytics/Attribution:a63ad1fc-7a7f-40c0-a128-dff40a95425f}\begin{eqnarray}
+\label{equation:content/06_ModelAnalytics/Attribution:d56b4a1b-f231-4c0f-ae3e-564f096fd453}\begin{eqnarray}
 residual = \Omega f_a + \Omega f_b -(y_1 - y_0) 
 \end{eqnarray}
 \sphinxAtStartPar
@@ -7508,7 +7789,7 @@ The results of the \sphinxcode{\sphinxupquote{.dekomp}} command are divided into
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
 \sphinxAtStartPar
-The first table of output shows the changes that are to be explained, having been drawn from the \sphinxcode{\sphinxupquote{.basedf}} and \sphinxcode{\sphinxupquote{.lastdf}} DataFrames of the model object.
+The first table of output shows the changes that are to be explained/ \sphinxstylestrong{The changes are always drawn from the most solution, i.e. from the \sphinxcode{\sphinxupquote{.basedf}} and \sphinxcode{\sphinxupquote{.lastdf}} DataFrames} of the model object.
 
 \item {} 
 \sphinxAtStartPar
@@ -7537,35 +7818,35 @@ The last shows the contributions of these changes to the change in the growth ra
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Formula        : FRML  \PYGZlt{}\PYGZgt{} PAKCCEMISCO2TKN = PAKCCEMISCO2CKN+PAKCCEMISCO2OKN+PAKCCEMISCO2GKN \PYGZdl{} 
+Formula        : FRML \PYGZlt{}IDENT\PYGZgt{} PAKCCEMISCO2TKN = PAKCCEMISCO2CKN+PAKCCEMISCO2OKN+PAKCCEMISCO2GKN \PYGZdl{} 
 
                         2020         2021         2022         2023         2024         2025
 Variable    lag                                                                              
-Base        0   216055772.84 222601656.91 230049529.33 238103197.33 246127123.55 253659456.66
-Alternative 0   153705842.11 160634232.91 168319944.42 176432099.88 184790573.07 193170252.17
-Difference  0   \PYGZhy{}62349930.73 \PYGZhy{}61967424.00 \PYGZhy{}61729584.91 \PYGZhy{}61671097.45 \PYGZhy{}61336550.48 \PYGZhy{}60489204.50
-Percent     0         \PYGZhy{}28.86       \PYGZhy{}27.84       \PYGZhy{}26.83       \PYGZhy{}25.90       \PYGZhy{}24.92       \PYGZhy{}23.85
+Base        0   213515545.24 217548186.56 221072469.97 225253519.79 230370294.27 236240658.85
+Alternative 0   154655290.66 159024407.00 163163619.20 168028201.90 173929277.95 180696656.18
+Difference  0   \PYGZhy{}58860254.58 \PYGZhy{}58523779.56 \PYGZhy{}57908850.77 \PYGZhy{}57225317.88 \PYGZhy{}56441016.32 \PYGZhy{}55544002.66
+Percent     0         \PYGZhy{}27.57       \PYGZhy{}26.90       \PYGZhy{}26.19       \PYGZhy{}25.40       \PYGZhy{}24.50       \PYGZhy{}23.51
 
  Contributions to differende for  PAKCCEMISCO2TKN
                             2020         2021         2022         2023         2024         2025
 Variable        lag                                                                              
-PAKCCEMISCO2CKN 0   \PYGZhy{}24768096.25 \PYGZhy{}25017497.26 \PYGZhy{}25248615.93 \PYGZhy{}25456453.36 \PYGZhy{}25531990.77 \PYGZhy{}25414039.06
-PAKCCEMISCO2OKN 0   \PYGZhy{}15859351.44 \PYGZhy{}16379596.20 \PYGZhy{}16816413.36 \PYGZhy{}17232706.59 \PYGZhy{}17434843.28 \PYGZhy{}17332637.96
-PAKCCEMISCO2GKN 0   \PYGZhy{}21722483.03 \PYGZhy{}20570330.55 \PYGZhy{}19664555.61 \PYGZhy{}18981937.50 \PYGZhy{}18369716.44 \PYGZhy{}17742527.48
+PAKCCEMISCO2CKN 0   \PYGZhy{}23834819.21 \PYGZhy{}23889797.62 \PYGZhy{}23777548.63 \PYGZhy{}23622076.35 \PYGZhy{}23444796.31 \PYGZhy{}23239969.29
+PAKCCEMISCO2OKN 0   \PYGZhy{}13887796.96 \PYGZhy{}14589014.38 \PYGZhy{}15070531.59 \PYGZhy{}15363597.05 \PYGZhy{}15456777.50 \PYGZhy{}15387859.25
+PAKCCEMISCO2GKN 0   \PYGZhy{}21137638.41 \PYGZhy{}20044967.56 \PYGZhy{}19060770.55 \PYGZhy{}18239644.49 \PYGZhy{}17539442.51 \PYGZhy{}16916174.12
 
  Share of contributions to differende for  PAKCCEMISCO2TKN
                            2020        2021        2022        2023        2024        2025
 Variable        lag                                                                        
-PAKCCEMISCO2CKN 0           40\PYGZpc{}         40\PYGZpc{}         41\PYGZpc{}         41\PYGZpc{}         42\PYGZpc{}         42\PYGZpc{}
-PAKCCEMISCO2GKN 0           35\PYGZpc{}         33\PYGZpc{}         32\PYGZpc{}         31\PYGZpc{}         30\PYGZpc{}         29\PYGZpc{}
-PAKCCEMISCO2OKN 0           25\PYGZpc{}         26\PYGZpc{}         27\PYGZpc{}         28\PYGZpc{}         28\PYGZpc{}         29\PYGZpc{}
+PAKCCEMISCO2CKN 0           40\PYGZpc{}         41\PYGZpc{}         41\PYGZpc{}         41\PYGZpc{}         42\PYGZpc{}         42\PYGZpc{}
+PAKCCEMISCO2GKN 0           36\PYGZpc{}         34\PYGZpc{}         33\PYGZpc{}         32\PYGZpc{}         31\PYGZpc{}         30\PYGZpc{}
+PAKCCEMISCO2OKN 0           24\PYGZpc{}         25\PYGZpc{}         26\PYGZpc{}         27\PYGZpc{}         27\PYGZpc{}         28\PYGZpc{}
 Total           0          100\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}
 Residual        0            0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
 
  Contribution to growth rate PAKCCEMISCO2TKN
                            2020        2021        2022        2023        2024        2025
 Variable        lag                                                                        
-PAKCCEMISCO2CKN 0         \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.2\PYGZpc{}       \PYGZhy{}0.2\PYGZpc{}       \PYGZhy{}0.2\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}
+PAKCCEMISCO2CKN 0         \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.2\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}
 PAKCCEMISCO2OKN 0         \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}
 PAKCCEMISCO2GKN 0         \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}       \PYGZhy{}0.1\PYGZpc{}
 \end{sphinxVerbatim}
@@ -7591,7 +7872,7 @@ Recall the inflation equation is given by the \sphinxcode{\sphinxupquote{.frml}}
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNECONPRVTXN : Not avaible
+PAKNECONPRVTXN : @IDENTITY PAKNECONPRVTXN  = ((PAKNECONENGYSH\PYGZca{}PAKCESENGYCON)  * PAKNECONENGYXN\PYGZca{}(1  \PYGZhy{} PAKCESENGYCON)  + (PAKNECONOTHRSH\PYGZca{}PAKCESENGYCON)  * PAKNECONOTHRXN\PYGZca{}(1  \PYGZhy{} PAKCESENGYCON))\PYGZca{}(1  / (1  \PYGZhy{} PAKCESENGYCON))
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7612,7 +7893,7 @@ When normalized the equation solves for the \sphinxstylestrong{level} of the pri
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNECONPRVTXN : FRML \PYGZlt{}\PYGZgt{} PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1\PYGZhy{}PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1\PYGZhy{}PAKCESENGYCON))**(1/(1\PYGZhy{}PAKCESENGYCON)) \PYGZdl{}
+PAKNECONPRVTXN : FRML \PYGZlt{}IDENT\PYGZgt{} PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1\PYGZhy{}PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1\PYGZhy{}PAKCESENGYCON))**(1/(1\PYGZhy{}PAKCESENGYCON)) \PYGZdl{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7637,42 +7918,42 @@ Note in the Pakistan model, consumer inflation is derived as a CET aggregation o
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Formula        : FRML  \PYGZlt{}\PYGZgt{} PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1\PYGZhy{}PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1\PYGZhy{}PAKCESENGYCON))**(1/(1\PYGZhy{}PAKCESENGYCON)) \PYGZdl{} 
+Formula        : FRML \PYGZlt{}IDENT\PYGZgt{} PAKNECONPRVTXN = ((PAKNECONENGYSH**PAKCESENGYCON)*PAKNECONENGYXN**(1\PYGZhy{}PAKCESENGYCON)+(PAKNECONOTHRSH**PAKCESENGYCON)*PAKNECONOTHRXN**(1\PYGZhy{}PAKCESENGYCON))**(1/(1\PYGZhy{}PAKCESENGYCON)) \PYGZdl{} 
 
                       2020       2021       2022       2023       2024       2025
 Variable    lag                                                                  
-Base        0         1.68       1.85       2.01       2.18       2.34       2.50
-Alternative 0         1.73       1.89       2.06       2.23       2.40       2.57
-Difference  0         0.05       0.05       0.05       0.06       0.06       0.07
-Percent     0         2.75       2.52       2.51       2.59       2.67       2.73
+Base        0         1.67       1.82       1.98       2.14       2.30       2.45
+Alternative 0         1.72       1.89       2.06       2.23       2.39       2.55
+Difference  0         0.06       0.07       0.08       0.09       0.09       0.10
+Percent     0         3.34       3.77       4.04       4.14       4.11       3.99
 
  Contributions to differende for  PAKNECONPRVTXN
                          2020       2021       2022       2023       2024       2025
 Variable       lag                                                                  
-PAKNECONENGYSH 0         0.00       0.00       0.00       0.00       0.00       0.00
-PAKCESENGYCON  0         0.00       0.00       0.00       0.00       0.00       0.00
+PAKNECONENGYSH 0        \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+PAKCESENGYCON  0        \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
 PAKNECONENGYXN 0         0.01       0.01       0.01       0.01       0.01       0.01
-PAKNECONOTHRSH 0         0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN 0         0.03       0.03       0.04       0.04       0.05       0.05
+PAKNECONOTHRSH 0        \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+PAKNECONOTHRXN 0         0.04       0.06       0.07       0.08       0.08       0.08
 
  Share of contributions to differende for  PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
 Variable       lag                                                                        
-PAKNECONOTHRXN 0           72\PYGZpc{}         71\PYGZpc{}         73\PYGZpc{}         76\PYGZpc{}         78\PYGZpc{}         80\PYGZpc{}
-PAKNECONENGYXN 0           28\PYGZpc{}         29\PYGZpc{}         27\PYGZpc{}         25\PYGZpc{}         23\PYGZpc{}         21\PYGZpc{}
-PAKNECONENGYSH 0            0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKCESENGYCON  0            0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKNECONOTHRSH 0            0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-Total          0          101\PYGZpc{}        101\PYGZpc{}        101\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}        100\PYGZpc{}
-Residual       0            1\PYGZpc{}          1\PYGZpc{}          1\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
+PAKNECONOTHRXN 0           77\PYGZpc{}         81\PYGZpc{}         83\PYGZpc{}         85\PYGZpc{}         86\PYGZpc{}         86\PYGZpc{}
+PAKNECONENGYXN 0           24\PYGZpc{}         20\PYGZpc{}         17\PYGZpc{}         16\PYGZpc{}         15\PYGZpc{}         14\PYGZpc{}
+PAKNECONENGYSH 0           \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKCESENGYCON  0           \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKNECONOTHRSH 0           \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+Total          0          101\PYGZpc{}        101\PYGZpc{}        101\PYGZpc{}        101\PYGZpc{}        101\PYGZpc{}        100\PYGZpc{}
+Residual       0            1\PYGZpc{}          1\PYGZpc{}          1\PYGZpc{}          1\PYGZpc{}          1\PYGZpc{}          0\PYGZpc{}
 
  Contribution to growth rate PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
 Variable       lag                                                                        
-PAKNECONENGYSH 0          0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKCESENGYCON  0          0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
+PAKNECONENGYSH 0         \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKCESENGYCON  0         \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
 PAKNECONENGYXN 0          0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKNECONOTHRSH 0          0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
+PAKNECONOTHRSH 0         \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
 PAKNECONOTHRXN 0          0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
 \end{sphinxVerbatim}
 
@@ -7697,7 +7978,7 @@ Below is the formula for nonenergy consumer prices and its decomposition. This e
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKNECONOTHRXN : Not avaible
+PAKNECONOTHRXN : DLOG(PAKNECONOTHRXN) = 0.590372627657176*DLOG(PAKNYGDPFCSTXN) + D(PAKGGREVGNFSXN/100) + (1 \PYGZhy{} 0.590372627657176)*DLOG(PAKNEIMPGNFSXN) + 0.2*PAKNYGDPGAP\PYGZus{}/100
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7716,61 +7997,61 @@ PAKNECONOTHRXN : Not avaible
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Formula        : FRML \PYGZlt{}Z,EXO\PYGZgt{} PAKNECONOTHRXN = (PAKNECONOTHRXN(\PYGZhy{}1)*EXP(\PYGZhy{}PAKNECONOTHRXN\PYGZus{}A+ (0.598859116610832*((LOG(PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNYGDPFCSTXN(\PYGZhy{}1))))+((PAKGGREVGNFSXN/100)\PYGZhy{}(PAKGGREVGNFSXN(\PYGZhy{}1)/100))+(1\PYGZhy{}0.598859116610832)*((LOG(PAKNEIMPGNFSXN))\PYGZhy{}(LOG(PAKNEIMPGNFSXN(\PYGZhy{}1))))+0.2*PAKNYGDPGAP\PYGZus{}/100) )) * (1\PYGZhy{}PAKNECONOTHRXN\PYGZus{}D)+ PAKNECONOTHRXN\PYGZus{}X*PAKNECONOTHRXN\PYGZus{}D  \PYGZdl{} 
+Formula        : FRML \PYGZlt{}DAMP,STOC\PYGZgt{} PAKNECONOTHRXN = (PAKNECONOTHRXN(\PYGZhy{}1)*EXP(PAKNECONOTHRXN\PYGZus{}A+ (0.590372627657176*((LOG(PAKNYGDPFCSTXN))\PYGZhy{}(LOG(PAKNYGDPFCSTXN(\PYGZhy{}1))))+((PAKGGREVGNFSXN/100)\PYGZhy{}(PAKGGREVGNFSXN(\PYGZhy{}1)/100))+(1\PYGZhy{}0.590372627657176)*((LOG(PAKNEIMPGNFSXN))\PYGZhy{}(LOG(PAKNEIMPGNFSXN(\PYGZhy{}1))))+0.2*PAKNYGDPGAP\PYGZus{}/100) )) * (1\PYGZhy{}PAKNECONOTHRXN\PYGZus{}D)+ PAKNECONOTHRXN\PYGZus{}X*PAKNECONOTHRXN\PYGZus{}D  \PYGZdl{} 
 
                       2020       2021       2022       2023       2024       2025
 Variable    lag                                                                  
-Base        0         1.71       1.88       2.05       2.22       2.39       2.55
-Alternative 0         1.75       1.91       2.09       2.26       2.44       2.61
-Difference  0         0.03       0.03       0.04       0.04       0.05       0.06
-Percent     0         2.02       1.84       1.88       2.00       2.12       2.22
+Base        0         1.70       1.86       2.02       2.18       2.34       2.50
+Alternative 0         1.74       1.92       2.09       2.26       2.43       2.59
+Difference  0         0.04       0.06       0.07       0.08       0.08       0.09
+Percent     0         2.63       3.12       3.44       3.59       3.60       3.51
 
  Contributions to differende for  PAKNECONOTHRXN
                            2020       2021       2022       2023       2024       2025
 Variable         lag                                                                  
-PAKNECONOTHRXN   \PYGZhy{}1        0.00       0.04       0.04       0.04       0.05       0.05
-PAKNECONOTHRXN\PYGZus{}A  0        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNYGDPFCSTXN    0       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00       0.00       0.00       0.01
-                 \PYGZhy{}1        0.00       0.00       0.00       0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
-PAKGGREVGNFSXN    0        0.00       0.00       0.00       0.00       0.00       0.00
-                 \PYGZhy{}1        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNEIMPGNFSXN    0        0.04       0.04       0.04       0.04       0.04       0.05
-                 \PYGZhy{}1        0.00      \PYGZhy{}0.04      \PYGZhy{}0.05      \PYGZhy{}0.05      \PYGZhy{}0.05      \PYGZhy{}0.05
-PAKNYGDPGAP\PYGZus{}      0       \PYGZhy{}0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN\PYGZus{}D  0        0.00       0.00       0.00       0.00       0.00       0.00
-PAKNECONOTHRXN\PYGZus{}X  0        0.00       0.00       0.00       0.00       0.00       0.00
+PAKNECONOTHRXN   \PYGZhy{}1       \PYGZhy{}0.00       0.05       0.06       0.08       0.08       0.09
+PAKNECONOTHRXN\PYGZus{}A  0       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+PAKNYGDPFCSTXN    0        0.00       0.01       0.01       0.02       0.02       0.02
+                 \PYGZhy{}1       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.01      \PYGZhy{}0.01      \PYGZhy{}0.02      \PYGZhy{}0.02
+PAKGGREVGNFSXN    0       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+                 \PYGZhy{}1       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+PAKNEIMPGNFSXN    0        0.04       0.04       0.05       0.05       0.05       0.05
+                 \PYGZhy{}1       \PYGZhy{}0.00      \PYGZhy{}0.05      \PYGZhy{}0.05      \PYGZhy{}0.05      \PYGZhy{}0.05      \PYGZhy{}0.05
+PAKNYGDPGAP\PYGZus{}      0        0.00       0.00       0.00       0.00       0.00      \PYGZhy{}0.00
+PAKNECONOTHRXN\PYGZus{}D  0       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
+PAKNECONOTHRXN\PYGZus{}X  0       \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00      \PYGZhy{}0.00
 
  Share of contributions to differende for  PAKNECONOTHRXN
                             2020        2021        2022        2023        2024        2025
 Variable         lag                                                                        
-PAKNECONOTHRXN   \PYGZhy{}1           0\PYGZpc{}        110\PYGZpc{}         98\PYGZpc{}         94\PYGZpc{}         94\PYGZpc{}         96\PYGZpc{}
-PAKNEIMPGNFSXN    0         114\PYGZpc{}        118\PYGZpc{}        110\PYGZpc{}         98\PYGZpc{}         89\PYGZpc{}         81\PYGZpc{}
-PAKNYGDPFCSTXN    0          \PYGZhy{}6\PYGZpc{}        \PYGZhy{}10\PYGZpc{}         \PYGZhy{}7\PYGZpc{}          0\PYGZpc{}          6\PYGZpc{}         12\PYGZpc{}
-PAKNYGDPGAP\PYGZus{}      0          \PYGZhy{}8\PYGZpc{}          1\PYGZpc{}          5\PYGZpc{}          5\PYGZpc{}          3\PYGZpc{}          3\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}A  0           0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKGGREVGNFSXN    0           0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-                 \PYGZhy{}1           0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}D  0           0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}X  0           0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}          0\PYGZpc{}
-PAKNYGDPFCSTXN   \PYGZhy{}1           0\PYGZpc{}          7\PYGZpc{}         10\PYGZpc{}          6\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}6\PYGZpc{}
-PAKNEIMPGNFSXN   \PYGZhy{}1           0\PYGZpc{}       \PYGZhy{}129\PYGZpc{}       \PYGZhy{}118\PYGZpc{}       \PYGZhy{}105\PYGZpc{}        \PYGZhy{}95\PYGZpc{}        \PYGZhy{}87\PYGZpc{}
-Total             0         100\PYGZpc{}         97\PYGZpc{}         98\PYGZpc{}         98\PYGZpc{}         98\PYGZpc{}         99\PYGZpc{}
-Residual          0          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}3\PYGZpc{}         \PYGZhy{}2\PYGZpc{}         \PYGZhy{}2\PYGZpc{}         \PYGZhy{}2\PYGZpc{}         \PYGZhy{}1\PYGZpc{}
+PAKNECONOTHRXN   \PYGZhy{}1          \PYGZhy{}0\PYGZpc{}         85\PYGZpc{}         91\PYGZpc{}         96\PYGZpc{}        100\PYGZpc{}        102\PYGZpc{}
+PAKNEIMPGNFSXN    0          92\PYGZpc{}         75\PYGZpc{}         66\PYGZpc{}         61\PYGZpc{}         58\PYGZpc{}         56\PYGZpc{}
+PAKNYGDPFCSTXN    0           2\PYGZpc{}         13\PYGZpc{}         19\PYGZpc{}         23\PYGZpc{}         26\PYGZpc{}         28\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}A  0          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKGGREVGNFSXN    0          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+                 \PYGZhy{}1          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}D  0          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}X  0          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}         \PYGZhy{}0\PYGZpc{}
+PAKNYGDPGAP\PYGZus{}      0           7\PYGZpc{}          7\PYGZpc{}          4\PYGZpc{}          2\PYGZpc{}          0\PYGZpc{}         \PYGZhy{}1\PYGZpc{}
+PAKNYGDPFCSTXN   \PYGZhy{}1          \PYGZhy{}0\PYGZpc{}         \PYGZhy{}2\PYGZpc{}        \PYGZhy{}12\PYGZpc{}        \PYGZhy{}19\PYGZpc{}        \PYGZhy{}24\PYGZpc{}        \PYGZhy{}27\PYGZpc{}
+PAKNEIMPGNFSXN   \PYGZhy{}1          \PYGZhy{}0\PYGZpc{}        \PYGZhy{}79\PYGZpc{}        \PYGZhy{}70\PYGZpc{}        \PYGZhy{}65\PYGZpc{}        \PYGZhy{}62\PYGZpc{}        \PYGZhy{}60\PYGZpc{}
+Total             0         100\PYGZpc{}         99\PYGZpc{}         99\PYGZpc{}         99\PYGZpc{}         99\PYGZpc{}         99\PYGZpc{}
+Residual          0           0\PYGZpc{}         \PYGZhy{}1\PYGZpc{}         \PYGZhy{}1\PYGZpc{}         \PYGZhy{}1\PYGZpc{}         \PYGZhy{}1\PYGZpc{}         \PYGZhy{}1\PYGZpc{}
 
  Contribution to growth rate PAKNECONOTHRXN
                             2020        2021        2022        2023        2024        2025
 Variable         lag                                                                        
-PAKNECONOTHRXN   \PYGZhy{}1         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}A  0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKNYGDPFCSTXN    0        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-                 \PYGZhy{}1         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
-PAKGGREVGNFSXN    0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-                 \PYGZhy{}1         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
+PAKNECONOTHRXN   \PYGZhy{}1        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}A  0        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKNYGDPFCSTXN    0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
+                 \PYGZhy{}1        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKGGREVGNFSXN    0        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+                 \PYGZhy{}1        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
 PAKNEIMPGNFSXN    0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-                 \PYGZhy{}1         0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
-PAKNYGDPGAP\PYGZus{}      0        \PYGZhy{}0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}D  0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
-PAKNECONOTHRXN\PYGZus{}X  0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}
+                 \PYGZhy{}1        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKNYGDPGAP\PYGZus{}      0         0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}        0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}D  0        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
+PAKNECONOTHRXN\PYGZus{}X  0        \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7783,14 +8064,80 @@ These results are more interesting and indicate that much of the initial impact 
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.02}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dif}\PYG{o}{.}\PYG{n}{df}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_20_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+      PAKNECONOTHRXN
+2020        0.044582
+2021        0.058001
+2022        0.069577
+2023        0.078417
+2024        0.084378
+...              ...
+2096        0.424055
+2097        0.443432
+2098        0.463762
+2099        0.485087
+2100        0.507454
+
+[81 rows x 1 columns]
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxAtStartPar
+The dekomp\_plot with option pct=False shows the change in the level of the LHS variable decomposed into the contribution of
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{control}\PYG{p}{,}\PYG{n}{delta}\PYG{p}{,}\PYG{n}{contributions}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{lprint}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{n}{control}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+                     2020      2021      2022      2023      2024      2025  \PYGZbs{}
+Variable    lag                                                               
+Base        0    1.695682  1.857535  2.021492  2.183344  2.342145   2.49833   
+Alternative 0    1.740265  1.915535  2.091069  2.261761  2.426523  2.586135   
+Difference  0    0.044582  0.058001  0.069577  0.078417  0.084378  0.087805   
+Percent     0    2.629162  3.122452  3.441877  3.591603   3.60259  3.514546   
+
+                     2026      2027      2028      2029  ...       2091  \PYGZbs{}
+Variable    lag                                          ...              
+Base        0    2.652585    2.8055  2.957674  3.109926  ...  79.631396   
+Alternative 0    2.741785  2.894545  3.045414  3.195536  ...   79.97147   
+Difference  0      0.0892  0.089045   0.08774   0.08561  ...   0.340074   
+Percent     0    3.362743  3.173934  2.966501  2.752779  ...    0.42706   
+
+                      2092       2093       2094       2095        2096  \PYGZbs{}
+Variable    lag                                                           
+Base        0    84.163096  88.952875  94.015343  99.365938  105.020967   
+Alternative 0    84.518369   89.32411  94.403339  99.771527  105.445022   
+Difference  0     0.355273   0.371235   0.387995   0.405589    0.424055   
+Percent     0     0.422124   0.417339   0.412693   0.408177    0.403781   
+
+                       2097        2098        2099        2100  
+Variable    lag                                                  
+Base        0    110.997662   117.31423  123.989906  131.045014  
+Alternative 0    111.441094  117.777991  124.474993  131.552467  
+Difference  0      0.443432    0.463762    0.485087    0.507454  
+Percent     0      0.399497    0.395316    0.391231    0.387236  
+
+[4 rows x 81 columns]
+\end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7799,14 +8146,72 @@ These results are more interesting and indicate that much of the initial impact 
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.02}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{delta}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_21_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+                          2020      2021      2022      2023      2024  \PYGZbs{}
+Variable         lag                                                     
+PAKNECONOTHRXN   \PYGZhy{}1       \PYGZhy{}0.0  0.049072  0.063316  0.075257   0.08413   
+PAKNECONOTHRXN\PYGZus{}A  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNYGDPFCSTXN    0   0.000827  0.007618   0.01354  0.018401  0.022052   
+                 \PYGZhy{}1       \PYGZhy{}0.0 \PYGZhy{}0.000911 \PYGZhy{}0.008349 \PYGZhy{}0.014741 \PYGZhy{}0.019903   
+PAKGGREVGNFSXN    0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+                 \PYGZhy{}1       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNEIMPGNFSXN    0   0.040852  0.043658  0.045895  0.047511  0.048539   
+                 \PYGZhy{}1       \PYGZhy{}0.0 \PYGZhy{}0.046047  \PYGZhy{}0.04877 \PYGZhy{}0.050755 \PYGZhy{}0.052066   
+PAKNYGDPGAP\PYGZus{}      0   0.002994  0.003799  0.003018  0.001664  0.000411   
+PAKNECONOTHRXN\PYGZus{}D  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNECONOTHRXN\PYGZus{}X  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+
+                          2025      2026      2027      2028      2029  ...  \PYGZbs{}
+Variable         lag                                                    ...   
+PAKNECONOTHRXN   \PYGZhy{}1   0.089928   0.09309   0.09417  0.093686  0.092065  ...   
+PAKNECONOTHRXN\PYGZus{}A  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  ...   
+PAKNYGDPFCSTXN    0   0.024598   0.02621  0.027065  0.027309  0.027066  ...   
+                 \PYGZhy{}1  \PYGZhy{}0.023718 \PYGZhy{}0.026328 \PYGZhy{}0.027938 \PYGZhy{}0.028744 \PYGZhy{}0.028915  ...   
+PAKGGREVGNFSXN    0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  ...   
+                 \PYGZhy{}1       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  ...   
+PAKNEIMPGNFSXN    0   0.049082  0.049244   0.04911  0.048747   0.04821  ...   
+                 \PYGZhy{}1  \PYGZhy{}0.052788 \PYGZhy{}0.053043 \PYGZhy{}0.052938 \PYGZhy{}0.052561 \PYGZhy{}0.051982  ...   
+PAKNYGDPGAP\PYGZus{}      0  \PYGZhy{}0.000602 \PYGZhy{}0.001313 \PYGZhy{}0.001753 \PYGZhy{}0.001981 \PYGZhy{}0.002051  ...   
+PAKNECONOTHRXN\PYGZus{}D  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  ...   
+PAKNECONOTHRXN\PYGZus{}X  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  ...   
+
+                          2091      2092      2093      2094      2095  \PYGZbs{}
+Variable         lag                                                     
+PAKNECONOTHRXN   \PYGZhy{}1   0.344117   0.35941  0.375474  0.392345  0.410058   
+PAKNECONOTHRXN\PYGZus{}A  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNYGDPFCSTXN    0   0.155984  0.163537  0.171467  0.179792  0.188531   
+                 \PYGZhy{}1  \PYGZhy{}0.157562 \PYGZhy{}0.165175 \PYGZhy{}0.173171 \PYGZhy{}0.181566 \PYGZhy{}0.190379   
+PAKGGREVGNFSXN    0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+                 \PYGZhy{}1       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNEIMPGNFSXN    0   0.041552  0.041988   0.04245  0.042939  0.043457   
+                 \PYGZhy{}1  \PYGZhy{}0.043505 \PYGZhy{}0.043937 \PYGZhy{}0.044397 \PYGZhy{}0.044885 \PYGZhy{}0.045402   
+PAKNYGDPGAP\PYGZus{}      0  \PYGZhy{}0.000859 \PYGZhy{}0.000908 \PYGZhy{}0.000959 \PYGZhy{}0.001015 \PYGZhy{}0.001075   
+PAKNECONOTHRXN\PYGZus{}D  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+PAKNECONOTHRXN\PYGZus{}X  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0   
+
+                          2096      2097      2098      2099      2100  
+Variable         lag                                                    
+PAKNECONOTHRXN   \PYGZhy{}1   0.428653  0.448169  0.468647  0.490132  0.512668  
+PAKNECONOTHRXN\PYGZus{}A  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  
+PAKNYGDPFCSTXN    0   0.197701  0.207322  0.217415  0.228002  0.239103  
+                 \PYGZhy{}1  \PYGZhy{}0.199629 \PYGZhy{}0.209335  \PYGZhy{}0.21952 \PYGZhy{}0.230203 \PYGZhy{}0.241408  
+PAKGGREVGNFSXN    0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  
+                 \PYGZhy{}1       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  
+PAKNEIMPGNFSXN    0   0.044005  0.044583  0.045193  0.045835  0.046511  
+                 \PYGZhy{}1  \PYGZhy{}0.045949 \PYGZhy{}0.046527 \PYGZhy{}0.047137 \PYGZhy{}0.047781 \PYGZhy{}0.048459  
+PAKNYGDPGAP\PYGZus{}      0  \PYGZhy{}0.001139 \PYGZhy{}0.001207 \PYGZhy{}0.001279 \PYGZhy{}0.001357 \PYGZhy{}0.001439  
+PAKNECONOTHRXN\PYGZus{}D  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  
+PAKNECONOTHRXN\PYGZus{}X  0       \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0      \PYGZhy{}0.0  
+
+[11 rows x 81 columns]
+\end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7815,14 +8220,144 @@ These results are more interesting and indicate that much of the initial impact 
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPFCSTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.00}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{contributions} \PYG{c+c1}{\PYGZsh{} as a percent of the total change (the omegas)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_22_0}.png}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+                            2020          2021          2022          2023  \PYGZbs{}
+Variable         lag                                                         
+PAKNECONOTHRXN   \PYGZhy{}1    \PYGZhy{}0.000002  8.460662e+01  9.100048e+01  9.596994e+01   
+PAKNYGDPFCSTXN    0     1.856042  1.313438e+01  1.946052e+01  2.346548e+01   
+PAKNEIMPGNFSXN    0    91.632877  7.527132e+01  6.596239e+01  6.058777e+01   
+PAKNECONOTHRXN\PYGZus{}A  0    \PYGZhy{}0.000002 \PYGZhy{}8.349738e\PYGZhy{}07 \PYGZhy{}4.609774e\PYGZhy{}07 \PYGZhy{}8.605964e\PYGZhy{}07   
+PAKGGREVGNFSXN    0    \PYGZhy{}0.000002 \PYGZhy{}8.349738e\PYGZhy{}07 \PYGZhy{}4.609774e\PYGZhy{}07 \PYGZhy{}8.605964e\PYGZhy{}07   
+                 \PYGZhy{}1    \PYGZhy{}0.000002 \PYGZhy{}8.349738e\PYGZhy{}07 \PYGZhy{}4.609774e\PYGZhy{}07 \PYGZhy{}8.605964e\PYGZhy{}07   
+PAKNECONOTHRXN\PYGZus{}D  0    \PYGZhy{}0.000002 \PYGZhy{}8.349738e\PYGZhy{}07 \PYGZhy{}4.609774e\PYGZhy{}07 \PYGZhy{}8.605964e\PYGZhy{}07   
+PAKNECONOTHRXN\PYGZus{}X  0    \PYGZhy{}0.000002 \PYGZhy{}8.349738e\PYGZhy{}07 \PYGZhy{}4.609774e\PYGZhy{}07 \PYGZhy{}8.605964e\PYGZhy{}07   
+PAKNYGDPGAP\PYGZus{}      0     6.715406  6.549233e+00  4.337007e+00  2.122444e+00   
+PAKNEIMPGNFSXN   \PYGZhy{}1    \PYGZhy{}0.000002 \PYGZhy{}7.939116e+01 \PYGZhy{}7.009483e+01 \PYGZhy{}6.472465e+01   
+PAKNYGDPFCSTXN   \PYGZhy{}1    \PYGZhy{}0.000002 \PYGZhy{}1.571084e+00 \PYGZhy{}1.200007e+01 \PYGZhy{}1.879798e+01   
+Total             0   100.204310  9.859930e+01  9.866549e+01  9.862301e+01   
+Residual          0     0.204310 \PYGZhy{}1.400698e+00 \PYGZhy{}1.334509e+00 \PYGZhy{}1.376992e+00   
+
+                              2024        2025        2026        2027  \PYGZbs{}
+Variable         lag                                                     
+PAKNECONOTHRXN   \PYGZhy{}1   9.970561e+01  102.418017  104.360990  105.755205   
+PAKNYGDPFCSTXN    0   2.613470e+01   28.013805   29.383646   30.394521   
+PAKNEIMPGNFSXN    0   5.752562e+01   55.898697   55.206151   55.151888   
+PAKNECONOTHRXN\PYGZus{}A  0  \PYGZhy{}8.446033e\PYGZhy{}07   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000003   
+PAKGGREVGNFSXN    0  \PYGZhy{}8.446033e\PYGZhy{}07   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000003   
+                 \PYGZhy{}1  \PYGZhy{}8.446033e\PYGZhy{}07   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000003   
+PAKNECONOTHRXN\PYGZus{}D  0  \PYGZhy{}8.446033e\PYGZhy{}07   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000003   
+PAKNECONOTHRXN\PYGZus{}X  0  \PYGZhy{}8.446033e\PYGZhy{}07   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000003   
+PAKNYGDPGAP\PYGZus{}      0   4.870008e\PYGZhy{}01   \PYGZhy{}0.685120   \PYGZhy{}1.471705   \PYGZhy{}1.968265   
+PAKNEIMPGNFSXN   \PYGZhy{}1  \PYGZhy{}6.170561e+01  \PYGZhy{}60.119200  \PYGZhy{}59.465019  \PYGZhy{}59.451158   
+PAKNYGDPFCSTXN   \PYGZhy{}1  \PYGZhy{}2.358831e+01  \PYGZhy{}27.012130  \PYGZhy{}29.516228  \PYGZhy{}31.374669   
+Total             0   9.855901e+01   98.514058   98.497819   98.507506   
+Residual          0  \PYGZhy{}1.440990e+00   \PYGZhy{}1.485942   \PYGZhy{}1.502181   \PYGZhy{}1.492494   
+
+                            2028        2029  ...        2091        2092  \PYGZbs{}
+Variable         lag                          ...                           
+PAKNECONOTHRXN   \PYGZhy{}1   106.777404  107.540159  ...  101.188729  101.164358   
+PAKNYGDPFCSTXN    0    31.125292   31.616110  ...   45.867719   46.031293   
+PAKNEIMPGNFSXN    0    55.558763   56.313837  ...   12.218479   11.818377   
+PAKNECONOTHRXN\PYGZus{}A  0    \PYGZhy{}0.000003   \PYGZhy{}0.000004  ...   \PYGZhy{}0.000002   \PYGZhy{}0.000002   
+PAKGGREVGNFSXN    0    \PYGZhy{}0.000003   \PYGZhy{}0.000004  ...   \PYGZhy{}0.000002   \PYGZhy{}0.000002   
+                 \PYGZhy{}1    \PYGZhy{}0.000003   \PYGZhy{}0.000004  ...   \PYGZhy{}0.000002   \PYGZhy{}0.000002   
+PAKNECONOTHRXN\PYGZus{}D  0    \PYGZhy{}0.000003   \PYGZhy{}0.000004  ...   \PYGZhy{}0.000002   \PYGZhy{}0.000002   
+PAKNECONOTHRXN\PYGZus{}X  0    \PYGZhy{}0.000003   \PYGZhy{}0.000004  ...   \PYGZhy{}0.000002   \PYGZhy{}0.000002   
+PAKNYGDPGAP\PYGZus{}      0    \PYGZhy{}2.257912   \PYGZhy{}2.395764  ...   \PYGZhy{}0.252723   \PYGZhy{}0.255448   
+PAKNEIMPGNFSXN   \PYGZhy{}1   \PYGZhy{}59.906153  \PYGZhy{}60.719917  ...  \PYGZhy{}12.792672  \PYGZhy{}12.367177   
+PAKNYGDPFCSTXN   \PYGZhy{}1   \PYGZhy{}32.760811  \PYGZhy{}33.775068  ...  \PYGZhy{}46.331679  \PYGZhy{}46.492474   
+Total             0    98.536566   98.579339  ...   99.897842   99.898918   
+Residual          0    \PYGZhy{}1.463434   \PYGZhy{}1.420661  ...   \PYGZhy{}0.102158   \PYGZhy{}0.101082   
+
+                            2093        2094        2095        2096  \PYGZbs{}
+Variable         lag                                                   
+PAKNECONOTHRXN   \PYGZhy{}1   101.141817  101.121018  101.101875  101.084286   
+PAKNYGDPFCSTXN    0    46.188267   46.338833   46.483184   46.621509   
+PAKNEIMPGNFSXN    0    11.434709   11.066966   10.714628   10.377171   
+PAKNECONOTHRXN\PYGZus{}A  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000002   
+PAKGGREVGNFSXN    0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000002   
+                 \PYGZhy{}1    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000002   
+PAKNECONOTHRXN\PYGZus{}D  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000002   
+PAKNECONOTHRXN\PYGZus{}X  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000003   \PYGZhy{}0.000002   
+PAKNYGDPGAP\PYGZus{}      0    \PYGZhy{}0.258416   \PYGZhy{}0.261598   \PYGZhy{}0.264965   \PYGZhy{}0.268486   
+PAKNEIMPGNFSXN   \PYGZhy{}1   \PYGZhy{}11.959268  \PYGZhy{}11.568397  \PYGZhy{}11.194007  \PYGZhy{}10.835530   
+PAKNYGDPFCSTXN   \PYGZhy{}1   \PYGZhy{}46.647151  \PYGZhy{}46.795882  \PYGZhy{}46.938831  \PYGZhy{}47.076157   
+Total             0    99.899946   99.900928   99.901872   99.902782   
+Residual          0    \PYGZhy{}0.100054   \PYGZhy{}0.099072   \PYGZhy{}0.098128   \PYGZhy{}0.097218   
+
+                            2097        2098        2099        2100  
+Variable         lag                                                  
+PAKNECONOTHRXN   \PYGZhy{}1   101.068162  101.053408  101.039937  101.027653  
+PAKNYGDPFCSTXN    0    46.753995   46.880832   47.002206   47.118299  
+PAKNEIMPGNFSXN    0    10.054064    9.744779    9.448788    9.165568  
+PAKNECONOTHRXN\PYGZus{}A  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002  
+PAKGGREVGNFSXN    0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002  
+                 \PYGZhy{}1    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002  
+PAKNECONOTHRXN\PYGZus{}D  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002  
+PAKNECONOTHRXN\PYGZus{}X  0    \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002   \PYGZhy{}0.000002  
+PAKNYGDPGAP\PYGZus{}      0    \PYGZhy{}0.272134   \PYGZhy{}0.275885   \PYGZhy{}0.279718   \PYGZhy{}0.283601  
+PAKNEIMPGNFSXN   \PYGZhy{}1   \PYGZhy{}10.492400  \PYGZhy{}10.164046   \PYGZhy{}9.849902   \PYGZhy{}9.549410  
+PAKNYGDPFCSTXN   \PYGZhy{}1   \PYGZhy{}47.208018  \PYGZhy{}47.334571  \PYGZhy{}47.455971  \PYGZhy{}47.572369  
+Total             0    99.903658   99.904507   99.905328   99.906128  
+Residual          0    \PYGZhy{}0.096342   \PYGZhy{}0.095493   \PYGZhy{}0.094672   \PYGZhy{}0.093872  
+
+[13 rows x 81 columns]
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.02}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{\PYGZsh{}decomp of teh change in the level}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{Attribution_25_0}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONOTHRXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.02}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{\PYGZsh{} expressed as a share (the conmtrinutions share)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{Attribution_26_0}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{fig}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPFCSTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{.02}\PYG{p}{)}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{Attribution_27_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -7841,7 +8376,7 @@ These results are more interesting and indicate that much of the initial impact 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Help on method dekomp\PYGZus{}plot in module modelclass:
 
-dekomp\PYGZus{}plot(varnavn, sort=True, pct=True, per=\PYGZsq{}\PYGZsq{}, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=\PYGZlt{}function Dekomp\PYGZus{}Mixin.\PYGZlt{}lambda\PYGZgt{} at 0x00000187B9E03160\PYGZgt{}, time\PYGZus{}att=False) method of modelclass.model instance
+dekomp\PYGZus{}plot(varnavn, sort=True, pct=True, per=\PYGZsq{}\PYGZsq{}, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=\PYGZlt{}function Dekomp\PYGZus{}Mixin.\PYGZlt{}lambda\PYGZgt{} at 0x000001FED241A160\PYGZgt{}, time\PYGZus{}att=False) method of modelclass.model instance
     Returns  a chart with attribution for a variable over the smpl  
     
     Parameters
@@ -7874,6 +8409,17 @@ dekomp\PYGZus{}plot(varnavn, sort=True, pct=True, per=\PYGZsq{}\PYGZsq{}, top=0.
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+mpak.dekomp\PYGZus{}plot\PYGZus{}per\PYG{o}{?}
+\PYG{c+c1}{\PYGZsh{}mpak.dekomp\PYGZus{}plot\PYGZus{}per(\PYGZsq{}PAKNYGDPFCSTXN\PYGZsq{},per=(2020,2030))  \PYGZsh{} gives a waterfall of contributions}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
 
 \section{.totdif() presents the impacts at the model level}
 \label{\detokenize{content/06_ModelAnalytics/Attribution:totdif-presents-the-impacts-at-the-model-level}}
@@ -7884,7 +8430,10 @@ The method \sphinxcode{\sphinxupquote{.totdif()}} returns an instance  the totdi
 It works by solving the model numerous time, each time changing one of the right hand side variables and calculating the impact on the dependent variable. By default it uses the values from the \sphinxcode{\sphinxupquote{.lastdf}} Dataframe as the shock values and the values in \sphinxcode{\sphinxupquote{.basedf}} as the initial values.
 
 \sphinxAtStartPar
-for the purpose of this exercise lets look at a simulation where monetary policy tightens raising the policy interest rate by 100 basis points for 3 years, and ten look at the impact on inflation.
+For the purpose of this exercise lets look at a simulation where monetary policy tightens raising the policy interest rate by 100 basis points for 3 years, and then look at the impact on inflation.
+
+\sphinxAtStartPar
+For advanced users the RHS variables can be grouped into user defined blocks, which helps identify causal chains.
 
 \sphinxAtStartPar
 To begin we reload the model.
@@ -7893,7 +8442,7 @@ To begin we reload the model.
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Business as Usual}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{mpak}\PYG{p}{,}\PYG{n}{baseline} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{modelload}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{../models/pak.pcim}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{alfa}\PYG{o}{=}\PYG{l+m+mf}{0.7}\PYG{p}{,}\PYG{n}{run}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{keep}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Business as Usual}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -7901,7 +8450,7 @@ To begin we reload the model.
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow\PYGZhy{}manual/main/model\PYGZus{}repo/pak.pcim
+file read:  C:\PYGZbs{}mflow\PYGZbs{}modelflow\PYGZhy{}manual\PYGZbs{}papers\PYGZbs{}mfbook\PYGZbs{}content\PYGZbs{}models\PYGZbs{}pak.pcim
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7922,16 +8471,21 @@ To determine the mnemonic for the monetary policy, search the dat dictionary for
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-PAKFMLBLPOLYXN        : Policy Rate
-PAKFMLBLPOLYXN\PYGZus{}A      : Add factor:Policy Rate
-PAKFMLBLPOLYXN\PYGZus{}D      : Exo dummy:Policy Rate
-PAKFMLBLPOLYXN\PYGZus{}FITTED : Fitted  value:Policy Rate
-PAKFMLBLPOLYXN\PYGZus{}X      : Exo value:Policy Rate
-PAKINTRDDIFF          : Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF\PYGZus{}A        : Add factor:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF\PYGZus{}D        : Exo dummy:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF\PYGZus{}FITTED   : Fitted  value:Domestic interest rate differential (to policy rate)
-PAKINTRDDIFF\PYGZus{}X        : Exo value:Domestic interest rate differential (to policy rate)
+PAKFMLBLPOLYXN        : Key Policy Interest Rate
+PAKFMLBLPOLYXN\PYGZus{}A      : Add factor:Key Policy Interest Rate
+PAKFMLBLPOLYXN\PYGZus{}D      : Fix dummy:Key Policy Interest Rate
+PAKFMLBLPOLYXN\PYGZus{}FITTED : Fitted  value:Key Policy Interest Rate
+PAKFMLBLPOLYXN\PYGZus{}X      : Fix value:Key Policy Interest Rate
+PAKINTRDDIFF          : Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF\PYGZus{}A        : Add factor:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF\PYGZus{}D        : Fix dummy:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF\PYGZus{}FITTED   : Fitted  value:Domestic Interest Rate Spread Over Policy Rate
+PAKINTRDDIFF\PYGZus{}X        : Fix value:Domestic Interest Rate Spread Over Policy Rate
+PAKINTREDIFF          : External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF\PYGZus{}A        : Add factor:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF\PYGZus{}D        : Fix dummy:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF\PYGZus{}FITTED   : Fitted  value:External Interest Rate Spread Over Policy Rate
+PAKINTREDIFF\PYGZus{}X        : Fix value:External Interest Rate Spread Over Policy Rate
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7953,19 +8507,21 @@ The policy variable is \sphinxcode{\sphinxupquote{PAKFMLBLPOLYXN}}, do a quick v
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
       PAKFMLBLPOLYXN
-2020        6.789287
-2021        7.142194
-2022        7.398338
-2023        7.565567
-2024        7.649152
-...              ...
-2096        3.981262
-2097        3.991111
-2098        4.001933
-2099        4.013725
-2100        4.026480
-
-[81 rows x 1 columns]
+2016        5.734297
+2017        5.754622
+2018        5.805750
+2019        6.187512
+2020        6.670351
+2021        7.056445
+2022        7.287498
+2023        7.376232
+2024        7.362666
+2025        7.285334
+2026        7.171706
+2027        7.039316
+2028        6.899970
+2029        6.763110
+2030        6.637192
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -7983,11 +8539,11 @@ Create a new dataframe for the shocks scenario and increase the Policy rate by 1
 \PYG{k+kn}{import} \PYG{n+nn}{modelmf}
 
 
-\PYG{n}{MPShockdf}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{fix}\PYG{p}{(}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{basedf}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKPANUSATLS}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{MPShockdf}\PYG{o}{=}\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}2025 2027\PYGZgt{} PAKFMLBLPOLYXN + 1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{n}{MPShockdf}\PYG{o}{=}\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{mfcalc}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKPANUSATLS\PYGZus{}X = PAKPANUSATLS}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
 
-\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2023}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKFMLBLPOLYXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{MPShockdf}\PYG{o}{=}\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}2025 2027\PYGZgt{} WLDFCRUDE\PYGZus{}PETRO + 30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+
+\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2023}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{WLDFCRUDE\PYGZus{}PETRO}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -7995,15 +8551,34 @@ Create a new dataframe for the shocks scenario and increase the Policy rate by 1
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-2023    7.565567
-2024    7.649152
-2025    8.651216
-2026    8.576208
-2027    8.433440
-2028    7.236313
-2029    7.000191
-2030    6.740337
-Name: PAKFMLBLPOLYXN, dtype: float64
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{NameError}\PYG{g+gWhitespace}{                                 }Traceback (most recent call last)
+\PYG{n+nn}{Input In [21],} in \PYG{n+ni}{\PYGZlt{}cell line: 7\PYGZgt{}}\PYG{n+nt}{()}
+\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{}MPShockdf=baseline.copy() \PYGZsh{}Create new df as copy of the baseline}
+\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{3} \PYG{k+kn}{import} \PYG{n+nn}{modelmf}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{7} \PYG{n}{MPShockdf}\PYG{o}{=}\PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{upd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZlt{}2025 2027\PYGZgt{} WLDFCRUDE\PYGZus{}PETRO + 30}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{10} \PYG{n}{MPShockdf}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2023}\PYG{p}{:}\PYG{l+m+mi}{2030}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{WLDFCRUDE\PYGZus{}PETRO}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}
+
+\PYG{n+ne}{NameError}: name \PYGZsq{}MPShockdf\PYGZsq{} is not defined
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}check to see if a variable is endogenous or endogenous}
+\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKFMLBLPOLYXN}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o+ow}{in} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{endogene}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+True
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -8017,36 +8592,6 @@ Name: PAKFMLBLPOLYXN, dtype: float64
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
-\begin{sphinxVerbatimOutput}
-
-\begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-CHNPANUSATLS            : CHNPANUSATLS
-CHNPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : CHNPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-DEUPANUSATLS            : DEUPANUSATLS
-DEUPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : DEUPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-FRAPANUSATLS            : FRAPANUSATLS
-FRAPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : FRAPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-GBRPANUSATLS            : GBRPANUSATLS
-GBRPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : GBRPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-ITAPANUSATLS            : ITAPANUSATLS
-ITAPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : ITAPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-PAKPANEUATLS            : LCU: Euro
-PAKPANEUATLSK           : PAKPANEUATLSK
-PAKPANEUATLS\PYGZus{}VALUE\PYGZus{}2010 : PAKPANEUATLS\PYGZus{}VALUE\PYGZus{}2010
-PAKPANUSATLS            : LCU: \PYGZdl{}
-PAKPANUSATLSK           : PAKPANUSATLSK
-PAKPANUSATLS\PYGZus{}A          : Add factor:LCU: \PYGZdl{}
-PAKPANUSATLS\PYGZus{}D          : Exo dummy:LCU: \PYGZdl{}
-PAKPANUSATLS\PYGZus{}FITTED     : Fitted  value:LCU: \PYGZdl{}
-PAKPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : PAKPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-PAKPANUSATLS\PYGZus{}VALUE\PYGZus{}2011 : PAKPANUSATLS\PYGZus{}VALUE\PYGZus{}2011
-PAKPANUSATLS\PYGZus{}X          : Exo value:LCU: \PYGZdl{}
-TURPANUSATLS            : TURPANUSATLS
-TURPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : TURPANUSATLS\PYGZus{}VALUE\PYGZus{}2010
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
@@ -8063,7 +8608,8 @@ TURPANUSATLS\PYGZus{}VALUE\PYGZus{}2010 : TURPANUSATLS\PYGZus{}VALUE\PYGZus{}201
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{3 years of 1 pct MP hike}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{k}{with} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl}\PYG{p}{(}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{title}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{3 years of 1 pct MP hike}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -8075,7 +8621,7 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
   fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{Attribution_34_1}.png}
+\noindent\sphinxincludegraphics{{Attribution_44_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8084,8 +8630,10 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl}\PYG{p}{(}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{)}\PYG{p}{:}
-    \PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNEGDIFTOTKN PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{difpctlevel}\PYG{o}{.}\PYG{n}{mul100}\PYG{o}{.}\PYG{n}{df}\PYG{p}{;}
+\PYG{n}{junk}\PYG{o}{=}\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{exodif}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n}{junk}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{2023}\PYG{p}{:}\PYG{l+m+mi}{2035}\PYG{p}{,}\PYG{p}{:}\PYG{p}{]}
+    
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -8093,10 +8641,20 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-  \PYG{n}{Input} \PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{20}\PYG{p}{]}
-    \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{set\PYGZus{}smpl}\PYG{p}{(}\PYG{l+m+mi}{2020}\PYG{p}{,}\PYG{l+m+mi}{2040}\PYG{p}{)}\PYG{p}{:}
-                             \PYG{o}{\PYGZca{}}
-\PYG{n+ne}{SyntaxError}: invalid syntax
+      PAKPANUSATLS\PYGZus{}X  WLDFCRUDE\PYGZus{}PETRO
+2023      106.693704              0.0
+2024      106.566459              0.0
+2025      106.454266             30.0
+2026      106.353322             30.0
+2027      106.261138             30.0
+2028      106.175825              0.0
+2029      106.095356              0.0
+2030      106.017313              0.0
+2031      105.984507              0.0
+2032      105.893285              0.0
+2033      105.799864              0.0
+2034      105.702380              0.0
+2035      105.599506              0.0
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -8108,7 +8666,7 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{totdekomp} \PYG{o}{=} \PYG{n}{mpak}\PYG{o}{.}\PYG{n}{totdif}\PYG{p}{(}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Calculate the total derivatives of all equations in the model.}
 \PYG{n}{showvar} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}
-\PYG{n}{totdekomp}\PYG{o}{.}\PYG{n}{explain\PYGZus{}all}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNECONPRVTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{kind}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{area}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{stacked}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{top}\PYG{o}{=}\PYG{l+m+mf}{0.20}\PYG{p}{)}\PYG{p}{;}    
+\PYG{n}{totdekomp}\PYG{o}{.}\PYG{n}{explain\PYGZus{}all}\PYG{p}{(}\PYG{n}{showvar}\PYG{p}{,}\PYG{n}{kind}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{area}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{stacked}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{top}\PYG{o}{=}\PYG{l+m+mf}{0.20}\PYG{p}{)}\PYG{p}{;}    
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
@@ -8116,8 +8674,10 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-No variables to attribute to 
+Total dekomp took       :         1.625 Seconds
 \end{sphinxVerbatim}
+
+\noindent\sphinxincludegraphics{{Attribution_47_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8134,6 +8694,12 @@ No variables to attribute to
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{Attribution_49_0}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 
@@ -8255,7 +8821,7 @@ dekomp\PYGZus{}plot(varnavn, sort=True, pct=True, per=\PYGZsq{}\PYGZsq{}, top=0.
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_46_0}.png}
+\noindent\sphinxincludegraphics{{Attribution_57_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8274,7 +8840,7 @@ dekomp\PYGZus{}plot(varnavn, sort=True, pct=True, per=\PYGZsq{}\PYGZsq{}, top=0.
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_49_0}.png}
+\noindent\sphinxincludegraphics{{Attribution_60_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8289,19 +8855,15 @@ The attribution for one year can be dispalyed in a waterfall chart.
 
 \begin{sphinxuseclass}{cell_input}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot\PYGZus{}per}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{per}\PYG{o}{=}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{ysize}\PYG{o}{=}\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{n}{threshold} \PYG{o}{=}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{p}{;}
+\PYG{c+c1}{\PYGZsh{}mpak.dekomp\PYGZus{}plot\PYGZus{}per(\PYGZsq{}PAKNYGDPMKTPXN\PYGZsq{},per=2040,rename=1,pct=0,ysize=12,threshold =20);}
+\PYG{n}{mpak}\PYG{o}{.}\PYG{n}{dekomp\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPFCSTXN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{per}\PYG{o}{=}\PYG{l+m+mi}{2040}\PYG{p}{,}\PYG{n}{rename}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{pct}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{threshold} \PYG{o}{=}\PYG{l+m+mf}{0.001}\PYG{p}{)}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimInput}
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\PYGZbs{}lib\PYGZbs{}site\PYGZhy{}packages\PYGZbs{}IPython\PYGZbs{}core\PYGZbs{}pylabtools.py:151: UserWarning: This figure was using constrained\PYGZus{}layout, but that is incompatible with subplots\PYGZus{}adjust and/or tight\PYGZus{}layout; disabling constrained\PYGZus{}layout.
-  fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
-\end{sphinxVerbatim}
-
-\noindent\sphinxincludegraphics{{Attribution_51_1}.png}
+\noindent\sphinxincludegraphics{{Attribution_62_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8325,7 +8887,7 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
   fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{Attribution_53_1}.png}
+\noindent\sphinxincludegraphics{{Attribution_65_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8353,7 +8915,7 @@ C:\PYGZbs{}Users\PYGZbs{}wb268970\PYGZbs{}.conda\PYGZbs{}envs\PYGZbs{}modelflow\
   fig.canvas.print\PYGZus{}figure(bytes\PYGZus{}io, **kw)
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{Attribution_55_1}.png}
+\noindent\sphinxincludegraphics{{Attribution_67_1}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8442,7 +9004,7 @@ PAKDISPREPKN   0         \PYGZhy{}0.0\PYGZpc{}       \PYGZhy{}0.0\PYGZpc{}      
 \begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\noindent\sphinxincludegraphics{{Attribution_58_0}.png}
+\noindent\sphinxincludegraphics{{Attribution_70_0}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -8465,6 +9027,25 @@ Unfortunately svg can’t be displayed in the manual, so png has to be True for 
 enable svg format.
 \end{sphinxadmonition}
 
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}mpak[\PYGZsq{}PAKNYGDPMKTPKN PAKNECONPRVTKN\PYGZsq{}].draw(up=3,down=0,png=latex,filter=20) \PYGZsh{} For book}
+\PYG{n}{mpak}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{PAKNYGDPMKTPKN}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{draw}\PYG{p}{(}\PYG{n}{up}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{n}{down}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{png}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}\PYG{n+nb}{filter}\PYG{o}{=}\PYG{l+m+mi}{400}\PYG{p}{,}\PYG{n}{svg}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}\PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{l+m+mi}{40}\PYG{p}{)}\PYG{p}{)}\PYG{c+c1}{\PYGZsh{}3 for interactice}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}IPython.core.display.SVG object\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -8531,6 +9112,16 @@ No Dash, name \PYGZsq{}DashInteractiveGraphviz\PYGZsq{} is not defined
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{!}pip install 
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
 
 \end{sphinxuseclass}
 \sphinxstepscope
@@ -8602,7 +9193,7 @@ The \sphinxcode{\sphinxupquote{.html\_widget\_df()}} method takes a dataframe an
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-HTML(value=\PYGZsq{}\PYGZlt{}style type=\PYGZdq{}text/css\PYGZdq{}\PYGZgt{}\PYGZbs{}n\PYGZsh{}T\PYGZus{}bf3b6 thead tr:nth\PYGZhy{}child(1) th \PYGZob{}\PYGZbs{}n  position: sticky;\PYGZbs{}n  background\PYGZhy{}co…
+HTML(value=\PYGZsq{}\PYGZlt{}style type=\PYGZdq{}text/css\PYGZdq{}\PYGZgt{}\PYGZbs{}n\PYGZsh{}T\PYGZus{}0ff04 thead tr:nth\PYGZhy{}child(1) th \PYGZob{}\PYGZbs{}n  position: sticky;\PYGZbs{}n  background\PYGZhy{}co…
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -8683,7 +9274,7 @@ CLASSES
     class htmlwidget\PYGZus{}df(builtins.object)
      |  htmlwidget\PYGZus{}df(mmodel: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{}, df\PYGZus{}var: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = Empty DataFrame
      |  Columns: []
-     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function htmlwidget\PYGZus{}df.\PYGZlt{}lambda\PYGZgt{} at 0x00000230A975CE50\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}\PYGZsq{}, percent: bool = False) \PYGZhy{}\PYGZgt{} None
+     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function htmlwidget\PYGZus{}df.\PYGZlt{}lambda\PYGZgt{} at 0x000001BFEF6A1E50\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}\PYGZsq{}, percent: bool = False) \PYGZhy{}\PYGZgt{} None
      |  
      |  class displays a dataframe in a html widget
      |  
@@ -8693,7 +9284,7 @@ CLASSES
      |  
      |  \PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}(self, mmodel: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{}, df\PYGZus{}var: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = Empty DataFrame
      |  Columns: []
-     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function htmlwidget\PYGZus{}df.\PYGZlt{}lambda\PYGZgt{} at 0x00000230A975CE50\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}\PYGZsq{}, percent: bool = False) \PYGZhy{}\PYGZgt{} None
+     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function htmlwidget\PYGZus{}df.\PYGZlt{}lambda\PYGZgt{} at 0x000001BFEF6A1E50\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}\PYGZsq{}, percent: bool = False) \PYGZhy{}\PYGZgt{} None
      |  
      |  \PYGZus{}\PYGZus{}post\PYGZus{}init\PYGZus{}\PYGZus{}(self)
      |  
@@ -8817,7 +9408,7 @@ CLASSES
     class sheetwidget(builtins.object)
      |  sheetwidget(df\PYGZus{}var: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = Empty DataFrame
      |  Columns: []
-     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function sheetwidget.\PYGZlt{}lambda\PYGZgt{} at 0x00000230A97CD9D0\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}Carbon tax rate, US\PYGZdl{} per tonn \PYGZsq{}) \PYGZhy{}\PYGZgt{} None
+     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function sheetwidget.\PYGZlt{}lambda\PYGZgt{} at 0x000001BFEF70D9D0\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}Carbon tax rate, US\PYGZdl{} per tonn \PYGZsq{}) \PYGZhy{}\PYGZgt{} None
      |  
      |  class defining a widget which updates from a sheet
      |  
@@ -8827,7 +9418,7 @@ CLASSES
      |  
      |  \PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}(self, df\PYGZus{}var: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = Empty DataFrame
      |  Columns: []
-     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function sheetwidget.\PYGZlt{}lambda\PYGZgt{} at 0x00000230A97CD9D0\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}Carbon tax rate, US\PYGZdl{} per tonn \PYGZsq{}) \PYGZhy{}\PYGZgt{} None
+     |  Index: [], trans: \PYGZlt{}built\PYGZhy{}in function any\PYGZgt{} = \PYGZlt{}function sheetwidget.\PYGZlt{}lambda\PYGZgt{} at 0x000001BFEF70D9D0\PYGZgt{}, transpose: bool = False, expname: str = \PYGZsq{}Carbon tax rate, US\PYGZdl{} per tonn \PYGZsq{}) \PYGZhy{}\PYGZgt{} None
      |  
      |  \PYGZus{}\PYGZus{}post\PYGZus{}init\PYGZus{}\PYGZus{}(self)
      |  

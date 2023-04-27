@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. Attribution" href="../06_ModelAnalytics/Attribution.html" />
+    <link rel="next" title="1. Model eigenvalues" href="../06_ModelAnalytics/EigenValues.html" />
     <link rel="prev" title="2. Scenario analysis" href="ScenarioAnalysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -213,8 +213,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../06_ModelAnalytics/EigenValues.html">
+   1. Model eigenvalues
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../06_ModelAnalytics/Attribution.html">
-   1. Attribution
+   2. Attribution
   </a>
  </li>
 </ul>
@@ -351,18 +356,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-variable-descriptions">
+   4.4. Add variable descriptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simulating-the-impact-of-a-imposing-a-carbon-price">
-   4.4. Simulating the impact of a imposing a carbon price
+   4.5. Simulating the impact of a imposing a carbon price
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solve-the-model">
-     4.4.1. Solve the model
+     4.5.1. Solve the model
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#examining-the-results">
-       4.4.1.1. Examining the results
+       4.5.1.1. Examining the results
       </a>
      </li>
     </ul>
@@ -371,22 +381,22 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#re-thinking-the-shock-as-an-ex-ante-real-shock">
-   4.5. Re-thinking the shock as an ex-ante real shock
+   4.6. Re-thinking the shock as an ex-ante real shock
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#changing-the-model-modifying-and-or-adding-equations">
-   4.6. Changing the model – modifying and or adding equations
+   4.7. Changing the model – modifying and or adding equations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-revised-model">
-     4.6.1. Solving the revised model
+     4.7.1. Solving the revised model
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#results">
-     4.6.2. Results
+     4.7.2. Results
     </a>
    </li>
   </ul>
@@ -427,18 +437,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-variable-descriptions">
+   4.4. Add variable descriptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simulating-the-impact-of-a-imposing-a-carbon-price">
-   4.4. Simulating the impact of a imposing a carbon price
+   4.5. Simulating the impact of a imposing a carbon price
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solve-the-model">
-     4.4.1. Solve the model
+     4.5.1. Solve the model
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#examining-the-results">
-       4.4.1.1. Examining the results
+       4.5.1.1. Examining the results
       </a>
      </li>
     </ul>
@@ -447,22 +462,22 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#re-thinking-the-shock-as-an-ex-ante-real-shock">
-   4.5. Re-thinking the shock as an ex-ante real shock
+   4.6. Re-thinking the shock as an ex-ante real shock
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#changing-the-model-modifying-and-or-adding-equations">
-   4.6. Changing the model – modifying and or adding equations
+   4.7. Changing the model – modifying and or adding equations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-the-revised-model">
-     4.6.1. Solving the revised model
+     4.7.1. Solving the revised model
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#results">
-     4.6.2. Results
+     4.7.2. Results
     </a>
    </li>
   </ul>
@@ -478,7 +493,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
 </div>
@@ -515,12 +530,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Load the Pakistan model, which is comprised of the model object, its estimated equations and the data.  The <code class="docutils literal notranslate"><span class="pre">pcim</span></code> file was created by the World Bank from the original EViews model used in the paper <span id="id2"></span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;Baseline&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;Baseline&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Open file from URL:  https://raw.githubusercontent.com/IbHansen/modelflow-manual/main/model_repo/pak.pcim
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\mflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
 </pre></div>
 </div>
 </div>
@@ -558,9 +573,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKGGREVCO2CER : Tax/subsidy (Coal) (USD p/tco2)
-PAKGGREVCO2GER : Tax/subsidy (Gas) (USD p/tco2)
-PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKGGREVCO2CER : Carbon tax on coal (USD/t)
+PAKGGREVCO2GER : Carbon tax on gas (USD/t)
+PAKGGREVCO2OER : Carbon tax on oil (USD/t)
 </pre></div>
 </div>
 </div>
@@ -568,31 +583,47 @@ PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
 <p>Alternatively one can search on the variable descriptions to retrieve the mnemonics of variables. Below the exclamation sign at the beginning of the string notifies the matching algorithm to search the variables descriptions (not he mnemonics) and return all variables that match.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;!*Carbon*&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">des</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;!*tco2*&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">des</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKGGREVEMISCN : Revenues (Subsidies if negative) from carbon
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;!*tco2*&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">des</span>
+
+<span class="nn">File ~\.conda\envs\modelflow\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelvis.py:153,</span> in <span class="ni">vis.des</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="k">def</span> <span class="nf">getdes</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">var</span><span class="si">:</span><span class="s1">&lt;</span><span class="si">{</span><span class="n">l</span><span class="si">}}</span><span class="s1"> : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">var_description</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="ne">--&gt; </span><span class="mi">153</span> <span class="n">mlength</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">])</span> 
+<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="n">out</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">getdes</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="n">mlength</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span> <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: max() arg is an empty sequence
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="add-variable-descriptions">
+<h2><span class="section-number">4.4. </span>Add variable descriptions<a class="headerlink" href="#add-variable-descriptions" title="Permalink to this headline">¶</a></h2>
+<p>A modelflow model imported from EViews will inherit the variable descriptors coming from Eviews.  Not all EViews variables will necessarily have a description so such descriptions can be added to the existing using the <code class="docutils literal notranslate"><span class="pre">.set_var_descri[tion()</span></code> method as below.</p>
+<p>As coded, the call</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpak.set_var_description({**mpak.var_description,**extra_description})</span></code></p>
+<p>adds the extra_description dictionary to the pre-existing mpak,var_description dictionary.</p>
+<p>Several <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> methods include a <code class="docutils literal notranslate"><span class="pre">rename</span></code> option, which if set to True will substitute the description for the variable name in any outputs.  Variables can also be selected for by using the <code class="docutils literal notranslate"><span class="pre">mpak['!*subtext*']</span></code> syntax, where subtext is some text that appears in the variable descriptor.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extra_description</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">:</span> <span class="s1">&#39;GDP&#39;</span><span class="p">,</span>
 <span class="s1">&#39;EMISCOAL&#39;</span>        <span class="p">:</span> <span class="s1">&#39;Coal emissions&#39;</span><span class="p">,</span>
 <span class="s1">&#39;EMISGAS&#39;</span>         <span class="p">:</span> <span class="s1">&#39;Gas Emissions&#39;</span><span class="p">,</span>
 <span class="s1">&#39;EMISOIL&#39;</span>         <span class="p">:</span> <span class="s1">&#39;Gas Emissions&#39;</span><span class="p">,</span>
-<span class="s1">&#39;PAKCCEMISCO2CKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;CO2 equivalent emissions from Coal&#39;</span><span class="p">,</span>
-<span class="s1">&#39;PAKCCEMISCO2GKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;CO2 equivalent emissions from Natural Gas&#39;</span><span class="p">,</span>
-<span class="s1">&#39;PAKCCEMISCO2OKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;CO2 equivalent emissions from Crude Oil&#39;</span><span class="p">,</span>
-<span class="s1">&#39;PAKCCEMISCO2TKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;CO2 equivalent emissions Total&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PAKCCEMISCO2CKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;Coal emissions, tCO2e&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PAKCCEMISCO2GKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;Natural Gas emissions, tCO2e&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PAKCCEMISCO2OKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;Crude Oil emissions, tCO2e&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PAKCCEMISCO2TKN&#39;</span> <span class="p">:</span> <span class="s1">&#39;Total emissions, tCO2e&#39;</span><span class="p">,</span>
 <span class="s1">&#39;PAKGGREVEMISCN&#39;</span>  <span class="p">:</span> <span class="s1">&#39;Revenue from emissions taxes&#39;</span><span class="p">,</span>
-<span class="c1"># &#39;PAKNECONPRVTKN&#39;: &#39;Consumption&#39;,</span>
-<span class="c1"># &#39;PAKNEGDIFTOTKN&#39;: &#39;Investment&#39;,</span>
-<span class="c1"># &#39;PAKNEEXPGNFSKN&#39;: &#39;Exports&#39;,</span>
-<span class="c1"># &#39;PAKNEIMPGNFSKN&#39;: &#39;Import&#39;,</span>
  <span class="s1">&#39;PAKLMUNRTOTLCN&#39;</span><span class="p">:</span> <span class="s1">&#39;Unemployment rate&#39;</span><span class="p">,</span>
  <span class="s1">&#39;PAKGGDBTTOTLCN_&#39;</span><span class="p">:</span> <span class="s1">&#39;Debt (</span><span class="si">%G</span><span class="s1">DP)&#39;</span><span class="p">,</span>
  <span class="s1">&#39;PAKGGREVTOTLCN&#39;</span><span class="p">:</span> <span class="s1">&#39;Fiscal revenues&#39;</span><span class="p">,</span>
@@ -604,7 +635,7 @@ PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
 </div>
 </div>
 <div class="section" id="simulating-the-impact-of-a-imposing-a-carbon-price">
-<h2><span class="section-number">4.4. </span>Simulating the impact of a imposing a carbon price<a class="headerlink" href="#simulating-the-impact-of-a-imposing-a-carbon-price" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Simulating the impact of a imposing a carbon price<a class="headerlink" href="#simulating-the-impact-of-a-imposing-a-carbon-price" title="Permalink to this headline">¶</a></h2>
 <p>To run a simulation, the following steps must invariably be followed.</p>
 <ol class="simple">
 <li><p>Create a new DataFrame, typically a copy of an existing one.</p></li>
@@ -622,17 +653,18 @@ PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
 </div>
 </div>
 <p>The above used the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> to change the Carbon Tax rate variables.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> could be used to perform, the same change.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> could be used to perform the same change.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CT30df</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2025 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This modelflow command is equivalent to the previous standard pandas command abive that used the .loc[] syntax</span>
+<span class="n">CT30df</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2025 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="solve-the-model">
-<h3><span class="section-number">4.4.1. </span>Solve the model<a class="headerlink" href="#solve-the-model" title="Permalink to this headline">¶</a></h3>
-<p>Solving the model is as simple as colling the mpak function with the altered <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and assigning the results to dataframe (<code class="docutils literal notranslate"><span class="pre">resultsdf</span></code> in this instance).</p>
+<h3><span class="section-number">4.5.1. </span>Solve the model<a class="headerlink" href="#solve-the-model" title="Permalink to this headline">¶</a></h3>
+<p>Solving the model is as simple as calling the mpak function with the altered <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and assigning the results to dataframe (<code class="docutils literal notranslate"><span class="pre">resultsdf</span></code> in this instance).  The <code class="docutils literal notranslate"><span class="pre">keep</span></code> option causes a copy of the dataframe to be stores within the mpak model obkect.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultsdf</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">CT30df</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;Nominal $30USD Carbon tax&quot;</span><span class="p">)</span> <span class="c1"># simulates the model </span>
@@ -641,7 +673,7 @@ PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
 </div>
 </div>
 <div class="section" id="examining-the-results">
-<h4><span class="section-number">4.4.1.1. </span>Examining the results<a class="headerlink" href="#examining-the-results" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.5.1.1. </span>Examining the results<a class="headerlink" href="#examining-the-results" title="Permalink to this headline">¶</a></h4>
 <p>Every time the model is solved the results of the simulation are assigned to a variable on the left hands side of the solve call (<code class="docutils literal notranslate"><span class="pre">resultdf</span></code> in the example above.  The results of the most recent scenario are also always stored in the <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that is part of the properties of any <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> model. the <code class="docutils literal notranslate"><span class="pre">basedf</span></code> property of <code class="docutils literal notranslate"><span class="pre">mpak</span></code> (an instantiation of a modelflow model object) contains a copy of the initial DataFrame from which the model was built.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> <code class="docutils literal notranslate"><span class="pre">Baseline</span></code> and <code class="docutils literal notranslate"><span class="pre">Resultsdf</span></code> were created by us when we solved the model (initially on load) and now with the simulation.  Currently their contents are the same as, but separate from the contents of <code class="docutils literal notranslate"><span class="pre">basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">lastdf</span></code>.</p>
 <div class="admonition note">
@@ -661,1003 +693,34 @@ PAKGGREVCO2OER : Tax/subsidy (Oil) (USD p/tco2)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      PAKCCEMISCO2CKN  PAKCCEMISCO2GKN  PAKCCEMISCO2OKN  PAKCCEMISCO2TKN
-2023             0.00             0.00             0.00             0.00
-2024             0.00             0.00             0.00             0.00
-2025           -42.05           -28.05           -12.24           -23.26
-2026           -40.70           -26.39           -11.94           -22.34
-2027           -39.31           -24.84           -11.56           -21.40
-2028           -37.96           -23.52           -11.21           -20.56
-2029           -36.59           -22.30           -10.82           -19.72
-2030           -35.17           -21.09           -10.32           -18.81
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Need to figure out why this does not render</span>
-
-<span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Emissions impact of a $30 USD Carbon tax&quot;</span><span class="p">)</span>
-
-<span class="c1">#with mpak.set_smpl(2020,2100):</span>
-<span class="c1">#    mpak[&#39;PAKCCEMISCO2*&#39;].dif.mul100.plot(title=&#39;Emissions imact f a $30 carbon tax&#39;);</span>
-    
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Emissions impact of a $30 USD Carbon tax&quot;</span><span class="p">,</span><span class="n">showfig</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/javascript">/* Put everything inside the global mpl namespace */
-/* global mpl */
-window.mpl = {};
-
-mpl.get_websocket_type = function () {
-    if (typeof WebSocket !== 'undefined') {
-        return WebSocket;
-    } else if (typeof MozWebSocket !== 'undefined') {
-        return MozWebSocket;
-    } else {
-        alert(
-            'Your browser does not have WebSocket support. ' +
-                'Please try Chrome, Safari or Firefox ≥ 6. ' +
-                'Firefox 4 and 5 are also supported but you ' +
-                'have to enable WebSockets in about:config.'
-        );
-    }
-};
-
-mpl.figure = function (figure_id, websocket, ondownload, parent_element) {
-    this.id = figure_id;
-
-    this.ws = websocket;
-
-    this.supports_binary = this.ws.binaryType !== undefined;
-
-    if (!this.supports_binary) {
-        var warnings = document.getElementById('mpl-warnings');
-        if (warnings) {
-            warnings.style.display = 'block';
-            warnings.textContent =
-                'This browser does not support binary websocket messages. ' +
-                'Performance may be slow.';
-        }
-    }
-
-    this.imageObj = new Image();
-
-    this.context = undefined;
-    this.message = undefined;
-    this.canvas = undefined;
-    this.rubberband_canvas = undefined;
-    this.rubberband_context = undefined;
-    this.format_dropdown = undefined;
-
-    this.image_mode = 'full';
-
-    this.root = document.createElement('div');
-    this.root.setAttribute('style', 'display: inline-block');
-    this._root_extra_style(this.root);
-
-    parent_element.appendChild(this.root);
-
-    this._init_header(this);
-    this._init_canvas(this);
-    this._init_toolbar(this);
-
-    var fig = this;
-
-    this.waiting = false;
-
-    this.ws.onopen = function () {
-        fig.send_message('supports_binary', { value: fig.supports_binary });
-        fig.send_message('send_image_mode', {});
-        if (fig.ratio !== 1) {
-            fig.send_message('set_device_pixel_ratio', {
-                device_pixel_ratio: fig.ratio,
-            });
-        }
-        fig.send_message('refresh', {});
-    };
-
-    this.imageObj.onload = function () {
-        if (fig.image_mode === 'full') {
-            // Full images could contain transparency (where diff images
-            // almost always do), so we need to clear the canvas so that
-            // there is no ghosting.
-            fig.context.clearRect(0, 0, fig.canvas.width, fig.canvas.height);
-        }
-        fig.context.drawImage(fig.imageObj, 0, 0);
-    };
-
-    this.imageObj.onunload = function () {
-        fig.ws.close();
-    };
-
-    this.ws.onmessage = this._make_on_message_function(this);
-
-    this.ondownload = ondownload;
-};
-
-mpl.figure.prototype._init_header = function () {
-    var titlebar = document.createElement('div');
-    titlebar.classList =
-        'ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix';
-    var titletext = document.createElement('div');
-    titletext.classList = 'ui-dialog-title';
-    titletext.setAttribute(
-        'style',
-        'width: 100%; text-align: center; padding: 3px;'
-    );
-    titlebar.appendChild(titletext);
-    this.root.appendChild(titlebar);
-    this.header = titletext;
-};
-
-mpl.figure.prototype._canvas_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._root_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._init_canvas = function () {
-    var fig = this;
-
-    var canvas_div = (this.canvas_div = document.createElement('div'));
-    canvas_div.setAttribute(
-        'style',
-        'border: 1px solid #ddd;' +
-            'box-sizing: content-box;' +
-            'clear: both;' +
-            'min-height: 1px;' +
-            'min-width: 1px;' +
-            'outline: 0;' +
-            'overflow: hidden;' +
-            'position: relative;' +
-            'resize: both;'
-    );
-
-    function on_keyboard_event_closure(name) {
-        return function (event) {
-            return fig.key_event(event, name);
-        };
-    }
-
-    canvas_div.addEventListener(
-        'keydown',
-        on_keyboard_event_closure('key_press')
-    );
-    canvas_div.addEventListener(
-        'keyup',
-        on_keyboard_event_closure('key_release')
-    );
-
-    this._canvas_extra_style(canvas_div);
-    this.root.appendChild(canvas_div);
-
-    var canvas = (this.canvas = document.createElement('canvas'));
-    canvas.classList.add('mpl-canvas');
-    canvas.setAttribute('style', 'box-sizing: content-box;');
-
-    this.context = canvas.getContext('2d');
-
-    var backingStore =
-        this.context.backingStorePixelRatio ||
-        this.context.webkitBackingStorePixelRatio ||
-        this.context.mozBackingStorePixelRatio ||
-        this.context.msBackingStorePixelRatio ||
-        this.context.oBackingStorePixelRatio ||
-        this.context.backingStorePixelRatio ||
-        1;
-
-    this.ratio = (window.devicePixelRatio || 1) / backingStore;
-
-    var rubberband_canvas = (this.rubberband_canvas = document.createElement(
-        'canvas'
-    ));
-    rubberband_canvas.setAttribute(
-        'style',
-        'box-sizing: content-box; position: absolute; left: 0; top: 0; z-index: 1;'
-    );
-
-    // Apply a ponyfill if ResizeObserver is not implemented by browser.
-    if (this.ResizeObserver === undefined) {
-        if (window.ResizeObserver !== undefined) {
-            this.ResizeObserver = window.ResizeObserver;
-        } else {
-            var obs = _JSXTOOLS_RESIZE_OBSERVER({});
-            this.ResizeObserver = obs.ResizeObserver;
-        }
-    }
-
-    this.resizeObserverInstance = new this.ResizeObserver(function (entries) {
-        var nentries = entries.length;
-        for (var i = 0; i < nentries; i++) {
-            var entry = entries[i];
-            var width, height;
-            if (entry.contentBoxSize) {
-                if (entry.contentBoxSize instanceof Array) {
-                    // Chrome 84 implements new version of spec.
-                    width = entry.contentBoxSize[0].inlineSize;
-                    height = entry.contentBoxSize[0].blockSize;
-                } else {
-                    // Firefox implements old version of spec.
-                    width = entry.contentBoxSize.inlineSize;
-                    height = entry.contentBoxSize.blockSize;
-                }
-            } else {
-                // Chrome <84 implements even older version of spec.
-                width = entry.contentRect.width;
-                height = entry.contentRect.height;
-            }
-
-            // Keep the size of the canvas and rubber band canvas in sync with
-            // the canvas container.
-            if (entry.devicePixelContentBoxSize) {
-                // Chrome 84 implements new version of spec.
-                canvas.setAttribute(
-                    'width',
-                    entry.devicePixelContentBoxSize[0].inlineSize
-                );
-                canvas.setAttribute(
-                    'height',
-                    entry.devicePixelContentBoxSize[0].blockSize
-                );
-            } else {
-                canvas.setAttribute('width', width * fig.ratio);
-                canvas.setAttribute('height', height * fig.ratio);
-            }
-            canvas.setAttribute(
-                'style',
-                'width: ' + width + 'px; height: ' + height + 'px;'
-            );
-
-            rubberband_canvas.setAttribute('width', width);
-            rubberband_canvas.setAttribute('height', height);
-
-            // And update the size in Python. We ignore the initial 0/0 size
-            // that occurs as the element is placed into the DOM, which should
-            // otherwise not happen due to the minimum size styling.
-            if (fig.ws.readyState == 1 && width != 0 && height != 0) {
-                fig.request_resize(width, height);
-            }
-        }
-    });
-    this.resizeObserverInstance.observe(canvas_div);
-
-    function on_mouse_event_closure(name) {
-        return function (event) {
-            return fig.mouse_event(event, name);
-        };
-    }
-
-    rubberband_canvas.addEventListener(
-        'mousedown',
-        on_mouse_event_closure('button_press')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseup',
-        on_mouse_event_closure('button_release')
-    );
-    rubberband_canvas.addEventListener(
-        'dblclick',
-        on_mouse_event_closure('dblclick')
-    );
-    // Throttle sequential mouse events to 1 every 20ms.
-    rubberband_canvas.addEventListener(
-        'mousemove',
-        on_mouse_event_closure('motion_notify')
-    );
-
-    rubberband_canvas.addEventListener(
-        'mouseenter',
-        on_mouse_event_closure('figure_enter')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseleave',
-        on_mouse_event_closure('figure_leave')
-    );
-
-    canvas_div.addEventListener('wheel', function (event) {
-        if (event.deltaY < 0) {
-            event.step = 1;
-        } else {
-            event.step = -1;
-        }
-        on_mouse_event_closure('scroll')(event);
-    });
-
-    canvas_div.appendChild(canvas);
-    canvas_div.appendChild(rubberband_canvas);
-
-    this.rubberband_context = rubberband_canvas.getContext('2d');
-    this.rubberband_context.strokeStyle = '#000000';
-
-    this._resize_canvas = function (width, height, forward) {
-        if (forward) {
-            canvas_div.style.width = width + 'px';
-            canvas_div.style.height = height + 'px';
-        }
-    };
-
-    // Disable right mouse context menu.
-    this.rubberband_canvas.addEventListener('contextmenu', function (_e) {
-        event.preventDefault();
-        return false;
-    });
-
-    function set_focus() {
-        canvas.focus();
-        canvas_div.focus();
-    }
-
-    window.setTimeout(set_focus, 100);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'mpl-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'mpl-button-group';
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'mpl-button-group';
-            continue;
-        }
-
-        var button = (fig.buttons[name] = document.createElement('button'));
-        button.classList = 'mpl-widget';
-        button.setAttribute('role', 'button');
-        button.setAttribute('aria-disabled', 'false');
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-
-        var icon_img = document.createElement('img');
-        icon_img.src = '_images/' + image + '.png';
-        icon_img.srcset = '_images/' + image + '_large.png 2x';
-        icon_img.alt = tooltip;
-        button.appendChild(icon_img);
-
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    var fmt_picker = document.createElement('select');
-    fmt_picker.classList = 'mpl-widget';
-    toolbar.appendChild(fmt_picker);
-    this.format_dropdown = fmt_picker;
-
-    for (var ind in mpl.extensions) {
-        var fmt = mpl.extensions[ind];
-        var option = document.createElement('option');
-        option.selected = fmt === mpl.default_extension;
-        option.innerHTML = fmt;
-        fmt_picker.appendChild(option);
-    }
-
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-};
-
-mpl.figure.prototype.request_resize = function (x_pixels, y_pixels) {
-    // Request matplotlib to resize the figure. Matplotlib will then trigger a resize in the client,
-    // which will in turn request a refresh of the image.
-    this.send_message('resize', { width: x_pixels, height: y_pixels });
-};
-
-mpl.figure.prototype.send_message = function (type, properties) {
-    properties['type'] = type;
-    properties['figure_id'] = this.id;
-    this.ws.send(JSON.stringify(properties));
-};
-
-mpl.figure.prototype.send_draw_message = function () {
-    if (!this.waiting) {
-        this.waiting = true;
-        this.ws.send(JSON.stringify({ type: 'draw', figure_id: this.id }));
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    var format_dropdown = fig.format_dropdown;
-    var format = format_dropdown.options[format_dropdown.selectedIndex].value;
-    fig.ondownload(fig, format);
-};
-
-mpl.figure.prototype.handle_resize = function (fig, msg) {
-    var size = msg['size'];
-    if (size[0] !== fig.canvas.width || size[1] !== fig.canvas.height) {
-        fig._resize_canvas(size[0], size[1], msg['forward']);
-        fig.send_message('refresh', {});
-    }
-};
-
-mpl.figure.prototype.handle_rubberband = function (fig, msg) {
-    var x0 = msg['x0'] / fig.ratio;
-    var y0 = (fig.canvas.height - msg['y0']) / fig.ratio;
-    var x1 = msg['x1'] / fig.ratio;
-    var y1 = (fig.canvas.height - msg['y1']) / fig.ratio;
-    x0 = Math.floor(x0) + 0.5;
-    y0 = Math.floor(y0) + 0.5;
-    x1 = Math.floor(x1) + 0.5;
-    y1 = Math.floor(y1) + 0.5;
-    var min_x = Math.min(x0, x1);
-    var min_y = Math.min(y0, y1);
-    var width = Math.abs(x1 - x0);
-    var height = Math.abs(y1 - y0);
-
-    fig.rubberband_context.clearRect(
-        0,
-        0,
-        fig.canvas.width / fig.ratio,
-        fig.canvas.height / fig.ratio
-    );
-
-    fig.rubberband_context.strokeRect(min_x, min_y, width, height);
-};
-
-mpl.figure.prototype.handle_figure_label = function (fig, msg) {
-    // Updates the figure title.
-    fig.header.textContent = msg['label'];
-};
-
-mpl.figure.prototype.handle_cursor = function (fig, msg) {
-    fig.rubberband_canvas.style.cursor = msg['cursor'];
-};
-
-mpl.figure.prototype.handle_message = function (fig, msg) {
-    fig.message.textContent = msg['message'];
-};
-
-mpl.figure.prototype.handle_draw = function (fig, _msg) {
-    // Request the server to send over a new figure.
-    fig.send_draw_message();
-};
-
-mpl.figure.prototype.handle_image_mode = function (fig, msg) {
-    fig.image_mode = msg['mode'];
-};
-
-mpl.figure.prototype.handle_history_buttons = function (fig, msg) {
-    for (var key in msg) {
-        if (!(key in fig.buttons)) {
-            continue;
-        }
-        fig.buttons[key].disabled = !msg[key];
-        fig.buttons[key].setAttribute('aria-disabled', !msg[key]);
-    }
-};
-
-mpl.figure.prototype.handle_navigate_mode = function (fig, msg) {
-    if (msg['mode'] === 'PAN') {
-        fig.buttons['Pan'].classList.add('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    } else if (msg['mode'] === 'ZOOM') {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.add('active');
-    } else {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    }
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Called whenever the canvas gets updated.
-    this.send_message('ack', {});
-};
-
-// A function to construct a web socket function for onmessage handling.
-// Called in the figure constructor.
-mpl.figure.prototype._make_on_message_function = function (fig) {
-    return function socket_on_message(evt) {
-        if (evt.data instanceof Blob) {
-            var img = evt.data;
-            if (img.type !== 'image/png') {
-                /* FIXME: We get "Resource interpreted as Image but
-                 * transferred with MIME type text/plain:" errors on
-                 * Chrome.  But how to set the MIME type?  It doesn't seem
-                 * to be part of the websocket stream */
-                img.type = 'image/png';
-            }
-
-            /* Free the memory for the previous frames */
-            if (fig.imageObj.src) {
-                (window.URL || window.webkitURL).revokeObjectURL(
-                    fig.imageObj.src
-                );
-            }
-
-            fig.imageObj.src = (window.URL || window.webkitURL).createObjectURL(
-                img
-            );
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        } else if (
-            typeof evt.data === 'string' &&
-            evt.data.slice(0, 21) === 'data:image/png;base64'
-        ) {
-            fig.imageObj.src = evt.data;
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        }
-
-        var msg = JSON.parse(evt.data);
-        var msg_type = msg['type'];
-
-        // Call the  "handle_{type}" callback, which takes
-        // the figure and JSON message as its only arguments.
-        try {
-            var callback = fig['handle_' + msg_type];
-        } catch (e) {
-            console.log(
-                "No handler for the '" + msg_type + "' message type: ",
-                msg
-            );
-            return;
-        }
-
-        if (callback) {
-            try {
-                // console.log("Handling '" + msg_type + "' message: ", msg);
-                callback(fig, msg);
-            } catch (e) {
-                console.log(
-                    "Exception inside the 'handler_" + msg_type + "' callback:",
-                    e,
-                    e.stack,
-                    msg
-                );
-            }
-        }
-    };
-};
-
-// from https://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas
-mpl.findpos = function (e) {
-    //this section is from http://www.quirksmode.org/js/events_properties.html
-    var targ;
-    if (!e) {
-        e = window.event;
-    }
-    if (e.target) {
-        targ = e.target;
-    } else if (e.srcElement) {
-        targ = e.srcElement;
-    }
-    if (targ.nodeType === 3) {
-        // defeat Safari bug
-        targ = targ.parentNode;
-    }
-
-    // pageX,Y are the mouse positions relative to the document
-    var boundingRect = targ.getBoundingClientRect();
-    var x = e.pageX - (boundingRect.left + document.body.scrollLeft);
-    var y = e.pageY - (boundingRect.top + document.body.scrollTop);
-
-    return { x: x, y: y };
-};
-
-/*
- * return a copy of an object with only non-object keys
- * we need this to avoid circular references
- * https://stackoverflow.com/a/24161582/3208463
- */
-function simpleKeys(original) {
-    return Object.keys(original).reduce(function (obj, key) {
-        if (typeof original[key] !== 'object') {
-            obj[key] = original[key];
-        }
-        return obj;
-    }, {});
-}
-
-mpl.figure.prototype.mouse_event = function (event, name) {
-    var canvas_pos = mpl.findpos(event);
-
-    if (name === 'button_press') {
-        this.canvas.focus();
-        this.canvas_div.focus();
-    }
-
-    var x = canvas_pos.x * this.ratio;
-    var y = canvas_pos.y * this.ratio;
-
-    this.send_message(name, {
-        x: x,
-        y: y,
-        button: event.button,
-        step: event.step,
-        guiEvent: simpleKeys(event),
-    });
-
-    /* This prevents the web browser from automatically changing to
-     * the text insertion cursor when the button is pressed.  We want
-     * to control all of the cursor setting manually through the
-     * 'cursor' event from matplotlib */
-    event.preventDefault();
-    return false;
-};
-
-mpl.figure.prototype._key_event_extra = function (_event, _name) {
-    // Handle any extra behaviour associated with a key event
-};
-
-mpl.figure.prototype.key_event = function (event, name) {
-    // Prevent repeat events
-    if (name === 'key_press') {
-        if (event.key === this._key) {
-            return;
-        } else {
-            this._key = event.key;
-        }
-    }
-    if (name === 'key_release') {
-        this._key = null;
-    }
-
-    var value = '';
-    if (event.ctrlKey && event.key !== 'Control') {
-        value += 'ctrl+';
-    }
-    else if (event.altKey && event.key !== 'Alt') {
-        value += 'alt+';
-    }
-    else if (event.shiftKey && event.key !== 'Shift') {
-        value += 'shift+';
-    }
-
-    value += 'k' + event.key;
-
-    this._key_event_extra(event, name);
-
-    this.send_message(name, { key: value, guiEvent: simpleKeys(event) });
-    return false;
-};
-
-mpl.figure.prototype.toolbar_button_onclick = function (name) {
-    if (name === 'download') {
-        this.handle_save(this, null);
-    } else {
-        this.send_message('toolbar_button', { name: name });
-    }
-};
-
-mpl.figure.prototype.toolbar_button_onmouseover = function (tooltip) {
-    this.message.textContent = tooltip;
-};
-
-///////////////// REMAINING CONTENT GENERATED BY embed_js.py /////////////////
-// prettier-ignore
-var _JSXTOOLS_RESIZE_OBSERVER=function(A){var t,i=new WeakMap,n=new WeakMap,a=new WeakMap,r=new WeakMap,o=new Set;function s(e){if(!(this instanceof s))throw new TypeError("Constructor requires 'new' operator");i.set(this,e)}function h(){throw new TypeError("Function is not a constructor")}function c(e,t,i,n){e=0 in arguments?Number(arguments[0]):0,t=1 in arguments?Number(arguments[1]):0,i=2 in arguments?Number(arguments[2]):0,n=3 in arguments?Number(arguments[3]):0,this.right=(this.x=this.left=e)+(this.width=i),this.bottom=(this.y=this.top=t)+(this.height=n),Object.freeze(this)}function d(){t=requestAnimationFrame(d);var s=new WeakMap,p=new Set;o.forEach((function(t){r.get(t).forEach((function(i){var r=t instanceof window.SVGElement,o=a.get(t),d=r?0:parseFloat(o.paddingTop),f=r?0:parseFloat(o.paddingRight),l=r?0:parseFloat(o.paddingBottom),u=r?0:parseFloat(o.paddingLeft),g=r?0:parseFloat(o.borderTopWidth),m=r?0:parseFloat(o.borderRightWidth),w=r?0:parseFloat(o.borderBottomWidth),b=u+f,F=d+l,v=(r?0:parseFloat(o.borderLeftWidth))+m,W=g+w,y=r?0:t.offsetHeight-W-t.clientHeight,E=r?0:t.offsetWidth-v-t.clientWidth,R=b+v,z=F+W,M=r?t.width:parseFloat(o.width)-R-E,O=r?t.height:parseFloat(o.height)-z-y;if(n.has(t)){var k=n.get(t);if(k[0]===M&&k[1]===O)return}n.set(t,[M,O]);var S=Object.create(h.prototype);S.target=t,S.contentRect=new c(u,d,M,O),s.has(i)||(s.set(i,[]),p.add(i)),s.get(i).push(S)}))})),p.forEach((function(e){i.get(e).call(e,s.get(e),e)}))}return s.prototype.observe=function(i){if(i instanceof window.Element){r.has(i)||(r.set(i,new Set),o.add(i),a.set(i,window.getComputedStyle(i)));var n=r.get(i);n.has(this)||n.add(this),cancelAnimationFrame(t),t=requestAnimationFrame(d)}},s.prototype.unobserve=function(i){if(i instanceof window.Element&&r.has(i)){var n=r.get(i);n.has(this)&&(n.delete(this),n.size||(r.delete(i),o.delete(i))),n.size||r.delete(i),o.size||cancelAnimationFrame(t)}},A.DOMRectReadOnly=c,A.ResizeObserver=s,A.ResizeObserverEntry=h,A}; // eslint-disable-line
-mpl.toolbar_items = [["Home", "Reset original view", "fa fa-home icon-home", "home"], ["Back", "Back to previous view", "fa fa-arrow-left icon-arrow-left", "back"], ["Forward", "Forward to next view", "fa fa-arrow-right icon-arrow-right", "forward"], ["", "", "", ""], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "fa fa-arrows icon-move", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis", "fa fa-square-o icon-check-empty", "zoom"], ["", "", "", ""], ["Download", "Download plot", "fa fa-floppy-o icon-save", "download"]];
-
-mpl.extensions = ["eps", "jpeg", "pgf", "pdf", "png", "ps", "raw", "svg", "tif"];
-
-mpl.default_extension = "png";/* global mpl */
-
-var comm_websocket_adapter = function (comm) {
-    // Create a "websocket"-like object which calls the given IPython comm
-    // object with the appropriate methods. Currently this is a non binary
-    // socket, so there is still some room for performance tuning.
-    var ws = {};
-
-    ws.binaryType = comm.kernel.ws.binaryType;
-    ws.readyState = comm.kernel.ws.readyState;
-    function updateReadyState(_event) {
-        if (comm.kernel.ws) {
-            ws.readyState = comm.kernel.ws.readyState;
-        } else {
-            ws.readyState = 3; // Closed state.
-        }
-    }
-    comm.kernel.ws.addEventListener('open', updateReadyState);
-    comm.kernel.ws.addEventListener('close', updateReadyState);
-    comm.kernel.ws.addEventListener('error', updateReadyState);
-
-    ws.close = function () {
-        comm.close();
-    };
-    ws.send = function (m) {
-        //console.log('sending', m);
-        comm.send(m);
-    };
-    // Register the callback with on_msg.
-    comm.on_msg(function (msg) {
-        //console.log('receiving', msg['content']['data'], msg);
-        var data = msg['content']['data'];
-        if (data['blob'] !== undefined) {
-            data = {
-                data: new Blob(msg['buffers'], { type: data['blob'] }),
-            };
-        }
-        // Pass the mpl event to the overridden (by mpl) onmessage function.
-        ws.onmessage(data);
-    });
-    return ws;
-};
-
-mpl.mpl_figure_comm = function (comm, msg) {
-    // This is the function which gets called when the mpl process
-    // starts-up an IPython Comm through the "matplotlib" channel.
-
-    var id = msg.content.data.id;
-    // Get hold of the div created by the display call when the Comm
-    // socket was opened in Python.
-    var element = document.getElementById(id);
-    var ws_proxy = comm_websocket_adapter(comm);
-
-    function ondownload(figure, _format) {
-        window.open(figure.canvas.toDataURL());
-    }
-
-    var fig = new mpl.figure(id, ws_proxy, ondownload, element);
-
-    // Call onopen now - mpl needs it, as it is assuming we've passed it a real
-    // web socket which is closed, not our websocket->open comm proxy.
-    ws_proxy.onopen();
-
-    fig.parent_element = element;
-    fig.cell_info = mpl.find_output_cell("<div id='" + id + "'></div>");
-    if (!fig.cell_info) {
-        console.error('Failed to find cell for figure', id, fig);
-        return;
-    }
-    fig.cell_info[0].output_area.element.on(
-        'cleared',
-        { fig: fig },
-        fig._remove_fig_handler
-    );
-};
-
-mpl.figure.prototype.handle_close = function (fig, msg) {
-    var width = fig.canvas.width / fig.ratio;
-    fig.cell_info[0].output_area.element.off(
-        'cleared',
-        fig._remove_fig_handler
-    );
-    fig.resizeObserverInstance.unobserve(fig.canvas_div);
-
-    // Update the output cell to use the data from the current canvas.
-    fig.push_to_output();
-    var dataURL = fig.canvas.toDataURL();
-    // Re-enable the keyboard manager in IPython - without this line, in FF,
-    // the notebook keyboard shortcuts fail.
-    IPython.keyboard_manager.enable();
-    fig.parent_element.innerHTML =
-        '<img src="' + dataURL + '" width="' + width + '">';
-    fig.close_ws(fig, msg);
-};
-
-mpl.figure.prototype.close_ws = function (fig, msg) {
-    fig.send_message('closing', msg);
-    // fig.ws.close()
-};
-
-mpl.figure.prototype.push_to_output = function (_remove_interactive) {
-    // Turn the data on the canvas into data in the output cell.
-    var width = this.canvas.width / this.ratio;
-    var dataURL = this.canvas.toDataURL();
-    this.cell_info[1]['text/html'] =
-        '<img src="' + dataURL + '" width="' + width + '">';
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Tell IPython that the notebook contents must change.
-    IPython.notebook.set_dirty(true);
-    this.send_message('ack', {});
-    var fig = this;
-    // Wait a second, then push the new image to the DOM so
-    // that it is saved nicely (might be nice to debounce this).
-    setTimeout(function () {
-        fig.push_to_output();
-    }, 1000);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'btn-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'btn-group';
-    var button;
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'btn-group';
-            continue;
-        }
-
-        button = fig.buttons[name] = document.createElement('button');
-        button.classList = 'btn btn-default';
-        button.href = '#';
-        button.title = name;
-        button.innerHTML = '<i class="fa ' + image + ' fa-lg"></i>';
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    // Add the status bar.
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message pull-right';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-
-    // Add the close button to the window.
-    var buttongrp = document.createElement('div');
-    buttongrp.classList = 'btn-group inline pull-right';
-    button = document.createElement('button');
-    button.classList = 'btn btn-mini btn-primary';
-    button.href = '#';
-    button.title = 'Stop Interaction';
-    button.innerHTML = '<i class="fa fa-power-off icon-remove icon-large"></i>';
-    button.addEventListener('click', function (_evt) {
-        fig.handle_close(fig, {});
-    });
-    button.addEventListener(
-        'mouseover',
-        on_mouseover_closure('Stop Interaction')
-    );
-    buttongrp.appendChild(button);
-    var titlebar = this.root.querySelector('.ui-dialog-titlebar');
-    titlebar.insertBefore(buttongrp, titlebar.firstChild);
-};
-
-mpl.figure.prototype._remove_fig_handler = function (event) {
-    var fig = event.data.fig;
-    if (event.target !== this) {
-        // Ignore bubbled events from children.
-        return;
-    }
-    fig.close_ws(fig, {});
-};
-
-mpl.figure.prototype._root_extra_style = function (el) {
-    el.style.boxSizing = 'content-box'; // override notebook setting of border-box.
-};
-
-mpl.figure.prototype._canvas_extra_style = function (el) {
-    // this is important to make the div 'focusable
-    el.setAttribute('tabindex', 0);
-    // reach out to IPython and tell the keyboard manager to turn it's self
-    // off when our div gets focus
-
-    // location in version 3
-    if (IPython.notebook.keyboard_manager) {
-        IPython.notebook.keyboard_manager.register_events(el);
-    } else {
-        // location in version 2
-        IPython.keyboard_manager.register_events(el);
-    }
-};
-
-mpl.figure.prototype._key_event_extra = function (event, _name) {
-    // Check for shift+enter
-    if (event.shiftKey && event.which === 13) {
-        this.canvas_div.blur();
-        // select the cell after this one
-        var index = IPython.notebook.find_cell_index(this.cell_info[0]);
-        IPython.notebook.select(index + 1);
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    fig.ondownload(fig, null);
-};
-
-mpl.find_output_cell = function (html_output) {
-    // Return the cell and output element which can be found *uniquely* in the notebook.
-    // Note - this is a bit hacky, but it is done because the "notebook_saving.Notebook"
-    // IPython event is triggered only after the cells have been serialised, which for
-    // our purposes (turning an active figure into a static one), is too late.
-    var cells = IPython.notebook.get_cells();
-    var ncells = cells.length;
-    for (var i = 0; i < ncells; i++) {
-        var cell = cells[i];
-        if (cell.cell_type === 'code') {
-            for (var j = 0; j < cell.output_area.outputs.length; j++) {
-                var data = cell.output_area.outputs[j];
-                if (data.data) {
-                    // IPython >= 3 moved mimebundle to data attribute of output
-                    data = data.data;
-                }
-                if (data['text/html'] === html_output) {
-                    return [cell, data, j];
-                }
-            }
-        }
-    }
-};
-
-// Register the function which deals with the matplotlib target/channel.
-// The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel !== null) {
-    IPython.notebook.kernel.comm_manager.register_target(
-        'matplotlib',
-        mpl.mpl_figure_comm
-    );
-}
-</script><div class="output text_html"><div id='06316c10-4b37-4563-8fe1-b1e9c4ea601d'></div></div></div>
 </div>
 <p>Abstracting from the fact that the impact is occurring too quickly (it would take time for the substitution towards alternative sources of power to occur), the fact that impacts are fading with time suggests an error in the specification of the shock.  High domestic inflation means that the relative price change of a given Carbon price is declining over time.</p>
 </div>
 </div>
 </div>
 <div class="section" id="re-thinking-the-shock-as-an-ex-ante-real-shock">
-<h2><span class="section-number">4.5. </span>Re-thinking the shock as an ex-ante real shock<a class="headerlink" href="#re-thinking-the-shock-as-an-ex-ante-real-shock" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.6. </span>Re-thinking the shock as an ex-ante real shock<a class="headerlink" href="#re-thinking-the-shock-as-an-ex-ante-real-shock" title="Permalink to this headline">¶</a></h2>
 <p>Inflation in Pakistan is relatively high so a $30 shock quickly loses its relative price effect. Increasing the nominal value of the Carbon Tax by the amount of domestic inflation (converted into USD each year) would resolve the problem.</p>
+<p>Below a new dataframe is created as acopy of the baseline and the three Carbon taxes are first set to $30 in 2025 and then grown at the rate of domestic inflation to keep the relative price of the Carbon Tax constant.</p>
+<p>Finally the model is re-solved.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">modelmf</span>  <span class="c1"># import the mfcalc functionmality and append it to standard pandas</span>
-<span class="n">CT30realdf</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2025 2025&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30&quot;</span><span class="p">)</span>
-<span class="n">CT30realdf</span>  <span class="o">=</span>  <span class="n">CT30realdf</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s2">&quot;&lt;2026 2100&gt;  PAKGGREVCO2CER = PAKGGREVCO2CER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))&quot;</span><span class="p">)</span>
-<span class="n">CT30realdf</span>  <span class="o">=</span>  <span class="n">CT30realdf</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s2">&quot;&lt;2026 2100&gt;  PAKGGREVCO2OER = PAKGGREVCO2OER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))&quot;</span><span class="p">)</span>
-<span class="n">CT30realdf</span>  <span class="o">=</span>  <span class="n">CT30realdf</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s2">&quot;&lt;2026 2100&gt;  PAKGGREVCO2CER = PAKGGREVCO2CER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">modelmf</span>  <span class="c1"># import the mfcalc functionality and append it to standard pandas</span>
+<span class="n">CT30realdf</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">CT30realdf</span><span class="o">=</span><span class="n">CT30realdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2025 2025&gt; PAKGGREVCO2CER PAKGGREVCO2OER PAKGGREVCO2GER = 30&quot;</span><span class="p">)</span>
+
+<span class="n">CT30realdf</span><span class="o">=</span><span class="n">CT30realdf</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">                              &lt;2026 2100&gt; PAKGGREVCO2CER = PAKGGREVCO2CER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
+<span class="s1">                                      PAKGGREVCO2OER = PAKGGREVCO2OER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
+<span class="s1">                                      PAKGGREVCO2GER = PAKGGREVCO2CER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
+<span class="s1">                          &#39;&#39;&#39;</span><span class="p">)</span>                         
 
 <span class="n">CT30realdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;PAKGGREVCO2CER&#39;</span><span class="p">]</span>
 
@@ -1669,977 +732,30 @@ if (IPython.notebook.kernel !== null) {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">keep_plot_multi</span><span class="p">(</span><span class="s1">&#39;PAKCCEMISCO2*KN&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">diffpct</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">showtype</span><span class="o">=</span><span class="s1">&#39;level&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span><span class="mi">2030</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKGG*ER&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/javascript">/* Put everything inside the global mpl namespace */
-/* global mpl */
-window.mpl = {};
-
-mpl.get_websocket_type = function () {
-    if (typeof WebSocket !== 'undefined') {
-        return WebSocket;
-    } else if (typeof MozWebSocket !== 'undefined') {
-        return MozWebSocket;
-    } else {
-        alert(
-            'Your browser does not have WebSocket support. ' +
-                'Please try Chrome, Safari or Firefox ≥ 6. ' +
-                'Firefox 4 and 5 are also supported but you ' +
-                'have to enable WebSockets in about:config.'
-        );
-    }
-};
-
-mpl.figure = function (figure_id, websocket, ondownload, parent_element) {
-    this.id = figure_id;
-
-    this.ws = websocket;
-
-    this.supports_binary = this.ws.binaryType !== undefined;
-
-    if (!this.supports_binary) {
-        var warnings = document.getElementById('mpl-warnings');
-        if (warnings) {
-            warnings.style.display = 'block';
-            warnings.textContent =
-                'This browser does not support binary websocket messages. ' +
-                'Performance may be slow.';
-        }
-    }
-
-    this.imageObj = new Image();
-
-    this.context = undefined;
-    this.message = undefined;
-    this.canvas = undefined;
-    this.rubberband_canvas = undefined;
-    this.rubberband_context = undefined;
-    this.format_dropdown = undefined;
-
-    this.image_mode = 'full';
-
-    this.root = document.createElement('div');
-    this.root.setAttribute('style', 'display: inline-block');
-    this._root_extra_style(this.root);
-
-    parent_element.appendChild(this.root);
-
-    this._init_header(this);
-    this._init_canvas(this);
-    this._init_toolbar(this);
-
-    var fig = this;
-
-    this.waiting = false;
-
-    this.ws.onopen = function () {
-        fig.send_message('supports_binary', { value: fig.supports_binary });
-        fig.send_message('send_image_mode', {});
-        if (fig.ratio !== 1) {
-            fig.send_message('set_device_pixel_ratio', {
-                device_pixel_ratio: fig.ratio,
-            });
-        }
-        fig.send_message('refresh', {});
-    };
-
-    this.imageObj.onload = function () {
-        if (fig.image_mode === 'full') {
-            // Full images could contain transparency (where diff images
-            // almost always do), so we need to clear the canvas so that
-            // there is no ghosting.
-            fig.context.clearRect(0, 0, fig.canvas.width, fig.canvas.height);
-        }
-        fig.context.drawImage(fig.imageObj, 0, 0);
-    };
-
-    this.imageObj.onunload = function () {
-        fig.ws.close();
-    };
-
-    this.ws.onmessage = this._make_on_message_function(this);
-
-    this.ondownload = ondownload;
-};
-
-mpl.figure.prototype._init_header = function () {
-    var titlebar = document.createElement('div');
-    titlebar.classList =
-        'ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix';
-    var titletext = document.createElement('div');
-    titletext.classList = 'ui-dialog-title';
-    titletext.setAttribute(
-        'style',
-        'width: 100%; text-align: center; padding: 3px;'
-    );
-    titlebar.appendChild(titletext);
-    this.root.appendChild(titlebar);
-    this.header = titletext;
-};
-
-mpl.figure.prototype._canvas_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._root_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._init_canvas = function () {
-    var fig = this;
-
-    var canvas_div = (this.canvas_div = document.createElement('div'));
-    canvas_div.setAttribute(
-        'style',
-        'border: 1px solid #ddd;' +
-            'box-sizing: content-box;' +
-            'clear: both;' +
-            'min-height: 1px;' +
-            'min-width: 1px;' +
-            'outline: 0;' +
-            'overflow: hidden;' +
-            'position: relative;' +
-            'resize: both;'
-    );
-
-    function on_keyboard_event_closure(name) {
-        return function (event) {
-            return fig.key_event(event, name);
-        };
-    }
-
-    canvas_div.addEventListener(
-        'keydown',
-        on_keyboard_event_closure('key_press')
-    );
-    canvas_div.addEventListener(
-        'keyup',
-        on_keyboard_event_closure('key_release')
-    );
-
-    this._canvas_extra_style(canvas_div);
-    this.root.appendChild(canvas_div);
-
-    var canvas = (this.canvas = document.createElement('canvas'));
-    canvas.classList.add('mpl-canvas');
-    canvas.setAttribute('style', 'box-sizing: content-box;');
-
-    this.context = canvas.getContext('2d');
-
-    var backingStore =
-        this.context.backingStorePixelRatio ||
-        this.context.webkitBackingStorePixelRatio ||
-        this.context.mozBackingStorePixelRatio ||
-        this.context.msBackingStorePixelRatio ||
-        this.context.oBackingStorePixelRatio ||
-        this.context.backingStorePixelRatio ||
-        1;
-
-    this.ratio = (window.devicePixelRatio || 1) / backingStore;
-
-    var rubberband_canvas = (this.rubberband_canvas = document.createElement(
-        'canvas'
-    ));
-    rubberband_canvas.setAttribute(
-        'style',
-        'box-sizing: content-box; position: absolute; left: 0; top: 0; z-index: 1;'
-    );
-
-    // Apply a ponyfill if ResizeObserver is not implemented by browser.
-    if (this.ResizeObserver === undefined) {
-        if (window.ResizeObserver !== undefined) {
-            this.ResizeObserver = window.ResizeObserver;
-        } else {
-            var obs = _JSXTOOLS_RESIZE_OBSERVER({});
-            this.ResizeObserver = obs.ResizeObserver;
-        }
-    }
-
-    this.resizeObserverInstance = new this.ResizeObserver(function (entries) {
-        var nentries = entries.length;
-        for (var i = 0; i < nentries; i++) {
-            var entry = entries[i];
-            var width, height;
-            if (entry.contentBoxSize) {
-                if (entry.contentBoxSize instanceof Array) {
-                    // Chrome 84 implements new version of spec.
-                    width = entry.contentBoxSize[0].inlineSize;
-                    height = entry.contentBoxSize[0].blockSize;
-                } else {
-                    // Firefox implements old version of spec.
-                    width = entry.contentBoxSize.inlineSize;
-                    height = entry.contentBoxSize.blockSize;
-                }
-            } else {
-                // Chrome <84 implements even older version of spec.
-                width = entry.contentRect.width;
-                height = entry.contentRect.height;
-            }
-
-            // Keep the size of the canvas and rubber band canvas in sync with
-            // the canvas container.
-            if (entry.devicePixelContentBoxSize) {
-                // Chrome 84 implements new version of spec.
-                canvas.setAttribute(
-                    'width',
-                    entry.devicePixelContentBoxSize[0].inlineSize
-                );
-                canvas.setAttribute(
-                    'height',
-                    entry.devicePixelContentBoxSize[0].blockSize
-                );
-            } else {
-                canvas.setAttribute('width', width * fig.ratio);
-                canvas.setAttribute('height', height * fig.ratio);
-            }
-            canvas.setAttribute(
-                'style',
-                'width: ' + width + 'px; height: ' + height + 'px;'
-            );
-
-            rubberband_canvas.setAttribute('width', width);
-            rubberband_canvas.setAttribute('height', height);
-
-            // And update the size in Python. We ignore the initial 0/0 size
-            // that occurs as the element is placed into the DOM, which should
-            // otherwise not happen due to the minimum size styling.
-            if (fig.ws.readyState == 1 && width != 0 && height != 0) {
-                fig.request_resize(width, height);
-            }
-        }
-    });
-    this.resizeObserverInstance.observe(canvas_div);
-
-    function on_mouse_event_closure(name) {
-        return function (event) {
-            return fig.mouse_event(event, name);
-        };
-    }
-
-    rubberband_canvas.addEventListener(
-        'mousedown',
-        on_mouse_event_closure('button_press')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseup',
-        on_mouse_event_closure('button_release')
-    );
-    rubberband_canvas.addEventListener(
-        'dblclick',
-        on_mouse_event_closure('dblclick')
-    );
-    // Throttle sequential mouse events to 1 every 20ms.
-    rubberband_canvas.addEventListener(
-        'mousemove',
-        on_mouse_event_closure('motion_notify')
-    );
-
-    rubberband_canvas.addEventListener(
-        'mouseenter',
-        on_mouse_event_closure('figure_enter')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseleave',
-        on_mouse_event_closure('figure_leave')
-    );
-
-    canvas_div.addEventListener('wheel', function (event) {
-        if (event.deltaY < 0) {
-            event.step = 1;
-        } else {
-            event.step = -1;
-        }
-        on_mouse_event_closure('scroll')(event);
-    });
-
-    canvas_div.appendChild(canvas);
-    canvas_div.appendChild(rubberband_canvas);
-
-    this.rubberband_context = rubberband_canvas.getContext('2d');
-    this.rubberband_context.strokeStyle = '#000000';
-
-    this._resize_canvas = function (width, height, forward) {
-        if (forward) {
-            canvas_div.style.width = width + 'px';
-            canvas_div.style.height = height + 'px';
-        }
-    };
-
-    // Disable right mouse context menu.
-    this.rubberband_canvas.addEventListener('contextmenu', function (_e) {
-        event.preventDefault();
-        return false;
-    });
-
-    function set_focus() {
-        canvas.focus();
-        canvas_div.focus();
-    }
-
-    window.setTimeout(set_focus, 100);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'mpl-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'mpl-button-group';
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'mpl-button-group';
-            continue;
-        }
-
-        var button = (fig.buttons[name] = document.createElement('button'));
-        button.classList = 'mpl-widget';
-        button.setAttribute('role', 'button');
-        button.setAttribute('aria-disabled', 'false');
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-
-        var icon_img = document.createElement('img');
-        icon_img.src = '_images/' + image + '.png';
-        icon_img.srcset = '_images/' + image + '_large.png 2x';
-        icon_img.alt = tooltip;
-        button.appendChild(icon_img);
-
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    var fmt_picker = document.createElement('select');
-    fmt_picker.classList = 'mpl-widget';
-    toolbar.appendChild(fmt_picker);
-    this.format_dropdown = fmt_picker;
-
-    for (var ind in mpl.extensions) {
-        var fmt = mpl.extensions[ind];
-        var option = document.createElement('option');
-        option.selected = fmt === mpl.default_extension;
-        option.innerHTML = fmt;
-        fmt_picker.appendChild(option);
-    }
-
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-};
-
-mpl.figure.prototype.request_resize = function (x_pixels, y_pixels) {
-    // Request matplotlib to resize the figure. Matplotlib will then trigger a resize in the client,
-    // which will in turn request a refresh of the image.
-    this.send_message('resize', { width: x_pixels, height: y_pixels });
-};
-
-mpl.figure.prototype.send_message = function (type, properties) {
-    properties['type'] = type;
-    properties['figure_id'] = this.id;
-    this.ws.send(JSON.stringify(properties));
-};
-
-mpl.figure.prototype.send_draw_message = function () {
-    if (!this.waiting) {
-        this.waiting = true;
-        this.ws.send(JSON.stringify({ type: 'draw', figure_id: this.id }));
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    var format_dropdown = fig.format_dropdown;
-    var format = format_dropdown.options[format_dropdown.selectedIndex].value;
-    fig.ondownload(fig, format);
-};
-
-mpl.figure.prototype.handle_resize = function (fig, msg) {
-    var size = msg['size'];
-    if (size[0] !== fig.canvas.width || size[1] !== fig.canvas.height) {
-        fig._resize_canvas(size[0], size[1], msg['forward']);
-        fig.send_message('refresh', {});
-    }
-};
-
-mpl.figure.prototype.handle_rubberband = function (fig, msg) {
-    var x0 = msg['x0'] / fig.ratio;
-    var y0 = (fig.canvas.height - msg['y0']) / fig.ratio;
-    var x1 = msg['x1'] / fig.ratio;
-    var y1 = (fig.canvas.height - msg['y1']) / fig.ratio;
-    x0 = Math.floor(x0) + 0.5;
-    y0 = Math.floor(y0) + 0.5;
-    x1 = Math.floor(x1) + 0.5;
-    y1 = Math.floor(y1) + 0.5;
-    var min_x = Math.min(x0, x1);
-    var min_y = Math.min(y0, y1);
-    var width = Math.abs(x1 - x0);
-    var height = Math.abs(y1 - y0);
-
-    fig.rubberband_context.clearRect(
-        0,
-        0,
-        fig.canvas.width / fig.ratio,
-        fig.canvas.height / fig.ratio
-    );
-
-    fig.rubberband_context.strokeRect(min_x, min_y, width, height);
-};
-
-mpl.figure.prototype.handle_figure_label = function (fig, msg) {
-    // Updates the figure title.
-    fig.header.textContent = msg['label'];
-};
-
-mpl.figure.prototype.handle_cursor = function (fig, msg) {
-    fig.rubberband_canvas.style.cursor = msg['cursor'];
-};
-
-mpl.figure.prototype.handle_message = function (fig, msg) {
-    fig.message.textContent = msg['message'];
-};
-
-mpl.figure.prototype.handle_draw = function (fig, _msg) {
-    // Request the server to send over a new figure.
-    fig.send_draw_message();
-};
-
-mpl.figure.prototype.handle_image_mode = function (fig, msg) {
-    fig.image_mode = msg['mode'];
-};
-
-mpl.figure.prototype.handle_history_buttons = function (fig, msg) {
-    for (var key in msg) {
-        if (!(key in fig.buttons)) {
-            continue;
-        }
-        fig.buttons[key].disabled = !msg[key];
-        fig.buttons[key].setAttribute('aria-disabled', !msg[key]);
-    }
-};
-
-mpl.figure.prototype.handle_navigate_mode = function (fig, msg) {
-    if (msg['mode'] === 'PAN') {
-        fig.buttons['Pan'].classList.add('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    } else if (msg['mode'] === 'ZOOM') {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.add('active');
-    } else {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    }
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Called whenever the canvas gets updated.
-    this.send_message('ack', {});
-};
-
-// A function to construct a web socket function for onmessage handling.
-// Called in the figure constructor.
-mpl.figure.prototype._make_on_message_function = function (fig) {
-    return function socket_on_message(evt) {
-        if (evt.data instanceof Blob) {
-            var img = evt.data;
-            if (img.type !== 'image/png') {
-                /* FIXME: We get "Resource interpreted as Image but
-                 * transferred with MIME type text/plain:" errors on
-                 * Chrome.  But how to set the MIME type?  It doesn't seem
-                 * to be part of the websocket stream */
-                img.type = 'image/png';
-            }
-
-            /* Free the memory for the previous frames */
-            if (fig.imageObj.src) {
-                (window.URL || window.webkitURL).revokeObjectURL(
-                    fig.imageObj.src
-                );
-            }
-
-            fig.imageObj.src = (window.URL || window.webkitURL).createObjectURL(
-                img
-            );
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        } else if (
-            typeof evt.data === 'string' &&
-            evt.data.slice(0, 21) === 'data:image/png;base64'
-        ) {
-            fig.imageObj.src = evt.data;
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        }
-
-        var msg = JSON.parse(evt.data);
-        var msg_type = msg['type'];
-
-        // Call the  "handle_{type}" callback, which takes
-        // the figure and JSON message as its only arguments.
-        try {
-            var callback = fig['handle_' + msg_type];
-        } catch (e) {
-            console.log(
-                "No handler for the '" + msg_type + "' message type: ",
-                msg
-            );
-            return;
-        }
-
-        if (callback) {
-            try {
-                // console.log("Handling '" + msg_type + "' message: ", msg);
-                callback(fig, msg);
-            } catch (e) {
-                console.log(
-                    "Exception inside the 'handler_" + msg_type + "' callback:",
-                    e,
-                    e.stack,
-                    msg
-                );
-            }
-        }
-    };
-};
-
-// from https://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas
-mpl.findpos = function (e) {
-    //this section is from http://www.quirksmode.org/js/events_properties.html
-    var targ;
-    if (!e) {
-        e = window.event;
-    }
-    if (e.target) {
-        targ = e.target;
-    } else if (e.srcElement) {
-        targ = e.srcElement;
-    }
-    if (targ.nodeType === 3) {
-        // defeat Safari bug
-        targ = targ.parentNode;
-    }
-
-    // pageX,Y are the mouse positions relative to the document
-    var boundingRect = targ.getBoundingClientRect();
-    var x = e.pageX - (boundingRect.left + document.body.scrollLeft);
-    var y = e.pageY - (boundingRect.top + document.body.scrollTop);
-
-    return { x: x, y: y };
-};
-
-/*
- * return a copy of an object with only non-object keys
- * we need this to avoid circular references
- * https://stackoverflow.com/a/24161582/3208463
- */
-function simpleKeys(original) {
-    return Object.keys(original).reduce(function (obj, key) {
-        if (typeof original[key] !== 'object') {
-            obj[key] = original[key];
-        }
-        return obj;
-    }, {});
-}
-
-mpl.figure.prototype.mouse_event = function (event, name) {
-    var canvas_pos = mpl.findpos(event);
-
-    if (name === 'button_press') {
-        this.canvas.focus();
-        this.canvas_div.focus();
-    }
-
-    var x = canvas_pos.x * this.ratio;
-    var y = canvas_pos.y * this.ratio;
-
-    this.send_message(name, {
-        x: x,
-        y: y,
-        button: event.button,
-        step: event.step,
-        guiEvent: simpleKeys(event),
-    });
-
-    /* This prevents the web browser from automatically changing to
-     * the text insertion cursor when the button is pressed.  We want
-     * to control all of the cursor setting manually through the
-     * 'cursor' event from matplotlib */
-    event.preventDefault();
-    return false;
-};
-
-mpl.figure.prototype._key_event_extra = function (_event, _name) {
-    // Handle any extra behaviour associated with a key event
-};
-
-mpl.figure.prototype.key_event = function (event, name) {
-    // Prevent repeat events
-    if (name === 'key_press') {
-        if (event.key === this._key) {
-            return;
-        } else {
-            this._key = event.key;
-        }
-    }
-    if (name === 'key_release') {
-        this._key = null;
-    }
-
-    var value = '';
-    if (event.ctrlKey && event.key !== 'Control') {
-        value += 'ctrl+';
-    }
-    else if (event.altKey && event.key !== 'Alt') {
-        value += 'alt+';
-    }
-    else if (event.shiftKey && event.key !== 'Shift') {
-        value += 'shift+';
-    }
-
-    value += 'k' + event.key;
-
-    this._key_event_extra(event, name);
-
-    this.send_message(name, { key: value, guiEvent: simpleKeys(event) });
-    return false;
-};
-
-mpl.figure.prototype.toolbar_button_onclick = function (name) {
-    if (name === 'download') {
-        this.handle_save(this, null);
-    } else {
-        this.send_message('toolbar_button', { name: name });
-    }
-};
-
-mpl.figure.prototype.toolbar_button_onmouseover = function (tooltip) {
-    this.message.textContent = tooltip;
-};
-
-///////////////// REMAINING CONTENT GENERATED BY embed_js.py /////////////////
-// prettier-ignore
-var _JSXTOOLS_RESIZE_OBSERVER=function(A){var t,i=new WeakMap,n=new WeakMap,a=new WeakMap,r=new WeakMap,o=new Set;function s(e){if(!(this instanceof s))throw new TypeError("Constructor requires 'new' operator");i.set(this,e)}function h(){throw new TypeError("Function is not a constructor")}function c(e,t,i,n){e=0 in arguments?Number(arguments[0]):0,t=1 in arguments?Number(arguments[1]):0,i=2 in arguments?Number(arguments[2]):0,n=3 in arguments?Number(arguments[3]):0,this.right=(this.x=this.left=e)+(this.width=i),this.bottom=(this.y=this.top=t)+(this.height=n),Object.freeze(this)}function d(){t=requestAnimationFrame(d);var s=new WeakMap,p=new Set;o.forEach((function(t){r.get(t).forEach((function(i){var r=t instanceof window.SVGElement,o=a.get(t),d=r?0:parseFloat(o.paddingTop),f=r?0:parseFloat(o.paddingRight),l=r?0:parseFloat(o.paddingBottom),u=r?0:parseFloat(o.paddingLeft),g=r?0:parseFloat(o.borderTopWidth),m=r?0:parseFloat(o.borderRightWidth),w=r?0:parseFloat(o.borderBottomWidth),b=u+f,F=d+l,v=(r?0:parseFloat(o.borderLeftWidth))+m,W=g+w,y=r?0:t.offsetHeight-W-t.clientHeight,E=r?0:t.offsetWidth-v-t.clientWidth,R=b+v,z=F+W,M=r?t.width:parseFloat(o.width)-R-E,O=r?t.height:parseFloat(o.height)-z-y;if(n.has(t)){var k=n.get(t);if(k[0]===M&&k[1]===O)return}n.set(t,[M,O]);var S=Object.create(h.prototype);S.target=t,S.contentRect=new c(u,d,M,O),s.has(i)||(s.set(i,[]),p.add(i)),s.get(i).push(S)}))})),p.forEach((function(e){i.get(e).call(e,s.get(e),e)}))}return s.prototype.observe=function(i){if(i instanceof window.Element){r.has(i)||(r.set(i,new Set),o.add(i),a.set(i,window.getComputedStyle(i)));var n=r.get(i);n.has(this)||n.add(this),cancelAnimationFrame(t),t=requestAnimationFrame(d)}},s.prototype.unobserve=function(i){if(i instanceof window.Element&&r.has(i)){var n=r.get(i);n.has(this)&&(n.delete(this),n.size||(r.delete(i),o.delete(i))),n.size||r.delete(i),o.size||cancelAnimationFrame(t)}},A.DOMRectReadOnly=c,A.ResizeObserver=s,A.ResizeObserverEntry=h,A}; // eslint-disable-line
-mpl.toolbar_items = [["Home", "Reset original view", "fa fa-home icon-home", "home"], ["Back", "Back to previous view", "fa fa-arrow-left icon-arrow-left", "back"], ["Forward", "Forward to next view", "fa fa-arrow-right icon-arrow-right", "forward"], ["", "", "", ""], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "fa fa-arrows icon-move", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis", "fa fa-square-o icon-check-empty", "zoom"], ["", "", "", ""], ["Download", "Download plot", "fa fa-floppy-o icon-save", "download"]];
-
-mpl.extensions = ["eps", "jpeg", "pgf", "pdf", "png", "ps", "raw", "svg", "tif"];
-
-mpl.default_extension = "png";/* global mpl */
-
-var comm_websocket_adapter = function (comm) {
-    // Create a "websocket"-like object which calls the given IPython comm
-    // object with the appropriate methods. Currently this is a non binary
-    // socket, so there is still some room for performance tuning.
-    var ws = {};
-
-    ws.binaryType = comm.kernel.ws.binaryType;
-    ws.readyState = comm.kernel.ws.readyState;
-    function updateReadyState(_event) {
-        if (comm.kernel.ws) {
-            ws.readyState = comm.kernel.ws.readyState;
-        } else {
-            ws.readyState = 3; // Closed state.
-        }
-    }
-    comm.kernel.ws.addEventListener('open', updateReadyState);
-    comm.kernel.ws.addEventListener('close', updateReadyState);
-    comm.kernel.ws.addEventListener('error', updateReadyState);
-
-    ws.close = function () {
-        comm.close();
-    };
-    ws.send = function (m) {
-        //console.log('sending', m);
-        comm.send(m);
-    };
-    // Register the callback with on_msg.
-    comm.on_msg(function (msg) {
-        //console.log('receiving', msg['content']['data'], msg);
-        var data = msg['content']['data'];
-        if (data['blob'] !== undefined) {
-            data = {
-                data: new Blob(msg['buffers'], { type: data['blob'] }),
-            };
-        }
-        // Pass the mpl event to the overridden (by mpl) onmessage function.
-        ws.onmessage(data);
-    });
-    return ws;
-};
-
-mpl.mpl_figure_comm = function (comm, msg) {
-    // This is the function which gets called when the mpl process
-    // starts-up an IPython Comm through the "matplotlib" channel.
-
-    var id = msg.content.data.id;
-    // Get hold of the div created by the display call when the Comm
-    // socket was opened in Python.
-    var element = document.getElementById(id);
-    var ws_proxy = comm_websocket_adapter(comm);
-
-    function ondownload(figure, _format) {
-        window.open(figure.canvas.toDataURL());
-    }
-
-    var fig = new mpl.figure(id, ws_proxy, ondownload, element);
-
-    // Call onopen now - mpl needs it, as it is assuming we've passed it a real
-    // web socket which is closed, not our websocket->open comm proxy.
-    ws_proxy.onopen();
-
-    fig.parent_element = element;
-    fig.cell_info = mpl.find_output_cell("<div id='" + id + "'></div>");
-    if (!fig.cell_info) {
-        console.error('Failed to find cell for figure', id, fig);
-        return;
-    }
-    fig.cell_info[0].output_area.element.on(
-        'cleared',
-        { fig: fig },
-        fig._remove_fig_handler
-    );
-};
-
-mpl.figure.prototype.handle_close = function (fig, msg) {
-    var width = fig.canvas.width / fig.ratio;
-    fig.cell_info[0].output_area.element.off(
-        'cleared',
-        fig._remove_fig_handler
-    );
-    fig.resizeObserverInstance.unobserve(fig.canvas_div);
-
-    // Update the output cell to use the data from the current canvas.
-    fig.push_to_output();
-    var dataURL = fig.canvas.toDataURL();
-    // Re-enable the keyboard manager in IPython - without this line, in FF,
-    // the notebook keyboard shortcuts fail.
-    IPython.keyboard_manager.enable();
-    fig.parent_element.innerHTML =
-        '<img src="' + dataURL + '" width="' + width + '">';
-    fig.close_ws(fig, msg);
-};
-
-mpl.figure.prototype.close_ws = function (fig, msg) {
-    fig.send_message('closing', msg);
-    // fig.ws.close()
-};
-
-mpl.figure.prototype.push_to_output = function (_remove_interactive) {
-    // Turn the data on the canvas into data in the output cell.
-    var width = this.canvas.width / this.ratio;
-    var dataURL = this.canvas.toDataURL();
-    this.cell_info[1]['text/html'] =
-        '<img src="' + dataURL + '" width="' + width + '">';
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Tell IPython that the notebook contents must change.
-    IPython.notebook.set_dirty(true);
-    this.send_message('ack', {});
-    var fig = this;
-    // Wait a second, then push the new image to the DOM so
-    // that it is saved nicely (might be nice to debounce this).
-    setTimeout(function () {
-        fig.push_to_output();
-    }, 1000);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'btn-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'btn-group';
-    var button;
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'btn-group';
-            continue;
-        }
-
-        button = fig.buttons[name] = document.createElement('button');
-        button.classList = 'btn btn-default';
-        button.href = '#';
-        button.title = name;
-        button.innerHTML = '<i class="fa ' + image + ' fa-lg"></i>';
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    // Add the status bar.
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message pull-right';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-
-    // Add the close button to the window.
-    var buttongrp = document.createElement('div');
-    buttongrp.classList = 'btn-group inline pull-right';
-    button = document.createElement('button');
-    button.classList = 'btn btn-mini btn-primary';
-    button.href = '#';
-    button.title = 'Stop Interaction';
-    button.innerHTML = '<i class="fa fa-power-off icon-remove icon-large"></i>';
-    button.addEventListener('click', function (_evt) {
-        fig.handle_close(fig, {});
-    });
-    button.addEventListener(
-        'mouseover',
-        on_mouseover_closure('Stop Interaction')
-    );
-    buttongrp.appendChild(button);
-    var titlebar = this.root.querySelector('.ui-dialog-titlebar');
-    titlebar.insertBefore(buttongrp, titlebar.firstChild);
-};
-
-mpl.figure.prototype._remove_fig_handler = function (event) {
-    var fig = event.data.fig;
-    if (event.target !== this) {
-        // Ignore bubbled events from children.
-        return;
-    }
-    fig.close_ws(fig, {});
-};
-
-mpl.figure.prototype._root_extra_style = function (el) {
-    el.style.boxSizing = 'content-box'; // override notebook setting of border-box.
-};
-
-mpl.figure.prototype._canvas_extra_style = function (el) {
-    // this is important to make the div 'focusable
-    el.setAttribute('tabindex', 0);
-    // reach out to IPython and tell the keyboard manager to turn it's self
-    // off when our div gets focus
-
-    // location in version 3
-    if (IPython.notebook.keyboard_manager) {
-        IPython.notebook.keyboard_manager.register_events(el);
-    } else {
-        // location in version 2
-        IPython.keyboard_manager.register_events(el);
-    }
-};
-
-mpl.figure.prototype._key_event_extra = function (event, _name) {
-    // Check for shift+enter
-    if (event.shiftKey && event.which === 13) {
-        this.canvas_div.blur();
-        // select the cell after this one
-        var index = IPython.notebook.find_cell_index(this.cell_info[0]);
-        IPython.notebook.select(index + 1);
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    fig.ondownload(fig, null);
-};
-
-mpl.find_output_cell = function (html_output) {
-    // Return the cell and output element which can be found *uniquely* in the notebook.
-    // Note - this is a bit hacky, but it is done because the "notebook_saving.Notebook"
-    // IPython event is triggered only after the cells have been serialised, which for
-    // our purposes (turning an active figure into a static one), is too late.
-    var cells = IPython.notebook.get_cells();
-    var ncells = cells.length;
-    for (var i = 0; i < ncells; i++) {
-        var cell = cells[i];
-        if (cell.cell_type === 'code') {
-            for (var j = 0; j < cell.output_area.outputs.length; j++) {
-                var data = cell.output_area.outputs[j];
-                if (data.data) {
-                    // IPython >= 3 moved mimebundle to data attribute of output
-                    data = data.data;
-                }
-                if (data['text/html'] === html_output) {
-                    return [cell, data, j];
-                }
-            }
-        }
-    }
-};
-
-// Register the function which deals with the matplotlib target/channel.
-// The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel !== null) {
-    IPython.notebook.kernel.comm_manager.register_target(
-        'matplotlib',
-        mpl.mpl_figure_comm
-    );
-}
-</script><div class="output text_html"><div id='fded547e-7d35-4f81-a6b3-7b12e66d80c8'></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Emissions impact of a $30 USD Carbon tax&quot;</span><span class="p">,</span><span class="n">showfig</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>These results are better, but still there is an erosion of the effect of the tax.</p>
 <p>On introspection, this is likely due to the fact that the carbon tax itself is inflationary.  As a result, prices probably rose to a higher level than supposed by the ex ante calculation.</p>
-<p>To deal with this a different approach is needed.  Rather than maintaining the carbon price as an exogenous variable, instead it should be made an endogenous variable by changing the model and adding equations for all of the carbon tax variables.</p>
+<p>To deal with this, a different approach is needed.  Rather than maintaining the carbon price as an exogenous variable, instead it should be made an endogenous variable by changing the model and adding equations for all of the carbon tax variables.</p>
 </div>
 <div class="section" id="changing-the-model-modifying-and-or-adding-equations">
-<h2><span class="section-number">4.6. </span>Changing the model – modifying and or adding equations<a class="headerlink" href="#changing-the-model-modifying-and-or-adding-equations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.7. </span>Changing the model – modifying and or adding equations<a class="headerlink" href="#changing-the-model-modifying-and-or-adding-equations" title="Permalink to this headline">¶</a></h2>
 <p>To endogenize the carbon price, an equation for each carbon price has to be added to the model.   This cane be done with the <code class="docutils literal notranslate"><span class="pre">.equpdate()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpakreal</span><span class="p">,</span><span class="n">_</span> <span class="o">=</span> <span class="n">mpak</span><span class="o">.</span><span class="n">equpdate</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span><span class="se">\</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak1</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;Baseline&quot;</span><span class="p">)</span>
+<span class="n">mpakreal</span><span class="p">,</span><span class="n">baselinereal</span> <span class="o">=</span> <span class="n">mpak1</span><span class="o">.</span><span class="n">equpdate</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">&lt;fixable&gt; PAKGGREVCO2CER = PAKGGREVCO2CER(-1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
 <span class="s1">&lt;fixable&gt; PAKGGREVCO2OER = PAKGGREVCO2OER(-1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
 <span class="s1">&lt;fixable&gt; PAKGGREVCO2GER = PAKGGREVCO2GER(-1) * (PAKNECONPRVTXN*PAKPANUSATLS) / (PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1))</span>
@@ -2648,7 +764,9 @@ if (IPython.notebook.kernel !== null) {
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The model:&quot;pak model&quot; got new equations, new model name is:&quot;Pak model, with real Carbon price equations&quot;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\mflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
+
+The model:&quot;PAK&quot; got new equations, new model name is:&quot;Pak model, with real Carbon price equations&quot;
 New equation for For PAKGGREVCO2CER
 Old frml   :new endogeneous variable 
 New frml   :FRML &lt;fixable&gt; PAKGGREVCO2CER = (PAKGGREVCO2CER(-1)*(PAKNECONPRVTXN*PAKPANUSATLS)/(PAKNECONPRVTXN(-1)*PAKPANUSATLS(-1)))* (1-PAKGGREVCO2CER_D)+ PAKGGREVCO2CER_X*PAKGGREVCO2CER_D$
@@ -2685,7 +803,15 @@ Adjust calc:No frml for adjustment calc
 <p>Following the addition of the equations, the new variables (_D and _X) must be initialized. The _X variables are made equal to the current values of the various tax rates, while the _D is set to 1 everywhere – effectively turning the equation off and re-creating the same situation as the initial model where the tax rates are fully exogenous.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseline_real</span><span class="o">=</span><span class="n">baseline</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Exogenizes the newly added equations and sets the dummy =1 amd the _x to the current value of the dependent variable  </span>
+<span class="n">baseline_real</span><span class="o">=</span><span class="n">mpakreal</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="n">baselinereal</span><span class="p">,</span><span class="s1">&#39;PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The fix command above effectively does in one line all of the following code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">baseline_real</span><span class="o">=</span><span class="n">baselinereal</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
 
 <span class="c1">#Create the _X variables if we exogenize the equation</span>
 <span class="n">baseline_real</span> <span class="o">=</span> <span class="n">baseline_real</span><span class="o">.</span><span class="n">mfcalc</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
@@ -2694,19 +820,17 @@ Adjust calc:No frml for adjustment calc
 <span class="s1">PAKGGREVCO2OER_X = PAKGGREVCO2OER</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 
-<span class="c1">#create the _D varibale so we can exogenize the equations -- currently it is exogenized -- set D=1</span>
+<span class="c1">#create the _D varibale so we can exogenize the equations (set _D=1)-- currently it is exogenized </span>
 <span class="n">baseline_real</span> <span class="o">=</span> <span class="n">baseline_real</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">&lt;-0 -1&gt; </span>
 <span class="s1">PAKGGREVCO2CER_D PAKGGREVCO2GER_D PAKGGREVCO2OER_D = 1</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
 <p>Finally the new model is solved, the result is kept in a new baseline and a quick check ensures that the model did indeed reproduce the data that it was originally fed, including the initial Carbon Tax levels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Solve the model for teh baseline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Solve the model for the new baseline</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">mpakreal</span><span class="p">(</span><span class="n">baseline_real</span><span class="p">,</span><span class="mi">2021</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Baseline - adjusted model&#39;</span><span class="p">)</span> 
 
 <span class="n">mpakreal</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTXN PAKGGBALOVRL PAKGGREVCO2CER PAKCCEMISCO2TKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">df</span>
@@ -2822,7 +946,7 @@ Adjust calc:No frml for adjustment calc
 </div></div></div>
 </div>
 <div class="section" id="solving-the-revised-model">
-<h3><span class="section-number">4.6.1. </span>Solving the revised model<a class="headerlink" href="#solving-the-revised-model" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.1. </span>Solving the revised model<a class="headerlink" href="#solving-the-revised-model" title="Permalink to this headline">¶</a></h3>
 <p>With the new model generated, it can now be solves with the real tax rate endogenized in the forecast period.  This involves three steps.</p>
 <ol class="simple">
 <li><p>Set the nominal tax rate to 30 in 2024</p></li>
@@ -2832,10 +956,10 @@ Adjust calc:No frml for adjustment calc
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scenario_real_CTax</span> <span class="o">=</span> <span class="n">baseline_real</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">&lt;2024 &gt; </span>
+<span class="s1">&lt;2024 2024&gt; </span>
 <span class="s1">PAKGGREVCO2CER_x PAKGGREVCO2GER_x PAKGGREVCO2OER_x = 30 # Sets the exogenous value to 29 in 2024</span>
 <span class="s1">&lt;2025 2100 &gt; </span>
-<span class="s1">PAKGGREVCO2CER_D PAKGGREVCO2GER_D PAKGGREVCO2OER_d = 0   # Endogenizes the new equation for the rest of time so that the real-rate stays at 30USD</span>
+<span class="s1">PAKGGREVCO2CER_D PAKGGREVCO2GER_D PAKGGREVCO2OER_d = 0   # Endogenizes the new equations for the rest of time so that the real-rate stays at 30USD</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 
 
@@ -2884,7 +1008,7 @@ Adjust calc:No frml for adjustment calc
       <td>-41.0</td>
       <td>-8.7</td>
       <td>1.8</td>
-      <td>106.9</td>
+      <td>107.0</td>
     </tr>
     <tr>
       <th>2022</th>
@@ -2892,15 +1016,15 @@ Adjust calc:No frml for adjustment calc
       <td>-41.0</td>
       <td>-8.7</td>
       <td>2.0</td>
-      <td>106.7</td>
+      <td>106.8</td>
     </tr>
     <tr>
       <th>2023</th>
       <td>-5.5</td>
       <td>-41.0</td>
       <td>-8.7</td>
-      <td>2.2</td>
-      <td>106.5</td>
+      <td>2.1</td>
+      <td>106.7</td>
     </tr>
     <tr>
       <th>2024</th>
@@ -2908,15 +1032,15 @@ Adjust calc:No frml for adjustment calc
       <td>30.0</td>
       <td>30.0</td>
       <td>2.4</td>
-      <td>106.1</td>
+      <td>106.3</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>32.0</td>
-      <td>32.0</td>
-      <td>32.0</td>
-      <td>2.6</td>
-      <td>106.0</td>
+      <td>32.1</td>
+      <td>32.1</td>
+      <td>32.1</td>
+      <td>2.5</td>
+      <td>106.2</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2928,43 +1052,43 @@ Adjust calc:No frml for adjustment calc
     </tr>
     <tr>
       <th>2096</th>
-      <td>231.7</td>
-      <td>231.7</td>
-      <td>231.7</td>
-      <td>17.8</td>
-      <td>110.3</td>
+      <td>1204.1</td>
+      <td>1204.1</td>
+      <td>1204.1</td>
+      <td>106.8</td>
+      <td>94.3</td>
     </tr>
     <tr>
       <th>2097</th>
-      <td>237.9</td>
-      <td>237.9</td>
-      <td>237.9</td>
-      <td>18.2</td>
-      <td>110.4</td>
+      <td>1270.1</td>
+      <td>1270.1</td>
+      <td>1270.1</td>
+      <td>112.9</td>
+      <td>94.1</td>
     </tr>
     <tr>
       <th>2098</th>
-      <td>244.3</td>
-      <td>244.3</td>
-      <td>244.3</td>
-      <td>18.7</td>
-      <td>110.4</td>
+      <td>1339.8</td>
+      <td>1339.8</td>
+      <td>1339.8</td>
+      <td>119.3</td>
+      <td>93.9</td>
     </tr>
     <tr>
       <th>2099</th>
-      <td>250.9</td>
-      <td>250.9</td>
-      <td>250.9</td>
-      <td>19.2</td>
-      <td>110.5</td>
+      <td>1413.2</td>
+      <td>1413.2</td>
+      <td>1413.2</td>
+      <td>126.1</td>
+      <td>93.7</td>
     </tr>
     <tr>
       <th>2100</th>
-      <td>257.7</td>
-      <td>257.7</td>
-      <td>257.7</td>
-      <td>19.7</td>
-      <td>110.5</td>
+      <td>1490.7</td>
+      <td>1490.7</td>
+      <td>1490.7</td>
+      <td>133.3</td>
+      <td>93.5</td>
     </tr>
   </tbody>
 </table>
@@ -3011,40 +1135,40 @@ Adjust calc:No frml for adjustment calc
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>9.552081</td>
-      <td>-0.198428</td>
+      <td>9.476828</td>
+      <td>-0.158806</td>
     </tr>
     <tr>
       <th>2022</th>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>8.949959</td>
-      <td>-0.197339</td>
+      <td>8.776453</td>
+      <td>-0.155332</td>
     </tr>
     <tr>
       <th>2023</th>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>8.272552</td>
-      <td>-0.182424</td>
+      <td>7.978008</td>
+      <td>-0.137261</td>
     </tr>
     <tr>
       <th>2024</th>
       <td>-640.556268</td>
       <td>-173.169155</td>
       <td>-444.405991</td>
-      <td>9.893579</td>
-      <td>-0.355185</td>
+      <td>10.081669</td>
+      <td>-0.328810</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>6.557326</td>
-      <td>6.557326</td>
-      <td>6.557326</td>
-      <td>6.679298</td>
-      <td>-0.114336</td>
+      <td>6.922650</td>
+      <td>6.922650</td>
+      <td>6.922650</td>
+      <td>7.066610</td>
+      <td>-0.134458</td>
     </tr>
     <tr>
       <th>...</th>
@@ -3056,43 +1180,43 @@ Adjust calc:No frml for adjustment calc
     </tr>
     <tr>
       <th>2096</th>
-      <td>2.667053</td>
-      <td>2.667053</td>
-      <td>2.667053</td>
-      <td>2.609019</td>
-      <td>0.056558</td>
+      <td>5.482659</td>
+      <td>5.482659</td>
+      <td>5.482659</td>
+      <td>5.695883</td>
+      <td>-0.201734</td>
     </tr>
     <tr>
       <th>2097</th>
-      <td>2.676481</td>
-      <td>2.676481</td>
-      <td>2.676481</td>
-      <td>2.619338</td>
-      <td>0.055684</td>
+      <td>5.482423</td>
+      <td>5.482423</td>
+      <td>5.482423</td>
+      <td>5.695627</td>
+      <td>-0.201715</td>
     </tr>
     <tr>
       <th>2098</th>
-      <td>2.686388</td>
-      <td>2.686388</td>
-      <td>2.686388</td>
-      <td>2.630182</td>
-      <td>0.054766</td>
+      <td>5.482121</td>
+      <td>5.482121</td>
+      <td>5.482121</td>
+      <td>5.695299</td>
+      <td>-0.201691</td>
     </tr>
     <tr>
       <th>2099</th>
-      <td>2.696764</td>
-      <td>2.696764</td>
-      <td>2.696764</td>
-      <td>2.641538</td>
-      <td>0.053804</td>
+      <td>5.481761</td>
+      <td>5.481761</td>
+      <td>5.481761</td>
+      <td>5.694908</td>
+      <td>-0.201662</td>
     </tr>
     <tr>
       <th>2100</th>
-      <td>2.707595</td>
-      <td>2.707595</td>
-      <td>2.707595</td>
-      <td>2.653394</td>
-      <td>0.052800</td>
+      <td>5.481351</td>
+      <td>5.481351</td>
+      <td>5.481351</td>
+      <td>5.694461</td>
+      <td>-0.201629</td>
     </tr>
   </tbody>
 </table>
@@ -3101,971 +1225,135 @@ Adjust calc:No frml for adjustment calc
 </div>
 </div>
 <div class="section" id="results">
-<h3><span class="section-number">4.6.2. </span>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.2. </span>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
 <p>The results from the simulation with the Carbon Tax rate endogenized so as to maintain its real value over time, are broadly consistent with the results from the ex ante real scenario performed above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">mpakreal</span><span class="o">.</span><span class="n">keep_plot_multi</span><span class="p">(</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">,</span><span class="mi">2010</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">showtype</span><span class="o">=</span><span class="s1">&#39;level&#39;</span> <span class="p">,</span><span class="n">diffpct</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
-<span class="n">fig</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpakreal</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/javascript">/* Put everything inside the global mpl namespace */
-/* global mpl */
-window.mpl = {};
-
-mpl.get_websocket_type = function () {
-    if (typeof WebSocket !== 'undefined') {
-        return WebSocket;
-    } else if (typeof MozWebSocket !== 'undefined') {
-        return MozWebSocket;
-    } else {
-        alert(
-            'Your browser does not have WebSocket support. ' +
-                'Please try Chrome, Safari or Firefox ≥ 6. ' +
-                'Firefox 4 and 5 are also supported but you ' +
-                'have to enable WebSockets in about:config.'
-        );
-    }
-};
-
-mpl.figure = function (figure_id, websocket, ondownload, parent_element) {
-    this.id = figure_id;
-
-    this.ws = websocket;
-
-    this.supports_binary = this.ws.binaryType !== undefined;
-
-    if (!this.supports_binary) {
-        var warnings = document.getElementById('mpl-warnings');
-        if (warnings) {
-            warnings.style.display = 'block';
-            warnings.textContent =
-                'This browser does not support binary websocket messages. ' +
-                'Performance may be slow.';
-        }
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
     }
 
-    this.imageObj = new Image();
-
-    this.context = undefined;
-    this.message = undefined;
-    this.canvas = undefined;
-    this.rubberband_canvas = undefined;
-    this.rubberband_context = undefined;
-    this.format_dropdown = undefined;
-
-    this.image_mode = 'full';
-
-    this.root = document.createElement('div');
-    this.root.setAttribute('style', 'display: inline-block');
-    this._root_extra_style(this.root);
-
-    parent_element.appendChild(this.root);
-
-    this._init_header(this);
-    this._init_canvas(this);
-    this._init_toolbar(this);
-
-    var fig = this;
-
-    this.waiting = false;
-
-    this.ws.onopen = function () {
-        fig.send_message('supports_binary', { value: fig.supports_binary });
-        fig.send_message('send_image_mode', {});
-        if (fig.ratio !== 1) {
-            fig.send_message('set_device_pixel_ratio', {
-                device_pixel_ratio: fig.ratio,
-            });
-        }
-        fig.send_message('refresh', {});
-    };
-
-    this.imageObj.onload = function () {
-        if (fig.image_mode === 'full') {
-            // Full images could contain transparency (where diff images
-            // almost always do), so we need to clear the canvas so that
-            // there is no ghosting.
-            fig.context.clearRect(0, 0, fig.canvas.width, fig.canvas.height);
-        }
-        fig.context.drawImage(fig.imageObj, 0, 0);
-    };
-
-    this.imageObj.onunload = function () {
-        fig.ws.close();
-    };
-
-    this.ws.onmessage = this._make_on_message_function(this);
-
-    this.ondownload = ondownload;
-};
-
-mpl.figure.prototype._init_header = function () {
-    var titlebar = document.createElement('div');
-    titlebar.classList =
-        'ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix';
-    var titletext = document.createElement('div');
-    titletext.classList = 'ui-dialog-title';
-    titletext.setAttribute(
-        'style',
-        'width: 100%; text-align: center; padding: 3px;'
-    );
-    titlebar.appendChild(titletext);
-    this.root.appendChild(titlebar);
-    this.header = titletext;
-};
-
-mpl.figure.prototype._canvas_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._root_extra_style = function (_canvas_div) {};
-
-mpl.figure.prototype._init_canvas = function () {
-    var fig = this;
-
-    var canvas_div = (this.canvas_div = document.createElement('div'));
-    canvas_div.setAttribute(
-        'style',
-        'border: 1px solid #ddd;' +
-            'box-sizing: content-box;' +
-            'clear: both;' +
-            'min-height: 1px;' +
-            'min-width: 1px;' +
-            'outline: 0;' +
-            'overflow: hidden;' +
-            'position: relative;' +
-            'resize: both;'
-    );
-
-    function on_keyboard_event_closure(name) {
-        return function (event) {
-            return fig.key_event(event, name);
-        };
+    .dataframe tbody tr th {
+        vertical-align: top;
     }
 
-    canvas_div.addEventListener(
-        'keydown',
-        on_keyboard_event_closure('key_press')
-    );
-    canvas_div.addEventListener(
-        'keyup',
-        on_keyboard_event_closure('key_release')
-    );
-
-    this._canvas_extra_style(canvas_div);
-    this.root.appendChild(canvas_div);
-
-    var canvas = (this.canvas = document.createElement('canvas'));
-    canvas.classList.add('mpl-canvas');
-    canvas.setAttribute('style', 'box-sizing: content-box;');
-
-    this.context = canvas.getContext('2d');
-
-    var backingStore =
-        this.context.backingStorePixelRatio ||
-        this.context.webkitBackingStorePixelRatio ||
-        this.context.mozBackingStorePixelRatio ||
-        this.context.msBackingStorePixelRatio ||
-        this.context.oBackingStorePixelRatio ||
-        this.context.backingStorePixelRatio ||
-        1;
-
-    this.ratio = (window.devicePixelRatio || 1) / backingStore;
-
-    var rubberband_canvas = (this.rubberband_canvas = document.createElement(
-        'canvas'
-    ));
-    rubberband_canvas.setAttribute(
-        'style',
-        'box-sizing: content-box; position: absolute; left: 0; top: 0; z-index: 1;'
-    );
-
-    // Apply a ponyfill if ResizeObserver is not implemented by browser.
-    if (this.ResizeObserver === undefined) {
-        if (window.ResizeObserver !== undefined) {
-            this.ResizeObserver = window.ResizeObserver;
-        } else {
-            var obs = _JSXTOOLS_RESIZE_OBSERVER({});
-            this.ResizeObserver = obs.ResizeObserver;
-        }
+    .dataframe thead th {
+        text-align: right;
     }
-
-    this.resizeObserverInstance = new this.ResizeObserver(function (entries) {
-        var nentries = entries.length;
-        for (var i = 0; i < nentries; i++) {
-            var entry = entries[i];
-            var width, height;
-            if (entry.contentBoxSize) {
-                if (entry.contentBoxSize instanceof Array) {
-                    // Chrome 84 implements new version of spec.
-                    width = entry.contentBoxSize[0].inlineSize;
-                    height = entry.contentBoxSize[0].blockSize;
-                } else {
-                    // Firefox implements old version of spec.
-                    width = entry.contentBoxSize.inlineSize;
-                    height = entry.contentBoxSize.blockSize;
-                }
-            } else {
-                // Chrome <84 implements even older version of spec.
-                width = entry.contentRect.width;
-                height = entry.contentRect.height;
-            }
-
-            // Keep the size of the canvas and rubber band canvas in sync with
-            // the canvas container.
-            if (entry.devicePixelContentBoxSize) {
-                // Chrome 84 implements new version of spec.
-                canvas.setAttribute(
-                    'width',
-                    entry.devicePixelContentBoxSize[0].inlineSize
-                );
-                canvas.setAttribute(
-                    'height',
-                    entry.devicePixelContentBoxSize[0].blockSize
-                );
-            } else {
-                canvas.setAttribute('width', width * fig.ratio);
-                canvas.setAttribute('height', height * fig.ratio);
-            }
-            canvas.setAttribute(
-                'style',
-                'width: ' + width + 'px; height: ' + height + 'px;'
-            );
-
-            rubberband_canvas.setAttribute('width', width);
-            rubberband_canvas.setAttribute('height', height);
-
-            // And update the size in Python. We ignore the initial 0/0 size
-            // that occurs as the element is placed into the DOM, which should
-            // otherwise not happen due to the minimum size styling.
-            if (fig.ws.readyState == 1 && width != 0 && height != 0) {
-                fig.request_resize(width, height);
-            }
-        }
-    });
-    this.resizeObserverInstance.observe(canvas_div);
-
-    function on_mouse_event_closure(name) {
-        return function (event) {
-            return fig.mouse_event(event, name);
-        };
-    }
-
-    rubberband_canvas.addEventListener(
-        'mousedown',
-        on_mouse_event_closure('button_press')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseup',
-        on_mouse_event_closure('button_release')
-    );
-    rubberband_canvas.addEventListener(
-        'dblclick',
-        on_mouse_event_closure('dblclick')
-    );
-    // Throttle sequential mouse events to 1 every 20ms.
-    rubberband_canvas.addEventListener(
-        'mousemove',
-        on_mouse_event_closure('motion_notify')
-    );
-
-    rubberband_canvas.addEventListener(
-        'mouseenter',
-        on_mouse_event_closure('figure_enter')
-    );
-    rubberband_canvas.addEventListener(
-        'mouseleave',
-        on_mouse_event_closure('figure_leave')
-    );
-
-    canvas_div.addEventListener('wheel', function (event) {
-        if (event.deltaY < 0) {
-            event.step = 1;
-        } else {
-            event.step = -1;
-        }
-        on_mouse_event_closure('scroll')(event);
-    });
-
-    canvas_div.appendChild(canvas);
-    canvas_div.appendChild(rubberband_canvas);
-
-    this.rubberband_context = rubberband_canvas.getContext('2d');
-    this.rubberband_context.strokeStyle = '#000000';
-
-    this._resize_canvas = function (width, height, forward) {
-        if (forward) {
-            canvas_div.style.width = width + 'px';
-            canvas_div.style.height = height + 'px';
-        }
-    };
-
-    // Disable right mouse context menu.
-    this.rubberband_canvas.addEventListener('contextmenu', function (_e) {
-        event.preventDefault();
-        return false;
-    });
-
-    function set_focus() {
-        canvas.focus();
-        canvas_div.focus();
-    }
-
-    window.setTimeout(set_focus, 100);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'mpl-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'mpl-button-group';
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'mpl-button-group';
-            continue;
-        }
-
-        var button = (fig.buttons[name] = document.createElement('button'));
-        button.classList = 'mpl-widget';
-        button.setAttribute('role', 'button');
-        button.setAttribute('aria-disabled', 'false');
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-
-        var icon_img = document.createElement('img');
-        icon_img.src = '_images/' + image + '.png';
-        icon_img.srcset = '_images/' + image + '_large.png 2x';
-        icon_img.alt = tooltip;
-        button.appendChild(icon_img);
-
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    var fmt_picker = document.createElement('select');
-    fmt_picker.classList = 'mpl-widget';
-    toolbar.appendChild(fmt_picker);
-    this.format_dropdown = fmt_picker;
-
-    for (var ind in mpl.extensions) {
-        var fmt = mpl.extensions[ind];
-        var option = document.createElement('option');
-        option.selected = fmt === mpl.default_extension;
-        option.innerHTML = fmt;
-        fmt_picker.appendChild(option);
-    }
-
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-};
-
-mpl.figure.prototype.request_resize = function (x_pixels, y_pixels) {
-    // Request matplotlib to resize the figure. Matplotlib will then trigger a resize in the client,
-    // which will in turn request a refresh of the image.
-    this.send_message('resize', { width: x_pixels, height: y_pixels });
-};
-
-mpl.figure.prototype.send_message = function (type, properties) {
-    properties['type'] = type;
-    properties['figure_id'] = this.id;
-    this.ws.send(JSON.stringify(properties));
-};
-
-mpl.figure.prototype.send_draw_message = function () {
-    if (!this.waiting) {
-        this.waiting = true;
-        this.ws.send(JSON.stringify({ type: 'draw', figure_id: this.id }));
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    var format_dropdown = fig.format_dropdown;
-    var format = format_dropdown.options[format_dropdown.selectedIndex].value;
-    fig.ondownload(fig, format);
-};
-
-mpl.figure.prototype.handle_resize = function (fig, msg) {
-    var size = msg['size'];
-    if (size[0] !== fig.canvas.width || size[1] !== fig.canvas.height) {
-        fig._resize_canvas(size[0], size[1], msg['forward']);
-        fig.send_message('refresh', {});
-    }
-};
-
-mpl.figure.prototype.handle_rubberband = function (fig, msg) {
-    var x0 = msg['x0'] / fig.ratio;
-    var y0 = (fig.canvas.height - msg['y0']) / fig.ratio;
-    var x1 = msg['x1'] / fig.ratio;
-    var y1 = (fig.canvas.height - msg['y1']) / fig.ratio;
-    x0 = Math.floor(x0) + 0.5;
-    y0 = Math.floor(y0) + 0.5;
-    x1 = Math.floor(x1) + 0.5;
-    y1 = Math.floor(y1) + 0.5;
-    var min_x = Math.min(x0, x1);
-    var min_y = Math.min(y0, y1);
-    var width = Math.abs(x1 - x0);
-    var height = Math.abs(y1 - y0);
-
-    fig.rubberband_context.clearRect(
-        0,
-        0,
-        fig.canvas.width / fig.ratio,
-        fig.canvas.height / fig.ratio
-    );
-
-    fig.rubberband_context.strokeRect(min_x, min_y, width, height);
-};
-
-mpl.figure.prototype.handle_figure_label = function (fig, msg) {
-    // Updates the figure title.
-    fig.header.textContent = msg['label'];
-};
-
-mpl.figure.prototype.handle_cursor = function (fig, msg) {
-    fig.rubberband_canvas.style.cursor = msg['cursor'];
-};
-
-mpl.figure.prototype.handle_message = function (fig, msg) {
-    fig.message.textContent = msg['message'];
-};
-
-mpl.figure.prototype.handle_draw = function (fig, _msg) {
-    // Request the server to send over a new figure.
-    fig.send_draw_message();
-};
-
-mpl.figure.prototype.handle_image_mode = function (fig, msg) {
-    fig.image_mode = msg['mode'];
-};
-
-mpl.figure.prototype.handle_history_buttons = function (fig, msg) {
-    for (var key in msg) {
-        if (!(key in fig.buttons)) {
-            continue;
-        }
-        fig.buttons[key].disabled = !msg[key];
-        fig.buttons[key].setAttribute('aria-disabled', !msg[key]);
-    }
-};
-
-mpl.figure.prototype.handle_navigate_mode = function (fig, msg) {
-    if (msg['mode'] === 'PAN') {
-        fig.buttons['Pan'].classList.add('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    } else if (msg['mode'] === 'ZOOM') {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.add('active');
-    } else {
-        fig.buttons['Pan'].classList.remove('active');
-        fig.buttons['Zoom'].classList.remove('active');
-    }
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Called whenever the canvas gets updated.
-    this.send_message('ack', {});
-};
-
-// A function to construct a web socket function for onmessage handling.
-// Called in the figure constructor.
-mpl.figure.prototype._make_on_message_function = function (fig) {
-    return function socket_on_message(evt) {
-        if (evt.data instanceof Blob) {
-            var img = evt.data;
-            if (img.type !== 'image/png') {
-                /* FIXME: We get "Resource interpreted as Image but
-                 * transferred with MIME type text/plain:" errors on
-                 * Chrome.  But how to set the MIME type?  It doesn't seem
-                 * to be part of the websocket stream */
-                img.type = 'image/png';
-            }
-
-            /* Free the memory for the previous frames */
-            if (fig.imageObj.src) {
-                (window.URL || window.webkitURL).revokeObjectURL(
-                    fig.imageObj.src
-                );
-            }
-
-            fig.imageObj.src = (window.URL || window.webkitURL).createObjectURL(
-                img
-            );
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        } else if (
-            typeof evt.data === 'string' &&
-            evt.data.slice(0, 21) === 'data:image/png;base64'
-        ) {
-            fig.imageObj.src = evt.data;
-            fig.updated_canvas_event();
-            fig.waiting = false;
-            return;
-        }
-
-        var msg = JSON.parse(evt.data);
-        var msg_type = msg['type'];
-
-        // Call the  "handle_{type}" callback, which takes
-        // the figure and JSON message as its only arguments.
-        try {
-            var callback = fig['handle_' + msg_type];
-        } catch (e) {
-            console.log(
-                "No handler for the '" + msg_type + "' message type: ",
-                msg
-            );
-            return;
-        }
-
-        if (callback) {
-            try {
-                // console.log("Handling '" + msg_type + "' message: ", msg);
-                callback(fig, msg);
-            } catch (e) {
-                console.log(
-                    "Exception inside the 'handler_" + msg_type + "' callback:",
-                    e,
-                    e.stack,
-                    msg
-                );
-            }
-        }
-    };
-};
-
-// from https://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas
-mpl.findpos = function (e) {
-    //this section is from http://www.quirksmode.org/js/events_properties.html
-    var targ;
-    if (!e) {
-        e = window.event;
-    }
-    if (e.target) {
-        targ = e.target;
-    } else if (e.srcElement) {
-        targ = e.srcElement;
-    }
-    if (targ.nodeType === 3) {
-        // defeat Safari bug
-        targ = targ.parentNode;
-    }
-
-    // pageX,Y are the mouse positions relative to the document
-    var boundingRect = targ.getBoundingClientRect();
-    var x = e.pageX - (boundingRect.left + document.body.scrollLeft);
-    var y = e.pageY - (boundingRect.top + document.body.scrollTop);
-
-    return { x: x, y: y };
-};
-
-/*
- * return a copy of an object with only non-object keys
- * we need this to avoid circular references
- * https://stackoverflow.com/a/24161582/3208463
- */
-function simpleKeys(original) {
-    return Object.keys(original).reduce(function (obj, key) {
-        if (typeof original[key] !== 'object') {
-            obj[key] = original[key];
-        }
-        return obj;
-    }, {});
-}
-
-mpl.figure.prototype.mouse_event = function (event, name) {
-    var canvas_pos = mpl.findpos(event);
-
-    if (name === 'button_press') {
-        this.canvas.focus();
-        this.canvas_div.focus();
-    }
-
-    var x = canvas_pos.x * this.ratio;
-    var y = canvas_pos.y * this.ratio;
-
-    this.send_message(name, {
-        x: x,
-        y: y,
-        button: event.button,
-        step: event.step,
-        guiEvent: simpleKeys(event),
-    });
-
-    /* This prevents the web browser from automatically changing to
-     * the text insertion cursor when the button is pressed.  We want
-     * to control all of the cursor setting manually through the
-     * 'cursor' event from matplotlib */
-    event.preventDefault();
-    return false;
-};
-
-mpl.figure.prototype._key_event_extra = function (_event, _name) {
-    // Handle any extra behaviour associated with a key event
-};
-
-mpl.figure.prototype.key_event = function (event, name) {
-    // Prevent repeat events
-    if (name === 'key_press') {
-        if (event.key === this._key) {
-            return;
-        } else {
-            this._key = event.key;
-        }
-    }
-    if (name === 'key_release') {
-        this._key = null;
-    }
-
-    var value = '';
-    if (event.ctrlKey && event.key !== 'Control') {
-        value += 'ctrl+';
-    }
-    else if (event.altKey && event.key !== 'Alt') {
-        value += 'alt+';
-    }
-    else if (event.shiftKey && event.key !== 'Shift') {
-        value += 'shift+';
-    }
-
-    value += 'k' + event.key;
-
-    this._key_event_extra(event, name);
-
-    this.send_message(name, { key: value, guiEvent: simpleKeys(event) });
-    return false;
-};
-
-mpl.figure.prototype.toolbar_button_onclick = function (name) {
-    if (name === 'download') {
-        this.handle_save(this, null);
-    } else {
-        this.send_message('toolbar_button', { name: name });
-    }
-};
-
-mpl.figure.prototype.toolbar_button_onmouseover = function (tooltip) {
-    this.message.textContent = tooltip;
-};
-
-///////////////// REMAINING CONTENT GENERATED BY embed_js.py /////////////////
-// prettier-ignore
-var _JSXTOOLS_RESIZE_OBSERVER=function(A){var t,i=new WeakMap,n=new WeakMap,a=new WeakMap,r=new WeakMap,o=new Set;function s(e){if(!(this instanceof s))throw new TypeError("Constructor requires 'new' operator");i.set(this,e)}function h(){throw new TypeError("Function is not a constructor")}function c(e,t,i,n){e=0 in arguments?Number(arguments[0]):0,t=1 in arguments?Number(arguments[1]):0,i=2 in arguments?Number(arguments[2]):0,n=3 in arguments?Number(arguments[3]):0,this.right=(this.x=this.left=e)+(this.width=i),this.bottom=(this.y=this.top=t)+(this.height=n),Object.freeze(this)}function d(){t=requestAnimationFrame(d);var s=new WeakMap,p=new Set;o.forEach((function(t){r.get(t).forEach((function(i){var r=t instanceof window.SVGElement,o=a.get(t),d=r?0:parseFloat(o.paddingTop),f=r?0:parseFloat(o.paddingRight),l=r?0:parseFloat(o.paddingBottom),u=r?0:parseFloat(o.paddingLeft),g=r?0:parseFloat(o.borderTopWidth),m=r?0:parseFloat(o.borderRightWidth),w=r?0:parseFloat(o.borderBottomWidth),b=u+f,F=d+l,v=(r?0:parseFloat(o.borderLeftWidth))+m,W=g+w,y=r?0:t.offsetHeight-W-t.clientHeight,E=r?0:t.offsetWidth-v-t.clientWidth,R=b+v,z=F+W,M=r?t.width:parseFloat(o.width)-R-E,O=r?t.height:parseFloat(o.height)-z-y;if(n.has(t)){var k=n.get(t);if(k[0]===M&&k[1]===O)return}n.set(t,[M,O]);var S=Object.create(h.prototype);S.target=t,S.contentRect=new c(u,d,M,O),s.has(i)||(s.set(i,[]),p.add(i)),s.get(i).push(S)}))})),p.forEach((function(e){i.get(e).call(e,s.get(e),e)}))}return s.prototype.observe=function(i){if(i instanceof window.Element){r.has(i)||(r.set(i,new Set),o.add(i),a.set(i,window.getComputedStyle(i)));var n=r.get(i);n.has(this)||n.add(this),cancelAnimationFrame(t),t=requestAnimationFrame(d)}},s.prototype.unobserve=function(i){if(i instanceof window.Element&&r.has(i)){var n=r.get(i);n.has(this)&&(n.delete(this),n.size||(r.delete(i),o.delete(i))),n.size||r.delete(i),o.size||cancelAnimationFrame(t)}},A.DOMRectReadOnly=c,A.ResizeObserver=s,A.ResizeObserverEntry=h,A}; // eslint-disable-line
-mpl.toolbar_items = [["Home", "Reset original view", "fa fa-home icon-home", "home"], ["Back", "Back to previous view", "fa fa-arrow-left icon-arrow-left", "back"], ["Forward", "Forward to next view", "fa fa-arrow-right icon-arrow-right", "forward"], ["", "", "", ""], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "fa fa-arrows icon-move", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis", "fa fa-square-o icon-check-empty", "zoom"], ["", "", "", ""], ["Download", "Download plot", "fa fa-floppy-o icon-save", "download"]];
-
-mpl.extensions = ["eps", "jpeg", "pgf", "pdf", "png", "ps", "raw", "svg", "tif"];
-
-mpl.default_extension = "png";/* global mpl */
-
-var comm_websocket_adapter = function (comm) {
-    // Create a "websocket"-like object which calls the given IPython comm
-    // object with the appropriate methods. Currently this is a non binary
-    // socket, so there is still some room for performance tuning.
-    var ws = {};
-
-    ws.binaryType = comm.kernel.ws.binaryType;
-    ws.readyState = comm.kernel.ws.readyState;
-    function updateReadyState(_event) {
-        if (comm.kernel.ws) {
-            ws.readyState = comm.kernel.ws.readyState;
-        } else {
-            ws.readyState = 3; // Closed state.
-        }
-    }
-    comm.kernel.ws.addEventListener('open', updateReadyState);
-    comm.kernel.ws.addEventListener('close', updateReadyState);
-    comm.kernel.ws.addEventListener('error', updateReadyState);
-
-    ws.close = function () {
-        comm.close();
-    };
-    ws.send = function (m) {
-        //console.log('sending', m);
-        comm.send(m);
-    };
-    // Register the callback with on_msg.
-    comm.on_msg(function (msg) {
-        //console.log('receiving', msg['content']['data'], msg);
-        var data = msg['content']['data'];
-        if (data['blob'] !== undefined) {
-            data = {
-                data: new Blob(msg['buffers'], { type: data['blob'] }),
-            };
-        }
-        // Pass the mpl event to the overridden (by mpl) onmessage function.
-        ws.onmessage(data);
-    });
-    return ws;
-};
-
-mpl.mpl_figure_comm = function (comm, msg) {
-    // This is the function which gets called when the mpl process
-    // starts-up an IPython Comm through the "matplotlib" channel.
-
-    var id = msg.content.data.id;
-    // Get hold of the div created by the display call when the Comm
-    // socket was opened in Python.
-    var element = document.getElementById(id);
-    var ws_proxy = comm_websocket_adapter(comm);
-
-    function ondownload(figure, _format) {
-        window.open(figure.canvas.toDataURL());
-    }
-
-    var fig = new mpl.figure(id, ws_proxy, ondownload, element);
-
-    // Call onopen now - mpl needs it, as it is assuming we've passed it a real
-    // web socket which is closed, not our websocket->open comm proxy.
-    ws_proxy.onopen();
-
-    fig.parent_element = element;
-    fig.cell_info = mpl.find_output_cell("<div id='" + id + "'></div>");
-    if (!fig.cell_info) {
-        console.error('Failed to find cell for figure', id, fig);
-        return;
-    }
-    fig.cell_info[0].output_area.element.on(
-        'cleared',
-        { fig: fig },
-        fig._remove_fig_handler
-    );
-};
-
-mpl.figure.prototype.handle_close = function (fig, msg) {
-    var width = fig.canvas.width / fig.ratio;
-    fig.cell_info[0].output_area.element.off(
-        'cleared',
-        fig._remove_fig_handler
-    );
-    fig.resizeObserverInstance.unobserve(fig.canvas_div);
-
-    // Update the output cell to use the data from the current canvas.
-    fig.push_to_output();
-    var dataURL = fig.canvas.toDataURL();
-    // Re-enable the keyboard manager in IPython - without this line, in FF,
-    // the notebook keyboard shortcuts fail.
-    IPython.keyboard_manager.enable();
-    fig.parent_element.innerHTML =
-        '<img src="' + dataURL + '" width="' + width + '">';
-    fig.close_ws(fig, msg);
-};
-
-mpl.figure.prototype.close_ws = function (fig, msg) {
-    fig.send_message('closing', msg);
-    // fig.ws.close()
-};
-
-mpl.figure.prototype.push_to_output = function (_remove_interactive) {
-    // Turn the data on the canvas into data in the output cell.
-    var width = this.canvas.width / this.ratio;
-    var dataURL = this.canvas.toDataURL();
-    this.cell_info[1]['text/html'] =
-        '<img src="' + dataURL + '" width="' + width + '">';
-};
-
-mpl.figure.prototype.updated_canvas_event = function () {
-    // Tell IPython that the notebook contents must change.
-    IPython.notebook.set_dirty(true);
-    this.send_message('ack', {});
-    var fig = this;
-    // Wait a second, then push the new image to the DOM so
-    // that it is saved nicely (might be nice to debounce this).
-    setTimeout(function () {
-        fig.push_to_output();
-    }, 1000);
-};
-
-mpl.figure.prototype._init_toolbar = function () {
-    var fig = this;
-
-    var toolbar = document.createElement('div');
-    toolbar.classList = 'btn-toolbar';
-    this.root.appendChild(toolbar);
-
-    function on_click_closure(name) {
-        return function (_event) {
-            return fig.toolbar_button_onclick(name);
-        };
-    }
-
-    function on_mouseover_closure(tooltip) {
-        return function (event) {
-            if (!event.currentTarget.disabled) {
-                return fig.toolbar_button_onmouseover(tooltip);
-            }
-        };
-    }
-
-    fig.buttons = {};
-    var buttonGroup = document.createElement('div');
-    buttonGroup.classList = 'btn-group';
-    var button;
-    for (var toolbar_ind in mpl.toolbar_items) {
-        var name = mpl.toolbar_items[toolbar_ind][0];
-        var tooltip = mpl.toolbar_items[toolbar_ind][1];
-        var image = mpl.toolbar_items[toolbar_ind][2];
-        var method_name = mpl.toolbar_items[toolbar_ind][3];
-
-        if (!name) {
-            /* Instead of a spacer, we start a new button group. */
-            if (buttonGroup.hasChildNodes()) {
-                toolbar.appendChild(buttonGroup);
-            }
-            buttonGroup = document.createElement('div');
-            buttonGroup.classList = 'btn-group';
-            continue;
-        }
-
-        button = fig.buttons[name] = document.createElement('button');
-        button.classList = 'btn btn-default';
-        button.href = '#';
-        button.title = name;
-        button.innerHTML = '<i class="fa ' + image + ' fa-lg"></i>';
-        button.addEventListener('click', on_click_closure(method_name));
-        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
-        buttonGroup.appendChild(button);
-    }
-
-    if (buttonGroup.hasChildNodes()) {
-        toolbar.appendChild(buttonGroup);
-    }
-
-    // Add the status bar.
-    var status_bar = document.createElement('span');
-    status_bar.classList = 'mpl-message pull-right';
-    toolbar.appendChild(status_bar);
-    this.message = status_bar;
-
-    // Add the close button to the window.
-    var buttongrp = document.createElement('div');
-    buttongrp.classList = 'btn-group inline pull-right';
-    button = document.createElement('button');
-    button.classList = 'btn btn-mini btn-primary';
-    button.href = '#';
-    button.title = 'Stop Interaction';
-    button.innerHTML = '<i class="fa fa-power-off icon-remove icon-large"></i>';
-    button.addEventListener('click', function (_evt) {
-        fig.handle_close(fig, {});
-    });
-    button.addEventListener(
-        'mouseover',
-        on_mouseover_closure('Stop Interaction')
-    );
-    buttongrp.appendChild(button);
-    var titlebar = this.root.querySelector('.ui-dialog-titlebar');
-    titlebar.insertBefore(buttongrp, titlebar.firstChild);
-};
-
-mpl.figure.prototype._remove_fig_handler = function (event) {
-    var fig = event.data.fig;
-    if (event.target !== this) {
-        // Ignore bubbled events from children.
-        return;
-    }
-    fig.close_ws(fig, {});
-};
-
-mpl.figure.prototype._root_extra_style = function (el) {
-    el.style.boxSizing = 'content-box'; // override notebook setting of border-box.
-};
-
-mpl.figure.prototype._canvas_extra_style = function (el) {
-    // this is important to make the div 'focusable
-    el.setAttribute('tabindex', 0);
-    // reach out to IPython and tell the keyboard manager to turn it's self
-    // off when our div gets focus
-
-    // location in version 3
-    if (IPython.notebook.keyboard_manager) {
-        IPython.notebook.keyboard_manager.register_events(el);
-    } else {
-        // location in version 2
-        IPython.keyboard_manager.register_events(el);
-    }
-};
-
-mpl.figure.prototype._key_event_extra = function (event, _name) {
-    // Check for shift+enter
-    if (event.shiftKey && event.which === 13) {
-        this.canvas_div.blur();
-        // select the cell after this one
-        var index = IPython.notebook.find_cell_index(this.cell_info[0]);
-        IPython.notebook.select(index + 1);
-    }
-};
-
-mpl.figure.prototype.handle_save = function (fig, _msg) {
-    fig.ondownload(fig, null);
-};
-
-mpl.find_output_cell = function (html_output) {
-    // Return the cell and output element which can be found *uniquely* in the notebook.
-    // Note - this is a bit hacky, but it is done because the "notebook_saving.Notebook"
-    // IPython event is triggered only after the cells have been serialised, which for
-    // our purposes (turning an active figure into a static one), is too late.
-    var cells = IPython.notebook.get_cells();
-    var ncells = cells.length;
-    for (var i = 0; i < ncells; i++) {
-        var cell = cells[i];
-        if (cell.cell_type === 'code') {
-            for (var j = 0; j < cell.output_area.outputs.length; j++) {
-                var data = cell.output_area.outputs[j];
-                if (data.data) {
-                    // IPython >= 3 moved mimebundle to data attribute of output
-                    data = data.data;
-                }
-                if (data['text/html'] === html_output) {
-                    return [cell, data, j];
-                }
-            }
-        }
-    }
-};
-
-// Register the function which deals with the matplotlib target/channel.
-// The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel !== null) {
-    IPython.notebook.kernel.comm_manager.register_target(
-        'matplotlib',
-        mpl.mpl_figure_comm
-    );
-}
-</script><div class="output text_html"><div id='f7552f10-b46d-4f83-8119-4deb61db3b10'></div></div></div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PAKCCEMISCO2CKN</th>
+      <th>PAKCCEMISCO2GKN</th>
+      <th>PAKCCEMISCO2OKN</th>
+      <th>PAKCCEMISCO2TKN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2022</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>-42.758320</td>
+      <td>-28.536509</td>
+      <td>-11.513706</td>
+      <td>-23.275423</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>-43.001668</td>
+      <td>-27.652364</td>
+      <td>-12.167191</td>
+      <td>-23.390856</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2096</th>
+      <td>-26.343289</td>
+      <td>-12.356617</td>
+      <td>-5.804034</td>
+      <td>-12.147898</td>
+    </tr>
+    <tr>
+      <th>2097</th>
+      <td>-26.200340</td>
+      <td>-12.274552</td>
+      <td>-5.753062</td>
+      <td>-12.067369</td>
+    </tr>
+    <tr>
+      <th>2098</th>
+      <td>-26.057915</td>
+      <td>-12.192940</td>
+      <td>-5.702492</td>
+      <td>-11.987293</td>
+    </tr>
+    <tr>
+      <th>2099</th>
+      <td>-25.915998</td>
+      <td>-12.111773</td>
+      <td>-5.652313</td>
+      <td>-11.907659</td>
+    </tr>
+    <tr>
+      <th>2100</th>
+      <td>-25.774578</td>
+      <td>-12.031041</td>
+      <td>-5.602516</td>
+      <td>-11.828457</td>
+    </tr>
+  </tbody>
+</table>
+<p>80 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpakreal</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2?KN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Emissions impact of a $30 USD Carbon tax&quot;</span><span class="p">,</span><span class="n">showfig</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\wb268970\.conda\envs\modelflow\lib\site-packages\IPython\core\pylabtools.py:151: UserWarning: This figure was using constrained_layout, but that is incompatible with subplots_adjust and/or tight_layout; disabling constrained_layout.
+  fig.canvas.print_figure(bytes_io, **kw)
+</pre></div>
+</div>
+<img alt="../../_images/MoreComplexScenarios_43_1.png" src="../../_images/MoreComplexScenarios_43_1.png" />
+</div>
 </div>
 </div>
 </div>
@@ -4109,10 +1397,10 @@ if (IPython.notebook.kernel !== null) {
             <p class="prev-next-title"><span class="section-number">2. </span>Scenario analysis</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../06_ModelAnalytics/Attribution.html" title="next page">
+    <a class='right-next' id="next-link" href="../06_ModelAnalytics/EigenValues.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Attribution</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Model eigenvalues</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
