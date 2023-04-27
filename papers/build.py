@@ -81,6 +81,7 @@ if 'latex-pdf' in options:
     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {texfile}',cwd=f'{bookdir}/_build/latex/')
     
     pdffile = Path(f'{bookdir}/_build/latex/'+(texfile.split('.')[0]+'.pdf')).absolute()
+    copy(pdffile,Path((f'{bookdir})
     
     wb.open(rf'file://{pdffile}', new=2)
      
