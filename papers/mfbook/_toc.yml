@@ -38,30 +38,30 @@ parts:
    - caption: Model Analytics
      numbered: true      
      chapters:   
-     - file: content/06_ModelAnalytics/EigenValues
+     - file: content/06_ModelAnalytics/ModelStructure
      - file: content/06_ModelAnalytics/Attribution
+     - file: content/06_ModelAnalytics/EigenValues
+
      
-   - caption: More modelflow features
+   - caption: Technical how tos
      numbered: true      
      chapters:   
-     - file: content/07_MoreFeatures/modelwidgets
-     sections:
-      - file: content/07_MoreFeatures/GettingHelp
-        #-file: content/07_MoreFeatures/ModifyingCharts
-        #- file: content/06_WBModels/MoreComplexScenarios
-
-
+     - file: content/07_MoreFeatures/GettingHelp
+   #  - file: content/07_MoreFeatures/modelwidgets
+   ##  - file: content/07_MoreFeatures/ExogenizingVariables
+    # - file: content/07_MoreFeatures/ModifyingModels
+    # - file: content/07_WBModels/FancyCharts
+    # - file: content/07_WBModels/FancyTables
+    # - file: content/07_WBModels/Onboardingmodels
+    # sections:
+    # - file: content/howto/onboard/eviews/onboard one model from  wf1
+    # - file: content/howto/onboard/eviews/onboard many models from wf1  
+    # - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
 
    - caption: References
      numbered: false
      chapters:
      - file: content/99_BackMatter/References
-
- 
-
-#     - file: content/05_SimpleNodel/SimulatingTheModel     
-
-
 
 # #   - caption: modifying models 
 # #     numbered: true  
