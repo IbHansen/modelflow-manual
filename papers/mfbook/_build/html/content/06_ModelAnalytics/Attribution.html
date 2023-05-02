@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Attribution &#8212; The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
+    <title>5. Decomposing the impact of a shock &#8212; The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. The model widget class" href="../07_MoreFeatures/modelwidgets.html" />
-    <link rel="prev" title="1. Model eigenvalues" href="EigenValues.html" />
+    <link rel="next" title="7. Model eigenvalues" href="EigenValues.html" />
+    <link rel="prev" title="1. Model analytics" href="ModelStructure.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -199,12 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">
-   2. Scenario analysis
+   4. Scenario analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">
-   4. More complex scenarios
+   6. More complex scenarios
   </a>
  </li>
 </ul>
@@ -215,25 +215,30 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="EigenValues.html">
-   1. Model eigenvalues
+  <a class="reference internal" href="ModelStructure.html">
+   1. Model analytics
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Attribution
+   5. Decomposing the impact of a shock
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="EigenValues.html">
+   7. Model eigenvalues
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  More modelflow features
+  Technical how tos
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../07_MoreFeatures/modelwidgets.html">
-   1. The model widget class
+  <a class="reference internal" href="../07_MoreFeatures/GettingHelp.html">
+   1. Getting Help
   </a>
  </li>
 </ul>
@@ -342,103 +347,127 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-the-workspace">
-   2.1. Prepare the workspace
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Decomposing the impact of a shock
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
-     2.1.1. Load the pre-existing model, data and descriptions
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prepare-the-workspace">
+     5.1. Prepare the workspace
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
+       5.1.1. Load the pre-existing model, data and descriptions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
+     5.2. The mathematics of attribution
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
+     5.3. Model attribution or  single equation attribution?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decomposing-the-changes-in-a-single-endogenous-variable-formula-attribution">
+     5.4. Decomposing the changes in a single endogenous variable - formula attribution
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-output-of-the-dekomp-method">
+       5.4.1. The output of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         dekomp()
+        </span>
+       </code>
+       method
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impacts-at-the-model-level-the-totdif-method">
+     5.5. Impacts at the model level: the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .totdif()
+      </span>
+     </code>
+     method
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
-   2.2. The mathematics of attribution
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revise-model-to-correct-problem-with-private-investment">
+   6. Revise model to correct problem with private investment
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
-   2.3. Model attribution or  single equation attribution?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formula-attribution">
-   2.4. Formula attribution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-equation-attribution-output">
-     2.4.1. Single equation attribution output
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#totdif-presents-the-impacts-at-the-model-level">
-   2.5. .totdif() presents the impacts at the model level
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#explain-all-will-visualize-the-results">
-     2.5.1. .explain_all will visualize the results
+     6.1. .explain_all will visualize the results
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-we-can-use-interactive-widgets">
-     2.5.2. Or we can use interactive widgets
+     6.2. Or we can use interactive widgets
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-advanced-model-attribution">
-     2.5.3. More advanced model attribution
+     6.3. More advanced model attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-chart">
-     2.5.4. Single equation attribution chart
+     6.4. Single equation attribution chart
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-in-pct-of-the-total">
-     2.5.5. Chart in pct of the total
+     6.5. Chart in pct of the total
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-for-one-year">
-     2.5.6. Chart for one year
+     6.6. Chart for one year
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting-of-attribution">
-     2.5.7. Sorting of attribution
+     6.7. Sorting of attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truncate-attribution">
-     2.5.8. Truncate attribution
+     6.8. Truncate attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attribution-when-comparing-time-frames">
-     2.5.9. Attribution when comparing time frames
+     6.9. Attribution when comparing time frames
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualizing-attribution-in-dependency-graphs">
-     2.5.10. Visualizing attribution in dependency graphs
+     6.10. Visualizing attribution in dependency graphs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-     2.5.11. The attribution can be filtered and more levels can be displayed.
+     6.11. The attribution can be filtered and more levels can be displayed.
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-     2.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
+     6.12. Or it can be used in a dashboard (not avaiable in the offline manual)
     </a>
    </li>
   </ul>
@@ -453,7 +482,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Attribution</h1>
+                <h1>Decomposing the impact of a shock</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -463,103 +492,127 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-the-workspace">
-   2.1. Prepare the workspace
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Decomposing the impact of a shock
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
-     2.1.1. Load the pre-existing model, data and descriptions
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prepare-the-workspace">
+     5.1. Prepare the workspace
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-pre-existing-model-data-and-descriptions">
+       5.1.1. Load the pre-existing model, data and descriptions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
+     5.2. The mathematics of attribution
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
+     5.3. Model attribution or  single equation attribution?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decomposing-the-changes-in-a-single-endogenous-variable-formula-attribution">
+     5.4. Decomposing the changes in a single endogenous variable - formula attribution
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-output-of-the-dekomp-method">
+       5.4.1. The output of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         dekomp()
+        </span>
+       </code>
+       method
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impacts-at-the-model-level-the-totdif-method">
+     5.5. Impacts at the model level: the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .totdif()
+      </span>
+     </code>
+     method
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-mathematics-of-attribution">
-   2.2. The mathematics of attribution
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revise-model-to-correct-problem-with-private-investment">
+   6. Revise model to correct problem with private investment
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-attribution-or-single-equation-attribution">
-   2.3. Model attribution or  single equation attribution?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formula-attribution">
-   2.4. Formula attribution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#single-equation-attribution-output">
-     2.4.1. Single equation attribution output
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#totdif-presents-the-impacts-at-the-model-level">
-   2.5. .totdif() presents the impacts at the model level
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#explain-all-will-visualize-the-results">
-     2.5.1. .explain_all will visualize the results
+     6.1. .explain_all will visualize the results
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-we-can-use-interactive-widgets">
-     2.5.2. Or we can use interactive widgets
+     6.2. Or we can use interactive widgets
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-advanced-model-attribution">
-     2.5.3. More advanced model attribution
+     6.3. More advanced model attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#single-equation-attribution-chart">
-     2.5.4. Single equation attribution chart
+     6.4. Single equation attribution chart
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-in-pct-of-the-total">
-     2.5.5. Chart in pct of the total
+     6.5. Chart in pct of the total
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chart-for-one-year">
-     2.5.6. Chart for one year
+     6.6. Chart for one year
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting-of-attribution">
-     2.5.7. Sorting of attribution
+     6.7. Sorting of attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#truncate-attribution">
-     2.5.8. Truncate attribution
+     6.8. Truncate attribution
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attribution-when-comparing-time-frames">
-     2.5.9. Attribution when comparing time frames
+     6.9. Attribution when comparing time frames
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualizing-attribution-in-dependency-graphs">
-     2.5.10. Visualizing attribution in dependency graphs
+     6.10. Visualizing attribution in dependency graphs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-     2.5.11. The attribution can be filtered and more levels can be displayed.
+     6.11. The attribution can be filtered and more levels can be displayed.
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-     2.5.12. Or it can be used in a dashboard (not avaiable in the offline manual)
+     6.12. Or it can be used in a dashboard (not avaiable in the offline manual)
     </a>
    </li>
   </ul>
@@ -573,15 +626,15 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="attribution">
-<h1><span class="section-number">2. </span>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="decomposing-the-impact-of-a-shock">
+<h1><span class="section-number">5. </span>Decomposing the impact of a shock<a class="headerlink" href="#decomposing-the-impact-of-a-shock" title="Permalink to this headline">¶</a></h1>
 <p>When working with a model it is often useful to have a better sense of the contribution of different channels to a final result.  For example, an increase in interest rates will tend to reduce investment and consumer demand – contributing to a reduction in GDP. At the same time, lower inflation as the higher interest rate takes effect will tend to work in the opposite direction.</p>
-<p>The modelflow method <code class="docutils literal notranslate"><span class="pre">.attributon</span></code> calculates the contributions of each channel to the overall result.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">tracedep()</span></code> and <code class="docutils literal notranslate"><span class="pre">tracepre()</span></code> methods introduced in the previous section give a sense of impacts, but the <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> methods <code class="docutils literal notranslate"><span class="pre">,dekomp()</span></code> and <code class="docutils literal notranslate"><span class="pre">.attributon</span></code> take that one step further by calculting the precise contribution of each channel to the overall result.</p>
 <div class="section" id="prepare-the-workspace">
-<h2><span class="section-number">2.1. </span>Prepare the workspace<a class="headerlink" href="#prepare-the-workspace" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Prepare the workspace<a class="headerlink" href="#prepare-the-workspace" title="Permalink to this headline">¶</a></h2>
 <p>As always before running <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> the python environment needs to be initialized and libraries to be used imported.</p>
 <div class="section" id="load-the-pre-existing-model-data-and-descriptions">
-<h3><span class="section-number">2.1.1. </span>Load the pre-existing model, data and descriptions<a class="headerlink" href="#load-the-pre-existing-model-data-and-descriptions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>Load the pre-existing model, data and descriptions<a class="headerlink" href="#load-the-pre-existing-model-data-and-descriptions" title="Permalink to this headline">¶</a></h3>
 <p>The file <code class="docutils literal notranslate"><span class="pre">pak.pcim</span></code> contains a dump of model equations, dataframe, simulation options and variable descriptions:</p>
 <ul class="simple">
 <li><p>Loads model and simulates to establish a baseline.</p></li>
@@ -591,8 +644,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
-<span class="n">alternative</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2020 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 29&quot;</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Carbon tax nominal 29&#39;</span><span class="p">)</span> <span class="c1"># simulates the model </span>
+<span class="n">alternative</span>  <span class="o">=</span>  <span class="n">baseline</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&lt;2020 2100&gt; PAKGGREVCO2CER PAKGGREVCO2GER PAKGGREVCO2OER = 30&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">alternative</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Carbon tax nominal 30&#39;</span><span class="p">)</span> <span class="c1"># simulates the model </span>
 </pre></div>
 </div>
 </div>
@@ -602,44 +655,64 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">current_per</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030,
+            2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040, 2041,
+            2042, 2043, 2044, 2045, 2046, 2047, 2048, 2049, 2050, 2051, 2052,
+            2053, 2054, 2055, 2056, 2057, 2058, 2059, 2060, 2061, 2062, 2063,
+            2064, 2065, 2066, 2067, 2068, 2069, 2070, 2071, 2072, 2073, 2074,
+            2075, 2076, 2077, 2078, 2079, 2080, 2081, 2082, 2083, 2084, 2085,
+            2086, 2087, 2088, 2089, 2090, 2091, 2092, 2093, 2094, 2095, 2096,
+            2097, 2098, 2099, 2100],
+           dtype=&#39;int64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="the-mathematics-of-attribution">
-<h2><span class="section-number">2.2. </span>The mathematics of attribution<a class="headerlink" href="#the-mathematics-of-attribution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>The mathematics of attribution<a class="headerlink" href="#the-mathematics-of-attribution" title="Permalink to this headline">¶</a></h2>
 <p>At its root the idea of attribution is simply taking the total derivative of the model to identify the sensitivity of the equation we are interested in to changes elsewhere in the model and then combine that with the changes in other variables.</p>
 <p>Take a variable y that is a function of two other variables a and b.  In the model the relationship might be written as:</p>
 <p><span class="math notranslate nohighlight">\(y = f(a,b)\)</span></p>
 <p>If there are two observations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e935c3cc-0798-43a5-995e-a150596541b7">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-e935c3cc-0798-43a5-995e-a150596541b7" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-4d6bbf05-29f4-44e1-91b1-1d16a50b9bbe">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-4d6bbf05-29f4-44e1-91b1-1d16a50b9bbe" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
 y_0 = f(a_0,b_0)\\
 y_1 = f(a_1,b_1)
 \end{eqnarray}\]</div>
 <p>then we also have the change in all three variables <span class="math notranslate nohighlight">\(\Delta y, \Delta a, \Delta b\)</span> and the total derivative of y can be written as:</p>
 <p><span class="math notranslate nohighlight">\(\Delta y = \underbrace{\Delta a \dfrac{\partial {f}}{\partial{a}}(a,b)}_{\Omega a} + 
 \underbrace{\Delta b \dfrac{\partial {f}}{\partial{b}}(a,b)}_{\Omega b}+Residual\)</span></p>
-<p>The first expresion can be called <span class="math notranslate nohighlight">\(\Omega_a\)</span> or the contribution of changes in a to changes in y, and the second <span class="math notranslate nohighlight">\(\Omega_b\)</span>  or the contribution fo changes in b to changes in y.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"> <span class="pre">.totdif()</span></code> is used to calculate attributions. It performs a numerical approximation of <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> by performing two runs of the model:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-455b5a84-4b74-4b12-8d91-1d675271bf8c">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-455b5a84-4b74-4b12-8d91-1d675271bf8c" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
+<p>The first expresion can be called <span class="math notranslate nohighlight">\(\Omega_a\)</span> or the contribution of changes in a to changes in y, and the second <span class="math notranslate nohighlight">\(\Omega_b\)</span>,  or the contribution of changes in b to changes in y.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"> <span class="pre">.totdif()</span></code> performs a numerical approximation of <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> by performing two runs of the model:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-79717628-c76f-4df3-a183-d2f2459e25fe">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-79717628-c76f-4df3-a183-d2f2459e25fe" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
 y_0&amp;=&amp;f(a_{0},b_{0}) \\
 y_1&amp;=&amp;f(a_0+\Delta a,b_{0}+ \Delta b)
 \end{eqnarray}\]</div>
 <p>and calculates <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d824ece3-3c31-407a-aac2-365250ea933b">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-d824ece3-3c31-407a-aac2-365250ea933b" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
+<div class="amsmath math notranslate nohighlight" id="equation-e49bfc00-4065-4783-86d3-d5016fb3334a">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-e49bfc00-4065-4783-86d3-d5016fb3334a" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}  
 \Omega f_a&amp;=&amp;f(a_1,b_1 )-f(a_1-\Delta a,b_1) \\
 \Omega f_b&amp;=&amp;f(a_1,b_1 )-f(a_1,b_1-\Delta  b)
 \end{eqnarray}\]</div>
 <p>And:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed80eadb-e40a-463d-a1ff-b78d57f1891f">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-ed80eadb-e40a-463d-a1ff-b78d57f1891f" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-38ed83e7-4cc1-4007-a5ef-26a1e790515e">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-38ed83e7-4cc1-4007-a5ef-26a1e790515e" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
 residual = \Omega f_a + \Omega f_b -(y_1 - y_0) 
 \end{eqnarray}\]</div>
 <p>If the model is fairly linear, the residual will be small.</p>
 </div>
 <div class="section" id="model-attribution-or-single-equation-attribution">
-<h2><span class="section-number">2.3. </span>Model attribution or  single equation attribution?<a class="headerlink" href="#model-attribution-or-single-equation-attribution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Model attribution or  single equation attribution?<a class="headerlink" href="#model-attribution-or-single-equation-attribution" title="Permalink to this headline">¶</a></h2>
 <p>Above the relationship between y, a, and b was summarized by the function f().</p>
 <p><span class="math notranslate nohighlight">\(f(a,b)\)</span> could represent a single equation in the model or it could represent the entire model. In the first instance, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> would be treated as exogenous variables in the attribution calculation.  In the second instance, they would be all of the endogenous and exoegnous variables that directly and indirectly impact y.</p>
 <p>Assume the simple equation example such that  <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are simple variables. When <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> reflect the difference across scenarios (say the value of the three variables in <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> less the value in <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> then;</p>
@@ -647,17 +720,37 @@ residual = \Omega f_a + \Omega f_b -(y_1 - y_0)
 <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_a}{\Delta y}\bigg]\)</span>  <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_b}{\Delta y}\bigg]\)</span> are the share of the change in y explained by a and b respectively.</p>
 <p>If <span class="math notranslate nohighlight">\(\Delta y\)</span>, <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span> are the changes over time (<span class="math notranslate nohighlight">\(\Delta y_t=y_t-y_{t-1}\)</span>), then <span class="math notranslate nohighlight">\(\Omega_a\)</span>, <span class="math notranslate nohighlight">\(\Omega_b\)</span> are the contributions of a and b to the rate of growth of y, while <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_a}{\Delta y_{t-1}}\bigg]\)</span>  <span class="math notranslate nohighlight">\(100*\bigg[\cfrac{\Omega_b}{\Delta y_{t-1}}\bigg]\)</span> are are the contributions of a and b to the rate of growth of y.</p>
 </div>
-<div class="section" id="formula-attribution">
-<h2><span class="section-number">2.4. </span>Formula attribution<a class="headerlink" href="#formula-attribution" title="Permalink to this headline">¶</a></h2>
-<p>Attribution analysis on the formula level is performed by the method <strong>.dekomp</strong>.</p>
-<p>This method utilizes that two attributes .basedf and .lastdf containing the first and the last run are contained in the model instance. Also all the formulas are contained in the instance. Therefore a model, just with one formula - is created. Then experiments mentioned above is run for each period and each right hand side variable.</p>
-<div class="section" id="single-equation-attribution-output">
-<h3><span class="section-number">2.4.1. </span>Single equation attribution output<a class="headerlink" href="#single-equation-attribution-output" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">dekomp()</span></code> method calculates the contribution to changes in the level of the dependent variable in a given equation.  In the example below the contribution to the change in Total emissions is decomposed into the contribution from each of three sources in the model, the consumption of Crude Oil, Natural Gas and Coal.  As the equation for total emissions is just the sum of the three this is a fairly trivial decomposition, but it provides an easily understood illustration of the process at work.</p>
+<div class="section" id="decomposing-the-changes-in-a-single-endogenous-variable-formula-attribution">
+<h2><span class="section-number">5.4. </span>Decomposing the changes in a single endogenous variable - formula attribution<a class="headerlink" href="#decomposing-the-changes-in-a-single-endogenous-variable-formula-attribution" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> method <code class="docutils literal notranslate"><span class="pre">.dekomp()</span></code> isd used to calculate the contribution of different RHS variables to the change in an endogenous variable.</p>
+<p>This method utilizes that each model object always stores the initial and most recent simulation result in two dataframes called <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code>. The model object also all contains the equations of the model.</p>
+<div class="section" id="the-output-of-the-dekomp-method">
+<h3><span class="section-number">5.4.1. </span>The output of the <code class="docutils literal notranslate"><span class="pre">dekomp()</span></code> method<a class="headerlink" href="#the-output-of-the-dekomp-method" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">dekomp()</span></code> method calculates the contribution to changes in the level of the dependent variables in a given equation. It does not calculate the contributions of variables that determine the changes observed in the RHS variables themselves.</p>
+<p>In the example below the contribution to the change in Total emissions is decomposed into the contribution from each of three sources in the model, the consumption of Crude Oil, Natural Gas and Coal.  As the equation for total emissions is just the sum of the three this is a fairly trivial decomposition, but it provides an easily understood illustration of the process at work.</p>
 <p>The results of the <code class="docutils literal notranslate"><span class="pre">.dekomp</span></code> command are divided into 4 separate tables.</p>
 <ol class="simple">
 <li><p>The first table of output shows the changes that are to be explained/ <strong>The changes are always drawn from the most solution, i.e. from the <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> DataFrames</strong> of the model object.</p></li>
-<li><p>The seond table shows the changes between the contributions of the LHS variables to the changes in the RHS variable.  Because the equation is just and additive identity, these amount to the changes in each of the variables themselves.</p></li>
+<li><p>The seond table shows the changes between the contributions of the LHS variables to the changes in the RHS variable.  Because this equation is an additive identity, these amount to the changes in each of the variables themselves.</p></li>
+<li><p>the third table expresses these changes as a share of the total change.</p></li>
+<li><p>The last shows the contributions of these changes to the change in the growth rate of the deopendent variable (these results would need to be multiplied by 100 to see that they add to the totals in table 1.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKCCEMISCO2TKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">frml</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKCCEMISCO2TKN : FRML &lt;IDENT&gt; PAKCCEMISCO2TKN = PAKCCEMISCO2CKN+PAKCCEMISCO2OKN+PAKCCEMISCO2GKN $
+</pre></div>
+</div>
+</div>
+</div>
+<p>The results of the <code class="docutils literal notranslate"><span class="pre">.dekomp</span></code> command are divided into 4 separate tables.</p>
+<ol class="simple">
+<li><p>The first table of output shows the changes that are to be explained/ <strong>The changes are always drawn from the most solution, i.e. from the <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> and <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> DataFrames</strong> of the model object.</p></li>
+<li><p>The seond table shows the changes between the contributions of the LHS variables to the changes in the RHS variable.  Because this equation is an additive identity, these amount to the changes in each of the variables themselves.</p></li>
 <li><p>the third table expresses these changes as a share of the total change.</p></li>
 <li><p>The last shows the contributions of these changes to the change in the growth rate of the deopendent variable (these results would need to be multiplied by 100 to see that they add to the totals in table 1.</p></li>
 </ol>
@@ -746,9 +839,9 @@ PAKCCEMISCO2GKN 0         -0.1%       -0.1%       -0.1%       -0.1%       -0.1% 
                       2020       2021       2022       2023       2024       2025
 Variable    lag                                                                  
 Base        0         1.67       1.82       1.98       2.14       2.30       2.45
-Alternative 0         1.72       1.89       2.06       2.23       2.39       2.55
-Difference  0         0.06       0.07       0.08       0.09       0.09       0.10
-Percent     0         3.34       3.77       4.04       4.14       4.11       3.99
+Alternative 0         1.72       1.89       2.07       2.23       2.39       2.55
+Difference  0         0.06       0.07       0.08       0.09       0.10       0.10
+Percent     0         3.40       3.84       4.11       4.21       4.18       4.06
 
  Contributions to differende for  PAKNECONPRVTXN
                          2020       2021       2022       2023       2024       2025
@@ -757,18 +850,18 @@ PAKNECONENGYSH 0        -0.00      -0.00      -0.00      -0.00      -0.00      -
 PAKCESENGYCON  0        -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
 PAKNECONENGYXN 0         0.01       0.01       0.01       0.01       0.01       0.01
 PAKNECONOTHRSH 0        -0.00      -0.00      -0.00      -0.00      -0.00      -0.00
-PAKNECONOTHRXN 0         0.04       0.06       0.07       0.08       0.08       0.08
+PAKNECONOTHRXN 0         0.04       0.06       0.07       0.08       0.08       0.09
 
  Share of contributions to differende for  PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
 Variable       lag                                                                        
 PAKNECONOTHRXN 0           77%         81%         83%         85%         86%         86%
-PAKNECONENGYXN 0           24%         20%         17%         16%         15%         14%
+PAKNECONENGYXN 0           23%         20%         17%         16%         15%         14%
 PAKNECONENGYSH 0           -0%         -0%         -0%         -0%         -0%         -0%
 PAKCESENGYCON  0           -0%         -0%         -0%         -0%         -0%         -0%
 PAKNECONOTHRSH 0           -0%         -0%         -0%         -0%         -0%         -0%
-Total          0          101%        101%        101%        101%        101%        100%
-Residual       0            1%          1%          1%          1%          1%          0%
+Total          0          101%        101%        101%        101%        101%        101%
+Residual       0            1%          1%          1%          1%          1%          1%
 
  Contribution to growth rate PAKNECONPRVTXN
                           2020        2021        2022        2023        2024        2025
@@ -863,7 +956,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 </div>
-<p>These results are more interesting and indicate that much of the initial impact on prices is coming the increase in the price of imported goods (which includes a large fuel component). As time progresses the imported inflation component declines and the lagged consumption effect dominates.  Other factors such as the cost of domestically produced goods play a larger role and the net impact of imported prices (the total of the contemporaneous and lagged value) approaches zero. Cyclical pressure are initially adding to inflation before declining and eventually turning negative.</p>
+<p>These results indicate that much of the initial impact on prices is coming the increase in the price of imported goods (which includes a large fuel component). As time progresses, the imported inflation component declines and the lagged consumption price dominates.  Other factors such as the cost of domestically produced goods play a larger role and the net impact of imported prices (the total of the contemporaneous and lagged value) approaches zero. Cyclical pressure are initially adding to inflation before declining and eventually turning negative.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dif</span><span class="o">.</span><span class="n">df</span>
@@ -942,7 +1035,8 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 <p>81 rows × 1 columns</p>
 </div></div></div>
 </div>
-<p>The dekomp_plot with option pct=False shows the change in the level of the LHS variable decomposed into the contribution of</p>
+<p>The dekomp_plot with option pct=False shows the change in the level of the LHS variable returns three data frames.</p>
+<p>The first (named control below) shows the pre-shock and post shock levels of the dependent variable and their differences.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">control</span><span class="p">,</span><span class="n">delta</span><span class="p">,</span><span class="n">contributions</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp</span><span class="p">(</span><span class="s1">&#39;PAKNECONOTHRXN&#39;</span><span class="p">,</span><span class="n">lprint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1125,6 +1219,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 <p>4 rows × 81 columns</p>
 </div></div></div>
 </div>
+<p>The second dataframe shows the changes in the various RHS variables, several of which occur with bot current and lagged values. In this case of the price variables, this is because they enter the original equation as inflation rates (the change in levels over time).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta</span>
@@ -1477,6 +1572,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 <p>11 rows × 81 columns</p>
 </div></div></div>
 </div>
+<p>The final dataframe is the omegas for each variable.  For the variables that appear as growth rates the Omegas would have to be added together to get a sense of the contribution of the variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contributions</span> <span class="c1"># as a percent of the total change (the omegas)</span>
@@ -1888,7 +1984,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_25_0.png" src="../../_images/Attribution_25_0.png" />
+<img alt="../../_images/Attribution_30_0.png" src="../../_images/Attribution_30_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1898,7 +1994,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_26_0.png" src="../../_images/Attribution_26_0.png" />
+<img alt="../../_images/Attribution_31_0.png" src="../../_images/Attribution_31_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1908,7 +2004,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_27_0.png" src="../../_images/Attribution_27_0.png" />
+<img alt="../../_images/Attribution_32_0.png" src="../../_images/Attribution_32_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1920,7 +2016,7 @@ PAKNECONOTHRXN_X  0        -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method dekomp_plot in module modelclass:
 
-dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=&lt;function Dekomp_Mixin.&lt;lambda&gt; at 0x000001C0C7ABE160&gt;, time_att=False) method of modelclass.model instance
+dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0, lag=True, rename=True, nametrans=&lt;function Dekomp_Mixin.&lt;lambda&gt; at 0x000002531BE04B80&gt;, time_att=False) method of modelclass.model instance
     Returns  a chart with attribution for a variable over the smpl  
     
     Parameters
@@ -1962,9 +2058,9 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 </div>
-<div class="section" id="totdif-presents-the-impacts-at-the-model-level">
-<h2><span class="section-number">2.5. </span>.totdif() presents the impacts at the model level<a class="headerlink" href="#totdif-presents-the-impacts-at-the-model-level" title="Permalink to this headline">¶</a></h2>
-<p>The method <code class="docutils literal notranslate"><span class="pre">.totdif()</span></code> returns an instance  the totdif class, which provides a number of methods and properties to explore the attribution at the model level.</p>
+<div class="section" id="impacts-at-the-model-level-the-totdif-method">
+<h2><span class="section-number">5.5. </span>Impacts at the model level: the <code class="docutils literal notranslate"><span class="pre">.totdif()</span></code> method<a class="headerlink" href="#impacts-at-the-model-level-the-totdif-method" title="Permalink to this headline">¶</a></h2>
+<p>The method <code class="docutils literal notranslate"><span class="pre">.totdif()</span></code> returns an instance  the totdif class, which provides a number of methods and properties to explore decomposition at the model level.</p>
 <p>It works by solving the model numerous time, each time changing one of the right hand side variables and calculating the impact on the dependent variable. By default it uses the values from the <code class="docutils literal notranslate"><span class="pre">.lastdf</span></code> Dataframe as the shock values and the values in <code class="docutils literal notranslate"><span class="pre">.basedf</span></code> as the initial values.</p>
 <p>For the purpose of this exercise lets look at a simulation where monetary policy tightens raising the policy interest rate by 100 basis points for 3 years, and then look at the impact on inflation.</p>
 <p>For advanced users the RHS variables can be grouped into user defined blocks, which helps identify causal chains.</p>
@@ -1972,11 +2068,43 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">,</span><span class="n">baseline</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">modelload</span><span class="p">(</span><span class="s1">&#39;../models/pak.pcim&#39;</span><span class="p">,</span><span class="n">alfa</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">run</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Business as Usual&#39;</span><span class="p">)</span>
+<span class="n">mpak</span><span class="o">.</span><span class="n">smpl</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">2100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file read:  C:\mflow\modelflow-manual\papers\mfbook\content\models\pak.pcim
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026,
+            2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037,
+            2038, 2039, 2040, 2041, 2042, 2043, 2044, 2045, 2046, 2047, 2048,
+            2049, 2050, 2051, 2052, 2053, 2054, 2055, 2056, 2057, 2058, 2059,
+            2060, 2061, 2062, 2063, 2064, 2065, 2066, 2067, 2068, 2069, 2070,
+            2071, 2072, 2073, 2074, 2075, 2076, 2077, 2078, 2079, 2080, 2081,
+            2082, 2083, 2084, 2085, 2086, 2087, 2088, 2089, 2090, 2091, 2092,
+            2093, 2094, 2095, 2096, 2097, 2098, 2099, 2100],
+           dtype=&#39;int64&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">current_per</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030,
+            2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040, 2041,
+            2042, 2043, 2044, 2045, 2046, 2047, 2048, 2049, 2050, 2051, 2052,
+            2053, 2054, 2055, 2056, 2057, 2058, 2059, 2060, 2061, 2062, 2063,
+            2064, 2065, 2066, 2067, 2068, 2069, 2070, 2071, 2072, 2073, 2074,
+            2075, 2076, 2077, 2078, 2079, 2080, 2081, 2082, 2083, 2084, 2085,
+            2086, 2087, 2088, 2089, 2090, 2091, 2092, 2093, 2094, 2095, 2096,
+            2097, 2098, 2099, 2100],
+           dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -2059,79 +2187,35 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
       <td>6.670351</td>
     </tr>
     <tr>
-      <th>2021</th>
-      <td>7.056445</td>
+      <th>...</th>
+      <td>...</td>
     </tr>
     <tr>
-      <th>2022</th>
-      <td>7.287498</td>
+      <th>2096</th>
+      <td>9.673475</td>
     </tr>
     <tr>
-      <th>2023</th>
-      <td>7.376232</td>
+      <th>2097</th>
+      <td>9.678917</td>
     </tr>
     <tr>
-      <th>2024</th>
-      <td>7.362666</td>
+      <th>2098</th>
+      <td>9.683851</td>
     </tr>
     <tr>
-      <th>2025</th>
-      <td>7.285334</td>
+      <th>2099</th>
+      <td>9.688309</td>
     </tr>
     <tr>
-      <th>2026</th>
-      <td>7.171706</td>
-    </tr>
-    <tr>
-      <th>2027</th>
-      <td>7.039316</td>
-    </tr>
-    <tr>
-      <th>2028</th>
-      <td>6.899970</td>
-    </tr>
-    <tr>
-      <th>2029</th>
-      <td>6.763110</td>
-    </tr>
-    <tr>
-      <th>2030</th>
-      <td>6.637192</td>
+      <th>2100</th>
+      <td>9.692325</td>
     </tr>
   </tbody>
 </table>
+<p>85 rows × 1 columns</p>
 </div></div></div>
 </div>
-<p>Create a new dataframe for the shocks scenario and increase the Policy rate by 1 percentage point during the period 2025-2027.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#MPShockdf=baseline.copy() #Create new df as copy of the baseline</span>
-
-<span class="kn">import</span> <span class="nn">modelmf</span>
-
-
-
-<span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; WLDFCRUDE_PETRO + 30&#39;</span><span class="p">)</span>
-
-
-<span class="n">MPShockdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;WLDFCRUDE_PETRO&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#MPShockdf=baseline.copy() #Create new df as copy of the baseline</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">modelmf</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">MPShockdf</span><span class="o">=</span><span class="n">MPShockdf</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; WLDFCRUDE_PETRO + 30&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">MPShockdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;WLDFCRUDE_PETRO&#39;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;MPShockdf&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
+<p>Check to see if this is an endogenous variable or not:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check to see if a variable is endogenous or endogenous</span>
@@ -2145,24 +2229,143 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 </div>
 </div>
 </div>
+<p>It is endogenous so we will want in this case to exogenize the variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKFMLBLPOLYXN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">frml</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKFMLBLPOLYXN : FRML &lt;DAMP,STOC&gt; PAKFMLBLPOLYXN = (100*PAKFMLBLPOLYXN_A+100* (0.900155952396245*PAKFMLBLPOLYXN(-1)/100+(1-0.900155952396245)*(PAKMPPOLNATRXN/100+1.2*(((LOG(PAKNECONPRVTXN))-(LOG(PAKNECONPRVTXN(-1))))-PAKINFLEXPT/100)+0.5*PAKNYGDPGAP_/100)) ) * (1-PAKFMLBLPOLYXN_D)+ PAKFMLBLPOLYXN_X*PAKFMLBLPOLYXN_D $
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#newbase=baseline.copy() #Create new df as copy of the baseline  </span>
+
+<span class="c1"># Not needed if baseline exists</span>
+
+
+<span class="c1">#mpak.wb_behavioral={&#39;PAKFMLBLPOLYXN&#39;}</span>
+<span class="c1">#mpak.wb_behavioral</span>
+<span class="n">newbase</span><span class="o">=</span><span class="n">mpak</span><span class="o">.</span><span class="n">fix</span><span class="p">(</span><span class="n">baseline</span><span class="p">,</span><span class="s1">&#39;PAKFMLBLPOLYXN&#39;</span><span class="p">)</span>
+
+<span class="c1">#MUST create a new baseline with the variables fixed</span>
+<span class="n">newbase</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">newbase</span><span class="p">,</span><span class="mi">2016</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Baseline&#39;</span><span class="p">)</span> <span class="c1"># simulates the model </span>
+<span class="n">mpak</span><span class="o">.</span><span class="n">basedf</span><span class="o">=</span><span class="n">newbase</span> <span class="c1"># need to reset the baseline which is used for comparisons</span>
+
+
+
+<span class="c1">#result = mpak(alternative,2020,2100,keep=&#39;Carbon tax nominal 29&#39;) # simulates the model </span>
+<span class="c1">#MPShock[&#39;PAKFMLBLPOLYXN_X&#39;]=MPShock[&#39;PAKFMLBLPOLYXN&#39;]</span>
+<span class="c1">#MPShock[&#39;PAKFMLBLPOLYXN_D&#39;]=1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The folowing variables are fixed
+PAKFMLBLPOLYXN
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newbase</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2020</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;PAKFMLBLPOLYXN_D&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020    1.0
+2021    1.0
+2022    1.0
+2023    1.0
+2024    1.0
+2025    1.0
+2026    1.0
+2027    1.0
+2028    1.0
+2029    1.0
+2030    1.0
+Name: PAKFMLBLPOLYXN_D, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a new dataframe for the shocks scenario and increase the Policy rate by 1 percentage point during the period 2025-2027.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">modelmf</span>  <span class="c1"># needed to add the mfcalc functionality to pandas DatFarames</span>
+
+<span class="n">MPShock</span><span class="o">=</span><span class="n">newbase</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2025 2027&gt; PAKFMLBLPOLYXN_X + 1&#39;</span><span class="p">)</span>
+
+<span class="n">MPShock</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2023</span><span class="p">:</span><span class="mi">2030</span><span class="p">,</span><span class="s1">&#39;PAKFMLBLPOLYXN_X&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023    7.376232
+2024    7.362666
+2025    8.285334
+2026    8.171706
+2027    8.039316
+2028    6.899970
+2029    6.763110
+2030    6.637192
+Name: PAKFMLBLPOLYXN_X, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;*PAN*&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">des</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MPres</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">MPShockdf</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Increase Policy rate 1 ppt 2025-27&#39;</span><span class="p">)</span> <span class="c1"># simulates the model</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHNPANUSATLS            : Exchange rate LCU / US$ - China
+CHNPANUSATLS_VALUE_2010 : CHNPANUSATLS_VALUE_2010
+DEUPANUSATLS            : Exchange rate LCU / US$ - Germany
+DEUPANUSATLS_VALUE_2010 : DEUPANUSATLS_VALUE_2010
+FRAPANUSATLS            : Exchange rate LCU / US$ - France
+FRAPANUSATLS_VALUE_2010 : FRAPANUSATLS_VALUE_2010
+GBRPANUSATLS            : Exchange rate LCU / US$ - Great Britain
+GBRPANUSATLS_VALUE_2010 : GBRPANUSATLS_VALUE_2010
+ITAPANUSATLS            : Exchange rate LCU / US$ - Italy
+ITAPANUSATLS_VALUE_2010 : ITAPANUSATLS_VALUE_2010
+PAKPANEUATLS            : Official exchange rate (LCU per EURO, period avg)
+PAKPANEUATLSK           : Official exchange rate, Real (LCU per EURO, period avg)
+PAKPANEUATLS_VALUE_2010 : PAKPANEUATLS_VALUE_2010
+PAKPANUSATLS            : Exchange rate LCU / US$ - Pakistan
+PAKPANUSATLSK           : Official exchange rate, Real (LCU per US$, period avg)
+PAKPANUSATLS_A          : Add factor:Exchange rate LCU / US$ - Pakistan
+PAKPANUSATLS_D          : Fix dummy:Exchange rate LCU / US$ - Pakistan
+PAKPANUSATLS_FITTED     : Fitted  value:Exchange rate LCU / US$ - Pakistan
+PAKPANUSATLS_VALUE_2010 : PAKPANUSATLS_VALUE_2010
+PAKPANUSATLS_VALUE_2011 : PAKPANUSATLS_VALUE_2011
+PAKPANUSATLS_X          : Fix value:Exchange rate LCU / US$ - Pakistan
+TURPANUSATLS            : Exchange rate LCU / US$ - Turkey
+TURPANUSATLS_VALUE_2010 : TURPANUSATLS_VALUE_2010
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2040</span><span class="p">):</span>
-    <span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;3 years of 1 pct MP hike&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MPres</span> <span class="o">=</span> <span class="n">mpak</span><span class="p">(</span><span class="n">MPShock</span><span class="p">,</span><span class="mi">2016</span><span class="p">,</span><span class="mi">2100</span><span class="p">,</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;Increase Policy rate 1 ppt 2025-27&#39;</span><span class="p">)</span> <span class="c1"># simulates the model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">2050</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">=</span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEGDIFGOVKN PAKNEGDIFPRVKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;3 years of 1 pct MP hike&quot;</span><span class="p">)</span>
+<span class="n">fig</span>
 </pre></div>
 </div>
 </div>
@@ -2171,7 +2374,121 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_44_1.png" src="../../_images/Attribution_44_1.png" />
+<img alt="../../_images/Attribution_53_1.png" src="../../_images/Attribution_53_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNEGDIFPRVKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eviews</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PAKNEGDIFPRVKN : (PAKNEGDIFPRVKN/PAKNEGDIKSTKKN( - 1)) = 0.00212272413966296 + 0.970234989019907*(PAKNEGDIFPRVKN( - 1)/PAKNEGDIKSTKKN( - 2)) + (1 - 0.970234989019907)*(DLOG(PAKNYGDPPOTLKN) + PAKDEPR) + 0.0525240494260597*DLOG(PAKNEKRTTOTLCN/PAKNYGDPFCSTXN)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="revise-model-to-correct-problem-with-private-investment">
+<h1><span class="section-number">6. </span>Revise model to correct problem with private investment<a class="headerlink" href="#revise-model-to-correct-problem-with-private-investment" title="Permalink to this headline">¶</a></h1>
+<p>New eviews equation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DLOG</span><span class="p">(</span><span class="n">PAKNEGDIFPRVKN</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.131378303837</span><span class="o">-</span><span class="mf">0.141169219888</span><span class="o">*</span><span class="p">(</span><span class="n">LOG</span><span class="p">(</span><span class="n">PAKNEGDIFPRVKN</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">-</span><span class="n">LOG</span><span class="p">(</span><span class="mf">0.3</span><span class="o">*</span><span class="p">(</span><span class="n">PAKNYGDPPOTLKN</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">PAKNEKRTTOTLCN</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span><span class="o">*</span><span class="p">(</span><span class="n">PAKDEPR</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">DLOG</span><span class="p">(</span><span class="n">PAKLMEMPSTRLCN</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="n">DLOG</span><span class="p">(</span><span class="n">PAKNYGDPTFP</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mf">0.3</span><span class="p">)))</span><span class="o">+</span><span class="mi">1</span><span class="o">*</span><span class="n">DLOG</span><span class="p">(</span><span class="n">PAKNYGDPMKTPKN</span><span class="p">)</span><span class="o">-</span><span class="mf">0.05</span><span class="o">*</span><span class="n">DLOG</span><span class="p">(</span><span class="n">PAKNEKRTTOTLCN</span><span class="o">/</span><span class="n">PAKNEGDIFPRVXN</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mpak1,baseline = model.modelload(&#39;../models/pak.pcim&#39;,alfa=0.7,run=1,keep=&quot;Baseline&quot;)</span>
+<span class="n">mpakNEW</span><span class="p">,</span><span class="n">baselinereal</span> <span class="o">=</span> <span class="n">mpak</span><span class="o">.</span><span class="n">equpdate</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;fixable&gt; PAKNEGDIFPRVKN = EXP(LOG(PAKNEGDIFPRVKN(-1))-0.131378303837-0.141169219888*(LOG(PAKNEGDIFPRVKN(-1))-LOG(0.3*(PAKNYGDPPOTLKN(-1)/(PAKNEKRTTOTLCN(-1)))*(PAKDEPR(-1)+DLOG(PAKLMEMPSTRLCN(-1))+DLOG(PAKNYGDPTFP(-1))/0.3)))+1*DLOG(PAKNYGDPMKTPKN)-0.05*DLOG(PAKNEKRTTOTLCN/PAKNEGDIFPRVXN))</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">,</span><span class="n">add_add_factor</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">calc_add</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">newname</span><span class="o">=</span><span class="s1">&#39;Revised &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [24],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#mpak1,baseline = model.modelload(&#39;../models/pak.pcim&#39;,alfa=0.7,run=1,keep=&quot;Baseline&quot;)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">mpakNEW</span><span class="p">,</span><span class="n">baselinereal</span> <span class="o">=</span> <span class="n">mpak</span><span class="o">.</span><span class="n">equpdate</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="s1"> &lt;fixable&gt; PAKNEGDIFPRVKN = EXP(LOG(PAKNEGDIFPRVKN(-1))-0.131378303837-0.141169219888*(LOG(PAKNEGDIFPRVKN(-1))-LOG(0.3*(PAKNYGDPPOTLKN(-1)/(PAKNEKRTTOTLCN(-1)))*(PAKDEPR(-1)+DLOG(PAKLMEMPSTRLCN(-1))+DLOG(PAKNYGDPTFP(-1))/0.3)))+1*DLOG(PAKNYGDPMKTPKN)-0.05*DLOG(PAKNEKRTTOTLCN/PAKNEGDIFPRVXN))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="s1"> &#39;&#39;&#39;</span><span class="p">,</span><span class="n">add_add_factor</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">calc_add</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">newname</span><span class="o">=</span><span class="s1">&#39;Revised &#39;</span><span class="p">)</span>
+
+<span class="nn">File ~\.conda\envs\modelflow\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:2481,</span> in <span class="ni">Modify_Mixin.equpdate</span><span class="nt">(self, updateeq, newfunks, add_add_factor, calc_add, do_preprocess, newname)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2476</span> <span class="n">frmldict_update</span> <span class="o">=</span> <span class="p">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">endo_var</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frml</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">normalized</span><span class="si">}</span><span class="s1">$&#39;</span> <span class="k">for</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2477</span>                    <span class="n">frml</span><span class="p">,</span><span class="n">fname</span><span class="p">,</span><span class="n">nexpression</span> <span class="ow">in</span> <span class="n">frml2_normal</span><span class="p">}</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="k">if</span> <span class="n">add_add_factor</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2481</span>     <span class="n">frmldict_calc_add</span> <span class="o">=</span> <span class="p">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">endovar</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frml</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">calc_adjustment</span><span class="si">}</span><span class="s1">$&#39;</span> <span class="k">for</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2482</span>             <span class="n">frml</span><span class="p">,</span><span class="n">fname</span><span class="p">,</span><span class="n">nexpression</span> <span class="ow">in</span> <span class="n">frml2_normal</span> <span class="k">if</span> <span class="n">nexpression</span><span class="o">.</span><span class="n">endovar</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">endogene</span><span class="o">|</span><span class="bp">self</span><span class="o">.</span><span class="n">exogene</span><span class="o">|</span><span class="n">dfvars</span> <span class="p">}</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">else</span><span class="p">:</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2484</span>     <span class="n">frmldict_calc_add</span><span class="o">=</span><span class="p">{}</span>
+
+<span class="nn">File ~\.conda\envs\modelflow\lib\site-packages\ModelFlow-1.0.8-py3.9.egg\modelclass.py:2482,</span> in <span class="ni">&lt;dictcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2476</span> <span class="n">frmldict_update</span> <span class="o">=</span> <span class="p">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">endo_var</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frml</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">normalized</span><span class="si">}</span><span class="s1">$&#39;</span> <span class="k">for</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2477</span>                    <span class="n">frml</span><span class="p">,</span><span class="n">fname</span><span class="p">,</span><span class="n">nexpression</span> <span class="ow">in</span> <span class="n">frml2_normal</span><span class="p">}</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2480</span> <span class="k">if</span> <span class="n">add_add_factor</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2481</span>     <span class="n">frmldict_calc_add</span> <span class="o">=</span> <span class="p">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">endovar</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">frml</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nexpression</span><span class="o">.</span><span class="n">calc_adjustment</span><span class="si">}</span><span class="s1">$&#39;</span> <span class="k">for</span> 
+<span class="ne">-&gt; </span><span class="mi">2482</span>             <span class="n">frml</span><span class="p">,</span><span class="n">fname</span><span class="p">,</span><span class="n">nexpression</span> <span class="ow">in</span> <span class="n">frml2_normal</span> <span class="k">if</span> <span class="n">nexpression</span><span class="o">.</span><span class="n">endovar</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">endogene</span><span class="o">|</span><span class="bp">self</span><span class="o">.</span><span class="n">exogene</span><span class="o">|</span><span class="n">dfvars</span> <span class="p">}</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2483</span> <span class="k">else</span><span class="p">:</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2484</span>     <span class="n">frmldict_calc_add</span><span class="o">=</span><span class="p">{}</span>
+
+<span class="ne">AttributeError</span>: &#39;Normalized_frml&#39; object has no attribute &#39;endovar&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mpak</span><span class="o">.</span><span class="n">set_smpl</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="mi">2040</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN PAKNECONPRVTKN PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEEXPGNFSKN PAKNEIMPGNFSKN PAKFMLBLPOLYXN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difpctlevel</span><span class="o">.</span><span class="n">mul100</span><span class="o">.</span><span class="n">df</span><span class="p">)</span>
+    
+    
+<span class="c1">#mpak[&#39;PAKNECONPRVTKN&#39;].difpctlevel.df</span>
+<span class="c1">#mpak[&#39;PAKNECONPRVTKN&#39;].difpctlevel.df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      PAKNYGDPMKTPKN  PAKNECONPRVTKN  PAKNECONGOVTKN  PAKNEGDIFTOTKN  \
+2024    2.254220e-07    1.613720e-07    5.823880e-07        0.000001   
+2025    3.745243e-07    2.938799e-07    9.067130e-07        0.000002   
+2026    4.586167e-07    3.564450e-07    1.134333e-06        0.000002   
+2027    4.987732e-07    3.725283e-07    1.287033e-06        0.000003   
+2028    4.627886e-07    3.148205e-07    1.316371e-06        0.000003   
+2029    4.330686e-07    2.653726e-07    1.350662e-06        0.000003   
+2030    4.297807e-07    2.438668e-07    1.433047e-06        0.000004   
+2031   -3.631098e-01   -9.033275e-02    1.878607e-01       -1.406770   
+2032   -2.659031e-01   -1.417627e-02    2.462569e-01       -1.306756   
+2033   -1.859509e-01    4.177231e-02    2.769705e-01       -1.187282   
+2034   -1.235821e-01    7.882108e-02    2.864809e-01       -1.060803   
+2035   -7.837496e-02    9.886055e-02    2.786631e-01       -0.937009   
+2036   -4.906216e-02    1.043594e-01    2.563387e-01       -0.822739   
+2037   -3.357654e-02    9.824387e-02    2.224298e-01       -0.722107   
+2038   -2.927557e-02    8.365161e-02    1.803945e-01       -0.636869   
+2039   -3.326927e-02    6.363764e-02    1.340620e-01       -0.566949   
+2040   -4.275857e-02    4.090798e-02    8.715373e-02       -0.511041   
+
+      PAKNEEXPGNFSKN  PAKNEIMPGNFSKN  PAKFMLBLPOLYXN  
+2024   -7.410294e-08    5.492306e-07        0.000001  
+2025   -9.070256e-08    8.057560e-07        0.000002  
+2026   -1.136762e-07    9.966698e-07        0.000002  
+2027   -1.424973e-07    1.150330e-06        0.000003  
+2028   -1.754486e-07    1.216720e-06        0.000003  
+2029   -2.101360e-07    1.298913e-06        0.000004  
+2030   -2.454191e-07    1.418008e-06        0.000004  
+2031   -2.302107e-01    4.729784e-01       -2.709509  
+2032   -1.895107e-01    4.506397e-01       -2.856220  
+2033   -1.533526e-01    4.171611e-01       -2.862766  
+2034   -1.223573e-01    3.759685e-01       -2.757980  
+2035   -9.673109e-02    3.298524e-01       -2.572328  
+2036   -7.633147e-02    2.812408e-01       -2.335760  
+2037   -6.074688e-02    2.323559e-01       -2.075267  
+2038   -4.938262e-02    1.852081e-01       -1.812981  
+2039   -4.154481e-02    1.414905e-01       -1.565196  
+2040   -3.651347e-02    1.024489e-01       -1.342376  
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2288,11 +2605,11 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total dekomp took       :         1.625 Seconds
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_47_1.png" src="../../_images/Attribution_47_1.png" />
+<img alt="../../_images/Attribution_64_1.png" src="../../_images/Attribution_64_1.png" />
 </div>
 </div>
 <div class="section" id="explain-all-will-visualize-the-results">
-<h3><span class="section-number">2.5.1. </span>.explain_all will visualize the results<a class="headerlink" href="#explain-all-will-visualize-the-results" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.1. </span>.explain_all will visualize the results<a class="headerlink" href="#explain-all-will-visualize-the-results" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">showvar</span> <span class="o">=</span> <span class="s1">&#39;PAKNYGDPMKTPKN PAKCCEMISCO2CKN PAKCCEMISCO2OKN PAKCCEMISCO2GKN PAKGGREVTOTLCN&#39;</span>
@@ -2301,12 +2618,12 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_49_0.png" src="../../_images/Attribution_49_0.png" />
+<img alt="../../_images/Attribution_66_0.png" src="../../_images/Attribution_66_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="or-we-can-use-interactive-widgets">
-<h3><span class="section-number">2.5.2. </span>Or we can use interactive widgets<a class="headerlink" href="#or-we-can-use-interactive-widgets" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.2. </span>Or we can use interactive widgets<a class="headerlink" href="#or-we-can-use-interactive-widgets" title="Permalink to this headline">¶</a></h2>
 <p>This allows the user to select the specific variable of interest and what to display:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2330,7 +2647,7 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 <p>When the results are displayed, they can be filtered, sliced and diced in a number of ways.</p>
 </div>
 <div class="section" id="more-advanced-model-attribution">
-<h3><span class="section-number">2.5.3. </span>More advanced model attribution<a class="headerlink" href="#more-advanced-model-attribution" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.3. </span>More advanced model attribution<a class="headerlink" href="#more-advanced-model-attribution" title="Permalink to this headline">¶</a></h2>
 <p>For some  models (like the EBA bank stress test model) the number of changed exogenous variables can be large. Using a dictionary to contain the experiments allows us to create experiments where all variables for each country are analyzed, or each macro variable for all countries are analyzed.</p>
 <p>Also it is possible to use aggregated sums - useful for looking at impact on PD’s. Or just the last time period - useful for looking at CET1 ratios.</p>
 <p>If there are many experiments, data can be filtered in order to look only at the variables with an impact above a certain threshold.</p>
@@ -2338,7 +2655,7 @@ PAKINTREDIFF_X        : Fix value:External Interest Rate Spread Over Policy Rate
 the order of rows and/or columns - useful for bank names.</p>
 </div>
 <div class="section" id="single-equation-attribution-chart">
-<h3><span class="section-number">2.5.4. </span>Single equation attribution chart<a class="headerlink" href="#single-equation-attribution-chart" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.4. </span>Single equation attribution chart<a class="headerlink" href="#single-equation-attribution-chart" title="Permalink to this headline">¶</a></h2>
 <p>The results can be visualized in different ways.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2388,12 +2705,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_57_0.png" src="../../_images/Attribution_57_0.png" />
+<img alt="../../_images/Attribution_74_0.png" src="../../_images/Attribution_74_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="chart-in-pct-of-the-total">
-<h3><span class="section-number">2.5.5. </span>Chart in pct of the total<a class="headerlink" href="#chart-in-pct-of-the-total" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.5. </span>Chart in pct of the total<a class="headerlink" href="#chart-in-pct-of-the-total" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot</span><span class="p">(</span><span class="s1">&#39;PAKGGREVTOTLCN&#39;</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
@@ -2401,12 +2718,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_60_0.png" src="../../_images/Attribution_60_0.png" />
+<img alt="../../_images/Attribution_77_0.png" src="../../_images/Attribution_77_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="chart-for-one-year">
-<h3><span class="section-number">2.5.6. </span>Chart for one year<a class="headerlink" href="#chart-for-one-year" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.6. </span>Chart for one year<a class="headerlink" href="#chart-for-one-year" title="Permalink to this headline">¶</a></h2>
 <p>The attribution for one year can be dispalyed in a waterfall chart.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2416,12 +2733,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_62_0.png" src="../../_images/Attribution_62_0.png" />
+<img alt="../../_images/Attribution_79_0.png" src="../../_images/Attribution_79_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="sorting-of-attribution">
-<h3><span class="section-number">2.5.7. </span>Sorting of attribution<a class="headerlink" href="#sorting-of-attribution" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.7. </span>Sorting of attribution<a class="headerlink" href="#sorting-of-attribution" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="o">.</span><span class="n">dekomp_plot_per</span><span class="p">(</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">,</span><span class="n">per</span><span class="o">=</span><span class="mi">2040</span><span class="p">,</span><span class="n">pct</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">rename</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">sort</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ysize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
@@ -2433,12 +2750,12 @@ dekomp_plot(varnavn, sort=True, pct=True, per=&#39;&#39;, top=0.9, threshold=0.0
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_65_1.png" src="../../_images/Attribution_65_1.png" />
+<img alt="../../_images/Attribution_82_1.png" src="../../_images/Attribution_82_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="truncate-attribution">
-<h3><span class="section-number">2.5.8. </span>Truncate attribution<a class="headerlink" href="#truncate-attribution" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.8. </span>Truncate attribution<a class="headerlink" href="#truncate-attribution" title="Permalink to this headline">¶</a></h2>
 <p>Some equations have a lot of small contributions. These can be aggregated through the <code class="docutils literal notranslate"><span class="pre">threshold=&lt;some</span> <span class="pre">number&gt;</span></code> parameter.
 Variables for which all contributions are below the threshold will be lumped together in the <strong>small</strong> bin. Like below:</p>
 <div class="cell docutils container">
@@ -2452,12 +2769,12 @@ Variables for which all contributions are below the threshold will be lumped tog
   fig.canvas.print_figure(bytes_io, **kw)
 </pre></div>
 </div>
-<img alt="../../_images/Attribution_67_1.png" src="../../_images/Attribution_67_1.png" />
+<img alt="../../_images/Attribution_84_1.png" src="../../_images/Attribution_84_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="attribution-when-comparing-time-frames">
-<h3><span class="section-number">2.5.9. </span>Attribution when comparing time frames<a class="headerlink" href="#attribution-when-comparing-time-frames" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.9. </span>Attribution when comparing time frames<a class="headerlink" href="#attribution-when-comparing-time-frames" title="Permalink to this headline">¶</a></h2>
 <p>In this case we seek to find out which variables explains the development from year to year. This is done only for the .lastdf dateframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2527,12 +2844,12 @@ PAKDISPREPKN   0         -0.0%       -0.0%       -0.0%       -0.0%       -0.0%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_70_0.png" src="../../_images/Attribution_70_0.png" />
+<img alt="../../_images/Attribution_87_0.png" src="../../_images/Attribution_87_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="visualizing-attribution-in-dependency-graphs">
-<h3><span class="section-number">2.5.10. </span>Visualizing attribution in dependency graphs<a class="headerlink" href="#visualizing-attribution-in-dependency-graphs" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.10. </span>Visualizing attribution in dependency graphs<a class="headerlink" href="#visualizing-attribution-in-dependency-graphs" title="Permalink to this headline">¶</a></h2>
 <p>The logical graph of the model can be used to show the upstream and downstream variable for a specific variable. More on this <span class="xref myst">here</span><br>
 When drawing the logical graph for a variable the model attribution will be used to guide the thickness of edges between nodes (variables). This enables a visual impression of which
 variables drives the impact.</p>
@@ -2551,7 +2868,7 @@ enable svg format.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_72_0.svg" src="../../_images/Attribution_72_0.svg" /></div>
+<img alt="../../_images/Attribution_89_0.svg" src="../../_images/Attribution_89_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2560,11 +2877,11 @@ enable svg format.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_73_0.svg" src="../../_images/Attribution_73_0.svg" /><img alt="../../_images/Attribution_73_1.svg" src="../../_images/Attribution_73_1.svg" /></div>
+<img alt="../../_images/Attribution_90_0.svg" src="../../_images/Attribution_90_0.svg" /><img alt="../../_images/Attribution_90_1.svg" src="../../_images/Attribution_90_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="the-attribution-can-be-filtered-and-more-levels-can-be-displayed">
-<h3><span class="section-number">2.5.11. </span>The attribution can be filtered and more levels can be displayed.<a class="headerlink" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.11. </span>The attribution can be filtered and more levels can be displayed.<a class="headerlink" href="#the-attribution-can-be-filtered-and-more-levels-can-be-displayed" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpak</span><span class="p">[</span><span class="s1">&#39;PAKNYGDPMKTPKN&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">up</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">down</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">png</span><span class="o">=</span><span class="n">latex</span><span class="p">,</span><span class="nb">filter</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> 
@@ -2572,11 +2889,11 @@ enable svg format.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Attribution_75_0.svg" src="../../_images/Attribution_75_0.svg" /></div>
+<img alt="../../_images/Attribution_92_0.svg" src="../../_images/Attribution_92_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual">
-<h3><span class="section-number">2.5.12. </span>Or it can be used in a dashboard (not avaiable in the offline manual)<a class="headerlink" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">6.12. </span>Or it can be used in a dashboard (not avaiable in the offline manual)<a class="headerlink" href="#or-it-can-be-used-in-a-dashboard-not-avaiable-in-the-offline-manual" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -2597,7 +2914,6 @@ No Dash, name &#39;DashInteractiveGraphviz&#39; is not defined
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install 
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -2635,17 +2951,17 @@ No Dash, name &#39;DashInteractiveGraphviz&#39; is not defined
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="EigenValues.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="ModelStructure.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Model eigenvalues</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Model analytics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../07_MoreFeatures/modelwidgets.html" title="next page">
+    <a class='right-next' id="next-link" href="EigenValues.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>The model widget class</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Model eigenvalues</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
