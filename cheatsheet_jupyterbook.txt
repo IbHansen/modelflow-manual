@@ -119,6 +119,10 @@ with mpak.set_smpl(2018,2030):
 :::{glue:figure} Alternative
 **Alternative**
 :::
-
-
 :::
+
+
+```{warning}
+IB:
+
+```
