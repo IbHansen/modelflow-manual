@@ -16,7 +16,7 @@ parts:
        # sections:
      - file: content/03_Installation/InstallingPython     
      - file: content/03_Installation/InstallingModelFlow
-# #    # - file: content/03_Installation/TestingModelFlow
+     - file: content/03_Installation/TestingModelFlow
     
 #  *****************
    - caption: Some python essentials for using WorldBank models with modelflow
