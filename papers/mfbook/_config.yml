@@ -53,4 +53,5 @@ parse:
    - amsmath
    - dollarmath
    - colon_fence
+   - linkify
   
