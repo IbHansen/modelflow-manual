@@ -80,13 +80,14 @@ if 'latex-pdf' in options:
         
     xx0 = run(f'jb build {bookdir}/ --builder=latex')
     
+    # Modify tex file. 
     fulltexfile = Path(f'{bookdir}/_build/latex/{texfile}')
     with open(fulltexfile,'rt',encoding='utf-8') as f:
         tex = f.read()
     
     texout = tex.replace(r'\makeindex', r'''\makeindex
-             \let\cleardoublepage\clearpage''')
-
+  \renewcommand{\cleardoublepage}{\clearpage}''')
+#             \let\cleardoublepage\clearpage''')
     with open(fulltexfile,'wt',encoding='utf-8') as f:
        f.write(texout)     
     

@@ -1,6 +1,6 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-
+#{% set is_short_version = True  %}
 format: jb-book
 root: content/introduction
 options:
@@ -9,15 +9,14 @@ parts:
    - caption: The World Bank's MFMod Framework and Modelflow
      numbered: true  
      chapters:
-     - file: content/01_Introduction/Introduction     
+     - file: content/01_Introduction/Introduction 
        sections:     
        - file: content/02_MacrostructuralModels/MacroStructuralModels 
      - file: content/02_MacrostructuralModels/MFModAndModelFlow     
        # sections:
      - file: content/03_Installation/InstallingPython     
      - file: content/03_Installation/InstallingModelFlow
-     - file: content/03_Installation/TestingModelFlow
-    
+     - file: content/03_Installation/TestingModelFlow  # IB: just to test some of the featuyres 
 #  *****************
    - caption: Some python essentials for using WorldBank models with modelflow
      numbered: true 
@@ -57,7 +56,6 @@ parts:
     # - file: content/howto/onboard/eviews/onboard one model from  wf1
     # - file: content/howto/onboard/eviews/onboard many models from wf1  
     # - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
-
    - caption: References
      numbered: false
      chapters:
