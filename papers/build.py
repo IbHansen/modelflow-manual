@@ -44,29 +44,30 @@ wb.open(rf'file://{fileloc}', new=2)
 
 #%% 
 latexdir = Path(f'{bookdir}/_build/jupyter_execute/content')
-for dir in sorted(Path(f'{bookdir}/_build/jupyter_execute').glob('**')):
-    # print(f'{dir=}')
-    for i, picture in enumerate(sorted(dir.glob('*.png'))):
-        # print(picture) 
-        try:
-            copy(picture,latexdir)
-        except:
-            # print(f'Not copied{picture}')
-            ...
-    for i, picture in enumerate(sorted(dir.glob('*.svg'))):
-        # print(picture) 
-        try:
-            copy(picture,latexdir)
-        except:
-            ...
-            # print(f'Not copied{picture}')
-    for i, picture in enumerate(sorted(dir.glob('*.pdf'))):
-        # print(picture) 
-        try:
-            copy(picture,latexdir)
-        except:
-            ...
-            # print(f'Not copied{picture}')
+if 'old' in options: # to handle old versions of jupyterbook where latex did not render charts and pictures 
+    for dir in sorted(Path(f'{bookdir}/_build/jupyter_execute').glob('**')):
+        # print(f'{dir=}')
+        for i, picture in enumerate(sorted(dir.glob('*.png'))):
+            # print(picture) 
+            try:
+                copy(picture,latexdir)
+            except:
+                # print(f'Not copied{picture}')
+                ...
+        for i, picture in enumerate(sorted(dir.glob('*.svg'))):
+            # print(picture) 
+            try:
+                copy(picture,latexdir)
+            except:
+                ...
+                # print(f'Not copied{picture}')
+        for i, picture in enumerate(sorted(dir.glob('*.pdf'))):
+            # print(picture) 
+            try:
+                copy(picture,latexdir)
+            except:
+                ...
+                # print(f'Not copied{picture}')
      
 if 'latex-pdf' in options: 
     configloc = Path(f'{bookdir}/_config.yml')
@@ -78,6 +79,17 @@ if 'latex-pdf' in options:
         texfile = 'book.tex'
         
     xx0 = run(f'jb build {bookdir}/ --builder=latex')
+    
+    fulltexfile = Path(f'{bookdir}/_build/latex/{texfile}')
+    with open(fulltexfile,'rt',encoding='utf-8') as f:
+        tex = f.read()
+    
+    texout = tex.replace(r'\makeindex', r'''\makeindex
+             \let\cleardoublepage\clearpage''')
+
+    with open(fulltexfile,'wt',encoding='utf-8') as f:
+       f.write(texout)     
+    
     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {texfile}',cwd=f'{bookdir}/_build/latex/')
     
     pdffile = Path(f'{bookdir}/_build/latex/'+(texfile.split('.')[0]+'.pdf')).absolute()
