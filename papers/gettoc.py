@@ -73,27 +73,30 @@ notebook_list = [r"mfbook\content\03_Installation\TestingModelFlow.ipynb"]
 # Collect a list of all notebooks in the content folder
 notebooks = glob("./content/**/*.ipynb", recursive=True)
 
-# Text to look for in adding tags
-text_search_dict = {
-    "# HIDDEN": "remove_cell",  # Remove the whole cell
-    "# NO CODE": "remove_input",  # Remove only the input
-    "# HIDE CODE": "hide_input"  # Hide the input w/ a button to show
-}
 
-# Search through each notebook and look for th text, add a tag if necessary
-for ipath in notebook_list:
-    ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-
-    for cell in ntbk.cells:
-        cell_tags = cell.get('metadata', {}).get('tags', [])
-        for key, val in text_search_dict.items():
-            if key in cell['source']:
-                if val not in cell_tags:
-                    cell_tags.append(val)
-        if len(cell_tags) > 0:
-            cell['metadata']['tags'] = cell_tags
-
-    nbf.write(ntbk, ipath)
+def hide_cells(notebooklist):
+    # Text to look for in adding tags
+    text_search_dict = {
+        "# HIDDEN": "remove_cell",  # Remove the whole cell
+        "# NO CODE": "remove_input",  # Remove only the input
+        "# HIDE CODE": "hide_input"  # Hide the input w/ a button to show
+    }
+    
+    # Search through each notebook and look for th text, add a tag if necessary
+    for ipath in notebook_list:
+        ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+    
+        for cell in ntbk.cells:
+            cell_tags = cell.get('metadata', {}).get('tags', [])
+            for key, val in text_search_dict.items():
+                if key in cell['source']:
+                    if val not in cell_tags:
+                        cell_tags.append(val)
+                    print(f'Tage set in {ipath=} {cell_tags=}')    
+            if len(cell_tags) > 0:
+                cell['metadata']['tags'] = cell_tags
+    
+        nbf.write(ntbk, ipath)
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
 
@@ -103,10 +106,12 @@ if __name__ == '__main__':
     all_notebooks = get_all_notebooks()
     # Specify the list of notebook paths
     notebook_test = [r"mfbook\content\03_Installation\TestingModelFlow.ipynb"]
-
+    
     for x in toc_files:
         print(x)
     if 0:    
-        start_notebooks(xx)    
+        start_notebooks(toc_files)    
+    
+    hide_cells(notebook_test)
     
     
