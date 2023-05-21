@@ -1,18 +1,34 @@
 # -*- coding: utf-8 -*-
 """
 @author: ibhan
+
+Some utilities to manage files in a jupyterbook 
+
+
 """
 
+import yaml
+from pathlib import Path
+import nbformat as nbf
+from glob import glob
+import webbrowser
 
 
 
-# Open and load the _toc.yml file
+def get_all_files(fileloc='mfbook'):
+    all_notebooks = glob(f"{fileloc}/content/**/*.ipynb", recursive=True)
+    return all_notebooks 
+
+def get_all_notebooks(fileloc='mfbook'):
+    '''get all notebooks in the fileloc book'''
+    all_notebooks = list(Path(f'{fileloc}/content').glob('**/*.ipynb'))
+    relevant_notebooks = [f for f in all_notebooks if not '.ipynb_checkpoints' in f.parts]
+    return relevant_notebooks 
+
 
 
 def get_toc_files(fileloc='mfbook'):
-    import yaml
-    from pathlib import Path
-    
+    '''Get all files mentioned in the _toc'''
     with open(Path(fr'{fileloc}/_toc.yml'), 'r') as f:
         toc_data = yaml.safe_load(f)
 
@@ -41,9 +57,9 @@ def get_toc_files(fileloc='mfbook'):
     
     file_paths = [ Path(fr'{fileloc}/{f}').with_suffix('.ipynb')for f in file_list]
     return file_paths    
-import webbrowser
 
 def start_notebooks(notebook_list):
+    ''' start all notebooks in jupyter in the notebook list '''
     base_url = "http://localhost:8888/notebooks/"
 
     for notebook_path in notebook_list:
@@ -51,16 +67,46 @@ def start_notebooks(notebook_list):
         webbrowser.open(url, new=2)
 
 # Specify the list of notebook paths
-notebook_list = ["notebook1.ipynb", "notebook2.ipynb", "notebook3.ipynb"]
+notebook_list = [r"mfbook\content\03_Installation\TestingModelFlow.ipynb"]
 
+
+# Collect a list of all notebooks in the content folder
+notebooks = glob("./content/**/*.ipynb", recursive=True)
+
+# Text to look for in adding tags
+text_search_dict = {
+    "# HIDDEN": "remove_cell",  # Remove the whole cell
+    "# NO CODE": "remove_input",  # Remove only the input
+    "# HIDE CODE": "hide_input"  # Hide the input w/ a button to show
+}
+
+# Search through each notebook and look for th text, add a tag if necessary
+for ipath in notebook_list:
+    ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+
+    for cell in ntbk.cells:
+        cell_tags = cell.get('metadata', {}).get('tags', [])
+        for key, val in text_search_dict.items():
+            if key in cell['source']:
+                if val not in cell_tags:
+                    cell_tags.append(val)
+        if len(cell_tags) > 0:
+            cell['metadata']['tags'] = cell_tags
+
+    nbf.write(ntbk, ipath)
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
 
 if __name__ == '__main__':
 
-    xx = get_toc_files()
-    
-    for x in xx:
+    toc_files = get_toc_files()
+    all_notebooks = get_all_notebooks()
+    # Specify the list of notebook paths
+    notebook_test = [r"mfbook\content\03_Installation\TestingModelFlow.ipynb"]
+
+    for x in toc_files:
         print(x)
-        
-    start_notebooks(xx)    
+    if 0:    
+        start_notebooks(xx)    
+    
+    

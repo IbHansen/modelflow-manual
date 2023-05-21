@@ -54,4 +54,10 @@ parse:
    - dollarmath
    - colon_fence
    - linkify
+   
+nav:
+  - site:
+    - text: General Index
+      url: content/genindex.html
+ 
   
