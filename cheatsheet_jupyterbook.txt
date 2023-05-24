@@ -97,16 +97,6 @@ The dataframe.loc
 |'a b'.split()|splits a string by ```blanks```into a list| [Search](https://www.google.com/search?q=python+split&newwindow=1)
 ```
 
-in Latex  this looks better
-:::{admonition} Note
-:class: tip
-
-The equations for Labor and Capital have been entered as difference equations. 
-The ```modelflow``` object will automatically normalize them, generating an internal representation of ```Labour=Labour(t-1)*(1+Labor_growth)```
-and ```Capital=Capital(t-1)*(1-Depreciation_rate)+Investment```
-:::
-
-
 :::{figure-md} markdown-fig
 <img src="onboarding.png" alt="fishy" class="bg-primary mb-1" width="700px">
 
@@ -129,10 +119,6 @@ with mpak.set_smpl(2018,2030):
 :::{glue:figure} Alternative
 **Alternative**
 :::
+
+
 :::
-
-
-```{warning}
-IB:
-
-```
