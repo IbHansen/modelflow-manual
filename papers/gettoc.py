@@ -113,7 +113,7 @@ if __name__ == '__main__':
     for x in toc_files:
         print(x)
     if 1:    
-        start_notebooks(notebook_test)    
+        start_notebooks(toc_files)    
     
     hide_cells(toc_files)
     

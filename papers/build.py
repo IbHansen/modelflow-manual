@@ -36,11 +36,15 @@ fileloc = str((buildhtml / 'index.html').absolute())
 #print(f'{fileloc=}\n{destination=}')
 print(f'{fileloc=}\n') #dropped destination
 
-
+if source:=[o for o in options if o.startswith('copyfrom')]:
+    print('copyfrom',source)
+    
+# assert 1==2
 # breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
 # wb.open(rf'file://C:\wb new\Modelflow\working_paper\{bookdir}\_build\html\index.html', new=2)
 wb.open(rf'file://{fileloc}', new=2)
+
 
 #%% 
 latexdir = Path(f'{bookdir}/_build/jupyter_execute/content')

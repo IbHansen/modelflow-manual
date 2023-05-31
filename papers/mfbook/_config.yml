@@ -45,6 +45,7 @@ html:
   use_issues_button: False
   use_repository_button: True
   use_multitoc_numbering: false  # Restarts the numbering in each part
+  home_page_in_navbar       : true
 
 parse:
   myst_enable_extensions:
