@@ -1,9 +1,9 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-#{% set is_short_version = True  %}
+
 format: jb-book
 root: content/introduction
-# root: content/index
+
 options:
   numbered: true
 parts:
@@ -19,6 +19,7 @@ parts:
      # - file: content/03_Installation/InstallingPython     
      # - file: content/03_Installation/InstallingModelFlow
      - file: content/03_Installation/TestingModelFlow  # IB: just to test some of the featuyres 
+
 #  *****************
    - caption: Some python essentials for using WorldBank models with modelflow
      numbered: true 
@@ -36,12 +37,12 @@ parts:
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
 
-   - caption: Model Analytics
-     numbered: true      
-     chapters:   
-     - file: content/06_ModelAnalytics/ModelStructure
-     - file: content/06_ModelAnalytics/Attribution
-     - file: content/06_ModelAnalytics/EigenValues
+#   - caption: Model Analytics
+#     numbered: true      
+#     chapters:   
+#     - file: content/06_ModelAnalytics/ModelStructure
+#     - file: content/06_ModelAnalytics/Attribution
+#     - file: content/06_ModelAnalytics/EigenValues
 
      
    - caption: Technical how tos
@@ -58,6 +59,11 @@ parts:
     # - file: content/howto/onboard/eviews/onboard one model from  wf1
     # - file: content/howto/onboard/eviews/onboard many models from wf1  
     # - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
+   - caption: References
+     numbered: false
+     chapters:
+     - file: content/99_BackMatter/References
 
 # #   - caption: modifying models 
 # #     numbered: true  
@@ -88,10 +94,10 @@ parts:
 # #     - file: content/howto/keep/Create and modify charts with keep_plot
 
     
-   - caption: Features
-     numbered: true  
-     chapters:      
-     - file: content/notebooks/modelflow_features
+# #   - caption: Features
+# #     numbered: true  
+# #     chapters:      
+# #     - file: content/notebooks/modelflow_features
     
 # #   - caption: Structure   
 # #     numbered: true  
@@ -103,10 +109,10 @@ parts:
 # #     chapters:   
 # #     - file: content/howto/attribution/Attribution background
 
-   - caption: Target and instruments   
-     numbered: true  
-     chapters:   
-     - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
+# #   - caption: Target and instruments   
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
 
 # #   - caption: Specification  
 # #     numbered: true  
@@ -117,11 +123,4 @@ parts:
 # #     numbered: true  
 # #     chapters:    
 # #     - file: content/howto/optimization/Optimize_simple  
-   # - caption: test   
-     # numbered: true  
-     # chapters:   
-     # - file: genindex    
-   - caption: References
-     numbered: false
-     chapters:
-     - file: content/99_BackMatter/References
+    

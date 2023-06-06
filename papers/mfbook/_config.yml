@@ -9,8 +9,8 @@ copyright: "World Bank. 2023"
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  # execute_notebooks: force
-  execute_notebooks: cache
+  execute_notebooks: force
+  #execute_notebooks: cache
   timeout: 200
 
   
@@ -54,11 +54,4 @@ parse:
    - amsmath
    - dollarmath
    - colon_fence
-   - linkify
-   
-nav:
-  - site:
-    - text: General Index
-      url: content/genindex.html
- 
   

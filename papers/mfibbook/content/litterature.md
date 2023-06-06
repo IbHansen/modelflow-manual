@@ -1,6 +1,0 @@
-# Litterature
-
-
-```{bibliography}
-:style: alpha
-```
