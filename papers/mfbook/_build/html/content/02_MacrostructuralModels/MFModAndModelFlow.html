@@ -145,7 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../introduction.html">
-                    Introduction
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -156,13 +156,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../03_Installation/Installing.html">3. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_Installation/TestingModelFlow.html">4. Testing your installation of modelflow</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some python essentials for using WorldBank models with modelflow</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some python essentials for using World Bank models with modelflow</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../04_PythonEssentials/Intro_Jupyter_notebook.html">1. Introduction to  Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../04_PythonEssentials/PythonPandasDataframes.html">2. Some Python basics</a></li>
 
 <li class="toctree-l1 has-children"><a class="reference internal" href="../04_PythonEssentials/UpdateCommand.html">4. Modelflow extensions to pandas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../04_PythonEssentials/mfcalc.html">4.2. <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_PythonEssentials/mfcalc.html">4.6. <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</a></li>
 </ul>
 </li>
 </ul>
@@ -170,34 +170,21 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../05_WBModels/LoadingWBModel.html">1. Using <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> with World Bank models</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">3. Scenario analysis</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">4. Scenario analysis</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">6. More complex scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">5. More complex scenarios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Model Analytics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/ModelStructure.html">1. Model analytics</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/Attribution.html">4. Decomposing/attributing the impact of a shock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/EigenValues.html">5. Model eigenvalues</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/AttributionSomeFeatures.html">5. Analyzing the impact of a shock</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical how tos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../07_MoreFeatures/GettingHelp.html">1. Getting Help</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Features</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/modelflow_features.html">1. Useful model instance properties and methods</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Target and instruments</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../howto/targetinstruments/One%20target%20one%20instrument%20with%203%20instrument%20variables.html">1. One target one instrument with 3 instrument variables</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../99_BackMatter/References.html">References</a></li>
 </ul>
 
     </div>
@@ -390,7 +377,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history-of-modelflow">2.1. A brief history of ModelFlow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history-of-modelflow">2.1. A brief history of ModelFlow}</a></li>
 </ul>
             </nav>
         </div>
@@ -404,14 +391,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelflow-and-the-mfmod-models-of-the-world-bank">
 <h1><span class="section-number">2. </span>Modelflow and the MFMod models of the World Bank<a class="headerlink" href="#modelflow-and-the-mfmod-models-of-the-world-bank" title="Permalink to this headline">#</a></h1>
-<p>At the World Bank models built using the MFMod framework are developed in <span class="xref myst">EViews</span>. When disseminated to clients, the models are operated in a World Bank customized EViews environment. But as a systems of equations and associated data the models can be solved, and operated under any system capable of solving a system of simultaneous equations – as long as the equations and data can be transferred from EViews to the secondary system. <code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Ib: headings not allowed in margins so it is just there</p>
-</div>
+<p>At the World Bank models built using the MFMod framework are developed in <span class="xref myst">EViews</span>. When disseminated to clients, the models are solved and simulated using EViews, although often through the intermediary of an easy-to-use customized excel EViews environment developed by the World Bank. That said, as a systems of equations and associated data, the models can be solved and operated under any system capable of solving a system of simultaneous equations. <code class="docutils literal notranslate"><span class="pre">Modelflow</span></code> is such a system and offers a wide range of features that permit not only solving the model, but also provide a rich and powerful suite of tools for analyzing the model and reporting results.</p>
 <section id="a-brief-history-of-modelflow">
-<h2><span class="section-number">2.1. </span>A brief history of ModelFlow<a class="headerlink" href="#a-brief-history-of-modelflow" title="Permalink to this headline">#</a></h2>
-<p>Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro-structural  model to python, but also been used to bring several stress-testing models developed by the Danish Central Bank and the European Central Bank into a python environment.</p>
+<h2><span class="section-number">2.1. </span>A brief history of ModelFlow}<a class="headerlink" href="#a-brief-history-of-modelflow" title="Permalink to this headline">#</a></h2>
+<p>Modelflow is a python library that was developed by Ib Hansen over several years while working at the Danish Central Bank and the European Central Bank. The framework has been used both to port the U.S. Federal Reserve’s macro-structural  model to python, but also been used to bring several stress-testing models developed by European Central Banks and the European Central Bank into a python environment.</p>
 <p>Beginning in 2019, Hansen has worked with the World Bank to develop additional features that facilitate working with models built using the Bank’s MFMod Framework, with the objective of creating an open source platform through which the Bank’s models can be made available to the public.</p>
 <p>This paper, and the models that accompany it, are the product of this collaboration.</p>
 </section>
@@ -484,7 +467,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history-of-modelflow">2.1. A brief history of ModelFlow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history-of-modelflow">2.1. A brief history of ModelFlow}</a></li>
 </ul>
   </nav></div>
 

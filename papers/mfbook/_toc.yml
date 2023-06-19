@@ -21,7 +21,7 @@ parts:
      - file: content/03_Installation/TestingModelFlow  # IB: just to test some of the featuyres 
 
 #  *****************
-   - caption: Some python essentials for using WorldBank models with modelflow
+   - caption: Some python essentials for using World Bank models with modelflow
      numbered: true 
      chapters: 
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
@@ -37,11 +37,11 @@ parts:
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
 
-#   - caption: Model Analytics
-#     numbered: true      
-#     chapters:   
-#     - file: content/06_ModelAnalytics/ModelStructure
-#     - file: content/06_ModelAnalytics/Attribution
+   - caption: Model Analytics
+     numbered: true      
+     chapters:   
+     - file: content/06_ModelAnalytics/ModelStructure
+     - file: content/06_ModelAnalytics/AttributionSomeFeatures
 #     - file: content/06_ModelAnalytics/EigenValues
 
      

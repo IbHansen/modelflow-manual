@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/04_PythonEssentials/UpdateCommand';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.2. .mfcalc() an extension of standard Pandas" href="mfcalc.html" />
+    <link rel="next" title="4.6. .mfcalc() an extension of standard Pandas" href="mfcalc.html" />
     <link rel="prev" title="2. Some Python basics" href="PythonPandasDataframes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -147,7 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../introduction.html">
-                    Introduction
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -158,13 +158,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../03_Installation/Installing.html">3. Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03_Installation/TestingModelFlow.html">4. Testing your installation of modelflow</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some python essentials for using WorldBank models with modelflow</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some python essentials for using World Bank models with modelflow</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Intro_Jupyter_notebook.html">1. Introduction to  Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PythonPandasDataframes.html">2. Some Python basics</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Modelflow extensions to pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="mfcalc.html">4.2. <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mfcalc.html">4.6. <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</a></li>
 </ul>
 </li>
 </ul>
@@ -172,34 +172,21 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../05_WBModels/LoadingWBModel.html">1. Using <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> with World Bank models</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">3. Scenario analysis</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/ScenarioAnalysis.html">4. Scenario analysis</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">6. More complex scenarios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_WBModels/MoreComplexScenarios.html">5. More complex scenarios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Model Analytics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/ModelStructure.html">1. Model analytics</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/Attribution.html">4. Decomposing/attributing the impact of a shock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/EigenValues.html">5. Model eigenvalues</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../06_ModelAnalytics/AttributionSomeFeatures.html">5. Analyzing the impact of a shock</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical how tos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../07_MoreFeatures/GettingHelp.html">1. Getting Help</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Features</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/modelflow_features.html">1. Useful model instance properties and methods</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Target and instruments</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../howto/targetinstruments/One%20target%20one%20instrument%20with%203%20instrument%20variables.html">1. One target one instrument with 3 instrument variables</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../99_BackMatter/References.html">References</a></li>
 </ul>
 
     </div>
@@ -392,34 +379,37 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-of-modelflow">4.1. .upd() method of modelflow</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-operators">4.1.1. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-some-examples">4.1.2. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-python-environment">4.1.3. Setting up the python environment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-upd-to-create-a-new-variable-operator">4.1.4. Use .upd to create a new variable (= operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-updates-and-specific-time-periods">4.1.5. Multiple updates and specific time periods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-specific-datapoints-to-specific-values">4.1.6. Setting specific datapoints to specific values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator">4.1.7. Adding  the specified  values to all values in a range (the + operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator">4.1.8. Multiplying all values in a range by the specified values (the * operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator">4.1.9. Increasing all  values in a range by a  specified percent amount (the % operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-percent-growth-rate-to-specified-values-growth">4.1.10. Set the percent growth rate to specified values (=GROWTH)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator">4.1.11. Add or subtract from the existing percent growth rate (+GROWTH operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-change-in-a-variable-to-specific-values-diff-operator">4.1.12. Set the change in a variable to specific values (=diff operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-that-we-have-not-overwritten-df-so-the-df-dataframe-is-unchanged">4.1.13. Recall  that we have not overwritten df, so the df dataframe is unchanged.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-growth-rates-after-the-update-time-the-kg-option">4.1.14. Keep growth rates after the update time – the –kg option</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-default-keep-growth-behaviour">4.1.14.1. The default keep_growth behaviour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-python-environment">4.1. Setting up the python environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-names-in-modelflow">4.2. Column names in  Modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-and-time-dimensions-in-modelflow">4.3. .index and time dimensions in Modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leads-and-lags">4.4. Leads and lags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-of-modelflow">4.5. .upd() method of modelflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-operators">4.5.1. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-some-examples">4.5.2. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-upd-to-create-a-new-variable-operator">4.5.2.1. Use .upd to create a new variable (= operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-updates-and-specific-time-periods">4.5.2.2. Multiple updates and specific time periods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-specific-datapoints-to-specific-values">4.5.2.3. Setting specific datapoints to specific values</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator">4.5.2.4. Adding  the specified  values to all values in a range (the + operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator">4.5.2.5. Multiplying all values in a range by the specified values (the * operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator">4.5.2.6. Increasing all  values in a range by a  specified percent amount (the % operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-percent-growth-rate-to-specified-values-growth">4.5.2.7. Set the percent growth rate to specified values (=GROWTH)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator">4.5.2.8. Add or subtract from the existing percent growth rate (+GROWTH operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-change-in-a-variable-to-specific-values-diff-operator">4.5.2.9. Set the change in a variable to specific values (=diff operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-several-variable-in-one-line">4.5.2.10. Update several variable in one line</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-keep-growth-some-more-examples">4.1.15. .upd(,,,keep_growth) some more examples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-new-dataframe-first-make-a-dataframe-with-some-growth-rate">4.1.16. Initialize a new dataframe First make a dataframe with some growth rate</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-update-a-in-2021-to-2023-to-a-new-value">4.1.17. now update A in 2021 to 2023 to a new value</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-with-the-option-keep-growth-set-globally">4.1.17.1. .upd() with the option keep_growth set globally</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selected-upd-options">4.5.3. Selected <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> options</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-keep-growth-option-kg-and-nkg">4.5.3.1. The keep_growth option (–kg and –nkg)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-default-keep-growth-behaviour">4.5.3.1.1. The default keep_growth behaviour</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-several-variable-in-one-line">4.1.18. Update several variable in one line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-scale-number-default-1-scale-the-updates">4.1.19. .upd(,,scale=&lt;number, default=1&gt;) Scale the updates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-lprint-true-prints-values-the-before-and-after-update">4.1.20. .upd(,,lprint=True ) prints values the before and after update</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-create-true-requires-the-variable-to-exist">4.1.21. .upd(,,create=True ) Requires the variable to exist</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-keep-growth-some-more-examples">4.5.3.2. .upd(,,,keep_growth) some more examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-with-the-option-keep-growth-set-globally">4.5.3.3. .upd() with the option keep_growth set globally</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-scale-number-default-1-scale-the-updates">4.5.3.4. .upd(,,scale=&lt;number, default=1&gt;) Scale the updates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-lprint-true-prints-values-the-before-and-after-update">4.5.3.5. .upd(,,lprint=True ) prints values the before and after update</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-create-true-requires-the-variable-to-exist">4.5.3.6. .upd(,,create=True ) Requires the variable to exist</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -435,11 +425,106 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelflow-extensions-to-pandas">
 <h1><span class="section-number">4. </span>Modelflow extensions to pandas<a class="headerlink" href="#modelflow-extensions-to-pandas" title="Permalink to this headline">#</a></h1>
-<p>Modeflow inherits all the capabilities of pandas and extends some as well.</p>
+<p>Any class can have both properties (data) and methods (functions that operate on the data of the particular instance of the class). With object-oriented programming languages like python, classes can be built as supersets of existing classes. The <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> class <code class="docutils literal notranslate"><span class="pre">model</span></code> inherits or encapsulates all of the features of the pandas dataframe and extends it in many important ways.  Some of the methods below are standard pandas methods, others have been added to it by <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> features</p>
 <p>Data in a dataframe can be modified directly with built-in pandas functionalities like <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> and <code class="docutils literal notranslate"><span class="pre">eval()</span></code>, but <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> extends these capabilities with in important ways with the <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> and <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> methods.</p>
+<section id="setting-up-the-python-environment">
+<h2><span class="section-number">4.1. </span>Setting up the python environment<a class="headerlink" href="#setting-up-the-python-environment" title="Permalink to this headline">#</a></h2>
+<p>In order to use <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> all of the necessary libraries must be <strong>imported</strong> into the python session.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+
+<span class="c1"># First import pandas and the model into the  workspace</span>
+<span class="c1"># There is no problem importing multiple times, though it is not very efficient.</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">modelclass</span> <span class="kn">import</span> <span class="n">model</span> 
+<span class="c1"># functions that improve rendering of modelflow outputs under Jupyter Notebook</span>
+<span class="n">model</span><span class="o">.</span><span class="n">widescreen</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">scroll_off</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <style>
+            div#notebook-container    { width: 95%; }
+            div#menubar-container     { width: 65%; }
+            div#maintoolbar-container { width: 99%; }
+        </style>
+        </div></div>
+</div>
+</section>
+<section id="column-names-in-modelflow">
+<h2><span class="section-number">4.2. </span>Column names in  Modelflow<a class="headerlink" href="#column-names-in-modelflow" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title">Modelflow variable names</p>
+<p>Modelflow places more restrictions on column names than do pandas <em>per se</em>.</p>
+</aside>
+<p>While pandas dataframes are very liberal in what names can be given to columns, <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> is more restrictive.</p>
+<p>Specifically, in modelflow a variable name must:</p>
+<ul class="simple">
+<li><p>start with a letter</p></li>
+<li><p>be upper case</p></li>
+</ul>
+<p>Thus while all these are legal column names in pandas, some are illegal in modelflow.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Variable Name</p></th>
+<th class="text-left head"><p>Legal in</br> modelfow?</p></th>
+<th class="text-left head"><p>Reason</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>IB</p></td>
+<td class="text-left"><p>yes</p></td>
+<td class="text-left"><p><span style='color:Green'>Starts with a letter and is uppercase</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ib</p></td>
+<td class="text-left"><p>no</p></td>
+<td class="text-left"><p><span style='color:red'> lowercase letters are not allowed</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>42ANSWER</p></td>
+<td class="text-left"><p>No</p></td>
+<td class="text-left"><p><span style='color:Red'> does not start with a letter </span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>_HORSE1</p></td>
+<td class="text-left"><p>No</p></td>
+<td class="text-left"><p><span style='color:Red'>does not start with a letter </span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>A_VERY_LONG_NAME_THAT_IS_LEGAL_3</p></td>
+<td class="text-left"><p>Yes</p></td>
+<td class="text-left"><p><span style='color:Green'> Starts with a letter and is uppercase </span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="index-and-time-dimensions-in-modelflow">
+<h2><span class="section-number">4.3. </span>.index and time dimensions in Modelflow<a class="headerlink" href="#index-and-time-dimensions-in-modelflow" title="Permalink to this headline">#</a></h2>
+<p>As we saw above, series have indices.  Dataframes also have indices, which are the row names of the dataframe.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> the index series is typically understood to represent a date.</p>
+<p>For yearly models a list of integers like in the above example works fine.<br></p>
+<p>For higher frequency models (quarterly, monthly, weekly,daily, etc.) the index can be one of pandas datatypes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not all datetypes work well with the graphics routines of modelflow.  Users are advised to use the <code class="docutils literal notranslate"><span class="pre">pd.period_range()</span></code> method to generate date indexes.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1975q1&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;2125q4&#39;</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="leads-and-lags">
+<h2><span class="section-number">4.4. </span>Leads and lags<a class="headerlink" href="#leads-and-lags" title="Permalink to this headline">#</a></h2>
+<p>In modelflow leads and lags can be indicated by following the variable with a parenthesis and either -1 or -2 two for one or two period lags (where the number following the negative sign indicates the number of time periods that are lagged). Positive numbers are used for forward leads (no +sign required).</p>
+<p>When a method defined by the <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> class encounters something like <code class="docutils literal notranslate"><span class="pre">A(-1)</span></code>, it will take the value from the row above the current row. No matter if the index is an integer, a year, quarter or a millisecond. The same goes for leads, <code class="docutils literal notranslate"><span class="pre">A(+1)</span></code> will return the value of <code class="docutils literal notranslate"><span class="pre">A</span></code> in the next row.</p>
+<p>As a result in a quarterly model <code class="docutils literal notranslate"><span class="pre">B=A(-4)</span></code> would assign B the value of A from the same quarter in the previous year.</p>
+</section>
 <section id="upd-method-of-modelflow">
-<h2><span class="section-number">4.1. </span>.upd() method of modelflow<a class="headerlink" href="#upd-method-of-modelflow" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method extends pandas by giving the user a concise and expressive way to modify data in a dataframe using a syntax that a database-manager or macroeconomic modeler might find more natural.</p>
+<h2><span class="section-number">4.5. </span>.upd() method of modelflow<a class="headerlink" href="#upd-method-of-modelflow" title="Permalink to this headline">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method extends pandas by giving the user a concise and expressive way to modify data in a <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> using a syntax that a database-manager or macroeconomic modeler might find more natural.</p>
 <p>Notably it allows the user to employ formula’s to do updates, and supports both lags and leads on variables.</p>
 <p><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> can be used to:</p>
 <ul class="simple">
@@ -451,12 +536,8 @@ document.write(`
 <li><p>Display results</p></li>
 </ul>
 <section id="upd-method-operators">
-<h3><span class="section-number">4.1.1. </span><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators<a class="headerlink" href="#upd-method-operators" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.5.1. </span><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators<a class="headerlink" href="#upd-method-operators" title="Permalink to this headline">#</a></h3>
 <p>Below are some of the operators that can be used in the <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>IB: typos reworked</p>
-</div>
 <p><strong>Types of update:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -468,7 +549,7 @@ document.write(`
 <tr class="row-even"><td class="text-left"><p>Set a variable equal to the input</p></td>
 <td class="text-left"><p>=</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Add the input to the input</p></td>
+<tr class="row-odd"><td class="text-left"><p>Add the input to the LHS variable</p></td>
 <td class="text-left"><p>+</p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>Set the variable to itself multiplied by the input</p></td>
@@ -488,49 +569,23 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Note: the syntax of an update command requires that there be a space between variable names and the operators.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The syntax of an update command requires that there be a space between variable names and the operators.</p>
 <p>Thus <code class="docutils literal notranslate"><span class="pre">df.upd(&quot;A</span> <span class="pre">=</span> <span class="pre">7&quot;)</span></code> is fine, but <code class="docutils literal notranslate"><span class="pre">df.upd(&quot;A</span> <span class="pre">=7&quot;)</span></code> will generate an error.</p>
 <p>Similarly  <code class="docutils literal notranslate"><span class="pre">df.upd(&quot;A</span> <span class="pre">*</span> <span class="pre">1.1&quot;)</span></code> is fine, but <code class="docutils literal notranslate"><span class="pre">df.upd(&quot;A*</span> <span class="pre">1.1&quot;)</span></code> will generate an error.</p>
 </div>
 </section>
 <section id="upd-some-examples">
-<h3><span class="section-number">4.1.2. </span><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples<a class="headerlink" href="#upd-some-examples" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="setting-up-the-python-environment">
-<h3><span class="section-number">4.1.3. </span>Setting up the python environment<a class="headerlink" href="#setting-up-the-python-environment" title="Permalink to this headline">#</a></h3>
-<p>In order to use <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> all of the necessary libraries must be <strong>imported</strong> into the python session.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First import pandas and the model into the  workspace</span>
-<span class="c1"># There is no problem importing the same library multiple times. </span>
-<span class="c1"># After the first import there is not any significant penalty for additional mports </span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="kn">from</span> <span class="nn">modelclass</span> <span class="kn">import</span> <span class="n">model</span> 
-<span class="c1"># functions that improve rendering of modelflow outputs under Jupyter Notebook</span>
-<span class="n">model</span><span class="o">.</span><span class="n">widescreen</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">scroll_off</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <style>
-            div#notebook-container    { width: 95%; }
-            div#menubar-container     { width: 65%; }
-            div#maintoolbar-container { width: 99%; }
-        </style>
-        </div></div>
-</div>
-<p>Now create a dataframe using standard pandas syntax.  In this instance with years as the index and a dictionary defining the variables and their data.</p>
+<h3><span class="section-number">4.5.2. </span><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples<a class="headerlink" href="#upd-some-examples" title="Permalink to this headline">#</a></h3>
+<p>First, create a dataframe using standard pandas syntax.  In this instance with years as the index and a dictionary defining the variables and their data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a dataframe using standard pandas</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]},</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2019</span><span class="p">,</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2021</span><span class="p">])</span>
-<span class="n">df</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span><span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]},</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2026</span><span class="p">)])</span>
+                  
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
@@ -560,139 +615,47 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>2018</th>
+      <th>2020</th>
       <td>1</td>
       <td>1</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>2019</th>
+      <th>2021</th>
       <td>1</td>
       <td>2</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>2020</th>
+      <th>2022</th>
       <td>1</td>
       <td>3</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>2021</th>
+      <th>2023</th>
       <td>1</td>
       <td>6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>1</td>
+      <td>9</td>
       <td>4</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>A somewhat more creative way to initialize the dataframe for dates would use a loop to specify the dates that get passed to the constructor as an argument.</p>
-<p>Below a dataframe df with two Series (A and B), is initialized with the values 100 for all data points.</p>
-<p>The index is defined dynamically by a loop <code class="docutils literal notranslate"><span class="pre">index=[2020+v</span> <span class="pre">for</span> <span class="pre">v</span> <span class="pre">in</span> <span class="pre">range(number_of_rows)]</span></code> that runs for number_of_rows times (6 times in this example) setting v equal to 2020+0, 2020+1,…,202+5. The resulting list whose values are assigned to index is [2020,2021,2022,2023,2024,2025].</p>
-<p>The big advantage of this method is that if the user wanted to have data created for the period 1990 to 2030, they would only have to change number_of_rows from 6 to 41 and 2020 in the loop to 1990.</p>
-<p>The second example simplifies further by just specifying the begin and end point of the range.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#define the number of years for which the data is to be created.</span>
-<span class="n">number_of_rows</span> <span class="o">=</span> <span class="mi">6</span> 
-
-<span class="c1"># call the dataframe constructor</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>
-       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2020</span><span class="o">+</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)],</span> <span class="c1"># create row index</span>
-       <span class="c1"># equivalent to index=[2020,2021,2022,2023,2024,2025] </span>
-       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">])</span>                                 <span class="c1"># create column name </span>
-<span class="n">df</span>
-
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span>
-       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2030</span><span class="p">)],</span> <span class="c1"># create row index</span>
-       <span class="c1"># equivalent to index=[2020,2021,...,2030] </span>
-       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">])</span>                                 <span class="c1"># create column name </span>
-<span class="n">df1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A1</th>
-      <th>B1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2021</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2022</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2023</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2024</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2025</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2026</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2027</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2028</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>2029</th>
-      <td>200</td>
-      <td>200</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
 <section id="use-upd-to-create-a-new-variable-operator">
-<h3><span class="section-number">4.1.4. </span>Use .upd to create a new variable (= operator)<a class="headerlink" href="#use-upd-to-create-a-new-variable-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.1. </span>Use .upd to create a new variable (= operator)<a class="headerlink" href="#use-upd-to-create-a-new-variable-operator" title="Permalink to this headline">#</a></h4>
 <p>With standard pandas a user can add a column (series) to a dataframe simply by assigning a adding to a dataframe.  For example:</p>
 <p><code class="docutils literal notranslate"><span class="pre">df['NEW2']=[17,12,14,15]</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">.upd()</span></code> provides this functionality as well.</p>
@@ -722,47 +685,47 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
       <th>C</th>
+      <th>E</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
-      <td>142.0</td>
+      <td>1</td>
+      <td>142</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
@@ -770,18 +733,18 @@ document.write(`
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that the new variable name was entered as a lower case ‘c’ here.  Lowercase letters are not legal <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> variable names.  The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method knows is part of modelflow and knows this rule, so it automatically translates lowercase entries into upper case so that the statement works.</p>
+<p>The new variable name was entered as a lower case ‘c’ here.  Lowercase letters are not legal <code class="docutils literal notranslate"><span class="pre">modelflow</span></code> variable names.  The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method knows that it is part of modelflow and knows this rule. As a result, it automatically translates lowercase entries into upper case so that the statement works.</p>
 </div>
 </section>
 <section id="multiple-updates-and-specific-time-periods">
-<h3><span class="section-number">4.1.5. </span>Multiple updates and specific time periods<a class="headerlink" href="#multiple-updates-and-specific-time-periods" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.2. </span>Multiple updates and specific time periods<a class="headerlink" href="#multiple-updates-and-specific-time-periods" title="Permalink to this headline">#</a></h4>
 <p>The modelflow method <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> takes a string as an argument.  That string can contain a single update command or can contain multiple commands.</p>
 <p>Moreover by including a &lt;Begin End&gt; date clause in a given update command, the update will be restricted to the associated time period.</p>
-<p>The below illustrates this, modifying two existing variables A, B over different time periods and creating a new variable.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Note that the third line inherits the time period of the previous line.</p>
-<p>Note also the submitted string can include comments as well (denoted with the standard python # indicator).</p>
+<p>The below illustrates this, modifying two existing variables A, B over different time periods and creating two new variables, <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The third line inherits the time period of the previous line.</p>
+<p>Note also, the submitted string can include comments as well (denoted with the standard python # indicator).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -814,52 +777,59 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
       <th>C</th>
+      <th>E</th>
+      <th>A</th>
       <th>D</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
       <td>200</td>
-      <td>500.0</td>
+      <td>500</td>
+      <td>4</td>
+      <td>0.0</td>
       <td>33.0</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>42</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>42.0</td>
       <td>33.0</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>44</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>44.0</td>
       <td>33.0</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>45</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
+      <td>45.0</td>
       <td>33.0</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>46</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+      <td>46.0</td>
       <td>33.0</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
       <td>0.0</td>
       <td>33.0</td>
     </tr>
@@ -867,9 +837,8 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p><strong>Time scope of .upd()</strong></p>
+<div class="admonition-box-time-scope-of-upd-commands admonition">
+<p class="admonition-title"><strong>Box  Time scope of .upd() commands</strong></p>
 <p>Made this a margin just to see</p>
 <p>The update command takes a variety of mathematical operators <code class="docutils literal notranslate"><span class="pre">=,</span> <span class="pre">+,</span> <span class="pre">*,</span> <span class="pre">%</span> <span class="pre">=GROWTH,</span> <span class="pre">+GROWTH,</span> <span class="pre">=DIFF</span></code> and applies them to data for the period set in the leading &lt;&gt;.</p>
 <p>If the user wants to modify a series or group of series for only a specific point in time or a period of time, she can indicate the period in the command line.</p>
@@ -877,17 +846,17 @@ document.write(`
 <li><p>If <strong>one date</strong> is specified the operation is applied to a single point in time</p></li>
 <li><p>If <strong>two dates</strong>  are specifies the operation is applied over a period of time.</p></li>
 </ul>
-<p>The selected time period will persist until re-set with a new time specification. Useful to avoid visual noise if several variables are going to be updated for the same time period.</p>
+<p><strong>The selected time period will persist</strong> until re-set with a new time specification. This is useful to if several variables are going to be updated for the same time period, but must be kept in mind if subsequent commands are to operate over a different time period.</p>
 <p>The time period can be rest to the full time-period by using the special &lt;-0 -1&gt; time period.  More generally:</p>
 <ul class="simple">
-<li><p>Indicates the start of the dataframe use -0</p></li>
-<li><p>Indicates the end of the dataframe use -1</p></li>
+<li><p>-0 indicates the start of the dataframe</p></li>
+<li><p>-1 indicates the end of the dataframe</p></li>
 </ul>
 <p>If no time is provided the dataframe start and end period will be used.</p>
-</aside>
+</div>
 </section>
 <section id="setting-specific-datapoints-to-specific-values">
-<h3><span class="section-number">4.1.6. </span>Setting specific datapoints to specific values<a class="headerlink" href="#setting-specific-datapoints-to-specific-values" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.3. </span>Setting specific datapoints to specific values<a class="headerlink" href="#setting-specific-datapoints-to-specific-values" title="Permalink to this headline">#</a></h4>
 <p>This example, demonstrates the equals operator.  The <code class="docutils literal notranslate"><span class="pre">=</span></code> operator indicates that the variable a should be set equal to the indicated values following the <code class="docutils literal notranslate"><span class="pre">=</span></code> operator (42 44 45 46 in the first line, 200 in the second and 500 inthe third). The dates enclosed in &lt;&gt; indicate the period over which the change should be applied.</p>
 <p>Either:</p>
 <ul class="simple">
@@ -926,46 +895,53 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
       <th>C</th>
+      <th>E</th>
+      <th>A</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
       <td>0.0</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>42</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>42.0</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>44</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>44.0</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>45</td>
       <td>200</td>
-      <td>500.0</td>
+      <td>500</td>
+      <td>4</td>
+      <td>45.0</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>46</td>
-      <td>100</td>
-      <td>0.0</td>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+      <td>46.0</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
       <td>0.0</td>
     </tr>
   </tbody>
@@ -974,7 +950,7 @@ document.write(`
 </div>
 </section>
 <section id="adding-the-specified-values-to-all-values-in-a-range-the-operator">
-<h3><span class="section-number">4.1.7. </span>Adding  the specified  values to all values in a range (the + operator)<a class="headerlink" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.4. </span>Adding  the specified  values to all values in a range (the + operator)<a class="headerlink" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator" title="Permalink to this headline">#</a></h4>
 <p>NB: Here upd with the  + operator indicates that we are adding 42.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1004,40 +980,47 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
+      <th>C</th>
+      <th>E</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>100</td>
-      <td>142</td>
+      <td>43</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>100</td>
-      <td>142</td>
+      <td>43</td>
+      <td>6</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>142</td>
+      <td>43</td>
+      <td>8</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
@@ -1045,7 +1028,7 @@ document.write(`
 </div>
 </section>
 <section id="multiplying-all-values-in-a-range-by-the-specified-values-the-operator">
-<h3><span class="section-number">4.1.8. </span>Multiplying all values in a range by the specified values (the * operator)<a class="headerlink" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.5. </span>Multiplying all values in a range by the specified values (the * operator)<a class="headerlink" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
@@ -1074,40 +1057,54 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
+      <th>C</th>
+      <th>E</th>
+      <th>A</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>4200</td>
-      <td>100</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>4400</td>
-      <td>100</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>5500</td>
-      <td>100</td>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -1115,12 +1112,12 @@ document.write(`
 </div>
 </section>
 <section id="increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator">
-<h3><span class="section-number">4.1.9. </span>Increasing all  values in a range by a  specified percent amount (the % operator)<a class="headerlink" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.6. </span>Increasing all  values in a range by a  specified percent amount (the % operator)<a class="headerlink" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator" title="Permalink to this headline">#</a></h4>
 <p>In this example:</p>
 <ul class="simple">
 <li><p>A is increased by 42 and 44% over the range 2021 through 2022.</p></li>
 <li><p>B is increased by 10 percent in all years</p></li>
-<li><p>C is a new variable, is created and set to 100 for the whole range</p></li>
+<li><p>C is a new variable, is created and set to 100 for the whole range (because the previous line set the active range to  &lt;-0 -1&gt;)</p></li>
 <li><p>C is decreased by 12 percent over the range 2023 through 2025.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1153,47 +1150,54 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
       <th>C</th>
+      <th>E</th>
+      <th>A</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
+      <td>1.1</td>
       <td>100</td>
-      <td>110.0</td>
-      <td>100.0</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>142</td>
-      <td>110.0</td>
-      <td>100.0</td>
+      <td>1.1</td>
+      <td>100</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>144</td>
-      <td>110.0</td>
-      <td>100.0</td>
+      <td>1.1</td>
+      <td>100</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>100</td>
-      <td>110.0</td>
-      <td>88.0</td>
+      <td>1.1</td>
+      <td>88</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>110.0</td>
-      <td>88.0</td>
+      <td>1.1</td>
+      <td>88</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>110.0</td>
-      <td>88.0</td>
+      <td>1.1</td>
+      <td>88</td>
+      <td>4</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -1201,7 +1205,7 @@ document.write(`
 </div>
 </section>
 <section id="set-the-percent-growth-rate-to-specified-values-growth">
-<h3><span class="section-number">4.1.10. </span>Set the percent growth rate to specified values (=GROWTH)<a class="headerlink" href="#set-the-percent-growth-rate-to-specified-values-growth" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.7. </span>Set the percent growth rate to specified values (=GROWTH)<a class="headerlink" href="#set-the-percent-growth-rate-to-specified-values-growth" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
@@ -1216,29 +1220,29 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataframe:
-           A    B           C
-2020  100.00  100  100.000000
-2021  101.00  100  102.000000
-2022  106.05  100  104.040000
-2023  100.00  100  106.120800
-2024  100.00  100  108.243216
-2025  100.00  100  110.408080
+      B           C  E    A
+2020  1  100.000000  4  0.0
+2021  1  102.000000  4  0.0
+2022  1  104.040000  4  0.0
+2023  1  106.120800  4  0.0
+2024  1  108.243216  4  0.0
+2025  1  110.408080  4  0.0
 
 Growth:
-             A    B    C
-2020       NaN  NaN  NaN
-2021  1.000000  0.0  2.0
-2022  5.000000  0.0  2.0
-2023 -5.704856  0.0  2.0
-2024  0.000000  0.0  2.0
-2025  0.000000  0.0  2.0
+        B    C    E   A
+2020  NaN  NaN  NaN NaN
+2021  0.0  2.0  0.0 NaN
+2022  0.0  2.0  0.0 NaN
+2023  0.0  2.0  0.0 NaN
+2024  0.0  2.0  0.0 NaN
+2025  0.0  2.0  0.0 NaN
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="add-or-subtract-from-the-existing-percent-growth-rate-growth-operator">
-<h3><span class="section-number">4.1.11. </span>Add or subtract from the existing percent growth rate (+GROWTH operator)<a class="headerlink" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.8. </span>Add or subtract from the existing percent growth rate (+GROWTH operator)<a class="headerlink" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator" title="Permalink to this headline">#</a></h4>
 <p>The below example is a bit more complicated.</p>
 <p>The first line sets the growth rate of A to 1% in all periods beginning in  2021</p>
 <p>The second command adds 2 3 4 5 6 to the growth rates in each period after 2021, resulting in growth rates of 3,4,5,6,7.</p>
@@ -1254,29 +1258,29 @@ Growth:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataframe:
-        A    B
-2020  100  100
-2021  103  100
-2022  100  100
-2023  100  100
-2024  100  100
-2025  100  100
+      B  C  E    A
+2020  1  1  4  0.0
+2021  1  2  4  NaN
+2022  1  3  4  0.0
+2023  1  6  4  0.0
+2024  1  8  4  0.0
+2025  1  9  4  0.0
 
 Growth:
-             A    B
-2020       NaN  NaN
-2021  3.000000  0.0
-2022 -2.912621  0.0
-2023  0.000000  0.0
-2024  0.000000  0.0
-2025  0.000000  0.0
+        B           C    E   A
+2020  NaN         NaN  NaN NaN
+2021  0.0  100.000000  0.0 NaN
+2022  0.0   50.000000  0.0 NaN
+2023  0.0  100.000000  0.0 NaN
+2024  0.0   33.333333  0.0 NaN
+2025  0.0   12.500000  0.0 NaN
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="set-the-change-in-a-variable-to-specific-values-diff-operator">
-<h3><span class="section-number">4.1.12. </span>Set the change in a variable to specific values (=diff operator)<a class="headerlink" href="#set-the-change-in-a-variable-to-specific-values-diff-operator" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.2.9. </span>Set the change in a variable to specific values (=diff operator)<a class="headerlink" href="#set-the-change-in-a-variable-to-specific-values-diff-operator" title="Permalink to this headline">#</a></h4>
 <p><span class="math notranslate nohighlight">\(\Delta = var_t - var_{t-1} = some number\)</span></p>
 <p>Here sets the value of A in 2021 to 2 more than the value of 2020, and the 2022 value as 4 more than the <strong>revised</strong> value of 2021.</p>
 <p>The second line creates a new variable “UPBY2” to the data frame and sets it equal to 100 for all periods,</p>
@@ -1311,46 +1315,60 @@ Growth:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
+      <th>C</th>
+      <th>E</th>
+      <th>A</th>
       <th>UPBY2</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0.0</td>
       <td>100.0</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>102</td>
-      <td>100</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>2.0</td>
       <td>102.0</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>106</td>
-      <td>100</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>6.0</td>
       <td>104.0</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
+      <td>0.0</td>
       <td>106.0</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+      <td>0.0</td>
       <td>108.0</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0.0</td>
       <td>110.0</td>
     </tr>
   </tbody>
@@ -1358,8 +1376,141 @@ Growth:
 </div></div></div>
 </div>
 </section>
-<section id="recall-that-we-have-not-overwritten-df-so-the-df-dataframe-is-unchanged">
-<h3><span class="section-number">4.1.13. </span>Recall  that we have not overwritten df, so the df dataframe is unchanged.<a class="headerlink" href="#recall-that-we-have-not-overwritten-df-so-the-df-dataframe-is-unchanged" title="Permalink to this headline">#</a></h3>
+<section id="update-several-variable-in-one-line">
+<h4><span class="section-number">4.5.2.10. </span>Update several variable in one line<a class="headerlink" href="#update-several-variable-in-one-line" title="Permalink to this headline">#</a></h4>
+<p>Sometime there is a need to update several variable with the same value over the same time frame. To ease this case .update can accept several variables in one line</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">&lt;2022 2024&gt; h i j k =      40      # earlier values are set to zero by default</span>
+<span class="s1">&lt;2020&gt;      p q r s =       1000   # All values beginning in 2020 set to 1000</span>
+<span class="s1">&lt;2021 -1&gt;   p q r s =growth 2      # -1 indicates the last year of dataframe</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>B</th>
+      <th>C</th>
+      <th>E</th>
+      <th>H</th>
+      <th>I</th>
+      <th>J</th>
+      <th>K</th>
+      <th>P</th>
+      <th>Q</th>
+      <th>R</th>
+      <th>S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020</th>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1000.000000</td>
+      <td>1000.000000</td>
+      <td>1000.000000</td>
+      <td>1000.000000</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1020.000000</td>
+      <td>1020.000000</td>
+      <td>1020.000000</td>
+      <td>1020.000000</td>
+    </tr>
+    <tr>
+      <th>2022</th>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>1040.400000</td>
+      <td>1040.400000</td>
+      <td>1040.400000</td>
+      <td>1040.400000</td>
+    </tr>
+    <tr>
+      <th>2023</th>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>1061.208000</td>
+      <td>1061.208000</td>
+      <td>1061.208000</td>
+      <td>1061.208000</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>1082.432160</td>
+      <td>1082.432160</td>
+      <td>1082.432160</td>
+      <td>1082.432160</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1104.080803</td>
+      <td>1104.080803</td>
+      <td>1104.080803</td>
+      <td>1104.080803</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Recall we have not overwritten df, so the df dataframe is unchanged.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -1385,40 +1536,47 @@ Growth:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
       <th>B</th>
+      <th>C</th>
+      <th>E</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>6</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>8</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2025</th>
-      <td>100</td>
-      <td>100</td>
+      <td>1</td>
+      <td>9</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
@@ -1426,20 +1584,22 @@ Growth:
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The method <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> only operates on on variable.  A command like <code class="docutils literal notranslate"><span class="pre">.upd('A</span> <span class="pre">=</span> <span class="pre">B')</span></code> would not work. For these kind of functions, use <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> (see next section).</p>
+<p>The method <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> only operates on one variable.  A command like <code class="docutils literal notranslate"><span class="pre">.upd('A</span> <span class="pre">=</span> <span class="pre">B')</span></code> would not work. For these kind of functions, use <code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> (see next section).</p>
 </div>
 </section>
-<section id="keep-growth-rates-after-the-update-time-the-kg-option">
-<h3><span class="section-number">4.1.14. </span>Keep growth rates after the update time – the –kg option<a class="headerlink" href="#keep-growth-rates-after-the-update-time-the-kg-option" title="Permalink to this headline">#</a></h3>
-<p>In a long projection it can sometime be useful to be able to update variables for which new information is available, but for the subsequent periods keep the growth rate the same as before the update. In database management this is frequently done when two time-series with different levels are spliced together.</p>
-<p>The -kg or –keep_growth option instructs modelview to calculate the growth rate of the existing pre-change series, and then use it to preserve the pre-change growth rates of the series for the periods that were <strong>not</strong> changed.</p>
-<p>This allows to update variables for which new information is available, but keep the growth rate the same as before the update in the period after the update time.</p>
+</section>
+<section id="selected-upd-options">
+<h3><span class="section-number">4.5.3. </span>Selected <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> options<a class="headerlink" href="#selected-upd-options" title="Permalink to this headline">#</a></h3>
+<section id="the-keep-growth-option-kg-and-nkg">
+<h4><span class="section-number">4.5.3.1. </span>The keep_growth option (–kg and –nkg)<a class="headerlink" href="#the-keep-growth-option-kg-and-nkg" title="Permalink to this headline">#</a></h4>
+<p>When changing data and for certain kinds of simulations, it can sometime be useful to be able to update variables but keep the growth rate in subsequent periods unchanged. In database management this is frequently done when two time-series with different levels are spliced together. When forecasting this is useful if you have updated historical data but your views on future growth rates are unchanged.</p>
+<p>The -kg or –keep_growth option instructs modelflow to calculate the growth rate of the existing pre-change series, and then use it to preserve the pre-change growth rates of the series for the periods that were <strong>not</strong> changed.</p>
 <section id="the-default-keep-growth-behaviour">
-<h4><span class="section-number">4.1.14.1. </span>The default keep_growth behaviour<a class="headerlink" href="#the-default-keep-growth-behaviour" title="Permalink to this headline">#</a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">upd()</span></code> method has a parameter <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code>, which by default is equal to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> determines how data in  the time periods after those where an update is executed are treated.</p>
+<h5><span class="section-number">4.5.3.1.1. </span>The default keep_growth behaviour<a class="headerlink" href="#the-default-keep-growth-behaviour" title="Permalink to this headline">#</a></h5>
+<p>The <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> option determines how data in  the time periods after those where an update is executed are treated.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code> then data in the sub-period after a change is left unchanged.</p>
 <p>if <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> is set to “<code class="docutils literal notranslate"><span class="pre">True</span></code>” then the system will preserve the pre-change growth rate of the affected variable in the time period <em>after the change</em>.</p>
+<p>By default <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At the line level:</p>
@@ -1448,12 +1608,11 @@ Growth:
 <li><p><code class="docutils literal notranslate"><span class="pre">keep_growth=False</span></code> can be expressed as –nkg</p></li>
 </ul>
 </div>
-<p>Let’s see this in a concrete example.  Consider the following <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> df with two variables A and B, that each grow by 2% per period, with A initialized at a level of 100 and B at a level of 110 so that we can see each separately on a graph.</p>
+<p>Consider the followingconcrete example. A <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> df has two variables A and B, that each grow by 2% per period, with A initialized at a level of 100 and B at a level of 110 so that we can see each separately on a graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>
-       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2020</span><span class="o">+</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)],</span> <span class="c1"># create row index</span>
-       <span class="c1"># equivalent to index=[2020,2021,2022,2023,2024,2025] </span>
+     <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2025</span><span class="p">)],</span>
        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">])</span> 
 
 <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;2021 -1&gt; A =growth 2</span>
@@ -1528,32 +1687,27 @@ Growth:
       <td>108.243216</td>
       <td>119.067538</td>
     </tr>
-    <tr>
-      <th>2025</th>
-      <td>110.408080</td>
-      <td>121.448888</td>
-      <td>110.408080</td>
-      <td>121.448888</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1.png" src="../../_images/c02b4af773579f433eace4f785e543742d5ef841906e6b994877f90732f66fd1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/374953e85d0c2e2763f3012854dd4d5f6efeca46538348600dc4a9e85d654583.png" src="../../_images/374953e85d0c2e2763f3012854dd4d5f6efeca46538348600dc4a9e85d654583.png" />
 </div>
 </div>
-<p>Now lets modify each by adding 5 to the level in 2022 and 2023.</p>
-<ul class="simple">
-<li><p>For ‘B’ we set the keep_growth option as False</p></li>
-<li><p>for ‘A’ we set the keep_growth True.</p></li>
-</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> command below modifies both A and B by adding 5 to their levels in each of 2022 and 2023.</p>
+<p>For A, this is done with the <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> option set to <code class="docutils literal notranslate"><span class="pre">True</span></code> – the <code class="docutils literal notranslate"><span class="pre">--kg</span></code> option in the code below.  This means that for A the growth rate after the shock period 2022-23 will be unchanged at 2 percent.</p>
+<p>For series B the same shock is applied but with keep_growth set to <code class="docutils literal notranslate"><span class="pre">False</span></code> using the –nkg option.</p>
+<p>The keep_growth global variable is ignored in this instance as each line in the update is overriding it using the –kg option (<code class="docutils literal notranslate"><span class="pre">keep_growth=True</span></code>) and –nkg option (<code class="docutils literal notranslate"><span class="pre">keep_growth=False</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -1561,46 +1715,106 @@ Growth:
 <span class="s2">            &lt;2022 2023&gt; B + 5 --nkg</span>
 <span class="s2">            &quot;&quot;&quot;</span><span class="p">)</span>
 
-<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;A_ORIG&#39;</span><span class="p">,</span><span class="s1">&#39;B_ORIG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;A_ORIG&#39;</span><span class="p">,</span><span class="s1">&#39;B_ORIG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
     
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df.png" src="../../_images/b190fe24d2cb993f17006d33ba0fb9966a5860917c21cee0cbc7a3ba4322c9df.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/2254b41aab36e7081f298729b7d3db88157168e2e725110a0c601997174132ad.png" src="../../_images/2254b41aab36e7081f298729b7d3db88157168e2e725110a0c601997174132ad.png" />
 </div>
 </div>
-<p>In the first example ‘A’ (the green and blue lines) the level of A is increased by 5 for two periods (2021-2022). The subsequent values are also increased and they were calculated to maintain the growth rate of the original series.</p>
-<p>For the ‘B’ variable the same level change was input but because of the <code class="docutils literal notranslate"><span class="pre">--nkg</span></code> (equivalent to <code class="docutils literal notranslate"><span class="pre">keep_growth=False</span></code>) the periods after the change were unaffected and retained their old values.</p>
+<p>In the first example ‘A’ (the green and blue lines) the level of A is increased by 5 for two periods (2021-2022). The levels of the subsequent values are also increased because the previous growth rate (2%) is now applied to the new higher level of the data in 2022.</p>
+<p>For the ‘B’ variable the same level change was input but because of the <code class="docutils literal notranslate"><span class="pre">--nkg</span></code> (equivalent to <code class="docutils literal notranslate"><span class="pre">keep_growth=False</span></code>) the periods after the change were unaffected. the shocked variable returns to its pre-shock level immediately in 2023.</p>
 <p>Below are plots the growth rates of the two transformed series.</p>
-<p>Here the growth in both series accelerates in 2022, by slightly less than 5 percentage points because a) the base of each is more than 100, with the base of B being higher (it was initialized at 110). In 2023 the growth rate of A returns to 2 percent, while the growth rate of B is actually negative because the level (see earlier graph) has fallen back to its original level.</p>
+<p>Here the growth in both series accelerates in 2022, by slightly less than 5 percentage points because a) the base of each is more than 100 in 2021 (because of the 2 percent growth in 2021). Substantially more in the case of  B, which was initialized at 110. In 2023 the growth rate of A returns to 2 percent, while the growth rate of B is actually negative because the level (see earlier graph) has fallen back to its original level.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfg</span><span class="o">=</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">dfg</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="n">dfg</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85.png" src="../../_images/93fc87a8e8ede996fa596d14d140f87c73411dfd2bd0aa8433f137f2597a0b85.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/9622d660dd9cc89d3f08f398ab116fb02810a34acc1e66b3cd362a663b1f017d.png" src="../../_images/9622d660dd9cc89d3f08f398ab116fb02810a34acc1e66b3cd362a663b1f017d.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="upd-keep-growth-some-more-examples">
-<h3><span class="section-number">4.1.15. </span>.upd(,,,keep_growth) some more examples<a class="headerlink" href="#upd-keep-growth-some-more-examples" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="initialize-a-new-dataframe-first-make-a-dataframe-with-some-growth-rate">
-<h3><span class="section-number">4.1.16. </span>Initialize a new dataframe First make a dataframe with some growth rate<a class="headerlink" href="#initialize-a-new-dataframe-first-make-a-dataframe-with-some-growth-rate" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.3.2. </span>.upd(,,,keep_growth) some more examples<a class="headerlink" href="#upd-keep-growth-some-more-examples" title="Permalink to this headline">#</a></h4>
+<p>Initialize a new dataframe, with some growth rate</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># instantiate a new dataframe with one column &#39;A&#39; with value 100 everywhere and index 2020-2025</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># instantiate a new dataframe with one column &#39;A&#39; with avlue 100 everywhere and index 2020-2025</span>
 <span class="n">dftest</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>
-       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2020</span><span class="o">+</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)],</span> <span class="c1"># create row index</span>
+       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2026</span><span class="p">)],</span> <span class="c1"># create row index</span>
        <span class="c1"># equivalent to index=[2020,2021,2022,2023,2024,2025] </span>
-       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>                                 <span class="c1"># create column name </span>
+       <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>                                 <span class="c1"># create column name</span>
+<span class="n">dftest</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="c1"># Update a to have growth rate accelerationg linearly by 1 from 1 percent to 5 percent</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2022</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2023</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update a to have growth rate accelerationg linearly by 1 from 1 oercent to 5 percent</span>
 <span class="n">original</span> <span class="o">=</span> <span class="n">dftest</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&lt;2021 2025&gt; a =growth 1 2 3 4 5&#39;</span><span class="p">)</span>  
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Levels:</span><span class="se">\n</span><span class="si">{</span><span class="n">original</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">Growth:</span><span class="se">\n</span><span class="si">{</span><span class="n">original</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1628,10 +1842,8 @@ Growth:
 </div>
 </div>
 </div>
-</section>
-<section id="now-update-a-in-2021-to-2023-to-a-new-value">
-<h3><span class="section-number">4.1.17. </span>now update A in 2021 to 2023 to a new value<a class="headerlink" href="#now-update-a-in-2021-to-2023-to-a-new-value" title="Permalink to this headline">#</a></h3>
-<p>Below performs the same operation, the first time the updated value is assigned to the <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> <code class="docutils literal notranslate"><span class="pre">nkg</span></code> and the default behaviour of <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p><strong>Now update A in 2021 to 2023 to a new value</strong></p>
+<p>Below performs the same operation twice, the first time the updated value is assigned to the <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> <code class="docutils literal notranslate"><span class="pre">nkg</span></code> and the default behaviour of <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p>In the second example the <code class="docutils literal notranslate"><span class="pre">-kg</span></code> line option is specified, telling modelflow to maintain the growth rates of the dependent variable in the periods after the update is executed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1648,8 +1860,9 @@ Growth:
 
 <span class="n">kg</span><span class="o">=</span><span class="n">kg</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="s2">&quot;KG&quot;</span><span class="p">})</span>       <span class="c1">#rename cols to facilitate display</span>
 <span class="n">nokg</span><span class="o">=</span><span class="n">nokg</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="s2">&quot;NOKG&quot;</span><span class="p">})</span> <span class="c1">#rename cols to facilitate display</span>
+<span class="n">df</span><span class="o">=</span><span class="n">original</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="s2">&quot;Orig&quot;</span><span class="p">})</span> <span class="c1">#rename cols to facilitate display</span>
 
-<span class="n">combo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">kg</span><span class="p">,</span><span class="n">nokg</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">combo</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">kg</span><span class="p">,</span><span class="n">nokg</span><span class="p">,</span><span class="n">df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">combo</span>
 
 
@@ -1659,34 +1872,33 @@ Growth:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Levels
-          KG        NOKG
-2020  100.00  100.000000
-2021  120.00  120.000000
-2022  120.00  120.000000
-2023  120.00  120.000000
-2024  124.80  110.355024
-2025  131.04  115.872775
+          KG        NOKG        Orig
+2020  100.00  100.000000  100.000000
+2021  120.00  120.000000  101.000000
+2022  120.00  120.000000  103.020000
+2023  120.00  120.000000  106.110600
+2024  124.80  110.355024  110.355024
+2025  131.04  115.872775  115.872775
 
 Growth
-        KG      NOKG
-2020   NaN       NaN
-2021  20.0  20.00000
-2022   0.0   0.00000
-2023   0.0   0.00000
-2024   4.0  -8.03748
-2025   5.0   5.00000
+        KG      NOKG  Orig
+2020   NaN       NaN   NaN
+2021  20.0  20.00000   1.0
+2022   0.0   0.00000   2.0
+2023   0.0   0.00000   3.0
+2024   4.0  -8.03748   4.0
+2025   5.0   5.00000   5.0
 </pre></div>
 </div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the first example where KG (keep_growth) <strong>was not set</strong>, because the level was set constant for three periods at 120 the rate of growth was 0 for the final two years of the set period.  But following this update, the level of A in 2023 is 120. With <code class="docutils literal notranslate"><span class="pre">keep_Growth=False</span></code> (its default value)m the level of A in 2024 remains at its unchanged  unchanged (lower) level of 100.35. As a result, the growth rate in 2024 is negative.</p>
-<p>In the <strong>–kg</strong> example, the pre-exsting growth rate (of 4%) is applied to the new value of 120 and so the level in 2024 is (120*1.04)=124.8 and 2025 is 131.04.</p>
-</div>
+<p><strong>Understanding the results</strong></p>
+<p>In the first example where KG (keep_growth) <strong>was set</strong>, the level was set constant for three periods at 120 the rate of growth was 0 for the final two years of the set period.  But following this update, the level of A in 2023 is 120. With <code class="docutils literal notranslate"><span class="pre">keep_Growth=True</span></code> the KG variable growth at 2 percent per year in 2024 and 2025.</p>
+<p>In the <strong>–nkg</strong> example, the levels of NOKG are the same as KG for 2020 through 2023, but because <code class="docutils literal notranslate"><span class="pre">--nkg</span></code> was selected the levels revert to their pre-shock values, which are lower than the 120 in 2023.  As a result the growth rate for NOKG is negative in 2024. The growth rate for 2024 remains 5 because neither the 2024 or 2025 data changed and therefore the 2025 the growth rate does not change.</p>
+</section>
 <section id="upd-with-the-option-keep-growth-set-globally">
-<h4><span class="section-number">4.1.17.1. </span>.upd() with the option keep_growth set globally<a class="headerlink" href="#upd-with-the-option-keep-growth-set-globally" title="Permalink to this headline">#</a></h4>
-<p>Above the line level option <code class="docutils literal notranslate"><span class="pre">--keep_growth</span></code> or <code class="docutils literal notranslate"><span class="pre">--kg</span></code> was used to keep the growth rate(or not) for a given operation.</p>
+<h4><span class="section-number">4.5.3.3. </span>.upd() with the option keep_growth set globally<a class="headerlink" href="#upd-with-the-option-keep-growth-set-globally" title="Permalink to this headline">#</a></h4>
+<p>Above the line level option <code class="docutils literal notranslate"><span class="pre">--keep_growth</span></code> or <code class="docutils literal notranslate"><span class="pre">--kg</span></code> was used to keep the growth rate (or not) for a given operation.</p>
 <p>This works because by default the option <code class="docutils literal notranslate"><span class="pre">Keep_growth</span></code> is set to false, implementing <code class="docutils literal notranslate"><span class="pre">--kg</span></code> at the line level temporarily set the keep_growth flag to  true for the specific line (and those following).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">keep_growth</span></code> flag can also be set globally for all the lines by setting the option in the command line.</p>
 <p><code class="docutils literal notranslate"><span class="pre">keep_growth=True</span></code>.</p>
@@ -1699,10 +1911,10 @@ Growth
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a data frame</span>
 <span class="n">dftest</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>
-       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2020</span><span class="o">+</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_rows</span><span class="p">)],</span> <span class="c1"># create row index</span>
+       <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2025</span><span class="p">)],</span> <span class="c1"># create row index</span>
        <span class="c1"># equivalent to index=[2020,2021,2022,2023,2024,2025] </span>
        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">])</span>                                 <span class="c1"># create column name </span>
-<span class="n">df</span>
+<span class="n">dftest</span>
 </pre></div>
 </div>
 </div>
@@ -1727,52 +1939,51 @@ Growth
       <th></th>
       <th>A</th>
       <th>B</th>
-      <th>A_ORIG</th>
-      <th>B_ORIG</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>2020</th>
-      <td>100.000000</td>
-      <td>110.000000</td>
-      <td>100.000000</td>
-      <td>110.000000</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
     </tr>
     <tr>
       <th>2021</th>
-      <td>102.000000</td>
-      <td>112.200000</td>
-      <td>102.000000</td>
-      <td>112.200000</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
     </tr>
     <tr>
       <th>2022</th>
-      <td>109.040000</td>
-      <td>119.444000</td>
-      <td>104.040000</td>
-      <td>114.444000</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
     </tr>
     <tr>
       <th>2023</th>
-      <td>111.120800</td>
-      <td>121.732880</td>
-      <td>106.120800</td>
-      <td>116.732880</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
     </tr>
     <tr>
       <th>2024</th>
-      <td>113.343216</td>
-      <td>119.067538</td>
-      <td>108.243216</td>
-      <td>119.067538</td>
-    </tr>
-    <tr>
-      <th>2025</th>
-      <td>115.610080</td>
-      <td>121.448888</td>
-      <td>110.408080</td>
-      <td>121.448888</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
+      <td>100</td>
     </tr>
   </tbody>
 </table>
@@ -1798,7 +2009,6 @@ Growth
 2022  100  100  200.0  300.0  400
 2023  100  100  200.0  300.0  400
 2024  100  100  200.0  300.0  100
-2025  100  100  200.0  300.0  100
 
 Growth:
         A    B      C      D      E
@@ -1807,166 +2017,18 @@ Growth:
 2022  0.0  0.0  100.0  200.0  300.0
 2023  0.0  0.0    0.0    0.0    0.0
 2024  0.0  0.0    0.0    0.0  -75.0
-2025  0.0  0.0    0.0    0.0    0.0
 </pre></div>
 </div>
 </div>
-</div>
-</section>
-</section>
-<section id="update-several-variable-in-one-line">
-<h3><span class="section-number">4.1.18. </span>Update several variable in one line<a class="headerlink" href="#update-several-variable-in-one-line" title="Permalink to this headline">#</a></h3>
-<p>Sometime there is a need to update several variable with the same value over the same time frame. To ease this case .update can accept several variables in one line</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">&lt;2022 2024&gt; h i j k =      40      # earlier values are set to zero by default</span>
-<span class="s1">&lt;2020&gt;      p q r s =       1000   # All values beginning in 2020 set to 1000</span>
-<span class="s1">&lt;2021 -1&gt;   p q r s =growth 2      # -1 indicates the last year of dataframe</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A</th>
-      <th>B</th>
-      <th>A_ORIG</th>
-      <th>B_ORIG</th>
-      <th>H</th>
-      <th>I</th>
-      <th>J</th>
-      <th>K</th>
-      <th>P</th>
-      <th>Q</th>
-      <th>R</th>
-      <th>S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020</th>
-      <td>100.000000</td>
-      <td>110.000000</td>
-      <td>100.000000</td>
-      <td>110.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1000.000000</td>
-      <td>1000.000000</td>
-      <td>1000.000000</td>
-      <td>1000.000000</td>
-    </tr>
-    <tr>
-      <th>2021</th>
-      <td>102.000000</td>
-      <td>112.200000</td>
-      <td>102.000000</td>
-      <td>112.200000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1020.000000</td>
-      <td>1020.000000</td>
-      <td>1020.000000</td>
-      <td>1020.000000</td>
-    </tr>
-    <tr>
-      <th>2022</th>
-      <td>109.040000</td>
-      <td>119.444000</td>
-      <td>104.040000</td>
-      <td>114.444000</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>1040.400000</td>
-      <td>1040.400000</td>
-      <td>1040.400000</td>
-      <td>1040.400000</td>
-    </tr>
-    <tr>
-      <th>2023</th>
-      <td>111.120800</td>
-      <td>121.732880</td>
-      <td>106.120800</td>
-      <td>116.732880</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>1061.208000</td>
-      <td>1061.208000</td>
-      <td>1061.208000</td>
-      <td>1061.208000</td>
-    </tr>
-    <tr>
-      <th>2024</th>
-      <td>113.343216</td>
-      <td>119.067538</td>
-      <td>108.243216</td>
-      <td>119.067538</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>1082.432160</td>
-      <td>1082.432160</td>
-      <td>1082.432160</td>
-      <td>1082.432160</td>
-    </tr>
-    <tr>
-      <th>2025</th>
-      <td>115.610080</td>
-      <td>121.448888</td>
-      <td>110.408080</td>
-      <td>121.448888</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1104.080803</td>
-      <td>1104.080803</td>
-      <td>1104.080803</td>
-      <td>1104.080803</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section id="upd-scale-number-default-1-scale-the-updates">
-<h3><span class="section-number">4.1.19. </span>.upd(,,scale=&lt;number, default=1&gt;) Scale the updates<a class="headerlink" href="#upd-scale-number-default-1-scale-the-updates" title="Permalink to this headline">#</a></h3>
-<p>When running a scenario it can be useful to be able to create a number of scenarios based on one update but with different scale.</p>
-<p>This can be particularly useful when we want to do sensitivity analyses of model results, depending on how heavily a shocked variable is hit</p>
-<p>When using the scale option, scale=0  the baseline while scale=0.5 is a scenario half
-the severity.</p>
-<p>In the example below the values of the dataframes are printed. We use the scale option (setting to to 0, 0.5 and 1) to run three scenarios using the same code but where the update in each case is multiplied by either 0, 0.5 or 1.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here we are just printing the outputs, a more interesting example would involve the solving a  model using different levels of a given shock.</p>
-</div>
+<h4><span class="section-number">4.5.3.4. </span>.upd(,,scale=&lt;number, default=1&gt;) Scale the updates<a class="headerlink" href="#upd-scale-number-default-1-scale-the-updates" title="Permalink to this headline">#</a></h4>
+<p>When running scenarios it can be useful to sensitivity analyses of model results, to better understand how the model responds when varying the intensity of a shock.</p>
+<p>The scale option provides a mechanism for calculating a range shocks as a proportion of the initially indicated one.</p>
+<p>When using the scale option, scale=0 implies no change (effectively the baseline) while scale=0.5 is a scenario half of the full severity.</p>
+<p>In the example below <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> is executed three times for severity equals 0. 0.5 and 1.  If the list passed to scale (named severity in this case) had five items in it, the update would be run five times – one time for each item in the list.</p>
+<p>This example just prints outputs, a more interesting example would involve the solving a model using different levels of a given shock.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;input dataframe: </span><span class="se">\n</span><span class="si">{</span><span class="n">df</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -1987,171 +2049,105 @@ the severity.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input dataframe: 
-               A           B      A_ORIG      B_ORIG
-2020  100.000000  110.000000  100.000000  110.000000
-2021  102.000000  112.200000  102.000000  112.200000
-2022  109.040000  119.444000  104.040000  114.444000
-2023  111.120800  121.732880  106.120800  116.732880
-2024  113.343216  119.067538  108.243216  119.067538
-2025  115.610080  121.448888  110.408080  121.448888
-
-
-severity=0
+            Orig
+2020  100.000000
+2021  101.000000
+2022  103.020000
+2023  106.110600
+2024  110.355024
+2025  115.872775
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>severity=0
 Dataframe:
-          A           B      A_ORIG      B_ORIG
-2020  100.0  110.000000  100.000000  110.000000
-2021  100.0  112.200000  102.000000  112.200000
-2022  100.0  119.444000  104.040000  114.444000
-2023  100.0  121.732880  106.120800  116.732880
-2024  100.0  119.067538  108.243216  119.067538
-2025  100.0  121.448888  110.408080  121.448888
+            Orig    A    B
+2020  100.000000  0.0  0.0
+2021  101.000000  0.0  0.0
+2022  103.020000  0.0  0.0
+2023  106.110600  0.0  0.0
+2024  110.355024  0.0  0.0
+2025  115.872775  0.0  0.0
 
 Growth:
-        A         B  A_ORIG  B_ORIG
-2020  NaN       NaN     NaN     NaN
-2021  0.0  2.000000     2.0     2.0
-2022  0.0  6.456328     2.0     2.0
-2023  0.0  1.916279     2.0     2.0
-2024  0.0 -2.189501     2.0     2.0
-2025  0.0  2.000000     2.0     2.0
+      Orig   A   B
+2020   NaN NaN NaN
+2021   1.0 NaN NaN
+2022   2.0 NaN NaN
+2023   3.0 NaN NaN
+2024   4.0 NaN NaN
+2025   5.0 NaN NaN
 
 
 severity=0.5
 Dataframe:
-               A           B      A_ORIG      B_ORIG
-2020  100.000000  110.000000  100.000000  110.000000
-2021  100.500000  117.200000  102.000000  112.200000
-2022  101.505000  124.444000  104.040000  114.444000
-2023  103.027575  126.732880  106.120800  116.732880
-2024  105.088126  124.067538  108.243216  119.067538
-2025  107.715330  126.448888  110.408080  121.448888
+            Orig    A    B
+2020  100.000000  0.0  0.0
+2021  101.000000  0.0  5.0
+2022  103.020000  0.0  5.0
+2023  106.110600  0.0  5.0
+2024  110.355024  0.0  5.0
+2025  115.872775  0.0  5.0
 
 Growth:
-        A         B  A_ORIG  B_ORIG
-2020  NaN       NaN     NaN     NaN
-2021  0.5  6.545455     2.0     2.0
-2022  1.0  6.180887     2.0     2.0
-2023  1.5  1.839285     2.0     2.0
-2024  2.0 -2.103118     2.0     2.0
-2025  2.5  1.919399     2.0     2.0
+      Orig   A    B
+2020   NaN NaN  NaN
+2021   1.0 NaN  inf
+2022   2.0 NaN  0.0
+2023   3.0 NaN  0.0
+2024   4.0 NaN  0.0
+2025   5.0 NaN  0.0
 
 
 severity=1
 Dataframe:
-               A           B      A_ORIG      B_ORIG
-2020  100.000000  110.000000  100.000000  110.000000
-2021  101.000000  122.200000  102.000000  112.200000
-2022  103.020000  129.444000  104.040000  114.444000
-2023  106.110600  131.732880  106.120800  116.732880
-2024  110.355024  129.067538  108.243216  119.067538
-2025  115.872775  131.448888  110.408080  121.448888
+            Orig    A     B
+2020  100.000000  0.0   0.0
+2021  101.000000  0.0  10.0
+2022  103.020000  0.0  10.0
+2023  106.110600  0.0  10.0
+2024  110.355024  0.0  10.0
+2025  115.872775  0.0  10.0
 
 Growth:
-        A          B  A_ORIG  B_ORIG
-2020  NaN        NaN     NaN     NaN
-2021  1.0  11.090909     2.0     2.0
-2022  2.0   5.927987     2.0     2.0
-2023  3.0   1.768240     2.0     2.0
-2024  4.0  -2.023293     2.0     2.0
-2025  5.0   1.845042     2.0     2.0
+      Orig   A    B
+2020   NaN NaN  NaN
+2021   1.0 NaN  inf
+2022   2.0 NaN  0.0
+2023   3.0 NaN  0.0
+2024   4.0 NaN  0.0
+2025   5.0 NaN  0.0
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="upd-lprint-true-prints-values-the-before-and-after-update">
-<h3><span class="section-number">4.1.20. </span>.upd(,,lprint=True ) prints values the before and after update<a class="headerlink" href="#upd-lprint-true-prints-values-the-before-and-after-update" title="Permalink to this headline">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">lPrint</span></code> option of the method <code class="docutils literal notranslate"><span class="pre">upd()</span></code> is by defualt <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">False</span></code>.  By setting it true an update command will output the results of the calculation comapriong the values of the dataframe (over the impacted period) before, after and the difference between the two.</p>
+<h4><span class="section-number">4.5.3.5. </span>.upd(,,lprint=True ) prints values the before and after update<a class="headerlink" href="#upd-lprint-true-prints-values-the-before-and-after-update" title="Permalink to this headline">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">lPrint</span></code> option of the method <code class="docutils literal notranslate"><span class="pre">upd()</span></code> is set to <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">False</span></code> by default.  By setting it true, an update command will output the results of the calculation comparing the values of the dataframe (over the impacted period) before, after and the difference between the two.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">upd</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1"># Same number of values as years</span>
 <span class="s1">&lt;2021 2022&gt; A *  42 44</span>
-<span class="s1">&#39;&#39;&#39;</span><span class="p">,</span><span class="n">lprint</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">,</span><span class="n">lprint</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Update * [42.0, 44.0] 2021 2022
-A                    Before                After                 Diff
-2021               102.0000            4284.0000            4182.0000
-2022               109.0400            4797.7600            4688.7200
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Update
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>A</th>
-      <th>B</th>
-      <th>A_ORIG</th>
-      <th>B_ORIG</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020</th>
-      <td>100.000000</td>
-      <td>110.000000</td>
-      <td>100.000000</td>
-      <td>110.000000</td>
-    </tr>
-    <tr>
-      <th>2021</th>
-      <td>4284.000000</td>
-      <td>112.200000</td>
-      <td>102.000000</td>
-      <td>112.200000</td>
-    </tr>
-    <tr>
-      <th>2022</th>
-      <td>4797.760000</td>
-      <td>119.444000</td>
-      <td>104.040000</td>
-      <td>114.444000</td>
-    </tr>
-    <tr>
-      <th>2023</th>
-      <td>111.120800</td>
-      <td>121.732880</td>
-      <td>106.120800</td>
-      <td>116.732880</td>
-    </tr>
-    <tr>
-      <th>2024</th>
-      <td>113.343216</td>
-      <td>119.067538</td>
-      <td>108.243216</td>
-      <td>119.067538</td>
-    </tr>
-    <tr>
-      <th>2025</th>
-      <td>115.610080</td>
-      <td>121.448888</td>
-      <td>110.408080</td>
-      <td>121.448888</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> * [42.0, 44.0] 2021 2022
+A                    Before                After                 Diff
+2021                 0.0000               0.0000               0.0000
+2022                 0.0000               0.0000               0.0000
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="upd-create-true-requires-the-variable-to-exist">
-<h3><span class="section-number">4.1.21. </span>.upd(,,create=True ) Requires the variable to exist<a class="headerlink" href="#upd-create-true-requires-the-variable-to-exist" title="Permalink to this headline">#</a></h3>
+<h4><span class="section-number">4.5.3.6. </span>.upd(,,create=True ) Requires the variable to exist<a class="headerlink" href="#upd-create-true-requires-the-variable-to-exist" title="Permalink to this headline">#</a></h4>
 <p>Until now .upd has created variables if they did not exist in the input dataframe.</p>
 <p>To catch misspellings the parameter <code class="docutils literal notranslate"><span class="pre">create</span></code> can be set to False.
 New variables will not be created, and an exception will be raised.</p>
@@ -2177,6 +2173,7 @@ Set create=True if you want the variable created:
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -2228,7 +2225,7 @@ Set create=True if you want the variable created:
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</p>
+        <p class="prev-next-title"><span class="section-number">4.6. </span><code class="docutils literal notranslate"><span class="pre">.mfcalc()</span></code> an extension of standard Pandas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2250,34 +2247,37 @@ Set create=True if you want the variable created:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-of-modelflow">4.1. .upd() method of modelflow</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-operators">4.1.1. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-some-examples">4.1.2. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-python-environment">4.1.3. Setting up the python environment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-upd-to-create-a-new-variable-operator">4.1.4. Use .upd to create a new variable (= operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-updates-and-specific-time-periods">4.1.5. Multiple updates and specific time periods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-specific-datapoints-to-specific-values">4.1.6. Setting specific datapoints to specific values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator">4.1.7. Adding  the specified  values to all values in a range (the + operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator">4.1.8. Multiplying all values in a range by the specified values (the * operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator">4.1.9. Increasing all  values in a range by a  specified percent amount (the % operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-percent-growth-rate-to-specified-values-growth">4.1.10. Set the percent growth rate to specified values (=GROWTH)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator">4.1.11. Add or subtract from the existing percent growth rate (+GROWTH operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-change-in-a-variable-to-specific-values-diff-operator">4.1.12. Set the change in a variable to specific values (=diff operator)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recall-that-we-have-not-overwritten-df-so-the-df-dataframe-is-unchanged">4.1.13. Recall  that we have not overwritten df, so the df dataframe is unchanged.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-growth-rates-after-the-update-time-the-kg-option">4.1.14. Keep growth rates after the update time – the –kg option</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-default-keep-growth-behaviour">4.1.14.1. The default keep_growth behaviour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-python-environment">4.1. Setting up the python environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-names-in-modelflow">4.2. Column names in  Modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-and-time-dimensions-in-modelflow">4.3. .index and time dimensions in Modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leads-and-lags">4.4. Leads and lags</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-of-modelflow">4.5. .upd() method of modelflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-method-operators">4.5.1. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> method operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-some-examples">4.5.2. <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> some examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-upd-to-create-a-new-variable-operator">4.5.2.1. Use .upd to create a new variable (= operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-updates-and-specific-time-periods">4.5.2.2. Multiple updates and specific time periods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-specific-datapoints-to-specific-values">4.5.2.3. Setting specific datapoints to specific values</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-specified-values-to-all-values-in-a-range-the-operator">4.5.2.4. Adding  the specified  values to all values in a range (the + operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-all-values-in-a-range-by-the-specified-values-the-operator">4.5.2.5. Multiplying all values in a range by the specified values (the * operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-all-values-in-a-range-by-a-specified-percent-amount-the-operator">4.5.2.6. Increasing all  values in a range by a  specified percent amount (the % operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-percent-growth-rate-to-specified-values-growth">4.5.2.7. Set the percent growth rate to specified values (=GROWTH)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-or-subtract-from-the-existing-percent-growth-rate-growth-operator">4.5.2.8. Add or subtract from the existing percent growth rate (+GROWTH operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-change-in-a-variable-to-specific-values-diff-operator">4.5.2.9. Set the change in a variable to specific values (=diff operator)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-several-variable-in-one-line">4.5.2.10. Update several variable in one line</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-keep-growth-some-more-examples">4.1.15. .upd(,,,keep_growth) some more examples</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-a-new-dataframe-first-make-a-dataframe-with-some-growth-rate">4.1.16. Initialize a new dataframe First make a dataframe with some growth rate</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-update-a-in-2021-to-2023-to-a-new-value">4.1.17. now update A in 2021 to 2023 to a new value</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-with-the-option-keep-growth-set-globally">4.1.17.1. .upd() with the option keep_growth set globally</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selected-upd-options">4.5.3. Selected <code class="docutils literal notranslate"><span class="pre">.upd()</span></code> options</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-keep-growth-option-kg-and-nkg">4.5.3.1. The keep_growth option (–kg and –nkg)</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#the-default-keep-growth-behaviour">4.5.3.1.1. The default keep_growth behaviour</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-several-variable-in-one-line">4.1.18. Update several variable in one line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-scale-number-default-1-scale-the-updates">4.1.19. .upd(,,scale=&lt;number, default=1&gt;) Scale the updates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-lprint-true-prints-values-the-before-and-after-update">4.1.20. .upd(,,lprint=True ) prints values the before and after update</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-create-true-requires-the-variable-to-exist">4.1.21. .upd(,,create=True ) Requires the variable to exist</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-keep-growth-some-more-examples">4.5.3.2. .upd(,,,keep_growth) some more examples</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-with-the-option-keep-growth-set-globally">4.5.3.3. .upd() with the option keep_growth set globally</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-scale-number-default-1-scale-the-updates">4.5.3.4. .upd(,,scale=&lt;number, default=1&gt;) Scale the updates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-lprint-true-prints-values-the-before-and-after-update">4.5.3.5. .upd(,,lprint=True ) prints values the before and after update</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#upd-create-true-requires-the-variable-to-exist">4.5.3.6. .upd(,,create=True ) Requires the variable to exist</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
