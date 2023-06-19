@@ -1,0 +1,678 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432pt" height="181pt" viewBox="0.00 0.00 432.00 180.88">
+<g id="graph0" class="graph" transform="scale(0.30778 0.30778) rotate(0) translate(4 583.7)">
+<title>TD</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-583.7 1399.6,-583.7 1399.6,4 -4,4"/>
+<text text-anchor="middle" x="697.8" y="-7.2" font-family="Times New Roman,serif" font-size="14.00">PAKNECONOTHRXN</text>
+<!-- PAKNECONOTHRXN -->
+<g id="node1" class="node">
+<title>PAKNECONOTHRXN</title>
+<polygon fill="none" stroke="black" points="922.6,-296.1 501,-296.1 501,-24.5 922.6,-24.5 922.6,-296.1"/>
+<g id="a_node1_0"><a xlink:href="bogus" xlink:title="PAKNECONOTHRXN
+FRML &lt;DAMP,STOC&gt; PAKNECONOTHRXN = (PAKNECONOTHRXN(-1)*EXP(PAKNECONOTHRXN_A+ (0.590372627657176*((LOG(PAKNYGDPFCSTXN))-(LOG(PAKNYGDPFCSTXN(-1))))+((PAKGGREVGNFSXN/100)-(PAKGGREVGNFSXN(-1)/100))+(1-0.590372627657176)*((LOG(PAKNEIMPGNFSXN))-(LOG(PAKNEIMPGNFSXN(-1))))+0.2*PAKNYGDPGAP_/100) )) * (1-PAKNECONOTHRXN_D)+ PAKNECONOTHRXN_X*PAKNECONOTHRXN_D  $">
+<polygon fill="red" stroke="none" points="505.8,-269.3 505.8,-291.3 917.8,-291.3 917.8,-269.3 505.8,-269.3"/>
+<polygon fill="none" stroke="black" points="505.8,-269.3 505.8,-291.3 917.8,-291.3 917.8,-269.3 505.8,-269.3"/>
+<text text-anchor="start" x="645.42" y="-275" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNECONOTHRXN:</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="505.8,-245.3 505.8,-267.3 640.8,-267.3 640.8,-245.3 505.8,-245.3"/>
+<text text-anchor="start" x="508.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="642.8,-245.3 642.8,-267.3 685.8,-267.3 685.8,-245.3 642.8,-245.3"/>
+<text text-anchor="start" x="650.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="687.8,-245.3 687.8,-267.3 730.8,-267.3 730.8,-245.3 687.8,-245.3"/>
+<text text-anchor="start" x="695.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="732.8,-245.3 732.8,-267.3 775.8,-267.3 775.8,-245.3 732.8,-245.3"/>
+<text text-anchor="start" x="740.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="777.8,-245.3 777.8,-267.3 820.8,-267.3 820.8,-245.3 777.8,-245.3"/>
+<text text-anchor="start" x="785.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="822.8,-245.3 822.8,-267.3 865.8,-267.3 865.8,-245.3 822.8,-245.3"/>
+<text text-anchor="start" x="830.8" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<polygon fill="none" stroke="black" points="867.8,-245.3 867.8,-267.3 917.8,-267.3 917.8,-245.3 867.8,-245.3"/>
+<text text-anchor="start" x="879.3" y="-251" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2025</text>
+<g id="a_node1_1"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="505.8,-221.3 505.8,-243.3 640.8,-243.3 640.8,-221.3 505.8,-221.3"/>
+<text text-anchor="start" x="508.8" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node1_2"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="642.8,-221.3 642.8,-243.3 685.8,-243.3 685.8,-221.3 642.8,-221.3"/>
+<text text-anchor="start" x="652.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.696</text>
+</a>
+</g>
+<g id="a_node1_3"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="687.8,-221.3 687.8,-243.3 730.8,-243.3 730.8,-221.3 687.8,-221.3"/>
+<text text-anchor="start" x="697.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.858</text>
+</a>
+</g>
+<g id="a_node1_4"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="732.8,-221.3 732.8,-243.3 775.8,-243.3 775.8,-221.3 732.8,-221.3"/>
+<text text-anchor="start" x="742.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.021</text>
+</a>
+</g>
+<g id="a_node1_5"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="777.8,-221.3 777.8,-243.3 820.8,-243.3 820.8,-221.3 777.8,-221.3"/>
+<text text-anchor="start" x="787.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.183</text>
+</a>
+</g>
+<g id="a_node1_6"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="822.8,-221.3 822.8,-243.3 865.8,-243.3 865.8,-221.3 822.8,-221.3"/>
+<text text-anchor="start" x="832.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.342</text>
+</a>
+</g>
+<g id="a_node1_7"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="867.8,-221.3 867.8,-243.3 917.8,-243.3 917.8,-221.3 867.8,-221.3"/>
+<text text-anchor="start" x="884.05" y="-227" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.498</text>
+</a>
+</g>
+<g id="a_node1_8"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="505.8,-197.3 505.8,-219.3 640.8,-219.3 640.8,-197.3 505.8,-197.3"/>
+<text text-anchor="start" x="508.8" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-197.3 642.8,-219.3 685.8,-219.3 685.8,-197.3 642.8,-197.3"/>
+<text text-anchor="start" x="652.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.741</text>
+<polygon fill="none" stroke="black" points="687.8,-197.3 687.8,-219.3 730.8,-219.3 730.8,-197.3 687.8,-197.3"/>
+<text text-anchor="start" x="697.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.917</text>
+<polygon fill="none" stroke="black" points="732.8,-197.3 732.8,-219.3 775.8,-219.3 775.8,-197.3 732.8,-197.3"/>
+<text text-anchor="start" x="742.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.092</text>
+<polygon fill="none" stroke="black" points="777.8,-197.3 777.8,-219.3 820.8,-219.3 820.8,-197.3 777.8,-197.3"/>
+<text text-anchor="start" x="787.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.263</text>
+<polygon fill="none" stroke="black" points="822.8,-197.3 822.8,-219.3 865.8,-219.3 865.8,-197.3 822.8,-197.3"/>
+<text text-anchor="start" x="832.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.428</text>
+<polygon fill="none" stroke="black" points="867.8,-197.3 867.8,-219.3 917.8,-219.3 917.8,-197.3 867.8,-197.3"/>
+<text text-anchor="start" x="884.05" y="-203" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.588</text>
+<g id="a_node1_9"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="505.8,-173.3 505.8,-195.3 640.8,-195.3 640.8,-173.3 505.8,-173.3"/>
+<text text-anchor="start" x="508.8" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-173.3 642.8,-195.3 685.8,-195.3 685.8,-173.3 642.8,-173.3"/>
+<text text-anchor="start" x="652.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.045</text>
+<polygon fill="none" stroke="black" points="687.8,-173.3 687.8,-195.3 730.8,-195.3 730.8,-173.3 687.8,-173.3"/>
+<text text-anchor="start" x="697.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.059</text>
+<polygon fill="none" stroke="black" points="732.8,-173.3 732.8,-195.3 775.8,-195.3 775.8,-173.3 732.8,-173.3"/>
+<text text-anchor="start" x="742.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.071</text>
+<polygon fill="none" stroke="black" points="777.8,-173.3 777.8,-195.3 820.8,-195.3 820.8,-173.3 777.8,-173.3"/>
+<text text-anchor="start" x="787.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.080</text>
+<polygon fill="none" stroke="black" points="822.8,-173.3 822.8,-195.3 865.8,-195.3 865.8,-173.3 822.8,-173.3"/>
+<text text-anchor="start" x="832.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.086</text>
+<polygon fill="none" stroke="black" points="867.8,-173.3 867.8,-195.3 917.8,-195.3 917.8,-173.3 867.8,-173.3"/>
+<text text-anchor="start" x="884.05" y="-179" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.089</text>
+<polygon fill="none" stroke="black" points="505.8,-149.3 505.8,-171.3 917.8,-171.3 917.8,-149.3 505.8,-149.3"/>
+<text text-anchor="start" x="666.05" y="-155" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> % Explained by</text>
+<g id="a_node1_10"><a xlink:href="bogus" xlink:title="PAKNECONOTHRXN
+FRML &lt;DAMP,STOC&gt; PAKNECONOTHRXN = (PAKNECONOTHRXN(-1)*EXP(PAKNECONOTHRXN_A+ (0.590372627657176*((LOG(PAKNYGDPFCSTXN))-(LOG(PAKNYGDPFCSTXN(-1))))+((PAKGGREVGNFSXN/100)-(PAKGGREVGNFSXN(-1)/100))+(1-0.590372627657176)*((LOG(PAKNEIMPGNFSXN))-(LOG(PAKNEIMPGNFSXN(-1))))+0.2*PAKNYGDPGAP_/100) )) * (1-PAKNECONOTHRXN_D)+ PAKNECONOTHRXN_X*PAKNECONOTHRXN_D  $">
+<polygon fill="none" stroke="black" points="505.8,-125.3 505.8,-147.3 640.8,-147.3 640.8,-125.3 505.8,-125.3"/>
+<text text-anchor="start" x="508.8" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNECONOTHRXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-125.3 642.8,-147.3 685.8,-147.3 685.8,-125.3 642.8,-125.3"/>
+<text text-anchor="start" x="647.55" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="687.8,-125.3 687.8,-147.3 730.8,-147.3 730.8,-125.3 687.8,-125.3"/>
+<text text-anchor="start" x="690.55" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">84.720</text>
+<polygon fill="none" stroke="black" points="732.8,-125.3 732.8,-147.3 775.8,-147.3 775.8,-125.3 732.8,-125.3"/>
+<text text-anchor="start" x="735.55" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">91.067</text>
+<polygon fill="none" stroke="black" points="777.8,-125.3 777.8,-147.3 820.8,-147.3 820.8,-125.3 777.8,-125.3"/>
+<text text-anchor="start" x="780.55" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">96.006</text>
+<polygon fill="none" stroke="black" points="822.8,-125.3 822.8,-147.3 865.8,-147.3 865.8,-125.3 822.8,-125.3"/>
+<text text-anchor="start" x="825.55" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">99.721</text>
+<polygon fill="none" stroke="black" points="867.8,-125.3 867.8,-147.3 917.8,-147.3 917.8,-125.3 867.8,-125.3"/>
+<text text-anchor="start" x="870.67" y="-131" font-family="Times New Roman,serif" font-size="14.00" fill="blue">102.418</text>
+<g id="a_node1_11"><a xlink:href="bogus" xlink:title="Imp., GNFS (NIA), LCU Price defl. 2000 = 1
+FRML &lt;IDENT&gt; PAKNEIMPGNFSXN = ((PAKNEIMPENGYSH**PAKCESENGYIMPT)*PAKNVENGNIMPXN**(1-PAKCESENGYIMPT)+(PAKNEIMPOTHRSH**PAKCESENGYIMPT)*PAKNEIMPGSNEXN**(1-PAKCESENGYIMPT))**(1/(1-PAKCESENGYIMPT)) $">
+<polygon fill="none" stroke="black" points="505.8,-101.3 505.8,-123.3 640.8,-123.3 640.8,-101.3 505.8,-101.3"/>
+<text text-anchor="start" x="508.8" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNEIMPGNFSXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-101.3 642.8,-123.3 685.8,-123.3 685.8,-101.3 642.8,-101.3"/>
+<text text-anchor="start" x="645.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">91.715</text>
+<polygon fill="none" stroke="black" points="687.8,-101.3 687.8,-123.3 730.8,-123.3 730.8,-101.3 687.8,-101.3"/>
+<text text-anchor="start" x="692.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.167</text>
+<polygon fill="none" stroke="black" points="732.8,-101.3 732.8,-123.3 775.8,-123.3 775.8,-101.3 732.8,-101.3"/>
+<text text-anchor="start" x="737.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.174</text>
+<polygon fill="none" stroke="black" points="777.8,-101.3 777.8,-123.3 820.8,-123.3 820.8,-101.3 777.8,-101.3"/>
+<text text-anchor="start" x="782.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.175</text>
+<polygon fill="none" stroke="black" points="822.8,-101.3 822.8,-123.3 865.8,-123.3 865.8,-101.3 822.8,-101.3"/>
+<text text-anchor="start" x="827.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.215</text>
+<polygon fill="none" stroke="black" points="867.8,-101.3 867.8,-123.3 917.8,-123.3 917.8,-101.3 867.8,-101.3"/>
+<text text-anchor="start" x="879.55" y="-107" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.253</text>
+<g id="a_node1_12"><a xlink:href="bogus" xlink:title="GDP Factor Cost Local Currency units Implicit Price deflator
+FRML &lt;DAMP,STOC&gt; PAKNYGDPFCSTXN = (PAKNYGDPFCSTXN(-1)*EXP(PAKNYGDPFCSTXN_A+ (0.6*((LOG(PAKNYGDPFCSTXN(-1)))-(LOG(PAKNYGDPFCSTXN(-2))))+(1-0.6)*(0.7*PAKINFLEXPT/100+(1-0.7)*((LOG(PAKPSTAR(-1)))-(LOG(PAKPSTAR(-2)))))+0.0935726784287011*PAKNYGDPGAP_/100) )) * (1-PAKNYGDPFCSTXN_D)+ PAKNYGDPFCSTXN_X*PAKNYGDPFCSTXN_D  $">
+<polygon fill="none" stroke="black" points="505.8,-77.3 505.8,-99.3 640.8,-99.3 640.8,-77.3 505.8,-77.3"/>
+<text text-anchor="start" x="508.8" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPFCSTXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-77.3 642.8,-99.3 685.8,-99.3 685.8,-77.3 642.8,-77.3"/>
+<text text-anchor="start" x="652.05" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.839</text>
+<polygon fill="none" stroke="black" points="687.8,-77.3 687.8,-99.3 730.8,-99.3 730.8,-77.3 687.8,-77.3"/>
+<text text-anchor="start" x="690.55" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">11.504</text>
+<polygon fill="none" stroke="black" points="732.8,-77.3 732.8,-99.3 775.8,-99.3 775.8,-77.3 732.8,-77.3"/>
+<text text-anchor="start" x="742.05" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">7.426</text>
+<polygon fill="none" stroke="black" points="777.8,-77.3 777.8,-99.3 820.8,-99.3 820.8,-77.3 777.8,-77.3"/>
+<text text-anchor="start" x="787.05" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.647</text>
+<polygon fill="none" stroke="black" points="822.8,-77.3 822.8,-99.3 865.8,-99.3 865.8,-77.3 822.8,-77.3"/>
+<text text-anchor="start" x="832.05" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.535</text>
+<polygon fill="none" stroke="black" points="867.8,-77.3 867.8,-99.3 917.8,-99.3 917.8,-77.3 867.8,-77.3"/>
+<text text-anchor="start" x="884.05" y="-83" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.997</text>
+<g id="a_node1_13"><a xlink:href="bogus" xlink:title="Output Gap (% of Potential GDP)
+FRML &lt;IDENT&gt; PAKNYGDPGAP_ = ((PAKNYGDPMKTPKN/PAKNYGDPPOTLKN-1)*100) $">
+<polygon fill="none" stroke="black" points="505.8,-53.3 505.8,-75.3 640.8,-75.3 640.8,-53.3 505.8,-53.3"/>
+<text text-anchor="start" x="508.8" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPGAP_</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-53.3 642.8,-75.3 685.8,-75.3 685.8,-53.3 642.8,-53.3"/>
+<text text-anchor="start" x="652.05" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">6.653</text>
+<polygon fill="none" stroke="black" points="687.8,-53.3 687.8,-75.3 730.8,-75.3 730.8,-53.3 687.8,-53.3"/>
+<text text-anchor="start" x="697.05" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">6.506</text>
+<polygon fill="none" stroke="black" points="732.8,-53.3 732.8,-75.3 775.8,-75.3 775.8,-53.3 732.8,-53.3"/>
+<text text-anchor="start" x="742.05" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.312</text>
+<polygon fill="none" stroke="black" points="777.8,-53.3 777.8,-75.3 820.8,-75.3 820.8,-53.3 777.8,-53.3"/>
+<text text-anchor="start" x="787.05" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.111</text>
+<polygon fill="none" stroke="black" points="822.8,-53.3 822.8,-75.3 865.8,-75.3 865.8,-53.3 822.8,-53.3"/>
+<text text-anchor="start" x="832.05" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.485</text>
+<polygon fill="none" stroke="black" points="867.8,-53.3 867.8,-75.3 917.8,-75.3 917.8,-53.3 867.8,-53.3"/>
+<text text-anchor="start" x="879.55" y="-59" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.680</text>
+<g id="a_node1_14"><a xlink:href="bogus" xlink:title="Small
+Exogen">
+<polygon fill="none" stroke="black" points="505.8,-29.3 505.8,-51.3 640.8,-51.3 640.8,-29.3 505.8,-29.3"/>
+<text text-anchor="start" x="508.8" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Small</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="642.8,-29.3 642.8,-51.3 685.8,-51.3 685.8,-29.3 642.8,-29.3"/>
+<text text-anchor="start" x="647.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="687.8,-29.3 687.8,-51.3 730.8,-51.3 730.8,-29.3 687.8,-29.3"/>
+<text text-anchor="start" x="692.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="732.8,-29.3 732.8,-51.3 775.8,-51.3 775.8,-29.3 732.8,-29.3"/>
+<text text-anchor="start" x="737.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="777.8,-29.3 777.8,-51.3 820.8,-51.3 820.8,-29.3 777.8,-29.3"/>
+<text text-anchor="start" x="782.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="822.8,-29.3 822.8,-51.3 865.8,-51.3 865.8,-29.3 822.8,-29.3"/>
+<text text-anchor="start" x="827.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="867.8,-29.3 867.8,-51.3 917.8,-51.3 917.8,-29.3 867.8,-29.3"/>
+<text text-anchor="start" x="879.55" y="-35" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="502.8,-26.3 502.8,-294.3 920.8,-294.3 920.8,-26.3 502.8,-26.3"/>
+</g>
+<!-- PAKNYGDPGAP_ -->
+<g id="node2" class="node">
+<title>PAKNYGDPGAP_</title>
+<polygon fill="none" stroke="black" points="447.6,-555.7 0,-555.7 0,-356.1 447.6,-356.1 447.6,-555.7"/>
+<g id="a_node2_15"><a xlink:href="bogus" xlink:title="Output Gap (% of Potential GDP)
+FRML &lt;IDENT&gt; PAKNYGDPGAP_ = ((PAKNYGDPMKTPKN/PAKNYGDPPOTLKN-1)*100) $">
+<polygon fill="#63b8ff" stroke="none" points="4.8,-528.9 4.8,-550.9 442.8,-550.9 442.8,-528.9 4.8,-528.9"/>
+<polygon fill="none" stroke="black" points="4.8,-528.9 4.8,-550.9 442.8,-550.9 442.8,-528.9 4.8,-528.9"/>
+<text text-anchor="start" x="75.67" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPGAP_:Output Gap (% of Potential GDP)</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="4.8,-504.9 4.8,-526.9 140.8,-526.9 140.8,-504.9 4.8,-504.9"/>
+<text text-anchor="start" x="7.8" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="142.8,-504.9 142.8,-526.9 185.8,-526.9 185.8,-504.9 142.8,-504.9"/>
+<text text-anchor="start" x="150.8" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="187.8,-504.9 187.8,-526.9 230.8,-526.9 230.8,-504.9 187.8,-504.9"/>
+<text text-anchor="start" x="195.8" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="232.8,-504.9 232.8,-526.9 282.8,-526.9 282.8,-504.9 232.8,-504.9"/>
+<text text-anchor="start" x="244.3" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="284.8,-504.9 284.8,-526.9 334.8,-526.9 334.8,-504.9 284.8,-504.9"/>
+<text text-anchor="start" x="296.3" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="336.8,-504.9 336.8,-526.9 390.8,-526.9 390.8,-504.9 336.8,-504.9"/>
+<text text-anchor="start" x="350.3" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<polygon fill="none" stroke="black" points="392.8,-504.9 392.8,-526.9 442.8,-526.9 442.8,-504.9 392.8,-504.9"/>
+<text text-anchor="start" x="404.3" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2025</text>
+<g id="a_node2_16"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="4.8,-480.9 4.8,-502.9 140.8,-502.9 140.8,-480.9 4.8,-480.9"/>
+<text text-anchor="start" x="7.8" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node2_17"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="142.8,-480.9 142.8,-502.9 185.8,-502.9 185.8,-480.9 142.8,-480.9"/>
+<text text-anchor="start" x="152.05" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.136</text>
+</a>
+</g>
+<g id="a_node2_18"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="187.8,-480.9 187.8,-502.9 230.8,-502.9 230.8,-480.9 187.8,-480.9"/>
+<text text-anchor="start" x="197.05" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.426</text>
+</a>
+</g>
+<g id="a_node2_19"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="232.8,-480.9 232.8,-502.9 282.8,-502.9 282.8,-480.9 232.8,-480.9"/>
+<text text-anchor="start" x="244.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-1.533</text>
+</a>
+</g>
+<g id="a_node2_20"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="284.8,-480.9 284.8,-502.9 334.8,-502.9 334.8,-480.9 284.8,-480.9"/>
+<text text-anchor="start" x="296.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-3.144</text>
+</a>
+</g>
+<g id="a_node2_21"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="336.8,-480.9 336.8,-502.9 390.8,-502.9 390.8,-480.9 336.8,-480.9"/>
+<text text-anchor="start" x="352.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.266</text>
+</a>
+</g>
+<g id="a_node2_22"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="392.8,-480.9 392.8,-502.9 442.8,-502.9 442.8,-480.9 392.8,-480.9"/>
+<text text-anchor="start" x="404.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.964</text>
+</a>
+</g>
+<g id="a_node2_23"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="4.8,-456.9 4.8,-478.9 140.8,-478.9 140.8,-456.9 4.8,-456.9"/>
+<text text-anchor="start" x="7.8" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="142.8,-456.9 142.8,-478.9 185.8,-478.9 185.8,-456.9 142.8,-456.9"/>
+<text text-anchor="start" x="152.05" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.006</text>
+<polygon fill="none" stroke="black" points="187.8,-456.9 187.8,-478.9 230.8,-478.9 230.8,-456.9 187.8,-456.9"/>
+<text text-anchor="start" x="197.05" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.430</text>
+<polygon fill="none" stroke="black" points="232.8,-456.9 232.8,-478.9 282.8,-478.9 282.8,-456.9 232.8,-456.9"/>
+<text text-anchor="start" x="244.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.802</text>
+<polygon fill="none" stroke="black" points="284.8,-456.9 284.8,-478.9 334.8,-478.9 334.8,-456.9 284.8,-456.9"/>
+<text text-anchor="start" x="296.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-2.772</text>
+<polygon fill="none" stroke="black" points="336.8,-456.9 336.8,-478.9 390.8,-478.9 390.8,-456.9 336.8,-456.9"/>
+<text text-anchor="start" x="352.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.180</text>
+<polygon fill="none" stroke="black" points="392.8,-456.9 392.8,-478.9 442.8,-478.9 442.8,-456.9 392.8,-456.9"/>
+<text text-anchor="start" x="404.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-5.081</text>
+<g id="a_node2_24"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="4.8,-432.9 4.8,-454.9 140.8,-454.9 140.8,-432.9 4.8,-432.9"/>
+<text text-anchor="start" x="7.8" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="142.8,-432.9 142.8,-454.9 185.8,-454.9 185.8,-432.9 142.8,-432.9"/>
+<text text-anchor="start" x="152.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.869</text>
+<polygon fill="none" stroke="black" points="187.8,-432.9 187.8,-454.9 230.8,-454.9 230.8,-432.9 187.8,-432.9"/>
+<text text-anchor="start" x="197.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.004</text>
+<polygon fill="none" stroke="black" points="232.8,-432.9 232.8,-454.9 282.8,-454.9 282.8,-432.9 232.8,-432.9"/>
+<text text-anchor="start" x="249.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.730</text>
+<polygon fill="none" stroke="black" points="284.8,-432.9 284.8,-454.9 334.8,-454.9 334.8,-432.9 284.8,-432.9"/>
+<text text-anchor="start" x="301.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.372</text>
+<polygon fill="none" stroke="black" points="336.8,-432.9 336.8,-454.9 390.8,-454.9 390.8,-432.9 336.8,-432.9"/>
+<text text-anchor="start" x="357.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.086</text>
+<polygon fill="none" stroke="black" points="392.8,-432.9 392.8,-454.9 442.8,-454.9 442.8,-432.9 392.8,-432.9"/>
+<text text-anchor="start" x="404.55" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.117</text>
+<polygon fill="none" stroke="black" points="4.8,-408.9 4.8,-430.9 442.8,-430.9 442.8,-408.9 4.8,-408.9"/>
+<text text-anchor="start" x="178.05" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> % Explained by</text>
+<g id="a_node2_25"><a xlink:href="bogus" xlink:title="Real GDP
+FRML &lt;IDENT&gt; PAKNYGDPMKTPKN = PAKNECONPRVTKN+PAKNECONGOVTKN+PAKNEGDIFTOTKN+PAKNEGDISTKBKN+PAKNEEXPGNFSKN-PAKNEIMPGNFSKN+PAKNYGDPDISCKN+PAKADAP*PAKDISPREPKN $">
+<polygon fill="none" stroke="black" points="4.8,-384.9 4.8,-406.9 140.8,-406.9 140.8,-384.9 4.8,-384.9"/>
+<text text-anchor="start" x="7.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPMKTPKN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="142.8,-384.9 142.8,-406.9 185.8,-406.9 185.8,-384.9 142.8,-384.9"/>
+<text text-anchor="start" x="145.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">88.489</text>
+<polygon fill="none" stroke="black" points="187.8,-384.9 187.8,-406.9 230.8,-406.9 230.8,-384.9 187.8,-384.9"/>
+<text text-anchor="start" x="190.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">96.735</text>
+<polygon fill="none" stroke="black" points="232.8,-384.9 232.8,-406.9 282.8,-406.9 282.8,-384.9 232.8,-384.9"/>
+<text text-anchor="start" x="235.67" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">104.426</text>
+<polygon fill="none" stroke="black" points="284.8,-384.9 284.8,-406.9 334.8,-406.9 334.8,-384.9 284.8,-384.9"/>
+<text text-anchor="start" x="287.67" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">122.790</text>
+<polygon fill="none" stroke="black" points="336.8,-384.9 336.8,-406.9 390.8,-406.9 390.8,-384.9 336.8,-384.9"/>
+<text text-anchor="start" x="343.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">252.130</text>
+<polygon fill="none" stroke="black" points="392.8,-384.9 392.8,-406.9 442.8,-406.9 442.8,-384.9 392.8,-384.9"/>
+<text text-anchor="start" x="397.8" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-46.822</text>
+<g id="a_node2_26"><a xlink:href="bogus" xlink:title="Potential Output, constant LCU
+FRML &lt;IDENT&gt; PAKNYGDPPOTLKN = PAKNYGDPTFP*(PAKLMEMPSTRLCN**PAKNYYWBTOTLCN_)*(PAKNEGDIKSTKKN(-1)**(1-PAKNYYWBTOTLCN_-0.1))*(PAKNVENGTOTLKN**0.1) $">
+<polygon fill="none" stroke="black" points="4.8,-360.9 4.8,-382.9 140.8,-382.9 140.8,-360.9 4.8,-360.9"/>
+<text text-anchor="start" x="7.8" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPPOTLKN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="142.8,-360.9 142.8,-382.9 185.8,-382.9 185.8,-360.9 142.8,-360.9"/>
+<text text-anchor="start" x="145.55" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">11.598</text>
+<polygon fill="none" stroke="black" points="187.8,-360.9 187.8,-382.9 230.8,-382.9 230.8,-360.9 187.8,-360.9"/>
+<text text-anchor="start" x="197.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.296</text>
+<polygon fill="none" stroke="black" points="232.8,-360.9 232.8,-382.9 282.8,-382.9 282.8,-360.9 232.8,-360.9"/>
+<text text-anchor="start" x="244.55" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-4.460</text>
+<polygon fill="none" stroke="black" points="284.8,-360.9 284.8,-382.9 334.8,-382.9 334.8,-360.9 284.8,-360.9"/>
+<text text-anchor="start" x="289.8" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-22.898</text>
+<polygon fill="none" stroke="black" points="336.8,-360.9 336.8,-382.9 390.8,-382.9 390.8,-360.9 336.8,-360.9"/>
+<text text-anchor="start" x="339.42" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-152.474</text>
+<polygon fill="none" stroke="black" points="392.8,-360.9 392.8,-382.9 442.8,-382.9 442.8,-360.9 392.8,-360.9"/>
+<text text-anchor="start" x="395.67" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">146.907</text>
+<polygon fill="none" stroke="black" points="1.8,-357.9 1.8,-553.9 445.8,-553.9 445.8,-357.9 1.8,-357.9"/>
+</g>
+<!-- PAKNYGDPGAP_&#45;&gt;PAKNECONOTHRXN -->
+<g id="edge2" class="edge">
+<title>PAKNYGDPGAP_-&gt;PAKNECONOTHRXN</title>
+<g id="a_edge2"><a xlink:href="bogus" xlink:title=" PAKNYGDPGAP_ -&gt; PAKNECONOTHRXN Min. att. -1%  max: 7%">
+<path fill="none" stroke="black" d="M388.67,-355.71C421.68,-335.85 456.86,-314.68 491.4,-293.9"/>
+<polygon fill="black" stroke="black" points="492.88,-296.5 499.64,-288.34 489.27,-290.5 492.88,-296.5"/>
+</a>
+</g>
+</g>
+<!-- PAKNYGDPFCSTXN -->
+<g id="node3" class="node">
+<title>PAKNYGDPFCSTXN</title>
+<polygon fill="none" stroke="black" points="958.1,-579.7 465.5,-579.7 465.5,-332.1 958.1,-332.1 958.1,-579.7"/>
+<g id="a_node3_27"><a xlink:href="bogus" xlink:title="GDP Factor Cost Local Currency units Implicit Price deflator
+FRML &lt;DAMP,STOC&gt; PAKNYGDPFCSTXN = (PAKNYGDPFCSTXN(-1)*EXP(PAKNYGDPFCSTXN_A+ (0.6*((LOG(PAKNYGDPFCSTXN(-1)))-(LOG(PAKNYGDPFCSTXN(-2))))+(1-0.6)*(0.7*PAKINFLEXPT/100+(1-0.7)*((LOG(PAKPSTAR(-1)))-(LOG(PAKPSTAR(-2)))))+0.0935726784287011*PAKNYGDPGAP_/100) )) * (1-PAKNYGDPFCSTXN_D)+ PAKNYGDPFCSTXN_X*PAKNYGDPFCSTXN_D  $">
+<polygon fill="#63b8ff" stroke="none" points="470.3,-552.9 470.3,-574.9 953.3,-574.9 953.3,-552.9 470.3,-552.9"/>
+<polygon fill="none" stroke="black" points="470.3,-552.9 470.3,-574.9 953.3,-574.9 953.3,-552.9 470.3,-552.9"/>
+<text text-anchor="start" x="479.3" y="-558.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPFCSTXN:GDP Factor Cost Local Currency units Implicit Price deflator</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="470.3,-528.9 470.3,-550.9 634.3,-550.9 634.3,-528.9 470.3,-528.9"/>
+<text text-anchor="start" x="473.3" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="636.3,-528.9 636.3,-550.9 703.3,-550.9 703.3,-528.9 636.3,-528.9"/>
+<text text-anchor="start" x="656.3" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="705.3,-528.9 705.3,-550.9 757.3,-550.9 757.3,-528.9 705.3,-528.9"/>
+<text text-anchor="start" x="717.8" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="759.3,-528.9 759.3,-550.9 806.3,-550.9 806.3,-528.9 759.3,-528.9"/>
+<text text-anchor="start" x="769.3" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="808.3,-528.9 808.3,-550.9 853.3,-550.9 853.3,-528.9 808.3,-528.9"/>
+<text text-anchor="start" x="817.3" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="855.3,-528.9 855.3,-550.9 899.3,-550.9 899.3,-528.9 855.3,-528.9"/>
+<text text-anchor="start" x="863.8" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<polygon fill="none" stroke="black" points="901.3,-528.9 901.3,-550.9 953.3,-550.9 953.3,-528.9 901.3,-528.9"/>
+<text text-anchor="start" x="913.8" y="-534.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2025</text>
+<g id="a_node3_28"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="470.3,-504.9 470.3,-526.9 634.3,-526.9 634.3,-504.9 470.3,-504.9"/>
+<text text-anchor="start" x="473.3" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node3_29"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="636.3,-504.9 636.3,-526.9 703.3,-526.9 703.3,-504.9 636.3,-504.9"/>
+<text text-anchor="start" x="669.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.693</text>
+</a>
+</g>
+<g id="a_node3_30"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="705.3,-504.9 705.3,-526.9 757.3,-526.9 757.3,-504.9 705.3,-504.9"/>
+<text text-anchor="start" x="723.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.863</text>
+</a>
+</g>
+<g id="a_node3_31"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="759.3,-504.9 759.3,-526.9 806.3,-526.9 806.3,-504.9 759.3,-504.9"/>
+<text text-anchor="start" x="772.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.042</text>
+</a>
+</g>
+<g id="a_node3_32"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="808.3,-504.9 808.3,-526.9 853.3,-526.9 853.3,-504.9 808.3,-504.9"/>
+<text text-anchor="start" x="819.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.226</text>
+</a>
+</g>
+<g id="a_node3_33"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="855.3,-504.9 855.3,-526.9 899.3,-526.9 899.3,-504.9 855.3,-504.9"/>
+<text text-anchor="start" x="865.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.412</text>
+</a>
+</g>
+<g id="a_node3_34"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="901.3,-504.9 901.3,-526.9 953.3,-526.9 953.3,-504.9 901.3,-504.9"/>
+<text text-anchor="start" x="919.55" y="-510.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.600</text>
+</a>
+</g>
+<g id="a_node3_35"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="470.3,-480.9 470.3,-502.9 634.3,-502.9 634.3,-480.9 470.3,-480.9"/>
+<text text-anchor="start" x="473.3" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-480.9 636.3,-502.9 703.3,-502.9 703.3,-480.9 636.3,-480.9"/>
+<text text-anchor="start" x="669.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.694</text>
+<polygon fill="none" stroke="black" points="705.3,-480.9 705.3,-502.9 757.3,-502.9 757.3,-480.9 705.3,-480.9"/>
+<text text-anchor="start" x="723.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.875</text>
+<polygon fill="none" stroke="black" points="759.3,-480.9 759.3,-502.9 806.3,-502.9 806.3,-480.9 759.3,-480.9"/>
+<text text-anchor="start" x="772.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.065</text>
+<polygon fill="none" stroke="black" points="808.3,-480.9 808.3,-502.9 853.3,-502.9 853.3,-480.9 808.3,-480.9"/>
+<text text-anchor="start" x="819.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.257</text>
+<polygon fill="none" stroke="black" points="855.3,-480.9 855.3,-502.9 899.3,-502.9 899.3,-480.9 855.3,-480.9"/>
+<text text-anchor="start" x="865.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.450</text>
+<polygon fill="none" stroke="black" points="901.3,-480.9 901.3,-502.9 953.3,-502.9 953.3,-480.9 901.3,-480.9"/>
+<text text-anchor="start" x="919.55" y="-486.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.643</text>
+<g id="a_node3_36"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="470.3,-456.9 470.3,-478.9 634.3,-478.9 634.3,-456.9 470.3,-456.9"/>
+<text text-anchor="start" x="473.3" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-456.9 636.3,-478.9 703.3,-478.9 703.3,-456.9 636.3,-456.9"/>
+<text text-anchor="start" x="669.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.001</text>
+<polygon fill="none" stroke="black" points="705.3,-456.9 705.3,-478.9 757.3,-478.9 757.3,-456.9 705.3,-456.9"/>
+<text text-anchor="start" x="723.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.013</text>
+<polygon fill="none" stroke="black" points="759.3,-456.9 759.3,-478.9 806.3,-478.9 806.3,-456.9 759.3,-456.9"/>
+<text text-anchor="start" x="772.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.023</text>
+<polygon fill="none" stroke="black" points="808.3,-456.9 808.3,-478.9 853.3,-478.9 853.3,-456.9 808.3,-456.9"/>
+<text text-anchor="start" x="819.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.031</text>
+<polygon fill="none" stroke="black" points="855.3,-456.9 855.3,-478.9 899.3,-478.9 899.3,-456.9 855.3,-456.9"/>
+<text text-anchor="start" x="865.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.038</text>
+<polygon fill="none" stroke="black" points="901.3,-456.9 901.3,-478.9 953.3,-478.9 953.3,-456.9 901.3,-456.9"/>
+<text text-anchor="start" x="919.55" y="-462.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.043</text>
+<polygon fill="none" stroke="black" points="470.3,-432.9 470.3,-454.9 953.3,-454.9 953.3,-432.9 470.3,-432.9"/>
+<text text-anchor="start" x="666.05" y="-438.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> % Explained by</text>
+<g id="a_node3_37"><a xlink:href="bogus" xlink:title="GDP Factor Cost Local Currency units Implicit Price deflator
+FRML &lt;DAMP,STOC&gt; PAKNYGDPFCSTXN = (PAKNYGDPFCSTXN(-1)*EXP(PAKNYGDPFCSTXN_A+ (0.6*((LOG(PAKNYGDPFCSTXN(-1)))-(LOG(PAKNYGDPFCSTXN(-2))))+(1-0.6)*(0.7*PAKINFLEXPT/100+(1-0.7)*((LOG(PAKPSTAR(-1)))-(LOG(PAKPSTAR(-2)))))+0.0935726784287011*PAKNYGDPGAP_/100) )) * (1-PAKNYGDPFCSTXN_D)+ PAKNYGDPFCSTXN_X*PAKNYGDPFCSTXN_D  $">
+<polygon fill="none" stroke="black" points="470.3,-408.9 470.3,-430.9 634.3,-430.9 634.3,-408.9 470.3,-408.9"/>
+<text text-anchor="start" x="473.3" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPFCSTXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-408.9 636.3,-430.9 703.3,-430.9 703.3,-408.9 636.3,-408.9"/>
+<text text-anchor="start" x="665.05" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="705.3,-408.9 705.3,-430.9 757.3,-430.9 757.3,-408.9 705.3,-408.9"/>
+<text text-anchor="start" x="716.8" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">19.099</text>
+<polygon fill="none" stroke="black" points="759.3,-408.9 759.3,-430.9 806.3,-430.9 806.3,-408.9 759.3,-408.9"/>
+<text text-anchor="start" x="765.8" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">93.741</text>
+<polygon fill="none" stroke="black" points="808.3,-408.9 808.3,-430.9 853.3,-430.9 853.3,-408.9 808.3,-408.9"/>
+<text text-anchor="start" x="812.8" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">97.459</text>
+<polygon fill="none" stroke="black" points="855.3,-408.9 855.3,-430.9 899.3,-430.9 899.3,-408.9 855.3,-408.9"/>
+<text text-anchor="start" x="858.8" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">99.507</text>
+<polygon fill="none" stroke="black" points="901.3,-408.9 901.3,-430.9 953.3,-430.9 953.3,-408.9 901.3,-408.9"/>
+<text text-anchor="start" x="906.05" y="-414.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">100.254</text>
+<g id="a_node3_38"><a xlink:href="bogus" xlink:title="Output Gap (% of Potential GDP)
+FRML &lt;IDENT&gt; PAKNYGDPGAP_ = ((PAKNYGDPMKTPKN/PAKNYGDPPOTLKN-1)*100) $">
+<polygon fill="none" stroke="black" points="470.3,-384.9 470.3,-406.9 634.3,-406.9 634.3,-384.9 470.3,-384.9"/>
+<text text-anchor="start" x="473.3" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNYGDPGAP_</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-384.9 636.3,-406.9 703.3,-406.9 703.3,-384.9 636.3,-384.9"/>
+<text text-anchor="start" x="656.05" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">100.000</text>
+<polygon fill="none" stroke="black" points="705.3,-384.9 705.3,-406.9 757.3,-406.9 757.3,-384.9 705.3,-384.9"/>
+<text text-anchor="start" x="716.8" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">13.783</text>
+<polygon fill="none" stroke="black" points="759.3,-384.9 759.3,-406.9 806.3,-406.9 806.3,-384.9 759.3,-384.9"/>
+<text text-anchor="start" x="772.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">6.166</text>
+<polygon fill="none" stroke="black" points="808.3,-384.9 808.3,-406.9 853.3,-406.9 853.3,-384.9 808.3,-384.9"/>
+<text text-anchor="start" x="819.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2.504</text>
+<polygon fill="none" stroke="black" points="855.3,-384.9 855.3,-406.9 899.3,-406.9 899.3,-384.9 855.3,-384.9"/>
+<text text-anchor="start" x="865.55" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.517</text>
+<polygon fill="none" stroke="black" points="901.3,-384.9 901.3,-406.9 953.3,-406.9 953.3,-384.9 901.3,-384.9"/>
+<text text-anchor="start" x="915.05" y="-390.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.675</text>
+<g id="a_node3_39"><a xlink:href="bogus" xlink:title="Marginal Cost of Production
+FRML &lt;IDENT&gt; PAKPSTAR = (1/PAKNYGDPTFP)*((PAKNEKRTTOTLCN/(1-PAKNYYWBTOTLCN_-0.1))**(1-PAKNYYWBTOTLCN_-0.1))*((PAKNYWRTTOTLCN/(PAKNYYWBTOTLCN_))**(PAKNYYWBTOTLCN_))*(PAKNVENGTOTLXN/0.1)**0.1 $">
+<polygon fill="none" stroke="black" points="470.3,-360.9 470.3,-382.9 634.3,-382.9 634.3,-360.9 470.3,-360.9"/>
+<text text-anchor="start" x="473.3" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKPSTAR</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-360.9 636.3,-382.9 703.3,-382.9 703.3,-360.9 636.3,-360.9"/>
+<text text-anchor="start" x="665.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="705.3,-360.9 705.3,-382.9 757.3,-382.9 757.3,-360.9 705.3,-360.9"/>
+<text text-anchor="start" x="716.8" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">67.287</text>
+<polygon fill="none" stroke="black" points="759.3,-360.9 759.3,-382.9 806.3,-382.9 806.3,-360.9 759.3,-360.9"/>
+<text text-anchor="start" x="768.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.080</text>
+<polygon fill="none" stroke="black" points="808.3,-360.9 808.3,-382.9 853.3,-382.9 853.3,-360.9 808.3,-360.9"/>
+<text text-anchor="start" x="815.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.607</text>
+<polygon fill="none" stroke="black" points="855.3,-360.9 855.3,-382.9 899.3,-382.9 899.3,-360.9 855.3,-360.9"/>
+<text text-anchor="start" x="861.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-1.117</text>
+<polygon fill="none" stroke="black" points="901.3,-360.9 901.3,-382.9 953.3,-382.9 953.3,-360.9 901.3,-360.9"/>
+<text text-anchor="start" x="915.05" y="-366.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-1.004</text>
+<g id="a_node3_40"><a xlink:href="bogus" xlink:title="Small
+Exogen">
+<polygon fill="none" stroke="black" points="470.3,-336.9 470.3,-358.9 634.3,-358.9 634.3,-336.9 470.3,-336.9"/>
+<text text-anchor="start" x="473.3" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Small</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="636.3,-336.9 636.3,-358.9 703.3,-358.9 703.3,-336.9 636.3,-336.9"/>
+<text text-anchor="start" x="665.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="705.3,-336.9 705.3,-358.9 757.3,-358.9 757.3,-336.9 705.3,-336.9"/>
+<text text-anchor="start" x="719.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="759.3,-336.9 759.3,-358.9 806.3,-358.9 806.3,-336.9 759.3,-336.9"/>
+<text text-anchor="start" x="768.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="808.3,-336.9 808.3,-358.9 853.3,-358.9 853.3,-336.9 808.3,-336.9"/>
+<text text-anchor="start" x="815.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="855.3,-336.9 855.3,-358.9 899.3,-358.9 899.3,-336.9 855.3,-336.9"/>
+<text text-anchor="start" x="861.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="901.3,-336.9 901.3,-358.9 953.3,-358.9 953.3,-336.9 901.3,-336.9"/>
+<text text-anchor="start" x="915.05" y="-342.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="467.3,-333.9 467.3,-577.9 956.3,-577.9 956.3,-333.9 467.3,-333.9"/>
+</g>
+<!-- PAKNYGDPFCSTXN&#45;&gt;PAKNECONOTHRXN -->
+<g id="edge3" class="edge">
+<title>PAKNYGDPFCSTXN-&gt;PAKNECONOTHRXN</title>
+<g id="a_edge3"><a xlink:href="bogus" xlink:title=" PAKNYGDPFCSTXN -&gt; PAKNECONOTHRXN Min. att. 1%  max: 12%">
+<path fill="none" stroke="black" stroke-width="1.15" d="M711.8,-331.66C711.8,-323.59 711.8,-315.42 711.8,-307.25"/>
+<polygon fill="black" stroke="black" stroke-width="1.15" points="715.3,-307.52 711.8,-297.52 708.3,-307.52 715.3,-307.52"/>
+</a>
+</g>
+</g>
+<!-- PAKNEIMPGNFSXN -->
+<g id="node4" class="node">
+<title>PAKNEIMPGNFSXN</title>
+<polygon fill="none" stroke="black" points="1395.6,-567.7 976,-567.7 976,-344.1 1395.6,-344.1 1395.6,-567.7"/>
+<g id="a_node4_41"><a xlink:href="bogus" xlink:title="Imp., GNFS (NIA), LCU Price defl. 2000 = 1
+FRML &lt;IDENT&gt; PAKNEIMPGNFSXN = ((PAKNEIMPENGYSH**PAKCESENGYIMPT)*PAKNVENGNIMPXN**(1-PAKCESENGYIMPT)+(PAKNEIMPOTHRSH**PAKCESENGYIMPT)*PAKNEIMPGSNEXN**(1-PAKCESENGYIMPT))**(1/(1-PAKCESENGYIMPT)) $">
+<polygon fill="#63b8ff" stroke="none" points="980.8,-540.9 980.8,-562.9 1390.8,-562.9 1390.8,-540.9 980.8,-540.9"/>
+<polygon fill="none" stroke="black" points="980.8,-540.9 980.8,-562.9 1390.8,-562.9 1390.8,-540.9 980.8,-540.9"/>
+<text text-anchor="start" x="996.05" y="-546.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNEIMPGNFSXN:Imp., GNFS (NIA), LCU Price defl. 2000 = 1</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="980.8,-516.9 980.8,-538.9 1113.8,-538.9 1113.8,-516.9 980.8,-516.9"/>
+<text text-anchor="start" x="983.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Per</text>
+<polygon fill="none" stroke="black" points="1115.8,-516.9 1115.8,-538.9 1165.8,-538.9 1165.8,-516.9 1115.8,-516.9"/>
+<text text-anchor="start" x="1127.3" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2020</text>
+<polygon fill="none" stroke="black" points="1167.8,-516.9 1167.8,-538.9 1210.8,-538.9 1210.8,-516.9 1167.8,-516.9"/>
+<text text-anchor="start" x="1175.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2021</text>
+<polygon fill="none" stroke="black" points="1212.8,-516.9 1212.8,-538.9 1255.8,-538.9 1255.8,-516.9 1212.8,-516.9"/>
+<text text-anchor="start" x="1220.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2022</text>
+<polygon fill="none" stroke="black" points="1257.8,-516.9 1257.8,-538.9 1300.8,-538.9 1300.8,-516.9 1257.8,-516.9"/>
+<text text-anchor="start" x="1265.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2023</text>
+<polygon fill="none" stroke="black" points="1302.8,-516.9 1302.8,-538.9 1345.8,-538.9 1345.8,-516.9 1302.8,-516.9"/>
+<text text-anchor="start" x="1310.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2024</text>
+<polygon fill="none" stroke="black" points="1347.8,-516.9 1347.8,-538.9 1390.8,-538.9 1390.8,-516.9 1347.8,-516.9"/>
+<text text-anchor="start" x="1355.8" y="-522.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">2025</text>
+<g id="a_node4_42"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="980.8,-492.9 980.8,-514.9 1113.8,-514.9 1113.8,-492.9 980.8,-492.9"/>
+<text text-anchor="start" x="983.8" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Base</text>
+</a>
+</g>
+<g id="a_node4_43"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1115.8,-492.9 1115.8,-514.9 1165.8,-514.9 1165.8,-492.9 1115.8,-492.9"/>
+<text text-anchor="start" x="1132.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.350</text>
+</a>
+</g>
+<g id="a_node4_44"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1167.8,-492.9 1167.8,-514.9 1210.8,-514.9 1210.8,-492.9 1167.8,-492.9"/>
+<text text-anchor="start" x="1177.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.431</text>
+</a>
+</g>
+<g id="a_node4_45"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1212.8,-492.9 1212.8,-514.9 1255.8,-514.9 1255.8,-492.9 1212.8,-492.9"/>
+<text text-anchor="start" x="1222.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.520</text>
+</a>
+</g>
+<g id="a_node4_46"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1257.8,-492.9 1257.8,-514.9 1300.8,-514.9 1300.8,-492.9 1257.8,-492.9"/>
+<text text-anchor="start" x="1267.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.616</text>
+</a>
+</g>
+<g id="a_node4_47"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1302.8,-492.9 1302.8,-514.9 1345.8,-514.9 1345.8,-492.9 1302.8,-492.9"/>
+<text text-anchor="start" x="1312.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.718</text>
+</a>
+</g>
+<g id="a_node4_48"><a xlink:href="bogus" xlink:title="Baseline values">
+<polygon fill="none" stroke="black" points="1347.8,-492.9 1347.8,-514.9 1390.8,-514.9 1390.8,-492.9 1347.8,-492.9"/>
+<text text-anchor="start" x="1357.05" y="-498.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.826</text>
+</a>
+</g>
+<g id="a_node4_49"><a xlink:href="bogus" xlink:title="Latest run values">
+<polygon fill="none" stroke="black" points="980.8,-468.9 980.8,-490.9 1113.8,-490.9 1113.8,-468.9 980.8,-468.9"/>
+<text text-anchor="start" x="983.8" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Last</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="1115.8,-468.9 1115.8,-490.9 1165.8,-490.9 1165.8,-468.9 1115.8,-468.9"/>
+<text text-anchor="start" x="1132.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.432</text>
+<polygon fill="none" stroke="black" points="1167.8,-468.9 1167.8,-490.9 1210.8,-490.9 1210.8,-468.9 1167.8,-468.9"/>
+<text text-anchor="start" x="1177.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.515</text>
+<polygon fill="none" stroke="black" points="1212.8,-468.9 1212.8,-490.9 1255.8,-490.9 1255.8,-468.9 1212.8,-468.9"/>
+<text text-anchor="start" x="1222.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.606</text>
+<polygon fill="none" stroke="black" points="1257.8,-468.9 1257.8,-490.9 1300.8,-490.9 1300.8,-468.9 1257.8,-468.9"/>
+<text text-anchor="start" x="1267.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.704</text>
+<polygon fill="none" stroke="black" points="1302.8,-468.9 1302.8,-490.9 1345.8,-490.9 1345.8,-468.9 1302.8,-468.9"/>
+<text text-anchor="start" x="1312.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.807</text>
+<polygon fill="none" stroke="black" points="1347.8,-468.9 1347.8,-490.9 1390.8,-490.9 1390.8,-468.9 1347.8,-468.9"/>
+<text text-anchor="start" x="1357.05" y="-474.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.915</text>
+<g id="a_node4_50"><a xlink:href="bogus" xlink:title="Difference between baseline and latest run">
+<polygon fill="none" stroke="black" points="980.8,-444.9 980.8,-466.9 1113.8,-466.9 1113.8,-444.9 980.8,-444.9"/>
+<text text-anchor="start" x="983.8" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Diff</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="1115.8,-444.9 1115.8,-466.9 1165.8,-466.9 1165.8,-444.9 1115.8,-444.9"/>
+<text text-anchor="start" x="1132.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.082</text>
+<polygon fill="none" stroke="black" points="1167.8,-444.9 1167.8,-466.9 1210.8,-466.9 1210.8,-444.9 1167.8,-444.9"/>
+<text text-anchor="start" x="1177.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.085</text>
+<polygon fill="none" stroke="black" points="1212.8,-444.9 1212.8,-466.9 1255.8,-466.9 1255.8,-444.9 1212.8,-444.9"/>
+<text text-anchor="start" x="1222.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.086</text>
+<polygon fill="none" stroke="black" points="1257.8,-444.9 1257.8,-466.9 1300.8,-466.9 1300.8,-444.9 1257.8,-444.9"/>
+<text text-anchor="start" x="1267.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.088</text>
+<polygon fill="none" stroke="black" points="1302.8,-444.9 1302.8,-466.9 1345.8,-466.9 1345.8,-444.9 1302.8,-444.9"/>
+<text text-anchor="start" x="1312.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.089</text>
+<polygon fill="none" stroke="black" points="1347.8,-444.9 1347.8,-466.9 1390.8,-466.9 1390.8,-444.9 1347.8,-444.9"/>
+<text text-anchor="start" x="1357.05" y="-450.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">0.089</text>
+<polygon fill="none" stroke="black" points="980.8,-420.9 980.8,-442.9 1390.8,-442.9 1390.8,-420.9 980.8,-420.9"/>
+<text text-anchor="start" x="1140.05" y="-426.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue"> % Explained by</text>
+<g id="a_node4_51"><a xlink:href="bogus" xlink:title="PAKNEIMPGSNEXN
+FRML &lt;DAMP,STOC&gt; PAKNEIMPGSNEXN = (PAKNEIMPGSNEXN(-1)*EXP(PAKNEIMPGSNEXN_A+ (-0.317487399348671*(LOG(PAKNEIMPGSNEXN(-1))-0.3*LOG(PAKNYGDPFCSTXN(-1))+LOG(1+PAKGGREVTRDEXN(-1)/100)-(1-0.3)*LOG(PAKPMKEY(-1)*PAKPANUSATLS(-1)))+0.4*((LOG(PAKNYGDPFCSTXN))-(LOG(PAKNYGDPFCSTXN(-1))))+(1-0.4)*((LOG(PAKPMKEY*PAKPANUSATLS))-(LOG(PAKPMKEY(-1)*PAKPANUSATLS(-1))))+((LOG(1+PAKGGREVTRDEXN/100))-(LOG(1+PAKGGREVTRDEXN(-1)/100)))-0.990172726258274+0.129231227578777*DURING_2012+0.225621283292588*DURING_2008) )) * (1-PAKNEIMPGSNEXN_D)+ PAKNEIMPGSNEXN_X*PAKNEIMPGSNEXN_D  $">
+<polygon fill="none" stroke="black" points="980.8,-396.9 980.8,-418.9 1113.8,-418.9 1113.8,-396.9 980.8,-396.9"/>
+<text text-anchor="start" x="983.8" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNEIMPGSNEXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="1115.8,-396.9 1115.8,-418.9 1165.8,-418.9 1165.8,-396.9 1115.8,-396.9"/>
+<text text-anchor="start" x="1127.55" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-1.890</text>
+<polygon fill="none" stroke="black" points="1167.8,-396.9 1167.8,-418.9 1210.8,-418.9 1210.8,-396.9 1167.8,-396.9"/>
+<text text-anchor="start" x="1177.05" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">1.073</text>
+<polygon fill="none" stroke="black" points="1212.8,-396.9 1212.8,-418.9 1255.8,-418.9 1255.8,-396.9 1212.8,-396.9"/>
+<text text-anchor="start" x="1222.05" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">3.088</text>
+<polygon fill="none" stroke="black" points="1257.8,-396.9 1257.8,-418.9 1300.8,-418.9 1300.8,-396.9 1257.8,-396.9"/>
+<text text-anchor="start" x="1267.05" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">4.420</text>
+<polygon fill="none" stroke="black" points="1302.8,-396.9 1302.8,-418.9 1345.8,-418.9 1345.8,-396.9 1302.8,-396.9"/>
+<text text-anchor="start" x="1312.05" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">5.213</text>
+<polygon fill="none" stroke="black" points="1347.8,-396.9 1347.8,-418.9 1390.8,-418.9 1390.8,-396.9 1347.8,-396.9"/>
+<text text-anchor="start" x="1357.05" y="-402.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">5.627</text>
+<g id="a_node4_52"><a xlink:href="bogus" xlink:title="PAKNVENGNIMPXN
+FRML &lt;IDENT&gt; PAKNVENGNIMPXN = ((PAKNVCOLNIMPSH**PAKCESENGYIMP)*PAKNVCOLPRODXN**(1-PAKCESENGYIMP)+(PAKNVOILNIMPSH**PAKCESENGYIMP)*PAKNVOILPRODXN**(1-PAKCESENGYIMP)+(PAKNVGASNIMPSH**PAKCESENGYIMP)*PAKNVGASPRODXN**(1-PAKCESENGYIMP)+(PAKNVRENNIMPSH**PAKCESENGYIMP)*PAKNVRENPRODXN**(1-PAKCESENGYIMP))**(1/(1-PAKCESENGYIMP)) $">
+<polygon fill="none" stroke="black" points="980.8,-372.9 980.8,-394.9 1113.8,-394.9 1113.8,-372.9 980.8,-372.9"/>
+<text text-anchor="start" x="983.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">PAKNVENGNIMPXN</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="1115.8,-372.9 1115.8,-394.9 1165.8,-394.9 1165.8,-372.9 1115.8,-372.9"/>
+<text text-anchor="start" x="1118.67" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">101.774</text>
+<polygon fill="none" stroke="black" points="1167.8,-372.9 1167.8,-394.9 1210.8,-394.9 1210.8,-372.9 1167.8,-372.9"/>
+<text text-anchor="start" x="1170.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">98.989</text>
+<polygon fill="none" stroke="black" points="1212.8,-372.9 1212.8,-394.9 1255.8,-394.9 1255.8,-372.9 1212.8,-372.9"/>
+<text text-anchor="start" x="1215.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">97.081</text>
+<polygon fill="none" stroke="black" points="1257.8,-372.9 1257.8,-394.9 1300.8,-394.9 1300.8,-372.9 1257.8,-372.9"/>
+<text text-anchor="start" x="1260.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">95.809</text>
+<polygon fill="none" stroke="black" points="1302.8,-372.9 1302.8,-394.9 1345.8,-394.9 1345.8,-372.9 1302.8,-372.9"/>
+<text text-anchor="start" x="1305.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">95.042</text>
+<polygon fill="none" stroke="black" points="1347.8,-372.9 1347.8,-394.9 1390.8,-394.9 1390.8,-372.9 1347.8,-372.9"/>
+<text text-anchor="start" x="1350.55" y="-378.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">94.634</text>
+<g id="a_node4_53"><a xlink:href="bogus" xlink:title="Small
+Exogen">
+<polygon fill="none" stroke="black" points="980.8,-348.9 980.8,-370.9 1113.8,-370.9 1113.8,-348.9 980.8,-348.9"/>
+<text text-anchor="start" x="983.8" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">Small</text>
+</a>
+</g>
+<polygon fill="none" stroke="black" points="1115.8,-348.9 1115.8,-370.9 1165.8,-370.9 1165.8,-348.9 1115.8,-348.9"/>
+<text text-anchor="start" x="1127.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="1167.8,-348.9 1167.8,-370.9 1210.8,-370.9 1210.8,-348.9 1167.8,-348.9"/>
+<text text-anchor="start" x="1172.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="1212.8,-348.9 1212.8,-370.9 1255.8,-370.9 1255.8,-348.9 1212.8,-348.9"/>
+<text text-anchor="start" x="1217.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="1257.8,-348.9 1257.8,-370.9 1300.8,-370.9 1300.8,-348.9 1257.8,-348.9"/>
+<text text-anchor="start" x="1262.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="1302.8,-348.9 1302.8,-370.9 1345.8,-370.9 1345.8,-348.9 1302.8,-348.9"/>
+<text text-anchor="start" x="1307.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="1347.8,-348.9 1347.8,-370.9 1390.8,-370.9 1390.8,-348.9 1347.8,-348.9"/>
+<text text-anchor="start" x="1352.55" y="-354.6" font-family="Times New Roman,serif" font-size="14.00" fill="blue">-0.000</text>
+<polygon fill="none" stroke="black" points="977.8,-345.9 977.8,-565.9 1393.8,-565.9 1393.8,-345.9 977.8,-345.9"/>
+</g>
+<!-- PAKNEIMPGNFSXN&#45;&gt;PAKNECONOTHRXN -->
+<g id="edge1" class="edge">
+<title>PAKNEIMPGNFSXN-&gt;PAKNECONOTHRXN</title>
+<g id="a_edge1"><a xlink:href="bogus" xlink:title=" PAKNEIMPGNFSXN -&gt; PAKNECONOTHRXN Min. att. -4%  max: 92%">
+<path fill="none" stroke="black" stroke-width="8" d="M1006.26,-343.69C983.38,-329.52 959.73,-314.87 936.25,-300.32"/>
+<polygon fill="black" stroke="black" stroke-width="8" points="940.02,-294.33 927.84,-295.02 932.65,-306.23 940.02,-294.33"/>
+</a>
+</g>
+</g>
+</g>
+</svg>

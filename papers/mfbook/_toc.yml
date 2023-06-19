@@ -19,7 +19,7 @@ parts:
      # - file: content/03_Installation/InstallingPython     
      # - file: content/03_Installation/InstallingModelFlow
      - file: content/03_Installation/TestingModelFlow  # IB: just to test some of the featuyres 
-
+     - file: genindex
 #  *****************
    - caption: Some python essentials for using World Bank models with modelflow
      numbered: true 
@@ -64,6 +64,7 @@ parts:
      numbered: false
      chapters:
      - file: content/99_BackMatter/References
+ 
 
 # #   - caption: modifying models 
 # #     numbered: true  
