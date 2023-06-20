@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: content/introduction
+root: introduction
 
 options:
   numbered: true
@@ -19,7 +19,6 @@ parts:
      # - file: content/03_Installation/InstallingPython     
      # - file: content/03_Installation/InstallingModelFlow
      - file: content/03_Installation/TestingModelFlow  # IB: just to test some of the featuyres 
-     - file: genindex
 #  *****************
    - caption: Some python essentials for using World Bank models with modelflow
      numbered: true 
@@ -64,6 +63,8 @@ parts:
      numbered: false
      chapters:
      - file: content/99_BackMatter/References
+     - file: genindex
+
  
 
 # #   - caption: modifying models 
