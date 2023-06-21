@@ -1,15 +1,16 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: MFMod models in Python with ModelFlow
-author: Ib Hansen
+title: The World Bank's MFMod Framework in Python with Modelflow
+author: Andrew Burns and Ib Hansen
+copyright: "World Bank. 2023"
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
-  # execute_notebooks: cache
+  # execute_notebooks: force
+  execute_notebooks: cache
   timeout: 200
 
   
@@ -18,7 +19,7 @@ only_build_toc_files: true
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: MFModinModelflow.tex
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"
@@ -26,11 +27,16 @@ launch_buttons:
 repository:
   url                       : https://github.com/IbHansen/modelflow-manual   # Online location of the book
   path_to_book              : papers/mfbook  # Optional path to your book, relative to the repository root
-  branch                    : main  # Which branch of the repository should be used when creating links (optional)
+  branch                    : AndrewEdits  # Which branch of the repository should be used when creating links (optional)
 
 # Add a bibtex file so that we can create citations
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    bibtex_default_style: plain
+
 bibtex_bibfiles:
-  - references.bib
+    - references.bib
 
 
 # Add GitHub buttons to your book
@@ -38,6 +44,9 @@ bibtex_bibfiles:
 html:
   use_issues_button: False
   use_repository_button: True
+  use_multitoc_numbering: false  # Restarts the numbering in each part
+  home_page_in_navbar       : true
+
 parse:
   myst_enable_extensions:
    # don't forget to list any other extensions you want enabled,
