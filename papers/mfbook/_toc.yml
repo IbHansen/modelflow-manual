@@ -36,6 +36,7 @@ parts:
      - file: content/05_WBModels/LoadingWBModel
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
+     - file: content/05_WBModels/Targetting
 
    - caption: Model Analytics
      numbered: true      
