@@ -35,7 +35,7 @@ parts:
      - file: content/05_WBModels/LoadingWBModel
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
-     - file: content/07_MoreFeatures/Targeting
+     #- file: content/07_MoreFeatures/Targeting
 
    - caption: Model Analytics
      numbered: true      
@@ -52,6 +52,13 @@ parts:
      - file: content/07_MoreFeatures/ModelFlowCommandReference
      - file: content/07_MoreFeatures/VisualizationsReference
 
+      
+   - caption: Backmatter
+     numbered: false
+     chapters:
+     - file: genindex.md
+     - file: content/99_BackMatter/References
+     
 
 
    #  - file: content/07_MoreFeatures/modelwidgets
@@ -65,10 +72,7 @@ parts:
     # - file: content/howto/onboard/eviews/onboard many models from wf1  
     # - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
 
-   - caption: References
-     numbered: false
-     chapters:
-     - file: content/99_BackMatter/References
+
 
 # #   - caption: modifying models 
 # #     numbered: true  

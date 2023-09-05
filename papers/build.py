@@ -67,10 +67,11 @@ for dir in sorted(Path(f'{bookdir}/_build/jupyter_execute').glob('**')):
             ...
             # print(f'Not copied{picture}')
      
-if 'latex-pdf' in options: 
+if 'latex-pdf' or 'pdf-latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      xx0 = run(f'jb build {bookdir}/ --builder=latex')
      xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
+     print(f'PDF generated: see {bookdir}/_build/latex/')
 
      
 if 'copy' in options:
