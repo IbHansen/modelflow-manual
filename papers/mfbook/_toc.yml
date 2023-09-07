@@ -13,8 +13,8 @@ parts:
      - file: content/01_Introduction/Introduction 
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
        sections:
-       - file: content/02_MacrostructuralModels/MFModAndModelFlow     
-     - file: content/03_Installation/InstallingPython     
+       - file: content/02_MacrostructuralModels/MFModAndModelFlow    
+     - file: content/03_Installation/InstallingPython          
        sections:
        - file: content/03_Installation/InstallingModelFlow
      
