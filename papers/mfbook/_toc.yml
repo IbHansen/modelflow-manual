@@ -24,7 +24,8 @@ parts:
      numbered: true 
      chapters: 
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
-     - file: content/04_PythonEssentials/PythonPandasDataframes
+     - file: content/04_PythonEssentials/PythonBasics
+     - file: content/04_PythonEssentials/PandasDataFrames
      - file: content/04_PythonEssentials/UpdateCommand
        sections:
        - file: content/04_PythonEssentials/mfcalc
@@ -33,6 +34,7 @@ parts:
      numbered: true      
      chapters:   
      - file: content/05_WBModels/LoadingWBModel
+     - file: content/05_WBModels/WorkinngwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
      #- file: content/07_MoreFeatures/Targeting
@@ -57,7 +59,8 @@ parts:
      numbered: false
      chapters:
      - file: genindex.md
-     - file: content/99_BackMatter/References
+     #- file: content/99_BackMatter/References
+     - file: Reference.md
      
 
 
