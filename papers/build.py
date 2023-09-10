@@ -87,12 +87,12 @@ def latex_process(filename):
         f.write(latexout1) 
 
 
-latex_process(latexroot)
 #%%    
         
 
 if 'latex-pdf' or 'pdf-latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
+     latex_process(latexroot)
      xx0 = run(f'texindy    -o "MFModinModelflow.ind" "MFModinModelflow.idx',cwd = f'{bookdir}/_build/latex/')
      #xx0 = run(f'jb build {bookdir}/ --builder=latex')  
      #xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
