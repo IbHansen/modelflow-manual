@@ -24,7 +24,9 @@ for aname in options:
         break
 else:
     bookdir = 'mfbook'    
-    
+ 
+latexroot = 'MFModinModelflow'    
+ 
 doall = '--all' if 'all' in options else ''
 
 buildloc = Path(f'{bookdir}/_build/')
@@ -66,7 +68,29 @@ for dir in sorted(Path(f'{bookdir}/_build/jupyter_execute').glob('**')):
         except:
             ...
             # print(f'Not copied{picture}')
-     
+            
+#%%             
+def latex_process(filename):
+    latexfile =  f'{bookdir}/_build/latex/{latexroot}.tex'
+    
+    with open(latexfile,'rt',encoding="utf8") as f:
+        latex= f.read()
+        
+    if not r'\usepackage{makeidx}' in latex:
+        lf= '\n'
+        latexout1 = latex.replace(r'\makeindex',r'\usepackage{makeidx}'+lf+
+                                 r'\usepackage{makeidx}')
+    else: 
+        latexout1 = latex 
+
+    with open(latexfile,'wt',encoding="utf8") as f:
+        f.write(latexout1) 
+
+
+latex_process(latexroot)
+#%%    
+        
+
 if 'latex-pdf' or 'pdf-latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      xx0 = run(f'texindy    -o "MFModinModelflow.ind" "MFModinModelflow.idx',cwd = f'{bookdir}/_build/latex/')

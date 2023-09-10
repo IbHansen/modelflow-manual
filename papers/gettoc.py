@@ -28,26 +28,33 @@ def get_all_notebooks(fileloc='mfbook'):
 
 
 def get_toc_files(fileloc='mfbook'):
-    '''Get all files mentioned in the _toc'''
+    '''Get all files mentioned in the _toc but not the root'''
     with open(Path(fr'{fileloc}/_toc.yml'), 'r') as f:
         toc_data = yaml.safe_load(f)
 
-    # breakpoint() 
+    breakpoint() 
     
     
     file_list = []
+    file_list_with_chapter = []
+    chapter_nr = 0 
     
     def process_toc_entries(entries):
+        nonlocal chapter_nr
         for i,entry in enumerate(entries):
-            # print(i,entry)
+            print(i,entry)
             if 'file' in entry :
                 file_list.append(entry['file'])
+                file_list_with_chapter.append((entry['file'],chapter_nr))
             if 'chapters' in entry:
+                chapter_nr = chapter_nr + 1 
                 process_toc_entries(entry['chapters'])
             if 'sections' in entry:
                 process_toc_entries(entry['sections'])
             if 'root' in entry:
                 file_list.append(entry['root'])
+                file_list_with_chapter.append((entry['file'],chapter_nr))
+
     
     process_toc_entries(toc_data.get('parts', []))
      # Print the list of file paths
@@ -55,8 +62,10 @@ def get_toc_files(fileloc='mfbook'):
     # for file_path in file_list:
     #     print(file_path)
     
-    file_paths = [ Path(fr'{fileloc}/{f}').with_suffix('.ipynb')for f in file_list]
-    return file_paths    
+    file_paths = [ Path(fr'{fileloc}/{f}').with_suffix('.ipynb') for f in file_list]
+    file_paths_with_chapter = [ (Path(fr'{fileloc}/{f}').with_suffix('.ipynb'),nr) 
+                               for f,nr in file_list_with_chapter]
+    return file_paths ,file_paths_with_chapter   
 
 def start_notebooks(notebook_list):
     ''' start all notebooks in jupyter in the notebook list '''
@@ -104,7 +113,7 @@ def hide_cells(notebook_list):
 
 if __name__ == '__main__':
 
-    toc_files = get_toc_files()
+    toc_files,toc_files_with_chapter = get_toc_files()
     all_notebooks = get_all_notebooks()
     # Specify the list of notebook paths
     notebook_test = [r"mfbook\content\03_Installation\TestingModelFlow.ipynb"]
@@ -112,10 +121,10 @@ if __name__ == '__main__':
     
     for x in toc_files:
         print(x)
-    if 1:    
+    if 0:    
         start_notebooks(toc_files)    
     
-    hide_cells(toc_files)
+    # hide_cells(toc_files)
     
     
     
