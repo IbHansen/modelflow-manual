@@ -39,7 +39,6 @@ print(f'{fileloc=}\n') #dropped destination
 
 # breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
-# wb.open(rf'file://C:\wb new\Modelflow\working_paper\{bookdir}\_build\html\index.html', new=2)
 wb.open(rf'file://{fileloc}', new=2)
 
 
@@ -74,42 +73,84 @@ def latex_process(latexroot ):
     r'''It seems that the generated .tex file is missing a \usepackage{makeidx} 
     and that the .idx file contains a lot of unvanted \spxentry  so we fix these two problems 
     
-    
+    and more problems which makes it look not so nice
     ''' 
     
     latexfile =  f'{bookdir}/_build/latex/{latexroot}.tex'
-    idxfile   =  f'{bookdir}/_build/latex/{latexroot}.idx'
     
     with open(latexfile,'rt',encoding="utf8") as f:
         latex= f.read()
         
-    if not r'\usepackage{makeidx}' in latex:
-        lf= '\n'
-        latexout1 = latex.replace(r'\makeindex',r'\usepackage{makeidx}'+lf+
-                                r'\makeindex')
-    else: 
-        latexout1 = latex 
+    lf= '\n'
+    
+   # now a list of some text inserted at specific places in the .tex file
+   # the place is defined by the first string in the tupple. 
+    insertbefore = [
+        (r'\makeindex',r'\usepackage{makeidx}'), 
+        (r'\printindex',r'\addcontentsline{toc}{chapter}{\indexname}'),   # forgot the foreword heading, so it is inserted 
+         (r'''\sphinxAtStartPar
+Over the decades''',r'\chapter*{Foreword}')
+        ]
+    
+    for before,insert in insertbefore: 
+        if not insert in latex:
+            latex = latex.replace(before,insert+lf+before)
+
+    # Now some text to purge from the text  
   
-    latexout2 = latexout1.replace(r'\spxentry','') 
+    purge =[r'\spxentry',
+            r'\chapter{Index}',
+            r'\label{\detokenize{genindex:index}}\label{\detokenize{genindex::doc}}',
+            r'\chapter{Reference}',
+            r'\label{\detokenize{Reference:reference}}\label{\detokenize{Reference::doc}}',
+            r'''\sphinxstepscope
+
+
+\chapter{Index}
+\label{\detokenize{genindex:index}}\label{\detokenize{genindex::doc}}
+\sphinxstepscope
+
+''',
+r'''\sphinxstepscope
+
+
+
+
+\sphinxstepscope''',
+] 
+    for p in purge:
+       latex = latex.replace(p,'')
+   
+    
     # breakpoint() 
     with open(latexfile,'wt',encoding="utf8") as f:
-        f.write(latexout2) 
+        f.write(latex) 
 
 
 #%%    
         
 
-if 'latex-pdf' or 'pdf-latex' in options: 
+if 'latex-pdf' in options or 'pdf-latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      latex_process(latexroot)
+     # 
+     # if the file is processed by miktex it works now, but due to a latexmk issue we use 
+     # latexmk, then texindy to process it further and then latexmk to create the final pdf file  
+     # 
      xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
      xx0 = run(f'texindy    -o "MFModinModelflow.ind" "MFModinModelflow.idx',cwd = f'{bookdir}/_build/latex/')
      xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
-     #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
+     # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
      print(f'PDF generated: see {bookdir}/_build/latex/')
 
      
 if 'copy' in options:
-    copytree(buildhtml,destination,dirs_exist_ok=True )
+    try:
+        (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
+    except:
+        print('you are probably not Ib, so this is impossible')
+    else:     
+        copytree(buildhtml,destination,dirs_exist_ok=True )
+        print('Remember to push the repo ')
      
     
