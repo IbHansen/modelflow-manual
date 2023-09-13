@@ -89,7 +89,7 @@ def latex_process(latexroot ):
         (r'\makeindex',r'\usepackage{makeidx}'), 
         (r'\printindex',r'\addcontentsline{toc}{chapter}{\indexname}'),   # forgot the foreword heading, so it is inserted 
          (r'''\sphinxAtStartPar
-Over the decades''',r'\chapter*{Foreword}')
+Over the decades''',r'{\huge\bfseries\raggedright Foreword\par}')
         ]
     
     for before,insert in insertbefore: 
