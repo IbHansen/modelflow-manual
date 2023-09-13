@@ -33,8 +33,9 @@ parts:
    - caption: Using modelflow with World Bank models
      numbered: true      
      chapters:   
-     - file: content/05_WBModels/LoadingWBModel
-     - file: content/05_WBModels/WorkinngwWBModels
+     - file: content/05_WBModels/UsingWBModels
+     #- file: content/05_WBModels/LoadingWBModel
+     - file: content/05_WBModels/WorkingwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
      #- file: content/07_MoreFeatures/Targeting
