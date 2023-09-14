@@ -34,7 +34,7 @@ parts:
      numbered: true      
      chapters:   
      - file: content/05_WBModels/UsingWBModels
-     #- file: content/05_WBModels/LoadingWBModel
+     - file: content/05_WBModels/LoadingWBModel
      - file: content/05_WBModels/WorkingwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
