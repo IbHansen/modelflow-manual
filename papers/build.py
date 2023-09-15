@@ -89,7 +89,9 @@ def latex_process(latexroot ):
         (r'\makeindex',r'\usepackage{makeidx}'), 
         (r'\printindex',r'\addcontentsline{toc}{chapter}{\indexname}'),   # forgot the foreword heading, so it is inserted 
          (r'''\sphinxAtStartPar
-Over the decades''',r'{\huge\bfseries\raggedright Foreword\par}')
+Over the decades''',r'{\huge\bfseries\raggedright Foreword\par}'),
+        (r'\title',r'\renewcommand{\cleardoublepage}{\clearpage}'),       # to avoid blank pages between chapters 
+
         ]
     
     for before,insert in insertbefore: 
@@ -133,6 +135,7 @@ r'''\sphinxstepscope
 if 'latex-pdf' in options or 'pdf-latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      latex_process(latexroot)
+
      # 
      # if the file is processed by miktex it works now, but due to a latexmk issue we use 
      # latexmk, then texindy to process it further and then latexmk to create the final pdf file  

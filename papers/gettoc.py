@@ -32,7 +32,7 @@ def get_toc_files(fileloc='mfbook'):
     with open(Path(fr'{fileloc}/_toc.yml'), 'r') as f:
         toc_data = yaml.safe_load(f)
 
-    breakpoint() 
+    # breakpoint() 
     
     
     file_list = []
