@@ -53,20 +53,32 @@ def get_toc_files(fileloc=bookdir):
     
     file_list_with_chapter = []
     chapter_nr = 0
+
+    def make_file_path(f):
+        f_name  = f if f.endswith('.md') else f+'.ipynb'
+        f_path = Path(fr'{fileloc}/{f_name}')
+        return f_path
+
     
     def process_toc_entries(entries):
         nonlocal chapter_nr
         for i,entry in enumerate(entries):
             # print(i,entry)
             if 'file' in entry :
-                chapter_nr = chapter_nr + 1 
-                file_list_with_chapter.append((entry['file'],chapter_nr))
+                filename = make_file_path(entry['file'])
+                if filename.exists():
+                    chapter_nr = chapter_nr + 1 
+                    file_list_with_chapter.append((entry['file'],chapter_nr))
+                else:   
+                    file_list_with_chapter.append((entry['file'],-1))
+
             if 'chapters' in entry:
                 process_toc_entries(entry['chapters'])
             if 'sections' in entry:
                 process_toc_entries(entry['sections'])
             if 'root' in entry:
-                file_list_with_chapter.append((entry['root'],0))
+                file_list_with_chapter.append(
+                    (make_file_path(entry['root']),0))
 
     file_list_with_chapter.append((toc_data['root'],0))
     process_toc_entries(toc_data.get('parts', []))
@@ -75,12 +87,8 @@ def get_toc_files(fileloc=bookdir):
     # for file_path in file_list:
     #     print(file_path)
     
-    def make_file_path(f):
-        f_name  = f if f.endswith('.md') else f+'.ipynb'
-        f_path = Path(fr'{fileloc}/{f_name}')
-        return f_path
     
-    notebook_paths_with_chapter = [ (make_file_path(f),nr) 
+    notebook_paths_with_chapter = [ (f,nr) 
                                for f,nr in file_list_with_chapter]
     notebook_paths = [f for f,c in notebook_paths_with_chapter ]
 
@@ -146,9 +154,7 @@ if 'open' in options:
 if 'list' in options:    
 #%%    
     for name,chapter in toc_files_with_chapter:
-        exist = Path(name).exists()
-        note = '' if exist else "Dont exist:"
-        print(f' {note} Chapter: {chapter} notebook: {name} ')
+        print(f'Chapter: {chapter} notebook: {name} ')
 #%%
 if 'hide_cells' in options:  
     hide_cells(toc_files)   
