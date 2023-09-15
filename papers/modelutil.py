@@ -59,9 +59,9 @@ def get_toc_files(fileloc=bookdir):
         for i,entry in enumerate(entries):
             # print(i,entry)
             if 'file' in entry :
+                chapter_nr = chapter_nr + 1 
                 file_list_with_chapter.append((entry['file'],chapter_nr))
             if 'chapters' in entry:
-                chapter_nr = chapter_nr + 1 
                 process_toc_entries(entry['chapters'])
             if 'sections' in entry:
                 process_toc_entries(entry['sections'])
@@ -143,12 +143,13 @@ if 'open' in options:
         start_notebooks(toc_files)    
 
 
-if 'list' in options:        
+if 'list' in options:    
+#%%    
     for name,chapter in toc_files_with_chapter:
         exist = Path(name).exists()
         note = '' if exist else "Dont exist:"
         print(f' {note} Chapter: {chapter} notebook: {name} ')
-
+#%%
 if 'hide_cells' in options:  
     hide_cells(toc_files)   
     
@@ -165,9 +166,9 @@ if 'help' in options or len(options) ==1:
     
 if __name__ == '__main__':
 
-     
-    for name,chapter in toc_files_with_chapter:
-        print(f'Chapter: {chapter} notebook: {name}')
+    if 0: 
+        for name,chapter in toc_files_with_chapter:
+            print(f'Chapter: {chapter} notebook: {name}')
     if 0:    
         start_notebooks(toc_files)    
     
