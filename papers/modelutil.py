@@ -16,6 +16,8 @@ from subprocess import run
 import webbrowser as wb
 from pathlib import Path
 from shutil import copy, copytree
+
+import re
  
 import sys
 print(sys.argv)
@@ -138,6 +140,49 @@ def hide_cells(notebook_list):
         except: 
                 print(f'Hide did not work for this notebook : {ipath}')
 
+def box_nr_cells(notebook_list_with_chapter):
+
+    def make_box_nr(chapter,text): 
+        pat = r'[Bb]ox (\d+)\.(\d)'
+        running_nr=0 
+        
+        def replace_box(match):
+            nonlocal running_nr
+            running_nr =running_nr + 1
+            return f"Box {chapter}.{running_nr}"
+        
+        if re.match(pat, text):
+            return re.sub(pat, replace_box, text)
+        else: 
+            return False
+    if 0: 
+        text = "box 1.5 is here and box 2.3 is there"
+        text2 = "ibs text "
+        print(make_box_nr(34, text))
+        print(make_box_nr(34, text2))
+
+    for ipath,chapter in notebook_list_with_chapter:
+        breakpoint() 
+        try:
+            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+            changed = False
+            
+            for cell in ntbk.cells:
+                    # breakpoint() 
+                    if (newsource := make_box_nr(chapter,  cell['source'])):
+                        if newsource != cell['source'] :
+                            changed = True 
+                            print(f'box change {ipath=} \n{newsource=}')    
+                            cell['source'] = newsource 
+        
+            if changed:             
+                ######## nbf.write(ntbk, ipath)
+                print(f'notebook written {ipath}')
+            else: 
+                print(f'notebook not changed by box numbering   : {ipath}')
+        except: 
+                print(f'Hide did not work for this notebook : {ipath}')
+
 
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
@@ -172,13 +217,22 @@ if 'help' in options or len(options) ==1:
     
 if __name__ == '__main__':
 
+    toc_files,toc_files_with_chapter = get_toc_files()
+    all_notebooks = get_all_notebooks()
+
     if 0: 
         for name,chapter in toc_files_with_chapter:
             print(f'Chapter: {chapter} notebook: {name}')
     if 0:    
         start_notebooks(toc_files)    
+        
+    if 1: 
+        box_nr_cells(toc_files_with_chapter)
+        
     
     # hide_cells(toc_files)
     
     
-    
+#%%
+
+
