@@ -245,7 +245,51 @@ def search(notebook_list_with_chapter,pat=r'.*[Bb]ox.*'):
                 print(f'Search did not work for this file : {ipath}')
         
 
+def insert_colab(notebook_list_with_chapter):
+    content="""\
+# HIDDEN in jupyterbook 
+#This is code to manage dependencies if the notebook is executed in the google colab cloud service
+if 'google.colab' in str(get_ipython()):
+  import os
+  os.system('apt -qqq install graphviz')
+  os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
+  incolab = True  
+else:
+  incolab = False 
 
+%load_ext autoreload
+%autoreload 2
+"""  
+
+    for ipath,chapter in notebook_list_with_chapter:
+        try:
+            found = False
+            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+            for cell in ntbk.cells:
+                    # breakpoint() 
+                    source =  cell['source']
+                    amatch = re.search(r'google\.colab', source)
+                    if amatch:
+                        ...
+                        found = True # breakpoint()
+            if found:             
+                print(f"Colab cell found here   : {'/'.join(ipath.parts[-2:])} ")  
+            else:
+                print(f"NO Colab cell found here: {'/'.join(ipath.parts[-2:])} ") 
+                new_cell = nbf.v4.new_code_cell(source=content)")
+
+# Step 3: Insert the new cell at a specific position (e.g., second position)
+                ntbk.cells.insert(1, new_cell)
+                nbf.write(ntbk, ipath)
+                print(f'notebook written {'/'.join(ipath.parts[-2:])}')
+
+    
+        except: 
+                print(f'Search colab did not ork for this file : {ipath}')
+        
+
+
+            
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
 
@@ -297,8 +341,13 @@ if __name__ == '__main__':
     if 0: 
         box_nr_cells(toc_files_with_chapter)
         
+    if 1:
+        pat = '''load_ext autoreload'''
+        search(toc_files_with_chapter,pat)
+
     if 0:
-        search(toc_files_with_chapter)
+        insert_colab(toc_files_with_chapter)
+
     # hide_cells(toc_files)
     
     #%% 
