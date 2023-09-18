@@ -276,12 +276,12 @@ else:
                 print(f"Colab cell found here   : {'/'.join(ipath.parts[-2:])} ")  
             else:
                 print(f"NO Colab cell found here: {'/'.join(ipath.parts[-2:])} ") 
-                new_cell = nbf.v4.new_code_cell(source=content)")
+                new_cell = nbf.v4.new_code_cell(source=content)
 
 # Step 3: Insert the new cell at a specific position (e.g., second position)
                 ntbk.cells.insert(1, new_cell)
                 nbf.write(ntbk, ipath)
-                print(f'notebook written {'/'.join(ipath.parts[-2:])}')
+                print(f'notebook written {"/".join(ipath.parts[-2:])}')
 
     
         except: 
