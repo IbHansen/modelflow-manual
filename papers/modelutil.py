@@ -161,7 +161,7 @@ def box_nr_cells(notebook_list_with_chapter):
     #     return re.sub(pat, replace_box, text)
  #%% 
     def make_box_nr(chapter,text): 
-        patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{admonition} [Bb]ox (\d+)\.(\d) (.*)'
+        patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{[Aa]dmonition} [Bb]ox (\d+)\.(\d) (.*)'
 
         nonlocal running_nr 
         nonlocal box_toc 
@@ -219,23 +219,31 @@ def box_nr_cells(notebook_list_with_chapter):
             else: 
                 print(f'notebook not changed by box numbering   : {ipath}')
         except: 
-                print(f'Hide did not work for this notebook : {ipath}')
+                print(f'Hide did not work for this file : {ipath}')
         
     print('\n boxes in the book',*box_toc,sep='\n')        
     return 
 
+ #%% Search
 
-def search(notebook_list_with_chapter,string):
+def search(notebook_list_with_chapter,pat=r'.*[Bb]ox.*'):
     
- #%%
     for ipath,chapter in notebook_list_with_chapter:
-        # breakpoint() 
-        ntbk = nbf.read(ipath, nbf.NO_CONVERT)
-        for cell in ntbk.cells:
-                # breakpoint() 
-                if string in  cell['source']:
-                        print(f"String here {ipath=} \n{cell['source']}")    
-    
+        try:
+
+            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+            for cell in ntbk.cells:
+                    # breakpoint() 
+                    source =  cell['source']
+                    matches = re.findall(pat, source)
+                    if len(matches):
+                        ...
+                        # breakpoint()
+                    for m in matches: 
+                            print(f"pat here: {'/'.join(ipath.parts[-2:])} : {m}")    
+        except: 
+                print(f'Search did not work for this file : {ipath}')
+        
 
 
 # Call the function to start the notebooks
@@ -289,7 +297,8 @@ if __name__ == '__main__':
     if 0: 
         box_nr_cells(toc_files_with_chapter)
         
-    
+    if 0:
+        search(toc_files_with_chapter)
     # hide_cells(toc_files)
     
     #%% 
