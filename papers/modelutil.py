@@ -161,36 +161,37 @@ def box_nr_cells(notebook_list_with_chapter):
     #     return re.sub(pat, replace_box, text)
  #%% 
     def make_box_nr(chapter,text): 
-        patbox = r'(```{index} single: Box.*?\n```\n*)?```{admonition} [Bb]ox (\d+)\.(\d) (.*)'
+        patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{admonition} [Bb]ox (\d+)\.(\d) (.*)'
 
         nonlocal running_nr 
         nonlocal box_toc 
     
         def replace_box(match):
             nonlocal running_nr 
-            for idx, group in enumerate(match.groups(), 1):
-                print(f"Group {idx}: {group}")
+            if 0:
+                for idx, group in enumerate(match.groups(), 1):
+                    print(f"Group {idx}: {group}")
 
             lf = '\n'
             running_nr =running_nr + 1
-            box_index = f"```{{index}} single: Boxes; {chapter}.{running_nr} {match[4]}{lf}```"
-            box_name = f"```{{admonition}} Box {chapter}.{running_nr} {match[4]}"
+            box_index = f":::{{index}} single: Boxes; {chapter}.{running_nr} {match[4]}{lf}:::"
+            box_name = f":::{{admonition}} Box {chapter}.{running_nr} {match[4]}"
             replace   = f"{box_index}{lf}{lf}{box_name}"
             box_toc.append( box_name )
-            print(f'{replace=}')
+            if 0: print(f'{replace=}')
             return replace 
         
         return re.sub(patbox, replace_box,text)
        
     if 0: 
-        text = '```{admonition} Box 3.1  A good explanation\n42```'
+        text = ':::{admonition} Box 3.1  A good explanation\n42:::'
         text2 = "{admonition} box 1.2 ibs text "
 
-        text2 = '''```{admonition} Box 1.1 A good explanation
+        text2 = ''':::{admonition} Box 1.1 A good explanation
 2 + 2  = 4
-```
+:::
 '''
-        replace='```{index} single: Box; 34.1  A good explanation\n```\n\n```{admonition} Box 34.1  A good explanation'
+        replace=':::{index} single: Box; 34.1  A good explanation\n:::\n\n:::{admonition} Box 34.1  A good explanation'
 
         print(make_box_nr(34, text))
         print(make_box_nr(35, text2))
@@ -220,7 +221,21 @@ def box_nr_cells(notebook_list_with_chapter):
         except: 
                 print(f'Hide did not work for this notebook : {ipath}')
         
-    print(*box_toc,sep='\n')        
+    print('\n boxes in the book',*box_toc,sep='\n')        
+    return 
+
+
+def search(notebook_list_with_chapter,string):
+    
+ #%%
+    for ipath,chapter in notebook_list_with_chapter:
+        # breakpoint() 
+        ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+        for cell in ntbk.cells:
+                # breakpoint() 
+                if string in  cell['source']:
+                        print(f"String here {ipath=} \n{cell['source']}")    
+    
 
 
 # Call the function to start the notebooks
@@ -244,12 +259,18 @@ if 'hide_cells' in options:
     hide_cells(toc_files)   
     
     
+if  'boxes' in options:    
+    box_nr_cells(toc_files_with_chapter)
+
+    
+    
 if 'help' in options or len(options) ==1:  
     print('''Run with python modelutil.py <options>
     options: 
         open       : will open all files in the jupyterbook (a jupyter instance with port 8888 should be open)
         list       : will list all files in the jupyterbook 
         hide_cells : in all NB metadata will be set based on #HIDDEN #NO CODE #HIDE CODE   
+        boxes      : will renumber boxes and place them in the index 
           '''   )
     
 
@@ -265,23 +286,10 @@ if __name__ == '__main__':
     if 0:    
         start_notebooks(toc_files)    
         
-    if 1: 
+    if 0: 
         box_nr_cells(toc_files_with_chapter)
         
     
     # hide_cells(toc_files)
     
     #%% 
-    import re
-
-    text = '''```{index} single: Box; 1.1    a good explanation
-```
-{admonition} Box 1.1    a good explanation
-2 + 2  = 4
-```
-'''
-    
-    patbox='(```{index} single: Box.*?\n```\n){admonition} [Bb]ox (\d+)\.(\d)(.*)'
-    noindex = re.match(patbox, text)
-    
-    print(noindex[2])
