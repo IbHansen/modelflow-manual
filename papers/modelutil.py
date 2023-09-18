@@ -264,7 +264,10 @@ else:
     for ipath,chapter in notebook_list_with_chapter:
         try:
             found = False
-            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+            
+            with open(ipath, 'r') as f:
+                ntbk = nbf.read(f, nbf.NO_CONVERT)
+                
             for cell in ntbk.cells:
                     # breakpoint() 
                     source =  cell['source']
@@ -275,17 +278,25 @@ else:
             if found:             
                 print(f"Colab cell found here   : {'/'.join(ipath.parts[-2:])} ")  
             else:
+                # breakpoint() 
                 print(f"NO Colab cell found here: {'/'.join(ipath.parts[-2:])} ") 
                 new_cell = nbf.v4.new_code_cell(source=content)
-
+                if 'id' in new_cell:
+                    del new_cell['id']
+                cell_tags = cell.get('metadata', {}).get('tags', [])
+                cell_tags.append("remove_cell")
+                new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
                 ntbk.cells.insert(1, new_cell)
-                nbf.write(ntbk, ipath)
-                print(f'notebook written {"/".join(ipath.parts[-2:])}')
+                
+                with open(ipath, 'w') as f:
+                    nbf.write(ntbk, f)
+                    
+                print(f'Notebook written {"/".join(ipath.parts[-2:])}')
 
     
         except: 
-                print(f'Search colab did not ork for this file : {ipath}')
+                print(f'Search colab did not work for this file : {ipath}')
         
 
 
@@ -341,12 +352,14 @@ if __name__ == '__main__':
     if 0: 
         box_nr_cells(toc_files_with_chapter)
         
-    if 1:
+    if 0:
         pat = '''load_ext autoreload'''
+
         search(toc_files_with_chapter,pat)
 
-    if 0:
-        insert_colab(toc_files_with_chapter)
+    if 1:
+        toc_test = [toc_files_with_chapter[1]]
+        insert_colab(toc_test)
 
     # hide_cells(toc_files)
     
