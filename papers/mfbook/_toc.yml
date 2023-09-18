@@ -10,6 +10,7 @@ parts:
    - caption: The World Bank's MFMod Framework and Modelflow
      numbered: true  
      chapters:
+     - file: content/07_MoreFeatures/Jupyter book tests and tips
      - file: content/01_Introduction/Introduction 
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
        sections:

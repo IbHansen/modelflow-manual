@@ -70,19 +70,17 @@ def get_toc_files(fileloc=bookdir):
                 filename = make_file_path(entry['file'])
                 if filename.exists():
                     chapter_nr = chapter_nr + 1 
-                    file_list_with_chapter.append((entry['file'],chapter_nr))
+                    file_list_with_chapter.append((filename,chapter_nr))
                 else:   
-                    file_list_with_chapter.append((entry['file'],-1))
+                    file_list_with_chapter.append((filename,-1))
 
             if 'chapters' in entry:
                 process_toc_entries(entry['chapters'])
             if 'sections' in entry:
                 process_toc_entries(entry['sections'])
-            if 'root' in entry:
-                file_list_with_chapter.append(
-                    (make_file_path(entry['root']),0))
+        # breakpoint() 
 
-    file_list_with_chapter.append((toc_data['root'],0))
+    file_list_with_chapter.append((make_file_path(toc_data['root']),0))
     process_toc_entries(toc_data.get('parts', []))
      # Print the list of file paths
      
@@ -141,47 +139,88 @@ def hide_cells(notebook_list):
                 print(f'Hide did not work for this notebook : {ipath}')
 
 def box_nr_cells(notebook_list_with_chapter):
+    
+    running_nr = 0 
+    box_toc =[]
 
+    # def make_box_nr(chapter,text): 
+    #     pat = r'{admonition} [Bb]ox (\d+)\.(\d)(.*)'
+    #     nonlocal running_nr 
+    #     nonlocal box_toc 
+        
+    #     def replace_box(match):
+    #         nonlocal running_nr
+    #         running_nr =running_nr + 1
+    #         box_name = f"Box {chapter}.{running_nr} {match[3]}"
+    #         box_index = f"\n```{{index}} single: Box; {chapter}.{running_nr} {match[3]}\n```"
+    #         replace = f"{box_index}\n{{admonition}} {box_name}"
+    #         box_toc.append( box_name )
+    #         print(f'{replace=}')
+    #         return replace 
+        
+    #     return re.sub(pat, replace_box, text)
+ #%% 
     def make_box_nr(chapter,text): 
-        pat = r'[Bb]ox (\d+)\.(\d)'
-        running_nr=0 
-        
-        def replace_box(match):
-            nonlocal running_nr
-            running_nr =running_nr + 1
-            return f"Box {chapter}.{running_nr}"
-        
-        if re.match(pat, text):
-            return re.sub(pat, replace_box, text)
-        else: 
-            return False
-    if 0: 
-        text = "box 1.5 is here and box 2.3 is there"
-        text2 = "ibs text "
-        print(make_box_nr(34, text))
-        print(make_box_nr(34, text2))
+        patbox = r'(```{index} single: Box.*?\n```\n*)?```{admonition} [Bb]ox (\d+)\.(\d) (.*)'
 
+        nonlocal running_nr 
+        nonlocal box_toc 
+    
+        def replace_box(match):
+            nonlocal running_nr 
+            for idx, group in enumerate(match.groups(), 1):
+                print(f"Group {idx}: {group}")
+
+            lf = '\n'
+            running_nr =running_nr + 1
+            box_index = f"```{{index}} single: Boxes; {chapter}.{running_nr} {match[4]}{lf}```"
+            box_name = f"```{{admonition}} Box {chapter}.{running_nr} {match[4]}"
+            replace   = f"{box_index}{lf}{lf}{box_name}"
+            box_toc.append( box_name )
+            print(f'{replace=}')
+            return replace 
+        
+        return re.sub(patbox, replace_box,text)
+       
+    if 0: 
+        text = '```{admonition} Box 3.1  A good explanation\n42```'
+        text2 = "{admonition} box 1.2 ibs text "
+
+        text2 = '''```{admonition} Box 1.1 A good explanation
+2 + 2  = 4
+```
+'''
+        replace='```{index} single: Box; 34.1  A good explanation\n```\n\n```{admonition} Box 34.1  A good explanation'
+
+        print(make_box_nr(34, text))
+        print(make_box_nr(35, text2))
+        print(make_box_nr(40, replace))
+        
+        assert 1==2
+#%%
     for ipath,chapter in notebook_list_with_chapter:
-        breakpoint() 
+        # breakpoint() 
         try:
             ntbk = nbf.read(ipath, nbf.NO_CONVERT)
             changed = False
-            
+            running_nr = 0 
             for cell in ntbk.cells:
                     # breakpoint() 
                     if (newsource := make_box_nr(chapter,  cell['source'])):
                         if newsource != cell['source'] :
                             changed = True 
-                            print(f'box change {ipath=} \n{newsource=}')    
+                            # print(f'box change {ipath=} \n{newsource=}')    
                             cell['source'] = newsource 
         
             if changed:             
-                ######## nbf.write(ntbk, ipath)
+                nbf.write(ntbk, ipath)
                 print(f'notebook written {ipath}')
             else: 
                 print(f'notebook not changed by box numbering   : {ipath}')
         except: 
                 print(f'Hide did not work for this notebook : {ipath}')
+        
+    print(*box_toc,sep='\n')        
 
 
 # Call the function to start the notebooks
@@ -232,7 +271,17 @@ if __name__ == '__main__':
     
     # hide_cells(toc_files)
     
+    #%% 
+    import re
+
+    text = '''```{index} single: Box; 1.1    a good explanation
+```
+{admonition} Box 1.1    a good explanation
+2 + 2  = 4
+```
+'''
     
-#%%
-
-
+    patbox='(```{index} single: Box.*?\n```\n){admonition} [Bb]ox (\d+)\.(\d)(.*)'
+    noindex = re.match(patbox, text)
+    
+    print(noindex[2])

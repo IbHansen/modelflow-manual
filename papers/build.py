@@ -134,7 +134,7 @@ r'''\sphinxstepscope
 #%%    
         
 
-if 'latex-pdf' in options or 'pdf-latex' in options: 
+if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options: 
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      latex_process(latexroot)
 
