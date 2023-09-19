@@ -144,7 +144,7 @@ def box_nr_cells(notebook_list_with_chapter):
     box_toc =[]
 
     def make_box_nr(chapter,text): 
-        patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{[Aa]dmonition} [Bb]ox (\d+)\.(\d) (.*)'
+        patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{[Aa]dmonition} [Bb]ox (\d+)(\.\d*)* (.*)'
 
         nonlocal running_nr 
         nonlocal box_toc 
@@ -157,8 +157,8 @@ def box_nr_cells(notebook_list_with_chapter):
 
             lf = '\n'
             running_nr =running_nr + 1
-            box_index = f":::{{index}} single: Boxes; {running_nr} {match[4]}{lf}:::"
-            box_name = f":::{{admonition}} Box {running_nr} {match[4]}"
+            box_index = f":::{{index}} single: Boxes; Box{running_nr:>4}. {match[4]}{lf}:::"
+            box_name = f":::{{admonition}} Box {running_nr}. {match[4]}"
             replace   = f"{box_index}{lf}{lf}{box_name}"
             box_toc.append( box_name )
             if 1: print(f'{replace=}')
@@ -196,7 +196,7 @@ def box_nr_cells(notebook_list_with_chapter):
                             cell['source'] = newsource 
         
             if changed:             
-                # nbf.write(ntbk, ipath)
+                nbf.write(ntbk, ipath)
                 print(f'notebook written {ipath}')
             else: 
                 print(f'notebook not changed by box numbering   : {ipath}')
