@@ -17,8 +17,9 @@ parts:
        - file: content/02_MacrostructuralModels/MFModAndModelFlow    
      - file: content/03_Installation/InstallingPython          
        sections:
-       - file: content/03_Installation/InstallingModelFlow
-     
+       - file: content/03_Installation/InstallingPython2
+       - file: content/03_Installation/InstallingModelFlowpackage
+       - file: content/03_Installation/UpdateModelFlow
 
 #  *****************
    - caption: Some python essentials for using World Bank models with modelflow
