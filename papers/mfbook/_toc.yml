@@ -15,9 +15,9 @@ parts:
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
        sections:
        - file: content/02_MacrostructuralModels/MFModAndModelFlow    
-     - file: content/03_Installation/InstallingPython          
+     - file: content/03_Installation/InstallingModelFlow         
        sections:
-       - file: content/03_Installation/InstallingPython2
+       - file: content/03_Installation/InstallingPython
        - file: content/03_Installation/InstallingModelFlowpackage
        - file: content/03_Installation/UpdateModelFlow
 
