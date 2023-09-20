@@ -132,9 +132,26 @@ r'''\sphinxstepscope
 
 
 #%%    
-        
+def is_acrobat_running():
+    import subprocess
 
-if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options: 
+    try:
+        output = subprocess.check_output('tasklist', encoding='utf-8')
+        return 'Acrobat.exe' in output
+    except:
+        return False
+    
+
+if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
+    
+     while is_acrobat_running():
+        input("Shut Acrobat before continuing. Once closed, press Enter to continue...")
+    
+        # Check again after the user has given input
+        if is_acrobat_running():
+            print("Acrobat is still running! Please close it.")
+    
+    
      xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      latex_process(latexroot)
 
