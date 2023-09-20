@@ -10,7 +10,7 @@ copyright: "World Bank. 2023"
 # See https://jupyterbook.org/content/execute.html
 execute:
   #execute_notebooks: force
-  execute_notebooks: cache
+  execute_notebooks: off
   timeout: 200
 
   
