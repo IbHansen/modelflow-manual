@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/introduction
+
+options:
+  numbered: true
+parts:
+   - caption: Stability
+     numbered: true  
+     chapters:
+     - file: content/stability/stability introduction
+
+     - file: genindex.md
+     - file: Reference.md

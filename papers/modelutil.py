@@ -20,7 +20,7 @@ from shutil import copy, copytree
 import re
  
 import sys
-print(sys.argv)
+print('Modelutil called with', sys.argv)
 options = sys.argv 
 # raise Exception('stop')
 for aname in options: 
@@ -45,6 +45,20 @@ def get_all_notebooks(fileloc=bookdir):
 
 
 
+def get_config(fileloc=bookdir):
+    '''Get all files mentioned in the _toc but not the root'''
+    with open(Path(fr'{fileloc}/_config.yml'), 'r') as f:
+        config_data = yaml.safe_load(f)
+    return config_data    
+
+def get_latex_root(fileloc=bookdir):
+    try:  
+        latex_root = get_config(fileloc = fileloc)['latex']['latex_documents']['targetname'].split('.')[0]
+    except: 
+        latex_root = 'book'    
+    return latex_root    
+    
+    
 def get_toc_files(fileloc=bookdir):
     '''Get all files mentioned in the _toc but not the root'''
     with open(Path(fr'{fileloc}/_toc.yml'), 'r') as f:
@@ -53,7 +67,7 @@ def get_toc_files(fileloc=bookdir):
     # breakpoint() 
     
     
-    file_list_with_chapter = []
+    file_list = []
     chapter_nr = 0
 
     def make_file_path(f):
@@ -70,9 +84,9 @@ def get_toc_files(fileloc=bookdir):
                 filename = make_file_path(entry['file'])
                 if filename.exists():
                     chapter_nr = chapter_nr + 1 
-                    file_list_with_chapter.append((filename,chapter_nr))
+                    file_list.append(filename)
                 else:   
-                    file_list_with_chapter.append((filename,-1))
+                    file_list.append((filename,-1))
 
             if 'chapters' in entry:
                 process_toc_entries(entry['chapters'])
@@ -80,7 +94,8 @@ def get_toc_files(fileloc=bookdir):
                 process_toc_entries(entry['sections'])
         # breakpoint() 
 
-    file_list_with_chapter.append((make_file_path(toc_data['root']),0))
+    file_list.append(make_file_path(toc_data['root']))
+    
     process_toc_entries(toc_data.get('parts', []))
      # Print the list of file paths
      
@@ -88,11 +103,9 @@ def get_toc_files(fileloc=bookdir):
     #     print(file_path)
     
     
-    notebook_paths_with_chapter = [ (f,nr) 
-                               for f,nr in file_list_with_chapter]
-    notebook_paths = [f for f,c in notebook_paths_with_chapter ]
 
-    return notebook_paths ,notebook_paths_with_chapter   
+    return file_list
+
 
 def start_notebooks(notebook_list):
     ''' start all notebooks in jupyter in the notebook list '''
@@ -138,12 +151,12 @@ def hide_cells(notebook_list):
         except: 
                 print(f'Hide did not work for this notebook : {ipath}')
 
-def box_nr_cells(notebook_list_with_chapter):
+def box_nr_cells(notebook_list):
     
     running_nr = 0 
     box_toc =[]
 
-    def make_box_nr(chapter,text): 
+    def make_box_nr(text): 
         patbox = r'(:::{index} single: Box.*?\n:::\n*)?:::{[Aa]dmonition} [Bb]ox (\d+)(\.\d*)* (.*)'
 
         nonlocal running_nr 
@@ -181,15 +194,14 @@ def box_nr_cells(notebook_list_with_chapter):
         print(make_box_nr(40, replace))
         
         assert 1==2
-#%%
-    for ipath,chapter in notebook_list_with_chapter:
+    for ipath in notebook_list:
         # breakpoint() 
         try:
             ntbk = nbf.read(ipath, nbf.NO_CONVERT)
             changed = False
             for cell in ntbk.cells:
                     # breakpoint() 
-                    if (newsource := make_box_nr(chapter,  cell['source'])):
+                    if (newsource := make_box_nr( cell['source'])):
                         if newsource != cell['source'] :
                             changed = True 
                             # print(f'box change {ipath=} \n{newsource=}')    
@@ -206,11 +218,12 @@ def box_nr_cells(notebook_list_with_chapter):
     print('\n boxes in the book',*box_toc,sep='\n')        
     return 
 
- #%% Search
 
-def search(notebook_list_with_chapter,pat=r'.*[Bb]ox.*'):
-    
-    for ipath,chapter in notebook_list_with_chapter:
+def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0):
+    found_list = []
+    if not silent: print(f'Search patter:{pat}')
+    for ipath in notebook_list:
+        found = False 
         try:
 
             ntbk = nbf.read(ipath, nbf.NO_CONVERT)
@@ -219,31 +232,37 @@ def search(notebook_list_with_chapter,pat=r'.*[Bb]ox.*'):
                     source =  cell['source']
                     matches = re.findall(pat, source)
                     if len(matches):
-                        ...
+                        found = True
                         # breakpoint()
-                    for m in matches: 
-                            print(f"pat here: {'/'.join(ipath.parts[-2:])} : {m}")    
+                    if not silent:     
+                        for m in matches: 
+                            print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")    
+            if found: 
+               found_list.append(ipath)   
         except: 
                 print(f'Search did not work for this file : {ipath}')
-        
+    not_found_list =     [f for f in notebook_list if f not in found_list] 
+    if not silent: 
+        print(f'\n{pat} found here: ')
+        print(*[name for name  in found_list],sep='\n')
+        print(f'\n{pat} Not found here: ')
+        print(*[name for name  in not_found_list],sep='\n')
 
-def insert_colab(notebook_list_with_chapter):
+    return not_found_list if notfound else found_list 
+
+def insert_colab(notebook_list):
     content="""\
-# HIDDEN in jupyterbook 
 #This is code to manage dependencies if the notebook is executed in the google colab cloud service
 if 'google.colab' in str(get_ipython()):
   import os
   os.system('apt -qqq install graphviz')
   os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
-  incolab = True  
-else:
-  incolab = False 
 
 %load_ext autoreload
 %autoreload 2
 """  
 
-    for ipath,chapter in notebook_list_with_chapter:
+    for ipath in notebook_list:
         try:
             found = False
             
@@ -288,28 +307,33 @@ else:
 
 
 
-toc_files,toc_files_with_chapter = get_toc_files()
-all_notebooks = get_all_notebooks()
 
 if 'open' in options:
+        toc_files  = get_toc_files()
+
         start_notebooks(toc_files)    
 
 
 if 'list' in options:    
-#%%    
-    for name,chapter in toc_files_with_chapter:
-        print(f'Chapter: {chapter} notebook: {name} ')
+    
+    toc_files  = get_toc_files()
+    print(*[name for name  in toc_files],sep='\n')
+
 #%%
-if 'hide_cells' in options:  
+if 'hide_cells' in options:
+    toc_files  = get_toc_files()
+
     hide_cells(toc_files)   
     
     
 if  'boxes' in options:    
-    box_nr_cells(toc_files_with_chapter)
+    toc_files  = get_toc_files()
+
+    box_nr_cells(toc_files)
 
     
     
-if 'help' in options or len(options) ==1:  
+if 'help' in options or '-h' in options :  
     print('''Run with python modelutil.py <options>
     options: 
         open       : will open all files in the jupyterbook (a jupyter instance with port 8888 should be open)
@@ -322,25 +346,22 @@ if 'help' in options or len(options) ==1:
     
 if __name__ == '__main__':
 
-    toc_files,toc_files_with_chapter = get_toc_files()
+    toc_files = get_toc_files()
     all_notebooks = get_all_notebooks()
 
     if 0: 
-        for name,chapter in toc_files_with_chapter:
-            print(f'Chapter: {chapter} notebook: {name}')
+        print(*[name for name  in toc_files],sep='\n')
     if 0:    
         start_notebooks(toc_files)    
         
-    if 1: 
-        box_nr_cells(toc_files_with_chapter)
+    if 0: 
+        box_nr_cells(toc_files)
         
     if 0:
-        pat = '''load_ext autoreload'''
-
-        search(toc_files_with_chapter,pat)
+        search(toc_files,'load_ext autoreload',notfound=False,silent=1)
 
     if 0:
-        toc_test = [toc_files_with_chapter[1]]
+        toc_test = [toc_files[1]]
         insert_colab(toc_test)
 
     # hide_cells(toc_files)

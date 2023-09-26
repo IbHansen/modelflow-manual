@@ -16,8 +16,10 @@ from shutil import copy, copytree
  
 import sys
 
+import modelutil 
+
 import re
-print(sys.argv)
+print('Build  called with:', sys.argv)
 options = sys.argv 
 # raise Exception('stop')
 for aname in options: 
