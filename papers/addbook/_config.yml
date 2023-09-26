@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: The World Bank's MFMod Framework in Python with Modelflow
+title: Some additional draft (very) material on The World Bank's MFMod Framework in Python with Modelflow
 author: Andrew Burns and Ib Hansen
 copyright: "World Bank. 2023"
 #logo: logo.png
@@ -9,8 +9,9 @@ copyright: "World Bank. 2023"
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  #execute_notebooks: force
-  execute_notebooks: cache
+  execute_notebooks: off
+  # execute_notebooks: force
+  # execute_notebooks: cache
   timeout: 200
 
   
@@ -26,8 +27,8 @@ launch_buttons:
 
 repository:
   url                       : https://github.com/IbHansen/modelflow-manual   # Online location of the book
-  path_to_book              : papers/mfbook  # Optional path to your book, relative to the repository root
-  branch                    : AndrewEdits  # Which branch of the repository should be used when creating links (optional)
+  path_to_book              : papers/addbook  # Optional path to your book, relative to the repository root
+  branch                    : main  # Which branch of the repository should be used when creating links (optional)
 
 # Add a bibtex file so that we can create citations
 sphinx:
