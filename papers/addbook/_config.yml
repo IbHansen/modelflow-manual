@@ -9,8 +9,8 @@ copyright: "World Bank. 2023"
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: off
-  # execute_notebooks: force
+  # execute_notebooks: off
+  execute_notebooks: force
   # execute_notebooks: cache
   timeout: 200
 
