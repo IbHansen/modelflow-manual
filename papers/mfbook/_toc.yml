@@ -41,7 +41,7 @@ parts:
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/ReportWriting
      - file: content/05_WBModels/MoreComplexScenarios
-     - file: content/07_MoreFeatures/Targeting
+     # - file: content/07_MoreFeatures/Targeting
 
    - caption: Model Analytics
      numbered: true      

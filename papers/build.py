@@ -43,7 +43,8 @@ print(f'{fileloc=}\n') #dropped destination
 
 # breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
-wb.open(rf'file://{fileloc}', new=2)
+if not xx0.returncode:
+    wb.open(rf'file://{fileloc}', new=2)
 
 
 #%% 

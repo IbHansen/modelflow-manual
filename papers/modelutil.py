@@ -359,6 +359,7 @@ if __name__ == '__main__':
         
     if 0:
         search(toc_files,'load_ext autoreload',notfound=False,silent=1)
+        search([r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb'],'load_ext autoreload',notfound=False,silent=1)
 
     if 0:
         toc_test = [toc_files[1]]
@@ -367,3 +368,17 @@ if __name__ == '__main__':
     # hide_cells(toc_files)
     
     #%% 
+
+import ijson
+
+filename = 'yourfile.ipynb'
+
+try:
+    with open(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb', 'r') as file:
+        objects = ijson.items(file, 'item')
+        for obj in objects:
+            pass  # just to iterate through the objects
+except ijson.JSONError as e:
+    print(f"JSON error at position {e.pos}: {e.msg}")
+except Exception as e:
+    print(f"An error occurred: {e}")
