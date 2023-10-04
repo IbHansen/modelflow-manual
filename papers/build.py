@@ -29,7 +29,6 @@ for aname in options:
 else:
     bookdir = 'mfbook'    
  
-latexroot = 'MFModinModelflow'    
  
 doall = '--all' if 'all' in options else ''
 
@@ -40,11 +39,14 @@ fileloc = str((buildhtml / 'index.html').absolute())
 
 #print(f'{fileloc=}\n{destination=}')
 print(f'{fileloc=}\n') #dropped destination
+latexroot = modelutil.get_latex_root(bookdir)   
 
 # breakpoint()
 xx0 = run(f'jb build {bookdir}/ {doall}')
 if not xx0.returncode:
     wb.open(rf'file://{fileloc}', new=2)
+else: 
+    exit()     
 
 
 #%% 
@@ -162,9 +164,9 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
      # if the file is processed by miktex it works now, but due to a latexmk issue we use 
      # latexmk, then texindy to process it further and then latexmk to create the final pdf file  
      # 
-     xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
-     xx0 = run(f'texindy    -o "MFModinModelflow.ind" "MFModinModelflow.idx',cwd = f'{bookdir}/_build/latex/')
-     xx0 = run('latexmk -pdf -dvi- -ps- -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
+     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+     xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
+     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
      # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
      print(f'PDF generated: see {bookdir}/_build/latex/')
 

@@ -11,6 +11,13 @@ parts:
      numbered: true  
      chapters:
      - file: content/stability/stability introduction
+     - file: content/stability/EigenValues
+
+     
+   - caption: Tips
+     numbered: true  
+     chapters:
+     - file: content/tips/Jupyter book tests and tips
 
      - file: genindex.md
      - file: Reference.md

@@ -369,16 +369,3 @@ if __name__ == '__main__':
     
     #%% 
 
-import ijson
-
-filename = 'yourfile.ipynb'
-
-try:
-    with open(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb', 'r') as file:
-        objects = ijson.items(file, 'item')
-        for obj in objects:
-            pass  # just to iterate through the objects
-except ijson.JSONError as e:
-    print(f"JSON error at position {e.pos}: {e.msg}")
-except Exception as e:
-    print(f"An error occurred: {e}")
