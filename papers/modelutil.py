@@ -219,7 +219,7 @@ def box_nr_cells(notebook_list):
     return 
 
 
-def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0):
+def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=False):
     found_list = []
     if not silent: print(f'Search patter:{pat}')
     for ipath in notebook_list:
@@ -242,7 +242,7 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0):
         except: 
                 print(f'Search did not work for this file : {ipath}')
     not_found_list =     [f for f in notebook_list if f not in found_list] 
-    if not silent: 
+    if not showfiles: 
         print(f'\n{pat} found here: ')
         print(*[name for name  in found_list],sep='\n')
         print(f'\n{pat} Not found here: ')
@@ -358,7 +358,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
     if 0:
-        search(toc_files,'load_ext autoreload',notfound=False,silent=1)
+        search(toc_files,r'\([ A-Za-z-]+\)=',notfound=False,silent=0)
         search([r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb'],'load_ext autoreload',notfound=False,silent=1)
 
     if 0:

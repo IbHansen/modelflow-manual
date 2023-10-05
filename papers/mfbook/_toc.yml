@@ -40,14 +40,13 @@ parts:
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/ReportWriting
      - file: content/05_WBModels/MoreComplexScenarios
-     # - file: content/07_MoreFeatures/Targeting
+     - file: content/07_MoreFeatures/Targeting
 
    - caption: Model Analytics
      numbered: true      
      chapters:   
      - file: content/06_ModelAnalytics/ModelStructure
      - file: content/06_ModelAnalytics/AttributionSomeFeatures
-#     - file: content/06_ModelAnalytics/EigenValues
 
      
    - caption: Technical how tos
