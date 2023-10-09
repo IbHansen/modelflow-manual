@@ -1,0 +1,9 @@
+# Definition of repos to load  to load 
+- description: Pakistan model
+  repo_name: pak
+- description: Pakistan model version2
+  repo_name: pak
+- repo_name: pak
+- description: Pakistan model 3
+  repo_name: pak3
+- repo_name: pak3

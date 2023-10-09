@@ -358,7 +358,8 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
     if 0:
-        search(toc_files,r'\([ A-Za-z-]+\)=',notfound=False,silent=0)
+        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
+        search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
         search([r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb'],'load_ext autoreload',notfound=False,silent=1)
 
     if 0:
