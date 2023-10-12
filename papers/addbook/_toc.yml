@@ -12,8 +12,10 @@ parts:
      chapters:
      - file: content/stability/stability introduction
      - file: content/stability/EigenValues
-
-     
+   - caption: Onboard model from excel 
+     chapters:
+     - file: content/onboard Excel/Onboard excel
+  
    - caption: Tips
      numbered: true  
      chapters:
