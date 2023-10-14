@@ -221,8 +221,9 @@ def box_nr_cells(notebook_list):
 
 def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=False):
     found_list = []
+    notebook_list_path = [i if type(i) == Path else Path(i) for i in notebook_list]
     if not silent: print(f'Search patter:{pat}')
-    for ipath in notebook_list:
+    for ipath in notebook_list_path:
         found = False 
         try:
 
@@ -236,11 +237,12 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Fal
                         # breakpoint()
                     if not silent:     
                         for m in matches: 
-                            print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")    
+                            print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")  
+                            print(source)
             if found: 
                found_list.append(ipath)   
-        except: 
-                print(f'Search did not work for this file : {ipath}')
+        except Exception as e: 
+                print(f'Search did not work for this file : {ipath} , {e}')
     not_found_list =     [f for f in notebook_list if f not in found_list] 
     if not showfiles: 
         print(f'\n{pat} found here: ')
@@ -360,7 +362,8 @@ if __name__ == '__main__':
     if 0:
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
-        search([r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb'],'load_ext autoreload',notfound=False,silent=1)
+        search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
+        search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
 
     if 0:
         toc_test = [toc_files[1]]

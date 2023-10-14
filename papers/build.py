@@ -142,6 +142,7 @@ def is_acrobat_running():
 
     try:
         output = subprocess.check_output('tasklist', encoding='utf-8')
+        # print(output)
         return 'Acrobat.exe' in output
     except:
         return False
