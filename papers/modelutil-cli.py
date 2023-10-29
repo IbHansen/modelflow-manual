@@ -16,7 +16,7 @@ from subprocess import run
 import webbrowser as wb
 from pathlib import Path
 from shutil import copy, copytree
-
+import argparse
 import re
  
 import sys
@@ -112,8 +112,12 @@ def start_notebooks(notebook_list):
     base_url = "http://localhost:8888/notebooks/"
 
     for notebook_path in notebook_list:
-        url = base_url + str(notebook_path)
-        webbrowser.open(url, new=2)
+        # print(notebook_path)
+        #print(f'{notebook_path.suffix=}')
+        if type(notebook_path) == type(Path('ibs.ipynb')) and notebook_path.suffix == '.ipynb':
+            url = base_url + str(notebook_path )
+            print(url)
+            webbrowser.open(url, new=2)
 
 
 
@@ -164,7 +168,7 @@ def box_nr_cells(notebook_list):
     
         def replace_box(match):
             nonlocal running_nr 
-            if 1:
+            if 0:
                 for idx, group in enumerate(match.groups(), 1):
                     print(f"Group {idx}: {group}")
 
@@ -179,21 +183,6 @@ def box_nr_cells(notebook_list):
         
         return re.sub(patbox, replace_box,text)
        
-    if 0: 
-        text = ':::{admonition} Box 3.1  A good explanation\n42:::'
-        text2 = "{admonition} box 1.2 ibs text "
-
-        text2 = ''':::{admonition} Box 1.1 A good explanation
-2 + 2  = 4
-:::
-'''
-        replace=':::{index} single: Box; 34.1  A good explanation\n:::\n\n:::{admonition} Box 34.1  A good explanation'
-
-        print(make_box_nr(34, text))
-        print(make_box_nr(35, text2))
-        print(make_box_nr(40, replace))
-        
-        assert 1==2
     for ipath in notebook_list:
         # breakpoint() 
         try:
@@ -213,7 +202,7 @@ def box_nr_cells(notebook_list):
             else: 
                 print(f'notebook not changed by box numbering   : {ipath}')
         except: 
-                print(f'Hide did not work for this file : {ipath}')
+                print(f'Box did not work for this file : {ipath}')
         
     print('\n boxes in the book',*box_toc,sep='\n')        
     return 
@@ -307,69 +296,74 @@ if 'google.colab' in str(get_ipython()):
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
 
+#%% main
 
 if __name__ == '__main__':
 
+     parser = argparse.ArgumentParser(description="CLI tool for jupyterbook.")
+     
+     # Add subparsers for the sub-commands
+     subparsers = parser.add_subparsers(dest="subcommand", help="Available sub-commands")
+     # Common argument to be used in all subparsers
+     bookdir_arg = { "type": str, "default": "mfbook",
+                    "help": "Directory of the jupyter book"}
+    
+     box_parser = subparsers.add_parser("box", help="Renumber boxes in the jupyterbook")
+     box_parser.add_argument('--bookdir',**bookdir_arg)
+     
+     open_parser = subparsers.add_parser("open", help="Open all notebooks in the jupyter book ")
+     open_parser.add_argument('--bookdir',**bookdir_arg)
+     
+     list_parser = subparsers.add_parser("list", help="List all files in the jupyter book")
+     list_parser.add_argument('--bookdir',**bookdir_arg)
 
-    if 'open' in options:
-            toc_files  = get_toc_files()
+     # Parse the arguments
+     args = parser.parse_args()
+     
+
     
-            start_notebooks(toc_files)    
-    
-    
-    if 'list' in options:    
-        
-        toc_files  = get_toc_files()
+     # Handle sub-commands
+     if args.subcommand == "open":
+         print(f"Open")
+         toc_files  = get_toc_files()    
+         start_notebooks(toc_files)    
+         
+     elif args.subcommand == "box":
+         print('Box is run')
+         toc_files  = get_toc_files()
+         box_nr_cells(toc_files)
+             
+     elif args.subcommand == "list":
+  
+        toc_files  = get_toc_files(fileloc=args.bookdir)
         print(*[name for name  in toc_files],sep='\n')
-    
-    #%%
-    if 'hide_cells' in options:
-        toc_files  = get_toc_files()
-    
-        hide_cells(toc_files)   
-        
-        
-    if  'boxes' in options:    
-        toc_files  = get_toc_files()
-    
-        box_nr_cells(toc_files)
-    
-        
-        
-    if 'help' in options or '-h' in options :  
-        print('''Run with python modelutil.py <options>
-        options: 
-            open       : will open all files in the jupyterbook (a jupyter instance with port 8888 should be open)
-            list       : will list all files in the jupyterbook 
-            hide_cells : in all NB metadata will be set based on #HIDDEN #NO CODE #HIDE CODE   
-            boxes      : will renumber boxes and place them in the index 
-              '''   )
-    
 
     
-
-    toc_files = get_toc_files()
-    all_notebooks = get_all_notebooks()
-
-    if 0: 
+    
+    
+    
+     toc_files = get_toc_files()
+     all_notebooks = get_all_notebooks()
+    
+     if 0: 
         print(*[name for name  in toc_files],sep='\n')
-    if 0:    
+     if 0:    
         start_notebooks(toc_files)    
         
-    if 0: 
+     if 0: 
         box_nr_cells(toc_files)
         
-    if 0:
+     if 0:
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
-
-    if 0:
+    
+     if 0:
         toc_test = [toc_files[1]]
         insert_colab(toc_test)
-
+    
     # hide_cells(toc_files)
     
     #%% 
-
+    
