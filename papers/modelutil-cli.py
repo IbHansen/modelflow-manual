@@ -252,10 +252,10 @@ if 'google.colab' in str(get_ipython()):
     for ipath in notebook_list:
         try:
             found = False
-            
+           
             with open(ipath, 'r') as f:
                 ntbk = nbf.read(f, nbf.NO_CONVERT)
-                
+               
             for cell in ntbk.cells:
                     # breakpoint() 
                     source =  cell['source']
@@ -276,7 +276,6 @@ if 'google.colab' in str(get_ipython()):
                 new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
                 ntbk.cells.insert(1, new_cell)
-                
                 with open(ipath, 'w') as f:
                     ...
                     nbf.write(ntbk, f)
@@ -325,9 +324,11 @@ if 'google.colab' in str(get_ipython()):
     for ipath in notebook_list:
         try:
             found = False
-            
+            print(f' {ipath} to be read')
+
             with open(ipath, 'r') as f:
                 ntbk = nbf.read(f, nbf.NO_CONVERT)
+            print(f' {ipath} has been  read')
                 
             for cell in ntbk.cells:
                     # breakpoint() 
