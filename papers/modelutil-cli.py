@@ -346,7 +346,7 @@ if 'google.colab' in str(get_ipython()):
                 cell_tags.append(tag)
                 new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
-                ntbk.cells.insert(1, new_cell)
+                ntbk.cells.insert(0, new_cell)
                 
                 with open(ipath, 'w') as f:
                     ...
