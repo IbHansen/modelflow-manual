@@ -421,7 +421,10 @@ if __name__ == '__main__':
          print('Search is run')
          toc_files  = get_toc_files(fileloc=args.bookdir)
         
-         search(toc_files,pat=args.pattern, silent = args.silent)
+         found_files = search(toc_files,pat=args.pattern, silent = args.silent)
+         if  args.open: 
+             start_notebooks(found_files)
+         
 
      elif args.subcommand == "insert":
          print('insert is run')
