@@ -218,8 +218,7 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
                         found = True
                         # breakpoint()
                         if not silent:     
-                            for m in matches: 
-                                print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")  
+                                print(f"\nPattern  here: {'/'.join(ipath.parts[-2:])}")  
                                 print(source)
             if found: 
                found_list.append(ipath)   
@@ -394,9 +393,9 @@ if __name__ == '__main__':
      search_parser.add_argument('-o','--open', help='Open files with pattern ',type = bool, default=False)
 
      insert_parser = subparsers.add_parser("insert", help="All notebooks which does not fulfill condition will have cell with content inserted")
-     insert_parser.add_argument('-c','--content', type = str, help='content')
-     insert_parser.add_argument('-p','--pattern', help='pattern for not inserting',type = str, default=r'google\.colab')
-     insert_parser.add_argument('-t','--tag', help='Open files with pattern ',type = bool, default='remove-cell')
+   
+     insert_parser.add_argument('-c','--colab', action="store_true", help='Insert a Colab enabeling cell ')
+     insert_parser.add_argument('-a','--auto', action="store_true", help='Insert a auto load cell ')
 
 
      # Parse the arguments
@@ -424,13 +423,22 @@ if __name__ == '__main__':
          print('Search is run')
          toc_files  = get_toc_files(fileloc=args.bookdir)
         
-         search(toc_files,silent = args.silent)
+         search(toc_files,pat=args.pattern, silent = args.silent)
 
      elif args.subcommand == "insert":
          print('insert is run')
          toc_files  = get_toc_files(fileloc=args.bookdir)
-        
-         insert_cell(toc_files)
+         if args.colab: 
+             insert_cell(toc_files)
+         if args.auto:
+             insert_cell(toc_files,
+            content="""\
+%load_ext autoreload
+%autoreload 2
+"""  ,
+     condition= r'autoreload',
+     tag='remove_cell')
+             
 
 
 
