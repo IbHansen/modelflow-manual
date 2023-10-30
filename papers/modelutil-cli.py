@@ -324,11 +324,8 @@ if 'google.colab' in str(get_ipython()):
     for ipath in notebook_list:
         try:
             found = False
-            print(f' {ipath} to be read')
 
-            with open(ipath, 'r') as f:
-                ntbk = nbf.read(f, nbf.NO_CONVERT)
-            print(f' {ipath} has been  read')
+            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
                 
             for cell in ntbk.cells:
                     # breakpoint() 
