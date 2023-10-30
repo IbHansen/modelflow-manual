@@ -19,20 +19,7 @@ from shutil import copy, copytree
 import argparse
 import re
  
-import sys
-print('Modelutil called with', sys.argv)
-options = sys.argv 
-# raise Exception('stop')
-for aname in options: 
-    if aname.endswith('book'):
-        bookdir = aname
-        break
-else:
-    bookdir = 'mfbook'    
- 
-
-
-
+bookdir='mfbook'
 def get_all_files(fileloc=bookdir):
     all_notebooks = glob(f"{fileloc}/content/**/*.ipynb", recursive=True)
     return all_notebooks 
@@ -57,6 +44,10 @@ def get_latex_root(fileloc=bookdir):
     except: 
         latex_root = 'book'    
     return latex_root    
+
+
+def is_notebook(filename):
+    return  type(filename) == type(Path('ibs.ipynb')) and filename.suffix == '.ipynb'
     
     
 def get_toc_files(fileloc=bookdir):
@@ -107,6 +98,8 @@ def get_toc_files(fileloc=bookdir):
     return file_list
 
 
+
+
 def start_notebooks(notebook_list):
     ''' start all notebooks in jupyter in the notebook list '''
     base_url = "http://localhost:8888/notebooks/"
@@ -114,7 +107,7 @@ def start_notebooks(notebook_list):
     for notebook_path in notebook_list:
         # print(notebook_path)
         #print(f'{notebook_path.suffix=}')
-        if type(notebook_path) == type(Path('ibs.ipynb')) and notebook_path.suffix == '.ipynb':
+        if is_notebook(notebook_path) :
             url = base_url + str(notebook_path )
             print(url)
             webbrowser.open(url, new=2)
@@ -208,9 +201,9 @@ def box_nr_cells(notebook_list):
     return 
 
 
-def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=False):
+def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,fileopen=False):
     found_list = []
-    notebook_list_path = [i if type(i) == Path else Path(i) for i in notebook_list]
+    notebook_list_path = [i for i in notebook_list if is_notebook(i)]
     if not silent: print(f'Search patter:{pat}')
     for ipath in notebook_list_path:
         found = False 
@@ -224,20 +217,24 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Fal
                     if len(matches):
                         found = True
                         # breakpoint()
-                    if not silent:     
-                        for m in matches: 
-                            print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")  
-                            print(source)
+                        if not silent:     
+                            for m in matches: 
+                                print(f"Pattern  here: {'/'.join(ipath.parts[-2:])} : {m}")  
+                                print(source)
             if found: 
                found_list.append(ipath)   
         except Exception as e: 
                 print(f'Search did not work for this file : {ipath} , {e}')
-    not_found_list =     [f for f in notebook_list if f not in found_list] 
-    if not showfiles: 
+    not_found_list =     [f for f in notebook_list_path if f not in found_list] 
+    
+    if  showfiles: 
         print(f'\n{pat} found here: ')
         print(*[name for name  in found_list],sep='\n')
         print(f'\n{pat} Not found here: ')
         print(*[name for name  in not_found_list],sep='\n')
+        
+    if fileopen: 
+        start_notebooks(found_list)
 
     return not_found_list if notfound else found_list 
 
@@ -282,6 +279,7 @@ if 'google.colab' in str(get_ipython()):
                 ntbk.cells.insert(1, new_cell)
                 
                 with open(ipath, 'w') as f:
+                    ...
                     nbf.write(ntbk, f)
                     
                 print(f'Notebook written {"/".join(ipath.parts[-2:])}')
@@ -291,6 +289,78 @@ if 'google.colab' in str(get_ipython()):
                 print(f'Search colab did not work for this file : {ipath}')
         
 
+def insert_cell(notebook_list,
+     content="""\
+#This is code to manage dependencies if the notebook is executed in the google colab cloud service
+if 'google.colab' in str(get_ipython()):
+  import os
+  os.system('apt -qqq install graphviz')
+  os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
+"""  ,
+     condition= r'google\.colab',
+     tag='remove_cell'):
+    
+    """
+    Inserts a specific code cell into Jupyter notebooks if a certain condition is met.
+
+    The function checks each notebook in the provided list. If the notebook contains 
+    a cell that matches the given condition, it will print a message. If no such cell
+    is found, a new cell with the specified content is added to the notebook.
+
+    Parameters:
+    - notebook_list (list): A list of paths to Jupyter notebooks.
+    - content (str): The content of the cell to be inserted. By default, it contains
+      code to manage dependencies for Google Colab.
+    - condition (str, regex pattern): A regex pattern that, if found in a notebook cell,
+      will prevent the insertion of the new cell.
+    - tag (str): A tag to append to the metadata of the new cell.
+
+    The function will print messages indicating:
+    1. Notebooks where a cell matching the condition is found.
+    2. Notebooks where the new cell is inserted.
+    3. Notebooks where searching failed.
+
+    Note: The function uses nbformat to manipulate notebooks and expects valid notebook paths.
+    """    
+
+    for ipath in notebook_list:
+        try:
+            found = False
+            
+            with open(ipath, 'r') as f:
+                ntbk = nbf.read(f, nbf.NO_CONVERT)
+                
+            for cell in ntbk.cells:
+                    # breakpoint() 
+                    source =  cell['source']
+                    amatch = re.search(condition, source)
+                    if amatch:
+                        ...
+                        found = True # breakpoint()
+            if found:             
+                print(f"Cell found here   : {'/'.join(ipath.parts[-2:])} ")  
+            else:
+                # breakpoint() 
+                print(f"NO  cell found here: {'/'.join(ipath.parts[-2:])} ") 
+                new_cell = nbf.v4.new_code_cell(source=content)
+                if 'id' in new_cell:
+                    del new_cell['id']
+                cell_tags = cell.get('metadata', {}).get('tags', [])
+                cell_tags.append(tag)
+                new_cell['metadata']['tags'] = cell_tags
+# Step 3: Insert the new cell at a specific position (e.g., second position)
+                ntbk.cells.insert(1, new_cell)
+                
+                with open(ipath, 'w') as f:
+                    ...
+                    nbf.write(ntbk, f)
+                    
+                print(f'Notebook written {"/".join(ipath.parts[-2:])}')
+
+    
+        except: 
+                print(f'Search colab did not work for this file : {ipath}')
+        
 
             
 # Call the function to start the notebooks
@@ -301,21 +371,33 @@ if 'google.colab' in str(get_ipython()):
 if __name__ == '__main__':
 
      parser = argparse.ArgumentParser(description="CLI tool for jupyterbook.")
+     bookdir_arg = {
+        "type": str,
+        "default": "mfbook",
+        "help": "Directory of the jupyter book"
+    }
+     parser.add_argument('-b','--bookdir', **bookdir_arg)
      
      # Add subparsers for the sub-commands
      subparsers = parser.add_subparsers(dest="subcommand", help="Available sub-commands")
      # Common argument to be used in all subparsers
-     bookdir_arg = { "type": str, "default": "mfbook",
-                    "help": "Directory of the jupyter book"}
     
      box_parser = subparsers.add_parser("box", help="Renumber boxes in the jupyterbook")
-     box_parser.add_argument('--bookdir',**bookdir_arg)
      
      open_parser = subparsers.add_parser("open", help="Open all notebooks in the jupyter book ")
-     open_parser.add_argument('--bookdir',**bookdir_arg)
      
      list_parser = subparsers.add_parser("list", help="List all files in the jupyter book")
-     list_parser.add_argument('--bookdir',**bookdir_arg)
+   
+     search_parser = subparsers.add_parser("search", help="Search all files in the jupyter book")
+     search_parser.add_argument('-p','--pattern', help='Search pattern ')
+     search_parser.add_argument('-s','--silent', help='Silent ',type = bool, default=False)
+     search_parser.add_argument('-o','--open', help='Open files with pattern ',type = bool, default=False)
+
+     insert_parser = subparsers.add_parser("insert", help="All notebooks which does not fulfill condition will have cell with content inserted")
+     insert_parser.add_argument('-c','--content', type = str, help='content')
+     insert_parser.add_argument('-p','--pattern', help='pattern for not inserting',type = str, default=r'google\.colab')
+     insert_parser.add_argument('-t','--tag', help='Open files with pattern ',type = bool, default='remove-cell')
+
 
      # Parse the arguments
      args = parser.parse_args()
@@ -325,12 +407,12 @@ if __name__ == '__main__':
      # Handle sub-commands
      if args.subcommand == "open":
          print(f"Open")
-         toc_files  = get_toc_files()    
+         toc_files  = get_toc_files(fileloc=args.bookdir)    
          start_notebooks(toc_files)    
          
      elif args.subcommand == "box":
          print('Box is run')
-         toc_files  = get_toc_files()
+         toc_files  = get_toc_files(fileloc=args.bookdir)
          box_nr_cells(toc_files)
              
      elif args.subcommand == "list":
@@ -338,11 +420,27 @@ if __name__ == '__main__':
         toc_files  = get_toc_files(fileloc=args.bookdir)
         print(*[name for name  in toc_files],sep='\n')
 
+     elif args.subcommand == "search":
+         print('Search is run')
+         toc_files  = get_toc_files(fileloc=args.bookdir)
+        
+         search(toc_files,silent = args.silent)
+
+     elif args.subcommand == "insert":
+         print('insert is run')
+         toc_files  = get_toc_files(fileloc=args.bookdir)
+        
+         insert_cell(toc_files)
+
+
+
+     elif args.subcommand is None:
+        # Handle the case where no sub-command is given
+        print(f"Using book directory: {args.bookdir}")    
     
     
     
-    
-     toc_files = get_toc_files()
+     toc_files = get_toc_files(args.bookdir)
      all_notebooks = get_all_notebooks()
     
      if 0: 
@@ -365,5 +463,4 @@ if __name__ == '__main__':
     
     # hide_cells(toc_files)
     
-    #%% 
     
