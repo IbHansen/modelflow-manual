@@ -357,8 +357,8 @@ if 'google.colab' in str(get_ipython()):
                 print(f'Notebook written {"/".join(ipath.parts[-2:])}')
 
     
-        except: 
-                print(f'Search colab did not work for this file : {ipath}')
+        except Exception as e: 
+                print(f'Insert did not work for this file : {ipath} {e}')
         
 
             
