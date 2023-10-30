@@ -388,7 +388,7 @@ if __name__ == '__main__':
      search_parser = subparsers.add_parser("search", help="Search all files in the jupyter book")
      search_parser.add_argument('-p','--pattern', help='Search pattern ')
      search_parser.add_argument('-s','--silent', help='Silent ',type = bool, default=False)
-     search_parser.add_argument('-o','--open', help='Open files with pattern ',type = bool, default=False)
+     search_parser.add_argument('-o','--open', action="store_true", help='Open files with pattern ')
 
      insert_parser = subparsers.add_parser("insert", help="All notebooks which does not fulfill condition will have cell with content inserted")
    
