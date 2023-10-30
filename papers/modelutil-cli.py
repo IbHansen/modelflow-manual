@@ -348,7 +348,7 @@ if 'google.colab' in str(get_ipython()):
 # Step 3: Insert the new cell at a specific position (e.g., second position)
                 ntbk.cells.insert(0, new_cell)
                 
-                with open(ipath, 'w') as f:
+                with open(ipath, 'w',encoding='utf-8') as f:
                     ...
                     nbf.write(ntbk, f)
                     
