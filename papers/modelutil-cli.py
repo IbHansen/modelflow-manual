@@ -202,14 +202,45 @@ def box_nr_cells(notebook_list):
 
 
 def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,fileopen=False):
+    """
+    Search for a specified pattern in Jupyter notebooks within a list of paths.
+
+    Parameters:
+    - notebook_list (list): A list of paths to Jupyter notebooks.
+    - pat (str): The regular expression pattern to search for in the cells' source code. 
+                Default is '.*[Bb]ox.*'.
+    - notfound (bool): If True, return a list of notebooks where the pattern is not found.
+                      If False, return a list of notebooks where the pattern is found.
+                      Default is False.
+    - silent (int): If not 0, suppress print statements. Default is 0.
+    - showfiles (bool): If True, print the list of files where the pattern is found and not found.
+                       Default is True.
+    - fileopen (bool): If True, open the found notebooks with the default system application.
+                       Default is False.
+
+    Returns:
+    - list: A list of paths to notebooks where the pattern is found (or not found based on the 'notfound' parameter).
+    
+    Note:
+    - The function uses regex to search for the specified pattern in the source code of each cell.
+    - It prints the list of files where the pattern is found and not found (if 'showfiles' is True).
+    - If 'fileopen' is True, it opens the found notebooks with the default system application.
+    """
+
+    
+
     found_list = []
     notebook_list_path = [i for i in notebook_list if is_notebook(i)]
+    
+    
     if not silent: print(f'Search patter:{pat}')
     for ipath in notebook_list_path:
         found = False 
         try:
 
-            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+            with open(ipath, 'r',encoding='utf-8') as f:
+                ntbk = nbf.read(f, nbf.NO_CONVERT)
+                
             for cell in ntbk.cells:
                     # breakpoint() 
                     source =  cell['source']
@@ -324,8 +355,9 @@ if 'google.colab' in str(get_ipython()):
     for ipath in notebook_list:
         try:
             found = False
-
-            ntbk = nbf.read(ipath, nbf.NO_CONVERT)
+               
+            with open(ipath, 'r',encoding='utf-8') as f:
+                ntbk = nbf.read(f, nbf.NO_CONVERT)
                 
             for cell in ntbk.cells:
                     # breakpoint() 
@@ -366,7 +398,11 @@ if 'google.colab' in str(get_ipython()):
 #%% main
 
 if __name__ == '__main__':
-
+     
+     import sys
+     print('Modelutil called with', sys.argv)
+    
+    
      parser = argparse.ArgumentParser(description="CLI tool for jupyterbook.")
      bookdir_arg = {
         "type": str,
@@ -374,7 +410,7 @@ if __name__ == '__main__':
         "help": "Directory of the jupyter book"
     }
      parser.add_argument('-b','--bookdir', **bookdir_arg)
-     
+    
      # Add subparsers for the sub-commands
      subparsers = parser.add_subparsers(dest="subcommand", help="Available sub-commands")
      # Common argument to be used in all subparsers
@@ -386,9 +422,9 @@ if __name__ == '__main__':
      list_parser = subparsers.add_parser("list", help="List all files in the jupyter book")
    
      search_parser = subparsers.add_parser("search", help="Search all files in the jupyter book")
-     search_parser.add_argument('-p','--pattern', help='Search pattern ')
-     search_parser.add_argument('-s','--silent', help='Silent ',action="store_false")
+     search_parser.add_argument('-p','--pattern', help='Regex search pattern ')
      search_parser.add_argument('-o','--open', action="store_true", help='Open files with pattern ')
+     search_parser.add_argument('-ns','--nsilent', help='Not Silent ',action="store_false")
 
      insert_parser = subparsers.add_parser("insert", help="All notebooks which does not fulfill condition will have cell with content inserted")
    
@@ -416,12 +452,13 @@ if __name__ == '__main__':
   
         toc_files  = get_toc_files(fileloc=args.bookdir)
         print(*[name for name  in toc_files],sep='\n')
-
+        
      elif args.subcommand == "search":
          print('Search is run')
+
          toc_files  = get_toc_files(fileloc=args.bookdir)
         
-         found_files = search(toc_files,pat=args.pattern, silent = args.silent)
+         found_files = search(toc_files,pat=args.pattern, silent = args.nsilent)
          if  args.open: 
              start_notebooks(found_files)
          
