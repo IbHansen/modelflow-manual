@@ -1,9 +1,12 @@
 # Definition of repos to load  to load 
+- description: -- WB country models
+  repo_name: nnn
 - description: Pakistan model
   repo_name: pak
-- description: Pakistan model version2
+- description: Pakistan model version 2
   repo_name: pak
 - repo_name: pak
-- description: Pakistan model 3
-  repo_name: pak3
-- repo_name: pak3
+- description: --- FTT models
+  repo_name: xxx 
+- repo_name: FTT-Modelflow
+  owner: fdenning
