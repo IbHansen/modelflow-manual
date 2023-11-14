@@ -89,6 +89,7 @@ Cite
  - [Description](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html)
  - [Search](https://www.google.com/search?q=pandas+dataframe+loc&newwindow=1)
 
+
 ```{note}
 **Python constructs**<br>
 The dataframe.loc 
@@ -103,22 +104,12 @@ The dataframe.loc
 Flow from model specification to python solver
 :::
 
-# Tabbed widget 
-from myst_nb import glue
-with mpak.set_smpl(2018,2030):
-    glue("Baseline", mpak.ibsstyle(mpak['PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEIMPGNFSKN'].base.df,dec=0),display=False)
-    glue("Alternative", mpak.ibsstyle(mpak['PAKNECONGOVTKN PAKNEGDIFTOTKN PAKNEIMPGNFSKN'].df,dec=0),display=False)
- 
-:::{tabbed} Baseline
-```{glue:figure} Baseline
-**Baseline**
-```
-:::
-
-:::{tabbed} Alternative 
-:::{glue:figure} Alternative
-**Alternative**
-:::
-
-
-:::
+```{image} UsingWBModel_select_NB.png
+    :alt: Menu to start notebooks in subfolders
+    :class: bg-primary mb-1
+    :width: 70%
+    :align: center
+```    
+tags: 
+remove-output latex-remove-output     # for the ordinary output 
+latex-picture                         # for the picture to apear in latex 
