@@ -165,11 +165,12 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
      # if the file is processed by miktex it works now, but due to a latexmk issue we use 
      # latexmk, then texindy to process it further and then latexmk to create the final pdf file  
      # 
-     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
-     xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
-     xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
-     # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
-     print(f'PDF generated: see {bookdir}/_build/latex/')
+     if not 'nopdf' in options: 
+         xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+         xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
+         xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+         # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
+         print(f'PDF generated: see {bookdir}/_build/latex/')
 
      
 if 'copy' in options:
