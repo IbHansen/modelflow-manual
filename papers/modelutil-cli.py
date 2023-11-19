@@ -201,7 +201,8 @@ def box_nr_cells(notebook_list):
     return 
 
 
-def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,fileopen=False):
+def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,
+           fileopen=False,printmatch=False):
     """
     Search for a specified pattern in Jupyter notebooks within a list of paths.
 
@@ -213,6 +214,7 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
                       If False, return a list of notebooks where the pattern is found.
                       Default is False.
     - silent (int): If not 0, suppress print statements. Default is 0.
+    - printmatch (bool) : if silent = 0 print matches else print cell 
     - showfiles (bool): If True, print the list of files where the pattern is found and not found.
                        Default is True.
     - fileopen (bool): If True, open the found notebooks with the default system application.
@@ -249,8 +251,12 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
                         found = True
                         # breakpoint()
                         if not silent:     
-                                print(f"\nPattern  here: {'/'.join(ipath.parts[-2:])}")  
-                                print(source)
+                                print(f"\nPattern  here: {'/'.join(ipath.parts[-2:])}")         
+                                if printmatch: 
+                                    print(*matches,sep='\n')
+                                else: 
+                                    print(source)
+                                
             if found: 
                found_list.append(ipath)   
         except Exception as e: 
@@ -498,6 +504,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
+        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
