@@ -505,8 +505,9 @@ if __name__ == '__main__':
         
      if 0:
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
-        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
+        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
+        search(toc_files,r'Compare solutions; keep_plot options -- keep_switch --',notfound=False,silent=0)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
     
