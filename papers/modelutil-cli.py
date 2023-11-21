@@ -201,33 +201,40 @@ def box_nr_cells(notebook_list):
     return 
 
 
-def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,
-           fileopen=False,printmatch=False,replace=False,savecell=True):
+def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=True,
+           fileopen=False, printmatch=False, replace=False, savecell=True):
     """
-    Search for a specified pattern in Jupyter notebooks within a list of paths.
+    Search for a specified pattern in Jupyter notebooks within a list of paths and optionally replace it.
 
     Parameters:
     - notebook_list (list): A list of paths to Jupyter notebooks.
     - pat (str): The regular expression pattern to search for in the cells' source code. 
-                Default is '.*[Bb]ox.*'.
+                 Default is '.*[Bb]ox.*'.
     - notfound (bool): If True, return a list of notebooks where the pattern is not found.
-                      If False, return a list of notebooks where the pattern is found.
-                      Default is False.
-    - silent (int): If not 0, suppress print statements. Default is 0.
-    - printmatch (bool) : if silent = 0 print matches else print cell 
-    - showfiles (bool): If True, print the list of files where the pattern is found and not found.
-                       Default is True.
-    - fileopen (bool): If True, open the found notebooks with the default system application.
+                       If False, return a list of notebooks where the pattern is found.
                        Default is False.
+    - silent (int): If not 0, suppress print statements. Default is 0.
+    - showfiles (bool): If True, print the list of files where the pattern is found or not found.
+                        Default is True.
+    - fileopen (bool): If True, open the notebooks where the pattern is found with the default system application.
+                       Default is False.
+    - printmatch (bool): If True, and if silent is 0, print the matched patterns; otherwise, print the entire cell content.
+                         Default is False.
+    - replace (str or False): The replacement string for the pattern. If False, no replacement is done.
+                              Default is False.
+    - savecell (bool): If True and replace is not False, save the cell with the replaced content back to the notebook.
+                       Default is True.
 
     Returns:
-    - list: A list of paths to notebooks where the pattern is found (or not found based on the 'notfound' parameter).
+    - list: A list of paths to notebooks where the pattern is found or not found, based on the 'notfound' parameter.
     
     Note:
-    - The function uses regex to search for the specified pattern in the source code of each cell.
-    - It prints the list of files where the pattern is found and not found (if 'showfiles' is True).
-    - If 'fileopen' is True, it opens the found notebooks with the default system application.
+    - The function uses regex to search for and optionally replace the specified pattern in the source code of each cell.
+    - If 'showfiles' is True, it prints the list of files where the pattern is found or not found.
+    - If 'fileopen' is True, it opens the notebooks with the pattern found using the default system application.
+    - If 'replace' is a string, the pattern is replaced with this string in the notebook cells, and changes are saved if 'savecell' is True.
     """
+
 
     
 
@@ -517,13 +524,13 @@ if __name__ == '__main__':
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
         search(toc_files,r'model object',notfound=False,silent=0,printmatch=0)
-        search(toc_files,r'{index} single;.*',notfound=False,silent=0,printmatch=1)
+        search(toc_files,r'{index} Single;.*',notfound=False,silent=0,printmatch=1)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
         
-        #%% 
-        search(toc_files,r'{index} single;(.*)',replace=r'{index} single:\1',
-               notfound=False,silent=0,printmatch=1)
+        #%% search and replace 
+        x = search(toc_files,r'{index} Single:(.*)',replace=r'{index} single:\1',
+               notfound=False,silent=0,showfile=False,printmatch=1,savecell=0)
 #%%
      if 0:
         toc_test = [toc_files[1]]
