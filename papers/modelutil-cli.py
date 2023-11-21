@@ -202,7 +202,7 @@ def box_nr_cells(notebook_list):
 
 
 def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=True,
-           fileopen=False,printmatch=False):
+           fileopen=False,printmatch=False,replace=False,savecell=True):
     """
     Search for a specified pattern in Jupyter notebooks within a list of paths.
 
@@ -238,6 +238,7 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
     if not silent: print(f'Search patter:{pat}')
     for ipath in notebook_list_path:
         found = False 
+        
         try:
 
             with open(ipath, 'r',encoding='utf-8') as f:
@@ -248,7 +249,7 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
                     source =  cell['source']
                     matches = re.findall(pat, source)
                     if len(matches):
-                        found = True
+                        found = True                            
                         # breakpoint()
                         if not silent:     
                                 print(f"\nPattern  here: {'/'.join(ipath.parts[-2:])}")         
@@ -256,9 +257,17 @@ def search(notebook_list,pat=r'.*[Bb]ox.*',notfound=False,silent=0,showfiles=Tru
                                     print(*matches,sep='\n')
                                 else: 
                                     print(source)
-                                
+                        if replace: 
+                            newsource = re.sub(pat,replace,source)
+                            print(f'\nThis\n{source}\nReplaced by:{newsource}')
+                            if savecell: 
+                                cell.source=newsource
             if found: 
-               found_list.append(ipath)   
+               found_list.append(ipath)  
+               if replace and savecell: 
+                   with open(ipath, 'w',encoding='utf-8') as f:
+                       nbf.write(ntbk,f)
+
         except Exception as e: 
                 print(f'Search did not work for this file : {ipath} , {e}')
     not_found_list =     [f for f in notebook_list_path if f not in found_list] 
@@ -491,7 +500,7 @@ if __name__ == '__main__':
         print(f"Using book directory: {args.bookdir}")    
     
     
-    
+ #%% run   
      toc_files = get_toc_files(args.bookdir)
      all_notebooks = get_all_notebooks()
     
@@ -507,10 +516,15 @@ if __name__ == '__main__':
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
-        search(toc_files,r'Compare solutions; keep_plot options -- keep_switch --',notfound=False,silent=0)
+        search(toc_files,r'model object',notfound=False,silent=0,printmatch=0)
+        search(toc_files,r'{index} single;.*',notfound=False,silent=0,printmatch=1)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
-    
+        
+        #%% 
+        search(toc_files,r'{index} single;(.*)',replace=r'{index} single:\1',
+               notfound=False,silent=0,printmatch=1)
+#%%
      if 0:
         toc_test = [toc_files[1]]
         insert_colab(toc_test)
