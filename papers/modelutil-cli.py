@@ -524,13 +524,13 @@ if __name__ == '__main__':
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
         search(toc_files,r'model object',notfound=False,silent=0,printmatch=0)
-        search(toc_files,r'{index} Single;.*',notfound=False,silent=0,printmatch=1)
+        search(toc_files,r'{index} single: \[\] *',notfound=False,silent=0,printmatch=1,showfiles=False)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
         
         #%% search and replace 
-        x = search(toc_files,r'{index} Single:(.*)',replace=r'{index} single:\1',
-               notfound=False,silent=0,showfile=False,printmatch=1,savecell=0)
+        x = search(toc_files,r'```{index}(.*)\n```',replace=r':::{index}\1\n:::',
+               notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
 #%%
      if 0:
         toc_test = [toc_files[1]]
