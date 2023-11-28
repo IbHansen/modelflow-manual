@@ -11,6 +11,7 @@ parts:
      numbered: true  
      chapters:
      - file: content/01_Introduction/Introduction 
+     - file: content/01_Introduction/Acknowledgements
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
        sections:
        - file: content/02_MacrostructuralModels/MFModAndModelFlow    
@@ -27,6 +28,7 @@ parts:
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
      - file: content/04_PythonEssentials/PythonBasics
      - file: content/04_PythonEssentials/PandasDataFrames
+     - file: content/04_PythonEssentials/Jupyter notebook setup   
      - file: content/04_PythonEssentials/UpdateCommand
        sections:
        - file: content/04_PythonEssentials/mfcalc
