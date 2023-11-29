@@ -382,7 +382,7 @@ model.scroll_off();"""  ,
     Note: The function uses nbformat to manipulate notebooks and expects valid notebook paths.
     """    
 
-    for ipath in notebook_list:
+    for ipath in [ n for n in notebook_list if is_notebook(n)]:
         try:
             found = False
                
@@ -398,7 +398,7 @@ model.scroll_off();"""  ,
                             ...
                             found = True # breakpoint()
                     else: 
-                         found=True 
+                         found=False 
             if found:             
                 print(f"Cell found here   : {'/'.join(ipath.parts[-2:])} ")  
             else:
@@ -412,7 +412,7 @@ model.scroll_off();"""  ,
                     cell_tags.append(tag)
                 new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
-                ntbk.cells.insert(0, new_cell)
+                ntbk.cells.insert(2, new_cell)
                 
                 with open(ipath, 'w',encoding='utf-8') as f:
                     ...
@@ -522,6 +522,8 @@ if __name__ == '__main__':
  #%% run   
      toc_files = get_toc_files(args.bookdir)
      all_notebooks = get_all_notebooks()
+     if 0:
+         insert_cell(toc_files) 
     
      if 0: 
         print(*[name for name  in toc_files],sep='\n')
