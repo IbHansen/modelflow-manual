@@ -342,14 +342,22 @@ if 'google.colab' in str(get_ipython()):
 
 def insert_cell(notebook_list,
      content="""\
-#This is code to manage dependencies if the notebook is executed in the google colab cloud service
-if 'google.colab' in str(get_ipython()):
-  import os
-  os.system('apt -qqq install graphviz')
-  os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
-"""  ,
-     condition= r'google\.colab',
-     tag='remove_cell'):
+# Prepare the notebook for use of modelflow 
+
+# Jupyter magic command to improve the display of charts in the Notebook
+%matplotlib inline
+
+# Import pandas 
+import pandas as pd
+
+# Import the model class from the modelclass module 
+from modelclass import model 
+
+# functions that improve rendering of modelflow outputs
+model.widescreen()
+model.scroll_off();"""  ,
+     condition= r'',
+     tags=['remove_cell']):
     
     """
     Inserts a specific code cell into Jupyter notebooks if a certain condition is met.
@@ -383,11 +391,14 @@ if 'google.colab' in str(get_ipython()):
                 
             for cell in ntbk.cells:
                     # breakpoint() 
-                    source =  cell['source']
-                    amatch = re.search(condition, source)
-                    if amatch:
-                        ...
-                        found = True # breakpoint()
+                    if condition: 
+                        source =  cell['source']
+                        amatch = re.search(condition, source)
+                        if amatch:
+                            ...
+                            found = True # breakpoint()
+                    else: 
+                         found=True 
             if found:             
                 print(f"Cell found here   : {'/'.join(ipath.parts[-2:])} ")  
             else:
@@ -397,7 +408,8 @@ if 'google.colab' in str(get_ipython()):
                 if 'id' in new_cell:
                     del new_cell['id']
                 cell_tags = cell.get('metadata', {}).get('tags', [])
-                cell_tags.append(tag)
+                for tag in tags: 
+                    cell_tags.append(tag)
                 new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
                 ntbk.cells.insert(0, new_cell)
@@ -531,6 +543,8 @@ if __name__ == '__main__':
         #%% search and replace 
         x = search(toc_files,r'```{index}(.*)\n```',replace=r':::{index}\1\n:::',
                notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
+        
+        
 #%%
      if 0:
         toc_test = [toc_files[1]]
