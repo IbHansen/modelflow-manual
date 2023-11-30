@@ -28,9 +28,10 @@ parts:
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
      - file: content/04_PythonEssentials/PythonBasics
      - file: content/04_PythonEssentials/PandasDataFrames
-     - file: content/04_PythonEssentials/Jupyter notebook setup   
-     - file: content/04_PythonEssentials/UpdateCommand
+     - file: content/04_PythonEssentials/Jupyter notebook setup  
+     - file: content/04_PythonEssentials/Modelflow and Dataframes
        sections:
+       - file: content/04_PythonEssentials/UpdateCommand
        - file: content/04_PythonEssentials/mfcalc
 
    - caption: Using modelflow with World Bank models
