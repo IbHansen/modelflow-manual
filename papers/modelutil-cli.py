@@ -409,10 +409,11 @@ model.scroll_off();"""  ,
                     del new_cell['id']
                 cell_tags = cell.get('metadata', {}).get('tags', [])
                 for tag in tags: 
-                    cell_tags.append(tag)
+                    if tag not in cell_tags:
+                        cell_tags.append(tag)
                 new_cell['metadata']['tags'] = cell_tags
 # Step 3: Insert the new cell at a specific position (e.g., second position)
-                ntbk.cells.insert(2, new_cell)
+                ntbk.cells.insert(1, new_cell)
                 
                 with open(ipath, 'w',encoding='utf-8') as f:
                     ...
@@ -524,7 +525,18 @@ if __name__ == '__main__':
      all_notebooks = get_all_notebooks()
      if 0:
          insert_cell(toc_files) 
-    
+     
+     if 0: 
+         insert_cell(toc_files,
+         content="""\
+     #This is code to manage dependencies if the notebook is executed in the google colab cloud service
+     if 'google.colab' in str(get_ipython()):
+       import os
+       os.system('apt -qqq install graphviz')
+       os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
+     """            ) 
+
+     
      if 0: 
         print(*[name for name  in toc_files],sep='\n')
      if 0:    
