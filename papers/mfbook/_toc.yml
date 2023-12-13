@@ -57,7 +57,7 @@ parts:
      chapters:   
      - file: content/07_MoreFeatures/GettingHelp
      - file: content/07_MoreFeatures/ModelFlowCommandReference
-     - file: content/07_MoreFeatures/VisualizationsReference
+     #- file: content/07_MoreFeatures/VisualizationsReference
 
    - caption: Stability
      numbered: true  
