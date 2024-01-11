@@ -102,7 +102,7 @@ def get_toc_files(fileloc=bookdir):
 
 def start_notebooks(notebook_list):
     ''' start all notebooks in jupyter in the notebook list '''
-    base_url = "http://localhost:8888/notebooks/"
+    base_url = "http://localhost:8889/notebooks/"
 
     for notebook_path in notebook_list:
         # print(notebook_path)
