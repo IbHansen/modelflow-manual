@@ -129,7 +129,7 @@ r'''\sphinxstepscope
 ] 
     for p in purge:
        latex = latex.replace(p,'')
-   
+    
     
     # breakpoint() 
     with open(latexfile,'wt',encoding="utf8") as f:
