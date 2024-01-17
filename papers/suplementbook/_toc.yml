@@ -6,20 +6,12 @@ root: content/introduction
 
 options:
   numbered: true
-parts:
-   - caption: Stability
-     numbered: true  
-     chapters:
-     - file: content/stability/stability introduction
-     - file: content/stability/EigenValues
-   - caption: Onboard model from excel 
-     chapters:
-     - file: content/onboard Excel/Onboard excel
-  
-   - caption: Tips
-     numbered: true  
-     chapters:
-     - file: content/tips/Jupyter book tests and tips
+chapters:
+- file: content/stability/stability introduction
+- file: content/stability/EigenValues
+- file: content/onboard Excel/Onboard excel
+- file: content/tips/docker
+- file: content/tips/Jupyter book tests and tips
 
-     - file: genindex.md
-     - file: Reference.md
+- file: genindex.md
+- file: Reference.md

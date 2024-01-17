@@ -15,7 +15,7 @@ execute:
   timeout: 200
 
   
-only_build_toc_files: true
+only_build_toc_files: True 
 
 # Define the name of the latex output file for PDF builds
 latex:
