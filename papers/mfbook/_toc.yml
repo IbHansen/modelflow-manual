@@ -3,15 +3,15 @@
 
 format: jb-book
 root: content/introduction
-
+   
 options:
   numbered: true
+  
 parts:
    - caption: The World Bank's MFMod Framework and Modelflow
      numbered: true  
      chapters:
      - file: content/01_Introduction/Introduction 
-     - file: content/01_Introduction/Acknowledgements
      - file: content/02_MacrostructuralModels/MacroStructuralModels 
        sections:
        - file: content/02_MacrostructuralModels/MFModAndModelFlow    
@@ -28,20 +28,23 @@ parts:
      - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
      - file: content/04_PythonEssentials/PythonBasics
      - file: content/04_PythonEssentials/PandasDataFrames
-     - file: content/04_PythonEssentials/Jupyter notebook setup  
+     #- file: content/04_PythonEssentials/Jupyter notebook setup  # Not ssure what this was doing here,  Pls lets discuss before re-inserting
+
+   - caption: Selected modelflow extensions to pandas
+     numbered: true 
+     chapters:      
      - file: content/04_PythonEssentials/Modelflow and Dataframes
-       sections:
-       - file: content/04_PythonEssentials/UpdateCommand
-       - file: content/04_PythonEssentials/mfcalc
+     - file: content/04_PythonEssentials/UpdateCommand
+     - file: content/04_PythonEssentials/mfcalc
 
    - caption: Using modelflow with World Bank models
      numbered: true      
      chapters:   
-     - file: content/05_WBModels/UsingWBModels
-    # - file: content/05_WBModels/LoadingWBModel #large overlab to the next chapter 
+     - file: content/05_WBModels/AccessingWBModels  # This will need to be revised when we have the git hub site set up
      - file: content/05_WBModels/WorkingwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
-     - file: content/05_WBModels/ReportWriting
+       sections:
+       - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
      - file: content/05_WBModels/MoreComplexScenarios
      - file: content/07_MoreFeatures/Targeting
 
