@@ -54,7 +54,12 @@ parts:
      - file: content/06_ModelAnalytics/ModelStructure
      - file: content/06_ModelAnalytics/AttributionSomeFeatures
 
-     
+   - caption: Model Stability
+     numbered: true  
+     chapters:
+     - file: content/07_MoreFeatures/stability introduction
+     - file: content/07_MoreFeatures/EigenValues
+
    - caption: Technical how tos
      numbered: true      
      chapters:   
@@ -62,11 +67,7 @@ parts:
      - file: content/07_MoreFeatures/ModelFlowCommandReference
      #- file: content/07_MoreFeatures/VisualizationsReference
 
-   - caption: Stability
-     numbered: true  
-     chapters:
-     - file: content/07_MoreFeatures/stability introduction
-     - file: content/07_MoreFeatures/EigenValues
+   
   
    - caption: Backmatter
      numbered: false
