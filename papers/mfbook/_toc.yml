@@ -43,10 +43,9 @@ parts:
      - file: content/05_WBModels/AccessingWBModels  # This will need to be revised when we have the git hub site set up
      - file: content/05_WBModels/WorkingwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
-       sections:
-       - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
      - file: content/05_WBModels/MoreComplexScenarios
      - file: content/07_MoreFeatures/Targeting
+     - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
 
    - caption: Model Analytics
      numbered: true      
@@ -57,7 +56,7 @@ parts:
    - caption: Model Stability
      numbered: true  
      chapters:
-     - file: content/07_MoreFeatures/stability introduction
+     #- file: content/07_MoreFeatures/stability introduction # not usable in its current state
      - file: content/07_MoreFeatures/EigenValues
 
    - caption: Technical how tos
@@ -66,9 +65,7 @@ parts:
      - file: content/07_MoreFeatures/GettingHelp
      - file: content/07_MoreFeatures/ModelFlowCommandReference
      #- file: content/07_MoreFeatures/VisualizationsReference
-
-   
-  
+     
    - caption: Backmatter
      numbered: false
      chapters:
