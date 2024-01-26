@@ -12,7 +12,8 @@ execute:
   # execute_notebooks: force
   execute_notebooks: cache
   timeout: 1000
-
+  exclude_patterns:
+    - 'EigenValues' # When testing as it takes forever 
   
 only_build_toc_files: true
 
