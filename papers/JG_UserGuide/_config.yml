@@ -10,6 +10,8 @@ logo: logo.png
 execute:
   execute_notebooks: force
 
+only_build_toc_files: true
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
@@ -19,14 +21,28 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    bibtex_default_style: plain
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - dollarmath
+    - colon_fence
+
+
 # Information about where the book exists on the web
-repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+#repository:
+#  url: https://isimulate.worldbank.org/mfm_admin/MFMSA_JG  # Online location of your book
+#  path_to_book: \\wbgmisism005\mfm_admin\MFMSA_JG  # Optional path to your book, relative to the repository root
+#  branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
+#html:
+#  use_issues_button: true
+#  use_repository_button: true

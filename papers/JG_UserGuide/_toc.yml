@@ -3,6 +3,12 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: UserGuide
-
+   
+options:
+  numbered: true
+  
+parts:
+   - caption: The Jobs and Growth version of MFMod
+     numbered: true      
+     chapters:
+     - file: UserGuide
