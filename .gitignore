@@ -161,3 +161,4 @@ test.pcim
 
 # Numba cache 
 **/modelsource
+**/test
