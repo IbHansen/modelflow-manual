@@ -44,7 +44,7 @@ parts:
      - file: content/05_WBModels/WorkingwWBModels
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
-     - file: content/07_MoreFeatures/Targeting
+     - file: content/05_WBModels/Targeting
      - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
 
    - caption: Model Analytics
@@ -64,7 +64,7 @@ parts:
      chapters:   
      - file: content/07_MoreFeatures/GettingHelp
      - file: content/07_MoreFeatures/ModelFlowCommandReference
-     - file: content/07_MoreFeatures/VisualizationsReference
+#     - file: content/07_MoreFeatures/VisualizationsReference # I think all of these elements are now in Repor Writing.  Ib to double check.
      
    - caption: Backmatter
      numbered: false
