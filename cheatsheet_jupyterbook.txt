@@ -16,6 +16,21 @@ For latex:
 miktex (version 22.1) and TeXworks (version 0.6.6)
 For typesetting: XeLaTex0MakeIndex+BibTeX  
 
+don't use:
+$$
+\begin{align*}
+y_t &=\bigl[\hat{\alpha}+\hat{\beta}X_t + y\_AF_t\bigr]\cdot (1-0) + 0 \cdot y\_X_t\\
+y_t &=\hat{\alpha}+\hat{\beta}X_t + y\_AF_t
+\end{align*}
+$$
+
+use 
+\begin{align*}
+y_t &=\bigl[\hat{\alpha}+\hat{\beta}X_t + y\_AF_t\bigr]\cdot (1-0) + 0 \cdot y\_X_t\\
+y_t &=\hat{\alpha}+\hat{\beta}X_t + y\_AF_t
+\end{align*}
+
+
 metadata in juyter notebooks to hide and remove cells, input or output:
 "tags": [
         "hide-input",
