@@ -99,7 +99,10 @@ def latex_process(latexroot ):
 Over the decades''',r'{\huge\bfseries\raggedright Foreword\par}'),
         (r'\title',r'\renewcommand{\cleardoublepage}{\clearpage}'),       # to avoid blank pages between chapters 
 
-        ]
+        (r"""\begin{DUlineblock}{0em}
+\item[] \sphinxstylestrong{\Large Acknowledgements}
+\end{DUlineblock}""",
+         r"\newpage % taksigelse  ")]
     
     for before,insert in insertbefore: 
         if not insert in latex:
