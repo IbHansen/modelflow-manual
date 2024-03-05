@@ -557,6 +557,8 @@ if __name__ == '__main__':
         #%% search and replace 
         x = search(toc_files,r'```{index}(.*)\n```',replace=r':::{index}\1\n:::',
                notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
+        y = search(toc_files,r'\{cite:p\}',replace='{cite:t}',
+               notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
         
         
 #%%
