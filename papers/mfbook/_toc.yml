@@ -34,8 +34,9 @@ parts:
      numbered: true 
      chapters:      
      - file: content/04_PythonEssentials/Modelflow and Dataframes
-     - file: content/04_PythonEssentials/UpdateCommand
-     - file: content/04_PythonEssentials/mfcalc
+       sections:
+       - file: content/04_PythonEssentials/UpdateCommand
+       - file: content/04_PythonEssentials/mfcalc
 
    - caption: Using modelflow with World Bank models
      numbered: true      
