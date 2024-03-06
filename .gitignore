@@ -158,7 +158,7 @@ cython_debug/
 **/modelflowdumps
 **/graph
 test.pcim 
-
+**/wbmodels
 # Numba cache 
 **/modelsource
 **/test
