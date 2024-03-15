@@ -12,9 +12,7 @@ parts:
      numbered: true  
      chapters:
      - file: content/01_Introduction/Introduction 
-     - file: content/02_MacrostructuralModels/MacroStructuralModels 
-       sections:
-       - file: content/02_MacrostructuralModels/MFModAndModelFlow    
+     - file: content/02_MacrostructuralModels/MacroStructuralModels             
      - file: content/03_Installation/InstallingModelFlow         
        sections:
        - file: content/03_Installation/InstallingPython
@@ -54,12 +52,12 @@ parts:
      - file: content/06_ModelAnalytics/ModelStructure
      - file: content/06_ModelAnalytics/AttributionSomeFeatures
 
-   - caption: Model Stability
-     numbered: true  
-     chapters:
-     #- file: content/07_MoreFeatures/stability introduction # not usable in its current state
-     - file: content/07_MoreFeatures/System_dynamic_and_EigenValues
-     - file: content/07_MoreFeatures/Sources_of_instability
+   #- caption: Model Stability
+   #  numbered: true  
+   #  chapters:
+   #  #- file: content/07_MoreFeatures/stability introduction # not usable in its current state
+   #  - file: content/07_MoreFeatures/System_dynamic_and_EigenValues
+   #  - file: content/07_MoreFeatures/Sources_of_instability
      
      
    - caption: Technical how tos
