@@ -16,6 +16,35 @@ For latex:
 miktex (version 22.1) and TeXworks (version 0.6.6)
 For typesetting: XeLaTex0MakeIndex+BibTeX  
 
+
+Boxes  - this is the IB syntax
+
+::{index} single: Boxes; Box 3. Time scope of .upd() commands :::
+
+:::{admonition} Box 3. Time scope of .upd() commands
+
+The update command takes a variety of mathematical operators =, +, *, % =GROWTH, +GROWTH, =DIFF and applies them to data for the period set in the leading <>.
+
+If the user wants to modify a series or group of series for only a specific point in time or a period of time, she can indicate the period in the command line.
+
+If one date is specified the operation is applied to a single point in time
+If two dates are specifies the operation is applied over a period of time.
+The selected time period will persist until re-set with a new time specification. This is useful if several variables are going to be updated for the same time period, but must be kept in mind if subsequent commands are to operate over a different time period.
+
+The time period can be reset to the full time-period by using the special <-0 -1> time period. More generally:
+
+-0 indicates the start of the dataframe
+-1 indicates the end of the dataframe
+If no time is provided the dataframe start and end period will be used.
+:::
+
+:::{Margin} Text to appear bolded
+
+This produces a nice looking box around the text. Might work better as margin Box 1 My box.
+
+
+:::
+
 don't use:
 $$
 \begin{align*}
