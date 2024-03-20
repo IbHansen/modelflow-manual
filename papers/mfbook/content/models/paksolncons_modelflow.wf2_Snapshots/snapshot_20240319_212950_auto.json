@@ -1,0 +1,5917 @@
+
+{
+	"commands" : null,
+	"description" : "Generated when this file was opened on 2024/03/19 23:30:30.",
+	"label" : "auto base",
+	"workbook_meta" : 
+	{
+		"_name" : "c:\\modelflow manual\\papers\\mfbook\\content\\models\\paksolncons_modelflow.wf2",
+		"_pages" : 
+		[
+			
+			{
+				"_frequency" : "A",
+				"_last_update" : [ 738963.9795138889, "03/19/2024 23:30" ],
+				"_name" : "Untitled",
+				"_obj_count" : 1177,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 766644.0, "01/01/2100" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "_CONSKNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_1",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_10",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_11",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_12",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_13",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_14",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_15",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_16",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_17",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_18",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_19",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_2",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_20",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_21",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_22",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_23",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_24",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_25",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_26",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_27",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_28",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_29",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_3",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_30",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_31",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_32",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_33",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_34",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_35",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_36",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_37",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_38",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_39",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_4",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_40",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_41",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_42",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_43",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_5",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_6",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_7",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_8",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_CONVERGENCE_9",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_EXPKNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_EXPXNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_IMPKNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_INVKNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_LEPCNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "_MS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_PAKBMFSTOTHRCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBMFSTREMTCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBMGSRGNFSCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBMGSRMRCHCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBXFSTOTHRCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBXFSTREMTCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBXGSRGNFSCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKBXGSRMRCHCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKCO2EM",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKFMLBLMTWOKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKFMLBLPOLYXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGDBTDOMTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGDBTEXTLCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGDBTTOTLCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGDBTVALTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGEXPCAPTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGEXPGNFSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGEXPOTHRCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGEXPTRNSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGREVDRCTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGREVGNFSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGREVGRNTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGREVOTHRCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKGGREVTRDECN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKINTRDDIFF",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKINTREDIFF",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKLMEMPTOTLCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEADPKMAXKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNECONENGYXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNECONGOVTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNECONGOVTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNECONOTHRXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNECONPRVTKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEEXPGNFSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEEXPGNFSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEGDIFGOVCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEGDIFGOVXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEGDIFPRVKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEGDIFPRVXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEIMPGNFSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEIMPGSNEXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNEKRTTOTLCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRCRPSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRCRPSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRFSNGKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRFSNGXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRFSTYKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVAGRFSTYXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVCOLPRODXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVENGTOTLKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVGASPRODXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDCNSTKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDCNSTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDMNGSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDMNGSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDOTHRTKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVINDOTHRTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVOILPRODXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVRENPRODXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVFINSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVFINSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVGOVSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVGOVSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVHSNGKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVHSNGXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVPRVSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVTRNSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVTRNSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVWHSLKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNVSRVWHSLXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNYGDPFCSTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNYWRTFORMCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKNYWRTINFMCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKPANUSATLS",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_PAKVELOCITY",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_YFCSTXNECM",
+						"_type" : "GRAPH"
+					},
+					
+					{
+						"_name" : "ADAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ADD",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "ALBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "C_SPEC_QI",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CHN",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "CHNEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNEXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COFU",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CONVBBLTOE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "CONVERGENCE",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CONVERGENCE2",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CONVERGENCE3",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CONVKWHTOE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "CONVMMBTUTOE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "CONVMTTOE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "COVERAGE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CPI_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "DEBT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEFS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "DEU",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "DEUEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUEXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUFMLBLPOLYXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN02",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN03",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPANUSATLS01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DUMH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECMS",
+						"_type" : "SPOOL"
+					},
+					
+					{
+						"_name" : "EMISCOAL",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "EMISGAS",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "EMISOIL",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "ENDOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ESPNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EVIEWS_TREND",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EXCL",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EXOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EXOLISTS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EXPINV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FININV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRA",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "FRAEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAEXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FUELSPROD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "G2BCOPIED",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "G_ADD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "GASADJ",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "GBR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "GBREXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBREXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBREXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IFACEEND",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "IFACESTART",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "IFACEVERSION",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "IHISTEND",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "INSU",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISIM_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_CTYVARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCF_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCN_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCP_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCP_VARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISF_VARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FY_CTYVARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISOLVEEND",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISOLVESTART",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ITA",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "ITAEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAEXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KACC_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "KSTOCK_PAK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LAGSD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MARKUP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MAXROWS",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "MFM_KACC_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMOD_THISSOLN_CTYLIST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMSA_AFTYPE",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMSA_XTRACTYSHEETS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMSA_XTRAGLOBSHEETS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMSA_XTRAREPSHEETS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MKDREMT_IN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDREMT_IN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDREMT_OUT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDREMT_OUT01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NOMS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "PAK",
+						"_type" : "MODEL"
+					},
+					
+					{
+						"_name" : "PAKADAP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKAVDAMAGE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKBDEFICIT",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKBETACNST",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETACRPS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYCNST",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYCRPS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYFINS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYFSNG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYFSTY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYGOVS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYHSNG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYMNGS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYOTHRT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYPRVS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYTOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYTRNS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAENGYWHSL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAFINS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAFSNG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAFSTY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAGOVS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAHSNG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAMNGS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAOTHRT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAPRVS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETATOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETATRNS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBETAWHSL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBFCAFCAPTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBFCAFFFDICD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBFCAFFINXCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBFCAFFPFTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBFCAFNEOMCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTINTECD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTINTECD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTOTHRCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTREMTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTREMTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMFSTREMTCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRGNFSCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRMRCHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRMRCHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRMRCHCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRNFSVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBMGSRNFSVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCD_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCD__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNCABFUNDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTREMTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNFSTREMTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRMRCHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRMRCHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRNFSVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBNGSRNFSVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTOTHRCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTREMTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTREMTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXFSTREMTCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRGNFSCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRMRCHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRMRCHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRMRCHCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRNFSVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKBXGSRNFSVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2CKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2CKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2GKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2GKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2OKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2OKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2TKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCCEMISCO2TKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCESENGYCON",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKCESENGYIMP",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKCESENGYIMPT",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKCESENGYPROD",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKCFVOLUMECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCFVOLUMECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCFVOLUMEKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCFVOLUMEKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCNSTINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCNSTINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCNSTINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCNSTINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCO2EM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCO2EM_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCO2EM_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCO2TAX",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCOFU",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCONSHARE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKCOVERAGE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCRPSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCRPSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCRPSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKCRPSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDEBT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDEPR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDEPR1",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKDISPREP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDISPREPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDISPREPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDISPREPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKDISPREPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKEXPINV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKEXTLSHAREXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFININV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFINSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFINSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFINSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFINSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLMTWOCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLMTWOCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLMTWOKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLMTWOKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLMTWOKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLPOLYXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLPOLYXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLPOLYXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFPCPITOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSNGINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSNGINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSNGINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSNGINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSTYINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSTYINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSTYINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFSTYINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGDPPCKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGDPPCKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGDPPCKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGDPPCKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALEXGRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALEXGRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALOTHRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALOVRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALOVRLCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALOVRLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALOVRLCN__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALPRIMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGBALPRIMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTDOMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTDOMTCN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTDOMTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTDOMTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTEXTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTEXTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTEXTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTTOTLCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTTOTLCN__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTTOTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTVALTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTVALTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGDBTVALTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCAPTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCAPTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCAPTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCAPTCNALF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCRNTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCRNTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPCYCLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPGNFSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPGNFSCNALF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPINTPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPKINVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPKTRNCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPOTHRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPOTHRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPOTHRCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPOTHRCNALF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPRECVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPRECVCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPRECVKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPRECVKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPSTRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTOTSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTPNSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTRNSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTRNSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTRNSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTRNSCNALF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPTSOCCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGEXPWAGECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINDOMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINDPRVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINEAMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINEDSBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINEOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINEXTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINFGAPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINFGAPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINREQMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINREQMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGFINTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVCO2CER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVCO2GER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVCO2OER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVCYCLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVDRCTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVDRCTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVDRCTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVDRCTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVEMISCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVEMISCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGNFSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGRNTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGRNTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVGRNTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVIDRTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVNONTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVOTHRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVOTHRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVOTHRCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVSTRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTAXTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTRDECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTRDECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTRDECN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGGREVTRDEXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGOVSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGOVSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGOVSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKGOVSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHSNGINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHSNGINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHSNGINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHSNGINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDAMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDAMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDAMKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDAMKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDSTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKHURDSTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINFCES",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKINFLEXPT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINFLTRGT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINSU",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTERESTCF",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKINTRDDIFF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTRDDIFF_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTRDDIFF_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTRDXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTRDXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTREDIFF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTREDIFF_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTREDIFF_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTREXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINTREXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKINVSHARE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKLMEMPFORMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPFORMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPGOVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPINFMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPINFMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPINFMSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPSTRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPSTRLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMEMPTOTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMPRTTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMUNRSTRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMUNRTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLMUNRTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKLPUBSHARE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMARKUP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMNGSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMNGSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMNGSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMNGSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMPK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMPK_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMPL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMPL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKMPPOLNATRXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEADPKMAXKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEADPKMAXKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEADPKMAXKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEADPKSTGKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEADPKSTGKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYGN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONENGYXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONGOVTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONOTHRXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEENGTOTCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEEXPGNFSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDETTOTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDETTOTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDETTOTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDETTOTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFGOVXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFPRVXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTKN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTKN2_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIFTOTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIKSTKKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDIKSTKKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDISTKBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDISTKBKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEGDISTKBXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEHURAVERKN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEHURPTVTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEHURPTVTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPENGYSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNEKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNEKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNEXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNEXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGSNEXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPOTHRSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEKRTTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEKRTTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEKRTTOTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRCRPSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSNGXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRFSTYXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVAGRTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLNIMPSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODCN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODCN2_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODGN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODKN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVCOLPRODXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVELCFSRTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVELCFSRTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVELCRNRTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVELCRNRTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGFOSSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGFOSSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGFOSSSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGFOSSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGNIMPXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGOUTPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGOUTPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGOUTPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGOUTPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGRENWCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGRENWKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGRENWXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVENGTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASNIMPSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODCN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODCN2_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODGN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODKN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVGASPRODXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDCNSTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDELECXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDENGYSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNFSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDMNGSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDOTHRTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVINDTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVMNFFSRTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVMNFFSRTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILNIMPSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODCN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODCN2_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODGN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODGN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODKN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVOILPRODXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENNIMPSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODCN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODCN2_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODKN2",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODQN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODQN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVRENPRODXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVFINSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVGOVSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVHSNGXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVPRVSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVTRNSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNVSRVWHSLXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPDISCCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPDISCKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPFCSTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPGAP_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPGAP__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPPOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPPOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPTFP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPTFP_RAW",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYTAXNINDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYTAXNINDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYTAXNINDKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWBFORMSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWBINFMSH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTFORMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTFORMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTFORMCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTGOVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTINFMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTINFMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTINFMCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYWRTTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYGOSOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYGOSOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBFORMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBFORMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBINFMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBINFMCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBINFMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBINFMCN__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBTOTLCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYYWBTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKOTHRTINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKOTHRTINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKOTHRTINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKOTHRTINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKOTHSHARE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKPANEUATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANEUATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANEUATLSK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANEUATLSK_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLS_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLSK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLSK_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPAYOUTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPAYOUTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPMKEY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPMKEY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPRVSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPRVSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPRVSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPRVSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPSTAR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPSTAR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPXKEY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPXKEY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKRECOVINVESTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKRECOVINVESTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKREER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKREER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKREMT_IN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKREMT_OUT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKRN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKRN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRCRPSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRCRPSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRFSNGKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRFSNGKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRFSTYKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMAGRFSTYKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMENGTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMENGTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDCNSTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDCNSTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDMNGSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDMNGSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDOTHRTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMINDOTHRTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVFINSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVFINSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVGOVSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVGOVSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVHSNGKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVHSNGKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVPRVSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVTRNSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVTRNSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVWHSLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSMSRVWHSLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSPPOP1564TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSPPOPTOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKSPPOPWORK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOT_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOTLINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOTLINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOTLINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTOTLINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTRNSHARE",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PAKTRNSINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTRNSINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTRNSINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKTRNSINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKUCK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKUCK_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKVELOCITY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKVELOCITY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKVELOCITY_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKWHSLINTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKWHSLINTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKWHSLINTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKWHSLINTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKXMKT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKXMKT_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKXMKT_GR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKXMKT_GR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POPGR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "POPS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "PRICEGR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "PRICES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "PROD_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "QUASI_IDENTITY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "REALS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "REMT_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "REPORT",
+						"_type" : "SPOOL"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SCALINGF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SCALINGFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SCALINGR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDEST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SHEETS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SHOLD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SUMPAK",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "TEMP1",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TEMP2",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TEMP3",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TFPGR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "TIMES1",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "TIMES2",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "TOBEEXOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TUR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "TUREXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUREXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUREXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USA",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "USAEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAEXR0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAINTRXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANECONPRVTXN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPCEXN0501",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VARIABLES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "VARIABLES2",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "VARIABLES3",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "VAS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "WLDFALUMINUM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFBANANA_US",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFBEEF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOAL_AUS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOCOA",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOFFEE_COMPO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOPPER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOTTON_A_INDX",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCRUDE_PETRO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGOLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGRNUT_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFIRON_ORE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFISTL_JP_INDX",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFLEAD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFLOGS_MYS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFMAIZE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFNGAS_EUR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFNICKEL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFORANGE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFPALM_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFPLYWOOD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFRICE_05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFRUBBER1_MYSG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSAWNWD_MYS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSILVER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSORGHUM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEAN_MEAL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEAN_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEANS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSUGAR_WLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTEA_AVG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTIN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTOBAC_US",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFWHEAT_US_HRW",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFWOODPULP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFZINC",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDHYDROPOWER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEEXPGNFSXD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEEXPGNFSXD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEIMPGNFSKD01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEIMPGNFSXD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEIMPGNFSXD01",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 121
+			}
+		]
+	}
+}
