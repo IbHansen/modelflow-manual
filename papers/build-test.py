@@ -31,7 +31,7 @@ else:
  
  
 doall = '--all' if 'all' in options else ''
-
+test = True if 'test' in options else False 
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
 # (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
@@ -40,12 +40,31 @@ fileloc = str((buildhtml / 'index.html').absolute())
 #print(f'{fileloc=}\n{destination=}')
 print(f'{fileloc=}\n') #dropped destination
 latexroot = modelutil.get_latex_root(bookdir)   
+
+tocloc     = Path(bookdir) /'_toc.yml'
+toctestloc     = Path(bookdir) /'_toc_test.yml'
+toccopyloc = Path(bookdir) /'_toc_copy.yml'
+copy(tocloc,toccopyloc)
+
+if test:    
+    copy(toctestloc,tocloc)
+        
 # breakpoint()
-xx0 = run(f'jb build {bookdir}/ {doall} ')
+try:
+    xx0 = run(f'jb build {bookdir}/ {doall}')
+except Exception as e:
+    print(f'Error in call to jupyterbook  {e} ')
+finally:     
+    copy(toccopyloc,tocloc)
+
+
+
 if not xx0.returncode:
     wb.open(rf'file://{fileloc}', new=2)
 else: 
-    exit()     
+    exit()   
+    
+          
 
 
 #%% 
@@ -212,8 +231,16 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
         if is_acrobat_running():
             print("Acrobat is still running! Please close it.")
     
-    
-     xx0 = run(f'jb build {bookdir}/ --builder=latex')     
+     if test:    
+        copy(toctestloc,tocloc)
+        
+     try:
+         xx0 = run(f'jb build {bookdir}/ --builder=latex')   
+     except Exception as e:
+         print(f'Error in call to jupyterbook latex {e} ')
+     finally:     
+         copy(toccopyloc,tocloc)
+  
      latex_process(latexroot)
 
      # 

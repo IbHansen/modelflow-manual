@@ -7,11 +7,7 @@ root: content/introduction
 options:
   numbered: true
   
-parts:
-     - file: content/05_WBModels/Targeting
-     
-   - caption: Backmatter
-     numbered: false
-     chapters:
-     - file: genindex.md
-     - file: Reference.md
+chapters:
+- file: content/05_WBModels/Targeting     
+- file: genindex.md
+- file: Reference.md
