@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/introduction
+   
+options:
+  numbered: true
+  
+parts:
+     - file: content/05_WBModels/Targeting
+     
+   - caption: Backmatter
+     numbered: false
+     chapters:
+     - file: genindex.md
+     - file: Reference.md
