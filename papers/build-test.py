@@ -6,6 +6,21 @@ builds a jupyterbook
 
 look at the cheatcheet. 
 
+build.py builds the html site 
+            and copies all /_build/ png,svg and pdf files to the root
+			to enable figures in the latex build 
+           
+
+python build.py # creates mfbook/  as html 
+python build.py latex # creates mfbook/ as html and latex
+python build.py latex nopdf # create latex source but not pdf (for use with tex) 
+python build.py copy # if you are ib this will copy to the location to host web version in github 
+python build.py <a toc file name, no in the mfbook folder ending in .yml>  will create a proofreading version only from this toc 
+
+to create another book, it should be in papers/<a folder ending in book> # this will create the book in the folder. 
+python build.py testbook  # creates testbook/   as html
+
+
 
 @author: ibhan
 """
