@@ -27,11 +27,20 @@ for aname in options:
         bookdir = aname
         break
 else:
-    bookdir = 'mfbook'    
+    bookdir = 'mfbook' 
+    
+for aname in options: 
+    if aname.endswith('.yml'):
+        testtoc = aname
+        test = True 
+        break
+else:
+    testtoc = ''   
+    test = False
  
+print(f'{testtoc=} {test=}')    
  
 doall = '--all' if 'all' in options else ''
-test = True if 'test' in options else False 
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
 # (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
@@ -42,7 +51,9 @@ print(f'{fileloc=}\n') #dropped destination
 latexroot = modelutil.get_latex_root(bookdir)   
 
 tocloc     = Path(bookdir) /'_toc.yml'
-toctestloc     = Path(bookdir) /'_toc_test.yml'
+if test: 
+    toctestloc     = Path(bookdir) /testtoc
+
 toccopyloc = Path(bookdir) /'_toc_copy.yml'
 copy(tocloc,toccopyloc)
 
