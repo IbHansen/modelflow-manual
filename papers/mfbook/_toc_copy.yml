@@ -1,0 +1,150 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/introduction
+   
+options:
+  numbered: true
+  
+parts:
+   - caption: The World Bank's MFMod Framework and Modelflow
+     numbered: true  
+     chapters:
+     - file: content/01_Introduction/Introduction 
+     - file: content/02_MacrostructuralModels/MacroStructuralModels             
+     - file: content/03_Installation/InstallingModelFlow         
+       sections:
+       - file: content/03_Installation/InstallingPython
+       - file: content/03_Installation/InstallingModelFlowpackage
+       - file: content/03_Installation/UpdateModelFlow
+
+#  *****************
+   - caption: Some python essentials for using World Bank models with modelflow
+     numbered: true 
+     chapters: 
+     - file: content/04_PythonEssentials/Intro_Jupyter_notebook     
+     - file: content/04_PythonEssentials/PythonBasics
+     - file: content/04_PythonEssentials/PandasDataFrames
+     #- file: content/04_PythonEssentials/Jupyter notebook setup  # Not ssure what this was doing here,  Pls lets discuss before re-inserting
+
+   - caption: Selected modelflow extensions to pandas
+     numbered: true 
+     chapters:      
+     - file: content/04_PythonEssentials/Modelflow and Dataframes
+       sections:
+       - file: content/04_PythonEssentials/UpdateCommand
+       - file: content/04_PythonEssentials/mfcalc
+
+   - caption: Using modelflow with World Bank models
+     numbered: true      
+     chapters:   
+     - file: content/05_WBModels/AccessingWBModels  # This will need to be revised when we have the git hub site set up
+     - file: content/05_WBModels/WorkingwWBModels
+     - file: content/05_WBModels/ScenarioAnalysis
+     - file: content/05_WBModels/MoreComplexScenarios
+     - file: content/05_WBModels/Targeting
+     - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
+
+   - caption: Model Analytics
+     numbered: true      
+     chapters:   
+     - file: content/06_ModelAnalytics/ModelStructure
+     - file: content/06_ModelAnalytics/AttributionSomeFeatures
+
+   #- caption: Model Stability
+   #  numbered: true  
+   #  chapters:
+   #  #- file: content/07_MoreFeatures/stability introduction # not usable in its current state
+   #  - file: content/07_MoreFeatures/System_dynamic_and_EigenValues
+   #  - file: content/07_MoreFeatures/Sources_of_instability
+     
+     
+   - caption: Technical how tos
+     numbered: true      
+     chapters:   
+     - file: content/07_MoreFeatures/GettingHelp
+     - file: content/07_MoreFeatures/ModelFlowCommandReference
+#     - file: content/07_MoreFeatures/VisualizationsReference # I think all of these elements are now in Repor Writing.  Ib to double check.
+     
+   - caption: Backmatter
+     numbered: false
+     chapters:
+     - file: genindex.md
+     #- file: content/99_BackMatter/References
+     - file: Reference.md
+     
+
+
+   #  - file: content/07_MoreFeatures/modelwidgets
+   ##  - file: content/07_MoreFeatures/ExogenizingVariables
+    # - file: content/07_MoreFeatures/ModifyingModels
+    # - file: content/07_WBModels/FancyCharts
+    # - file: content/07_WBModels/FancyTables
+    # - file: content/07_WBModels/Onboardingmodels
+    # sections:
+    # - file: content/howto/onboard/eviews/onboard one model from  wf1
+    # - file: content/howto/onboard/eviews/onboard many models from wf1  
+    # - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
+
+
+# #   - caption: modifying models 
+# #     numbered: true  
+# #     chapters:  
+# #     - file: content/howto/fixing/Fixing variables
+# #     - file: content/howto/modifymodel/create_real_model
+
+
+
+# #   - caption: Onboarding MFMod models from .wf1  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/onboard/eviews/onboard one model from  wf1
+# #     - file: content/howto/onboard/eviews/onboard many models from wf1  
+# #     - file: content/howto/onboard/eviews/Normalizing when onboarding eviews
+
+# # #**********
+# #   - caption: Make experiments
+# #     numbered: true  
+# #     chapters: 
+# #     - file: content/howto/experiments/create_experiment   
+# #     - file: content/howto/experiments/create_save_scenarios
+# #     - file: content/howto/experiments/Standard experiment simple
+    
+# #   - caption: Kept scenarios
+# #     numbered: true  
+# #     chapters: 
+# #     - file: content/howto/keep/Create and modify charts with keep_plot
+
+    
+# #   - caption: Features
+# #     numbered: true  
+# #     chapters:      
+# #     - file: content/notebooks/modelflow_features
+    
+# #   - caption: Structure   
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/structure/Logical_structure    
+    
+# #   - caption: Attribution  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/attribution/Attribution background
+
+# #   - caption: Target and instruments   
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/howto/targetinstruments/One target one instrument with 3 instrument variables
+
+# #   - caption: Specification  
+# #     numbered: true  
+# #     chapters:   
+# #     - file: content/notebooks/intro/model specification
+
+# #   - caption: Optimization
+# #     numbered: true  
+# #     chapters:    
+# #     - file: content/howto/optimization/Optimize_simple  
+    

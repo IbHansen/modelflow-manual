@@ -6,21 +6,6 @@ builds a jupyterbook
 
 look at the cheatcheet. 
 
-build.py builds the html site 
-            and copies all /_build/ png,svg and pdf files to the root
-			to enable figures in the latex build 
-           
-
-python build.py # creates mfbook/  as html 
-python build.py latex # creates mfbook/ as html and latex
-python build.py latex nopdf # create latex source but not pdf (for use with tex) 
-python build.py copy # if you are ib this will copy to the location to host web version in github 
-python build.py <a toc file name, no in the mfbook folder ending in .yml>  will create a proofreading version only from this toc 
-
-to create another book, it should be in papers/<a folder ending in book> # this will create the book in the folder. 
-python build.py testbook  # creates testbook/   as html
-
-
 
 @author: ibhan
 """
@@ -42,20 +27,11 @@ for aname in options:
         bookdir = aname
         break
 else:
-    bookdir = 'mfbook' 
-    
-for aname in options: 
-    if aname.endswith('.yml'):
-        testtoc = aname
-        test = True 
-        break
-else:
-    testtoc = ''   
-    test = False
+    bookdir = 'mfbook'    
  
-print(f'{testtoc=} {test=}')    
  
 doall = '--all' if 'all' in options else ''
+
 buildloc = Path(f'{bookdir}/_build/')
 buildhtml = buildloc / 'html'
 # (destination := Path(fr'C:/modelbook/IbHansen.github.io/{bookdir}')).mkdir(parents=True, exist_ok=True)
@@ -65,32 +41,12 @@ fileloc = str((buildhtml / 'index.html').absolute())
 print(f'{fileloc=}\n') #dropped destination
 latexroot = modelutil.get_latex_root(bookdir)   
 
-tocloc     = Path(bookdir) /'_toc.yml'
-if test: 
-    toctestloc     = Path(bookdir) /testtoc
-
-toccopyloc = Path(bookdir) /'_toc_copy.yml'
-copy(tocloc,toccopyloc)
-
-if test:    
-    copy(toctestloc,tocloc)
-        
 # breakpoint()
-try:
-    xx0 = run(f'jb build {bookdir}/ {doall}')
-except Exception as e:
-    print(f'Error in call to jupyterbook  {e} ')
-finally:     
-    copy(toccopyloc,tocloc)
-
-
-
+xx0 = run(f'jb build {bookdir}/ {doall}')
 if not xx0.returncode:
     wb.open(rf'file://{fileloc}', new=2)
 else: 
-    exit()   
-    
-          
+    exit()     
 
 
 #%% 
@@ -257,16 +213,8 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
         if is_acrobat_running():
             print("Acrobat is still running! Please close it.")
     
-     if test:    
-        copy(toctestloc,tocloc)
-        
-     try:
-         xx0 = run(f'jb build {bookdir}/ --builder=latex')   
-     except Exception as e:
-         print(f'Error in call to jupyterbook latex {e} ')
-     finally:     
-         copy(toccopyloc,tocloc)
-  
+    
+     xx0 = run(f'jb build {bookdir}/ --builder=latex')     
      latex_process(latexroot)
 
      # 
