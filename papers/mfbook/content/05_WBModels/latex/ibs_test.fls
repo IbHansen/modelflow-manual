@@ -76,8 +76,3 @@ INPUT .\ibs_test.aux
 INPUT ibs_test.aux
 INPUT ibs_test.aux
 OUTPUT ibs_test.aux
-OUTPUT ibs_test.pdf
-INPUT C:\Users\ibhan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT ibs_test.aux
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb

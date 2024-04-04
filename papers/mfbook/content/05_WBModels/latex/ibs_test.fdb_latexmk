@@ -1,8 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1712095384 "ibs_test.tex" "ibs_test.pdf" "ibs_test" 1712095384
-  "C:/Users/ibhan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711987718 321974 d7f0d4cfd414bd538f3ce1db251ec219 ""
+["pdflatex"] 1712231666 "ibs_test.tex" "ibs_test.pdf" "ibs_test" 1712231667
   "C:/Users/ibhan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677493314 10246592 5e58d8bbd8db7244d4d33f68312fde35 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1638778684 20144 8a7de377ae7a11ee924a7499611f5a9d ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1638778684 8448 96f18c76bf608a36ee6fbf021ac1dd32 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579097235 6253 f1cb470c9199e7110a27851508ed7a5c ""
@@ -10,8 +8,8 @@
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1645386302 70618 341d512d20f6a5513c452a781d40d894 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1639596611 2671 4de6781a30211fe0ea4c672e4a2a8166 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1644218660 29921 d0acc05a38bd4aa3af2017f0b7c137ce ""
-  "ibs_test.aux" 1712095384 380 b19c843e4cdbc30305219313c330c5d2 "pdflatex"
-  "ibs_test.tex" 1712095383 3456 409a39133b7a96f863e7ba7b73175874 ""
+  "ibs_test.aux" 1712231667 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "ibs_test.tex" 1712231665 2500 fa810ace85d9b5b71fe3aa9466eca022 ""
   (generated)
   "ibs_test.aux"
   "ibs_test.log"
