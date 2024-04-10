@@ -1,9 +1,0 @@
-# Ignore all files in this folder 
-*
-#Except theese 
-!*.tex
-!*.pdf
-!.gitignore
-!*.svg
-!*.png
-!**/
