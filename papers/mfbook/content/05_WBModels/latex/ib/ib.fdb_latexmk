@@ -1,6 +1,21 @@
 # Fdb version 3
-["pdflatex"] 1712758131 "ib.tex" "ib.pdf" "ib" 1712758132
+["pdflatex"] 1712836649 "ib.tex" "ib.pdf" "ib" 1712836650
+  "../A_fig/onefig.pgf" 1712836644 37039 0f6180af0a7ea92ef2cfabc8a45d6ab2 ""
+  "C:/Users/ibhan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1712562283 321974 d7f0d4cfd414bd538f3ce1db251ec219 ""
   "C:/Users/ibhan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677493314 10246592 5e58d8bbd8db7244d4d33f68312fde35 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001775420 2900 1537cc8184ad1792082cd229ecc269f4 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss17.tfm" 1136768653 1320 ed93d62c5f2c16343826001f03341dbc ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1247596666 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1247596666 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb" 1247596667 24416 36515493f76659302880e2604105b074 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb" 1215618300 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1621073245 992 855ff26741653ab54814101ca36e153c ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1621073245 43820 1fef971b75380574ab35a0d37fd92608 ""
@@ -72,8 +87,8 @@
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.sty" 1621073245 443 8c872229db56122037e86bcda49e14f3 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1621073245 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636288472 56029 3f7889dab51d620aa43177c391b7b190 ""
-  "ib.aux" 1712758131 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "ib.tex" 1712758129 4900 3b6da92452b478d17de1fc492c3fab57 ""
+  "ib.aux" 1712836650 403 cd8ff490f8d987ff3d55c1902b6a1304 "pdflatex"
+  "ib.tex" 1712836649 3847 ba0ebe79b0d03bb1a842a04d344b5742 ""
   (generated)
   "ib.aux"
   "ib.log"
