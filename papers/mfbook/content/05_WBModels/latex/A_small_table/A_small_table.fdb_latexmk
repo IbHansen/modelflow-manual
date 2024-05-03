@@ -1,14 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1714145292 "A_small_table.tex" "A_small_table.pdf" "A_small_table" 1714145293
-  "A_small_table.aux" 1714145293 146 737292cd1a39e7115912578abd2b5d02 "pdflatex"
-  "A_small_table.tex" 1714145291 2894 e243a63732fe819b46d231017eb3a7f4 ""
+["pdflatex"] 1714677797 "A_small_table.tex" "A_small_table.pdf" "A_small_table" 1714677799
+  "A_small_table.aux" 1714677798 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "A_small_table.tex" 1714677797 2845 f79ffd4c7fc1ee5a2509bf2fe5f5e833 ""
   "C:/Users/ibhan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1714036941 321974 d7f0d4cfd414bd538f3ce1db251ec219 ""
   "C:/Users/ibhan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677493314 10246592 5e58d8bbd8db7244d4d33f68312fde35 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001775420 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb" 1215618300 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""

@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{caption} % Include the caption package
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\usepackage{graphicx}
+\usepackage{pgf}
+
+
+\begin{document}
+
+
+\title{An example report file from modelflow }
+\author{Ib Hansen}
+\date{\today} 
+
+% Create the title page
+\maketitle
+\tableofcontents
+\newpage
+\section{First a chart} 
+Here we se the growth rates in the different scenarios
+
+ 
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{\input{"../growth/growth_0.pgf"}}
+\caption{Growth: Real GDP}
+\end{figure}
+
+ 
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{\input{"../growth/growth_1.pgf"}}
+\caption{Growth: HH. Cons Real}
+\end{figure}
+
+\section{then a chart}
+ 
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{\input{"../difgrowth/difgrowth.pgf"}}
+\caption{Summary}
+\end{figure}
+
+\section{And a table}
+\begin{table}[ht]
+\caption*{Table}
+\begin{tabular}{lrrrrr|r}
+\toprule
+ & 2026 & 2027 & 2028 & 2029 & 2030 & 2039 \\
+\midrule
+&\multicolumn{6}{c}{{Baseline}}                               \\
+&\multicolumn{6}{c}{{--- Percent growth ---}}                               \\
+Real GDP & 2.42 & 2.64 & 2.79 & 2.91 & 3.03 & 3.34 \\
+HH. Cons Real & 2.32 & 2.48 & 2.59 & 2.69 & 2.78 & 3.08 \\
+Investment real & 1.46 & 1.82 & 2.17 & 2.51 & 2.84 & 4.28 \\
+Exports real & 4.20 & 4.04 & 3.90 & 3.77 & 3.65 & 2.97 \\
+Imports real & 3.10 & 3.02 & 2.89 & 2.78 & 2.69 & 2.48 \\
+&\multicolumn{6}{c}{{--- Percent of GDP ---}}                               \\
+General Government Revenue, Deficit, LCU mn & -2.98 & -2.95 & -2.92 & -2.91 & -2.90 & -2.80 \\
+General government gross debt millions lcu & 57.26 & 57.69 & 58.26 & 58.94 & 59.69 & 65.06 \\
+Current Account Balance, US\$ mn & -3.46 & -3.40 & -3.37 & -3.36 & -3.37 & -3.50 \\
+&\multicolumn{6}{c}{{Alternative}}                               \\
+&\multicolumn{6}{c}{{--- Percent growth ---}}                               \\
+Real GDP & 2.42 & 2.64 & 4.36 & 2.91 & 2.75 & 3.42 \\
+HH. Cons Real & 2.32 & 2.48 & 3.45 & 2.62 & 2.46 & 3.18 \\
+Investment real & 1.46 & 1.82 & 12.46 & 2.98 & 2.92 & 4.24 \\
+Exports real & 4.20 & 4.04 & 3.88 & 3.72 & 3.59 & 2.97 \\
+Imports real & 3.10 & 3.02 & 4.68 & 2.84 & 2.51 & 2.57 \\
+&\multicolumn{6}{c}{{--- Percent of GDP ---}}                               \\
+General Government Revenue, Deficit, LCU mn & -2.98 & -2.95 & -2.81 & -2.84 & -2.85 & -2.79 \\
+General government gross debt millions lcu & 57.26 & 57.69 & 57.11 & 57.55 & 58.27 & 64.32 \\
+Current Account Balance, US\$ mn & -3.46 & -3.40 & -3.48 & -3.43 & -3.38 & -3.70 \\
+&\multicolumn{6}{c}{{Impact}}                               \\
+&\multicolumn{6}{c}{{--- Impact, Percent growth ---}}                               \\
+Real GDP & 0.00 & 0.00 & 1.57 & -0.00 & -0.27 & 0.08 \\
+HH. Cons Real & 0.00 & 0.00 & 0.86 & -0.07 & -0.32 & 0.10 \\
+Investment real & 0.00 & 0.00 & 10.29 & 0.47 & 0.09 & -0.03 \\
+Exports real & -0.00 & -0.00 & -0.02 & -0.05 & -0.06 & -0.00 \\
+Imports real & 0.00 & 0.00 & 1.79 & 0.06 & -0.17 & 0.09 \\
+&\multicolumn{6}{c}{{--- Impact, Percent of GDP ---}}                               \\
+General Government Revenue, Deficit, LCU mn & -0.00 & -0.00 & 0.11 & 0.07 & 0.04 & 0.01 \\
+General government gross debt millions lcu & -0.00 & -0.00 & -1.15 & -1.39 & -1.42 & -0.75 \\
+Current Account Balance, US\$ mn & -0.00 & -0.00 & -0.11 & -0.06 & -0.01 & -0.20 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\caption*{Table 42: GDP components}
+\begin{tabular}{lrrrrr}
+\toprule
+ & Real GDP & HH. Cons Real & Investment real & Exports real & Imports real \\
+\midrule
+ & \multicolumn{5}{c}{--- Percent growth ---} \\
+2022 & 0.66 & 0.80 & 0.70 & 4.71 & 3.00 \\
+2023 & 1.04 & 1.09 & 0.63 & 4.66 & 2.86 \\
+2024 & 1.60 & 1.60 & 0.79 & 4.53 & 2.99 \\
+2025 & 2.08 & 2.03 & 1.10 & 4.37 & 3.10 \\
+2026 & 2.42 & 2.32 & 1.46 & 4.20 & 3.10 \\
+2027 & 2.64 & 2.48 & 1.82 & 4.04 & 3.02 \\
+2028 & 4.36 & 3.45 & 12.46 & 3.88 & 4.68 \\
+2029 & 2.91 & 2.62 & 2.98 & 3.72 & 2.84 \\
+2030 & 2.75 & 2.46 & 2.92 & 3.59 & 2.51 \\
+2031 & 2.84 & 2.57 & 3.03 & 3.49 & 2.46 \\
+2032 & 3.01 & 2.76 & 3.23 & 3.40 & 2.51 \\
+2033 & 3.17 & 2.93 & 3.43 & 3.32 & 2.55 \\
+2034 & 3.29 & 3.05 & 3.62 & 3.26 & 2.58 \\
+2035 & 3.37 & 3.12 & 3.80 & 3.19 & 2.59 \\
+2036 & 3.41 & 3.16 & 3.96 & 3.13 & 2.59 \\
+2037 & 3.43 & 3.17 & 4.08 & 3.08 & 2.58 \\
+2038 & 3.43 & 3.18 & 4.18 & 3.02 & 2.57 \\
+2039 & 3.42 & 3.18 & 4.24 & 2.97 & 2.57 \\
+2040 & 3.41 & 3.17 & 4.29 & 2.93 & 2.58 \\
+2041 & 2.30 & 2.46 & -3.62 & 3.33 & 0.00 \\
+2042 & 3.32 & 3.10 & 4.36 & 2.85 & 2.55 \\
+2043 & 3.32 & 3.11 & 4.36 & 2.81 & 2.59 \\
+2044 & 3.32 & 3.12 & 4.36 & 2.78 & 2.62 \\
+2045 & 3.31 & 3.13 & 4.35 & 2.75 & 2.66 \\
+2046 & 3.31 & 3.14 & 4.34 & 2.72 & 2.70 \\
+2047 & 3.31 & 3.15 & 4.33 & 2.70 & 2.74 \\
+2048 & 3.31 & 3.16 & 4.31 & 2.68 & 2.78 \\
+2049 & 3.31 & 3.16 & 4.30 & 2.66 & 2.81 \\
+2050 & 3.31 & 3.17 & 4.28 & 2.64 & 2.85 \\
+\bottomrule
+\end{tabular}
+\caption*{Source: World bank }
+\end{table}
+
+\end{document}
+        

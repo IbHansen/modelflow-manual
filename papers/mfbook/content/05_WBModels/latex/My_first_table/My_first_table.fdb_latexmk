@@ -1,19 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1714213455 "My_first_table.tex" "My_first_table.pdf" "My_first_table" 1714213456
-  "../IBStttt/IBStttt.pgf" 1714213454 59280 c0b792beabee97a11a14cd4a2bc5d47d ""
+["pdflatex"] 1714676311 "My_first_table.tex" "My_first_table.pdf" "My_first_table" 1714676313
+  "C:/Users/ibhan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1714036941 321974 d7f0d4cfd414bd538f3ce1db251ec219 ""
   "C:/Users/ibhan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677493314 10246592 5e58d8bbd8db7244d4d33f68312fde35 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss17.tfm" 1136768653 1320 ed93d62c5f2c16343826001f03341dbc ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
-  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1621073245 992 855ff26741653ab54814101ca36e153c ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1621073245 43820 1fef971b75380574ab35a0d37fd92608 ""
@@ -85,8 +74,8 @@
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys.sty" 1621073245 443 8c872229db56122037e86bcda49e14f3 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1621073245 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/ibhan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636288472 56029 3f7889dab51d620aa43177c391b7b190 ""
-  "My_first_table.aux" 1714213456 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "My_first_table.tex" 1714213454 879 6b6ac13665a39e1f37a95497869190bc ""
+  "My_first_table.aux" 1714676312 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "My_first_table.tex" 1714676311 1837 f7a176ae1d788359dcb21997baca1e5a ""
   (generated)
   "My_first_table.aux"
   "My_first_table.log"

@@ -1,7 +1,7 @@
-PWD c:\modelflow manual\papers\mfbook\content\05_WBModels\latex\display
+PWD c:\modelflow manual\papers\mfbook\content\05_WBModels\latex\Display
 INPUT C:\Users\ibhan\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT display.tex
-OUTPUT display.log
+INPUT Display.tex
+OUTPUT Display.log
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -265,10 +265,10 @@ INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\display.aux
-INPUT display.aux
-INPUT display.aux
-OUTPUT display.aux
+INPUT .\Display.aux
+INPUT Display.aux
+INPUT Display.aux
+OUTPUT Display.aux
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -288,8 +288,5 @@ INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-s
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT display.pdf
-INPUT C:\Users\ibhan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT display.aux
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+OUTPUT Display.pdf
+INPUT Display.aux
