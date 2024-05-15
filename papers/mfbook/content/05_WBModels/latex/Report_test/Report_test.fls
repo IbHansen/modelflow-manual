@@ -307,24 +307,34 @@ INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tf
 OUTPUT Report_test.toc
 OUTPUT Report_test.pdf
 INPUT C:\Users\ibhan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT ..\level\Real GDP, level nodif.pgf
-INPUT ..\level\Real GDP, level nodif.pgf
-INPUT ..\level\Real GDP, level nodif.pgf
-INPUT ..\level\Real GDP, level nodif.pgf
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT ..\level\HH. Cons Real, level nodif.pgf
-INPUT ..\level\HH. Cons Real, level nodif.pgf
-INPUT ..\level\HH. Cons Real, level nodif.pgf
-INPUT ..\level\HH. Cons Real, level nodif.pgf
-INPUT ..\A_plot\Real GDP, growth dif.pgf
-INPUT ..\A_plot\Real GDP, growth dif.pgf
-INPUT ..\A_plot\Real GDP, growth dif.pgf
-INPUT ..\A_plot\Real GDP, growth dif.pgf
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
-INPUT ..\A_plot\HH. Cons Real, growth dif.pgf
-INPUT ..\A_plot\HH. Cons Real, growth dif.pgf
-INPUT ..\A_plot\HH. Cons Real, growth dif.pgf
-INPUT ..\A_plot\HH. Cons Real, growth dif.pgf
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\Real GDP, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\level\HH. Cons Real, level nodif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\Real GDP, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
+INPUT ..\A_plot\HH. Cons Real, growth dif.png
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT Report_test.aux
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
@@ -332,19 +342,11 @@ INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb
 INPUT C:\Users\ibhan\AppData\Local\Programs\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb
