@@ -232,6 +232,44 @@ def remove_selective_hlines_in_tabulary(latex_source):
     modified_latex_source = ''.join(processed_parts)
     return modified_latex_source
 
+def replace_latex_admonition(content: str) -> str:
+    """
+    Replace LaTeX admonition with custom shadow box style.
+
+    This function replaces:
+    - \begin{sphinxadmonition}{note}{Box ...} ... \end{sphinxadmonition}
+      with
+      \begin{sphinxShadowBox}\sphinxstylesidebartitle{\sphinxstylestrong{Box ...} ... \end{sphinxShadowBox}
+
+    Parameters:
+    content (str): The LaTeX content to be modified.
+
+    Returns:
+    str: The modified LaTeX content with the replacements made.
+    """
+    # Define the regex pattern for the specific sphinxadmonition box
+    pattern = re.compile(
+        r"\\begin{sphinxadmonition}{note}{Box(.*?)}(.*?)\\end{sphinxadmonition}",
+        re.DOTALL
+    )
+
+    # Define the replacement function
+    def replacement(match):
+        title = match.group(1)
+        content = match.group(2)
+        replaced = (
+            "\\begin{sphinxShadowBox}"
+            f"\\sphinxstylesidebartitle{{\\sphinxstylestrong{{Box{title}}}}}{content}"
+            "\\end{sphinxShadowBox}"
+        )
+        return replaced
+
+    # Perform the replacement
+    content = pattern.sub(replacement, content)
+    
+    return content
+
+
 
         
 def latex_process(latexroot ):
@@ -322,6 +360,7 @@ r'''\sphinxstepscope
     latex = replace_latex_citations(latex)
     latex = modify_latex_tabels(latex)
     latex = remove_selective_hlines_in_tabulary(latex)
+    latex = replace_latex_admonition(latex)
     
     # breakpoint() 
     with open(latexfile,'wt',encoding="utf8") as f:
