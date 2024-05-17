@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}First a chart}{2}{}%
-\contentsline {section}{\numberline {2}then a chart}{2}{}%
-\contentsline {section}{\numberline {3}And a table}{2}{}%
