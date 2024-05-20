@@ -44,8 +44,8 @@ parts:
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
      - file: content/05_WBModels/Targeting
-    # just for now - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
-    # just for now - file: content/05_WBModels/ReportWriting_Ib 
+     - file: content/05_WBModels/ReportWriting #demoted because its ireally only a lengthy exposition on keep and its reporting features
+     - file: content/05_WBModels/ReportWriting_Ib 
      
    - caption: Model Analytics
      numbered: true      
