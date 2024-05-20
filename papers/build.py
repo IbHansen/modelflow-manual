@@ -181,7 +181,17 @@ def remove_selective_hlines_in_tabulary(latex_source):
     
     # Split the document into parts based on the tabulary environments
     parts = re.split(r'(\\begin{tabulary}.*?\\end{tabulary})', latex_source, flags=re.DOTALL)
+    pattern = re.compile(r'(\\begin\{tabulary\}\{\\linewidth\}\[t\]\{l)(l*)\}')
+
     print(f'{len(parts)=}')
+    def replace_l(match):
+        # Get the full match parts
+        part1 = match.group(1)
+        part2 = match.group(2)
+        # Replace all 'l' with 'L' in part2
+        part2 = part2.replace('l', 'L')
+        return part1 + part2 +'}'
+    
     # Function to remove \hline from a single tabulary block
     def process_tabulary_block(block):
         lines = block.split('\n')
@@ -224,7 +234,10 @@ def remove_selective_hlines_in_tabulary(latex_source):
     processed_parts = []
     for part in parts:
         if '\\begin{tabulary}' in part:
-            processed_parts.append(process_tabulary_block(part))
+            new_part = process_tabulary_block(part)
+            new_part = pattern.sub(replace_l, new_part)
+            processed_parts.append(new_part)
+            
         else:
             processed_parts.append(part)
     
