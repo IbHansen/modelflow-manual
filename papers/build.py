@@ -204,6 +204,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
             # print(f'{line=}')
 
             if '\\begin{tabulary}' in line:
+                result_lines.append('\\clearpage')
                 is_inside_tabulary = True
                 hline_count = 0  # Reset hline count for each tabulary block
                 # print(f'{is_inside_tabulary=}')
@@ -224,6 +225,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
                     is_inside_tabulary = False
                     result_lines.append(line)
                 else:
+                    
                     result_lines.append(line)
             else:
                 result_lines.append(line)
