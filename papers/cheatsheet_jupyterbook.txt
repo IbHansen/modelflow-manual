@@ -158,10 +158,28 @@ tags:
 remove-output latex-remove-output     # for the ordinary output 
 latex-picture                         # for the picture to apear in latex 
 
-in latex insert before \begin{tabulary}
+in latex insert before \begin{tabulary}{\linewidth}[t]
 \renewcommand{\arraystretch}{1.1}  % Adjusts the row height; 1.5 is 50% larger than the default
 
-in \begin{tabulary}{t}{|T|T|}
-to \begin{tabulary}{t}{ll}
+in \begin{tabulary}{\linewidth}[t]{|T|T|}
+to \begin{tabulary}{\linewidth}[t]{ll}
 
 delete all \hline except around heading and the last 
+
+only in latex with 
+:::{only} latex
+whatever
+:::
+
+A latex command 
+only in latex with 
+:::{only} latex
+latexcommand \newpage
+:::
+
+a latex table with control over column width 
+:::{only} latex
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}X}
+:::
+should be placed juist before the table, 
+remember same number of columns, the cm measure defines the width 
