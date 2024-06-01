@@ -10,7 +10,7 @@ options:
 parts:
   - caption: For proof reading 
     chapters:
-      - file: content/05_WBModels/Targeting-tables
-     # - file: content/05_WBModels/Targeting
+      # - file: content/05_WBModels/Targeting-tables
+      - file: content/05_WBModels/Targeting
       - file: genindex.md
       - file: Reference.md

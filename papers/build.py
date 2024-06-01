@@ -207,7 +207,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
             # print(f'{line=}')
 
             if '\\begin{tabulary}' in line:
-                result_lines.append('\\clearpage') # to avoid flowing over the bottom  
+                result_lines.append(r'\afterpage{\clearpage}') # to avoid flowing over the bottom  
                 is_inside_tabulary = True
                 hline_count = 0  # Reset hline count for each tabulary block
                 # print(f'{is_inside_tabulary=}')
@@ -291,7 +291,11 @@ Returns:
             modified_lines.append(r'\end{tabularx}'+'\n')
             tabularx_line = None
         else:
-            modified_lines.append(line)
+            if line.strip().startswith('latexcommand'):
+                cmdline = unescape_latex(line.strip()[len('latexcommand'):])
+                modified_lines.append(cmdline)
+            else:    
+                modified_lines.append(line)
             
     return '\n'.join(modified_lines)        
 
@@ -425,7 +429,8 @@ r'''\sphinxstepscope
     # in the preamble 
     latex = latex.replace(r'\usepackage{geometry}',
     r'''\usepackage{geometry}
-\usepackage {tabularx}                          
+\usepackage {tabularx} 
+\usepackage{afterpage}                         
 ''' )
     latex = replace_latex_citations(latex)
     latex = modify_latex_tabels(latex)
