@@ -143,8 +143,11 @@ def replace_latex_citations(latex_string):
 
     return modified_string
 
+
+
 def modify_latex_tabels(latex_source):
     # Split the source into lines
+    # print(latex_source)
     lines = latex_source.split('\n')
     
     # Prepare to collect modified lines
@@ -204,7 +207,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
             # print(f'{line=}')
 
             if '\\begin{tabulary}' in line:
-                result_lines.append('\\clearpage')
+                result_lines.append('\\clearpage') # to avoid flowing over the bottom  
                 is_inside_tabulary = True
                 hline_count = 0  # Reset hline count for each tabulary block
                 # print(f'{is_inside_tabulary=}')
@@ -229,7 +232,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
                     result_lines.append(line)
             else:
                 result_lines.append(line)
-        
+
         return '\n'.join(result_lines)
 
     # Apply the processing only to parts that are tabulary blocks
@@ -246,6 +249,54 @@ def remove_selective_hlines_in_tabulary(latex_source):
     # Join all parts back into the full document
     modified_latex_source = ''.join(processed_parts)
     return modified_latex_source
+
+def modify_latex_tabularx(latex_source):
+    """
+Modifies LaTeX tabularx environments in the provided text.
+
+This function processes the LaTeX text, finds and comments out
+tabularx environments, and converts tabulary environments back
+to tabularx.
+
+Args:
+    latex_source (str): The input LaTeX text.
+
+Returns:
+    str: The modified LaTeX text with tabularx changes.
+"""
+
+    lines= latex_source.split('\n')
+
+    # Pattern to match the line starting with \textbackslash{}begin{tabularx}
+    tabularx_pattern = re.compile(r"^\\textbackslash\{\}begin\\\{tabularx")
+                                #      \textbackslash{}begin\{tabularx\}\{\textbackslash{}textwidth\}\{>\{\textbackslash{}raggedright\textbackslash{}arraybackslash\}p\{3cm\}>\{\textbackslash{}raggedright\textbackslash{}arraybackslash\}p\{4cm\}>\{\textbackslash{}raggedright\textbackslash{}arraybackslash\}X\}
+
+    # Function to unescape LaTeX text
+    def unescape_latex(text):
+        return text.replace('\\textbackslash{}', '\\').replace('\{', '{').replace('\}', '}')
+
+    # Find and replace patterns
+    modified_lines = []
+    tabularx_line = None
+
+    for line in lines:
+        # Check if the line matches the tabularx pattern
+        if tabularx_pattern.match(line.strip()):
+            print(f'Hit {line.strip()}=')
+            tabularx_line = unescape_latex(line.strip())
+            modified_lines.append(f"% {line.strip()}\n")  # Comment out the original tabularx line
+        elif line.strip().startswith(r'\begin{tabulary}') and tabularx_line:
+            modified_lines.append(f"{tabularx_line}\n")
+        elif line.strip().startswith(r'\end{tabulary}') and tabularx_line:
+            modified_lines.append(r'\end{tabularx}'+'\n')
+            tabularx_line = None
+        else:
+            modified_lines.append(line)
+            
+    return '\n'.join(modified_lines)        
+
+
+
 
 def replace_latex_admonition(content: str) -> str:
     """
@@ -331,7 +382,7 @@ def latex_process(latexroot ):
    # now a list of some text inserted at specific places in the .tex file
    # the place is defined by the first string in the tupple. 
     insertbefore = [
-        (r'\makeindex',r'\usepackage{makeidx}'), 
+        (r'\makeindex',r'\usepackage{makeidx} '), 
         (r'\printindex',r'\addcontentsline{toc}{chapter}{\indexname}'),   # forgot the foreword heading, so it is inserted 
          (r'''\sphinxAtStartPar
 Over the decades''',r'{\huge\bfseries\raggedright Foreword\par}'),
@@ -371,11 +422,16 @@ r'''\sphinxstepscope
     for p in purge:
        latex = latex.replace(p,'')
     
-    
+    # in the preamble 
+    latex = latex.replace(r'\usepackage{geometry}',
+    r'''\usepackage{geometry}
+\usepackage {tabularx}                          
+''' )
     latex = replace_latex_citations(latex)
     latex = modify_latex_tabels(latex)
     latex = remove_selective_hlines_in_tabulary(latex)
     latex = replace_latex_admonition(latex)
+    latex = modify_latex_tabularx(latex)
     
     # breakpoint() 
     with open(latexfile,'wt',encoding="utf8") as f:

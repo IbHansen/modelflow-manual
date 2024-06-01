@@ -58,4 +58,8 @@ parse:
    - amsmath
    - dollarmath
    - colon_fence
+   
+jupyter:
+  cell_tag_glue:
+    remove_cell_tags: ["latex-only"]
   
