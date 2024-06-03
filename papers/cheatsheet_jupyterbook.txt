@@ -183,3 +183,12 @@ a latex table with control over column width
 :::
 should be placed juist before the table, 
 remember same number of columns, the cm measure defines the width 
+
+:::{only} latex
+latexcommand \begin{flushleft}
+:::
+some text which is ugly when right justifyed
+
+:::{only} latex
+latexcommand \end{flushleft}
+:::
