@@ -207,7 +207,7 @@ def remove_selective_hlines_in_tabulary(latex_source):
             # print(f'{line=}')
 
             if '\\begin{tabulary}' in line:
-                result_lines.append(r'\afterpage{\clearpage}') # to avoid flowing over the bottom  
+               # result_lines.append(r'\afterpage{\clearpage}') # to avoid flowing over the bottom  
                 is_inside_tabulary = True
                 hline_count = 0  # Reset hline count for each tabulary block
                 # print(f'{is_inside_tabulary=}')
@@ -282,7 +282,7 @@ Returns:
     for line in lines:
         # Check if the line matches the tabularx pattern
         if tabularx_pattern.match(line.strip()):
-            print(f'Hit {line.strip()}=')
+            # print(f'Hit {line.strip()}=')
             tabularx_line = unescape_latex(line.strip())
             modified_lines.append(f"% {line.strip()}\n")  # Comment out the original tabularx line
         elif line.strip().startswith(r'\begin{tabulary}') and tabularx_line:
