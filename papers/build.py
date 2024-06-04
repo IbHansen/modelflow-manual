@@ -295,7 +295,8 @@ Returns:
                 cmdline = unescape_latex(line.strip()[len('latexcommand'):])
                 modified_lines.append(cmdline)
             else:    
-                modified_lines.append(line)
+                if len(line):
+                    modified_lines.append(line)
             
     return '\n'.join(modified_lines)        
 
