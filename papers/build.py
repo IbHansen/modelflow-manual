@@ -431,7 +431,8 @@ r'''\sphinxstepscope
     latex = latex.replace(r'\usepackage{geometry}',
     r'''\usepackage{geometry}
 \usepackage {tabularx} 
-\usepackage{afterpage}                         
+\usepackage{afterpage} 
+\usepackage{lscape}                        
 ''' )
     latex = replace_latex_citations(latex)
     latex = modify_latex_tabels(latex)
