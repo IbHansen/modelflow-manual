@@ -439,6 +439,7 @@ r'''\sphinxstepscope
     latex = remove_selective_hlines_in_tabulary(latex)
     latex = replace_latex_admonition(latex)
     latex = modify_latex_tabularx(latex)
+    latex = latex.replace(r'\sphinxAtStartPar',r'\par\sphinxAtStartPar')
     
     # breakpoint() 
     with open(latexfile,'wt',encoding="utf8") as f:
