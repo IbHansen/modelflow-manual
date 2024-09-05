@@ -164,4 +164,5 @@ test.pcim
 **/test
 **/wb-repos
 **/Worldbank models
+**/WorldbankModels
 ~WRL*.tmp
