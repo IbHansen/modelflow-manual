@@ -1,0 +1,42 @@
+ Volume in drive C is OSDisk
+ Volume Serial Number is F454-6E7C
+
+ Directory of C:\mflow\papers\mfbook
+
+09/13/2024  11:16 AM    <DIR>          .
+09/05/2024  10:33 AM    <DIR>          ..
+09/05/2024  10:35 AM    <DIR>          .ipynb_checkpoints
+03/26/2024  11:48 AM               327 AccessingWBModels.yml
+06/03/2024  02:41 PM               699 conf_test.py
+08/16/2024  12:56 PM    <DIR>          content
+01/11/2024  07:17 PM             1,945 Exported Items.bib
+11/15/2023  12:28 PM                10 genindex.md
+11/15/2023  12:28 PM            13,276 Importwf1andsaveaspcim.ipynb
+06/03/2024  02:41 PM               164 latex_only.tpl
+11/15/2023  12:28 PM            89,172 logo.png
+11/15/2023  12:28 PM                91 MFmodModelflow.sublime-project
+11/15/2023  12:28 PM           138,248 MFmodModelflow.sublime-workspace
+03/07/2024  06:21 PM            38,450 Modelflow todo list.docx
+03/15/2024  05:29 PM            40,043 Modelflow todo list_AB.docx
+09/12/2024  06:03 PM             4,885 Modelflow-todo-saved.ipynb
+06/03/2024  02:41 PM               339 ModelFlowCommandReference.yml
+03/04/2024  04:50 PM    <DIR>          models
+01/11/2024  07:19 PM            49,018 My Library.bib
+09/13/2024  11:16 AM                 0 opd
+11/15/2023  12:28 PM                35 Reference.md
+05/16/2024  06:05 PM            49,315 references.bib
+01/11/2024  07:21 PM            47,072 references_bup.bib
+05/22/2024  11:38 AM               323 ReportWriting.yml
+05/15/2024  03:45 PM               326 ReportWriting_Ib.yml
+11/15/2023  12:28 PM               319 repo_def.yaml
+11/15/2023  12:28 PM    <DIR>          reviews
+06/03/2024  02:41 PM               373 targeting.yml
+09/04/2024  03:26 PM             3,057 Untitled.ipynb
+06/03/2024  02:41 PM               326 WorkingwWBModels.yml
+11/15/2023  07:11 PM    <DIR>          _build
+06/03/2024  06:44 PM             1,928 _config.yml
+08/28/2024  03:50 PM             5,488 _toc.yml
+08/28/2024  03:42 PM             5,488 _toc_copy.yml
+03/04/2024  04:50 PM            19,241 ~WRL0005.tmp
+              28 File(s)        509,958 bytes
+               7 Dir(s)  752,714,059,776 bytes free
