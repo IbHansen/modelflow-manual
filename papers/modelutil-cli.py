@@ -546,6 +546,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
+        search(all_notebooks,r'keep_plot',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
