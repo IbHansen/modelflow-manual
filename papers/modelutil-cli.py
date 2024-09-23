@@ -550,7 +550,7 @@ if __name__ == '__main__':
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
-        search(toc_files,r'model object',notfound=False,silent=0,printmatch=0)
+        search(toc_files,r'mul100',notfound=False,silent=0,printmatch=0)
         search(toc_files,r'{index} single: \[\] *',notfound=False,silent=0,printmatch=1,showfiles=False)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
