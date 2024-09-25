@@ -102,7 +102,7 @@ def get_toc_files(fileloc=bookdir):
 
 def start_notebooks(notebook_list):
     ''' start all notebooks in jupyter in the notebook list '''
-    base_url = "http://localhost:8889/notebooks/"
+    base_url = "http://localhost:8888/notebooks/"
 
     for notebook_path in notebook_list:
         # print(notebook_path)
@@ -549,8 +549,8 @@ if __name__ == '__main__':
         search(all_notebooks,r'keep_plot',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
-        search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0)
-        search(toc_files,r'mul100',notfound=False,silent=0,printmatch=0)
+        search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
+        search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=1)
         search(toc_files,r'{index} single: \[\] *',notfound=False,silent=0,printmatch=1,showfiles=False)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
