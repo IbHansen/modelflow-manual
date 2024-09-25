@@ -273,7 +273,7 @@ Returns:
 
     # Function to unescape LaTeX text
     def unescape_latex(text):
-        return text.replace('\\textbackslash{}', '\\').replace('\{', '{').replace('\}', '}')
+        return text.replace('\\textbackslash{}', '\\').replace(r'\{', '{').replace(r'\}', '}')
 
     # Find and replace patterns
     modified_lines = []
@@ -304,7 +304,7 @@ Returns:
 
 
 def replace_latex_admonition(content: str) -> str:
-    """
+    r"""
     Replace LaTeX admonition with custom shadow box style.
 
     This function replaces:
