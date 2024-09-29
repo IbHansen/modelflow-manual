@@ -484,9 +484,21 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
      # latexmk, then texindy to process it further and then latexmk to create the final pdf file  
      # 
      if not 'nopdf' in options: 
-         xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
-         xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
-         xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+         if 0:
+             
+             xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+             xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
+             xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
+             
+         else: 
+             # First xelatex run
+            xx0 = run(f'xelatex -interaction=nonstopmode "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
+            
+            # Run texindy to generate index
+            xx0 = run(f'texindy -o "{latexroot}.ind" "{latexroot}.idx"', cwd=f'{bookdir}/_build/latex/')
+            
+            # Second xelatex run (to ensure all references are resolved)
+            xx0 = run(f'xelatex -interaction=nonstopmode "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
          # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
          print(f'PDF generated: see {bookdir}/_build/latex/')
 
