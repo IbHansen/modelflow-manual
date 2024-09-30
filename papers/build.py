@@ -28,6 +28,8 @@ from subprocess import run
 import webbrowser as wb
 from pathlib import Path
 from shutil import copy, copytree
+import yaml 
+
  
 import sys
 
@@ -342,6 +344,38 @@ def replace_latex_admonition(content: str) -> str:
 
 
 
+def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
+    """
+    Updates the location of the notebook in a YAML file.
+    
+    Args:
+        notebook_path (str): The path to the .ipynb notebook file.
+        yaml_path (str): The path to the .yml file to be updated.
+    """
+    notebook_path = Path(notebook_path)
+
+    # Ensure the file has .ipynb extension
+    if notebook_path.suffix != '.ipynb':
+        raise ValueError("Provided file must have a .ipynb extension")
+
+    # Load the existing YAML file
+    with open(org_yaml_path, 'r') as f:
+        data = yaml.safe_load(f)
+
+    # Update the location in the YAML content
+    data['parts'][0]['chapters'][0]['file'] = str(notebook_path)
+
+    # Save the updated YAML back to file
+    with open(new_yaml_path, 'w') as f:
+        yaml.safe_dump(data, f)
+
+    print(f"Updated {yaml_path} with notebook location: {notebook_path}")
+    return new_yaml_path
+
+
+# Example usage:
+update_toc_yaml('path/to/your/notebook.ipynb', 'path/to/toc.yml')
+
         
 def latex_process(latexroot ):
     r"""
@@ -492,13 +526,13 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
              
          else: 
              # First xelatex run
-            xx0 = run(f'xelatex -interaction=nonstopmode "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
+            xx0 = run(f'xelatex -interaction=batchmode "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
             
             # Run texindy to generate index
             xx0 = run(f'texindy -o "{latexroot}.ind" "{latexroot}.idx"', cwd=f'{bookdir}/_build/latex/')
             
             # Second xelatex run (to ensure all references are resolved)
-            xx0 = run(f'xelatex -interaction=nonstopmode "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
+            xx0 = run(f'xelatex -interaction=batchmode  "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
          # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
          print(f'PDF generated: see {bookdir}/_build/latex/')
 
