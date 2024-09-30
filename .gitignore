@@ -166,3 +166,5 @@ test.pcim
 **/Worldbank models
 **/WorldbankModels
 ~WRL*.tmp
+testpak.pcim
+mymodel.pcim
