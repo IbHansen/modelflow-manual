@@ -73,7 +73,7 @@ parts:
      - file: genindex.md
      #- file: content/99_BackMatter/References
      - file: Reference.md
-     - file: mpakEquations.md
+     #- file: mpakEquations.md
      
      
 

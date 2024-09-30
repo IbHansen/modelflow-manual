@@ -79,7 +79,7 @@ if test:
         
 # breakpoint()
 try:
-    xx0 = run(f'jb build {bookdir}/ {doall}')
+    xx0 = run(f'jb build {bookdir}/ {doall} ')
 except Exception as e:
     print(f'Error in call to jupyterbook  {e} ')
 finally:     
@@ -374,7 +374,7 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
 
 
 # Example usage:
-update_toc_yaml('path/to/your/notebook.ipynb', 'path/to/toc.yml')
+# update_toc_yaml('path/to/your/notebook.ipynb', 'path/to/toc.yml')
 
         
 def latex_process(latexroot ):
