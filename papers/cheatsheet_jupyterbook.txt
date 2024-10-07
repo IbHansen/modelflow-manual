@@ -16,10 +16,19 @@ For latex:
 miktex (version 22.1) and TeXworks (version 0.6.6)
 For typesetting: XeLaTex0MakeIndex+BibTeX  
 
+:::{index} single: Impact Decomposition; Single equation 
+:::
+
+:::{index} see: dekomp ; Impact Decomposition; Single equation 
+:::
+
+
+
+
 
 Boxes  - this is the IB syntax
 
-::{index} single: Boxes; Box 3. Time scope of .upd() commands :::
+:::{index} single: Boxes; Box 3. Time scope of .upd() commands :::
 
 :::{admonition} Box 3. Time scope of .upd() commands
 
@@ -184,6 +193,7 @@ a latex table with control over column width
 should be placed juist before the table, 
 remember same number of columns, the cm measure defines the width 
 
+# no right  adjust 
 :::{only} latex
 latexcommand \begin{flushleft}
 :::
@@ -191,4 +201,13 @@ some text which is ugly when right justifyed
 
 :::{only} latex
 latexcommand \end{flushleft}
+:::
+
+# Keep together
+:::{only} latex
+latexcommand \begin{samepage}
+:::
+
+:::{only} latex
+latexcommand \end{samepage}
 :::

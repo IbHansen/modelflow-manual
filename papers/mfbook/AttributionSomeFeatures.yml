@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/introduction
+   
+options:
+  numbered: true
+
+parts:
+  - caption: For proof reading 
+    chapters:
+      - file: content/06_ModelAnalytics/AttributionSomeFeatures
+      - file: genindex.md
+      - file: Reference.md

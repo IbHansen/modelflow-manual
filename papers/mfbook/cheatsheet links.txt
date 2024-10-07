@@ -1,0 +1,23 @@
+=(set_smpl) 
+
+:::{index} single: Impact Decomposition; Single equation 
+:name: impactsingle
+:::
+
+{ref}`Variable selection with wildcharts <variable-selection>`
+
+{ref}`Variable selection with wildcharts <variable-selection>`
+{ref}`Current timeframe <time-frame>`
+{ref}`Timeframe for a local scop <set_smpl>`
+{ref}`ModelFlow Index operator .[] <index-operator>`
+
+{ref}`Single equation Impact Decomposition <impactsingle>`
+{ref}`Model Impact Decomposition <impactmodel>`
+{ref}`All exogenouis shocks <exodif>`
+{ref}`Variable selection with wildcharts <variable-selection>`
+{ref}`Variable selection with wildcharts <variable-selection>`
+{ref}`Variable selection with wildcharts <variable-selection>`
+{ref}`Variable selection with wildcharts <variable-selection>`
+{ref}`Variable selection with wildcharts <variable-selection>`
+ 
+
