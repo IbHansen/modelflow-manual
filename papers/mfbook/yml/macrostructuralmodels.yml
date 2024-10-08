@@ -4,7 +4,7 @@ options:
 parts:
 - caption: For proof reading
   chapters:
-  - file: mfbook\content\02_MacrostructuralModels\MacroStructuralModels.ipynb
+  - file: content/02_MacrostructuralModels/MacroStructuralModels.ipynb
   - file: genindex.md
   - file: Reference.md
 root: content/introduction

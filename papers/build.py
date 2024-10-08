@@ -79,6 +79,7 @@ if test:
         
 # breakpoint()
 try:
+   # xx0 = run(f'jb build {bookdir}/ {doall} --path-output {bookdir}/ibstest/')
     xx0 = run(f'jb build {bookdir}/ {doall} ')
 except Exception as e:
     print(f'Error in call to jupyterbook  {e} ')

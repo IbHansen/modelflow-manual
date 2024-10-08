@@ -4,7 +4,7 @@ options:
 parts:
 - caption: For proof reading
   chapters:
-  - file: mfbook\content\04_PythonEssentials\PandasDataFrames.ipynb
+  - file: content/04_PythonEssentials/PandasDataFrames.ipynb
   - file: genindex.md
   - file: Reference.md
 root: content/introduction

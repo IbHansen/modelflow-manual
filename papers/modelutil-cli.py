@@ -436,7 +436,7 @@ def make_yaml(notebook_list):
 # Remove the first level of folders ("/home" in this case)
             toc_entry = Path(*path_without_extension.parts[2:])
             # print(f'makes yml for: {nb}')
-            update_toc_yaml(nb, yaml_dir /'generic.yml', new_yaml_path)
+            update_toc_yaml(Path(*nb.parts[1:]), yaml_dir /'generic.yml', new_yaml_path)
         
        # update_toc_yaml(nb, org_yaml_path, new_yaml_path)
               
@@ -461,7 +461,8 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
         data = yaml.safe_load(f)
 
     # Update the location in the YAML content
-    data['parts'][0]['chapters'][0]['file'] = str(notebook_path)
+    print(str(notebook_path.as_posix()))
+    data['parts'][0]['chapters'][0]['file'] = str(notebook_path.as_posix())
 
     # Save the updated YAML back to file
     with open(new_yaml_path, 'w') as f:

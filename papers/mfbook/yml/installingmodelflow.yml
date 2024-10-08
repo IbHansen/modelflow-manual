@@ -4,7 +4,7 @@ options:
 parts:
 - caption: For proof reading
   chapters:
-  - file: mfbook\content\03_Installation\InstallingModelFlow.ipynb
+  - file: content/03_Installation/InstallingModelFlow.ipynb
   - file: genindex.md
   - file: Reference.md
 root: content/introduction

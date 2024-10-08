@@ -4,7 +4,7 @@ options:
 parts:
 - caption: For proof reading
   chapters:
-  - file: mfbook\content\01_Introduction\Introduction.ipynb
+  - file: content/01_Introduction/Introduction.ipynb
   - file: genindex.md
   - file: Reference.md
 root: content/introduction
