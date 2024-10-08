@@ -1,0 +1,10 @@
+format: jb-book
+options:
+  numbered: true
+parts:
+- caption: For proof reading
+  chapters:
+  - file: mfbook\content\06_ModelAnalytics\ModelStructure.ipynb
+  - file: genindex.md
+  - file: Reference.md
+root: content/introduction

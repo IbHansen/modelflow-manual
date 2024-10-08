@@ -435,8 +435,7 @@ def make_yaml(notebook_list):
 
 # Remove the first level of folders ("/home" in this case)
             toc_entry = Path(*path_without_extension.parts[2:])
-            print(new_yaml_path)
-            print(f'makes yml for: {nb}, {yaml_dir}')
+            # print(f'makes yml for: {nb}')
             update_toc_yaml(nb, yaml_dir /'generic.yml', new_yaml_path)
         
        # update_toc_yaml(nb, org_yaml_path, new_yaml_path)
@@ -454,7 +453,8 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
 
     # Ensure the file has .ipynb extension
     if notebook_path.suffix != '.ipynb':
-        raise ValueError("Provided file must have a .ipynb extension")
+        print(f'No ymlfile for:{notebook_path}')
+        return 
 
     # Load the existing YAML file
     with open(org_yaml_path, 'r') as f:
@@ -467,7 +467,7 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
     with open(new_yaml_path, 'w') as f:
         yaml.safe_dump(data, f)
 
-    print(f"Updated {yaml_path} with notebook location: {notebook_path}")
+    print(f"Updated {new_yaml_path} with notebook location: {notebook_path}")
     return new_yaml_path
 
             
@@ -610,9 +610,9 @@ if __name__ == '__main__':
      if 0:
         toc_test = [toc_files[1]]
         insert_colab(toc_test)
-     if 1:
+     if 0:
         toc_test = [toc_files[1]]
-        make_yaml(toc_test)
+        make_yaml(toc_files)
     # hide_cells(toc_files)
     
     
