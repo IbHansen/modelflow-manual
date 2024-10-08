@@ -48,7 +48,7 @@ else:
     
 for aname in options: 
     if aname.endswith('.yml'):
-        testtoc = aname
+        testtoc = 'yml/'+aname
         test = True 
         break
 else:
@@ -344,33 +344,6 @@ def replace_latex_admonition(content: str) -> str:
 
 
 
-def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
-    """
-    Updates the location of the notebook in a YAML file.
-    
-    Args:
-        notebook_path (str): The path to the .ipynb notebook file.
-        yaml_path (str): The path to the .yml file to be updated.
-    """
-    notebook_path = Path(notebook_path)
-
-    # Ensure the file has .ipynb extension
-    if notebook_path.suffix != '.ipynb':
-        raise ValueError("Provided file must have a .ipynb extension")
-
-    # Load the existing YAML file
-    with open(org_yaml_path, 'r') as f:
-        data = yaml.safe_load(f)
-
-    # Update the location in the YAML content
-    data['parts'][0]['chapters'][0]['file'] = str(notebook_path)
-
-    # Save the updated YAML back to file
-    with open(new_yaml_path, 'w') as f:
-        yaml.safe_dump(data, f)
-
-    print(f"Updated {yaml_path} with notebook location: {notebook_path}")
-    return new_yaml_path
 
 
 # Example usage:

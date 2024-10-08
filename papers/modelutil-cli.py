@@ -426,6 +426,50 @@ model.scroll_off();"""  ,
                 print(f'Insert did not work for this file : {ipath} {e}')
         
 
+def make_yaml(notebook_list):
+    for nb in notebook_list:
+            yaml_dir = Path(nb.parts[0]) / 'yml/'
+            new_yaml_path = yaml_dir / nb.with_suffix('.yml').name.lower() 
+            # path_without_extension = nb.with_suffix('')
+            path_without_extension = nb
+
+# Remove the first level of folders ("/home" in this case)
+            toc_entry = Path(*path_without_extension.parts[2:])
+            print(new_yaml_path)
+            print(f'makes yml for: {nb}, {yaml_dir}')
+            update_toc_yaml(nb, yaml_dir /'generic.yml', new_yaml_path)
+        
+       # update_toc_yaml(nb, org_yaml_path, new_yaml_path)
+              
+
+def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
+    """
+    Updates the location of the notebook in a YAML file.
+    
+    Args:
+        notebook_path (str): The path to the .ipynb notebook file.
+        org_yaml_path (str): The path to the .yml file to be updated.
+    """
+    notebook_path = Path(notebook_path)
+
+    # Ensure the file has .ipynb extension
+    if notebook_path.suffix != '.ipynb':
+        raise ValueError("Provided file must have a .ipynb extension")
+
+    # Load the existing YAML file
+    with open(org_yaml_path, 'r') as f:
+        data = yaml.safe_load(f)
+
+    # Update the location in the YAML content
+    data['parts'][0]['chapters'][0]['file'] = str(notebook_path)
+
+    # Save the updated YAML back to file
+    with open(new_yaml_path, 'w') as f:
+        yaml.safe_dump(data, f)
+
+    print(f"Updated {yaml_path} with notebook location: {notebook_path}")
+    return new_yaml_path
+
             
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
@@ -562,11 +606,13 @@ if __name__ == '__main__':
                notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
         
         
-#%%
+#%% test 
      if 0:
         toc_test = [toc_files[1]]
         insert_colab(toc_test)
-    
+     if 1:
+        toc_test = [toc_files[1]]
+        make_yaml(toc_test)
     # hide_cells(toc_files)
     
     
