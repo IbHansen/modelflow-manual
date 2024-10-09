@@ -11,6 +11,6 @@ parts:
   - caption: For proof reading 
     chapters:
       - file: <location>
-      - file: content/07_MoreFeatures/ModelFlowCommandReference      
+     # - file: content/07_MoreFeatures/ModelFlowCommandReference      
       - file: genindex.md
       - file: Reference.md

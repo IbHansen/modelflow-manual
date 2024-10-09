@@ -5,6 +5,7 @@ parts:
 - caption: For proof reading
   chapters:
   - file: content/05_WBModels/MoreComplexScenarios.ipynb
+  #- file: content/07_MoreFeatures/ModelFlowCommandReference
   - file: genindex.md
   - file: Reference.md
 root: content/introduction
