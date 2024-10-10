@@ -6,8 +6,37 @@ build.py builds the html site
 
 python build.py # creates thebook as html 
 python build.py latex # creates thebook as html and latex
-python build.py test # creates thetestbook as html 
-python build.py test latex # creates thetestbook   as html and latex
+
+python build.py <notebook name>.yml   # creates a build with this notebook
+                                      # no ipnb is nessecary so 
+copy from one of theese:
+python build.py introduction.yml
+python build.py introduction.yml
+python build.py macrostructuralmodels.yml
+python build.py installingmodelflow.yml
+python build.py installingpython.yml
+python build.py installingmodelflowpackage.yml
+python build.py updatemodelflow.yml
+python build.py intro_jupyter_notebook.yml
+python build.py pythonbasics.yml
+python build.py pandasdataframes.yml
+python build.py modelflow and dataframes.yml
+python build.py updatecommand.yml
+python build.py mfcalc.yml
+python build.py accessingwbmodels.yml
+python build.py workingwwbmodels.yml
+python build.py scenarioanalysis.yml
+python build.py morecomplexscenarios.yml
+python build.py targeting.yml
+python build.py reportwriting.yml
+python build.py modelstructure.yml
+python build.py attributionsomefeatures.yml
+python build.py gettinghelp.yml
+python build.py modelflowcommandreference.yml									  
+									  
+
+
+
 
 Build without python looks like 
 jb build testbook/ --builder html
@@ -134,6 +163,9 @@ next line
 
 a link to name: 
 [python solution code](solution-methods)
+
+or: 
+
 
 Cite
 {cite:author}`Burns2021`  # Assumes the reference is in reference.bib

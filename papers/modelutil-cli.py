@@ -453,7 +453,7 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
 
     # Ensure the file has .ipynb extension
     if notebook_path.suffix != '.ipynb':
-        print(f'No ymlfile for:{notebook_path}')
+        # print(f'No ymlfile for:{notebook_path}')
         return 
 
     # Load the existing YAML file
@@ -461,14 +461,15 @@ def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
         data = yaml.safe_load(f)
 
     # Update the location in the YAML content
-    print(str(notebook_path.as_posix()))
+    # print(str(notebook_path.as_posix()))
     data['parts'][0]['chapters'][0]['file'] = str(notebook_path.as_posix())
 
     # Save the updated YAML back to file
     with open(new_yaml_path, 'w') as f:
         yaml.safe_dump(data, f)
 
-    print(f"Updated {new_yaml_path} with notebook location: {notebook_path}")
+    # print(f"Updated {new_yaml_path} with notebook location: {notebook_path}")
+    print(f"python build.py {new_yaml_path.stem}.yml")
     return new_yaml_path
 
             
