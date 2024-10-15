@@ -202,7 +202,7 @@ def box_nr_cells(notebook_list):
 
 
 def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=True,
-           fileopen=False, printmatch=False, replace=False, savecell=True):
+           fileopen=False, printmatch=False, replace=False, savecell=True,onlymarkdown=False):
     """
     Search for a specified pattern in Jupyter notebooks within a list of paths and optionally replace it.
 
@@ -240,7 +240,7 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
 
     found_list = []
     notebook_list_path = [i for i in notebook_list if is_notebook(i)]
-    
+    match_list = []
     
     if not silent: print(f'Search patter:{pat}')
     for ipath in notebook_list_path:
@@ -252,10 +252,14 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
                 ntbk = nbf.read(f, nbf.NO_CONVERT)
                 
             for cell in ntbk.cells:
+                    if onlymarkdown and cell.cell_type != 'markdown':
+                        # print(f'{onlymarkdown=} {cell.cell_type=}')
+                        continue
                     # breakpoint() 
                     source =  cell['source']
                     matches = re.findall(pat, source)
                     if len(matches):
+                        match_list = match_list + [(m,ipath.stem) for m in matches]
                         found = True                            
                         # breakpoint()
                         if not silent:     
@@ -278,7 +282,7 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
         except Exception as e: 
                 print(f'Search did not work for this file : {ipath} , {e}')
     not_found_list =     [f for f in notebook_list_path if f not in found_list] 
-    
+    print(match_list)
     if  showfiles: 
         print(f'\n{pat} found here: ')
         print(*[name for name  in found_list],sep='\n')
@@ -617,5 +621,8 @@ if __name__ == '__main__':
         toc_test = [toc_files[1]]
         make_yaml(toc_files)
     # hide_cells(toc_files)
+     if 1:
+        _=  search(toc_files,r"^\(([^)]+)\)="     ,notfound=False,silent=1,printmatch=0,showfiles=False,onlymarkdown=True)
+
     
     

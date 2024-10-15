@@ -34,6 +34,7 @@ import yaml
 import sys
 
 import modelutil 
+import modelutil_cli  as mu 
 
 import re
 print('Build  called with:', sys.argv)
@@ -65,7 +66,7 @@ fileloc = str((buildhtml / 'index.html').absolute())
 
 #print(f'{fileloc=}\n{destination=}')
 print(f'{fileloc=}\n') #dropped destination
-latexroot = modelutil.get_latex_root(bookdir)   
+latexroot = mu.get_latex_root(bookdir)   
 
 tocloc     = Path(bookdir) /'_toc.yml'
 if test: 
@@ -484,6 +485,9 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
          print(f'Error in call to jupyterbook latex {e} ')
      finally:     
          copy(toccopyloc,tocloc)
+         
+         
+         
   
      latex_process(latexroot)
 
@@ -509,6 +513,20 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
             xx0 = run(f'xelatex -interaction=batchmode  "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
          # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
          print(f'PDF generated: see {bookdir}/_build/latex/')
+
+def make_reflist(bookdir):
+    toc_files  =  mu.get_toc_files(fileloc=bookdir)
+
+    # reflist =  mu.search(toc_files,r"^\(([^)]+)\)=",notfound=False,silent=1,printmatch=0,showfiles=False,onlymarkdown=True,returnfound=True)
+    reflist =  mu.search(toc_files,r"^\((.*?)\)=",notfound=False,silent=1,printmatch=0,showfiles=False,onlymarkdown=True,returnfound=True)
+    out = '\n'.join([f'[{ref.replace("_"," ")}]({ref}) # nb =  {nb.stem}' for ref,nb in  reflist])
+    outfile = Path(bookdir) / 'references.txt'
+    with open(outfile,'wt') as f: 
+        f.write('References in this jupyter book\n'+out)
+    print('References in this jupyter book\n'+out)
+    return 
+
+make_reflist(bookdir)
 
      
 if 'copy' in options:
