@@ -1,0 +1,22 @@
+All targets for references are are located in targets.txt
+Two types of targets are possible:  
+
+Target for references: 
+(set_smpl)=some_text_underscores_are_made_to_blanks  
+
+:::{index} Impact Decomposition; Single equation 
+:name: impactsingle
+:::
+
+lines in targets.txt looks like this: 
+[installation of modelflow](installation_of_modelflow) # nb =  InstallingModelFlowpackage
+[The upd method returns a DataFrame with updated variables](The_upd_method_returns_a_DataFrame_with_updated_variables) # nb =  UpdateCommand
+
+And can be copy pasted into the notebook. 
+
+
+Footnotes: 
+[^pythonLibrary] 
+[^pythonLibrary]: [Wikipedia article on python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
