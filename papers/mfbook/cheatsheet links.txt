@@ -1,23 +1,22 @@
-=(set_smpl) 
+All targets for references are are located in targets.txt
+Two types of targets are possible:  
 
-:::{index} single: Impact Decomposition; Single equation 
+Target for references: 
+(set_smpl)=some_text_underscores_are_made_to_blanks  
+
+:::{index} Impact Decomposition; Single equation 
 :name: impactsingle
 :::
 
-{ref}`Variable selection with wildcharts <variable-selection>`
+lines in targets.txt looks like this: 
+[installation of modelflow](installation_of_modelflow) # nb =  InstallingModelFlowpackage
+[The upd method returns a DataFrame with updated variables](The_upd_method_returns_a_DataFrame_with_updated_variables) # nb =  UpdateCommand
 
-{ref}`Variable selection with wildcharts <variable-selection>`
-{ref}`Current timeframe <time-frame>`
-{ref}`Timeframe for a local scop <set_smpl>`
-{ref}`ModelFlow Index operator .[] <index-operator>`
+And can be copy pasted into the notebook. 
 
-{ref}`Single equation Impact Decomposition <impactsingle>`
-{ref}`Model Impact Decomposition <impactmodel>`
-{ref}`All exogenouis shocks <exodif>`
-{ref}`Variable selection with wildcharts <variable-selection>`
-{ref}`Variable selection with wildcharts <variable-selection>`
-{ref}`Variable selection with wildcharts <variable-selection>`
-{ref}`Variable selection with wildcharts <variable-selection>`
-{ref}`Variable selection with wildcharts <variable-selection>`
- 
+
+Footnotes: 
+[^pythonLibrary] 
+[^pythonLibrary]: [Wikipedia article on python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 
