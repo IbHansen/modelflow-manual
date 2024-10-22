@@ -598,7 +598,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
-        search(toc_files,r'keep_plot',notfound=False,silent=0)
+        search(toc_files,r'Error Correction models',notfound=False,silent=0,fileopen=1)
         search(toc_files,r'..\\models',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
