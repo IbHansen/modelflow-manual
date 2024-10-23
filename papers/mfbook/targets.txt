@@ -1,7 +1,7 @@
 References in this jupyter book
 Reference targets in mfbook
 From (xxx)=
-[installation of modelflow](installation_of_modelflow) # nb =  InstallingModelFlowpackage
+[installation of ModelFlow](installation_of_ModelFlow) # nb =  InstallingModelFlowpackage
 [The upd method returns a DataFrame with updated variables](The_upd_method_returns_a_DataFrame_with_updated_variables) # nb =  UpdateCommand
 [Behavioral equations](Behavioral_equations) # nb =  ScenarioAnalysis
 [Saving-results](Saving-results) # nb =  ModelFlowCommandReference

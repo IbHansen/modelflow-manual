@@ -598,8 +598,11 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
-        search(toc_files,r'Error Correction models',notfound=False,silent=0,fileopen=1)
-        search(toc_files,r'..\\models',notfound=False,silent=0)
+        search(toc_files,r'\.\[\]',notfound=False,silent=0,fileopen=1)
+        search(toc_files,r'modeflow',notfound=False,silent=0,fileopen=1)
+        search(toc_files,r'{index}( single:) Modelflow',notfound=False,silent=0)
+        search(toc_files,r'{index}.*modelflow',notfound=False,silent=0)
+
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
@@ -613,7 +616,12 @@ if __name__ == '__main__':
                notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
         y = search(toc_files,r'\{cite:p\}',replace='{cite:t}',
                notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
-        
+        w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
+                   notfound=False,silent=0)
+#%%        
+        w = search(toc_files,r'modelflow',replace=r'ModelFlow',
+                   notfound=False,silent=0,savecell=True)
+
         
 #%% test 
      if 0:
