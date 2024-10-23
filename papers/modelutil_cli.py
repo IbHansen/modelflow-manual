@@ -619,7 +619,7 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r'modelflow',replace=r'ModelFlow',
+        w = search(toc_files,r'Model object;',replace=r'model object;',
                    notfound=False,silent=0,savecell=True)
 
         
