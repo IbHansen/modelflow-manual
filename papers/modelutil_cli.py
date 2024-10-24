@@ -598,7 +598,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
-        search(toc_files,r'\.\[\]',notfound=False,silent=0,fileopen=1)
+        search(toc_files,r'\[\]\.',notfound=False,silent=0,fileopen=1)
         search(toc_files,r'upd_create',notfound=False,silent=0,fileopen=0)
         search(toc_files,r'{index}( single:) Modelflow',notfound=False,silent=0)
         search(toc_files,r'{index}.*modelflow',notfound=False,silent=0)
