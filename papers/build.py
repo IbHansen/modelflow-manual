@@ -499,7 +499,8 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
          if 0:
              
              xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
-             xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
+             # xx0 = run(f'texindy    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
+             xx0 = run(f'makeindex    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
              xx0 = run(f'latexmk -pdf -dvi- -ps- -f {latexroot}.tex'      ,cwd = f'{bookdir}/_build/latex/')
              
          else: 
