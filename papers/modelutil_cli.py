@@ -599,7 +599,8 @@ if __name__ == '__main__':
         
      if 0:
         search(toc_files,r'\[\]\.',notfound=False,silent=0,fileopen=1)
-        search(toc_files,r'upd_create',notfound=False,silent=0,fileopen=0)
+        search(toc_files,r'\[.*\]\(\)',notfound=False,silent=0,fileopen=0,printmatch=1)
+        search(toc_files,r'savefigs',notfound=False,silent=0,fileopen=0)
         search(toc_files,r'{index}( single:) Modelflow',notfound=False,silent=0)
         search(toc_files,r'{index}.*modelflow',notfound=False,silent=0)
 
@@ -631,7 +632,7 @@ if __name__ == '__main__':
         toc_test = [toc_files[1]]
         make_yaml(toc_files)
     # hide_cells(toc_files)
-     if 1:
+     if 0:
         _=  search(toc_files,r"^\(([^)]+)\)="     ,notfound=False,silent=1,printmatch=1,showfiles=False,returnfound=True)
 
     
