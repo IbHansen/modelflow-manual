@@ -270,7 +270,7 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
                                     print(source)
                         if replace: 
                             newsource = re.sub(pat,replace,source)
-                            print(f'\nThis\n{source}\nReplaced by:{newsource}')
+                            print(f'\nThis\n{source}\nReplaced by:\n{newsource}')
                             if savecell: 
                                 cell.source=newsource
             if found: 
@@ -607,7 +607,7 @@ if __name__ == '__main__':
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
-        search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=1)
+        search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=0)
         search(toc_files,r'{index} single: \[\] *',notfound=False,silent=0,printmatch=1,showfiles=False)
         search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
         search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
@@ -620,8 +620,8 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r'Model object;',replace=r'model object;',
-                   notfound=False,silent=0,savecell=True)
+        w = search(toc_files,r'Model object;',replace=r'model instance;',
+                   notfound=False,silent=1,savecell=True)
 
         
 #%% test 
