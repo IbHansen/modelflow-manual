@@ -604,7 +604,7 @@ if __name__ == '__main__':
         search(toc_files,r'{index}( single:) Modelflow',notfound=False,silent=0)
         search(toc_files,r'{index}.*modelflow',notfound=False,silent=0)
 
-        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0)
+        search(toc_files,r'eviews representation',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
         search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=0)
