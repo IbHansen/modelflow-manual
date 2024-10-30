@@ -5,18 +5,18 @@ From (xxx)=
 [The upd method returns a DataFrame with updated variables](The_upd_method_returns_a_DataFrame_with_updated_variables) # nb =  UpdateCommand
 [upd create](upd_create) # nb =  UpdateCommand
 [Behavioral equations](Behavioral_equations) # nb =  ScenarioAnalysis
-[time-frame](time-frame) # nb =  ModelFlowReferenceAB
-[Saving-results](Saving-results) # nb =  ModelFlowReferenceAB
-[set smpl](set_smpl) # nb =  ModelFlowReferenceAB
-[index-operator](index-operator) # nb =  ModelFlowReferenceAB
-[variable-selection](variable-selection) # nb =  ModelFlowReferenceAB
+[time-frame](time-frame) # nb =  ModelFlowReference
+[Saving-results](Saving-results) # nb =  ModelFlowReference
+[set smpl](set_smpl) # nb =  ModelFlowReference
+[index-operator](index-operator) # nb =  ModelFlowReference
+[variable-selection](variable-selection) # nb =  ModelFlowReference
 
 And from index names 
 [upd](upd) # nb =  UpdateCommand
 [impactsingle](impactsingle) # nb =  AttributionSomeFeatures
 [impactmodel](impactmodel) # nb =  AttributionSomeFeatures
 [exodif](exodif) # nb =  AttributionSomeFeatures
-[saveresults](saveresults) # nb =  ModelFlowReferenceAB
-[saveresultsbaselast](saveresultsbaselast) # nb =  ModelFlowReferenceAB
-[saveresultskeep](saveresultskeep) # nb =  ModelFlowReferenceAB
-[saveresultskeepvariables](saveresultskeepvariables) # nb =  ModelFlowReferenceAB
+[saveresults](saveresults) # nb =  ModelFlowReference
+[saveresultsbaselast](saveresultsbaselast) # nb =  ModelFlowReference
+[saveresultskeep](saveresultskeep) # nb =  ModelFlowReference
+[saveresultskeepvariables](saveresultskeepvariables) # nb =  ModelFlowReference

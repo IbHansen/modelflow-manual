@@ -64,8 +64,8 @@ parts:
      numbered: true      
      chapters:   
      - file: content/07_MoreFeatures/GettingHelp
-   #  - file: content/07_MoreFeatures/ModelFlowCommandReference
-     - file: content/07_MoreFeatures/ModelFlowReferenceAB
+     - file: content/07_MoreFeatures/ModelFlowReference
+     # - file: content/07_MoreFeatures/ModelFlowReferenceAB
 #     - file: content/07_MoreFeatures/VisualizationsReference # I think all of these elements are now in Repor Writing.  Ib to double check.
      
    - caption: Backmatter
