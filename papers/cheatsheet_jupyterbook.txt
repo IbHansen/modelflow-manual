@@ -1,16 +1,12 @@
 # jupyter book 
-build.py builds the html site 
-            and copies all /_build/ png,svg and pdf files to the root
-			to enable figures in the latex build 
-           
+
 
 python build.py # creates thebook as html 
 python build.py latex # creates thebook as html and latex
 
 python build.py <notebook name>.yml   # creates a build with this notebook
                                       # no ipnb is nessecary so 
-copy from one of theese:
-python build.py introduction.yml
+copy paste  from one of theese to make a single:
 python build.py introduction.yml
 python build.py macrostructuralmodels.yml
 python build.py installingmodelflow.yml
