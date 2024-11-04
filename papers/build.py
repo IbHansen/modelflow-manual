@@ -33,7 +33,6 @@ import yaml
  
 import sys
 
-import modelutil 
 import modelutil_cli  as mu 
 
 import re
