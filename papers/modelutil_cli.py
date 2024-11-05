@@ -604,7 +604,7 @@ if __name__ == '__main__':
         search(toc_files,r'{index} .* tracedep',notfound=False,silent=0)
         search(toc_files,r'model instance; \.eviews ',notfound=False,silent=0)
 
-        search(toc_files,r'elig',notfound=False,silent=0)
+        search(toc_files,r'modelload',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
         search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=0)
