@@ -331,3 +331,7 @@ WLDFWOODPULP Price of woodpulp (USD)
 WLDFZINC Price of zinc (USD)
 MUV Price of manufacturing goods (USD)
 XMKT Weighted Trading Partner Demand
+CCEMISCO2CKN CO2 Emission Coal
+CCEMISCO2GKN CO2 Emission Gas
+CCEMISCO2OKN CO2 Emission Oil
+CCEMISCO2TKN CO2 Emission Total
