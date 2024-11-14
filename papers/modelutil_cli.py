@@ -601,10 +601,10 @@ if __name__ == '__main__':
         search(toc_files,r'\[\]\.',notfound=False,silent=0,fileopen=1)
         search(toc_files,r'\[.*\]\(\)',notfound=False,silent=0,fileopen=0,printmatch=1)
         search(toc_files,r'savefigs',notfound=False,silent=0,fileopen=0)
-        search(toc_files,r'{index} .* tracedep',notfound=False,silent=0)
+        search(toc_files,r'{index} .* \.equp',notfound=False,silent=0)
         search(toc_files,r'model instance; \.eviews ',notfound=False,silent=0)
 
-        search(toc_files,r'modelload',notfound=False,silent=0)
+        search(toc_files,r';',notfound=False,silent=0)
         search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
         search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
         search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=0)
@@ -620,7 +620,8 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r'instance<variable>',replace=r'instance.<variable>',
+        w = search(toc_files,r' mfcalc\(\) to initialize sho',
+                   replace=r' gdppct; to initialize sho',
                    notfound=False,silent=1,savecell=True)
 
         
