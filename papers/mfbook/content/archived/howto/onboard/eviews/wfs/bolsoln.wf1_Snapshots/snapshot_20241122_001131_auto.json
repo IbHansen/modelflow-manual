@@ -1,0 +1,9402 @@
+
+{
+	"commands" : null,
+	"description" : "Generated based on timer.",
+	"label" : "auto",
+	"workbook_meta" : 
+	{
+		"_name" : "c:\\modelflow manual\\papers\\mfbook\\content\\archived\\howto\\onboard\\eviews\\wfs\\bolsoln.wf1",
+		"_pages" : 
+		[
+			
+			{
+				"_frequency" : "A",
+				"_last_update" : [ 739211.0056712963, "11/22/2024 00:08" ],
+				"_name" : "Untitled",
+				"_obj_count" : 1874,
+				"_objects" : 
+				[
+					
+					{
+						"_data_type" : "date",
+						"_name" : "@DATE",
+						"_obs_max" : [ 748382.0, "01/01/2050" ],
+						"_obs_min" : [ 722814.0, "01/01/1980" ],
+						"_type" : "INDEX"
+					},
+					
+					{
+						"_name" : "_BOLBCBNIRRCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBFCAFFFDICD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBFCAFFPFTCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBFCAFOOTHCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBMFSTOTHRCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBMFSTREMTCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBMGSRGNFSCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBMGSRMRCHCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBXFSTOTHRCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBXFSTREMTCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBXGSRGNFSCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLBXGSRMRCHCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLFIRESTOTLCD",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLFISCASHCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLFPCPITOTLXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGEXPCAPTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGEXPGNFSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGEXPTRNSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGEXPWAGECN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGFINDOMTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGFINEXTLCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVCOMMCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVDRCTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVGNFSCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVGRNTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVOTHRCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVTOTHCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLGGREVTRDECN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLLMEMPTOTL",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLLMPRTTOTL_",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNECONGOVTCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNECONGOVTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNECONPRVTKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNECONPRVTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEEXPGNFSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEEXPGNFSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEGDIFGOVCN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEGDIFGOVXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEGDIFPRVKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEGDIFPRVXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEIMPGNFSKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEIMPGNFSXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNEWRTTOTLXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNVAGRTOTLKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNVAGRTOTLXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNVINDTOTLKN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNVINDTOTLXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLNYGDPFCSTXN",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLPANUSATLS",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_BOLVELOCITY",
+						"_type" : "EQUATION"
+					},
+					
+					{
+						"_name" : "_EXTENDED_FORECAST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_MS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_ST_AF",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_ST_AF2",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_ST_AF2S",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_ST_EXOGS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "_ST_STRIPPED",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ADD",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "AF2S",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "AFGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AFGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AFGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AFGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AFGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AFS",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "AGOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AGOINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AGONECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AGONEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AGONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AGOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ALL_2S",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "AREFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AREINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AREPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARGPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ARMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ATGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ATGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ATGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ATGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AUTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZEINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "AZEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BDINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BDINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BDINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BDIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BELPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BENPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BFAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BFANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BFANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BFANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BFAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BGRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BHSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BIHPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BLZPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOL",
+						"_type" : "MODEL"
+					},
+					
+					{
+						"_name" : "BOL_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOL_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOL_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPASSECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPASSECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPDPUDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPDPUDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPEPUDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPEPUDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPLPRECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPLPRECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPLPRRAZ",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPLPRRAZ_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPOASSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPOASSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPTIDECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLAFPTIDECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBEMISCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBEMISCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBFISDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBFISDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBFISRAZ",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBFISRAZ_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBGCFICN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBGCFICN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBGCPUCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBGCPUCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNCFICN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNCFICN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNCPUCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNCPUCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNDCRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNDCRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNIRRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNIRRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNIRRCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBNIRRCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBONALCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBONALCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBPUSDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBCBPUSDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFBOPTOTLCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFBOPTOTLCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAF2BOP_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAF2BOP__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFCAPTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFCAPTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFFDICD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFFDICD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFFDICD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFFDICD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFFDICN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFINXCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFINXCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFPFTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFPFTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFPFTCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFFPFTCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFNEOMCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFNEOMCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOOTHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOOTHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOOTHCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOOTHCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFRACGCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFCAFRACGCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINAGOVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINAGOVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINDGOVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINDGOVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINFGAPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINFGAPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINOGOVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINOGOVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINTGOVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBFFINTGOVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTINTECD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTINTECD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTOTHRCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTOTHRCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTREMTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTREMTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTREMTCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMFSTREMTCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRGNFSCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRGNFSCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRMRCHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRMRCHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRMRCHCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRMRCHCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRNFSVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBMGSRNFSVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNCABFUNDCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNCABFUNDCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBNGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTCABTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTCABTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTOTHRCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTOTHRCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTOTHRCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTOTHRCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTREMTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTREMTCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTREMTCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXFSTREMTCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRGNFSCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRGNFSCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRMRCHCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRMRCHCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRMRCHCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRMRCHCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRNFSVCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLBXGSRNFSVCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLDEPR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLDEPR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFIRESTOTLCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFIRESTOTLCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFIRESTOTLCD_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFIRESTOTLCD_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISCASHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISCASHCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISCASHCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISCASHCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISCRPRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDCPBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDCPTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPFCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPFCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISDEPTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISNALBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISNDCPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISNDCTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISNIRBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISNIRTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISONALCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISPUDBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFISPUDTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLIBLCFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLIBUSFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLLRLCFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLLRLCFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLLRUSFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFPCPITOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFPCPITOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFPCPITOTLXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLFPCPITOTLXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGDPPCKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGDPPCKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGDPPCKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGDPPCKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCD_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALOVRLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALPRIMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGBALPRIMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTDOMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTDOMTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTEXTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTEXTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTTOTLCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTVALDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTVALDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTVALECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGDBTVALECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCAPTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCAPTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCAPTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCAPTCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCRNTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPCRNTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPGNFSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPGNFSCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPINTPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTOTSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTPNSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTRNSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTRNSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTRNSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTRNSCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPTSOCCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPWAGECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPWAGECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPWAGECN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGEXPWAGECN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINAFPSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINAFPSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINCBCBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINCBCBCN01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINCBCBCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDBCBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDBCBCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDBNKCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDOMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDOMTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDOMTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINDOMTCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEAMTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEAMTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEDSBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEDSBCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEOTHCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLSHARE_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINEXTLSHARE__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINFGAPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINFGAPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINOPRICN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINREQMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINREQMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINRESICN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGFINTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVCOMMER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVDRCTER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGNFSER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGRNTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGRNTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGRNTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVGRNTCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVNONTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVNONTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVOTHRCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVOTHRCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVOTHRCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVOTHRCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVSALECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVSALECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVSOENECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVSOENECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTAXTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTAXTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTHCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTHCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTHCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTHCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDECN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDECN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDECN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDECN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDEER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLGGREVTRDEER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINFLEXPT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINFLEXPT_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTRDDIFFFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTRDDIFFFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTRDFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTRDFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTREDIFFFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTREDIFFFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTREFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLINTREFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPSTRL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPSTRL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPTOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPTOTL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPTOTL_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMEMPTOTL_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMLBFTOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMLBFTOTL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTSTRL_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTSTRL__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTTOTL_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTTOTL__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTTOTL__A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMPRTTOTL__A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMUNRSTRL_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMUNRSTRL__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMUNRTOTL_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLLMUNRTOTL__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCOV_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTCOV__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_A_ADD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_A_S",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONGOVTXN_S",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNECONPRVTXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEEXPGNFSXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDETTOTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVCN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVCN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVCOV_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFGOVXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFPRVXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIFTOTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIKSTKKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDIKSTKKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDISTKBCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDISTKBCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDISTKBKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDISTKBKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEGDISTKBXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_A_ADD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_A_S",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSKN_S",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEIMPGNFSXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEKRTPREMFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEKRTPREMFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTMONTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTMONTXN_COMPLETE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTTOTLXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNEWRTTOTLXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVAGRTOTLXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVHCARDERKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVHCARDERKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLKN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLKN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVINDTOTLXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNVSRVTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPDISCCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPDISCCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPDISCKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPDISCKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTXN_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPFCSTXN_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPGAP_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPGAP__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPXD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPXD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPMKTPXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPPOTLKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPPOTLKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPPOTLKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPPOTLKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPTFP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYGDPTFP_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYKRTTOTLXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYKRTTOTLXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYTAXNINDCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYTAXNINDCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYTAXNINDKN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYTAXNINDKN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYYWBPRVTCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYYWBTOTLCN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYYWBTOTLCN_",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYYWBTOTLCN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLNYYWBTOTLCN__0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPANUSATLS_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPANUSATLS_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPMKEY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPMKEY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPSTAR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPSTAR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPXKEY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLPXKEY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLRATIO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLRATIO_SCALAR",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "BOLREER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLREER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLREMT_IN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLREMT_IN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLREMT_IN_GR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLREMT_IN_GR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLSPPOP1564TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLSPPOPTOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLSPPOPTOTL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLSPPOPWORK",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLSPPOPWORK_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLTOT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLTOT_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLVELOCITY",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLVELOCITY_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLVELOCITY_A",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLVELOCITY_A_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLXMKT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLXMKT_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLXMKT_GR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BOLXMKT_GR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRANYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRAPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BRNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BTNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BWAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BWANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BWANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BWANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "BWAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "C",
+						"_type" : "COEF"
+					},
+					
+					{
+						"_name" : "C_SPEC_QI",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CAFFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CAFNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CAFNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CAFNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CAFPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CANPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHENYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHEPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHLPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CHNPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CIVFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CIVNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CIVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CIVNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CIVPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CMRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CMRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CMRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CMRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CMRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CODPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COLPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "COUNTRY_CODE_SERIES_CODE",
+						"_type" : "ALPHA"
+					},
+					
+					{
+						"_name" : "CPI_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "CPVFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CPVNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CPVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CPVNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CPVPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CRIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CRINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CRINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CRINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CRIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CYPPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZEINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "CZEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DELTA_AF_ADD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DESCRIPS",
+						"_type" : "SVECTOR"
+					},
+					
+					{
+						"_name" : "DESCSTR",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "DEUEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DEUPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJIINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DJIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DMAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DMANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DMAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DNKPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOM_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOM_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOM_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DOMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DREV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DREV_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DUMH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DUMH_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZA_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZA_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZA_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "DZAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECUFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECUNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ECUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EGYFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EGYNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EGYNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EGYNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EGYPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ENDOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EQLIST",
+						"_type" : "TABLE"
+					},
+					
+					{
+						"_name" : "ERIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ERINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ERINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ERINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ERIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESPPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ESTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ETHNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ETHNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ETHNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ETHPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "EXOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EXOGLIST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "EXTENDIDO_DURANTE_PRONOSTICO",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "FINALLY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "FINFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FININTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FINNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FINNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FINNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FINPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FIRST",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "FIT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FJIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FJINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FJIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FRAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FSMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FSMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "FSMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "G2BCOPIED",
+						"_type" : "GROUP"
+					},
+					
+					{
+						"_name" : "G_ADD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "GABFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GABNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GABNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GABNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GABPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBREXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBREXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GBRPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GEOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GEONECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GEONEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GEONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GEOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GHAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GHANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GHANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GHANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GHAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GINFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GINNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GINNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GINNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GINPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GMBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GMBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GMBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GMBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GMBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GNQPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRCPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GRDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GTMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GTMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GTMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GTMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GTMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GUYFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GUYNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GUYNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GUYNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "GUYPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HKGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HKGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HKGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HKGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HKGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HNDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HNDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HNDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HNDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HNDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HOLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HRVPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HTIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HTINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HTINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HTINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HTIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "HUNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IDNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IDNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IDNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IDNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IDNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IFACEVERSION",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "INDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "INDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRQFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRQNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRQNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRQNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "IRQPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISIM_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_CTYVARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCF_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCN_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCP_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISCP_VARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FISF_VARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISIM_FY_CTYVARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "ISLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISLINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ISRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITANYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ITAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JAMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JAMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JAMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JAMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JAMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JORFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JORNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JORNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JORNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JORPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "JPNPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KACC_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "KAZFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KAZINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KAZNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KAZNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KAZNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KAZPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KEN_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KEN_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KEN_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KENFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KENNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KENNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KENNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KENPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KGZFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KGZNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KGZNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KGZNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KGZPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KHMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KIRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KK",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "KNAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KNAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KNANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KNAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KOREXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KOREXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KORPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "KWTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LAOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LAONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LAOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LAST",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "LBNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LBYPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LCANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LCANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LCANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LCAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LKAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LKANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LKANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LKANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LKAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LSOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LSONECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LSONEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LSONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LSOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LTUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LUXPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "LVAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MARFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MARNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MARNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MARNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MARPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDG_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDG_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDG_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDVFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDVNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDVNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MDVPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MEXFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MEXNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MEXNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MEXNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MEXPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MFM_KACC_CTY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMOD_THISSOLN_CTYLIST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MFMSAOPTIONS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MKDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MKDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MLTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MMRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MMRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MMRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MMRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MMRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNEMONS",
+						"_type" : "SVECTOR"
+					},
+					
+					{
+						"_name" : "MNEMSTR",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MNENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MNGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOD_SPEC",
+						"_type" : "TABLE"
+					},
+					
+					{
+						"_name" : "MODVARS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MOZ_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZ_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZ_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MOZPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MRTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MRTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MRTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MRTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MRTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "MSHOLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUV",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MUV_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MWIFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MWINECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MWINEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MWINYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MWIPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYEAR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "MYSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NAMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NAMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NAMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NAMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NAMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NERFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NERNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NERNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NERNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NERPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NGAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NICPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NLDPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NORPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NPLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NPLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NPLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NPLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NPLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "NZLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "OMNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ORIG_ADD_AF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ORIG_AF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ORIG_AF_ADD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ORIG_SER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PAKPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PANPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PER_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PER_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PER_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PEREXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PEREXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERNYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PERPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PHLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PHLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PHLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PHLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PHLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PLWFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PLWNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PLWPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PNGPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POLPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "POPGROWTH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PREVID",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "PROD_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "PRT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRY_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRY_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRY_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PRYPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "PSEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QATPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "QUASI_IDENTITY",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "R",
+						"_type" : "SCALAR"
+					},
+					
+					{
+						"_name" : "REMAININGTOEXTEND",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "REMT_COUNTRIES",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "RESERVERATIO3",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESERVERATIO3_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESERVERATIO4",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESERVERATIO4_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESID",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RESULTS",
+						"_type" : "TABLE"
+					},
+					
+					{
+						"_name" : "ROUFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ROUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ROUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ROUNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ROUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RUSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RUSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RUSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RUSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RUSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RWAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RWANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RWANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RWANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "RWAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SAUPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDEST",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SDNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SDNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SEN_SP_POP_1564_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SEN_SP_POP_65UP_TO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SEN_SP_POP_TOTL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SENFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SENNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SENNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SENNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SENPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES01",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES02",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES03",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES04",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES06",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES07",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SERIES08",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SGPPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SHOLD",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SLBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLVFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLVNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLVNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLVNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SLVPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SOLVEDEQS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SOLVEID",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "SOMINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SOMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SOMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SOMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SOMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SRSPEC",
+						"_type" : "TABLE"
+					},
+					
+					{
+						"_name" : "SSDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SSDINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SSDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SSDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STOCK_REVS",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "STPFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STPINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STPNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STPNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STPNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "STPPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SURPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVKPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SVNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWEFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWEINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWENYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWEPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWZFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWZNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWZNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWZNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SWZPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYCFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYCNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYCNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYCNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYCPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "SYRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "T_LR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "T_LR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TCDFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TCDNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TCDNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TCDNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TCDPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TEST",
+						"_type" : "MODEL"
+					},
+					
+					{
+						"_name" : "TFPGROWTH",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TGOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TGONECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TGONEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TGONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TGOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "THAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TJKFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TJKNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TJKNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TJKNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TJKPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TLSPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TOBEEXOG",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TONFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TONINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TONNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TONPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TT",
+						"_type" : "STRING"
+					},
+					
+					{
+						"_name" : "TTOFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TTOINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TTONYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TTOPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUNFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUNNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUNNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUNNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TUNPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TURPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TZAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TZANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TZANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TZANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "TZAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UGAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UGANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UGANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UGANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UGAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UKRPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UNR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "URYPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAEXR05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAEXR05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAINTRFR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANECONPRVTXN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANEIMPGNFSKD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USANYGDPMKTPCD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPANUSATLS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPCEXN05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "USAPCEXN05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "UZBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VCTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VCTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VENPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VNMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VNMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VNMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VNMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VNMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTINTRFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "VUTPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFALUMINUM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFBANANA_US",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFBEEF",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOAL_AUS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOCOA",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOFFEE_COMPO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOPPER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOTTON_A_INDX",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCOTTON_A_INDX_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCRUDE_PETRO",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFCRUDE_PETRO_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGOLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGOLD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGRNUT",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFGRNUT_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFIRON_ORE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFISTL_JP_INDX",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFISTL_JP_INDX_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFLEAD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFLOGS_MYS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFMAIZE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFMAIZE_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFNGAS_EUR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFNGAS_EUR_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFNICKEL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFORANGE",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFPALM_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFPLYWOOD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFPLYWOOD_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFRICE_05",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFRICE_05_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFRUBBER1_MYSG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSAWNWD_MYS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSILVER",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSILVER_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSORGHUM",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEAN_MEAL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEAN_OIL",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEAN_OIL_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEANS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSOYBEANS_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFSUGAR_WLD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTEA_AVG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTIN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTIN_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTOBAC_US",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFTOBAC_US_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFWHEAT_US_HRW",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFWHEAT_US_HRW_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFWOODPULP",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFZINC",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLDFZINC_0",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WLTNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WSMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WSMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WSMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WSMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "WSMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "XKXFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "XKXNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "XKXNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "XKXNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "XKXPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "Y",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YEMFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YEMNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YEMNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YEMNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YEMPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "YG",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZAFFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZAFNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZAFNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZAFNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZAFPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZMBFMLBLPOLYFR",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZMBNECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZMBNEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZMBNYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZMBPANUSATLS",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZWENECONPRVTXN",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZWENEIMPGNFSKD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZWENYGDPMKTPCD",
+						"_type" : "SERIES"
+					},
+					
+					{
+						"_name" : "ZWEPANUSATLS",
+						"_type" : "SERIES"
+					}
+				],
+				"_obs_count" : 71
+			}
+		]
+	}
+}
