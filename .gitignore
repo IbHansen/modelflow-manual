@@ -154,7 +154,7 @@ cython_debug/
 
 **/_build/.doctrees
 **/_build
-**/wfs
+## **/wfs
 **/modelflowdumps
 **/graph
 test.pcim 
