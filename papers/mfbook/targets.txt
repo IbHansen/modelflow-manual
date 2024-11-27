@@ -16,7 +16,8 @@ And from index names
 [impactsingle](impactsingle) # nb =  AttributionSomeFeatures
 [impactmodel](impactmodel) # nb =  AttributionSomeFeatures
 [exodif](exodif) # nb =  AttributionSomeFeatures
+[call](call) # nb =  ModelFlowReference
 [saveresults](saveresults) # nb =  ModelFlowReference
-[saveresultsbaselast](saveresultsbaselast) # nb =  ModelFlowReference
+[baselast](baselast) # nb =  ModelFlowReference
 [saveresultskeep](saveresultskeep) # nb =  ModelFlowReference
 [saveresultskeepvariables](saveresultskeepvariables) # nb =  ModelFlowReference
