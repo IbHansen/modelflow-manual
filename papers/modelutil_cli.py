@@ -620,11 +620,23 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r'twide',
-                   replace=r' twice',
-                   notfound=False,silent=1,savecell=False)
+        w = search(toc_files,r'twide',replace=r' twice',silent=1,savecell=False)
 
-        
+ #%% from chatgpt
+        w = search(toc_files,r'Jupter',replace=r'Jupyter',silent=1,savecell=True)
+        w = search(toc_files,r'behavioural',replace=r'behavioral',silent=1,savecell=True)
+        w = search(toc_files,r'twide',replace=r'twice',silent=1,savecell=True)
+        w = search(toc_files,r'modelling',replace=r'modeling',silent=1,savecell=True)
+        w = search(toc_files,r'paltform',replace=r'platform',silent=1,savecell=True)
+        w = search(toc_files,r'fucntional',replace=r'functional',silent=1,savecell=True)
+        w = search(toc_files,r'teh',replace=r'the',silent=1,savecell=True)
+ #%% 
+        w = search(toc_files,r'fucntional',replace=r'functional',silent=1,savecell=True)
+        w = search(toc_files,r'equilibirum',replace=r'equilibrium',silent=1,savecell=True)
+        w = search(toc_files,r'teh',replace=r'the',silent=1,savecell=True)
+        w = search(toc_files,r'simulaion',replace=r'simulation',silent=1,savecell=True)
+        w = search(toc_files,r'managment',replace=r'management',silent=1,savecell=True)
+              
 #%% test 
      if 0:
         toc_test = [toc_files[1]]
