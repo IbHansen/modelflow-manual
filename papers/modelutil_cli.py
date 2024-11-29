@@ -620,9 +620,9 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r' mfcalc\(\) to initialize sho',
-                   replace=r' gdppct; to initialize sho',
-                   notfound=False,silent=1,savecell=True)
+        w = search(toc_files,r'twide',
+                   replace=r' twice',
+                   notfound=False,silent=1,savecell=False)
 
         
 #%% test 
