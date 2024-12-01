@@ -620,7 +620,7 @@ if __name__ == '__main__':
         w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
                    notfound=False,silent=0)
 #%%        
-        w = search(toc_files,r'twide',replace=r' twice',silent=1,savecell=False)
+        w = search(toc_files,r'variable >',replace=r'variable>',silent=1,savecell=True)
 
  #%% from chatgpt
         w = search(toc_files,r'Jupter',replace=r'Jupyter',silent=1,savecell=True)
