@@ -3,7 +3,7 @@
 
 title: The World Bank's MFMod Framework in Python with Modelflow
 author: Andrew Burns and Ib Hansen
-copyright: "World Bank. 2024"
+copyright: "World Bank. 2025"
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -26,6 +26,8 @@ latex:
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"
+ # binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+
 
 repository:
   url                       : https://github.com/IbHansen/modelflow-manual   # Online location of the book
