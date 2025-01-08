@@ -168,3 +168,4 @@ test.pcim
 ~WRL*.tmp
 testpak.pcim
 mymodel.pcim
+*evsettings
