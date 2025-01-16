@@ -637,11 +637,11 @@ if __name__ == '__main__':
         w = search(toc_files,r'simulaion',replace=r'simulation',silent=1,savecell=True)
         w = search(toc_files,r'managment',replace=r'management',silent=1,savecell=True)
 #%%
-        w = search(toc_files, 'mathmatical', replace=r'mathematical', silent=1, savecell=True)
-        w = search(toc_files, 'enviroment', replace=r'environment', silent=1, savecell=True)
-        w = search(toc_files, 'prorotyping', replace=r'prototyping', silent=1, savecell=True)
-        w = search(toc_files, 'integreates', replace=r'integrates', silent=1, savecell=True)
-        w = search(toc_files, 'recieve', replace=r'receive', silent=1, savecell=True)
+        w = search(toc_files, 'modelling', replace=r'modeling', silent=1, savecell=True)
+        w = search(toc_files, 'dependancies', replace=r'dependencies', silent=1, savecell=True)
+        w = search(toc_files, 'behaviour', replace=r'behavior', silent=1, savecell=True)
+        w = search(toc_files, 'analyse', replace=r'analyze', silent=1, savecell=True)
+        w = search(toc_files, 'focussed', replace=r'focused', silent=1, savecell=True)
 
 #%% test 
      if 0:
