@@ -40,6 +40,7 @@ parts:
      chapters:   
      - file: content/05_WBModels/AccessingWBModels  # This will need to be revised when we have the git hub site set up
      - file: content/05_WBModels/WorkingwWBModels
+     - file: content/05_WBModels/BehavioralEquations
      - file: content/05_WBModels/ScenarioAnalysis
      - file: content/05_WBModels/MoreComplexScenarios
      - file: content/05_WBModels/Targeting

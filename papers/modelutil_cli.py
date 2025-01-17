@@ -201,7 +201,7 @@ def box_nr_cells(notebook_list):
     return 
 
 
-def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=True,
+def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=False,
            fileopen=False, printmatch=False, replace=False, savecell=True,onlymarkdown=False,returnfound=False ):
     """
     Search for a specified pattern in Jupyter notebooks within a list of paths and optionally replace it.
@@ -636,7 +636,13 @@ if __name__ == '__main__':
         w = search(toc_files,r'teh',replace=r'the',silent=1,savecell=True)
         w = search(toc_files,r'simulaion',replace=r'simulation',silent=1,savecell=True)
         w = search(toc_files,r'managment',replace=r'management',silent=1,savecell=True)
-              
+#%%
+        w = search(toc_files, 'modelling', replace=r'modeling', silent=1, savecell=True)
+        w = search(toc_files, 'dependancies', replace=r'dependencies', silent=1, savecell=True)
+        w = search(toc_files, 'behaviour', replace=r'behavior', silent=1, savecell=True)
+        w = search(toc_files, 'analyse', replace=r'analyze', silent=1, savecell=True)
+        w = search(toc_files, 'focussed', replace=r'focused', silent=1, savecell=True)
+
 #%% test 
      if 0:
         toc_test = [toc_files[1]]
