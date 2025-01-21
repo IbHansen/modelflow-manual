@@ -296,6 +296,81 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
     else:
         return not_found_list if notfound else found_list 
 
+def copy_files_with_structure(file_paths, destination):
+    """
+    Copies files from a list of relative paths to a destination directory,
+    preserving their relative directory structure.
+
+    :param file_paths: List of pathlib.Path objects representing relative file paths.
+    :param destination: The destination directory as a pathlib.Path object.
+    """
+    destination = Path(destination)
+    if not destination.exists():
+        destination.mkdir(parents=True, exist_ok=True)
+
+    for file_path in file_paths:
+        src = file_path.resolve()
+        if not src.exists():
+            print(f"File not found: {src}")
+            continue
+
+        # Preserve the relative structure by appending the relative path to the destination
+        dest = destination / file_path
+        dest.parent.mkdir(parents=True, exist_ok=True)  # Create necessary directories
+
+        try:
+            if file_path.suffix.lower() == ".ipynb":
+                clear_notebook_output(str(src), str(dest))  # Ensure paths are passed as strings
+                print(f"Cleared and copied {src} to {dest}")
+            else:
+                copy(src, dest)
+                print(f"Copied {src} to {dest}")
+            
+        except Exception as e:
+            print(f"Error copying {src} to {dest}: {e}")
+
+
+def clear_notebook_output(notebook_path: Path, output_path: Path = None):
+    """
+    Clears the output of all cells in a Jupyter Notebook.
+
+    Args:
+        notebook_path (Path): Path to the notebook file to clear.
+        output_path (Path): Path to save the cleared notebook. Defaults to overwriting the original file.
+
+    Returns:
+        None
+    """
+    try:
+        # Ensure input paths are Path objects
+        notebook_path = Path(notebook_path)
+        output_path = Path(output_path) if output_path else notebook_path
+
+        # Read the notebook
+        with notebook_path.open("r", encoding="utf-8") as f:
+            notebook = nbf.read(f, as_version=4)
+
+        # Clear output of all code cells
+        for cell in notebook.cells:
+            if cell.cell_type == "code":
+                cell.outputs = []
+                cell.execution_count = None
+
+        if "widgets" in notebook.metadata:
+            del notebook.metadata["widgets"]
+
+
+        # Save the cleared notebook
+        with output_path.open("w", encoding="utf-8") as f:
+            nbf.write(notebook, f)
+
+        print(f"Cleared notebook saved to: {output_path}")
+
+    except Exception as e:
+        print(f"Error clearing notebook output: {e}")
+
+
+
 def insert_colab(notebook_list):
     content="""\
 #This is code to manage dependencies if the notebook is executed in the google colab cloud service
@@ -604,46 +679,18 @@ if __name__ == '__main__':
         search(toc_files,r'{index} .* \.equp',notfound=False,silent=0)
         search(toc_files,r'model instance; \.eviews ',notfound=False,silent=0)
 
-        search(toc_files,r';',notfound=False,silent=0)
-        search(toc_files,r'\([A-Za-z-]+\) *=',notfound=False,silent=0,printmatch=1)
-        search(toc_files,r'\([ A-Za-z-]+\) =',notfound=False,silent=0,)
-        search(toc_files,r'mul100',notfound=False,silent=1,printmatch=0,fileopen=0)
-        search(all_notebooks,r'ljit',notfound=False,silent=0,showfiles=False)
-        search([r'mfbook\content\07_MoreFeatures\ModelFlowCommandReference.ipynb'],'../howto/attribution/',notfound=False,silent=0)
-        search([Path(r'mfbook\content\06_ModelAnalytics\AttributionSomeFeatures.ipynb')],r'{index}single:Impact',notfound=False,silent=0)
-        
-        #%% search and replace 
-        x = search(toc_files,r'```{index}(.*)\n```',replace=r':::{index}\1\n:::',
-               notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
-        y = search(toc_files,r'\{cite:p\}',replace='{cite:t}',
-               notfound=False,silent=0,showfiles=False,printmatch=1,savecell=1)
-        w = search(toc_files,r'{index}( single:) Modelflow',replace=r':::{index} ModelFlow',
-                   notfound=False,silent=0)
-#%%        
-        w = search(toc_files,r'variable >',replace=r'variable>',silent=1,savecell=True)
-
- #%% from chatgpt
-        w = search(toc_files,r'Jupter',replace=r'Jupyter',silent=1,savecell=True)
-        w = search(toc_files,r'behavioural',replace=r'behavioral',silent=1,savecell=True)
-        w = search(toc_files,r'twide',replace=r'twice',silent=1,savecell=True)
-        w = search(toc_files,r'modelling',replace=r'modeling',silent=1,savecell=True)
-        w = search(toc_files,r'paltform',replace=r'platform',silent=1,savecell=True)
-        w = search(toc_files,r'fucntional',replace=r'functional',silent=1,savecell=True)
-        w = search(toc_files,r'teh',replace=r'the',silent=1,savecell=True)
- #%% 
-        w = search(toc_files,r'fucntional',replace=r'functional',silent=1,savecell=True)
-        w = search(toc_files,r'equilibirum',replace=r'equilibrium',silent=1,savecell=True)
-        w = search(toc_files,r'teh',replace=r'the',silent=1,savecell=True)
-        w = search(toc_files,r'simulaion',replace=r'simulation',silent=1,savecell=True)
-        w = search(toc_files,r'managment',replace=r'management',silent=1,savecell=True)
-#%%
-        w = search(toc_files, 'modelling', replace=r'modeling', silent=1, savecell=True)
-        w = search(toc_files, 'dependancies', replace=r'dependencies', silent=1, savecell=True)
-        w = search(toc_files, 'behaviour', replace=r'behavior', silent=1, savecell=True)
-        w = search(toc_files, 'analyse', replace=r'analyze', silent=1, savecell=True)
         w = search(toc_files, 'focussed', replace=r'focused', silent=1, savecell=True)
 
+#%% Replication 
+        extra_files = [Path('mfbook/content/models/pak.pcim')]
+        repl_files = toc_files + extra_files
+        copy_files_with_structure(repl_files, '/replication')
+
 #%% test 
+
+        
+
+
      if 0:
         toc_test = [toc_files[1]]
         insert_colab(toc_test)
