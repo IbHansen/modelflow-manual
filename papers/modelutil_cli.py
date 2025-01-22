@@ -364,7 +364,7 @@ def clear_notebook_output(notebook_path: Path, output_path: Path = None):
         with output_path.open("w", encoding="utf-8") as f:
             nbf.write(notebook, f)
 
-        print(f"Cleared notebook saved to: {output_path}")
+        # print(f"Cleared notebook saved to: {output_path}")
 
     except Exception as e:
         print(f"Error clearing notebook output: {e}")
@@ -682,7 +682,8 @@ if __name__ == '__main__':
         w = search(toc_files, 'focussed', replace=r'focused', silent=1, savecell=True)
 
 #%% Replication 
-        extra_files = [Path('mfbook/content/models/pak.pcim')]
+        extra_files = [Path('mfbook/content/models/pak.pcim'),
+                       Path('mfbook/content/Overview.ipynb')]
         repl_files = toc_files + extra_files
         copy_files_with_structure(repl_files, '/replication')
 
