@@ -18,6 +18,8 @@ from pathlib import Path
 from shutil import copy, copytree
 import argparse
 import re
+from zipfile import ZipFile
+
  
 bookdir='mfbook'
 def get_all_files(fileloc=bookdir):
@@ -522,36 +524,44 @@ def make_yaml(notebook_list):
        # update_toc_yaml(nb, org_yaml_path, new_yaml_path)
               
 
-def update_toc_yaml(notebook_path: str, org_yaml_path,new_yaml_path):
+
+def zip_directory_with_pathlib(directory_path, output_zip):
     """
-    Updates the location of the notebook in a YAML file.
-    
+    Zips all files in a directory into a single zip file using pathlib,
+    ensuring the target directory for the zip file is created if it doesn't exist.
+
     Args:
-        notebook_path (str): The path to the .ipynb notebook file.
-        org_yaml_path (str): The path to the .yml file to be updated.
+        directory_path (str or Path): Path to the directory to be zipped.
+        output_zip (str or Path): Path for the output zip file.
+
+    Returns:
+        None
     """
-    notebook_path = Path(notebook_path)
+    directory_path = Path(directory_path).resolve()
+    output_zip = Path(output_zip).resolve()
 
-    # Ensure the file has .ipynb extension
-    if notebook_path.suffix != '.ipynb':
-        # print(f'No ymlfile for:{notebook_path}')
-        return 
+    # Ensure the source directory exists
+    if not directory_path.is_dir():
+        raise ValueError(f"{directory_path} is not a valid directory.")
 
-    # Load the existing YAML file
-    with open(org_yaml_path, 'r') as f:
-        data = yaml.safe_load(f)
+    # Create the target directory for the zip file if it doesn't exist
+    output_zip.parent.mkdir(parents=True, exist_ok=True)
 
-    # Update the location in the YAML content
-    # print(str(notebook_path.as_posix()))
-    data['parts'][0]['chapters'][0]['file'] = str(notebook_path.as_posix())
+    # Check for conflicts with existing files/directories
+    if output_zip.exists():
+        if output_zip.is_dir():
+            raise PermissionError(f"{output_zip} already exists as a directory.")
+        else:
+            print(f"Overwriting existing file: {output_zip}")
 
-    # Save the updated YAML back to file
-    with open(new_yaml_path, 'w') as f:
-        yaml.safe_dump(data, f)
+    # Create the zip file
+    with ZipFile(output_zip, 'w') as zipf:
+        for file_path in directory_path.rglob('*'):
+            if file_path.is_file():
+                arcname = file_path.relative_to(directory_path)
+                zipf.write(file_path, arcname)
 
-    # print(f"Updated {new_yaml_path} with notebook location: {notebook_path}")
-    print(f"python build.py {new_yaml_path.stem}.yml")
-    return new_yaml_path
+    print(f"All files in {directory_path} have been zipped into {output_zip}")
 
             
 # Call the function to start the notebooks
@@ -683,10 +693,15 @@ if __name__ == '__main__':
 
 #%% Replication 
         extra_files = [Path('mfbook/content/models/pak.pcim'),
-                       Path('mfbook/content/Overview.ipynb')]
-        repl_files = toc_files + extra_files
+                       Path('mfbook/content/Overview.ipynb'),
+                  #     Path('mfbook/mfinstall.cmd'),
+                   #    Path('mfbook/mfgo.cmd'),  # Problem  gmail blocks sending 
+                   
+                       ]
+        toc_files_ipynb = [f for f in toc_files if f.suffix == ".ipynb"]
+        repl_files = toc_files_ipynb + extra_files
         copy_files_with_structure(repl_files, '/replication')
-
+        zip_directory_with_pathlib('/replication','/replication_zip/mfbook.zip')
 #%% test 
 
         
