@@ -15,7 +15,7 @@ import webbrowser
 from subprocess import run
 import webbrowser as wb
 from pathlib import Path
-from shutil import copy, copytree
+from shutil import copy, copytree, copy2
 import argparse
 import re
 from zipfile import ZipFile
@@ -297,6 +297,37 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
         return match_list 
     else:
         return not_found_list if notfound else found_list 
+
+
+def copy_png_files(file_paths, destination_dir):
+    """
+    Copies all .png files from the directories containing the given file paths
+    to the destination directory, replicating the directory structure.
+
+    :param file_paths: List of Path objects pointing to files or directories.
+    :param destination_dir: Path object for the destination directory.
+    """
+    destination_dir = Path(destination_dir)
+    destination_dir.mkdir(parents=True, exist_ok=True)  # Ensure destination exists
+
+    # Extract unique source directories from the list of files
+    source_dirs = sorted({f.parent for f in file_paths if f.exists()})
+
+    for source_dir in source_dirs:
+        for png_file in source_dir.rglob("*.png"):
+            # Calculate the relative path of the file within the source directory
+            relative_path = png_file.relative_to(source_dir)
+
+            # Create the corresponding directory structure in the destination
+            target_dir = destination_dir / source_dir.name / relative_path.parent
+            target_dir.mkdir(parents=True, exist_ok=True)
+
+            # Copy the file to the destination, preserving structure
+            destination_file = target_dir / png_file.name
+            copy2(png_file, destination_file)
+            print(f"Copied {png_file} to {destination_file}")
+
+    print("Copy operation complete.")
 
 def copy_files_with_structure(file_paths, destination):
     """
@@ -700,6 +731,7 @@ if __name__ == '__main__':
                        ]
         toc_files_ipynb = [f for f in toc_files if f.suffix == ".ipynb"]
         repl_files = toc_files_ipynb + extra_files
+        copy_png_files(toc_files,  '/replication')
         copy_files_with_structure(repl_files, '/replication')
         zip_directory_with_pathlib('/replication','/replication_zip/mfbook.zip')
 #%% test 
