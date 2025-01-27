@@ -311,15 +311,15 @@ def copy_png_files(file_paths, destination_dir):
     destination_dir.mkdir(parents=True, exist_ok=True)  # Ensure destination exists
 
     # Extract unique source directories from the list of files
-    source_dirs = sorted({f.parent for f in file_paths if f.exists()})
-
+    source_dirs = sorted({f.relative_to('.').parent for f in file_paths if f.exists()})
+    print(source_dirs)
     for source_dir in source_dirs:
-        for png_file in source_dir.rglob("*.png"):
+        for png_file in source_dir.glob("*.png"):
             # Calculate the relative path of the file within the source directory
             relative_path = png_file.relative_to(source_dir)
 
             # Create the corresponding directory structure in the destination
-            target_dir = destination_dir / source_dir.name / relative_path.parent
+            target_dir = destination_dir / source_dir 
             target_dir.mkdir(parents=True, exist_ok=True)
 
             # Copy the file to the destination, preserving structure
@@ -731,8 +731,8 @@ if __name__ == '__main__':
                        ]
         toc_files_ipynb = [f for f in toc_files if f.suffix == ".ipynb"]
         repl_files = toc_files_ipynb + extra_files
-        copy_png_files(toc_files,  '/replication')
         copy_files_with_structure(repl_files, '/replication')
+        copy_png_files(toc_files,  '/replication')
         zip_directory_with_pathlib('/replication','/replication_zip/mfbook.zip')
 #%% test 
 
