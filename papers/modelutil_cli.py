@@ -10,6 +10,7 @@ Some utilities to manage files in a jupyterbook
 import yaml
 from pathlib import Path
 import nbformat as nbf
+import nbformat 
 from glob import glob
 import webbrowser
 from subprocess import run
@@ -204,7 +205,8 @@ def box_nr_cells(notebook_list):
 
 
 def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=False,
-           fileopen=False, printmatch=False, replace=False, savecell=True,onlymarkdown=False,returnfound=False ):
+           fileopen=False, printmatch=False, replace=False, savecell=True,onlymarkdown=False,returnfound=False,
+           flags=0):
     """
     Search for a specified pattern in Jupyter notebooks within a list of paths and optionally replace it.
 
@@ -259,7 +261,7 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
                         continue
                     # breakpoint() 
                     source =  cell['source']
-                    matches = re.findall(pat, source)
+                    matches = re.findall(pat, source,flags=flags)
                     if len(matches):
                         match_list = match_list + [(m,ipath) for m in matches]
                         found = True                            
@@ -271,7 +273,7 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
                                 else: 
                                     print(source)
                         if replace: 
-                            newsource = re.sub(pat,replace,source)
+                            newsource = re.sub(pat,replace,source,flags=flags)
                             print(f'\nThis\n{source}\nReplaced by:\n{newsource}')
                             if savecell: 
                                 cell.source=newsource
@@ -329,7 +331,8 @@ def copy_png_files(file_paths, destination_dir):
 
     print("Copy operation complete.")
 
-def copy_files_with_structure(file_paths, destination):
+def copy_files_with_structure(file_paths, destination,
+                          clear_output=False, clear_widgets = False, clear_index=False):
     """
     Copies files from a list of relative paths to a destination directory,
     preserving their relative directory structure.
@@ -353,7 +356,8 @@ def copy_files_with_structure(file_paths, destination):
 
         try:
             if file_path.suffix.lower() == ".ipynb":
-                clear_notebook_output(str(src), str(dest))  # Ensure paths are passed as strings
+                clear_notebook_output(str(src), str(dest),
+                   clear_output=clear_output, clear_widgets = clear_widgets, clear_index=clear_index)  # Ensure paths are passed as strings
                 print(f"Cleared and copied {src} to {dest}")
             else:
                 copy(src, dest)
@@ -363,7 +367,8 @@ def copy_files_with_structure(file_paths, destination):
             print(f"Error copying {src} to {dest}: {e}")
 
 
-def clear_notebook_output(notebook_path: Path, output_path: Path = None):
+def clear_notebook_output(notebook_path: Path, output_path: Path = None,
+                          clear_output=False, clear_widgets = False, clear_index=False):
     """
     Clears the output of all cells in a Jupyter Notebook.
 
@@ -384,25 +389,81 @@ def clear_notebook_output(notebook_path: Path, output_path: Path = None):
             notebook = nbf.read(f, as_version=4)
 
         # Clear output of all code cells
-        for cell in notebook.cells:
-            if cell.cell_type == "code":
-                cell.outputs = []
-                cell.execution_count = None
+        if clear_output: 
+            for cell in notebook.cells:
+                if cell.cell_type == "code":
+                    cell.outputs = []
+                    cell.execution_count = None
 
-        if "widgets" in notebook.metadata:
-            del notebook.metadata["widgets"]
+        if clear_widgets: 
+            if "widgets" in notebook.metadata:
+                del notebook.metadata["widgets"]
 
+        if clear_index:
+            index_pattern = re.compile(r':::{index}[\s\S;.:]*?:::', re.MULTILINE)
+            for cell in notebook.cells:
+                if cell.cell_type == "markdown":
+                    new_source = re.sub(index_pattern, '', cell.source).strip()
+                    new_source = re.sub(r"^:class:.*\n?", "", new_source, flags=re.MULTILINE)
+                    new_source = re.sub(r"^:::{[aA]dmonition}\s+(.+?)\s*\n", r"**\1**\n\n", new_source, flags=re.MULTILINE)
+                    new_source = re.sub(r"^:::{([nN]ote|[wW]arning)}\s*(.*)", r"**\1**\n\n\2", new_source, flags=re.MULTILINE)
+
+                    new_source = re.sub(r"^:::{(?:[iI]mage|[oO]nly)}[\s\S]*?^:::", "", new_source, flags=re.MULTILINE)
+                    new_source = re.sub(r"\n?^:::$", "", new_source, flags=re.MULTILINE)
+
+                    if new_source != cell.source:
+                        cell.source = new_source
+
+            notebook.cells = [cell for cell in notebook.cells if not 
+                              (
+                               len(source:= cell.source.strip())==0 
+                               )]    
 
         # Save the cleared notebook
         with output_path.open("w", encoding="utf-8") as f:
             nbf.write(notebook, f)
 
         # print(f"Cleared notebook saved to: {output_path}")
+        
 
     except Exception as e:
         print(f"Error clearing notebook output: {e}")
 
 
+
+def remove_jupyter_book_index(nb_path):
+    """Remove Jupyter Book index directives enclosed in :::index ... ::: from Markdown cells in a Jupyter Notebook."""
+    
+    nb_path = Path(nb_path)
+    notebook = nbformat.read(nb_path, as_version=4)
+    
+    modified = False
+    index_pattern = re.compile(r':::index[\s\S]*?:::', re.MULTILINE)
+    
+    for cell in notebook.cells:
+        if cell.cell_type == "markdown":
+            new_source = re.sub(index_pattern, '', cell.source).strip()
+            
+            if new_source != cell.source:
+                cell.source = new_source
+                modified = True
+    
+    if modified:
+        nbformat.write(notebook, nb_path)
+        print(f"Updated: {nb_path}")
+    else:
+        print(f"No changes needed: {nb_path}")
+
+def process_notebooks(nb_files):
+    """Process a list of Jupyter Notebook files."""
+    for nb_file in nb_files:
+        nb_path = Path(nb_file)
+        if nb_path.exists() and nb_path.suffix == ".ipynb":
+            remove_jupyter_book_index(nb_path)
+        else:
+            print(f"Skipping invalid file: {nb_path}")
+
+# Example usage
 
 def insert_colab(notebook_list):
     content="""\
@@ -719,10 +780,13 @@ if __name__ == '__main__':
         search(toc_files,r'savefigs',notfound=False,silent=0,fileopen=0)
         search(toc_files,r'{index} .* \.equp',notfound=False,silent=0)
         search(toc_files,r'model instance; \.eviews ',notfound=False,silent=0)
-
-        w = search(toc_files, 'focussed', replace=r'focused', silent=1, savecell=True)
+#%% ``` 
+     #   w = search(toc_files, r"^({(?:[iI]mage|[oO]nly)}[\s\S]*?^)```")
+        #search(toc_files,r':::{ge',replace= ':::{image',notfound=False,silent=0,fileopen=0)
+        search(toc_files,r"^```({note}[\s\S]*?)^```", replace = r":::\1\n:::",savecell=False,silent=0,fileopen=0,flags=re.MULTILINE)
 
 #%% Replication 
+     if 0:
         extra_files = [Path('mfbook/content/models/pak.pcim'),
                        Path('mfbook/content/Overview.ipynb'),
                   #     Path('mfbook/mfinstall.cmd'),
@@ -731,7 +795,8 @@ if __name__ == '__main__':
                        ]
         toc_files_ipynb = [f for f in toc_files if f.suffix == ".ipynb"]
         repl_files = toc_files_ipynb + extra_files
-        copy_files_with_structure(repl_files, '/replication')
+        copy_files_with_structure(repl_files, '/replication',
+         clear_output=True,clear_widgets=True,clear_index=True )
         copy_png_files(toc_files,  '/replication')
         zip_directory_with_pathlib('/replication','/replication_zip/mfbook.zip')
 #%% test 
