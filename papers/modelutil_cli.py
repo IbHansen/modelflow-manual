@@ -787,6 +787,7 @@ if __name__ == '__main__':
 
 #%% Replication 
      if 0:
+#%% Replication          
         extra_files = [Path('mfbook/content/models/pak.pcim'),
                        Path('mfbook/content/Overview.ipynb'),
                   #     Path('mfbook/mfinstall.cmd'),
@@ -797,8 +798,26 @@ if __name__ == '__main__':
         repl_files = toc_files_ipynb + extra_files
         copy_files_with_structure(repl_files, '/replication',
          clear_output=True,clear_widgets=True,clear_index=True )
-        copy_png_files(toc_files,  '/replication')
         zip_directory_with_pathlib('/replication','/replication_zip/mfbook.zip')
+#%% clean book 
+     if 0:
+#%%  clean book         
+        clean_folder = '/modelflow manual clean' 
+        extra_files = [Path('mfbook/content/models/pak.pcim'),
+                       Path('mfbook/content/Overview.ipynb'),
+                       Path('build.py'),
+                       Path('modelutil_cli.py'),
+                       Path('mfbook/_toc.yml'),
+                       Path('mfbook/references.bib'),
+                       Path('mfbook/_config.yml'),
+                  #     Path('mfbook/mfinstall.cmd'),
+                   #    Path('mfbook/mfgo.cmd'),  # Problem  gmail blocks sending 
+                   
+                       ]
+        copy_files_with_structure(toc_files+extra_files, clean_folder,
+         clear_output=True,clear_widgets=True,clear_index=False )
+        copy_png_files(toc_files,  clean_folder)
+        # zip_directory_with_pathlib(clean_folder,'/replication_zip/mfbook.zip')
 #%% test 
 
         
