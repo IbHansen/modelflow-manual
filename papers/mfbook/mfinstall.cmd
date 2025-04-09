@@ -11,7 +11,7 @@ rem activate conda
 call %USERPROFILE%\miniconda3\Scripts\activate.bat %USERPROFILE%\miniconda3 
 
 rem Install modelflow
-call conda create -n modelflow_replicate -c ibh -c  conda-forge modelflow_stable312 -y
+call conda create -n modelflow_replicate modelflow_stable -c ibh -c  conda-forge  -y
 
 call conda activate modelflow_replicate
 pip install dash_interactive_graphviz
