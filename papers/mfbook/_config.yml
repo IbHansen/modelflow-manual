@@ -61,6 +61,9 @@ parse:
    - amsmath
    - dollarmath
    - colon_fence
+   - substitution #allows the definition of variables, whose values can be inserted into the nmarkdown fields of a jupyter notebook when compiled with Jupyter Book
+  myst_substitutions:
+    "Country": "Nepal" #declaires a variable Country that when inserted as {{Country} will render as Nepal in a Jupyter Book
    
 jupyter:
   cell_tag_glue:
