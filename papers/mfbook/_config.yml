@@ -12,7 +12,7 @@ execute:
   #execute_notebooks: force
   #execute_notebooks: off
   #execute_notebooks: auto
-  execute_notebooks: cache
+  execute_notebooks: auto
   timeout: 1000
   exclude_patterns:
     - 'EigenValues' # When testing as it takes forever 
@@ -63,7 +63,7 @@ parse:
    - colon_fence
    - substitution #allows the definition of variables, whose values can be inserted into the nmarkdown fields of a jupyter notebook when compiled with Jupyter Book
   myst_substitutions:
-    "Country": "Nepal" #declaires a variable Country that when inserted as {{Country} will render as Nepal in a Jupyter Book
+    "Country": "Nepal" #declares a variable Country that when inserted as {{Country} will render as Nepal in a Jupyter Book
    
 jupyter:
   cell_tag_glue:
