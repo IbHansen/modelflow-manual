@@ -4,7 +4,6 @@ From (xxx)=
 [installation of ModelFlow](installation_of_ModelFlow) # nb =  InstallingModelFlowpackage
 [The upd method returns a DataFrame with updated variables](The_upd_method_returns_a_DataFrame_with_updated_variables) # nb =  UpdateCommand
 [upd create](upd_create) # nb =  UpdateCommand
-[Behavioral equations](Behavioral_equations) # nb =  ScenarioAnalysis
 [Saving-results](Saving-results) # nb =  ModelFlowReference
 [set smpl](set_smpl) # nb =  ModelFlowReference
 [index-operator](index-operator) # nb =  ModelFlowReference
