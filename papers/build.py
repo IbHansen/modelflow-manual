@@ -510,9 +510,10 @@ if 'latex-pdf' in options or 'pdf-latex' in options or 'latex' in options:
             xx0 = run(f'xelatex -interaction=batchmode -no-shell-escape "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
             
             # Run texindy to generate index
-            xx0 = run(f'texindy -o "{latexroot}.ind" "{latexroot}.idx"', cwd=f'{bookdir}/_build/latex/')
-            
+            # xx0 = run(f'texindy -o "{latexroot}.ind" "{latexroot}.idx"', cwd=f'{bookdir}/_build/latex/')
+            xx0 = run(f'makeindex    -o "{latexroot}.ind" "{latexroot}.idx"',cwd = f'{bookdir}/_build/latex/')
             # Second xelatex run (to ensure all references are resolved)
+            xx0 = run(f'xelatex -interaction=batchmode -no-shell-escape "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
             xx0 = run(f'xelatex -interaction=batchmode -no-shell-escape "{latexroot}.tex"', cwd=f'{bookdir}/_build/latex/')
          # #xx0 = run('latexmk -pdf -f MFModinModelflow.tex',cwd = f'{bookdir}/_build/latex/')
          print(f'PDF generated: see {bookdir}/_build/latex/')
