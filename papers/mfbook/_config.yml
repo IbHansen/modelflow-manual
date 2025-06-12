@@ -12,7 +12,7 @@ execute:
   #execute_notebooks: force
   #execute_notebooks: off
   #execute_notebooks: auto
-  execute_notebooks: auto
+  execute_notebooks: cache
   timeout: 1000
   exclude_patterns:
     - 'EigenValues' # When testing as it takes forever 
@@ -65,7 +65,7 @@ parse:
   myst_substitutions:
     "Country": "Nepal" #declares a variable Country that when inserted as {{Country} will render as Nepal in a Jupyter Book
    
-jupyter:
-  cell_tag_glue:
-    remove_cell_tags: ["latex-only"]
+#jupyter:
+#  cell_tag_glue:
+#    remove_cell_tags: ["latex-only"]
   
