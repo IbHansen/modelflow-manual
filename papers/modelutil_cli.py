@@ -471,7 +471,7 @@ def insert_colab(notebook_list):
 if 'google.colab' in str(get_ipython()):
   import os
   os.system('apt -qqq install graphviz')
-  os.system('pip -qqq install ModelFlowIb ipysheet  --no-dependencies ')
+  os.system('pip -qqq install ModelFlowIb')
 
 %load_ext autoreload
 %autoreload 2
@@ -775,7 +775,7 @@ if __name__ == '__main__':
         box_nr_cells(toc_files)
         
      if 0:
-        search(toc_files,r'\[\]\.',notfound=False,silent=0,fileopen=1)
+        search(toc_files,r'ipysheet  --no-dependencies',replace = ' ', notfound=False,silent=0,fileopen=0)
         search(toc_files,r'\[.*\]\(\)',notfound=False,silent=0,fileopen=0,printmatch=1)
         search(toc_files,r'savefigs',notfound=False,silent=0,fileopen=0)
         search(toc_files,r'{index} .* \.equp',notfound=False,silent=0)
