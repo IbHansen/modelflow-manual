@@ -300,6 +300,103 @@ def search(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles
     else:
         return not_found_list if notfound else found_list 
 
+def find_png_files(notebook_list, pat=r'.*[Bb]ox.*', notfound=False, silent=0, showfiles=False,
+           fileopen=False, printmatch=False, replace=False, savecell=True,onlymarkdown=False,returnfound=False,
+           flags=0):
+    """
+    Search for a images in Jupyter notebooks within a list of paths and return a list of path to all images 
+
+    Parameters:
+    - notebook_list (list): A list of paths to Jupyter notebooks.
+    - pat (str): The regular expression pattern to search for in the cells' source code. 
+                 Default is '.*[Bb]ox.*'.
+    - notfound (bool): If True, return a list of notebooks where the pattern is not found.
+                       If False, return a list of notebooks where the pattern is found.
+                       Default is False.
+    - silent (int): If not 0, suppress print statements. Default is 0.
+    - showfiles (bool): If True, print the list of files where the pattern is found or not found.
+                        Default is True.
+    - fileopen (bool): If True, open the notebooks where the pattern is found with the default system application.
+                       Default is False.
+    - printmatch (bool): If True, and if silent is 0, print the matched patterns; otherwise, print the entire cell content.
+                         Default is False.
+    - replace (str or False): The replacement string for the pattern. If False, no replacement is done.
+                              Default is False.
+    - savecell (bool): If True and replace is not False, save the cell with the replaced content back to the notebook.
+                       Default is True.
+
+    Returns:
+    - list: A list of paths to notebooks where the pattern is found or not found, based on the 'notfound' parameter.
+    
+    Note:
+    - The function uses regex to search for and optionally replace the specified pattern in the source code of each cell.
+    - If 'showfiles' is True, it prints the list of files where the pattern is found or not found.
+    - If 'fileopen' is True, it opens the notebooks with the pattern found using the default system application.
+    - If 'replace' is a string, the pattern is replaced with this string in the notebook cells, and changes are saved if 'savecell' is True.
+    """
+
+
+    
+
+    found_list = []
+    notebook_list_path = [i for i in notebook_list if is_notebook(i)]
+    match_list = []
+    image_list = [] 
+    
+    if not silent: print(f'Search patter:{pat}')
+    for ipath in notebook_list_path:
+        found = False 
+        
+        try:
+
+            with open(ipath, 'r',encoding='utf-8') as f:
+                ntbk = nbf.read(f, nbf.NO_CONVERT)
+                
+            for cell in ntbk.cells:
+                    if onlymarkdown and cell.cell_type != 'markdown':
+                        # print(f'{onlymarkdown=} {cell.cell_type=}')
+                        continue
+                    # breakpoint() 
+                    source =  cell['source']
+                    matches = re.findall(pat, source,flags=flags)
+                    if len(matches):
+                        match_list = match_list + [(m,ipath) for m in matches]
+                        found = True                            
+                        # breakpoint()
+                        if not silent:     
+                                print(f"\nPattern  here: {'/'.join(ipath.parts[-2:])}")         
+                                if printmatch: 
+                                    print(*matches,sep='\n')
+                                else: 
+                                    print(source)
+                        if replace: 
+                            newsource = re.sub(pat,replace,source,flags=flags)
+                            print(f'\nThis\n{source}\nReplaced by:\n{newsource}')
+                            if savecell: 
+                                cell.source=newsource
+            if found: 
+               found_list.append(ipath)  
+               if replace and savecell: 
+                   with open(ipath, 'w',encoding='utf-8') as f:
+                       nbf.write(ntbk,f)
+
+        except Exception as e: 
+                print(f'Search did not work for this file : {ipath} , {e}')
+    not_found_list =     [f for f in notebook_list_path if f not in found_list] 
+    if  showfiles: 
+        print(f'\n{pat} found here: ')
+        print(*[name for name  in found_list],sep='\n')
+        print(f'\n{pat} Not found here: ')
+        print(*[name for name  in not_found_list],sep='\n')
+    if printmatch:
+        print(*match_list,sep='\n')
+    if fileopen: 
+        start_notebooks(found_list)
+    if returnfound: 
+        return match_list 
+    else:
+        return not_found_list if notfound else found_list 
+
 
 def copy_png_files(file_paths, destination_dir):
     """
@@ -780,6 +877,8 @@ if __name__ == '__main__':
         search(toc_files,r'savefigs',notfound=False,silent=0,fileopen=0)
         search(toc_files,r'{index} .* \.equp',notfound=False,silent=0)
         search(toc_files,'::{image}',notfound=False,silent=0)
+        search(toc_files,r'\b[\w\-]+\.png\b',notfound=False,silent=0)
+        
 #%% ``` 
      #   w = search(toc_files, r"^({(?:[iI]mage|[oO]nly)}[\s\S]*?^)```")
         #search(toc_files,r':::{ge',replace= ':::{image',notfound=False,silent=0,fileopen=0)
@@ -807,7 +906,8 @@ if __name__ == '__main__':
                        Path('mfbook/content/Overview.ipynb'),
                        Path('build.py'),
                        Path('modelutil_cli.py'),
-                       Path('mfbook/_toc.yml'),
+                       Path('modelutil_cli.py'),
+                       Path('Reproducibility README.md'),
                        Path('mfbook/references.bib'),
                        Path('mfbook/_config.yml'),
                   #     Path('mfbook/mfinstall.cmd'),
