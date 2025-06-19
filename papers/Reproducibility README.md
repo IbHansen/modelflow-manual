@@ -65,19 +65,35 @@ ModelFlow will install a range of dependencies, including Jupter Notebook 6.  Mo
 
   
 - **Python 3.12.6**
-  - Modelflow 2.157
+  - Modelflow 2.58
   - Jupyter Notebook 6
 - Jupyter Book
 - MikTex or TexLive
 
+#### Installing Python 
+
+MiniConda providing only the essential components for running python.
+
+A guide for installing **MiniConda under windows** can be found [here](https://www.anaconda.com/docs/getting-started/miniconda/main). 
 
 
-The commands below create a `ModelFlow` environment and install into it the `ModelFlow` package and several supporting packages that are useful when using `ModelFlow` in conjunction with `EViews` or `Jupyter Notebook`.
+#### Installing Modelflow and Jupyter Book
 
-The commands should be cut and paste (either one by one, or as a block) into the Anaconda or Miniconda command prompt environment. Instructions for activating the environment in windows are included in the box.
+The commands below create a `ModelFlow` environment and install into it the `ModelFlow` package and several supporting packages that are useful when using `ModelFlow` in conjunction with `EViews` or `Jupyter Notebook`. 
+
+Also the [Jupyter book library](https://jupyterbook.org/) is installed. This allows the replicator to generate the full book. 
+
+The commands should be cut and paste (either one by one, or as a block) into the  Anaconda command prompt environment. 
+
+To open the Anaconda/MiniConda prompt:
+
+1. In the windows command prompt, type Anaconda (or Miniconda)
+2. If Anaconda/Miniconda have been successfully installed an icon entitled Anaconda(Minoconda) Prompt will be available in windows. Click on this.
+3. This will open a python command shell where the commands listed below can be entered.
+
 
 ```
-conda create -n ModelFlow -c ibh -c conda-forge ModelFlow_book -y
+conda create -n ModelFlow -c ibh -c conda-forge ModelFlow_book jupyter-book -y
 conda activate ModelFlow
 
 pip install dash_interactive_graphviz
@@ -89,16 +105,22 @@ jupyter nbextension enable varInspector/main
 
 ```
 
-#### Installing Jupyter Book
 
-If the replicator wants to generate the full book they will also have to install te `Jupyter Book1` package. The package and installation instructions can be found [here](https://jupyterbook.org/).  
 
 #### Installing Tex
 
-To generate the PDF a latex package must also be installed on the computer, either the [Miktex](miktex.org) or the 
+To generate the book or the example report in PDF a latex package must also be installed on the computer, either the [Miktex](miktex.org) or the 
 [TexLive](https://tug.org/texlive/) can be used and have been tested with the package. Installation instructions are provided on the linked sites.
 
 #### Running Jupyter Book
+
+To run the Jupyter Book open a Anaconda prompth and enter: 
+
+```
+conda activate ModelFlow
+```
+
+
 
 The main build routine for the book is buid.py.  This runs all of the Jupyter Notebooks that together comprise the report and in so doing generates all of the tables and charts in the report, with the exception of interactive widgets.  In the Jupyter book screenshots of the widgets are presented. Running the associated Jupyter Notebook will generate the widget and the screenshot if it that is shown in the report.
 
@@ -107,9 +129,28 @@ The main build routine for the book is buid.py.  This runs all of the Jupyter No
 
 - Ensure all required software and dependencies are installed as listed in the [Requirements](#requirements) section.
 
-- Run the `build.py` file.
-  
-  
+To build the Jupyter Book as HTML enter: 
+
+```
+python build.py 
+```  
+
+To build the Jupyter Book as HTML and PDF enter: 
+
+```
+python build.py latex
+```  
+
+#### Running Jupyter Book
+The complete **Jupyter Book** i created from a number of **Jupyter Notebooks**. These notebooks can be run individualy through the Jupyter system. 
+
+To run the Jupyter Notebook  open a Anaconda prompth and enter: 
+
+```
+jupyter notebook 
+```  
+
+
 
 ### Memory and Runtime and Storage Requirements
 
@@ -127,23 +168,28 @@ Make sure to also include any crucial information that replicators should be awa
 
 ## Folder Structure
 
-Details about folder structure are crucial because a well-organized layout enables replicators to navigate quickly to the desired files or directories without searching through cluttered or disorganized folders. Include only the files necessary for replication and delete any unnecessary files.
-
-An ideal folder structure for a reproducibility package should look something like this:
 
 ```
-Data
-  ├── Raw
-  └── Cleaned
-Code
-  ├── Main_dofile.do
-  ├── 01_cleaning.do
-  └── 02_analysis.do
-Outputs
-  ├── Main
-  │   ├── Tables
-  │   └── Figures
-  └── Annex
-      ├── Tables
-      └── Manuscript
-```
+build.py
+modelutil_cli.py
+Reproducibility README.md
+mfbook
+  ├─  _config.yml │ 
+  ├─  _toc.yml │ 
+  ├── genindex.md
+  ├── Reference.md
+  ├── genindex.md
+  ├── genindex.md
+  ├── reference.bib
+  └── content
+        ├── 01_introduction
+        ├── 02_MacrostructuralModels
+        ├── 03_Instalation
+        ├── 04_PythonEssentials
+        ├── 05_WBModels
+        ├── 06_ModelAnalyticsintroduction
+        ├── 07_MoreFeatures 
+        ├── models
+        ├── introducion.ipynb
+        └── Overview.ipynb
+ ```
