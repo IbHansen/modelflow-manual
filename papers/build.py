@@ -17,6 +17,8 @@ python build.py latex nopdf # create latex source but not pdf (for use with tex)
 python build.py copy # if you are ib this will copy to the location to host web version in github 
 python build.py <a toc file name, no in the mfbook folder ending in .yml>  will create a proofreading version only from this toc 
 
+python build.py makezip # creates a zipfile for replication
+
 to create another book, it should be in papers/<a folder ending in book> # this will create the book in the folder. 
 python build.py testbook  # creates testbook/   as html
 
@@ -536,6 +538,8 @@ def make_reflist(bookdir):
 
 make_reflist(bookdir)
 
+if 'make_zip' in options:
+    mu.make_replication()
      
 if 'copy' in options:
     try:

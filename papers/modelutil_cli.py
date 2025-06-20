@@ -658,6 +658,37 @@ def zip_directory_with_pathlib(directory_path, output_zip):
 
     print(f"All files in {directory_path} have been zipped into {output_zip}")
 
+def make_replication():
+        toc_files = get_toc_files('mfbook')
+
+        image_pairs = (search(toc_files,r'\b[\w\-]+\.png\b',notfound=False,returnfound=True,silent=0)
+                      + search(toc_files,r'\b[\w\-]+\.PNG\b',notfound=False,returnfound=True,silent=0)
+                       )
+        image_paths = [notebook_path.parent / filename for filename, notebook_path in image_pairs]
+
+
+        with tempfile.TemporaryDirectory() as clean_folder:
+            print("Temp dir:", clean_folder)
+            extra_files = [
+                Path('mfbook/content/models/pak.pcim'),
+                Path('mfbook/content/Overview.ipynb'),
+                Path('build.py'),
+                Path('modelutil_cli.py'),
+                Path('Reproducibility README.md'),
+                Path('mfbook/references.bib'),
+                Path('mfbook/_toc.yml'),
+              #  Path('mfbook/mfinstall.cmd'),
+              # Path('mfbook/mfgo.cmd'
+
+                Path('mfbook/_config.yml'),
+            ]
+            copy_files_with_structure(toc_files + extra_files + image_paths,
+                                      clean_folder,
+                                      clear_output=True,
+                                      clear_widgets=True,
+                                      clear_index=False)
+            # copy_png_files(toc_files, clean_folder)
+            zip_directory_with_pathlib(clean_folder, 'mfbook/replication/mfbook.zip')
             
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
