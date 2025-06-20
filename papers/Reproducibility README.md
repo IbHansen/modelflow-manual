@@ -105,50 +105,11 @@ jupyter nbextension enable varInspector/main
 
 ```
 
-
-
 #### Installing Tex
 
 To generate the book or the example report in PDF a latex package must also be installed on the computer, either the [Miktex](miktex.org) or the 
 [TexLive](https://tug.org/texlive/) can be used and have been tested with the package. Installation instructions are provided on the linked sites.
 
-#### Running Jupyter Book
-
-To run the Jupyter Book open a Anaconda prompth and enter: 
-
-```
-conda activate ModelFlow
-```
-
-
-
-The main build routine for the book is buid.py.  This runs all of the Jupyter Notebooks that together comprise the report and in so doing generates all of the tables and charts in the report, with the exception of interactive widgets.  In the Jupyter book screenshots of the widgets are presented. Running the associated Jupyter Notebook will generate the widget and the screenshot if it that is shown in the report.
-
-
-  - `build.py` #Runs all of the Jupyter Notyebooks that comprise the report and binds, translates them into Latex and binds them together into a pdf.
-
-- Ensure all required software and dependencies are installed as listed in the [Requirements](#requirements) section.
-
-To build the Jupyter Book as HTML enter: 
-
-```
-python build.py 
-```  
-
-To build the Jupyter Book as HTML and PDF enter: 
-
-```
-python build.py latex
-```  
-
-#### Running Jupyter Book
-The complete **Jupyter Book** i created from a number of **Jupyter Notebooks**. These notebooks can be run individualy through the Jupyter system. 
-
-To run the Jupyter Notebook  open a Anaconda prompth and enter: 
-
-```
-jupyter notebook 
-```  
 
 
 
@@ -160,26 +121,72 @@ The build.py program should run and compile on a Windows 11 machine with an Inte
 Total storage required (after installation of python and required packages) is less than 500MB.
 
 
-## Code Description 
+## Code Description
 
-Give an overview of the program files and their purposes. Remove redundant or obsolete files from the replication archive. For example, main.do sets file paths, installs necessary ADO packages, and executes all other dofiles. Meanwhile, cleaning.do loads data, handles missing values, and analysis.do performs basic statistical analysis and generate visualizations. 
+This project contains a set of Python scripts and Jupyter Notebooks that together replicate the analyses and figures presented in the  book.
 
-Make sure to also include any crucial information that replicators should be aware of to facilitate a one-click run of the code.
+### Unpack the `mfbook.zip` File
+
+Once the Python environment has been set up, you are ready to replicate the book. All necessary files for replication are contained in the `mfbook.zip` archive.
+
+Unzip this file to extract the full project structure. The core content is organized into a series of Jupyter Notebooks (`.ipynb` files), which are located in subfolders under:
+
+```
+mfbook/content/
+```
+
+---
+
+### Creating the Jupyter Book
+
+To build the Jupyter Book, open an **Anaconda Prompt** and activate the relevant Python environment:
+
+```
+conda activate ModelFlow
+```
+
+The main script used to compile the book is `build.py`. This script executes all the Jupyter Notebooks, generating all tables and charts used in the report. Note that interactive widgets are **not** included in the final output; instead, screenshots of the widgets are shown. You can run the corresponding notebook manually to interact with the widget.
+
+- `build.py`: Executes all notebooks, compiles them to LaTeX, and generates an HTML version of the book located in:
+
+```
+mfbook/_build/html/
+```
+
+To build both the HTML and PDF versions of the book, run:
+
+```
+python build.py latex
+```
+
+If LaTeX is not installed on your system, the PDF will not be generated.
+
+---
+
+### Running Jupyter Notebooks Individually
+
+You may also run each notebook manually using Jupyter. To launch the Jupyter Notebook interface, enter the following in the Anaconda Prompt:
+
+```
+jupyter notebook
+```
+
+From there, navigate to `mfbook/content/` and select the notebook you wish to run.
+
+
 
 ## Folder Structure
 
 
 ```
+Reproducibility README.md
 build.py
 modelutil_cli.py
-Reproducibility README.md
 mfbook
   ├─  _config.yml │ 
   ├─  _toc.yml │ 
   ├── genindex.md
   ├── Reference.md
-  ├── genindex.md
-  ├── genindex.md
   ├── reference.bib
   └── content
         ├── 01_introduction
