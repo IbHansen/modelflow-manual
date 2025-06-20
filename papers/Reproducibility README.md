@@ -11,11 +11,11 @@
 
 ## Overview
 
-This package includes all fo the information to reproeuce all of the Charts and Tables in *The World Bank's MFMod Frameworkin Python with Modelflow*. It is comprised of the data set used in the report and from which all the tables and charts are derived, the Jupyter Notebooks that perform the simulations and generate the graphics and tables in the report as well as a python build script that runs all of the Jupyter notebooks and outputs the Charts and Tables and binds them into a PDF which is the actual book.  The Jupyter Notebooks can be run independently or in the python build program.
+This package includes information needed to reproduce the Charts and Tables in *The World Bank's MFMod Frameworkin Python with Modelflow*. It is comprised of the data set used in the report and from which all the tables and charts are derived, the Jupyter Notebooks that perform the simulations and generate the graphics and tables in the report as well as a python build script that runs all of the Jupyter notebooks and outputs the Charts and Tables and binds them into a PDF which is the actual book.  The Jupyter Notebooks can be run independently or in the python build program.
 
 ## Data Availability
 
-The data used for this report are drawn from the MFMod modelling system Burns et al. (2019), and are being released simultaneously with the report on the [World Bank's github site](https://github.com/worldbank/MFMod-ModelFlow). 
+The data used for this report are drawn from the MFMod modelling system [Burns et al. (2019)](https://documents1.worldbank.org/curated/en/294311565103938951/pdf/The-World-Bank-Macro-Fiscal-Model-Technical-Description.pdf), and are being released simultaneously with the report on the [World Bank's github site](https://github.com/worldbank/MFMod-ModelFlow). 
 
 ### Data Sources
 
@@ -28,10 +28,9 @@ I certify that the author(s) of the manuscript have legitimate access to and per
 
 ## Instructions for Replicators
 
-To run the package, replicators will need to have Python version 3.10 installed, and the ModelFlow Package. To build the PDF file from the package using the build.py program they will also need to have installed the Jupyter Book package and a version of Latex.
+To run the package, replicators will need to have anaconda Python version 3.13 installed, and the ModelFlow Package. To build the PDF file from the package using the build.py program they will also need to have installed the Jupyter Book package and a version of Latex.
 
 The book and all files were tested using Miniconda and Anaconda versions of ModelFlow under windows. Full instructions on the installation of ModelFlow are included in Chapter 3 of the report, the technical details of which are reproduced in the [Requirements](#requirements) section below.
-
 
 
 ## List of Exhibits
@@ -57,14 +56,14 @@ The provided code reproduces:
 
 ### Computational Requirements
 
-Although it is not strictly necessary, it is a good idea to create a specific python environment[^environ] for `ModelFlow`, this will be a space where the `ModelFlow` package itself will be installed and in which the specific dependencies on which `ModelFlow` relies will be installed. Other environments may require packages that conflict with `ModelFlow`. Declaring a separate environment for `ModelFlow` will help prevent conflicts between different versions of packages from arising.
+Although it is not strictly necessary, it is a good idea to create a specific python environment for `ModelFlow`, this will be a space where the `ModelFlow` package itself will be installed and in which the specific dependencies on which `ModelFlow` relies will be installed. Other environments may require packages that conflict with `ModelFlow`. Declaring a separate environment for `ModelFlow` will help prevent conflicts between different versions of packages from arising.
 
-ModelFlow will install a range of dependencies, including Jupter Notebook 6.  Modelflow runs under Notebook 7 but the book and reproducibility package were built and tested under Jupyter Notebook 6.
+ModelFlow will install a range of dependencies, including Jupter Notebook 6, pandas and matplotlib.  Modelflow runs under Notebook 7 but the book and reproducibility package were built and tested under Jupyter Notebook 6.
 
 ### Software Requirements
 
   
-- **Python 3.12.6**
+- **Python 3.13**
   - Modelflow 2.58
   - Jupyter Notebook 6
 - Jupyter Book
@@ -72,25 +71,14 @@ ModelFlow will install a range of dependencies, including Jupter Notebook 6.  Mo
 
 #### Installing Python 
 
-MiniConda providing only the essential components for running python.
-
-A guide for installing **MiniConda under windows** can be found [here](https://www.anaconda.com/docs/getting-started/miniconda/main). 
+MiniConda is a minimalist implementation of python. A guide for installing **MiniConda under windows** can be found [here](https://www.anaconda.com/docs/getting-started/miniconda/main). 
 
 
-#### Installing Modelflow and Jupyter Book
+#### Installing Modelflow 
 
-The commands below create a `ModelFlow` environment and install into it the `ModelFlow` package and several supporting packages that are useful when using `ModelFlow` in conjunction with `EViews` or `Jupyter Notebook`. 
-
-Also the [Jupyter book library](https://jupyterbook.org/) is installed. This allows the replicator to generate the full book. 
+The commands below create a `ModelFlow` environment under `miniconda` or `anaconda`  and install into it the `ModelFlow` package and several supporting packages that are needed when using `ModelFlow` in conjunction with `Jupyter Notebook`. 
 
 The commands should be cut and paste (either one by one, or as a block) into the  Anaconda command prompt environment. 
-
-To open the Anaconda/MiniConda prompt:
-
-1. In the windows command prompt, type Anaconda (or Miniconda)
-2. If Anaconda/Miniconda have been successfully installed an icon entitled Anaconda(Minoconda) Prompt will be available in windows. Click on this.
-3. This will open a python command shell where the commands listed below can be entered.
-
 
 ```
 conda create -n ModelFlow -c ibh -c conda-forge ModelFlow_book jupyter-book -y
@@ -104,6 +92,9 @@ jupyter nbextension enable toc2/main
 jupyter nbextension enable varInspector/main
 
 ```
+#### Installing Jupyter Book
+
+The [Jupyter book library](https://jupyterbook.org/) is needed if the replicator wishes to generate the full publication, text as well as figures and tables. 
 
 #### Installing Tex
 
@@ -111,17 +102,14 @@ To generate the book or the example report in PDF a latex package must also be i
 [TexLive](https://tug.org/texlive/) can be used and have been tested with the package. Installation instructions are provided on the linked sites.
 
 
-
-
 ### Memory and Runtime and Storage Requirements
-
 
 The build.py program should run and compile on a Windows 11 machine with an Intel 5 processor with 32G memory installed within 15 minutes.
 
 Total storage required (after installation of python and required packages) is less than 500MB.
 
 
-## Code Description
+## Replication Code Description
 
 This project contains a set of Python scripts and Jupyter Notebooks that together replicate the analyses and figures presented in the  book.
 
@@ -129,7 +117,7 @@ This project contains a set of Python scripts and Jupyter Notebooks that togethe
 
 Once the Python environment has been set up, you are ready to replicate the book. All necessary files for replication are contained in the `mfbook.zip` archive.
 
-Unzip this file to extract the full project structure. The core content is organized into a series of Jupyter Notebooks (`.ipynb` files), which are located in subfolders under:
+Unzip this file to extract the full project structure. The core content is organized into a series of Jupyter Notebooks (`.ipynb` files), which are located in (subfolders)[#Folder Structure] under:
 
 ```
 mfbook/content/
@@ -145,7 +133,9 @@ To build the Jupyter Book, open an **Anaconda Prompt** and activate the relevant
 conda activate ModelFlow
 ```
 
-The main script used to compile the book is `build.py`. This script executes all the Jupyter Notebooks, generating all tables and charts used in the report. Note that interactive widgets are **not** included in the final output; instead, screenshots of the widgets are shown. You can run the corresponding notebook manually to interact with the widget.
+`navigate to the directory where the replication package has been unzipped.`
+
+The main script used to compile the book is `build.py`. This script executes all the Jupyter Notebooks, generating all tables and charts used in the report. Note that interactive widgets are **not** included in the final output; instead, screenshots of the widgets are shown. You can run the corresponding notebook manually to interact with the widget and verify that the screenshot correspond to elements of the widget displayed.
 
 - `build.py`: Executes all notebooks, compiles them to LaTeX, and generates an HTML version of the book located in:
 
