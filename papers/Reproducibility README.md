@@ -23,7 +23,7 @@ The data used for this report are drawn from the MFMod modelling system [Burns e
 
 ### Statement about Rights
 
-I certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
+We certify that the author(s) of the manuscript have legitimate access to and permission to use the data used in this manuscript.
 
 
 ## Instructions for Replicators
