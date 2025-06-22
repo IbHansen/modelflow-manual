@@ -774,6 +774,28 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
             result.append(NotebookInfo(path=path, heading=f"[Error reading notebook - {e}]", short_path="[error]"))
 
     return result
+
+
+from typing import List
+
+def headings_to_markdown_table(notebook_infos: List['NotebookInfo']) -> str:
+    """
+    Create a Markdown table from a list of NotebookInfo entries.
+
+    Columns: name | path | note
+    """
+    lines = [
+        "| name | path | note |",
+        "|------|------|------|"
+    ]
+
+    for info in notebook_infos:
+        name = info.heading.replace('|', '\\|')  # Escape pipe characters
+        path = info.short_path
+        lines.append(f"| {name} | {path} |  |")
+
+    return "\n".join(lines)
+
             
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
