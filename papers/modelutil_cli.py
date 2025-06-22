@@ -15,7 +15,7 @@ from glob import glob
 import webbrowser
 from subprocess import run
 import webbrowser as wb
-from pathlib import Path
+from pathlib import Path, PosixPath
 from shutil import copy, copytree, copy2
 import argparse
 import re
@@ -689,6 +689,91 @@ def make_replication():
                                       clear_index=False)
             # copy_png_files(toc_files, clean_folder)
             zip_directory_with_pathlib(clean_folder, 'mfbook/replication/mfbook.zip')
+
+def extract_headings(toc_files):
+    """
+    Extract the first markdown heading from each notebook using nbformat.
+    
+    Parameters:
+    toc_files (list of str): Paths to Jupyter notebook files.
+    
+    Returns:
+    list of tuples: Each tuple contains (path, heading), where heading is the
+                    first line in a markdown cell starting with '#'.
+    """
+    result = []
+
+    for path in toc_files:
+        if not path.is_file() or path.suffix != ".ipynb":
+            print(str(path), "[Invalid or not a notebook file]")
+            continue
+
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                notebook = nbf.read(f, as_version=4)
+
+            heading = None
+            for cell in notebook.cells:
+                if cell.cell_type == "markdown":
+                    for line in cell.source.splitlines():
+                        stripped_line = line.lstrip()
+                        if stripped_line.startswith("#"):
+                            heading = stripped_line.strip()[2:]
+                            break
+                    if heading:
+                        break
+
+            result.append((path, heading if heading else "[No heading found]"))
+        except Exception as e:
+            result.append((path, f"[Error reading notebook - {e}]"))
+
+    return result
+
+from typing import NamedTuple, List
+class NotebookInfo(NamedTuple):
+    path: Path
+    heading: str
+    short_path: str
+
+def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
+    """
+    Extract the first markdown heading from each notebook using nbformat.
+    
+    Parameters:
+    toc_files (list of Path): Paths to Jupyter notebook files.
+    
+    Returns:
+    list of NotebookInfo: Each entry contains (full path, heading, short path without 'mfbook/content/').
+    """
+    result = []
+
+    for path in toc_files:
+        if not path.is_file() or path.suffix != ".ipynb":
+            print(str(path), "[Invalid or not a notebook file]")
+            continue
+
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                notebook = nbf.read(f, as_version=4)
+
+            heading = None
+            for cell in notebook.cells:
+                if cell.cell_type == "markdown":
+                    for line in cell.source.splitlines():
+                        stripped_line = line.lstrip()
+                        if stripped_line.startswith("#"):
+                            heading = stripped_line.strip()[2:]  # Remove '# ' prefix
+                            break
+                    if heading:
+                        break
+
+            short_path = str(path.relative_to("mfbook/content"))
+            #short_path = PosixPath(path.relative_to("mfbook/content")).as_posix()
+            result.append(NotebookInfo(path=path, heading=heading if heading else "[No heading found]", short_path=short_path))
+        except Exception as e:
+            result.append(NotebookInfo(path=path, heading=f"[Error reading notebook - {e}]", short_path="[error]"))
+
+    return result
             
 # Call the function to start the notebooks
 # start_notebooks(notebook_list)
@@ -786,6 +871,8 @@ if __name__ == '__main__':
  #%% run   
      toc_files = get_toc_files(args.bookdir)
      all_notebooks = get_all_notebooks()
+     
+     
      if 0:
          insert_cell(toc_files) 
      
