@@ -102,6 +102,48 @@ def get_toc_files(fileloc=bookdir):
 
     return file_list
 
+from pathlib import Path
+import yaml
+
+def get_toc_files_level(fileloc):
+    """
+    Extract all filenames and their levels from a _toc.yml file.
+    
+    Returns a list of tuples: (Path to file, level)
+    Level 1 = chapter, Level 2 = section, etc.
+    """
+    with open(Path(fileloc) / '_toc.yml', 'r', encoding='utf-8') as f:
+        toc_data = yaml.safe_load(f)
+
+    file_list = []
+
+    def make_file_path(f):
+        f_name = f if f.endswith('.md') else f + '.ipynb'
+        return Path(fileloc) / f_name
+
+    def process_toc_entries(entries, level):
+        for entry in entries:
+            if 'file' in entry:
+                filename = make_file_path(entry['file'])
+                file_list.append((filename, level if filename.exists() else -1))
+
+            if 'chapters' in entry:
+                process_toc_entries(entry['chapters'], level + 1)
+            if 'sections' in entry:
+                process_toc_entries(entry['sections'], level + 1)
+
+    # Add root file at level 0
+    root_file = make_file_path(toc_data['root'])
+    file_list.append((root_file, 0 if root_file.exists() else -1))
+
+    # Process chapters (normally in 'parts' or directly in root)
+    if 'parts' in toc_data:
+        for part in toc_data['parts']:
+            process_toc_entries(part.get('chapters', []), level=1)
+    elif 'chapters' in toc_data:
+        process_toc_entries(toc_data['chapters'], level=1)
+
+    return file_list
 
 
 
@@ -745,6 +787,8 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
     Returns:
     list of NotebookInfo: Each entry contains (full path, heading, short path without 'mfbook/content/').
     """
+    from urllib.parse import quote
+
     result = []
 
     for path in toc_files:
@@ -767,9 +811,11 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
                     if heading:
                         break
 
+            safe_path = quote(str(path).replace('\\','/'))
             short_path = str(path.relative_to("mfbook/content"))
             #short_path = PosixPath(path.relative_to("mfbook/content")).as_posix()
-            result.append(NotebookInfo(path=path, heading=heading if heading else "[No heading found]", short_path=short_path))
+            html_text = f'<a href="{safe_path}" target="_blank">{heading if heading else "[No heading found]"}</a>'
+            result.append(NotebookInfo(path=path, heading=html_text, short_path=f'{short_path}'))
         except Exception as e:
             result.append(NotebookInfo(path=path, heading=f"[Error reading notebook - {e}]", short_path="[error]"))
 
@@ -789,7 +835,7 @@ def headings_to_markdown_table() -> str:
 
     lines = [
         "| name | path | note |",
-        "|------|------|------|"
+        "|:------|:------|------|"
     ]
 
     for info in notebook_infos:

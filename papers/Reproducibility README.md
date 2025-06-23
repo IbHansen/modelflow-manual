@@ -55,32 +55,31 @@ The provided code reproduces:
 **List of Notebooks**
 
 | name | path | note |
-|------|------|------|
-| Foreword | introduction.ipynb |  |
-| Introduction | 01_Introduction\Introduction.ipynb |  |
-| Macrostructural models | 02_MacrostructuralModels\MacroStructuralModels.ipynb |  |
-| Installation | 03_Installation\InstallingModelFlow.ipynb |  |
-| Installation of Python | 03_Installation\InstallingPython.ipynb |  |
-| Installation of  ```ModelFlow``` | 03_Installation\InstallingModelFlowpackage.ipynb |  |
-| Updating ModelFlow | 03_Installation\UpdateModelFlow.ipynb |  |
-| Introduction to  Jupyter Notebook | 04_PythonEssentials\Intro_Jupyter_notebook.ipynb |  |
-| Some Python basics | 04_PythonEssentials\PythonBasics.ipynb |  |
-| Introduction to Pandas,  Series and dataframes | 04_PythonEssentials\PandasDataFrames.ipynb |  |
-| ModelFlow and Pandas DataFrames | 04_PythonEssentials\Modelflow and Dataframes.ipynb |  |
-| The `.upd()` method returns a `DataFrame` with updated variables. | 04_PythonEssentials\UpdateCommand.ipynb |  |
-|  The `.mfcalc()` method. Return a dataframe with transformed variables. | 04_PythonEssentials\mfcalc.ipynb |  |
-| Using ```ModelFlow``` with World Bank models | 05_WBModels\AccessingWBModels.ipynb |  |
-| Working with a World Bank Model under ModelFlow | 05_WBModels\WorkingwWBModels.ipynb |  |
-| Equations in MFMod and `ModelFlow` | 05_WBModels\BehavioralEquations.ipynb |  |
-| Scenario analysis | 05_WBModels\ScenarioAnalysis.ipynb |  |
-| More complex scenarios | 05_WBModels\MoreComplexScenarios.ipynb |  |
-| A simulation that targets a specific outcome | 05_WBModels\Targeting.ipynb |  |
-| Report writing and scenario results | 05_WBModels\ReportWriting.ipynb |  |
-| Model structure and causal chains | 06_ModelAnalytics\ModelStructure.ipynb |  |
-| Analyzing the impact of a shock | 06_ModelAnalytics\AttributionSomeFeatures.ipynb |  |
-| Getting Help | 07_MoreFeatures\GettingHelp.ipynb |  |
-| Modelflow methods reference | 07_MoreFeatures\ModelFlowReference.ipynb |  |
-
+|:------|:------|------|
+| <a href="mfbook/content/introduction.ipynb" target="_blank">Foreword</a> | introduction.ipynb |  |
+| <a href="mfbook/content/01_Introduction/Introduction.ipynb" target="_blank">Introduction</a> | 01_Introduction\Introduction.ipynb |  |
+| <a href="mfbook/content/02_MacrostructuralModels/MacroStructuralModels.ipynb" target="_blank">Macrostructural models</a> | 02_MacrostructuralModels\MacroStructuralModels.ipynb |  |
+| <a href="mfbook/content/03_Installation/InstallingModelFlow.ipynb" target="_blank">Installation</a> | 03_Installation\InstallingModelFlow.ipynb |  |
+| <a href="mfbook/content/03_Installation/InstallingPython.ipynb" target="_blank">Installation of Python</a> | 03_Installation\InstallingPython.ipynb |  |
+| <a href="mfbook/content/03_Installation/InstallingModelFlowpackage.ipynb" target="_blank">Installation of  ```ModelFlow```</a> | 03_Installation\InstallingModelFlowpackage.ipynb |  |
+| <a href="mfbook/content/03_Installation/UpdateModelFlow.ipynb" target="_blank">Updating ModelFlow</a> | 03_Installation\UpdateModelFlow.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/Intro_Jupyter_notebook.ipynb" target="_blank">Introduction to  Jupyter Notebook</a> | 04_PythonEssentials\Intro_Jupyter_notebook.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/PythonBasics.ipynb" target="_blank">Some Python basics</a> | 04_PythonEssentials\PythonBasics.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/PandasDataFrames.ipynb" target="_blank">Introduction to Pandas,  Series and dataframes</a> | 04_PythonEssentials\PandasDataFrames.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/Modelflow%20and%20Dataframes.ipynb" target="_blank">ModelFlow and Pandas DataFrames</a> | 04_PythonEssentials\Modelflow and Dataframes.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/UpdateCommand.ipynb" target="_blank">The `.upd()` method returns a `DataFrame` with updated variables.</a> | 04_PythonEssentials\UpdateCommand.ipynb |  |
+| <a href="mfbook/content/04_PythonEssentials/mfcalc.ipynb" target="_blank"> The `.mfcalc()` method. Return a dataframe with transformed variables.</a> | 04_PythonEssentials\mfcalc.ipynb |  |
+| <a href="mfbook/content/05_WBModels/AccessingWBModels.ipynb" target="_blank">Using ```ModelFlow``` with World Bank models</a> | 05_WBModels\AccessingWBModels.ipynb |  |
+| <a href="mfbook/content/05_WBModels/WorkingwWBModels.ipynb" target="_blank">Working with a World Bank Model under ModelFlow</a> | 05_WBModels\WorkingwWBModels.ipynb |  |
+| <a href="mfbook/content/05_WBModels/BehavioralEquations.ipynb" target="_blank">Equations in MFMod and `ModelFlow`</a> | 05_WBModels\BehavioralEquations.ipynb |  |
+| <a href="mfbook/content/05_WBModels/ScenarioAnalysis.ipynb" target="_blank">Scenario analysis</a> | 05_WBModels\ScenarioAnalysis.ipynb |  |
+| <a href="mfbook/content/05_WBModels/MoreComplexScenarios.ipynb" target="_blank">More complex scenarios</a> | 05_WBModels\MoreComplexScenarios.ipynb |  |
+| <a href="mfbook/content/05_WBModels/Targeting.ipynb" target="_blank">A simulation that targets a specific outcome</a> | 05_WBModels\Targeting.ipynb |  |
+| <a href="mfbook/content/05_WBModels/ReportWriting.ipynb" target="_blank">Report writing and scenario results</a> | 05_WBModels\ReportWriting.ipynb |  |
+| <a href="mfbook/content/06_ModelAnalytics/ModelStructure.ipynb" target="_blank">Model structure and causal chains</a> | 06_ModelAnalytics\ModelStructure.ipynb |  |
+| <a href="mfbook/content/06_ModelAnalytics/AttributionSomeFeatures.ipynb" target="_blank">Analyzing the impact of a shock</a> | 06_ModelAnalytics\AttributionSomeFeatures.ipynb |  |
+| <a href="mfbook/content/07_MoreFeatures/GettingHelp.ipynb" target="_blank">Getting Help</a> | 07_MoreFeatures\GettingHelp.ipynb |  |
+| <a href="mfbook/content/07_MoreFeatures/ModelFlowReference.ipynb" target="_blank">Modelflow methods reference</a> | 07_MoreFeatures\ModelFlowReference.ipynb |  |
 ## Requirements
 
 ### Computational Requirements
@@ -202,7 +201,7 @@ Reproducibility README.md
 build.py
 modelutil_cli.py
 mfbook
-  ├─  _config.yml │ 
+  ├──  _config.yml │ 
   ├─  _toc.yml │ 
   ├── genindex.md
   ├── Reference.md
