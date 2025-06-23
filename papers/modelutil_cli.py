@@ -778,12 +778,15 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
 
 from typing import List
 
-def headings_to_markdown_table(notebook_infos: List['NotebookInfo']) -> str:
+def headings_to_markdown_table() -> str:
     """
     Create a Markdown table from a list of NotebookInfo entries.
 
     Columns: name | path | note
     """
+    toc_files = get_toc_files('mfbook')
+    notebook_infos = extract_headings(toc_files)
+
     lines = [
         "| name | path | note |",
         "|------|------|------|"
@@ -794,7 +797,8 @@ def headings_to_markdown_table(notebook_infos: List['NotebookInfo']) -> str:
         path = info.short_path
         lines.append(f"| {name} | {path} |  |")
 
-    return "\n".join(lines)
+    res =  "\n".join(lines)
+    return res
 
             
 # Call the function to start the notebooks

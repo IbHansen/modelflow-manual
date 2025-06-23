@@ -52,6 +52,35 @@ The provided code reproduces:
 | Table 1      | Balancetable.xls | 02_analysis.do (line 23) | Found in Outputs/tables/main |
 | Figure 1     | Regresults.png   | 02_analysis.do (line 40) | Found in Outputs/figures/annex, Image Format: Portable Network Graphic (PNG), Bits Per Pixel: 32, Color: Truecolour with alpha, Dimensions: 970 x 544, Interlaced: Yes, XResolution: 144, YResolution: 144 |
 
+**List of Notebooks**
+
+| name | path | note |
+|------|------|------|
+| Foreword | introduction.ipynb |  |
+| Introduction | 01_Introduction\Introduction.ipynb |  |
+| Macrostructural models | 02_MacrostructuralModels\MacroStructuralModels.ipynb |  |
+| Installation | 03_Installation\InstallingModelFlow.ipynb |  |
+| Installation of Python | 03_Installation\InstallingPython.ipynb |  |
+| Installation of  ```ModelFlow``` | 03_Installation\InstallingModelFlowpackage.ipynb |  |
+| Updating ModelFlow | 03_Installation\UpdateModelFlow.ipynb |  |
+| Introduction to  Jupyter Notebook | 04_PythonEssentials\Intro_Jupyter_notebook.ipynb |  |
+| Some Python basics | 04_PythonEssentials\PythonBasics.ipynb |  |
+| Introduction to Pandas,  Series and dataframes | 04_PythonEssentials\PandasDataFrames.ipynb |  |
+| ModelFlow and Pandas DataFrames | 04_PythonEssentials\Modelflow and Dataframes.ipynb |  |
+| The `.upd()` method returns a `DataFrame` with updated variables. | 04_PythonEssentials\UpdateCommand.ipynb |  |
+|  The `.mfcalc()` method. Return a dataframe with transformed variables. | 04_PythonEssentials\mfcalc.ipynb |  |
+| Using ```ModelFlow``` with World Bank models | 05_WBModels\AccessingWBModels.ipynb |  |
+| Working with a World Bank Model under ModelFlow | 05_WBModels\WorkingwWBModels.ipynb |  |
+| Equations in MFMod and `ModelFlow` | 05_WBModels\BehavioralEquations.ipynb |  |
+| Scenario analysis | 05_WBModels\ScenarioAnalysis.ipynb |  |
+| More complex scenarios | 05_WBModels\MoreComplexScenarios.ipynb |  |
+| A simulation that targets a specific outcome | 05_WBModels\Targeting.ipynb |  |
+| Report writing and scenario results | 05_WBModels\ReportWriting.ipynb |  |
+| Model structure and causal chains | 06_ModelAnalytics\ModelStructure.ipynb |  |
+| Analyzing the impact of a shock | 06_ModelAnalytics\AttributionSomeFeatures.ipynb |  |
+| Getting Help | 07_MoreFeatures\GettingHelp.ipynb |  |
+| Modelflow methods reference | 07_MoreFeatures\ModelFlowReference.ipynb |  |
+
 ## Requirements
 
 ### Computational Requirements
