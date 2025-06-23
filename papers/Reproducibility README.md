@@ -177,8 +177,7 @@ conda activate ModelFlow
 jupyter notebook "Reproducibility README.ipynb"
 ```
 
-
-
+Working from this Jupyter Notebook, each notebook listed above can then be clicked upon and executed directly.
 
 ### Running Jupyter Notebooks Individually
 
