@@ -166,11 +166,24 @@ If LaTeX is not installed on your system, the PDF will not be generated.
 
 ---
 
+### Running from Reproducibility README.ipynb
+
+You may also run each notebook manually using Jupyter. To launch the Jupyter Notebook interface, enter the following in the Anaconda Prompt:
+
+```
+conda activate ModelFlow
+jupyter notebook "Reproducibility README.ipynb"
+```
+
+
+
+
 ### Running Jupyter Notebooks Individually
 
 You may also run each notebook manually using Jupyter. To launch the Jupyter Notebook interface, enter the following in the Anaconda Prompt:
 
 ```
+conda activate ModelFlow
 jupyter notebook
 ```
 
@@ -183,6 +196,7 @@ From there, navigate to `mfbook/content/` and select the notebook you wish to ru
 
 ```
 Reproducibility README.md
+Reproducibility README.ipynb
 build.py
 modelutil_cli.py
 mfbook

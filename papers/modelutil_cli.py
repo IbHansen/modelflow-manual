@@ -717,6 +717,7 @@ def make_replication():
                 Path('build.py'),
                 Path('modelutil_cli.py'),
                 Path('Reproducibility README.md'),
+                Path('Reproducibility README.ipynb'),
                 Path('mfbook/references.bib'),
                 Path('mfbook/_toc.yml'),
               #  Path('mfbook/mfinstall.cmd'),
