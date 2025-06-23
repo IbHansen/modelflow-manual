@@ -777,7 +777,7 @@ class NotebookInfo(NamedTuple):
     heading: str
     short_path: str
 
-def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
+def extract_headings(toc_files) -> List[NotebookInfo]:
     """
     Extract the first markdown heading from each notebook using nbformat.
     
@@ -790,8 +790,8 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
     from urllib.parse import quote
 
     result = []
-
-    for path in toc_files:
+    chapter = 0 
+    for path,level in toc_files:
         if not path.is_file() or path.suffix != ".ipynb":
             print(str(path), "[Invalid or not a notebook file]")
             continue
@@ -810,7 +810,18 @@ def extract_headings(toc_files: List[Path]) -> List[NotebookInfo]:
                             break
                     if heading:
                         break
-
+            if level==1:
+                chapter = chapter + 1
+                section = 0
+                heading = (f'{chapter:4} {heading}')
+            elif level == 2:
+                section = section + 1 
+                heading = (f'{chapter:4}.{section:1}    {heading}')  
+            elif level == 0:
+                heading == heading  
+            else:
+                breakpoint() 
+                
             safe_path = quote(str(path).replace('\\','/'))
             short_path = str(path.relative_to("mfbook/content"))
             #short_path = PosixPath(path.relative_to("mfbook/content")).as_posix()
@@ -830,7 +841,7 @@ def headings_to_markdown_table() -> str:
 
     Columns: name | path | note
     """
-    toc_files = get_toc_files('mfbook')
+    toc_files = get_toc_files_level('mfbook')
     notebook_infos = extract_headings(toc_files)
 
     lines = [
