@@ -730,7 +730,6 @@ def make_replication():
                                       clear_output=True,
                                       clear_widgets=True,
                                       clear_index=False)
-            # copy_png_files(toc_files, clean_folder)
             zip_directory_with_pathlib(clean_folder, 'mfbook/replication/mfbook.zip')
 
 def extract_headings(toc_files):
