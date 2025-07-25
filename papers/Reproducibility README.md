@@ -79,7 +79,7 @@ ModelFlow will install a range of dependencies, including Jupter Notebook 6, pan
 
   
 - **Python 3.13**
-  - Modelflow 2.58
+  - Modelflow 2.59
   - Jupyter Notebook 6
 - Jupyter Book
 - MikTex or TexLive
@@ -191,6 +191,11 @@ jupyter notebook
 From there, navigate to `mfbook/content/` and select the notebook you wish to run.
 
 
+> **Note:** You should run  
+> [11 Scenario analysis](mfbook/content/05_WBModels/ScenarioAnalysis.ipynb)  
+> **before**  
+> [14 Report writing and scenario results](mfbook/content/05_WBModels/ReportWriting.ipynb),  
+> as it produces a file required by the report writing step.
 
 ## Folder Structure
 
