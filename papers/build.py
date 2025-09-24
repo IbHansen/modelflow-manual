@@ -563,8 +563,8 @@ if 'copyibtest' in options:
         
 if 'copywb' in options:
     try:
-        (destination := Path(r'_to_publication/{bookdir}')).mkdir(parents=True, exist_ok=True)
-        (destinationjn := Path(r'_to_publication/{bookdir}/jn')).mkdir(parents=True, exist_ok=True)
+        (destination := Path(fr'{bookdir}/_to_publication/')).mkdir(parents=True, exist_ok=True)
+        (destinationjn := Path(fr'{bookdir}/_to_publication/jn')).mkdir(parents=True, exist_ok=True)
     except:
         print('you are probably not Ib, so this is impossible')
     else:     
