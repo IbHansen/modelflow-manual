@@ -700,7 +700,7 @@ def zip_directory_with_pathlib(directory_path, output_zip):
 
     print(f"All files in {directory_path} have been zipped into {output_zip}")
 
-def make_replication():
+def make_replication(zip=True,destinationdir = 'mfbook/replication/mfbook'):
         toc_files = get_toc_files('mfbook')
 
         image_pairs = (search(toc_files,r'\b[\w\-]+\.png\b',notfound=False,returnfound=True,silent=0)
@@ -725,12 +725,20 @@ def make_replication():
 
                 Path('mfbook/_config.yml'),
             ]
-            copy_files_with_structure(toc_files + extra_files + image_paths,
+            if zip:
+                copy_files_with_structure(toc_files + extra_files + image_paths,
                                       clean_folder,
                                       clear_output=True,
                                       clear_widgets=True,
                                       clear_index=False)
-            zip_directory_with_pathlib(clean_folder, 'mfbook/replication/mfbook.zip')
+                zip_directory_with_pathlib(clean_folder,destinationdir+'.zip' )
+            else:
+                copy_files_with_structure(toc_files + extra_files + image_paths,
+                                      destinationdir,
+                                      clear_output=True,
+                                      clear_widgets=True,
+                                      clear_index=False)
+                
 
 def extract_headings(toc_files):
     """

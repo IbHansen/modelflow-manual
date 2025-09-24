@@ -549,5 +549,17 @@ if 'copy' in options:
     else:     
         copytree(buildhtml,destination,dirs_exist_ok=True )
         print('Remember to push the repo ')
-     
+
+if 'copywb' in options:
+    try:
+        (destination := Path(cd \
+                             )).mkdir(parents=True, exist_ok=True)
+        (destinationjn := Path(r'C:/modelbook/IbHansen.github.io/MFMod-ModelFlow/jn')).mkdir(parents=True, exist_ok=True)
+    except:
+        print('you are probably not Ib, so this is impossible')
+    else:     
+        copytree(buildhtml,destination,dirs_exist_ok=True )
+        mu.make_replication(zip=False,destinationdir=destinationjn)
+        print('Remember to push the repo ')
+        
     
