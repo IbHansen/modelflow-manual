@@ -550,7 +550,7 @@ if 'copy' in options:
         copytree(buildhtml,destination,dirs_exist_ok=True )
         print('Remember to push the repo ')
 
-if 'copywb' in options:
+if 'copyibtest' in options:
     try:
         (destination := Path(r'C:/modelbook/IbHansen.github.io/MFMod-ModelFlow')).mkdir(parents=True, exist_ok=True)
         (destinationjn := Path(r'C:/modelbook/IbHansen.github.io/MFMod-ModelFlow/jn')).mkdir(parents=True, exist_ok=True)
@@ -561,4 +561,14 @@ if 'copywb' in options:
         mu.make_replication(zip=False,destinationdir=destinationjn)
         print('Remember to push the repo ')
         
+if 'copywb' in options:
+    try:
+        (destination := Path(r'_to_publication/{bookdir}')).mkdir(parents=True, exist_ok=True)
+        (destinationjn := Path(r'_to_publication/{bookdir}/jn')).mkdir(parents=True, exist_ok=True)
+    except:
+        print('you are probably not Ib, so this is impossible')
+    else:     
+        copytree(buildhtml,destination,dirs_exist_ok=True )
+        mu.make_replication(zip=False,destinationdir=destinationjn)
+        print('Remember to push the repo ')
     
