@@ -552,8 +552,7 @@ if 'copy' in options:
 
 if 'copywb' in options:
     try:
-        (destination := Path(cd \
-                             )).mkdir(parents=True, exist_ok=True)
+        (destination := Path(r'C:/modelbook/IbHansen.github.io/MFMod-ModelFlow')).mkdir(parents=True, exist_ok=True)
         (destinationjn := Path(r'C:/modelbook/IbHansen.github.io/MFMod-ModelFlow/jn')).mkdir(parents=True, exist_ok=True)
     except:
         print('you are probably not Ib, so this is impossible')
