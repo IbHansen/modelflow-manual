@@ -549,8 +549,8 @@ document.write(`
 <p>Take a variable y that is a function of two other variables a and b.  In the model, the relationship might be written as:</p>
 <p><span class="math notranslate nohighlight">\(y = f(a,b)\)</span></p>
 <p>If there are two sets of results designated with a subscript 0 and 1, these can be written as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2534bb4-3564-48db-a136-9c4bb0cf3508">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-c2534bb4-3564-48db-a136-9c4bb0cf3508" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f47d1706-8978-4770-8eb8-ff01d669c647">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-f47d1706-8978-4770-8eb8-ff01d669c647" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 y_0 = f(a_0,b_0)\\
 y_1 = f(a_1,b_1)
 \end{eqnarray}\]</div>
@@ -559,20 +559,20 @@ y_1 = f(a_1,b_1)
 \underbrace{\Delta b \dfrac{\partial {f}}{\partial{b}}(a,b)}_{\Omega b}+Residual\)</span></p>
 <p>The first expression can be called <span class="math notranslate nohighlight">\(\Omega_a\)</span> or the contribution of changes in a to changes in y, and the second <span class="math notranslate nohighlight">\(\Omega_b\)</span>,  or the contribution of changes in b to changes in y.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ModelFlow</span></code> performs a numerical approximation of <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> by performing two runs of the <span class="math notranslate nohighlight">\(f()\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a8b95eac-bff1-4aa4-a0fb-05d9c7795e3e">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-a8b95eac-bff1-4aa4-a0fb-05d9c7795e3e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}  
+<div class="amsmath math notranslate nohighlight" id="equation-6ca53813-14f8-4fe7-8cea-53e0197026db">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-6ca53813-14f8-4fe7-8cea-53e0197026db" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}  
 y_0&amp;=&amp;f(a_{0},b_{0}) \\
 y_1&amp;=&amp;f(a_0+\Delta a,b_{0}+ \Delta b)
 \end{eqnarray}\]</div>
 <p>and calculates <span class="math notranslate nohighlight">\(\Omega_a\)</span> and <span class="math notranslate nohighlight">\(\Omega_b\)</span> as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a93709c-2d9c-4937-9cc5-4a65c744df19">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-3a93709c-2d9c-4937-9cc5-4a65c744df19" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}  
+<div class="amsmath math notranslate nohighlight" id="equation-2ba4c64a-a5ee-438a-93b6-59ec6163d786">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-2ba4c64a-a5ee-438a-93b6-59ec6163d786" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}  
 \Omega a&amp;=&amp;f(a_1,b_1 )-f(a_1-\Delta a,b_1) \\
 \Omega b&amp;=&amp;f(a_1,b_1 )-f(a_1,b_1-\Delta  b)
 \end{eqnarray}\]</div>
 <p>And:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f576095-80e7-4cee-b784-f3e2ee6e7884">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-2f576095-80e7-4cee-b784-f3e2ee6e7884" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-eb277a7f-33ce-4f23-b02f-cb6d3ea5a500">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eb277a7f-33ce-4f23-b02f-cb6d3ea5a500" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 residual = \Omega a + \Omega b -(y_1 - y_0) 
 \end{eqnarray}\]</div>
 <p>If the model is fairly linear, the residual will be small.</p>
