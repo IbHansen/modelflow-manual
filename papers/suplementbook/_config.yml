@@ -2,17 +2,17 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Some additional draft (very) material on The World Bank's MFMod Framework in Python with Modelflow
-author: Andrew Burns and Ib Hansen
-copyright: "World Bank. 2023"
+author: Ib Hansen
+copyright: "World Bank. 2025"
 #logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: off
+  # execute_notebooks: off
   # execute_notebooks: force
-  # execute_notebooks: cache
-  timeout: 200
+  execute_notebooks: cache
+  timeout: 2000
 
   
 only_build_toc_files: True 
@@ -35,6 +35,9 @@ sphinx:
   config:
     bibtex_reference_style: author_year
     bibtex_default_style: plain
+    latex_show_urls: inline
+  extra_extensions:
+    - sphinx.ext.mathjax  
 
 bibtex_bibfiles:
     - references.bib
@@ -52,7 +55,8 @@ parse:
   myst_enable_extensions:
    # don't forget to list any other extensions you want enabled,
    # including those that are enabled by default!
-   - amsmath
-   - dollarmath
-   - colon_fence
-  
+    - amsmath
+    - dollarmath
+    - colon_fence
+    - substitution #allows the definition of variables, whose values can be inserted into the nmarkdown fields of a jupyter notebook when compiled with Jupyter Book
+

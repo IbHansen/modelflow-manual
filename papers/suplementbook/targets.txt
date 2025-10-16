@@ -1,0 +1,6 @@
+References in this jupyter book
+Reference targets in suplementbook
+From (xxx)=
+
+
+And from index names 
