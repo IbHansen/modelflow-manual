@@ -8,7 +8,7 @@ options:
   numbered: true
 chapters:
  - file: content/specification/model specification
- - file: content/stability/stability introduction
+# - file: content/stability/stability introduction
 # - file: content/stability/EigenValues
 # - file: content/onboard Excel/Onboard excel
 # - file: content/tips/docker

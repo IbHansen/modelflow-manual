@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Model stability, some background &#8212; Some additional draft (very) material on The World Bank&#39;s MFMod Framework in Python with Modelflow</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/stability/stability introduction';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="1. Modelflow brings together a model and a Pandas DataFrame" href="../specification/model%20specification.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Some additional draft (very) material on The World Bank's MFMod Framework in Python with Modelflow</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../specification/model%20specification.html">1. Modelflow brings together a model and a Pandas DataFrame</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Model stability, some background</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/IbHansen/modelflow-manual/blob/main/papers/suplementbook/content/stability/stability introduction.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/IbHansen/modelflow-manual" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/stability/stability introduction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Model stability, some background</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-model">2.1. A model:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-form">2.1.1. normalized form</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-derivatives">2.2. The derivatives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-companion-matrix">2.3. The companion matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-and-the-eignvalues-of-the-companion-matrix">2.4. Stability and the eignvalues of the companion matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-eigenvalues-and-eigenvectors-using-modelflow">2.5. Calculating Eigenvalues and eigenvectors using modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-create-a-model-a-samuleson-multiplier-accelerator-model">2.6. First create a model (A Samuleson multiplier accelerator model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-which-generates-a-dataframe-with-values">2.7. A function which generates a dataframe with values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-which-simulate-the-model-and-calculates-eigenvalues">2.8. A function which simulate the model and calculates eigenvalues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-amplification">2.9. No amplification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explosion">2.10. Explosion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploding-oscillations">2.11. Exploding oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perpetual-oscillations">2.12. Perpetual oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dampened-oscillations">2.13. Dampened oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jackknife-experiments-to-identify-identify-impact-from-each-equation">2.14. Jackknife experiments  to identify identify impact from each equation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.14.1. </a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="model-stability-some-background">
+<h1><span class="section-number">2. </span>Model stability, some background<a class="headerlink" href="#model-stability-some-background" title="Link to this heading">#</a></h1>
+<div class="admonition warning" id="index-0">
+<p class="admonition-title">Warning</p>
+<p>This chapter is both unfinished and unpolished. Suggestions are very welcome.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Terminology varies very much between fields of study.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Markdown</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">modelclass</span><span class="w"> </span><span class="kn">import</span> <span class="n">model</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latex</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="a-model">
+<h2><span class="section-number">2.1. </span>A model:<a class="headerlink" href="#a-model" title="Link to this heading">#</a></h2>
+<p>A model with:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\textbf n\)</span> number of endogeneous variables</p></li>
+<li><p><span class="math notranslate nohighlight">\(\textbf k\)</span> number of exogeneous variables</p></li>
+<li><p><span class="math notranslate nohighlight">\(\textbf r\)</span> max lag of endogeneous variables</p></li>
+<li><p><span class="math notranslate nohighlight">\(\textbf s\)</span> max lag of exogeneous variables</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> time frame (year, quarter, day second or another another unit)</p></li>
+</ul>
+<p>can be written in two ways, normalized or un-normalized form</p>
+<section id="normalized-form">
+<h3><span class="section-number">2.1.1. </span>normalized form<a class="headerlink" href="#normalized-form" title="Link to this heading">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-470c52b3-2388-406e-b184-0add16b26cd7">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-470c52b3-2388-406e-b184-0add16b26cd7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+y_t^1 &amp; = &amp; y_t^2...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
+y_t^2 &amp; = &amp; y_t^1...,y_{t}^n...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^k,...x_{t-s}^1...,x_{t-s}^k) \\
+\vdots \\
+y_t^n &amp; = &amp; y_t^1...,y_{t}^{n-1}...y_{t-r}^1...,y_{t-r}^n,x_t^1...x_{t}^r,x..._{t-s}^1...,x_{t-s}^k)
+\end{eqnarray}\]</div>
+<p>Written in matrix notation where  <span class="math notranslate nohighlight">\(\textbf{y}_t\)</span> and <span class="math notranslate nohighlight">\(\textbf{x}_t\)</span> are vectors of endogenous/exogenous  variables for time t</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0d333d71-161c-4239-8cbb-145614439255">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-0d333d71-161c-4239-8cbb-145614439255" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}  
+\textbf{y}_t &amp; = &amp; \textbf{F}( \textbf{y}_t \cdots \textbf{y}_{t-r},\textbf{x}_t \cdots \textbf{x}_{t-s})
+\end{eqnarray}\]</div>
+<p>The functions are normalized, meaning:</p>
+<ul class="simple">
+<li><p>Each endogenous variable is on the left hand side one time - and only one time.</p></li>
+<li><p>An endogenous variable without lags can <strong>not</strong> be on the right hand side in an equation, which has the variable on the left hand side.</p></li>
+</ul>
+</section>
+</section>
+<section id="the-derivatives">
+<h2><span class="section-number">2.2. </span>The derivatives<a class="headerlink" href="#the-derivatives" title="Link to this heading">#</a></h2>
+<p>We can express the matrices of derivatives with respect to the endogenous and exogenous variables like this:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+A &amp; = &amp; \frac{\partial F}{\partial y_t^T} \\ \\
+E_i &amp; = &amp; \frac{\partial F}{\partial y_{t-i}^T } \hspace{5 mm} i=1, \cdots , r\\  \\
+F_j &amp; = &amp; \frac{\partial F}{\partial x_{t-j} ^T} \hspace{5 mm} j=0, \cdots , s\\  \\
+\end{eqnarray*}\]</div>
+</section>
+<section id="the-companion-matrix">
+<span id="index-1"></span><h2><span class="section-number">2.3. </span>The companion matrix<a class="headerlink" href="#the-companion-matrix" title="Link to this heading">#</a></h2>
+<p>To calculate the effect of small perturbations around a solution the derivative matrices can be used.</p>
+<p>For simplicity a system with <span class="math notranslate nohighlight">\(r\)</span> (max lag of endogenous variables) of 2 and <span class="math notranslate nohighlight">\(s\)</span> (max lag of exogenous variables)  of 1 we have the linearized model:</p>
+<p><span class="math notranslate nohighlight">\(\Delta \textbf{y}_t = \textbf{A}\Delta  \textbf{y}_{t} + \Delta E_1 \textbf{y}_{t-1} + \Delta E_2 \textbf{y}_{t-2} +  E_3 \Delta  \textbf{y}_{t-3} + F_0 \Delta x_t + F_1 \Delta x_{t-1}\)</span></p>
+<p>Rearranging the equation to isolate <span class="math notranslate nohighlight">\(\Delta \textbf{y}_{t}\)</span> on the left side:</p>
+<p><span class="math notranslate nohighlight">\((\mathbb{I}-\textbf{A}) \Delta \textbf{y}_{t} = E_1 \Delta \textbf{y}_{t-1} + \Delta E_2 \textbf{y}_{t-2} + \Delta E_3 \textbf{y}_{t-3} + F_0 \Delta x_t + F_1 \Delta x_{t-1}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\Delta \textbf{y}_{t} = (\mathbb{I}-\textbf{A})^{-1} E_1 \Delta \textbf{y}_{t-1} + (\mathbb{I}-\textbf{A})^{-1} \Delta E_2 \textbf{y}_{t-2} + (\mathbb{I}-\textbf{A})^{-1} \Delta E_3 \textbf{y}_{t-3} + (\mathbb{I}-\textbf{A})^{-1} F_0 \Delta x_t +  (\mathbb{I}-\textbf{A})^{-1} F_1 \Delta x_{t-1}\)</span></p>
+<p>This is a 3th order system of difference equations. In order to be able to find the gain stability of the system it has to be rewritten as 1st order system of difference equations. That is a system with only one lag. Fortunately there is
+a standard way to do this. It runs as follow:</p>
+<p>Using the state vector:
+<span class="math notranslate nohighlight">\(\textbf{z}_t = \begin{bmatrix} \textbf{y}_t \\ \textbf{y}_{t-1} \\ \textbf{y}_{t-2} \end{bmatrix}\)</span> and <span class="math notranslate nohighlight">\(\textbf{w}_t = \begin{bmatrix} \textbf{x}_t \\ \textbf{x}_{t-1} \end{bmatrix}\)</span></p>
+<p>The system can be expressed as:</p>
+<p><span class="math notranslate nohighlight">\(\Delta \textbf{z}_{t} = \underbrace{\begin{bmatrix} (\mathbb{I}-\textbf{A})^{-1}E_1 &amp; (\mathbb{I}-\textbf{A})^{-1}E_2 &amp; (\mathbb{I}-\textbf{A})^{-1}E_3 \\ \textbf{I} &amp; \textbf{0} &amp; \textbf{0} \\ \textbf{0} &amp; \textbf{I} &amp; \textbf{0} \end{bmatrix}}_{\textbf{C}} \Delta \textbf{z}_{t-1} +
+\left[\begin{matrix}(\mathbb{I}-\textbf{A})^{-1} F_{0} &amp; (\mathbb{I}-\textbf{A})^{-1} F_{1}  \\{0} &amp; {0}  \\{0} &amp; {0} \\\end{matrix}\right]
+\Delta \textbf{w}_t\)</span></p>
+<p>This system is a first order system - and the stability can be evaluated using the matrix:</p>
+<p><span class="math notranslate nohighlight">\(\textbf{C} = \begin{bmatrix} (\mathbb{I}-\textbf{A})^{-1}E_1 &amp; (\mathbb{I}-\textbf{A})^{-1}E_2 &amp; (\mathbb{I}-\textbf{A})^{-1}E_3 \\ \textbf{I} &amp; \textbf{0} &amp; \textbf{0} \\ \textbf{0} &amp; \textbf{I} &amp; \textbf{0} \end{bmatrix}\)</span></p>
+<p>also known as <strong>the companion matrix</strong></p>
+<p>If the systematic in construction the companion matrix with max lag endogenous variable of 2 can be extended to any numbers of lags.</p>
+</section>
+<section id="stability-and-the-eignvalues-of-the-companion-matrix">
+<h2><span class="section-number">2.4. </span>Stability and the eignvalues of the companion matrix<a class="headerlink" href="#stability-and-the-eignvalues-of-the-companion-matrix" title="Link to this heading">#</a></h2>
+<p>The dynamic behavior can be
+evaluated by looking at the eigenvalues <span class="math notranslate nohighlight">\(\textbf{e}_{t}\)</span> of the companion matrix <span class="math notranslate nohighlight">\(((I-\bar A)^{-1}\bar E )\)</span>. Note that <span class="math notranslate nohighlight">\(\textbf{e}_{t}\)</span> can are complex numbers.</p>
+<ul class="simple">
+<li><p>If all <span class="math notranslate nohighlight">\(\lvert \textbf{e}_{t} \lvert &lt; 1\)</span> the system will converge.</p></li>
+<li><p>If at least one of the eigenvalues is larger than one, the system will amplify.</p></li>
+<li><p>If at least one <span class="math notranslate nohighlight">\(\textbf{e}_{t}\)</span> has an imaginary part the system will oscillate</p>
+<ul>
+<li><p>dampened if all <span class="math notranslate nohighlight">\(\lvert \textbf{e}_{t} \lvert &lt; 1\)</span> or</p></li>
+<li><p>amplifying  if one <span class="math notranslate nohighlight">\(\lvert \textbf{e}_{t} \lvert &gt; 1\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The eigenvalues and associated eigenvectors can be found by the function <code class="docutils literal notranslate"><span class="pre">&lt;modelclass&gt;.get_df_eigen_dict()</span></code> which will be used below.</p>
+<p>‘.get_df_eigen_dict()’ returns a dictionary where the key is the year and the value is a dataframe where first row is the eigenvalues
+and the folowing rows are the eigenvectors.</p>
+<p>The function also displays the result of the model. The result do not nessary give economic meaning. But shows how the system’s stability reflects the
+eigenvalues of the companion matrix.</p>
+</section>
+<section id="calculating-eigenvalues-and-eigenvectors-using-modelflow">
+<h2><span class="section-number">2.5. </span>Calculating Eigenvalues and eigenvectors using modelflow<a class="headerlink" href="#calculating-eigenvalues-and-eigenvectors-using-modelflow" title="Link to this heading">#</a></h2>
+<p>Modelflow has a can calculate the derivative matrices <span class="math notranslate nohighlight">\(A, E_i\)</span> and <span class="math notranslate nohighlight">\(F_j\)</span> and create the companion matrix and the associate eigenvalues and eigenvectors.</p>
+<p>Below</p>
+<ul class="simple">
+<li><p>a simple Samuelson multiplier accelerator model is created.</p></li>
+<li><p>a function <code class="docutils literal notranslate"><span class="pre">get_df</span></code> is defined it:</p>
+<ul>
+<li><p>generates a test dataframe with model parameters and variables is defined</p></li>
+</ul>
+</li>
+<li><p>a function <code class="docutils literal notranslate"><span class="pre">geteigen</span></code> is defined it:</p>
+<ul>
+<li><p>use the model ro simulate a generated dataframe.</p></li>
+<li><p>calculates the eigenvalues</p></li>
+<li><p>display the eigenvalues in a polar coordinate where imaginary values are at the y-axis.</p></li>
+<li><p>The function also displays the result of the model</p></li>
+<li><p>optional displays the companion matrix and the non-zero eigenvalues and associate eigenvectors.</p></li>
+</ul>
+</li>
+</ul>
+<p>Note that the result do not necessary give economic meaning. But shows how the system’s stability reflects the
+eigenvalues of the companion matrix.</p>
+</section>
+<section id="first-create-a-model-a-samuleson-multiplier-accelerator-model">
+<h2><span class="section-number">2.6. </span>First create a model (A Samuleson multiplier accelerator model)<a class="headerlink" href="#first-create-a-model-a-samuleson-multiplier-accelerator-model" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fma</span>   <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">gdp = consumption+investment  </span>
+<span class="s1">consumption = mul * gdp(-1)</span>
+<span class="s1">investment = acc * (consumption-consumption(-1))  + exo_investment&#39;&#39;&#39;</span>
+<span class="n">mma</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">from_eq</span><span class="p">(</span><span class="n">fma</span><span class="p">,</span><span class="n">modelname</span> <span class="o">=</span> <span class="s1">&#39;Accelerator multiplicator model&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mma</span><span class="o">.</span><span class="n">drawmodel</span><span class="p">(</span><span class="n">png</span><span class="o">=</span><span class="n">latex</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e6789a66b50861af461826d2b0eaf5293d41d14784a841f18bf02dc0826b2af0.png" src="../../_images/e6789a66b50861af461826d2b0eaf5293d41d14784a841f18bf02dc0826b2af0.png" />
+</div>
+</div>
+</section>
+<section id="a-function-which-generates-a-dataframe-with-values">
+<h2><span class="section-number">2.7. </span>A function which generates a dataframe with values<a class="headerlink" href="#a-function-which-generates-a-dataframe-with-values" title="Link to this heading">#</a></h2>
+<p>We need some data to simulate</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_df</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">gdp</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">im</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">years</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="s1">&#39;Creates imput dataframe to accelerator multiplier model &#39;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">gdp</span><span class="p">]]</span><span class="o">*</span><span class="n">years</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2018</span><span class="o">+</span><span class="n">years</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GDP&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;MUL&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">mul</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;ACC&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">acc</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;CONSUMPTION&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">gdp</span><span class="o">*</span><span class="n">mul</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;EXO_INVESTMENT&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">im</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+
+<span class="n">base</span> <span class="o">=</span> <span class="n">get_df</span><span class="p">()</span>
+<span class="n">base</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GDP</th>
+      <th>MUL</th>
+      <th>ACC</th>
+      <th>CONSUMPTION</th>
+      <th>EXO_INVESTMENT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2018</th>
+      <td>1000</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>900.0</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>1000</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>900.0</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>1000</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>900.0</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>1000</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>900.0</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2022</th>
+      <td>1000</td>
+      <td>0.9</td>
+      <td>0.5</td>
+      <td>900.0</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="a-function-which-simulate-the-model-and-calculates-eigenvalues">
+<h2><span class="section-number">2.8. </span>A function which simulate the model and calculates eigenvalues<a class="headerlink" href="#a-function-which-simulate-the-model-and-calculates-eigenvalues" title="Link to this heading">#</a></h2>
+<p>This can be ignored if you are not interested in the python implementation</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">years</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">showmore</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Function which creates a Samuelson Multiplier accelerator model, runs it and </span>
+<span class="sd">    calculates the eigenvalues for the compaignion matrix in order to evaluate stability&#39;&#39;&#39;</span>
+    
+    <span class="n">baseline_not_solved</span> <span class="o">=</span> <span class="n">get_df</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">years</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+    <span class="n">baseline</span>  <span class="o">=</span> <span class="n">mma</span><span class="p">(</span><span class="n">baseline_not_solved</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>     <span class="c1"># Solve the model </span>
+    
+    <span class="c1"># Retrieve a dictionary with a dataframe with eigenvalues and eigenvectors for each year </span>
+    <span class="n">eig_dict</span> <span class="o">=</span> <span class="n">mma</span><span class="o">.</span><span class="n">get_df_eigen_dict</span><span class="p">()</span>
+    
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Model where multiplier = </span><span class="si">{</span><span class="n">mul</span><span class="si">}</span><span class="s1"> and accelerator = </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s1">**&#39;</span><span class="p">))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">mma</span><span class="o">.</span><span class="n">stability_newton</span><span class="o">.</span><span class="n">eigenvector_plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">per</span><span class="o">=</span><span class="mi">2023</span><span class="p">));</span>       <span class="c1"># show the eigenvalues </span>
+
+    <span class="n">mma</span><span class="p">[</span><span class="s1">&#39;gdp consumption investment&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Values&#39;</span><span class="p">,</span><span class="n">colrow</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Show the solution</span>
+        
+    <span class="k">if</span> <span class="n">show</span><span class="p">:</span> 
+            <span class="c1"># In this example we only want the values for one year. The model is linear and time independent </span>
+        <span class="n">eig21</span> <span class="o">=</span> <span class="n">eig_dict</span><span class="p">[</span><span class="mi">2021</span><span class="p">]</span>
+
+        <span class="c1"># Define a function which calculates a list of absolute values when served a dataframe column of complex numbers</span>
+        <span class="n">compabs</span> <span class="o">=</span> <span class="k">lambda</span> <span class="nb">complex</span><span class="p">:</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="nb">complex</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+
+        <span class="c1"># now only retain the columns where the length of the eigenvalues are above 0.0001 </span>
+        <span class="n">eig21out</span> <span class="o">=</span> <span class="p">(</span><span class="n">eig21</span><span class="o">.</span>   
+                    <span class="n">T</span><span class="o">.</span>        <span class="c1"># Transpose as we query and eval on columns </span>
+                    <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;absolute_value=@compabs(Eigenvalues)&#39;</span><span class="p">)</span><span class="o">.</span> <span class="c1"># calculate the absolute value of the eigenvalue </span>
+                    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;absolute_value&gt;=0.0001&#39;</span><span class="p">)</span><span class="o">.</span>              <span class="c1"># Select the rows where the abs value is above 0+.0001</span>
+                    <span class="n">drop</span><span class="p">(</span><span class="s1">&#39;absolute_value&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span>                <span class="c1"># We dont need the absolute value anymore, so the column is dropped. </span>
+                    <span class="n">T</span><span class="p">)</span>   <span class="c1"># Transpose again. </span>
+
+
+        <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Compagnion matrix**&#39;</span><span class="p">))</span>
+
+       <span class="c1"># display(model.compstyle( mma.stability_newton.get_df_comp_dict()[2021])) </span>
+        <span class="n">display</span><span class="p">(</span> <span class="n">mma</span><span class="o">.</span><span class="n">stability_newton</span><span class="o">.</span><span class="n">get_df_comp_dict</span><span class="p">()[</span><span class="mi">2021</span><span class="p">])</span> 
+
+
+        <span class="c1">#   display(eig21.style.set_caption(&#39;&lt;b&gt;Original eigenvalues and -vectors&#39;))</span>
+        <span class="c1">#display(model.compstyle(eig21out).set_caption(&#39;&lt;b&gt;Non zero eigenvalues and -vectors&#39;))</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;**Non zero eigenvalues and -vectors**&#39;</span><span class="p">))</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">eig21out</span><span class="p">)</span>
+
+        
+    <span class="k">return</span>  <span class="n">mma</span><span class="o">.</span><span class="n">stability_newton</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="no-amplification">
+<h2><span class="section-number">2.9. </span>No amplification<a class="headerlink" href="#no-amplification" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="nn">Cell In[8], line 10,</span> in <span class="ni">geteigen</span><span class="nt">(mul, acc, years, show, showmore)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">baseline</span>  <span class="o">=</span> <span class="n">mma</span><span class="p">(</span><span class="n">baseline_not_solved</span><span class="p">,</span><span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>     <span class="c1"># Solve the model </span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Retrieve a dictionary with a dataframe with eigenvalues and eigenvectors for each year </span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">eig_dict</span> <span class="o">=</span> <span class="n">mma</span><span class="o">.</span><span class="n">get_df_eigen_dict</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Model where multiplier = </span><span class="si">{</span><span class="n">mul</span><span class="si">}</span><span class="s1"> and accelerator = </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s1">**&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">display</span><span class="p">(</span><span class="n">mma</span><span class="o">.</span><span class="n">stability_newton</span><span class="o">.</span><span class="n">eigenvector_plot</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">per</span><span class="o">=</span><span class="mi">2023</span><span class="p">));</span>       <span class="c1"># show the eigenvalues </span>
+
+<span class="nn">File C:\modelflow2\modelflow\modelclass.py:1354,</span> in <span class="ni">Org_model_Mixin.__getattr__</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1352</span>     <span class="k">return</span> <span class="n">mv</span><span class="o">.</span><span class="n">varvis</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">1353</span> <span class="k">else</span><span class="p">:</span> 
+<span class="ne">-&gt; </span><span class="mi">1354</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The specification:&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot; did not match a method, property or variable name&#39;</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: The specification:&quot;get_df_eigen_dict&quot; did not match a method, property or variable name
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="explosion">
+<h2><span class="section-number">2.10. </span>Explosion<a class="headerlink" href="#explosion" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exploding-oscillations">
+<h2><span class="section-number">2.11. </span>Exploding oscillations<a class="headerlink" href="#exploding-oscillations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="perpetual-oscillations">
+<h2><span class="section-number">2.12. </span>Perpetual oscillations<a class="headerlink" href="#perpetual-oscillations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dampened-oscillations">
+<h2><span class="section-number">2.13. </span>Dampened oscillations<a class="headerlink" href="#dampened-oscillations" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="jackknife-experiments-to-identify-identify-impact-from-each-equation">
+<h2><span class="section-number">2.14. </span>Jackknife experiments  to identify identify impact from each equation.<a class="headerlink" href="#jackknife-experiments-to-identify-identify-impact-from-each-equation" title="Link to this heading">#</a></h2>
+<p>To understand the impact of each equation a jackknife can be made. This is done by deleting  the rows and columns for each equation and record the new eigenvalues.</p>
+<p>The idea is to try to identify the equations which contributes most to the total eigenvalues.</p>
+<p>The newton object returned above will also contains this operation. The <code class="docutils literal notranslate"><span class="pre">newton.get_eigen_jackknife_abs_select(year)</span></code> function will return the max absolute eigenvalue when for each equations is deleted. It also returns the eigenvalues when no equation is deleted.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The terminology is loosely coined from Jackknife resampling https://en.wikipedia.org/wiki/Jackknife_resampling.</p>
+<p>Contributions to better naming are very welcome.</p>
+</div>
+<section id="id1">
+<h3><span class="section-number">2.14.1. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newton</span> <span class="o">=</span> <span class="n">geteigen</span><span class="p">(</span><span class="n">mul</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">acc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">newton</span><span class="o">.</span><span class="n">get_eigen_jackknife_abs_select</span><span class="p">(</span><span class="n">largest</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The output above shows that the largest eigenvalue of the system is 1.1. so the system is unstable. If either the consumption or  GDP equation is deleted the largest abs(eigenvalue)  will
+be 0. So the system will not be unstable. The same goes in the Investment equation is excluded. However in this case the largest abs(eigenvalue) will be 0.6.</p>
+<p>So for such a small model the procedure is not very useful. But for larger models it can help identifying rough equations.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content\stability"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../specification/model%20specification.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Modelflow brings together a model and a Pandas DataFrame</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-model">2.1. A model:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalized-form">2.1.1. normalized form</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-derivatives">2.2. The derivatives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-companion-matrix">2.3. The companion matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-and-the-eignvalues-of-the-companion-matrix">2.4. Stability and the eignvalues of the companion matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-eigenvalues-and-eigenvectors-using-modelflow">2.5. Calculating Eigenvalues and eigenvectors using modelflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-create-a-model-a-samuleson-multiplier-accelerator-model">2.6. First create a model (A Samuleson multiplier accelerator model)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-which-generates-a-dataframe-with-values">2.7. A function which generates a dataframe with values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-function-which-simulate-the-model-and-calculates-eigenvalues">2.8. A function which simulate the model and calculates eigenvalues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-amplification">2.9. No amplification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explosion">2.10. Explosion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploding-oscillations">2.11. Exploding oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perpetual-oscillations">2.12. Perpetual oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dampened-oscillations">2.13. Dampened oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jackknife-experiments-to-identify-identify-impact-from-each-equation">2.14. Jackknife experiments  to identify identify impact from each equation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.14.1. </a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ib Hansen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright World Bank. 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
