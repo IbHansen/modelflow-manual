@@ -8,6 +8,7 @@ options:
   numbered: true
 chapters:
  - file: content/specification/model specification
+ - file: content/cohorte/population_with_sexes
  - file: content/magic/Graphviz
 # - file: content/stability/stability introduction
 # - file: content/stability/EigenValues
