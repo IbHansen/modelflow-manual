@@ -7,7 +7,7 @@ root: content/introduction
 options:
   numbered: true
 chapters:
- - file: content/cohorte/tests
+ # - file: content/cohorte/tests
  - file: content/specification/model specification
  - file: content/cohorte/population_with_sexes
  - file: content/magic/Graphviz
