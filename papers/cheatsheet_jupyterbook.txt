@@ -239,3 +239,12 @@ latexcommand \begin{samepage}
 :::{only} latex
 latexcommand \end{samepage}
 :::
+
+For boxes 
+:::{only} latex
+latexcommand \begin{minipage}{\textwidth}
+:::
+
+:::{only} latex
+latexcommand \end{minipage}
+:::
