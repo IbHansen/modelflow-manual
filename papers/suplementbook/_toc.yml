@@ -9,7 +9,11 @@ options:
 chapters:
  # - file: content/cohorte/tests
  - file: content/specification/model specification
- - file: content/cohorte/population_with_sexes
+ - file: content/cohorte/population_intro
+   sections:
+    - file: content/cohorte/population_with_sexes
+    - file: content/cohorte/population_data_preperation
+    - file: content/cohorte/population_chart
  - file: content/estimation/ToyModel-direct input
  - file: content/magic/Graphviz
 # - file: content/stability/stability introduction
