@@ -7,7 +7,8 @@ the toc are skipped. Each notebook runs in its own folder.
 Usage:
     python run_toc.py _toc.yml
     python run_toc.py path/to/_toc.yml -j 2
-    python run_toc.py _toc.yml --inplace   # overwrite originals (book PNGs)
+    python run_toc.py _toc.yml --inplace          # overwrite originals (book PNGs)
+    python run_toc.py _toc.yml -j 1 --timeout 120 # find a hanging notebook
 
 JB v1 _toc.yml is a nested structure of `root:` / `file:` entries under
 `parts` -> `chapters` -> `sections` (or, in the legacy format, a bare list of
@@ -17,9 +18,17 @@ extension; this script appends `.ipynb` and runs only entries that exist.
 from __future__ import annotations
 
 import argparse
+import os
 import sys
+import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
+
+# Force a non-interactive matplotlib backend so plt.show() can't pop a GUI
+# window and block a worker forever. setdefault inherits into worker processes.
+os.environ.setdefault("MPLBACKEND", "Agg")
+# Marker notebooks can check to skip blocking calls (e.g. Dash app.run()).
+os.environ.setdefault("PAPERMILL", "1")
 
 import papermill as pm
 import yaml
@@ -63,11 +72,18 @@ def resolve_notebooks(toc_path: Path) -> tuple[list[Path], list[str]]:
     return notebooks, skipped
 
 
-def run(nb: str, inplace: bool) -> str:
+def run(nb: str, inplace: bool, timeout: int | None) -> str:
     """Execute one notebook in its own folder; runs in a worker process."""
     src = Path(nb)
     out = src if inplace else src.with_suffix(".out.ipynb")
-    pm.execute_notebook(str(src), str(out), kernel_name="python3", cwd=str(src.parent))
+    print(f"START {nb}", flush=True)
+    pm.execute_notebook(
+        str(src), str(out),
+        kernel_name="python3",
+        cwd=str(src.parent),
+        execution_timeout=timeout,   # seconds per cell; raises on a stuck cell
+        progress_bar=False,          # tqdm bars from parallel workers interleave; suppress them
+    )
     return nb
 
 
@@ -77,6 +93,9 @@ def main() -> int:
     parser.add_argument("-j", "--jobs", type=int, default=4, help="max concurrent notebooks")
     parser.add_argument("--inplace", action="store_true",
                         help="overwrite the source notebooks (e.g. to refresh book PNG outputs)")
+    parser.add_argument("--timeout", type=int, default=None,
+                        help="per-cell execution timeout in seconds; a stuck cell FAILs "
+                             "instead of hanging the whole run (default: no limit)")
     args = parser.parse_args()
 
     toc_path = Path(args.toc)
@@ -96,8 +115,9 @@ def main() -> int:
         print(f"  - {nb}")
 
     failures: dict[str, str] = {}
+    start = time.perf_counter()
     with ProcessPoolExecutor(max_workers=args.jobs) as ex:
-        futures = {ex.submit(run, str(nb), args.inplace): str(nb) for nb in notebooks}
+        futures = {ex.submit(run, str(nb), args.inplace, args.timeout): str(nb) for nb in notebooks}
         for fut in as_completed(futures):
             nb = futures[fut]
             try:
@@ -107,7 +127,10 @@ def main() -> int:
                 failures[nb] = str(exc)
                 print(f"FAIL {nb}: {exc}")
 
-    print(f"\n{len(notebooks) - len(failures)}/{len(notebooks)} succeeded.")
+    elapsed = time.perf_counter() - start
+    mins, secs = divmod(elapsed, 60)
+    print(f"\n{len(notebooks) - len(failures)}/{len(notebooks)} succeeded "
+          f"in {int(mins)}m {secs:.1f}s ({elapsed:.1f}s).")
     if failures:
         print("Failed:")
         for nb, err in failures.items():
